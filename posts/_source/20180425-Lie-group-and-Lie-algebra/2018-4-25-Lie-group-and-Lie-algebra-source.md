@@ -178,7 +178,7 @@ $$
 
 诱导出一个切空间的微分映射$dL_g$. 如图所示.
 
-<img src="切空间.png" style="zoom:30%" />
+<img src="切空间.png" style="zoom:50%" />
 
 由此可以得到
 
