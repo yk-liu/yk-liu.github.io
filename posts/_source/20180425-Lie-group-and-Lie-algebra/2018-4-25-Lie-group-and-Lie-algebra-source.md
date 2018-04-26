@@ -57,7 +57,6 @@ f(\varphi)=\sum_{-\infty}^{+\infty} a_m \exp{(i m \varphi)} \quad , m\in \mathbb
 $$
 
 ### 代数
-
 $$
 线性向量空间V + 矢量积 \square
 	\begin{cases} 
@@ -74,7 +73,7 @@ $$
 $$
 \vec{A} \square \left(\vec{B} \square \vec{C}\right) = \left(\vec{A} \square \vec{B}\right) \vec{C}+\vec{B} \square \left( \vec{A} \square \vec{C} \right)
 $$
-那么这样的代数称为Lie代数,这时常常把矢量积$vec{A}\square \vec{B}$写作$[\vec{A},\vec{B}]$ 
+那么这样的代数称为Lie代数,这时常常把矢量积$\vec{A}\square \vec{B}$写作$[\vec{A},\vec{B}]$ 
 
 ## 拓扑空间的相关概念,拓扑群
 
@@ -168,9 +167,31 @@ $$
 > $$
 > 的微分方程时引入的. 一组初始条件,就对应了一个解,即李群的一个单参数子群
 
-李群的左平移$L_g$是一个
+#### 李群的切丛性质
 
-(未完)
+##### 李群的左平移
+
+李群的左平移$L_g$是一个李群到自身的映射:
+$$
+L_g:  G \rightarrow G \qquad x \rightarrow g \circ x
+$$
+
+诱导出一个切空间的微分映射$dL_g$. 如图所示.
+
+<img src="切空间.png" style="zoom:30%" />
+
+由此可以得到
+
+```mermaid
+graph LR
+  A(取Te基矢) -->|确定| B(e的切空间Te)
+    A -->|dLg|C(g的切空间Tg的基矢)
+    C -->|确定|D(g的切空间Tg)
+```
+
+
+
+
 
 #### 指数映射
 
@@ -265,7 +286,11 @@ $$
 \begin{align}
 (\vec{x}+\vec{y})^n-\begin{matrix} \underbrace{ (\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})\cdot\cdots\cdot(\vec{x}+\vec{y})} \\ n 个(\vec{x}+\vec{y})\end{matrix}
 &=\sum_i{\binom{i}{n}\vec{x}^i\vec{y}^{n-i}}-\sum_i{P_n^i(\vec{x},\vec{y})} \notag \\
-&=\sum_i{\binom{i}{n}\left(\sum_j{\vec{x}^i\vec{y}^{n-i}}-\begin{matrix} \underbrace{ \vec{x}\cdot\vec{y}\cdot\vec{x}\cdot\vec{x}\cdot\vec{y}\cdot\cdots} \\ 第j 种排列\end{matrix}\right)} \notag\\
+&=\sum_i{
+\binom{i}{n}\sum_j{
+\left(\vec{x}^i\vec{y}^{n-i}-
+\begin{matrix} \underbrace{ \vec{x}\cdot\vec{y}\cdot\vec{x}\cdot\vec{x}\cdot\vec{y}\cdot\cdots} \\ 第j 种排列\end{matrix}\right)
+}}\notag\\
 \end{align}
 $$
 
@@ -454,3 +479,5 @@ $$
 [^海森堡量子力学]: Heisenberg's QM", P58, Baker-Campbell-Hausdorff Formula
 
 [^BCH公式]: https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula
+
+[^未完待续]
