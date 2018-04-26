@@ -454,5 +454,3 @@ $$
 [^海森堡量子力学]: Heisenberg's QM", P58, Baker-Campbell-Hausdorff Formula
 
 [^BCH公式]: https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula
-
-[^]

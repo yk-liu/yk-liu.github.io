@@ -4,5 +4,13 @@
 
 ### [Lie group and Lie algebra](https://yk-liu.github.io/posts/20180425-Lie-group-and-Lie-algebra.html)
 
+### statistical Mechanics
+
+
+
+## Python/Linux Notes
+
+### Python cheat sheet
+
 
 
