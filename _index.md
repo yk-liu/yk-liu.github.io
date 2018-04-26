@@ -11,7 +11,7 @@ Here are [`my posts`](https://yk-liu.github.io/posts/post_index.html).
 
 Here is a list of [`my repos`](https://yk-liu.github.io/repos/repo_index.html).
 
-- I hardly have any spare time for coding as a hobby now. But the `flea` project should at least work. It facilitated my class assignments a lot.
+- I hardly have any spare time for coding as a hobby now. But the[`flea`](https://github.com/yk-liu/flea) project should at least work. It facilitated my class assignments a lot.
 
 
 
