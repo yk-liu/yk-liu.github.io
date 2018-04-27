@@ -7,7 +7,7 @@
 
 实验结果告诉我们理想气体必须是量子系综. 我们先从经典系综入手, 看什么时候会与试验矛盾, 并研究在一定条件下如何过渡到量子系综. 
 
-无论如何,我们这里讨论的系统指的都是相空间的一个点,称为一个系统. 系统在演化的规程中在相空间形成一条轨迹,每一点对应的就是这个系统所处的状态. 无论是经典力学还是量子力学, 系统如何演化都可以由初始条件来确定. 而我们==可以???仅用能量和粒子数来描述一个系统== 
+无论哪种情况, 我们这里讨论的系统指的都是相空间的一个点. 系统在演化的过程中在相空间形成一条轨迹,每一点对应的就是这个系统所处的状态. 无论是经典力学还是量子力学, 给定能量和粒子数, 孤立系统如何演化都可以由初始条件来确定. 因为我们难以得到一个庞大的系统的初始条件, 我们只研究那些依赖于能量和粒子数的性质(宏观性质), 这就是热力学研究的性质, 因此在热力学中, 我们==可以仅用能量和粒子数来描述一个系统==.
 
 ## $\rho$的性质
 
@@ -140,10 +140,251 @@ $$
 1=\int_{-\infty}^{{-\infty}}{\mathbb{P}(p,q)dpdq}
 $$
 
+求系统的宏观量观测值就变为求概率密度$\mathbb{P}(p,q)$.
+
 #### 对系统的观测
 
 有两种得到系统的某个观测量$O$的方法
 
-> 1. 对同一个系统连续地测量$O$的值. 测量次数很大时, 观测值的加权平均就是最后的观测量.
-> 2. 对许多个"一样的"系统进行测量. 测量次数很大时, 观测值的加权平均就是最后的观测量.
+> 1. 对同一个系统连续地测量$O$的值. 测量次数很大时, 观测值的加权平均就是最后的观测量. 
+>
+>    ​	假设测量对系统的影响任意小$\leftrightarrow$ 总共只有一次测量, 但假设测量发生在不同的时间, 测量值的平均
+>
+> 2. 对许多个"一样的"系统进行测量. 测量系统数目很大时, 观测值的加权平均就是最后的观测量.
 
+如果每次测量对系统的影响可以忽略不计, 那么两种测量方法就是等价的.
+
+如果每次测量对系统的影响不可以忽略不计,  那么这两种测量方法得到的结果就不一定相等. ==这两种结果相等是不是实验"可重复性的要求?"==
+
+实验中的测量 应当是第一种.
+
+>我的思考:
+>
+>实验的可重复性指的是 无论是在不同的时刻对系统进行的测量, (测量1)  还是对多个初始条件相同的系统进行的测量(测量2), 都应当满足物理定律随空间平移和随时间平移的不变性. 因而这两种测量的值相同是物理定律的要求
+
+由测量2, 测量系统足够多时, 测量的概率密度$\mathbb{P}(p,q)$收敛于这个系综内的系统分布函数$\rho(p,q)$, 得到
+$$
+\mathbb{P}(p,q)d\Gamma =\rho(p,q)d \Gamma=\rho(E_0)\delta(E-E_0)d\Gamma
+$$
+即概率密度就是系综内的系统分布函数. 要求系统的宏观量, 就要求系统分布函数$\rho(p,q)$的值.
+
+==**<u>也就是说, $\rho$包含了系统的全部信息</u>**==
+
+#### 概率密度的表达式
+
+利用 $delta $ 函数的性质 式$(\ref{integralofdeltafx})$ $\int_{-\infty}^{+\infty}\delta(f(x))=\sum_{i}\frac{1}{\lvert f'(a_i)\rvert}, \quad  f(a_i)=0$ 得到:
+$$
+\begin{align}
+\int\delta(E-E_0)d\Gamma&=\int\delta(E(p,q)-E_0)[dp][dq] \notag\\
+&= \frac{1}{\left. \frac{dE}{d\Gamma} \right| _{E=E_0}} \label{deltaE-E0}\\
+\end{align}
+$$
+利用式$(\ref{deltaE-E0})​$得到
+$$
+\begin{align*}
+\int \mathbb{P}d\Gamma &=\int\rho(p,q)d \Gamma\\
+& =\int\rho(E_0)\delta(E-E_0)d\Gamma\\
+&= \rho(E_0)\int\delta(E-E_0)d\Gamma\\
+& = \rho(E_0) \cdot  \frac{1}{\left. \frac{dE}{d\Gamma} \right| _{E=E_0}} \\
+\end{align*}
+$$
+又有$\int \mathbb{P}d\Gamma =1​$, 得到$\rho(E_0)​$
+$$
+\rho(E_0) \cdot \frac{1}{\left. \frac{dE}{d\Gamma} \right| _{E=E_0}} =1 \notag
+$$
+带入$\rho(p,q)d \Gamma=\rho(E_0)\delta(E-E_0)d\Gamma$  得到:
+$$
+\rho(p,q)= \left. \frac{dE}{d\Gamma} \right| _{E=E_0}  \delta(E-E_0) = \frac{1}{\left. \frac{d\Gamma}{dE} \right| _{E=E_0}} \delta(E-E_0)  \notag
+$$
+定义$\Omega$ 为相空间体积对能量的微分:
+$$
+\begin{gather}
+\Omega(E)=\frac{d\Gamma}{dE}\\
+\mathrm{Volume\ in\ phase\ space}=\int d\Gamma=\int \Omega(E)dE
+\end{gather}
+$$
+这里只要系统给定, $\Omega$就是一个已知量.
+
+有:
+$$
+\rho(E)=\frac{1}{\Omega(E_0)} \delta(E-E_0)\\
+$$
+
+> 注意:
+>
+> 这里==相空间的体积对能量的微分==与==相空间体积内代表点数目对能量的微分==不同.
+> $$
+> \begin{align*}
+> \mathrm{Volume\ in\ phase\ space}&=\int \phantom{\rho}d\Gamma=\int \phantom{\rho}\Omega(E)dE g\\
+> &\qquad\downarrow biased\ with\ \rho \\
+> \mathrm{Number\ of\ points\ in\ phase\ space }&=\int\rho d\Gamma=\int \rho\Omega(E)dE \\
+> \end{align*}
+> $$
+>
+
+#### 系统宏观量的一般表达式
+
+至此得到
+$$
+\begin{align}
+\langle O\rangle&=\int_{-\infty}^{{-\infty}}{O(p,q)\mathbb{P}(p,q)dpdq}\notag\\
+&=\int_{-\infty}^{{-\infty}}O(p,q)\rho(p,q)d \Gamma \notag\\
+&=\int_{-\infty}^{{-\infty}}O(p,q)\frac{1}{\Omega(E_0)} \delta(E-E_0)d\Gamma \notag\\
+&=\frac{1}{\Omega(E_0)} \int_{-\infty}^{{-\infty}}O(p,q)\delta(E-E_0)d\Gamma \\
+\end{align}
+$$
+
+### 一些特殊的宏观量
+
+#### 能量
+
+==能量和粒子数是仅有的确定系统微观状态的物理量==, 
+$$
+\begin{align}
+\langle H\rangle &=\frac{1}{\Omega(E_0)} \int_{-\infty}^{{-\infty}}H(p,q)\delta(E-E_0)d\Gamma \notag\\
+& =\int_{-\infty}^{{-\infty}}E_0  \frac{1}{\Omega(E_0)} d\Gamma \notag\\
+& = E_0\int_{-\infty}^{{-\infty}}  \frac{1}{\Omega(E_0)} d\Gamma \notag\\
+= E_0
+\end{align}
+$$
+(推导好像有问题)
+
+## 系统的平衡问题
+
+### 孤立系的平衡
+
+考虑两个系统A,B. 他们平衡的条件是净能量交换为零. 由于$\rho$包含了系统的全部信息, 只要两个系统构成的总系统的分布函数与两个孤立系构成的分布函数, 我们就说这两个系统处在平衡态.
+
+这个定义和直观感受是一致的. 如果两个系统平衡, 把他们变成孤立系, 放置一段时间之后再相互作用, 二者的能量都不再变化.
+
+如果无论如何划分系统S,子系统A,B都处在平衡态,就说系统S是平衡的.
+
+这个定义也和直观理解是一致的. 如果一个系统"处处相同"(无论如何划分系统S), 系统就是稳定的, 就处在平衡态.
+
+这样定义的问题在于, 到底有没有这样的状态? 系统可不可能"处处相同"?
+
+回答: 现实中没有这样的系统. 我们研究的系统是自由度无穷大的系统, 是类似质点的模型. 现实的系统都是近似.
+
+
+
+另外一个问题是, 平衡的系统之间是等价的. 定义平衡的系统就定义了等价类. 怎么定义一个元素与某一个元素等价而与另一个元素不等价?  可以用一个量来刻画. 如果这两个元素这个量相同, 就说他们等价. 用什么量来刻画这个等价关系? 接下来可以看到, 这个等价类的量定义为温度. 用平衡替换上面的说法就是, 用温度定义一个系统与某一个系统平衡而与另一个系统不平衡.
+
+以下分两种情况计算, 来得到系统平衡的条件.
+
+对于平衡中的系统:
+$$
+\begin{align*}
+1&=\begin{matrix}\underbrace{\int\cdots\int}\\n_c\end{matrix}\rho_cd\Gamma_c\\
+&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_c d\Gamma_ad\Gamma_b\\
+&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\left(\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_c d\Gamma_b\right)d\Gamma_a\\
+1&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\rho_ad\Gamma_a
+\end{align*}
+$$
+
+$$
+\begin{align}
+\rho_a^{\mathrm{equilibrium}}&=\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_c d\Gamma_b \notag\\
+&=\int\rho_c d\Gamma_b\notag\\
+&=\int\frac{1}{\Omega_c(E_c)}\delta(E_c-\varepsilon_c)d\Gamma_b\notag\\
+&=\int\frac{1}{\Omega_c(E_c)}\delta(E_b+E_a-\varepsilon_c)d\Gamma_b\notag\\
+&=\frac{1}{\Omega_c(E_c)}\int\delta(E_b-(\varepsilon_c-E_a))d\Gamma_b\notag\\
+&=\frac{1}{\Omega_c(E_c)}\Omega_b(\varepsilon_c-E_a)\notag\\
+\label{rhoaequilibrium}
+\end{align}
+$$
+
+子系统A在平衡时可视作孤立系:
+$$
+\rho_a^{\mathrm{isolated}}=\frac{1}{\Omega_a(E_a)}\delta(E_a-\varepsilon_a) \label{rhoaisolated}
+$$
+结合$(\ref{rhoaequilibrium}), (\ref{rhoaisolated})$ 平衡时, $\rho_a^{\mathrm{equilibrium}}=\rho_a^{\mathrm{isolated}}$ 得到:
+$$
+\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(\varepsilon_c-E_a)}{\Omega_c(E_c)}
+$$
+同理对B系统也有:
+$$
+\delta(E_b-\varepsilon_b)=\frac{\Omega_b(E_b)\Omega_a(\varepsilon_c-E_b)}{\Omega_c(E_c)}
+$$
+又有$E_a+E_b=E_c, \quad \varepsilon_a+\varepsilon_b=\varepsilon_c$,得到:
+$$
+\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(E_b)}{\Omega_c(E_c)}=\delta(E_b-\varepsilon_b)
+$$
+再由$\delta$函数与$\Omega$的关系:
+$$
+\begin{align*}
+\frac{1}{\Omega_a(\varepsilon_a)}\int\delta(E_a-\varepsilon_a)d\Gamma_a=1\\
+\int\delta(E_a-\varepsilon_a)d\Gamma_a=\Omega_a(\varepsilon_a)\\
+\therefore \quad \delta(E_a-\varepsilon_a) =\frac{d\Omega_a(\varepsilon_a)}{d\Gamma_a}=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{d \varepsilon_a}{d\Gamma_a}=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a} {\left.\frac{d E_a}{d\Gamma_a}\right|}_{E_a=\varepsilon_a}=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{1}{\Omega(\varepsilon_a)}=\left.\frac{d}{d E_a}\ln{(\Omega(E_a))}\right|_{E_a=\varepsilon_a}
+\end{align*}
+$$
+得到:
+$$
+\left.\frac{d}{d E_a}\ln{(\Omega(E_a))}\right|_{E_a=\varepsilon_a}=\left.\frac{d}{d E_b}\ln{(\Omega(E_b))}\right|_{E_b=\varepsilon_b}
+$$
+至此我们得到一个表征等价关系的量S'
+$$
+S(E)=\ln(\Omega(E))
+$$
+若两个系统平衡,
+$$
+S'_a(E_a)=S'_b(E_b)=\frac{1}{T}
+$$
+
+### 其他平衡
+
+可以看出, 仿照上面的做法, 可以定义不同的平衡条件而得到不同的等价关系, 从而得到不同的==等价量==.
+
+我们可以定义的条件显然至少还有: 粒子数不再发生变化, 体积不再发生变化. 但是在研究在这样的平衡条件之前, 我们需要得到这样的系统的分布函数. 还有粒子数, 体积这两个量的观测值表达式.
+
+
+
+
+
+
+
+
+
+# 附录
+## $\delta$函数的性质
+
+性质一:
+$$
+\int^{+\infty}_{-\infty}\delta(ax)dx =\frac{1}{\left| a\right|}\int^{+\infty}_{-\infty}\delta(y)dy \label{deltaax}
+$$
+证明:
+$$
+\int^{+\infty}_{-\infty}\delta(ax)dx =
+\begin{cases}
+\int^{+\infty}_{-\infty}\delta(y)\frac{dy}{a}= \frac{1}{a}\int^{+\infty}_{-\infty}\delta(y) dy ,\quad (a>0) \\\\
+\int^{\color{Red}-\infty}_{\color{Red}+\infty}\delta(y)\frac{dy}{a} =-\frac{1}{a}\int^{\color{Red}+\infty}_{\color{Red}-\infty}\delta(y) dy ,\quad (a<0) \end{cases} \notag
+$$
+性质二:
+$$
+\delta(f(x))=\sum_{i}\frac{\delta(x-a_i)}{\lvert f'(a_i)\rvert}, \qquad \mathrm{where}\ f(a_i)=0
+$$
+
+
+证明:
+$$
+\begin{align*}
+\int^{+\infty}_{-\infty}g(x)\delta\left(f(x)\right)dx &=\sum_{i}{\int^{a_i+\varepsilon}_{a_i-\varepsilon}g(x)\delta\left(f(x)\right)dx}\\
+& \qquad\qquad\uparrow 只在f(x)=0时 \delta 函数才不为零, 取f(x)=0的邻域计算 \\
+\notag\xrightarrow{Taylor\ expension} &= \sum_{i}{\int^{a_i+\varepsilon}_{a_i-\varepsilon}g(x)\delta\left(f(a_i)+f'(a_i)x + \mathcal{O}(x^2)\right)dx}\\
+\xrightarrow{\varepsilon\rightarrow 0}&=\sum_{i}\int^{a_i+\varepsilon}_{a_i-\varepsilon}g(x)\delta\left(f'(a_i)x \right)dx\\
+\xrightarrow{\mathrm{use\ eqn. \ \ref{deltaax}}}&= \sum_{i}\frac{g(a_i)}{\lvert f'(a_i)\rvert}
+\end{align*}
+$$
+同时注意到
+$$
+\begin{align*}
+\sum_{i}\frac{g(a_i)}{\lvert f'(a_i)\rvert}&=\int^{+\infty}_{-\infty}\sum_{i}\frac{\delta(x-a_i)}{\lvert f'(a_i)\rvert}dx\\
+&=\int^{+\infty}_{-\infty}g(x)\delta\left(f(x)\right)dx
+\end{align*}
+$$
+得到
+$$
+\begin{align}
+\delta(f(x))&=\sum_{i}\frac{\delta(x-a_i)}{\lvert f'(a_i)\rvert}, \qquad \mathrm{where}\ f(a_i)=0 \notag\\
+\int_{-\infty}^{+\infty}\delta(f(x))&=\int^{+\infty}_{-\infty}1\cdot\delta\left(f(x)\right)dx =\sum_{i}\frac{1}{\lvert f'(a_i)\rvert}, \qquad \mathrm{where}\ f(a_i)=0 \label{integralofdeltafx}
+\end{align}
+$$
