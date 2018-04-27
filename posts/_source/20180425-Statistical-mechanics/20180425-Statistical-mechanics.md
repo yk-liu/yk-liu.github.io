@@ -373,11 +373,11 @@ E-->F(观测量)
 
 按图1思路, 经典粒子的微观态空间为$\mu$空间.态空间体积$d\Psi=d\vec{p}d\vec{q}$的表达式有
 $$
-d\vec{p}=\mathscr{A}_{D-1}p^{D-1}dp
+d\vec{p}=\mathscr{A}_{D-1}p^{D-1}dp \notag
 $$
 接下来计算
 $$
-p = \sqrt{2mE}, \quad dp=\sqrt{\frac{mE}{2}}dE
+p = \sqrt{2mE}, \quad dp=\sqrt{2mE}dE \notag
 $$
 
 $$
@@ -385,8 +385,8 @@ $$
 \Psi &= \int d\Gamma\\
 & = \int d\vec{q}\int d\vec{p}\\
 &= \int\mathscr{A}_{D-1}p^{D-1}dp \int d\vec{q}\\
-&= \int\mathscr{A}_{D-1}p^{D-1}\sqrt{\frac{mE}{2}}dE \int d\vec{q} \\
-&= \int V \mathscr{A}_{D-1}p^{D-1}\sqrt{\frac{mE}{2}}dE 
+&= \int\mathscr{A}_{D-1}p^{D-1}\sqrt{2mE}dE \int d\vec{q} \\
+&= \int V \mathscr{A}_{D-1}p^{D-1}\sqrt{2mE}dE 
 \end{align*}
 $$
 
@@ -394,16 +394,41 @@ $$
 
 得到
 $$
-\frac{d \Gamma}{d E} =\Omega(E) =V\mathscr{A}_{D-1}p^{D-1}\sqrt{\frac{mE}{2}}
+\frac{d \Gamma}{d E} =\Omega(E) =V\mathscr{A}_{D-1}(\sqrt{2mE})^{ND-1}
 $$
 
 ### 经典宏观系统
 
 类似地, 对于N个粒子的宏观系统:
 $$
-\Omega(E) =V^N\mathscr{A}_{ND-1}\left({\frac{mE}{2}}\right)^{-DN/2}
+\Omega(E) =V^N\mathscr{A}_{ND-1}\left({2mE}\right)^{DN/2} \notag
 $$
 注意在这里出现了所谓Gibbs佯谬, 这样计算得到的$\Omega$ 与实验得到的结果不符合. 必须乘上一个因子$1/N!$才吻合. 这个因子无法从经典力学推导出来. 出现这个因子的原因就是物理测量的系统(如气体等)微观粒子具有不可分辨的特性. 所谓不可分辨, 指的是粒子具有波的性质, 而微观粒子没有轨迹, 在波函数重叠的部分无法区分这两个粒子. ==那么统计力学的系统内的微观粒子满足这个条件吗? 统计力学假定微观粒子之间的相互作用足够微弱(在哪里假设了?), 在这个假设的前提下, 微观粒子是不能分辨的吗? 粒子之间不是没有相互作用吗? 还是说这个假设没有必要?==
+
+带入$ND-1$维球面面积得到:
+
+$\Gamma$函数的性质有[^$\Gamma$函数的性质]
+$$
+\Gamma(n+\alpha) \xrightarrow{n\rightarrow\infty}\Gamma(n)n^\alpha, \quad \alpha\in \mathbb{R}\\
+$$
+而ND-1维球面面积为
+$$
+\mathscr{A}_{ND-1}
+=\frac{{2\pi}^{ND/2}}{\Gamma(ND/2)}
+\xrightarrow{N\rightarrow\infty}\frac{2{\pi}^{ND/2}}{\sqrt{2\pi}\left(\frac{ND}{2}\right)^{\frac{ND-1}{2}}e^{-\frac{ND}{2}}}
+= \frac{{(2\pi)}^{\frac{ND}{2}}}{\left(ND\right)^{\frac{ND}{2}}e^{-\frac{ND}{2}}}\cdot (\frac{ND}{\pi})^{-1/2} \notag
+$$
+因此
+$$
+\begin{align}
+\Omega(E) &=V^N\mathscr{A}_{ND-1}\left({2mE}\right)^{DN/2} \notag\\
+&=V^N\cdot \frac{{(2\pi)}^{\frac{ND}{2}}}{\left(ND\right)^{\frac{ND}{2}}e^{-\frac{ND}{2}}}\cdot (\frac{ND}{\pi})^{-1/2}\cdot \left(2mE\right)^{DN/2}\notag\\
+&=\left(\frac{2\pi m e}{D}\right)^{ND/2}\left(\frac{E}{N}\right)^{ND/2} \left(\frac{V}{N}\right)^N
+\end{align}
+$$
+
+
+
 
 
 
@@ -519,8 +544,25 @@ $$
 \ln(N!)=\sum_{x=1}^N{\ln{x}}\approx\int_1^N\ln{x}dx=N\ln{N}-N+1
 $$
 
+对$\Gamma$函数也有斯特灵公式
+$$
+\ln\Gamma(x)\approx (x-\frac{1}{2})\ln x-x+\frac{1}{2}\ln{2\pi}\\
+\Gamma(x)\approx \sqrt{2\pi}x^{x-\frac{1}{2}}e^{-x}
+$$
+
 
 误差有:
-$$
 
-$$
+
+
+
+
+
+
+# 参考文献
+
+[^\Gamma函数的性质]: https://en.wikipedia.org/wiki/Gamma_function#General
+
+[]
+
+[]
