@@ -129,6 +129,7 @@ $$
 $$
 因此对于给定的封闭系, 能量和粒子数一定,==其余的可加量也都是一样的==, $\rho$是一个常量.
 
+
 ## 系统的宏观量
 
 ### 系统的宏观量的观测值
@@ -255,13 +256,13 @@ $$
 
 ### 孤立系的平衡
 
-考虑两个系统A,B. 他们平衡的条件是净能量交换为零. 由于$\rho$包含了系统的全部信息, 只要两个系统构成的总系统的分布函数与两个孤立系构成的分布函数, 我们就说这两个系统处在平衡态.
+考虑两个系统$A$,$B$. 他们平衡的条件是净能量交换为零. 由于$\rho$包含了系统的全部信息, 只要两个系统构成的总系统的分布函数与两个孤立系构成的分布函数, 我们就说这两个系统处在平衡态.
 
 这个定义和直观感受是一致的. 如果两个系统平衡, 把他们变成孤立系, 放置一段时间之后再相互作用, 二者的能量都不再变化.
 
-如果无论如何划分系统S,子系统A,B都处在平衡态,就说系统S是平衡的.
+如果无论如何划分系统$S$,子系统$A$,$B$都处在平衡态,就说系统S是平衡的.
 
-这个定义也和直观理解是一致的. 如果一个系统"处处相同"(无论如何划分系统S), 系统就是稳定的, 就处在平衡态.
+这个定义也和直观理解是一致的. 如果一个系统"处处相同"(无论如何划分系统$S$), 系统就是稳定的, 就处在平衡态.
 
 这样定义的问题在于, 到底有没有这样的状态? 系统可不可能"处处相同"?
 
@@ -273,24 +274,26 @@ $$
 
 以下分两种情况计算, 来得到系统平衡的条件.
 
-对于平衡中的系统:
+设总系统$S$ 的能量为$E_s$, 子系统$A$ 的能量为$E_a$ , 子系统$B$ 的能量为$E_b$.  $E_a$ , $E_b$, $E_s$ 为变量, $E_a+E_b=E_s$. 总系统的能量守恒, $E_s \equiv \varepsilon_s$. 在平衡时$E_a= \varepsilon_a, \quad E_b= \varepsilon_b $, 且有$\varepsilon_a+\varepsilon_b=\varepsilon_s$,
+
+对于系统$A$,$S$概率密度归一化:
 $$
 \begin{align*}
-1&=\begin{matrix}\underbrace{\int\cdots\int}\\n_c\end{matrix}\rho_cd\Gamma_c\\
-&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_c d\Gamma_ad\Gamma_b\\
-&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\left(\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_c d\Gamma_b\right)d\Gamma_a\\
+1&=\begin{matrix}\underbrace{\int\cdots\int}\\n_s\end{matrix}\rho_sd\Gamma_s\\
+&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_s d\Gamma_ad\Gamma_b\\
+&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\left(\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_s d\Gamma_b\right)d\Gamma_a\\
 1&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\rho_ad\Gamma_a
 \end{align*}
 $$
-
+对于与系统$B$平衡的系统$A$:
 $$
 \begin{align}
-\rho_a^{\mathrm{equilibrium}}&=\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_c d\Gamma_b \notag\\
-&=\int\rho_c d\Gamma_b\notag\\
-&=\int\frac{1}{\Omega_c(E_c)}\delta(E_c-\varepsilon_c)d\Gamma_b\notag\\
-&=\int\frac{1}{\Omega_c(E_c)}\delta(E_b+E_a-\varepsilon_c)d\Gamma_b\notag\\
-&=\frac{1}{\Omega_c(E_c)}\int\delta(E_b-(\varepsilon_c-E_a))d\Gamma_b\notag\\
-&=\frac{1}{\Omega_c(E_c)}\Omega_b(\varepsilon_c-E_a)\notag\\
+\rho_a^{\mathrm{equilibrium}}&=\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_s d\Gamma_b \notag\\
+&=\int\rho_s d\Gamma_b\notag\\
+&=\int\frac{1}{\Omega_s(E_s)}\delta(E_s-\varepsilon_s)d\Gamma_b\notag\\
+&=\int\frac{1}{\Omega_s(E_s)}\delta(E_b+E_a-\varepsilon_s)d\Gamma_b\notag\\
+&=\frac{1}{\Omega_s(E_s)}\int\delta(E_b-(\varepsilon_s-E_a))d\Gamma_b\notag\\
+&=\frac{1}{\Omega_s(E_s)}\Omega_b(\varepsilon_s-E_a)\notag\\
 \label{rhoaequilibrium}
 \end{align}
 $$
@@ -301,22 +304,31 @@ $$
 $$
 结合$(\ref{rhoaequilibrium}), (\ref{rhoaisolated})$ 平衡时, $\rho_a^{\mathrm{equilibrium}}=\rho_a^{\mathrm{isolated}}$ 得到:
 $$
-\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(\varepsilon_c-E_a)}{\Omega_c(E_c)}
+\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(\varepsilon_s-E_a)}{\Omega_s(E_s)}
 $$
 同理对B系统也有:
 $$
-\delta(E_b-\varepsilon_b)=\frac{\Omega_b(E_b)\Omega_a(\varepsilon_c-E_b)}{\Omega_c(E_c)}
+\delta(E_b-\varepsilon_b)=\frac{\Omega_b(E_b)\Omega_a(\varepsilon_s-E_b)}{\Omega_s(E_s)}
 $$
-又有$E_a+E_b=E_c, \quad \varepsilon_a+\varepsilon_b=\varepsilon_c$,得到:
+又有$E_a+E_b=E_s, \quad \varepsilon_a+\varepsilon_b=\varepsilon_s$,得到:
 $$
-\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(E_b)}{\Omega_c(E_c)}=\delta(E_b-\varepsilon_b)
+\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(E_b)}{\Omega_s(E_s)}=\delta(E_b-\varepsilon_b)
 $$
 再由$\delta$函数与$\Omega$的关系:
 $$
+\frac{1}{\Omega_a(\varepsilon_a)}\int\delta(E_a-\varepsilon_a)d\Gamma_a=1 \notag\\
+\int\delta(E_a-\varepsilon_a)d\Gamma_a=\Omega_a(\varepsilon_a) \notag\\
+$$
+
+
+得到: ==这里的E 和 e貌似用混了, 有时间看一看==
+$$
 \begin{align*}
-\frac{1}{\Omega_a(\varepsilon_a)}\int\delta(E_a-\varepsilon_a)d\Gamma_a=1\\
-\int\delta(E_a-\varepsilon_a)d\Gamma_a=\Omega_a(\varepsilon_a)\\
-\therefore \quad \delta(E_a-\varepsilon_a) =\frac{d\Omega_a(\varepsilon_a)}{d\Gamma_a}=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{d \varepsilon_a}{d\Gamma_a}=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a} {\left.\frac{d E_a}{d\Gamma_a}\right|}_{E_a=\varepsilon_a}=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{1}{\Omega(\varepsilon_a)}=\left.\frac{d}{d E_a}\ln{(\Omega(E_a))}\right|_{E_a=\varepsilon_a}
+\quad \delta(E_a-\varepsilon_a) &=\frac{d\Omega_a(\varepsilon_a)}{d\Gamma_a}\\
+&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{d \varepsilon_a}{d\Gamma_a}\\
+&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a} {\left.\frac{d E_a}{d\Gamma_a}\right|}_{E_a=\varepsilon_a}\\
+&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{1}{\Omega(\varepsilon_a)}\\
+&=\left.\frac{d \ln{(\Omega(E_a))}}{d E_a}\right|_{E_a=\varepsilon_a}
 \end{align*}
 $$
 得到:
@@ -338,8 +350,17 @@ $$
 
 我们可以定义的条件显然至少还有: 粒子数不再发生变化, 体积不再发生变化. 但是在研究在这样的平衡条件之前, 我们需要得到这样的系统的分布函数. 还有粒子数, 体积这两个量的观测值表达式.
 
+## 其他类型的系统与对应的$\rho$
+
+之前讨论的都是孤立系. 系统的能量和粒子数都是守恒的. 与之对应的还有能量不守恒但粒子数守恒的封闭系, 能量与粒子数都不守恒的开放系.
+
+### 封闭系
+
+总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_s$可以连续变化, 就要求整个孤立系的能量非常大, 才能满足封闭系的能量可以取任意值的条件 . 这就要求热库的能量$E_r$很大, $E_s\ll E_r$
 
 
+
+### 开放系
 
 
 
