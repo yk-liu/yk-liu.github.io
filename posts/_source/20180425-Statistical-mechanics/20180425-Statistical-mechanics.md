@@ -1,6 +1,9 @@
 # 热统
 
 [TOC]
+
+
+
 ## 系统
 
 统计力学应当不依赖于具体的力学规律,而只是关于群体现象的一种描述. 对于气体可以应用统计力学, 对于上亿个皮球也可以应用统计力学. 不同之处在于系综不同, 理想气体是全同粒子,而宏观的皮球则可以区分.
@@ -371,65 +374,132 @@ E-->F(观测量)
 
 考虑一个自由的粒子. 显然粒子数和能量都是守恒的. 把这个粒子看作一个系统, 这个系统显然不是统计力学研究的系统, 因为自由度数目太小.
 
-按图1思路, 经典粒子的微观态空间为$\mu$空间.态空间体积$d\Psi=d\vec{p}d\vec{q}$的表达式有
+按图1思路, 经典粒子的微观态空间为$\mu$空间. 粒子的动量和能量关系有:
 $$
-d\vec{p}=\mathscr{A}_{D-1}p^{D-1}dp \notag
+\begin{align}
+d\vec{p}&=\mathscr{A}_{D-1}p^{D-1}dp \notag \\
+\quad p &= {\left(2mE\right)}^{1/2} \label{singleParticleEP} \\
+dp &= {\left(2m\right)}^{1/2}E^{-1/2}dE \notag
+\end{align}
 $$
-接下来计算
-$$
-p = \sqrt{2mE}, \quad dp=\sqrt{2mE}dE \notag
-$$
-
+得到态空间体积的表达式:
 $$
 \begin{align*}
 \Psi &= \int d\Gamma\\
-& = \int d\vec{q}\int d\vec{p}\\
-&= \int\mathscr{A}_{D-1}p^{D-1}dp \int d\vec{q}\\
-&= \int\mathscr{A}_{D-1}p^{D-1}\sqrt{2mE}dE \int d\vec{q} \\
-&= \int V \mathscr{A}_{D-1}p^{D-1}\sqrt{2mE}dE 
+& = \iint d\vec{q} d\vec{p}\\
+&= \int V d\vec{p}\\
+&= \int V \mathscr{A}_{D-1}p^{D-1}dp \\\
+&= \int V \mathscr{A}_{D-1} {\left(2mE\right)}^{\frac{D-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
+&= \int V \mathscr{A}_{D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}dE 
 \end{align*}
 $$
-
 这里的体积$V=\int d \vec{q}$就是粒子的"宏观体积", 表示粒子的运动范围.
 
 得到
 $$
-\frac{d \Gamma}{d E} =\Omega(E) =V\mathscr{A}_{D-1}(\sqrt{2mE})^{ND-1}
+\frac{d \Gamma}{d E} =\Omega(E) = V \mathscr{A}_{D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}
 $$
 
 ### 经典宏观系统
 
-类似地, 对于N个粒子的宏观系统:
+类似地, 对于N个质量均为$m$的粒子的宏观系统, 定义如下动量$\vec{\mathfrak{p}}$
 $$
-\Omega(E) =V^N\mathscr{A}_{ND-1}\left({2mE}\right)^{DN/2} \notag
+\vec{\mathfrak{p}}=(\vec{p}_1,\vec{p}_2,\cdots,\vec{p}_N)
+$$
+系统的能量可以表示为:
+$$
+E=\sum_i \frac{\vec{p}_i^2}{2m}= \frac{\vec{\mathfrak{p}}^2}{2m}
+$$
+仿照式子$(\ref{singleParticleEP})$ 得到
+$$
+\begin{align}
+d\vec{\mathfrak{p}}&=d\vec{p}_1\cdot d\vec{p}_2\cdot\cdots\cdot d\vec{p}_N \notag \qquad 这里仿照d\vec{p}=d(p_x,p_y,p_z)=dp_xdp_ydp_z \notag \\
+&=\mathscr{A}_{ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p}, \\
+\mathfrak{p}&=\left( \sum_i {\vec{p}_i^2}\right)^{\frac{1}{2}}\notag \\
+&=\left( 2m E\right)^{\frac{1}{2}}\\
+d\mathfrak{p}&= {\left(2m\right)}^{1/2}E^{-1/2}dE 
+\end{align}
+$$
+接着得到对于N个质量均为$m$的粒子的宏观系统相空间体积:
+$$
+\begin{align*}
+\Psi &= \int d\Gamma\\
+& = \iint [d\vec{q}] [d\vec{p}]\\
+&=\left(\iint\cdots\int d\vec{q}_1d\vec{q}_2\cdots d\vec{q}_N\right) \left(\iint\cdots\int d\vec{p}_1d\vec{p}_2\cdots d\vec{p}_N\right)\\
+&=\left((\int d\vec{q}_1)(\int d\vec{q}_2)\cdots (\int d\vec{q}_N)\right) \int d\vec{\mathfrak{p}}\\
+ &\\
+&= V\cdot V\cdots V \int  \mathscr{A}_{ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p} \\\
+&= \int V^N \mathscr{A}_{ND-1} {\left(2mE\right)}^{\frac{ND-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
+&= \int V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE 
+\end{align*}
+$$
+
+得到$\Gamma$和$E$的关系:
+$$
+d\Gamma=V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE
+$$
+从而得到得到$\Omega$的表达式:
+$$
+\Omega(E)=\frac{d\Gamma}{dE} =V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}} \notag
 $$
 注意在这里出现了所谓Gibbs佯谬, 这样计算得到的$\Omega$ 与实验得到的结果不符合. 必须乘上一个因子$1/N!$才吻合. 这个因子无法从经典力学推导出来. 出现这个因子的原因就是物理测量的系统(如气体等)微观粒子具有不可分辨的特性. 所谓不可分辨, 指的是粒子具有波的性质, 而微观粒子没有轨迹, 在波函数重叠的部分无法区分这两个粒子. ==那么统计力学的系统内的微观粒子满足这个条件吗? 统计力学假定微观粒子之间的相互作用足够微弱(在哪里假设了?), 在这个假设的前提下, 微观粒子是不能分辨的吗? 粒子之间不是没有相互作用吗? 还是说这个假设没有必要?==
 
 带入$ND-1$维球面面积得到:
 
 $\Gamma$函数的性质有[^$\Gamma$函数的性质]
-$$
-\Gamma(n+\alpha) \xrightarrow{n\rightarrow\infty}\Gamma(n)n^\alpha, \quad \alpha\in \mathbb{R}\\
-$$
+
 而ND-1维球面面积为
 $$
+\begin{align*}
 \mathscr{A}_{ND-1}
-=\frac{{2\pi}^{ND/2}}{\Gamma(ND/2)}
-\xrightarrow{N\rightarrow\infty}\frac{2{\pi}^{ND/2}}{\sqrt{2\pi}\left(\frac{ND}{2}\right)^{\frac{ND-1}{2}}e^{-\frac{ND}{2}}}
-= \frac{{(2\pi)}^{\frac{ND}{2}}}{\left(ND\right)^{\frac{ND}{2}}e^{-\frac{ND}{2}}}\cdot (\frac{ND}{\pi})^{-1/2} \notag
+&=\frac{{2\pi}^{ND/2}}{\Gamma(ND/2)}\\
+\phantom{}\xrightarrow{N\rightarrow\infty} 
+&\phantom{=}\frac{2{\pi}^{ND/2}}{\sqrt{2\pi \left(\frac{ND}{2}\right)}{(\frac{ND}{2})}^{\frac{ND}{2}-1}e^{-\frac{ND}{2}}}\\
+&= \frac{\sqrt{2}{\left(e\pi\right)}^{\frac{ND}{2}}}{\pi^{-\frac{1}{2}}{(\frac{ND}{2})}^{\frac{ND-1}{2}}} \notag\\
+&=\frac{\sqrt{2}{\left(e\pi\right)}^{\frac{ND}{2}}}{\pi^{-\frac{1}{2}}{(\frac{ND}{2})}^{\frac{ND}{2}}(\frac{ND}{2})^{-\frac{1}{2}}}\\
+&= \left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\\
+\end{align*}
 $$
 因此
 $$
 \begin{align}
 \Omega(E) &=V^N\mathscr{A}_{ND-1}\left({2mE}\right)^{DN/2} \notag\\
-&=V^N\cdot \frac{{(2\pi)}^{\frac{ND}{2}}}{\left(ND\right)^{\frac{ND}{2}}e^{-\frac{ND}{2}}}\cdot (\frac{ND}{\pi})^{-1/2}\cdot \left(2mE\right)^{DN/2}\notag\\
-&=\left(\frac{2\pi m e}{D}\right)^{ND/2}\left(\frac{E}{N}\right)^{ND/2} \left(\frac{V}{N}\right)^N
+&=V^N\cdot\left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
+&=V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} 
 \end{align}
+$$
+
+由此得到熵以及对应的宏观量, 温度:
+$$
+\begin{align}
+S(E)&=\ln{\Omega(E)} \notag\\
+&=\ln\left(V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \right)\\
+\end{align}
+$$
+温度的计算:
+$$
+\begin{align*}
+\frac{1}{T}&=\frac{dS(E)}{dE} \\
+&=k_0\frac{1}{\Omega(E)}\frac{d\Omega(E)}{dE} \\
+&=\frac{k_0}{V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} }\cdot V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{1}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \frac{dE^{\frac{ND}{2}}}{dE} \\
+&=k_0\frac{ND}{2}E^{-1} 
+\end{align*}
+$$
+得到了系统的能态方程:
+$$
+E=\frac{1}{2}NDk_0T
 $$
 
 
 
 
+Gamma函数的性质
+$$
+\Gamma(x+1)\approx \sqrt{2\pi x}x^{x}e^{-x}\\
+
+\therefore
+\Gamma(x)=\frac{\Gamma(x+1)}{x}\approx \sqrt{2\pi x}x^{x-1}e^{-x}
+$$
 
 
 
@@ -444,6 +514,8 @@ $$
 
 在封闭系与热库达成平衡时, 他们可以看作是两个孤立系. 这样就回到了前面定义的平衡状态, 从而得到平衡时:
 
+#### 封闭系的$\rho$
+
 ==问题:这样忽略了粒子的交换. 在粒子可以区分的前提下, 这样做没有关系. 只要跟踪子系统的全部粒子即可, 在粒子不可以跟踪 没有确定轨迹的情况下, 这样做还成立吗?==
 $$
 \begin{align*}
@@ -455,6 +527,10 @@ $$
 
 这样就把未知的孤立系的分布函数表示成了已知的$\Omega$的比值.
 
+#### 封闭系的平衡态
+
+
+
 ### 开放系
 
 按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量$E_c$和粒子数$N_c$可以连续变化, 就要求整个孤立系的能量$E_i$和粒子数$N_i$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $N_r$很大, $E_c\ll E_r$
@@ -465,6 +541,12 @@ $$
 \rho_c^{\mathrm{isolated}}&=\frac{\Omega_r(E_r)}{\Omega_i(E_i)}\xrightarrow{E_i-E_r=E_c \ll E_i}\frac{\Omega_r(E_i)}{\Omega_i(E_i)}
 \end{align*}
 $$
+
+#### 开放系的平衡态
+
+
+
+
 
 ## 遇到的问题
 
@@ -546,8 +628,10 @@ $$
 
 对$\Gamma$函数也有斯特灵公式
 $$
-\ln\Gamma(x)\approx (x-\frac{1}{2})\ln x-x+\frac{1}{2}\ln{2\pi}\\
-\Gamma(x)\approx \sqrt{2\pi}x^{x-\frac{1}{2}}e^{-x}
+\Gamma(x+1)\approx \sqrt{2\pi x}x^{x}e^{-x}\\
+
+\therefore
+\Gamma(x)=\frac{\Gamma(x+1)}{x}\approx \sqrt{2\pi x}x^{x-1}e^{-x}
 $$
 
 
