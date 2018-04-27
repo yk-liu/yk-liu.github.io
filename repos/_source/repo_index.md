@@ -21,5 +21,3 @@ Here is a list of planning, ongoing and finished projects.
 
  \* :  A well organized EA can be found [here](https://github.com/PytLab/gaft). I am learning from his parallelization.
 
-------------
-Also [here](https://github.com/qzhu2017/2017-cmp) with [my homework solutions](https://github.com/yk-liu/2017-cmp) is a computation physics documents in UNLV. 
