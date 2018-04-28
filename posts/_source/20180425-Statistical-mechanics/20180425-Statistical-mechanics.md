@@ -2,8 +2,6 @@
 
 [TOC]
 
-
-
 ## 系统
 
 统计力学应当不依赖于具体的力学规律,而只是关于群体现象的一种描述. 对于气体可以应用统计力学, 对于上亿个皮球也可以应用统计力学. 不同之处在于系综不同, 理想气体是全同粒子,而宏观的皮球则可以区分.
@@ -132,11 +130,46 @@ $$
 $$
 因此对于给定的封闭系, 能量和粒子数一定,==其余的可加量也都是一样的==, $\rho$是一个常量.
 
+## 系统的分类与对应的$\rho$
 
-## 系统的宏观量
+### 孤立系
+
+最直观的系统是孤立系. 孤立系的能量和粒子数都是守恒的. 与之对应的还有能量不守恒但粒子数守恒的封闭系, 能量与粒子数都不守恒的开放系.
+孤立系由于能量不变, 孤立系的能量只有一个允许值
+$$
+\rho(p,q)=\rho(E_0)\delta(E-E_0)
+$$
+
+### 封闭系
+
+总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$ . 封闭系的$\rho$要利用孤立系的平衡来得出.
+
+### 开放系
+
+按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量$E_c$和粒子数$N_c$可以连续变化, 就要求整个孤立系的能量$E_i$和粒子数$N_i$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $N_r$很大, $E_c\ll E_r$. 开放系的$\rho$也要利用孤立系的平衡来得出.
+
+
+
+## 孤立系统的宏观量
+
+所有的系统都可以看作是孤立系统的一部分. 下面讨论孤立系的观测量的表达式.
+
+要得到孤立系的观测量的表达式, 就是要从粒子满足的运动方程出发, 得到$\rho$的表达式, 从而第一性地计算相应的宏观量.
+
+```mermaid
+graph LR
+A(微观运动方程)-->B(微观态空间)
+B--> C(态空间体积)
+C-->|对能量微分|D(能态密度)
+D-->E(ρ)
+E-->F(观测量)
+```
+
+
 
 ### 系统的宏观量的观测值
 
+由观测值的定义:
 $$
 \langle O\rangle=\int_{-\infty}^{{-\infty}}{O(p,q)\mathbb{P}(p,q)dpdq}
 $$
@@ -202,9 +235,7 @@ $$
 $$
 \rho(p,q)= \left. \frac{dE}{d\Gamma} \right| _{E=E_0}  \delta(E-E_0) = \frac{1}{\left. \frac{d\Gamma}{dE} \right| _{E=E_0}} \delta(E-E_0)  \notag
 $$
-
-
-#### 能态密度
+#### 概率密度用能态密度表达
 
 定义能态密度$\Omega$为相空间体积对能量的微分:
 $$
@@ -219,20 +250,7 @@ $$
 $$
 \rho(E)=\frac{1}{\Omega(E_0)} \delta(E-E_0)\\
 $$
-
-> 注意:
->
-> 这里==相空间的体积对能量的微分==与==相空间体积内代表点数目对能量的微分==不同. 一旦系统满足的运动规律给定, 相空间体积对能量的微分就给定了. 而相空间体积内代表点的数目对能量的微分还依赖于系统的种类, 具体的系综等等其他因素(包含在$\rho$中)
-> $$
-> \begin{align*}
-> \mathrm{Volume\ in\ phase\ space}&=\int \phantom{\rho}d\Gamma=\int \phantom{\rho}\Omega(E)dE g\\
-> &\qquad\downarrow biased\ with\ \rho \\
-> \mathrm{Number\ of\ points\ in\ phase\ space }&=\int\rho d\Gamma=\int \rho\Omega(E)dE \\
-> \end{align*}
-> $$
->
-
-#### 系统宏观量的一般表达式
+#### 系统宏观量用能态密度表达
 
 至此得到
 $$
@@ -244,6 +262,132 @@ $$
 \end{align}
 $$
 
+### 理想气体能态密度的表达式
+
+在之前我们建立了一般的系统观测量与能态密度的关系. 现在以试着以"理想气体"(微粒可区分)为例, 从围观态空间出发推导能态密度的表达式
+```mermaid
+graph LR
+A(微观运动方程)-->B(微观态空间)
+B--> C(态空间体积)
+C-->|对能量微分|D(能态密度)
+D-->E(ρ)
+E-->F(观测量)
+```
+#### 自由单粒子系统
+
+考虑一个自由的粒子. 显然粒子数和能量都是守恒的. 把这个粒子看作一个系统, 这个系统显然不是统计力学研究的系统, 因为自由度数目太小.
+
+按图1思路, 经典粒子的微观态空间为$\mu$空间. 粒子的动量和能量关系有:
+$$
+\begin{align}
+d\vec{p}&=\mathscr{A}_{D-1}p^{D-1}dp \notag \\
+\quad p &= {\left(2mE\right)}^{1/2} \label{singleParticleEP} \\
+dp &= {\left(2m\right)}^{1/2}E^{-1/2}dE \notag
+\end{align}
+$$
+得到态空间体积的表达式:
+$$
+\begin{align*}
+\Psi &= \int d\Gamma\\
+& = \iint d\vec{q} d\vec{p}\\
+&= \int V d\vec{p}\\
+&= \int V \mathscr{A}_{D-1}p^{D-1}dp \\\
+&= \int V \mathscr{A}_{D-1} {\left(2mE\right)}^{\frac{D-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
+&= \int V \mathscr{A}_{D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}dE 
+\end{align*}
+$$
+这里的体积$V=\int d \vec{q}$就是粒子的"宏观体积", 表示粒子的运动范围.
+
+得到
+$$
+\frac{d \Gamma}{d E} =\Omega(E) = V \mathscr{A}_{D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}
+$$
+
+#### 经典宏观系统
+
+类似地, 对于N个质量均为$m$的粒子的宏观系统, 定义如下动量$\vec{\mathfrak{p}}$
+$$
+\vec{\mathfrak{p}}=(\vec{p}_1,\vec{p}_2,\cdots,\vec{p}_N)
+$$
+系统的能量可以表示为:
+$$
+E=\sum_i \frac{\vec{p}_i^2}{2m}= \frac{\vec{\mathfrak{p}}^2}{2m}
+$$
+仿照式子$(\ref{singleParticleEP})$ 得到
+$$
+\begin{align}
+d\vec{\mathfrak{p}}&=d\vec{p}_1\cdot d\vec{p}_2\cdot\cdots\cdot d\vec{p}_N \notag \qquad 这里仿照d\vec{p}=d(p_x,p_y,p_z)=dp_xdp_ydp_z \notag \\
+&=\mathscr{A}_{ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p}, \\
+\mathfrak{p}&=\left( \sum_i {\vec{p}_i^2}\right)^{\frac{1}{2}}\notag \\
+&=\left( 2m E\right)^{\frac{1}{2}}\\
+d\mathfrak{p}&= {\left(2m\right)}^{1/2}E^{-1/2}dE 
+\end{align}
+$$
+接着得到对于N个质量均为$m$的粒子的宏观系统相空间体积:
+$$
+\begin{align*}
+\Psi &= \int d\Gamma\\
+& = \iint [d\vec{q}] [d\vec{p}]\\
+&=\left(\iint\cdots\int d\vec{q}_1d\vec{q}_2\cdots d\vec{q}_N\right) \left(\iint\cdots\int d\vec{p}_1d\vec{p}_2\cdots d\vec{p}_N\right)\\
+&=\left((\int d\vec{q}_1)(\int d\vec{q}_2)\cdots (\int d\vec{q}_N)\right) \int d\vec{\mathfrak{p}}\\
+ &\\
+&= V\cdot V\cdots V \int  \mathscr{A}_{ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p} \\\
+&= \int V^N \mathscr{A}_{ND-1} {\left(2mE\right)}^{\frac{ND-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
+&= \int V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE 
+\end{align*}
+$$
+
+得到$\Gamma$和$E$的关系:
+$$
+d\Gamma=V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE
+$$
+从而得到得到$\Omega$的表达式:
+$$
+\Omega(E)=\frac{d\Gamma}{dE} =V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}} \notag
+$$
+注意在这里出现了所谓Gibbs佯谬, 这样计算得到的$\Omega$ 与实验得到的结果不符合. 必须乘上一个因子$1/N!$才吻合. 这个因子无法从经典力学推导出来. 出现这个因子的原因就是物理测量的系统(如气体等)微观粒子具有不可分辨的特性. 所谓不可分辨, 指的是粒子具有波的性质, 而微观粒子没有轨迹, 在波函数重叠的部分无法区分这两个粒子. ==那么统计力学的系统内的微观粒子满足这个条件吗? 统计力学假定微观粒子之间的相互作用足够微弱(在哪里假设了?), 在这个假设的前提下, 微观粒子是不能分辨的吗? 粒子之间不是没有相互作用吗? 还是说这个假设没有必要?==
+
+带入$ND-1$维球面面积得到:
+
+$\Gamma$函数的性质有[^$\Gamma$函数的性质]
+利用Gamma函数的性质
+$$
+\Gamma(x+1)\approx \sqrt{2\pi x}x^{x}e^{-x}\\
+
+\therefore
+\Gamma(x)=\frac{\Gamma(x+1)}{x}\approx \sqrt{2\pi x}x^{x-1}e^{-x}
+$$
+得到ND-1维球面面积为$(N\rightarrow \infty)$
+$$
+\begin{align*}
+\mathscr{A}_{ND-1}
+&=\frac{{2\pi}^{ND/2}}{\Gamma(ND/2)}\\
+\phantom{}\xrightarrow{N\rightarrow\infty} 
+&\phantom{=}\frac{2{\pi}^{ND/2}}{\sqrt{2\pi \left(\frac{ND}{2}\right)}{(\frac{ND}{2})}^{\frac{ND}{2}-1}e^{-\frac{ND}{2}}}\\
+&= \frac{\sqrt{2}{\left(e\pi\right)}^{\frac{ND}{2}}}{\pi^{-\frac{1}{2}}{(\frac{ND}{2})}^{\frac{ND-1}{2}}} \notag\\
+&=\frac{\sqrt{2}{\left(e\pi\right)}^{\frac{ND}{2}}}{\pi^{-\frac{1}{2}}{(\frac{ND}{2})}^{\frac{ND}{2}}(\frac{ND}{2})^{-\frac{1}{2}}}\\
+&= \left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\\
+\end{align*}
+$$
+因此
+$$
+\begin{align}
+\Omega(E) &=V^N\mathscr{A}_{ND-1}\left({2mE}\right)^{DN/2} \notag\\
+&=V^N\cdot\left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
+&=V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} 
+\end{align}
+$$
+> 注意:
+>
+> 这里==相空间的体积对能量的微分==与==相空间体积内代表点数目对能量的微分==不同. 一旦系统满足的运动规律给定, 相空间体积对能量的微分就给定了. 而相空间体积内代表点的数目对能量的微分还依赖于系统的种类, 具体的系综等等其他因素(包含在$\rho$中)
+> $$
+> \begin{align*}
+> \mathrm{Volume\ in\ phase\ space}&=\int \phantom{\rho}d\Gamma=\int \phantom{\rho}\Omega(E)dE g\\
+> &\qquad\downarrow biased\ with\ \rho \\
+> \mathrm{Number\ of\ points\ in\ phase\ space }&=\int\rho d\Gamma=\int \rho\Omega(E)dE \\
+> \end{align*}
+> $$
+>
 ### 一些特殊的宏观量
 
 #### 能量
@@ -348,167 +492,57 @@ $$
 $$
 S'_a(E_a)=S'_b(E_b)=\frac{1}{T}
 $$
+#### 理想气体的平衡与能态方程
+利用上面的条件, 带入理想气体的表达式, 我们得到理想气体的能态方程:
+因此
 
-### 其他平衡
+$$
+\begin{align}
 
+\Omega(E) &=VN\mathscr{A}_{ND-1}\left({2mE}\right){DN/2} \notag\\
+
+&=VN\cdot\left(\frac{2e\pi}{ND}\right){{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
+
+&=V^N \left(\frac{2e\pi m}{D}\right){\frac{ND}{2}}\left(\frac{E}{N}\right){\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} 
+
+\end{align}
+$$
+由此得到熵以及对应的宏观量, 温度:
+
+$$
+\begin{align}
+
+S(E)&=\ln{\Omega(E)} \notag\\
+
+&=\ln\left(V^N \left(\frac{2e\pi m}{D}\right){\frac{ND}{2}}\left(\frac{E}{N}\right){\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \right)\\
+
+\end{align}
+$$
+温度的计算:
+
+$$
+\begin{align*}
+
+\frac{1}{T}&=\frac{dS(E)}{dE} \\
+
+&=k_0\frac{1}{\Omega(E)}\frac{d\Omega(E)}{dE} \\
+
+&=\frac{k_0}{V^N \left(\frac{2e\pi m}{D}\right){\frac{ND}{2}}\left(\frac{E}{N}\right){\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} }\cdot V^N \left(\frac{2e\pi m}{D}\right){\frac{ND}{2}}\left(\frac{1}{N}\right){\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \frac{dE^{\frac{ND}{2}}}{dE} \\
+
+&=k_0\frac{ND}{2}E^{-1} 
+
+\end{align*}
+$$
+得到了系统的能态方程:
+
+$$
+E=\frac{1}{2}NDk_0T
+$$
 可以看出, 仿照上面的做法, 可以定义不同的平衡条件而得到不同的等价关系, 从而得到不同的==等价量==.
 
 我们可以定义的条件显然至少还有: 粒子数不再发生变化, 体积不再发生变化. 但是在研究在这样的平衡条件之前, 我们需要得到这样的系统的分布函数. 还有粒子数, 体积这两个量的观测值表达式.
 
-## 观测量的表达式
-
-在定义了一系列观测量之后, 自然要问如何第一性地计算得到这些量的值. 也就是说, 如何从粒子满足的运动方程出发, 得到$\rho$的表达式, 从而计算相应的宏观量?
-
-```mermaid
-graph LR
-A(微观运动方程)-->B(微观态空间)
-B--> C(态空间体积)
-C-->|对能量微分|D(能态密度)
-D-->E(ρ)
-E-->F(观测量)
-```
-
-
-
-### 自由单粒子系统
-
-考虑一个自由的粒子. 显然粒子数和能量都是守恒的. 把这个粒子看作一个系统, 这个系统显然不是统计力学研究的系统, 因为自由度数目太小.
-
-按图1思路, 经典粒子的微观态空间为$\mu$空间. 粒子的动量和能量关系有:
-$$
-\begin{align}
-d\vec{p}&=\mathscr{A}_{D-1}p^{D-1}dp \notag \\
-\quad p &= {\left(2mE\right)}^{1/2} \label{singleParticleEP} \\
-dp &= {\left(2m\right)}^{1/2}E^{-1/2}dE \notag
-\end{align}
-$$
-得到态空间体积的表达式:
-$$
-\begin{align*}
-\Psi &= \int d\Gamma\\
-& = \iint d\vec{q} d\vec{p}\\
-&= \int V d\vec{p}\\
-&= \int V \mathscr{A}_{D-1}p^{D-1}dp \\\
-&= \int V \mathscr{A}_{D-1} {\left(2mE\right)}^{\frac{D-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
-&= \int V \mathscr{A}_{D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}dE 
-\end{align*}
-$$
-这里的体积$V=\int d \vec{q}$就是粒子的"宏观体积", 表示粒子的运动范围.
-
-得到
-$$
-\frac{d \Gamma}{d E} =\Omega(E) = V \mathscr{A}_{D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}
-$$
-
-### 经典宏观系统
-
-类似地, 对于N个质量均为$m$的粒子的宏观系统, 定义如下动量$\vec{\mathfrak{p}}$
-$$
-\vec{\mathfrak{p}}=(\vec{p}_1,\vec{p}_2,\cdots,\vec{p}_N)
-$$
-系统的能量可以表示为:
-$$
-E=\sum_i \frac{\vec{p}_i^2}{2m}= \frac{\vec{\mathfrak{p}}^2}{2m}
-$$
-仿照式子$(\ref{singleParticleEP})$ 得到
-$$
-\begin{align}
-d\vec{\mathfrak{p}}&=d\vec{p}_1\cdot d\vec{p}_2\cdot\cdots\cdot d\vec{p}_N \notag \qquad 这里仿照d\vec{p}=d(p_x,p_y,p_z)=dp_xdp_ydp_z \notag \\
-&=\mathscr{A}_{ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p}, \\
-\mathfrak{p}&=\left( \sum_i {\vec{p}_i^2}\right)^{\frac{1}{2}}\notag \\
-&=\left( 2m E\right)^{\frac{1}{2}}\\
-d\mathfrak{p}&= {\left(2m\right)}^{1/2}E^{-1/2}dE 
-\end{align}
-$$
-接着得到对于N个质量均为$m$的粒子的宏观系统相空间体积:
-$$
-\begin{align*}
-\Psi &= \int d\Gamma\\
-& = \iint [d\vec{q}] [d\vec{p}]\\
-&=\left(\iint\cdots\int d\vec{q}_1d\vec{q}_2\cdots d\vec{q}_N\right) \left(\iint\cdots\int d\vec{p}_1d\vec{p}_2\cdots d\vec{p}_N\right)\\
-&=\left((\int d\vec{q}_1)(\int d\vec{q}_2)\cdots (\int d\vec{q}_N)\right) \int d\vec{\mathfrak{p}}\\
- &\\
-&= V\cdot V\cdots V \int  \mathscr{A}_{ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p} \\\
-&= \int V^N \mathscr{A}_{ND-1} {\left(2mE\right)}^{\frac{ND-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
-&= \int V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE 
-\end{align*}
-$$
-
-得到$\Gamma$和$E$的关系:
-$$
-d\Gamma=V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE
-$$
-从而得到得到$\Omega$的表达式:
-$$
-\Omega(E)=\frac{d\Gamma}{dE} =V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}} \notag
-$$
-注意在这里出现了所谓Gibbs佯谬, 这样计算得到的$\Omega$ 与实验得到的结果不符合. 必须乘上一个因子$1/N!$才吻合. 这个因子无法从经典力学推导出来. 出现这个因子的原因就是物理测量的系统(如气体等)微观粒子具有不可分辨的特性. 所谓不可分辨, 指的是粒子具有波的性质, 而微观粒子没有轨迹, 在波函数重叠的部分无法区分这两个粒子. ==那么统计力学的系统内的微观粒子满足这个条件吗? 统计力学假定微观粒子之间的相互作用足够微弱(在哪里假设了?), 在这个假设的前提下, 微观粒子是不能分辨的吗? 粒子之间不是没有相互作用吗? 还是说这个假设没有必要?==
-
-带入$ND-1$维球面面积得到:
-
-$\Gamma$函数的性质有[^$\Gamma$函数的性质]
-
-而ND-1维球面面积为
-$$
-\begin{align*}
-\mathscr{A}_{ND-1}
-&=\frac{{2\pi}^{ND/2}}{\Gamma(ND/2)}\\
-\phantom{}\xrightarrow{N\rightarrow\infty} 
-&\phantom{=}\frac{2{\pi}^{ND/2}}{\sqrt{2\pi \left(\frac{ND}{2}\right)}{(\frac{ND}{2})}^{\frac{ND}{2}-1}e^{-\frac{ND}{2}}}\\
-&= \frac{\sqrt{2}{\left(e\pi\right)}^{\frac{ND}{2}}}{\pi^{-\frac{1}{2}}{(\frac{ND}{2})}^{\frac{ND-1}{2}}} \notag\\
-&=\frac{\sqrt{2}{\left(e\pi\right)}^{\frac{ND}{2}}}{\pi^{-\frac{1}{2}}{(\frac{ND}{2})}^{\frac{ND}{2}}(\frac{ND}{2})^{-\frac{1}{2}}}\\
-&= \left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\\
-\end{align*}
-$$
-因此
-$$
-\begin{align}
-\Omega(E) &=V^N\mathscr{A}_{ND-1}\left({2mE}\right)^{DN/2} \notag\\
-&=V^N\cdot\left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
-&=V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} 
-\end{align}
-$$
-
-由此得到熵以及对应的宏观量, 温度:
-$$
-\begin{align}
-S(E)&=\ln{\Omega(E)} \notag\\
-&=\ln\left(V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \right)\\
-\end{align}
-$$
-温度的计算:
-$$
-\begin{align*}
-\frac{1}{T}&=\frac{dS(E)}{dE} \\
-&=k_0\frac{1}{\Omega(E)}\frac{d\Omega(E)}{dE} \\
-&=\frac{k_0}{V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} }\cdot V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{1}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \frac{dE^{\frac{ND}{2}}}{dE} \\
-&=k_0\frac{ND}{2}E^{-1} 
-\end{align*}
-$$
-得到了系统的能态方程:
-$$
-E=\frac{1}{2}NDk_0T
-$$
-
-
-
-
-Gamma函数的性质
-$$
-\Gamma(x+1)\approx \sqrt{2\pi x}x^{x}e^{-x}\\
-
-\therefore
-\Gamma(x)=\frac{\Gamma(x+1)}{x}\approx \sqrt{2\pi x}x^{x-1}e^{-x}
-$$
-
-
-
-
-## 其他类型的系统与对应的$\rho$
-
-之前讨论的都是孤立系. 系统的能量和粒子数都是守恒的. 与之对应的还有能量不守恒但粒子数守恒的封闭系, 能量与粒子数都不守恒的开放系.
-
-### 封闭系
+### 封闭系的平衡
 
 总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$
 
@@ -524,14 +558,13 @@ $$
 \rho_c^{\mathrm{isolated}}&=\frac{\Omega_r(E_r)}{\Omega_i(E_i)}\xrightarrow{E_i-E_r=E_c \ll E_i}\frac{\Omega_r(E_i)}{\Omega_i(E_i)}
 \end{align*}
 $$
-
 这样就把未知的孤立系的分布函数表示成了已知的$\Omega$的比值.
 
 #### 封闭系的平衡态
 
 
 
-### 开放系
+### 开放系的平衡
 
 按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量$E_c$和粒子数$N_c$可以连续变化, 就要求整个孤立系的能量$E_i$和粒子数$N_i$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $N_r$很大, $E_c\ll E_r$
 $$
