@@ -428,16 +428,16 @@ $$
 对于系统$A$,$S$概率密度归一化:
 $$
 \begin{align*}
-1&=\begin{matrix}\underbrace{\int\cdots\int}\\n_s\end{matrix}\rho_sd\Gamma_s\\
-&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_s d\Gamma_ad\Gamma_b\\
-&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\left(\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_s d\Gamma_b\right)d\Gamma_a\\
-1&=\begin{matrix}\underbrace{\int\cdots\int}\\n_a\end{matrix}\rho_ad\Gamma_a
+1&=\underbrace{\int\cdots\int}_{n_s}\rho_sd\Gamma_s\\
+&=\underbrace{\int\cdots\int}_{n_a}\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_ad\Gamma_b\\
+&=\underbrace{\int\cdots\int}_{n_a}\left(\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_b\right)d\Gamma_a\\
+1&=\underbrace{\int\cdots\int}_{n_a}\rho_ad\Gamma_a
 \end{align*}
 $$
 对于与系统$B$平衡的系统$A$:
 $$
 \begin{align}
-\rho_a^{\mathrm{equilibrium}}&=\begin{matrix}\underbrace{\int\cdots\int}\\n_b\end{matrix}\rho_s d\Gamma_b \notag\\
+\rho_a^{\mathrm{equilibrium}}&=\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_b \notag\\
 &=\int\rho_s d\Gamma_b\notag\\
 &=\int\frac{1}{\Omega_s(E_s)}\delta(E_s-\varepsilon_s)d\Gamma_b\notag\\
 &=\int\frac{1}{\Omega_s(E_s)}\delta(E_b+E_a-\varepsilon_s)d\Gamma_b\notag\\
@@ -446,7 +446,6 @@ $$
 \label{rhoaequilibrium}
 \end{align}
 $$
-
 子系统A在平衡时可视作孤立系:
 $$
 \rho_a^{\mathrm{isolated}}=\frac{1}{\Omega_a(E_a)}\delta(E_a-\varepsilon_a) \label{rhoaisolated}
@@ -468,8 +467,6 @@ $$
 \frac{1}{\Omega_a(\varepsilon_a)}\int\delta(E_a-\varepsilon_a)d\Gamma_a=1 \notag\\
 \int\delta(E_a-\varepsilon_a)d\Gamma_a=\Omega_a(\varepsilon_a) \notag\\
 $$
-
-
 得到: ==这里的E 和 e貌似用混了, 有时间看一看==
 $$
 \begin{align*}
@@ -492,34 +489,33 @@ $$
 $$
 S'_a(E_a)=S'_b(E_b)=\frac{1}{T}
 $$
+
 #### 理想气体的平衡与能态方程
+
 利用上面的条件, 带入理想气体的表达式, 我们得到理想气体的能态方程:
 因此
-
 $$
 \begin{align}
 
 \Omega(E) &=VN\mathscr{A}_{ND-1}\left({2mE}\right){DN/2} \notag\\
 
-&=VN\cdot\left(\frac{2e\pi}{ND}\right){{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
+&=VN\cdot\left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
 
-&=V^N \left(\frac{2e\pi m}{D}\right){\frac{ND}{2}}\left(\frac{E}{N}\right){\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} 
+&=V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} 
 
 \end{align}
 $$
 由此得到熵以及对应的宏观量, 温度:
-
 $$
 \begin{align}
 
 S(E)&=\ln{\Omega(E)} \notag\\
 
-&=\ln\left(V^N \left(\frac{2e\pi m}{D}\right){\frac{ND}{2}}\left(\frac{E}{N}\right){\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \right)\\
+&=\ln\left(V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \right)\\
 
 \end{align}
 $$
 温度的计算:
-
 $$
 \begin{align*}
 
@@ -527,14 +523,13 @@ $$
 
 &=k_0\frac{1}{\Omega(E)}\frac{d\Omega(E)}{dE} \\
 
-&=\frac{k_0}{V^N \left(\frac{2e\pi m}{D}\right){\frac{ND}{2}}\left(\frac{E}{N}\right){\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} }\cdot V^N \left(\frac{2e\pi m}{D}\right){\frac{ND}{2}}\left(\frac{1}{N}\right){\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \frac{dE^{\frac{ND}{2}}}{dE} \\
+&=\frac{k_0}{V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} }\cdot V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{1}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \frac{dE^{\frac{ND}{2}}}{dE} \\
 
 &=k_0\frac{ND}{2}E^{-1} 
 
 \end{align*}
 $$
 得到了系统的能态方程:
-
 $$
 E=\frac{1}{2}NDk_0T
 $$
@@ -546,21 +541,60 @@ $$
 
 总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$
 
-在封闭系与热库达成平衡时, 他们可以看作是两个孤立系. 这样就回到了前面定义的平衡状态, 从而得到平衡时:
+在封闭系与热库达成平衡时, 他们可以看作是两个孤立系. 这样就回到了前面定义孤立系的平衡状态.
 
 #### 封闭系的$\rho$
 
 ==问题:这样忽略了粒子的交换. 在粒子可以区分的前提下, 这样做没有关系. 只要跟踪子系统的全部粒子即可, 在粒子不可以跟踪 没有确定轨迹的情况下, 这样做还成立吗?==
+仿照推导微正则分布的方法, 利用两个归一化条件,
 $$
 \begin{align*}
-\rho_c^{\mathrm{isolated}}&=\frac{1}{\Omega_c(E_c)}\delta(E_c-\varepsilon_c)\\
-\delta(E_c-\varepsilon_c)&=\frac{\Omega_c(E_c)\Omega_r(\varepsilon_i-E_a)}{\Omega_i(E_i)}\\
-\rho_c^{\mathrm{isolated}}&=\frac{\Omega_r(E_r)}{\Omega_i(E_i)}\xrightarrow{E_i-E_r=E_c \ll E_i}\frac{\Omega_r(E_i)}{\Omega_i(E_i)}
+1&=\int\rho_cd\Gamma_c\\
+1&=\int \rho_sd\Gamma_s\\
+&=\iint \rho_s d \Gamma_rd\Gamma_c\\
+&=\int \left(\int\rho_sd\Gamma_r\right)d\Gamma_c
+\end{align*}
+$$
+
+得到$\rho_c$的表达式
+$$
+\begin{align*}
+\rho_c&= \int \rho_sd\Gamma_r\\
+&=\int\frac{1}{\Omega_s(E_s)}\delta(E_s-(E_r+E_c)) d\Gamma_r\\
+&=\int\frac{1}{\Omega_s(\varepsilon_s)}\delta(\varepsilon_s-(E_r+E_c))d\Gamma_r\\
+&=\int\frac{1}{\Omega_s(\varepsilon_s)}\delta(E_r-(\varepsilon_s-E_c))d\Gamma_r, \quad (\delta(x)=\delta(-x))\\
+&=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}\\
 \end{align*}
 $$
 这样就把未知的孤立系的分布函数表示成了已知的$\Omega$的比值.
 
-#### 封闭系的平衡态
+再利用$k_0\ln\Omega=S$, 将$\rho$化简. 这里利用前面得到的结论$\frac{1}{T}=\frac{d S}{d E}$, 进行计算.
+$$
+\begin{align*}
+\rho_c&=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}\\
+&=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_b(\varepsilon_s)}\cdot\frac{\Omega_b(\varepsilon_s)}{\Omega_s(\varepsilon_s)}\\
+&=e^{S_b(\varepsilon_s-E_c)-S_b(\varepsilon_s)}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
+&=e^{\frac{S_b(\varepsilon_s-E_c)-S_b(\varepsilon_s)}{E_c}\cdot E_c}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
+\xrightarrow{E_c\ll\varepsilon_s}&=e^{\left.\frac{S_b(E)}{d E}\right|_{E=\varepsilon_s}\cdot E_c}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
+&=e^{\frac{1}{k_0 T_r}\cdot E_c}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}
+\end{align*}
+$$
+> 注意这里可以像推导孤立系的平衡一样, 利用
+> $$
+> \rho^{isolated}_c=\frac{1}{\Omega_c(E_c)\delta(E_c-\varepsilon_c)}\\
+>
+> \begin{align*}
+> 1 &= \int\rho^{equilibrium}_cd\Gamma_c\\
+> &=\iint \rho_s d\Gamma_s d\Gamma_ c\\
+> \Rightarrow \rho^{equilibrium}_c&=\int \rho_s d\Gamma_s\\
+> &=\int\frac{1}{\Omega_s(E_s)}\delta(E_s) d\Gamma_s\\
+> &=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}
+> \end{align*}
+> $$
+> 再利用平衡时$\rho_c^{equlibrium}=\rho_c^{isolated}$, 但是可以预见,这样计算并不会得到新的结果. 这样计算将会重复之前的过程得到热库和子系统(封闭系)温度相等的结论.
+>
+> 也就是说, 封闭系和孤立系的平衡条件是一样的. 用于划分等价类的函数是一样.
+
 
 
 
@@ -569,13 +603,15 @@ $$
 按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量$E_c$和粒子数$N_c$可以连续变化, 就要求整个孤立系的能量$E_i$和粒子数$N_i$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $N_r$很大, $E_c\ll E_r$
 $$
 \begin{align*}
-\rho_c^{\mathrm{isolated}}&=\frac{1}{\Omega_c(E_c)}\delta(E_c-\varepsilon_c)\\
-\delta(E_c-\varepsilon_c)&=\frac{\Omega_c(E_c)\Omega_r(\varepsilon_i-E_a)}{\Omega_i(E_i)}\\
-\rho_c^{\mathrm{isolated}}&=\frac{\Omega_r(E_r)}{\Omega_i(E_i)}\xrightarrow{E_i-E_r=E_c \ll E_i}\frac{\Omega_r(E_i)}{\Omega_i(E_i)}
+\rho_o^{\mathrm{isolated}}&=\frac{1}{\Omega_o(E_o)}\delta(E_o-\varepsilon_o)\delta(N_o-n_o)\\
+\delta(E_o-\varepsilon_o)&=\frac{\Omega_c(E_c)\Omega_r(\varepsilon_s-E_a)}{\Omega_s(E_s)}\\
+\rho_o^{\mathrm{isolated}}&=\frac{\Omega_r(E_r)}{\Omega_s(E_s)}\xrightarrow{E_i-E_r=E_c \ll E_i}\frac{\Omega_r(E_i)}{\Omega_i(E_i)}
 \end{align*}
 $$
 
 #### 开放系的平衡态
+
+
 
 
 
