@@ -555,7 +555,6 @@ $$
 &=\int \left(\int\rho_sd\Gamma_r\right)d\Gamma_c
 \end{align*}
 $$
-
 得到$\rho_c$的表达式
 $$
 \begin{align*}
@@ -574,11 +573,12 @@ $$
 \rho_c&=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}\\
 &=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_b(\varepsilon_s)}\cdot\frac{\Omega_b(\varepsilon_s)}{\Omega_s(\varepsilon_s)}\\
 &=e^{S_b(\varepsilon_s-E_c)-S_b(\varepsilon_s)}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
-&=e^{\frac{S_b(\varepsilon_s-E_c)-S_b(\varepsilon_s)}{E_c}\cdot E_c}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
-\xrightarrow{E_c\ll\varepsilon_s}&=e^{\left.\frac{S_b(E)}{d E}\right|_{E=\varepsilon_s}\cdot E_c}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
-&=e^{\frac{1}{k_0 T_r}\cdot E_c}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}
+&=e^{\frac{S_b(\varepsilon_s-E_c)-S_b(\varepsilon_s)}{(-E_c)}\cdot (-E_c)}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
+\xrightarrow{E_c\ll\varepsilon_s}&=e^{\left.\frac{S_b(E)}{d E}\right|_{E=\varepsilon_s}\cdot (-E_c)}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
+&=e^{-\frac{1}{k_0 T_r}\cdot E_c}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}
 \end{align*}
 $$
+
 > 注意这里可以像推导孤立系的平衡一样, 利用
 > $$
 > \rho^{isolated}_c=\frac{1}{\Omega_c(E_c)\delta(E_c-\varepsilon_c)}\\
@@ -591,9 +591,99 @@ $$
 > &=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}
 > \end{align*}
 > $$
-> 再利用平衡时$\rho_c^{equlibrium}=\rho_c^{isolated}$, 但是可以预见,这样计算并不会得到新的结果. 这样计算将会重复之前的过程得到热库和子系统(封闭系)温度相等的结论.
+> 再利用平衡时$\rho_c^{equlibrium}=\rho_c^{isolated}​$, 但是可以预见,这样计算并不会得到新的结果. 这样计算将会重复之前的过程得到热库和子系统(封闭系)温度相等的结论.
 >
-> 也就是说, 封闭系和孤立系的平衡条件是一样的. 用于划分等价类的函数是一样.
+> 也就是说, 封闭系和孤立系的平衡条件是一样的. 用于划分等价类的函数是一样的. 这个结论很自然, 因为系统没有增加新的自由度. 系统平衡的指标只有能量这一个量.
+
+得到封闭系的$\rho$的表达式:
+$$
+\rho_c(E)=e^{-\psi -\frac{E}{k_0 T}}, \quad \psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)
+$$
+由$\rho$的归一性:
+$$
+\begin{align*}
+1&=\int\mathbb{P}(p,q)d\Gamma\\
+&=\int\rho_c(E(p,q))d\Gamma\\
+&=\int e^{-\psi -\frac{E}{k_0 T}} d\Gamma\\
+\end{align*}
+$$
+可以得到$\psi$的表达式:
+$$
+\begin{align*}
+e^{\psi}=\int e^{-\frac{E}{k_0 T}} d\Gamma\\
+\end{align*}
+$$
+等号右边全是已知量. 因此定义$e^\psi=Z$, 将​$\rho$重写为:
+$$
+\begin{align}
+Z&=e^{\psi}=\int e^{-\frac{E}{k_0 T}} d\Gamma \\
+\rho_c&=\frac{1}{Z}e^{-\frac{E}{k_0 T}}=\frac{e^{-\frac{E}{k_0 T}}}{\int e^{-\frac{E}{k_0 T}}  d\Gamma}
+\end{align}
+$$
+
+
+#### 封闭系的观测量
+
+##### 封闭系的能量
+
+由观测量的定义:
+$$
+\begin{align}
+\langle E\rangle &=\int H(p,q) \mathbb{P}(p,q) d\Gamma\notag\\
+& =\int H(p,q) \rho_cd\Gamma\notag\\
+&=\int E\frac{1}{Z}e^{-\frac{E}{k_0 T}}\notag\\
+&=\frac{1}{Z}\int E e^{-\frac{E}{k_0 T} } d\Gamma\\
+\end{align}
+$$
+注意到
+$$
+\begin{align*}
+\frac{\partial Z}{\partial (\frac{1}{k_0T})}&=\frac{\partial }{\partial (\frac{1}{k_0T})}{\int  e^{-\frac{E}{k_0 T} } d\Gamma}\\
+\xrightarrow{偏导与积分变量不同可交换}&=\int \frac{\partial }{\partial (\frac{1}{k_0T})} e^{-\frac{E}{k_0 T} } d\Gamma\\
+&=\int -E e^{-\frac{E}{k_0 T} } d\Gamma\\
+&=-\int E e^{-\frac{E}{k_0 T} } d\Gamma\\
+\end{align*}
+$$
+带入上式得到
+$$
+\begin{align}
+\langle E\rangle 
+&=\frac{1}{Z}\int E e^{-\frac{E}{k_0 T} } d\Gamma \notag\\
+&=-\frac{1}{Z}\frac{\partial Z}{\partial (\frac{1}{k_0T})}\notag \\
+&=-\frac{\partial}{\partial (\frac{1}{k_0T})} \ln Z\\
+&=-\frac{\partial}{\partial (\frac{1}{k_0T})} \psi\\
+\end{align}
+$$
+注意到如果研究的子系统很大, 以至于上述系统可以看做两个封闭系时, $\psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)$中二者之差并不独立于研究的系统.
+$$
+\begin{align}
+\quad \psi &=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)\\
+&=-\left(S_b(\varepsilon_s)-(S_b(\varepsilon_b)+S_c(\varepsilon_c))\right)\\
+&=-\left((S_b(\varepsilon_s)-S_b(\varepsilon_b))-S_c(\varepsilon_c)\right)\\
+&=-\left(\frac{S_b(\varepsilon_b+\varepsilon_c)-S_b(\varepsilon_b)}{\varepsilon_c}\varepsilon_c-S_c(\varepsilon_c)\right)\\
+&=-\left(\left.\frac{\partial S_b(E)}{\partial E}\right|_{E=\varepsilon_b}\varepsilon_c-S_c(\varepsilon_c)\right)\\
+&=-\left(\frac{\varepsilon_c}{k_0 T}-S_c(\varepsilon_c)\right)\\
+\end{align}
+$$
+因此有
+$$
+\begin{align}
+\psi=-\frac{1}{{k_0 T}}\left(E-T\cdot S(E)\right)\\
+\end{align}
+$$
+
+
+#### 封闭系引申的平衡量
+
+因为能量可交换, 我们自然要问, 封闭系的平衡一定与孤立系的平衡判定不同. ==封闭系平衡怎么弄出来P? 弄不弄的出来?== 
+
+
+
+
+
+总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$
+
+在封闭系与热库达成平衡时, 他们可以看作是两个孤立系. 这样就回到了前面定义孤立系的平衡状态.
 
 
 
