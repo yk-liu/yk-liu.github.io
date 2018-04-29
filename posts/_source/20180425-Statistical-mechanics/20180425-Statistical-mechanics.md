@@ -12,7 +12,7 @@
 
 ==用量子力学和经典力学描述系统的差别, 虽然根本上说求别在于运动方程是薛定谔方程还是哈密顿方程. 但是因为我们可以仅用能量和粒子数来描述一个系统, 这两种描述的差别在于这两者的推论: 刘维尔定理是否成立,能量是不是连续分布, 粒子是不是全同的.???==
 
-## $\rho$的性质
+## 相空间数密度$\rho$的性质
 
 $\rho$为相空间点$(p,q)$处的点密度.
 $$
@@ -111,76 +111,6 @@ $$
 \ln{\rho_A}+\ln{\rho_B}=\ln{\rho_S}
 $$
 
-
-### $\rho$的表达式
-
-系统由哈密顿量给出:
-$$
-H=\sum_i{\frac{{\vec{P}_i}^2}{2m}}+\sum_{i,j,k,\cdots}{\left(V(r_i)+U(r_i,r_j)+W(r_i,r_j,r_k)+\cdots\right)} \notag
-$$
-系统的可加量有$N$,$H$,$\vec{P}$,$\vec{L}$. 除了这些可加量, 我们用$\zeta$表示其他的可加量
-
-则$\ln{\rho}$一定是这些量的线性叠加, 为了以后表示方便, 这里取负号:
-$$
-\ln{\rho}=-\zeta-\mu N- \beta E-\vec{a}\cdot\vec{P}-\vec{b}\cdot\vec{L} \notag
-$$
-总动量和总角动量不是我们研究的主要对象, 可以将系统的空间平移对称性和旋转对称性破坏掉,==(还是选取参考系使得二者变为0? 这两个表述有什么不同? 划分子系统的时候会有问题吗?)== 使得$\ln{\rho}$具有下面的形式
-$$
-\ln{\rho}=-\zeta-\mu N - \beta E
-$$
-因此对于给定的封闭系, 能量和粒子数一定,==其余的可加量也都是一样的==, $\rho$是一个常量.
-
-## 系统的分类与对应的$\rho$
-
-### 孤立系
-
-最直观的系统是孤立系. 孤立系的能量和粒子数都是守恒的. 与之对应的还有能量不守恒但粒子数守恒的封闭系, 能量与粒子数都不守恒的开放系.
-孤立系由于能量不变, 孤立系的能量只有一个允许值
-$$
-\rho(p,q)=\rho(E_0)\delta(E-E_0)
-$$
-
-### 封闭系
-
-总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$ . 封闭系的$\rho$要利用孤立系的平衡来得出.
-
-### 开放系
-
-按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量$E_c$和粒子数$N_c$可以连续变化, 就要求整个孤立系的能量$E_i$和粒子数$N_i$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $N_r$很大, $E_c\ll E_r$. 开放系的$\rho$也要利用孤立系的平衡来得出.
-
-
-
-## 孤立系统的宏观量
-
-所有的系统都可以看作是孤立系统的一部分. 下面讨论孤立系的观测量的表达式.
-
-要得到孤立系的观测量的表达式, 就是要从粒子满足的运动方程出发, 得到$\rho$的表达式, 从而第一性地计算相应的宏观量.
-
-```mermaid
-graph LR
-A(微观运动方程)-->B(微观态空间)
-B--> C(态空间体积)
-C-->|对能量微分|D(能态密度)
-D-->E(ρ)
-E-->F(观测量)
-```
-
-
-
-### 系统的宏观量的观测值
-
-由观测值的定义:
-$$
-\langle O\rangle=\int_{-\infty}^{{-\infty}}{O(p,q)\mathbb{P}(p,q)dpdq}
-$$
-
-其中$\mathbb{P}(p,q)$是归一化的概率密度. 
-$$
-1=\int_{-\infty}^{{-\infty}}{\mathbb{P}(p,q)dpdq}
-$$
-
-求系统的宏观量观测值就变为求概率密度$\mathbb{P}(p,q)$.
-
 #### 对系统的观测
 
 有两种得到系统的某个观测量$O$的方法
@@ -203,13 +133,58 @@ $$
 
 由测量2, 测量系统足够多时, 测量的概率密度$\mathbb{P}(p,q)$收敛于这个系综内的系统分布函数$\rho(p,q)$, 得到
 $$
-\mathbb{P}(p,q)d\Gamma =\rho(p,q)d \Gamma=\rho(E_0)\delta(E-E_0)d\Gamma
+\mathbb{P}(p,q)d\Gamma =\rho(p,q)d \Gamma
 $$
-即概率密度就是系综内的系统分布函数. 要求系统的宏观量, 就要求系统分布函数$\rho(p,q)$的值.
+即概率密度就是系综内的系统分布函数. 要求系统的宏观量, 就要求系统的概率分布,就要求数密度函数$\rho(p,q)$的值.
 
 ==**<u>也就是说, $\rho$包含了系统的全部信息</u>**==
 
-#### 概率密度的表达式
+#### 系统的宏观量计算方法
+
+为了得到系统的观测量的表达式, 要从粒子满足的运动方程出发, 得到$\rho$的表达式, 才能第一性地计算相应的宏观量.
+
+```mermaid
+graph LR
+A(微观运动方程)-->B(微观态空间)
+B--> C(态空间体积)
+C-->|对能量微分|D(能态密度)
+D-->E(ρ)
+E-->F(观测量)
+```
+
+## 系统的分类与对应的$\rho$, 宏观量的计算
+
+### 系统的分类
+#### 孤立系
+
+最直观的系统是孤立系. 孤立系的能量和粒子数都是守恒的. 与之对应的还有能量不守恒但粒子数守恒的封闭系, 能量与粒子数都不守恒的开放系.
+孤立系由于能量不变, 孤立系的能量只有一个允许值
+$$
+\rho(p,q)=\rho(E_0)\delta(E-E_0)
+$$
+
+#### 封闭系
+
+总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$ . 封闭系的$\rho$要利用孤立系的平衡来得出.
+
+#### 开放系
+
+按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量$E_c$和粒子数$N_c$可以连续变化, 就要求整个孤立系的能量$E_i$和粒子数$N_i$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $N_r$很大, $E_c\ll E_r$. 开放系的$\rho$也要利用孤立系的平衡来得出.
+
+### 孤立系
+
+#### 孤立系的$\rho$
+
+所有的系统都可以看作是孤立系统的一部分. 下面讨论孤立系的观测量的表达式.
+
+最直观的系统是孤立系. 孤立系的能量和粒子数都是守恒的. 与之对应的还有能量不守恒但粒子数守恒的封闭系, 能量与粒子数都不守恒的开放系.
+孤立系由于能量不变, 孤立系的能量只有一个允许值
+$$
+\rho(p,q)=\rho(E_0)\delta(E-E_0)
+$$
+#### 孤立系的观测值计算
+
+##### 概率密度的表达式
 
 利用$\delta$函数的性质 式$(\ref{integralofdeltafx})$ $\int_{-\infty}^{+\infty}\delta(f(x))=\sum_{i}\frac{1}{\lvert f'(a_i)\rvert}, \quad  f(a_i)=0$ 得到:
 $$
@@ -235,7 +210,7 @@ $$
 $$
 \rho(p,q)= \left. \frac{dE}{d\Gamma} \right| _{E=E_0}  \delta(E-E_0) = \frac{1}{\left. \frac{d\Gamma}{dE} \right| _{E=E_0}} \delta(E-E_0)  \notag
 $$
-#### 概率密度用能态密度表达
+##### 概率密度用能态密度表达
 
 定义能态密度$\Omega$为相空间体积对能量的微分:
 $$
@@ -250,7 +225,7 @@ $$
 $$
 \rho(E)=\frac{1}{\Omega(E_0)} \delta(E-E_0)\\
 $$
-#### 系统宏观量用能态密度表达
+##### 系统宏观量用能态密度表达
 
 至此得到
 $$
@@ -261,18 +236,111 @@ $$
 &=\frac{1}{\Omega(E_0)} \int_{-\infty}^{{-\infty}}O(p,q)\delta(E-E_0)d\Gamma \\
 \end{align}
 $$
+#### 一些特殊的宏观量
 
-### 理想气体能态密度的表达式
+##### 能量
 
-在之前我们建立了一般的系统观测量与能态密度的关系. 现在以试着以"理想气体"(微粒可区分)为例, 从围观态空间出发推导能态密度的表达式
-```mermaid
-graph LR
-A(微观运动方程)-->B(微观态空间)
-B--> C(态空间体积)
-C-->|对能量微分|D(能态密度)
-D-->E(ρ)
-E-->F(观测量)
-```
+==能量和粒子数是仅有的确定系统微观状态的物理量==, 
+$$
+\begin{align}
+\langle H\rangle &=\frac{1}{\Omega(E_0)} \int_{-\infty}^{{-\infty}}H(p,q)\delta(E-E_0)d\Gamma \notag\\
+& =\int_{-\infty}^{{-\infty}}E_0  \frac{1}{\Omega(E_0)} d\Gamma \notag\\
+& = E_0\int_{-\infty}^{{-\infty}}  \frac{1}{\Omega(E_0)} d\Gamma \notag\\
+= E_0
+\end{align}
+$$
+(推导好像有问题)
+
+#### 孤立系的平衡
+
+计算了孤立系的观测值, ==我们可以用实验验证相应的系统(可以吗?)== 
+
+接下来研究孤立系的平衡问题,即: 什么时候一个孤立系可以被看成和另外一个孤立系等价?
+
+考虑两个系统$A$,$B$. 他们平衡的条件是净能量交换为零. 由于$\rho$包含了系统的全部信息, 只要两个系统构成的总系统的分布函数与两个孤立系构成的分布函数, 我们就说这两个系统处在平衡态.
+
+这个定义和直观感受是一致的. 如果两个系统平衡, 把他们变成孤立系, 放置一段时间之后再相互作用, 二者的能量都不再变化.
+
+如果无论如何划分系统$S$,子系统$A$,$B$都处在平衡态,就说系统S是平衡的.
+
+这个定义也和直观理解是一致的. 如果一个系统"处处相同"(无论如何划分系统$S$), 系统就是稳定的, 就处在平衡态.
+
+这样定义的问题在于, 到底有没有这样的状态? 系统可不可能"处处相同"?
+
+回答: 现实中没有这样的系统. 我们研究的系统是自由度无穷大的系统, 是类似质点的模型. 现实的系统都是近似.
+
+另外一个问题是, 平衡的系统之间是等价的. 定义平衡的系统就定义了等价类. 怎么定义一个元素与某一个元素等价而与另一个元素不等价?  可以用一个量来刻画. 如果这两个元素这个量相同, 就说他们等价. 用什么量来刻画这个等价关系? 接下来可以看到, 这个等价类的量定义为温度. 用平衡替换上面的说法就是, 用温度定义一个系统与某一个系统平衡而与另一个系统不平衡.
+
+以下分两种情况计算, 来得到系统平衡的条件.
+
+设总系统$S$ 的能量为$E_s$, 子系统$A$ 的能量为$E_a$ , 子系统$B$ 的能量为$E_b$.  $E_a$ , $E_b$, $E_s$ 为变量, $E_a+E_b=E_s$. 总系统的能量守恒, $E_s \equiv \varepsilon_s$. 在平衡时$E_a= \varepsilon_a, \quad E_b= \varepsilon_b $, 且有$\varepsilon_a+\varepsilon_b=\varepsilon_s$,
+
+对于系统$A$,$S$概率密度归一化:
+$$
+\begin{align*}
+1&=\underbrace{\int\cdots\int}_{n_s}\rho_sd\Gamma_s\\
+&=\underbrace{\int\cdots\int}_{n_a}\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_ad\Gamma_b\\
+&=\underbrace{\int\cdots\int}_{n_a}\left(\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_b\right)d\Gamma_a\\
+1&=\underbrace{\int\cdots\int}_{n_a}\rho_ad\Gamma_a
+\end{align*}
+$$
+对于与系统$B$平衡的系统$A$:
+$$
+\begin{align}
+\rho_a^{\mathrm{equilibrium}}&=\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_b \notag\\
+&=\int\rho_s d\Gamma_b\notag\\
+&=\int\frac{1}{\Omega_s(E_s)}\delta(E_s-\varepsilon_s)d\Gamma_b\notag\\
+&=\int\frac{1}{\Omega_s(E_s)}\delta(E_b+E_a-\varepsilon_s)d\Gamma_b\notag\\
+&=\frac{1}{\Omega_s(E_s)}\int\delta(E_b-(\varepsilon_s-E_a))d\Gamma_b\notag\\
+&=\frac{1}{\Omega_s(E_s)}\Omega_b(\varepsilon_s-E_a)\notag\\
+\label{rhoaequilibrium}
+\end{align}
+$$
+子系统A在平衡时可视作孤立系:
+$$
+\rho_a^{\mathrm{isolated}}=\frac{1}{\Omega_a(E_a)}\delta(E_a-\varepsilon_a) \label{rhoaisolated}
+$$
+结合$(\ref{rhoaequilibrium}), (\ref{rhoaisolated})$ 平衡时, $\rho_a^{\mathrm{equilibrium}}=\rho_a^{\mathrm{isolated}}$ 得到:
+$$
+\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(\varepsilon_s-E_a)}{\Omega_s(E_s)}
+$$
+同理对B系统也有:
+$$
+\delta(E_b-\varepsilon_b)=\frac{\Omega_b(E_b)\Omega_a(\varepsilon_s-E_b)}{\Omega_s(E_s)}
+$$
+又有$E_a+E_b=E_s, \quad \varepsilon_a+\varepsilon_b=\varepsilon_s$,得到:
+$$
+\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(E_b)}{\Omega_s(E_s)}=\delta(E_b-\varepsilon_b)
+$$
+再由$\delta$函数与$\Omega$的关系:
+$$
+\frac{1}{\Omega_a(\varepsilon_a)}\int\delta(E_a-\varepsilon_a)d\Gamma_a=1 \notag\\
+\int\delta(E_a-\varepsilon_a)d\Gamma_a=\Omega_a(\varepsilon_a) \notag\\
+$$
+得到: ==这里的E 和 e貌似用混了, 有时间看一看==
+$$
+\begin{align*}
+\quad \delta(E_a-\varepsilon_a) &=\frac{d\Omega_a(\varepsilon_a)}{d\Gamma_a}\\
+&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{d \varepsilon_a}{d\Gamma_a}\\
+&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a} {\left.\frac{d E_a}{d\Gamma_a}\right|}_{E_a=\varepsilon_a}\\
+&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{1}{\Omega(\varepsilon_a)}\\
+&=\left.\frac{d \ln{(\Omega(E_a))}}{d E_a}\right|_{E_a=\varepsilon_a}
+\end{align*}
+$$
+得到:
+$$
+\left.\frac{d}{d E_a}\ln{(\Omega(E_a))}\right|_{E_a=\varepsilon_a}=\left.\frac{d}{d E_b}\ln{(\Omega(E_b))}\right|_{E_b=\varepsilon_b}
+$$
+至此我们得到一个表征等价关系的量S'
+$$
+S(E)=\ln(\Omega(E))
+$$
+若两个系统平衡,
+$$
+S'_a(E_a)=S'_b(E_b)=\frac{1}{T}
+$$
+
+### 插曲: 以N个无相互作用的粒子体系推导孤立系的相关性质
 #### 自由单粒子系统
 
 考虑一个自由的粒子. 显然粒子数和能量都是守恒的. 把这个粒子看作一个系统, 这个系统显然不是统计力学研究的系统, 因为自由度数目太小.
@@ -388,107 +456,6 @@ $$
 > \end{align*}
 > $$
 >
-### 一些特殊的宏观量
-
-#### 能量
-
-==能量和粒子数是仅有的确定系统微观状态的物理量==, 
-$$
-\begin{align}
-\langle H\rangle &=\frac{1}{\Omega(E_0)} \int_{-\infty}^{{-\infty}}H(p,q)\delta(E-E_0)d\Gamma \notag\\
-& =\int_{-\infty}^{{-\infty}}E_0  \frac{1}{\Omega(E_0)} d\Gamma \notag\\
-& = E_0\int_{-\infty}^{{-\infty}}  \frac{1}{\Omega(E_0)} d\Gamma \notag\\
-= E_0
-\end{align}
-$$
-(推导好像有问题)
-
-## 系统的平衡问题
-
-### 孤立系的平衡
-
-考虑两个系统$A$,$B$. 他们平衡的条件是净能量交换为零. 由于$\rho$包含了系统的全部信息, 只要两个系统构成的总系统的分布函数与两个孤立系构成的分布函数, 我们就说这两个系统处在平衡态.
-
-这个定义和直观感受是一致的. 如果两个系统平衡, 把他们变成孤立系, 放置一段时间之后再相互作用, 二者的能量都不再变化.
-
-如果无论如何划分系统$S$,子系统$A$,$B$都处在平衡态,就说系统S是平衡的.
-
-这个定义也和直观理解是一致的. 如果一个系统"处处相同"(无论如何划分系统$S$), 系统就是稳定的, 就处在平衡态.
-
-这样定义的问题在于, 到底有没有这样的状态? 系统可不可能"处处相同"?
-
-回答: 现实中没有这样的系统. 我们研究的系统是自由度无穷大的系统, 是类似质点的模型. 现实的系统都是近似.
-
-另外一个问题是, 平衡的系统之间是等价的. 定义平衡的系统就定义了等价类. 怎么定义一个元素与某一个元素等价而与另一个元素不等价?  可以用一个量来刻画. 如果这两个元素这个量相同, 就说他们等价. 用什么量来刻画这个等价关系? 接下来可以看到, 这个等价类的量定义为温度. 用平衡替换上面的说法就是, 用温度定义一个系统与某一个系统平衡而与另一个系统不平衡.
-
-以下分两种情况计算, 来得到系统平衡的条件.
-
-设总系统$S$ 的能量为$E_s$, 子系统$A$ 的能量为$E_a$ , 子系统$B$ 的能量为$E_b$.  $E_a$ , $E_b$, $E_s$ 为变量, $E_a+E_b=E_s$. 总系统的能量守恒, $E_s \equiv \varepsilon_s$. 在平衡时$E_a= \varepsilon_a, \quad E_b= \varepsilon_b $, 且有$\varepsilon_a+\varepsilon_b=\varepsilon_s$,
-
-对于系统$A$,$S$概率密度归一化:
-$$
-\begin{align*}
-1&=\underbrace{\int\cdots\int}_{n_s}\rho_sd\Gamma_s\\
-&=\underbrace{\int\cdots\int}_{n_a}\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_ad\Gamma_b\\
-&=\underbrace{\int\cdots\int}_{n_a}\left(\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_b\right)d\Gamma_a\\
-1&=\underbrace{\int\cdots\int}_{n_a}\rho_ad\Gamma_a
-\end{align*}
-$$
-对于与系统$B$平衡的系统$A$:
-$$
-\begin{align}
-\rho_a^{\mathrm{equilibrium}}&=\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_b \notag\\
-&=\int\rho_s d\Gamma_b\notag\\
-&=\int\frac{1}{\Omega_s(E_s)}\delta(E_s-\varepsilon_s)d\Gamma_b\notag\\
-&=\int\frac{1}{\Omega_s(E_s)}\delta(E_b+E_a-\varepsilon_s)d\Gamma_b\notag\\
-&=\frac{1}{\Omega_s(E_s)}\int\delta(E_b-(\varepsilon_s-E_a))d\Gamma_b\notag\\
-&=\frac{1}{\Omega_s(E_s)}\Omega_b(\varepsilon_s-E_a)\notag\\
-\label{rhoaequilibrium}
-\end{align}
-$$
-子系统A在平衡时可视作孤立系:
-$$
-\rho_a^{\mathrm{isolated}}=\frac{1}{\Omega_a(E_a)}\delta(E_a-\varepsilon_a) \label{rhoaisolated}
-$$
-结合$(\ref{rhoaequilibrium}), (\ref{rhoaisolated})$ 平衡时, $\rho_a^{\mathrm{equilibrium}}=\rho_a^{\mathrm{isolated}}$ 得到:
-$$
-\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(\varepsilon_s-E_a)}{\Omega_s(E_s)}
-$$
-同理对B系统也有:
-$$
-\delta(E_b-\varepsilon_b)=\frac{\Omega_b(E_b)\Omega_a(\varepsilon_s-E_b)}{\Omega_s(E_s)}
-$$
-又有$E_a+E_b=E_s, \quad \varepsilon_a+\varepsilon_b=\varepsilon_s$,得到:
-$$
-\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(E_b)}{\Omega_s(E_s)}=\delta(E_b-\varepsilon_b)
-$$
-再由$\delta$函数与$\Omega$的关系:
-$$
-\frac{1}{\Omega_a(\varepsilon_a)}\int\delta(E_a-\varepsilon_a)d\Gamma_a=1 \notag\\
-\int\delta(E_a-\varepsilon_a)d\Gamma_a=\Omega_a(\varepsilon_a) \notag\\
-$$
-得到: ==这里的E 和 e貌似用混了, 有时间看一看==
-$$
-\begin{align*}
-\quad \delta(E_a-\varepsilon_a) &=\frac{d\Omega_a(\varepsilon_a)}{d\Gamma_a}\\
-&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{d \varepsilon_a}{d\Gamma_a}\\
-&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a} {\left.\frac{d E_a}{d\Gamma_a}\right|}_{E_a=\varepsilon_a}\\
-&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{1}{\Omega(\varepsilon_a)}\\
-&=\left.\frac{d \ln{(\Omega(E_a))}}{d E_a}\right|_{E_a=\varepsilon_a}
-\end{align*}
-$$
-得到:
-$$
-\left.\frac{d}{d E_a}\ln{(\Omega(E_a))}\right|_{E_a=\varepsilon_a}=\left.\frac{d}{d E_b}\ln{(\Omega(E_b))}\right|_{E_b=\varepsilon_b}
-$$
-至此我们得到一个表征等价关系的量S'
-$$
-S(E)=\ln(\Omega(E))
-$$
-若两个系统平衡,
-$$
-S'_a(E_a)=S'_b(E_b)=\frac{1}{T}
-$$
 
 #### 理想气体的平衡与能态方程
 
@@ -537,11 +504,12 @@ $$
 
 我们可以定义的条件显然至少还有: 粒子数不再发生变化, 体积不再发生变化. 但是在研究在这样的平衡条件之前, 我们需要得到这样的系统的分布函数. 还有粒子数, 体积这两个量的观测值表达式.
 
-### 封闭系的平衡
+### 封闭系
 
 总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$
 
 在封闭系与热库达成平衡时, 他们可以看作是两个孤立系. 这样就回到了前面定义孤立系的平衡状态.
+
 
 #### 封闭系的$\rho$
 
@@ -678,17 +646,7 @@ $$
 因为能量可交换, 我们自然要问, 封闭系的平衡一定与孤立系的平衡判定不同. ==封闭系平衡怎么弄出来P? 弄不弄的出来?== 
 
 
-
-
-
-总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$
-
-在封闭系与热库达成平衡时, 他们可以看作是两个孤立系. 这样就回到了前面定义孤立系的平衡状态.
-
-
-
-
-### 开放系的平衡
+### 开放系
 
 按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量$E_c$和粒子数$N_c$可以连续变化, 就要求整个孤立系的能量$E_i$和粒子数$N_i$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $N_r$很大, $E_c\ll E_r$
 $$
