@@ -1,4 +1,4 @@
-# 热统
+# 没有假设的热统
 
 [TOC]
 
@@ -504,17 +504,39 @@ $$
 
 我们可以定义的条件显然至少还有: 粒子数不再发生变化, 体积不再发生变化. 但是在研究在这样的平衡条件之前, 我们需要得到这样的系统的分布函数. 还有粒子数, 体积这两个量的观测值表达式.
 
+#### 解释温度的定义对应于温度
+
+之前的定义T采用了直接指定的方式. 我们说这样计算得到的量就是温度, 它表征了两个孤立系的平衡条件. 但是我们没有说明这个量和日常经验中的温度有什么联系. 为什么这个量就是温度.
+
+#### 解释压强的定义对应于压强
+
+与温度相同, 我们以理想气体为例计算一下压强的表达式, 说明它就是我们常说的压强.
+
+#### 解释化学势的定义对应于化学势
+
+
+
 ### 封闭系
 
 总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$
 
 在封闭系与热库达成平衡时, 他们可以看作是两个孤立系. 这样就回到了前面定义孤立系的平衡状态.
 
+#### *<u>封闭系的平衡如何定义</u>*
+
+封闭系的平衡似乎是一个很难说清的问题. 封闭系是与热库密不可分的概念, 因此封闭系也就具有了确定的温度. 之前我们又推导得到, 孤立系的平衡条件是温度相同. 那么封闭系的平衡条件难道和孤立系的一样吗? 直观感受是不一样的. 封闭系允许能量交换, 也就是说, 即使封闭系处于平衡状态, 也可以与外界(热库) 源源不断地交换能量. 这一点时孤立系平衡所不允许的.
+
+因此可以这样概括封闭系和孤立系的的平衡条件的不同: 封闭系的平衡条件是温度不变, 而孤立系的平衡条件是能量不变(尽管从能量不变可以推出温度不变).
+
+也就是说, **封闭系平衡的条件比孤立系平衡的条件更苛刻**, 乍一看似乎不对, 但是细想一下哈, 孤立系的约束比孤立系要强, 平衡时只用少量的约束就可以让他平衡, 但是封闭系就要更多的约束条件菜呢个达到一样的平衡.
+
+温度不变, 能量改变意味着什么呢? ==意味着气体的能量改变不是通过热交换发生的, 气体的能量改变是通过对外做功产生的???.==要定义气体对外做功, 显然需要定义气体的压强.
+
 
 #### 封闭系的$\rho$
 
 ==问题:这样忽略了粒子的交换. 在粒子可以区分的前提下, 这样做没有关系. 只要跟踪子系统的全部粒子即可, 在粒子不可以跟踪 没有确定轨迹的情况下, 这样做还成立吗?==
-仿照推导微正则分布的方法, 利用两个归一化条件,
+仿照推导微正则分布的方法, 利用两个归一化条件, (总系统是一个孤立系)
 $$
 \begin{align*}
 1&=\int\rho_cd\Gamma_c\\
@@ -523,7 +545,7 @@ $$
 &=\int \left(\int\rho_sd\Gamma_r\right)d\Gamma_c
 \end{align*}
 $$
-得到$\rho_c$的表达式
+得到$\rho_c$的表达式(热库的能量基本不改变, 因而也是一个孤立系)
 $$
 \begin{align*}
 \rho_c&= \int \rho_sd\Gamma_r\\
@@ -547,26 +569,11 @@ $$
 \end{align*}
 $$
 
-> 注意这里可以像推导孤立系的平衡一样, 利用
-> $$
-> \rho^{isolated}_c=\frac{1}{\Omega_c(E_c)\delta(E_c-\varepsilon_c)}\\
->
-> \begin{align*}
-> 1 &= \int\rho^{equilibrium}_cd\Gamma_c\\
-> &=\iint \rho_s d\Gamma_s d\Gamma_ c\\
-> \Rightarrow \rho^{equilibrium}_c&=\int \rho_s d\Gamma_s\\
-> &=\int\frac{1}{\Omega_s(E_s)}\delta(E_s) d\Gamma_s\\
-> &=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}
-> \end{align*}
-> $$
-> 再利用平衡时$\rho_c^{equlibrium}=\rho_c^{isolated}​$, 但是可以预见,这样计算并不会得到新的结果. 这样计算将会重复之前的过程得到热库和子系统(封闭系)温度相等的结论.
->
-> 也就是说, 封闭系和孤立系的平衡条件是一样的. 用于划分等价类的函数是一样的. 这个结论很自然, 因为系统没有增加新的自由度. 系统平衡的指标只有能量这一个量.
-
 得到封闭系的$\rho$的表达式:
 $$
 \rho_c(E)=e^{-\psi -\frac{E}{k_0 T}}, \quad \psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)
 $$
+其中$\psi$是与研究的子系统无关的量.
 由$\rho$的归一性:
 $$
 \begin{align*}
@@ -588,7 +595,6 @@ Z&=e^{\psi}=\int e^{-\frac{E}{k_0 T}} d\Gamma \\
 \rho_c&=\frac{1}{Z}e^{-\frac{E}{k_0 T}}=\frac{e^{-\frac{E}{k_0 T}}}{\int e^{-\frac{E}{k_0 T}}  d\Gamma}
 \end{align}
 $$
-
 
 #### 封闭系的观测量
 
@@ -622,7 +628,79 @@ $$
 &=-\frac{\partial}{\partial (\frac{1}{k_0T})} \psi\\
 \end{align}
 $$
-注意到如果研究的子系统很大, 以至于上述系统可以看做两个封闭系时, $\psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)$中二者之差并不独立于研究的系统.
+
+#### 封闭系的划分, 封闭系的可加量
+
+因为能量可交换, 我们自然要问, 封闭系的平衡一定与孤立系的平衡判定不同. ==封闭系平衡怎么弄出来P? 弄不弄的出来?== 
+
+封闭系的平衡如何定义成了我们要研究的问题.
+
+> 注意这里**绝对不可以**可以像推导孤立系的平衡一样, 利用
+> $$
+> \rho^{isolated}_c=\frac{1}{\Omega_c(E_c)\delta(E_c-\varepsilon_c)}\\
+>
+> \begin{align*}
+> 1 &= \int\rho^{equilibrium}_cd\Gamma_c\\
+> &=\iint \rho_s d\Gamma_s d\Gamma_ c\\
+> \Rightarrow \rho^{equilibrium}_c&=\int \rho_s d\Gamma_s\\
+> &=\int\frac{1}{\Omega_s(E_s)}\delta(E_s) d\Gamma_s\\
+> &=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}
+> \end{align*}
+> $$
+> 再利用平衡时$\rho_c^{equlibrium}=\rho_c^{isolated}$,这样计算并不会得到的结果必然 和以前一样,会得到热库和子系统(封闭系)温度相等的结论.
+>
+> 这样的平衡只不过是孤立系的平衡条件强加到封闭系上而已, 不是封闭系的平衡条件
+
+封闭系的能量可以变化, 因此能量一定不是衡量两个封闭系平衡的条件. 仿照孤立系的平衡条件, 我们选取两个封闭的系统, 按照前面的方法, 先将两个封闭系看作是无关的, 再描述封闭系的平衡.
+
+按照之前的方法, 我们要把一个封闭系划分成两个封闭系, 然后推导出这两个孤立系相等的量. 然后定义一个封闭系处于平衡态, 当且仅当无论如何划分封闭子系, 两个封闭子系都有相等的量的条件.
+
+也就是我们要推导封闭系等价的条件. 什么量一样, 两个封闭系就是一样的? 能量一样, 孤立系就一样. 温度和压强一样, 两个封闭系就一样.
+
+将一个封闭系S分为两个孤立系A和B. 由孤立系的定义, 他们是同一个封闭系$S$的不同部分. 封闭系的温度是一个定值.  这两个孤立系温度相等, 都等于总系统S的温度 $T_a=T_b$.
+$$
+\begin{align*}
+\rho^{closed}_a&=\frac{1}{Z_a}e^{-\frac{E_a}{k_0T_a}}\\
+\rho^{closed}_b&=\frac{1}{Z_b}e^{-\frac{E_b}{k_0T_b}}\\
+\end{align*}
+$$
+
+对于平衡中的封闭系A和B
+$$
+\begin{align*}
+1 &= \int\rho^{equilibrium}_ad\Gamma_a\\
+&=\iint \rho_s d\Gamma_a d\Gamma_ b\\
+\Rightarrow \rho^{equilibrium}_a&=\int \rho_s d\Gamma_b\\
+&=\int \frac{1}{Z_s}e^{-\frac{E_s}{k_0T_s}} d\Gamma_b\\
+\end{align*}
+$$
+==能量的可加性始终成立???==, $E_a+E_b=E_s$.得到
+
+$$
+\begin{align*}
+\rho^{closed}_a&= \rho^{equilibrium}_a\\
+\frac{1}{Z_a}e^{-\frac{E_a}{k_0T_a}}&=\int \frac{1}{Z_s}e^{-\frac{E_s}{k_0T_s}} d\Gamma_b\\
+\frac{1}{Z_a}e^{-\frac{E_a}{k_0T}}&=\frac{1}{Z_s}\int e^{-\frac{E_a}{k_0T}-\frac{E_b}{k_0T}}d\Gamma_b\\
+&=\frac{1}{Z_s} e^{-\frac{E_a}{k_0T}} \int e^{-\frac{E_b}{k_0T}}d\Gamma_b\\
+&=\frac{1}{Z_s} e^{-\frac{E_a}{k_0T}}\cdot Z_b\cdot \int \frac{1}{Z_b}e^{-\frac{E_b}{k_0T}}d\Gamma_b\\
+&=\frac{Z_b}{Z_s} e^{-\frac{E_a}{k_0T}}
+\end{align*}
+$$
+
+得到Z是一个可乘量, $\ln Z​$是一个可加量
+$$
+\begin{align}
+Z_aZ_b&=Z_s\\
+\ln{Z_a}+\ln{Z_b}&=\ln{Z_s}
+\end{align}
+$$
+定义$\psi=\ln{Z}$, 则有$Z=e^{-\psi}$
+
+#### 封闭系的稳态,
+
+重新考虑整个体系. 系统平衡时没有能量流动. 把总系统S看作孤立系, 系统AB都是孤立系
+
+这样一来,$\psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)$中二者之差并不独立于研究的系统.==为什么之前独立现在不独立?因为AB相关了 原来A<<B==
 $$
 \begin{align}
 \quad \psi &=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)\\
@@ -640,24 +718,130 @@ $$
 \end{align}
 $$
 
-
-#### 封闭系引申的平衡量
-
-因为能量可交换, 我们自然要问, 封闭系的平衡一定与孤立系的平衡判定不同. ==封闭系平衡怎么弄出来P? 弄不弄的出来?== 
-
-
-### 开放系
-
-按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量$E_c$和粒子数$N_c$可以连续变化, 就要求整个孤立系的能量$E_i$和粒子数$N_i$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $N_r$很大, $E_c\ll E_r$
+由于温度不会变化, 封闭系的能量变化只能是对外做功导致的.
 $$
 \begin{align*}
-\rho_o^{\mathrm{isolated}}&=\frac{1}{\Omega_o(E_o)}\delta(E_o-\varepsilon_o)\delta(N_o-n_o)\\
-\delta(E_o-\varepsilon_o)&=\frac{\Omega_c(E_c)\Omega_r(\varepsilon_s-E_a)}{\Omega_s(E_s)}\\
-\rho_o^{\mathrm{isolated}}&=\frac{\Omega_r(E_r)}{\Omega_s(E_s)}\xrightarrow{E_i-E_r=E_c \ll E_i}\frac{\Omega_r(E_i)}{\Omega_i(E_i)}
+E_a&=F_a+TS_a\\
+dE_a&=dF_a+T_adS_a\\
+&=(\frac{\partial F}{\partial T}dT+\frac{\partial F}{\partial q}dq)+T_a\frac{d S}{dE}dE\\
+&=\frac{\partial E_a}{\partial q_a}dq_a
+\end{align*}
+$$
+同样有:
+$$
+dE_b=\frac{\partial E}{\partial q_b}d q_b
+$$
+由于系统温度不变,能量流动全部转化为对外做功,
+$$
+\begin{align*}
+dE_a+dE_b&=dE_s\\
+\frac{\partial E_a}{\partial q_a}dq_a+\frac{\partial E_b}{\partial q_b}dq_b&=\frac{\partial E_s}{\partial q_s}dq_s\\
+P_adV_a+P_bdV_b&=P_sdV_s
+\end{align*}
+$$
+==这里的推导有没有问题? 是不是涉及了动力学? 我们不能讨论动力学, 还是说我们讨论的始终都是导数为零的情况???==
+
+得到P_a=P_b. 得到压强的定义:
+$$
+P=\frac{\partial E}{\partial q}
+$$
+>>>>下面的推导需要整理
+>>>>
+>>>>令$F=E-TS=-k_0T\ln{Z}=-k_0T\psi$. 得到$F$的全微分:
+>>>>$$
+>>>>\begin{align}
+>>>>dF&=\frac{\partial F}{\partial T}dT+\frac{\partial F}{\partial E}dE\\
+>>>>&=(-k_0\ln{Z}-k_0T\cdot\frac{1}{Z}\frac{\partial Z}{\partial T})dT+
+>>>>\end{align}
+>>>>$$
+>>>> 能量的微分是对外做工导致的, 因此$dE=\sum_i\frac{\partial E}{\partial q_i}dq_i$ .带入得到
+>>>>$$
+>>>>\begin{align}
+>>>>\frac{\partial Z}{\partial T}&=\frac{\partial}{\partial T}e^{\psi}\\
+>>>>&=e^{\psi}\frac{\partial}{\partial T}{\psi}\\
+>>>>&=Z
+>>>>\end{align}
+>>>>$$
+>>>>..............
+>>>>$$
+>>>>dF=SdT+\sum\frac{\partial H}{\partial q_i}dq_i=SdT+PdV
+>>>>$$
+>>>>
+
+#### 压强的justification
+
+对于理想气体, 我们证明P的确就是我们说的压强.
+
+
+
+
+### 开放系的平衡
+
+按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 开放系的能量$E_o$和粒子数$n_o$可以连续变化, 就要求整个孤立系的能量$E_s$和粒子数$n_s$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $n-r$很大, $E_o\ll E_r$, $n_o\ll n_s$.
+#### 开放系的平衡态$\rho$
+
+$$
+\begin{align}
+
+S(E)&=\ln{\Omega(E)} \notag\\
+
+&=\ln\left(V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \right)\\
+
+\end{align}
+$$
+
+仿照前面的做法, 注意到开放系粒子数$n_o$可以变化. 系统的微观分布函数也会随之改变. 也就是说, $\rho$和$\Omega$不仅仅是$E$的函数, 也是$n$的函数. 因此$\rho=\rho(n,E)$, $\Omega=\Omega(n,E)$
+
+为了方便地表示$\underbrace{\int\cdots\int}_{n_o}\rho_od\Gamma_o $和$\underbrace{\int\cdots\int}_{{n_o}^\prime}{\rho_o}^\prime d{\Gamma_o}^\prime $的不同, 把积分 $\underbrace{\int\cdots\int}_{n_o}d\Gamma_o$记为$\int d\Gamma_{o,n_o}$, 为了清晰起见, 先保留$\underbrace{\int\cdots\int}_{n_o}d\Gamma_o$ 记法.
+$$
+\begin{align*}
+1&=\underbrace{\int\cdots\int}_{n_s}\rho_{s}(s_o,E_o)d\Gamma_{s,n_s}\\
+&=\underbrace{\int\cdots\int}_{n_o}\underbrace{\int\cdots\int}_{n_r}\rho_{s}(s_o,E_o) d\Gamma_{r,n_r}d\Gamma_{o,n_o}\\
+&=\underbrace{\int\cdots\int}_{n_o}\left(\underbrace{\int\cdots\int}_{n_r}\rho_{s}(s_o,E_o) d\Gamma_{r,n_r}\right)d\Gamma_{o,n_o}\\
+1&=\underbrace{\int\cdots\int}_{n_o}\rho_{o}(n_o,E_o)d\Gamma_{o,n_o}
+\end{align*}
+$$
+得到$\rho_{o,n_o}$的表达式:
+$$
+\begin{align*}
+\rho_{o,n_o}^{equlibrium}&=\underbrace{\int\cdots\int}_{n_r}\rho_{s}(s_o,E_o) d\Gamma_{r,n_r}\\
+&=\int \rho_{s}(s_o,E_o) d\Gamma_{r,n_r}\\
+&=\int \frac{1}{\Omega_{s}(n_s,E_s)}\delta(E_s-\varepsilon_s)d\Gamma_{r,n_r}\\
+&=\int \frac{1}{\Omega_{s}(n_s,E_s)}\delta(E_o+E_r-\varepsilon_s)d\Gamma_{r,n_r}\\
+&=\frac{\Omega_{r}(n_r,\varepsilon_s-E_o)}{\Omega_{s}(n_s,\varepsilon_s)}\\
+&=\frac{\Omega_{r}(n_r,\varepsilon_s-E_o)}{\Omega_{s}(n_s,\varepsilon_s)}\\
 \end{align*}
 $$
 
-#### 开放系的平衡态
+重复类似正则分布的过程, 用熵替换上面的$\Omega$得到:
+$$
+\begin{align*}
+\rho^{equlibrium}_{o,n_o}&=\frac{\Omega_{r}(n_r,\varepsilon_s-E_o)}{\Omega_{s}(n_s,\varepsilon_s)}\\
+&=\frac{\Omega_{r}(n_r,\varepsilon_s-E_o)}{\Omega_{r}(n_s,\varepsilon_s-E_o)}\cdot\frac{\Omega_{r}(n_s,\varepsilon_s-E_o)}{\Omega_{r}(n_s,\varepsilon_s)}\cdot\frac{\Omega_{r}(n_s,\varepsilon_s)}{\Omega_{s}(n_s,\varepsilon_s)}\\
+&=e^{S_r(n_r,\varepsilon_s-E_o)-S_r(n_s,\varepsilon_s-E_o)}e^{S_r(n_s,\varepsilon_s-E_o)-S_r(n_s,\varepsilon_s)}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}\\
+&=e^{\frac{S_r(n_s-n_o,\varepsilon_s-E_o)-S_r(n_s,\varepsilon_s-E_o)}{-n_o}(-n_o)}e^{\frac{S_r(n_s,\varepsilon_s-E_o)-S_r(n_s,\varepsilon_s)}{-E_o}(-E_o)}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}\\
+&=e^{\left.\frac{\partial S_r}{\partial n}\right|_{n=n_s}(-n_o)}e^{\left.\frac{\partial S_r}{\partial E}\right|_{E=\varepsilon_r}(-E_o)}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}\\
+&=e^{\left.\frac{\partial S_r}{\partial E}\frac{\partial E}{\partial n}\right|_{n=n_s}(-n_o)}e^{\left.\frac{\partial S_r}{\partial E}\right|_{E=\varepsilon_r}(-E_o)}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}\\
+&=e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}
+\end{align*}
+$$
+定义能量随粒子数的变化$\mu=\partial E/\partial n$, 上式写为:
+$$
+\rho^{equlibrium}_{o,n_o}=e^{-\frac{\mu}{k_0T}\cdot n_o}e^{-\frac{1}{k_0T}E_o}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}
+$$
+得到与正则分布类似的结论:
+$$
+\rho_{o,n_o}=\frac{1}{Z}e^{-\frac{\mu}{k_0T}\cdot n_o}e^{-\frac{1}{k_0T}E_o}
+$$
+其中Z由归一化
+$$
+1=\int\rho d\Gamma=\int \frac{1}{Z} e^{-\frac{\mu}{k_0T}\cdot n_o}e^{-\frac{1}{k_0T}E_o}d\Gamma \notag
+$$
+给出
+$$
+Z=\int e^{-\frac{\mu}{k_0T}\cdot n_o}e^{-\frac{1}{k_0T}E_o}d\Gamma
+$$
+
 
 
 
@@ -667,9 +851,37 @@ $$
 
 ## 遇到的问题
 
-到目前为止我们通过第一性的推导得到了各种各样的宏观可测量如温度, 下面要回答的问题是, 这些量如何与实验相联系?
+### 吉布斯佯谬
+
+在推导插曲:插曲: 以N个无相互作用的粒子体系推导孤立系的相关性质时, 我们得到
+$$
+\begin{align}
+
+S(E)&=\ln{\Omega(E)} \notag\\
+
+&=\ln\left(V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \right)\\
+
+\end{align}
+$$
+注意到这个式子在热力学极限$\frac{V}{N}\rightarrow \infty$下行为并不好.
+
+与实验不符合的是, 考虑下述情况:
+
+两个系统A,B混合, 同种气体的混合熵.
+
+得到同种气体混合熵改变了. 但是对于不可区分的气体在这不应该发生. 实验告诉我们, 气体是不可区分的全同粒子. 因此加上一个... 之后, 得到
 
 
+
+注意到这样的S在热力学极限下行为良好.
+
+
+
+### 不需要吉布斯佯谬的时候
+
+上面说过, 仅仅对于例子可区分时才会用吉布斯修正因子. 吉布斯修正因子时一个量子效应. 需要用吉布斯因子说明系统不能用经典力学描述.
+
+何时系统可以用经典力学描述? 顾莱纳书上说晶格就可以.
 
 ## 量子描述
 
@@ -678,6 +890,26 @@ $$
 在经典力学的描述中, 从刘维尔定理出发, 根据粒子的可区分性建立了$\ln\rho$的可加性. 然后依据观测量的期望值的定义, 将概率密度表示为$\rho$的函数. 通过定义能态密度$\Omega$, 求出了$\rho$. 接下来通过定义不同的平衡, 得到了不同的划分等价类的函数, 得到了一系列宏观量.
 
 量子力学与经典力学的每一点不同都将反映在上述的推导过程中. 但是上述推导过程的差别, 可以用一系列替换来完成. 下面来推导这些替换, 并说明如何从经典描述过渡到量子描述.
+
+### 量子系统的刘维尔定理
+
+### 量子系统的能级
+
+==我的问题是, 为什么可以直接把能量除一个hbar就代表相空间的疏密?==
+
+zl老师: 粒子在dq内的能级用hbar标记.
+
+我觉得这个没有道理
+
+我知道对于一维无限深方势阱, 乃至N维无限深方势阱, 这个结论都是成立的.
+
+但是对于不规则形状的势阱, 怎么搞?
+
+
+
+## 实验
+
+到目前为止我们通过第一性的推导得到了各种各样的宏观可测量如温度,     下面要回答的问题是, 这些量如何与实验相联系?
 
 
 
@@ -734,7 +966,7 @@ $$
 $$
 ## 斯特灵公式
 
-斯特灵公式是对$N!$的近似公式. 斯特灵公式的优点在于, 随着N的增大, 近似结果与真实值的误差可以任意小. 在$N\rightarrow \infty$时, 可以取等号. 对于研究的系统, 总是认为N无穷大. 这就是分析可测量可以利用斯特灵公式的数学依据.
+斯特灵公式是对$N!$的近似公式. 斯特灵公式的优点在于, 随着N的增大, ==近似结果与真实值的误差可以任意小(好像不对)==. 在$N\rightarrow \infty$时, 可以取等号. 对于研究的系统, 总是认为N无穷大. 这就是分析可测量可以利用斯特灵公式的数学依据.
 $$
 \Gamma(z)=\left(z-\frac{1}{2}\right)\ln(z)-z+\frac{\ln 2 \pi}{2}
 $$
@@ -752,7 +984,7 @@ $$
 $$
 
 
-误差有:
+
 
 
 
@@ -763,6 +995,12 @@ $$
 # 参考文献
 
 [^\Gamma函数的性质]: https://en.wikipedia.org/wiki/Gamma_function#General
+
+[^Pathria]: Pathria statistical mechanisc
+[^zl]: zl thermodynamics
+[^halley]: statistical mechanics: from first principle to ...
+
+[^]: an integrated approach
 
 []
 

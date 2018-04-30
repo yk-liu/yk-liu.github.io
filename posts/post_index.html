@@ -135,55 +135,75 @@ a.md-print-anchor { border-width: initial !important; border-style: none !import
 table tr th { border-bottom: 0px; }
 
 
-html { font-size: 19px; }
-html, body { margin: auto; background: rgb(254, 254, 254); }
-body { font-family: Vollkorn, Palatino, Times; color: rgb(51, 51, 51); line-height: 1.4; text-align: justify; }
-#write { max-width: 960px; margin: 0px auto 2em; line-height: 1.53; }
-#write > h2:first-child, #write > h3:first-child, #write > h4:first-child, #write > p:first-child { margin-top: 1.2em; }
-#write > h1:first-child, h1 { margin-top: 1.6em; font-weight: normal; }
-h1 { font-size: 3em; }
-h2 { margin-top: 2em; font-weight: normal; }
-h3 { font-weight: normal; font-style: italic; margin-top: 3em; }
-h1, h2, h3 { text-align: center; }
-h2::after { border-bottom: 1px solid rgb(47, 47, 47); content: ""; width: 100px; display: block; margin: 0px auto; height: 1px; }
-h1 + h2, h2 + h3 { margin-top: 0.83em; }
-p, .mathjax-block { margin-top: 0px; }
-ul { list-style: square; padding-left: 1.2em; }
-ol { padding-left: 1.2em; }
-blockquote { margin-left: 1em; padding-left: 1em; border-left: 1px solid rgb(221, 221, 221); }
-code, pre { font-family: Consolas, Menlo, Monaco, monospace, serif; font-size: 0.9em; background: white; }
-.md-fences { margin-left: 1em; padding-left: 1em; border: 1px solid rgb(221, 221, 221); padding-bottom: 8px; padding-top: 6px; margin-bottom: 1.5em; }
-a { color: rgb(36, 132, 193); text-decoration: none; }
+html, body, #write { color: rgb(94, 103, 109); font-family: "Open Sans", "Clear Sans", sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-weight: 100; color: rgb(94, 103, 109); font-family: "Open Sans", sans-serif; margin: 0.5rem 0px; }
+html { font-size: 16px; }
+#write { max-width: 914px; text-align: justify; }
+#write > h1:first-child { margin-top: 2.75rem; }
+#write > h2:first-child { margin-top: 1.75rem; }
+#write > h3:first-child { margin-top: 1rem; }
+#write > h4:first-child { margin-top: 0.5rem; }
+h1 { margin: 1rem 0px; }
+h2 { margin: 0.8rem 0px; }
+h3 { }
+h4 { }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1.1rem; }
+p { color: rgb(94, 103, 109); font-size: 1rem; line-height: 1.5rem; margin: 0px 0px 1.25rem; }
+#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
+#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
+#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
+#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
+@media screen and (max-width: 48em) {
+  blockquote { margin-left: 1rem; margin-right: 0px; padding: 0.5em; }
+  .h1, h1 { font-size: 2.827rem; }
+  .h2, h2 { font-size: 1.999rem; }
+  .h3, h3 { font-size: 1.413rem; }
+  .h4, h4 { font-size: 1.25rem; }
+  .h5, h5 { font-size: 1.15rem; }
+  .h6, h6 { font-size: 1rem; }
+}
+a, .md-def-url { color: rgb(0, 126, 229); text-decoration: none; }
 a:hover { text-decoration: underline; }
-a img { border: none; }
-h1 a, h1 a:hover { color: rgb(51, 51, 51); text-decoration: none; }
-hr { color: rgb(221, 221, 221); height: 1px; margin: 2em 0px; border-top: 1px solid rgb(221, 221, 221); border-bottom: none; border-left: 0px; border-right: 0px; }
-.md-table-edit { background: rgb(237, 237, 237); padding-top: 4px; }
-table { margin-bottom: 1.33333rem; }
-table th, table td { padding: 8px; line-height: 1.33333rem; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); }
-table th { font-weight: bold; }
+table { border: 1px solid rgb(226, 226, 226); margin-bottom: 20px; }
+table th, table td { padding: 8px; line-height: 1.5rem; vertical-align: top; border: 1px solid rgb(226, 226, 226); }
+table th { font-weight: normal; background-color: rgb(240, 247, 253); }
 table thead th { vertical-align: bottom; }
 table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
 table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
-.task-list { padding: 0px; }
-.md-task-list-item { padding-left: 1.6rem; }
-.md-task-list-item > input::before { content: "√"; display: inline-block; width: 1.33333rem; height: 1.6rem; vertical-align: middle; text-align: center; color: rgb(221, 221, 221); background-color: rgb(254, 254, 254); }
-.md-task-list-item > input:checked::before, .md-task-list-item > input[checked]::before { color: inherit; }
-.md-tag { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
-#write pre.md-meta-block { min-height: 35px; padding: 0.5em 1em; }
-#write pre.md-meta-block { white-space: pre; background: rgb(248, 248, 248); border-width: 0px 30px; border-top-style: initial; border-bottom-style: initial; border-top-color: initial; border-bottom-color: initial; border-image: initial; color: rgb(153, 153, 153); width: 100vw; max-width: calc(100% + 60px); margin-left: -30px; border-left-style: solid; border-left-color: rgb(248, 248, 248); border-right-style: solid; border-right-color: rgb(248, 248, 248); margin-bottom: 2em; margin-top: -1.33333rem; padding-top: 26px; padding-bottom: 10px; line-height: 1.8em; font-size: 0.76em; padding-left: 0px; }
-.md-img-error.md-image > .md-meta { vertical-align: bottom; }
-#write > h5.md-focus::before { top: 2px; }
-.md-toc { margin-top: 40px; }
-.md-toc-content { padding-bottom: 20px; }
-.outline-expander::before { color: inherit; font-size: 14px; top: auto; content: ""; font-family: FontAwesome; }
-.outline-expander:hover::before, .outline-item-open > .outline-item > .outline-expander::before { content: ""; }
-#typora-source { font-family: Courier, monospace; color: rgb(106, 106, 106); }
-.html-for-mac #typora-sidebar { box-shadow: rgba(0, 0, 0, 0.176) 0px 6px 12px; }
-.cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property, .CodeMirror.cm-s-typora-default div.CodeMirror-cursor { color: rgb(66, 139, 202); }
-.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number { color: rgb(119, 119, 119); }
-.typora-node .file-list-item-parent-loc, .typora-node .file-list-item-time, .typora-node .file-list-item-summary { font-family: arial, sans-serif; }
-.md-task-list-item > input { margin-left: -1.3em; margin-top: calc(1rem - 12px); }
+code, .md-fences { background: rgb(246, 249, 252); border: 1px solid rgb(208, 212, 217); border-radius: 3px; padding: 0.1em; margin-left: 0.2em; margin-right: 0.2em; font-size: 0.9rem !important; }
+.md-fences { margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 2.125rem; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .task-list-item input::before { margin-top: -0.2rem; }
+  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
+}
+blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid rgb(210, 210, 210); }
+blockquote, blockquote p { line-height: 1.6; color: rgb(143, 143, 143); }
+#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin: -1.5em -1000px 2em; color: rgb(153, 153, 153); border-left: 1000px solid rgb(248, 248, 248); border-right: 1000px solid rgb(248, 248, 248); }
+.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
+p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
+.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
+.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
+.md-image > img { margin-top: 2px; }
+.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
+#typora-source { color: rgb(85, 85, 85); }
+#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
+#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
+#md-notification::before { top: 14px; }
+#md-notification { background: rgb(238, 238, 238); }
+.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
+.mac-seamless-mode #typora-sidebar { background-color: rgb(247, 249, 250); }
+.pin-outline .outline-active { color: rgb(0, 112, 224); }
+.file-list-item { border-top: 1px solid rgb(230, 232, 235); border-bottom: 1px solid rgb(230, 232, 235); border-right-color: rgb(230, 232, 235); border-left-color: rgb(230, 232, 235); }
+.file-list-item-summary { font-weight: 400; color: rgb(99, 114, 130); }
+.file-list-item.active { color: rgb(0, 112, 224); background-color: rgb(230, 232, 235); }
+.file-tree-node.active > .file-node-background { background-color: rgb(230, 232, 235); }
+.file-tree-node.active > .file-node-content { color: rgb(0, 112, 224); }
+.file-node-content { color: rgb(94, 103, 109); }
+.sidebar-tab.active { font-weight: 400; }
+code, kbd, pre, samp { font-family: "Roboto Mono", Menlo, monospace; }
 
 
 .md-toc-inner { text-decoration: none; }
@@ -223,6 +243,6 @@ h5 { counter-reset: h6 0; }
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node show-fences-line-number'><h1><a name='header-n0' class='md-header-anchor '></a>My Posts</h1><p><em>Study Notes</em></p><hr /><ol><li> <a href='https://yk-liu.github.io/posts/20180425-Lie-group-and-Lie-algebra/index.html'>Lie group and Lie algebra</a></li><li> <a href='https://yk-liu.github.io/posts/20180425-Statistical-mechanics/index.html'>Statistical Mechanics</a></li><li>Quantum Field Theory</li></ol><p>&nbsp;</p><p>&nbsp;</p><p><em>Python/Linux Notes</em></p><hr /><ol><li>Python cheat sheet</li></ol><p>&nbsp;</p><p>&nbsp;</p></div>
+<div  id='write'  class = 'is-node show-fences-line-number'><h1><a name='header-n0' class='md-header-anchor '></a>My Posts</h1><p><em>Study Notes</em></p><hr /><p>201805?? Quantum Field Theory</p><p>201805?? <a href='https://yk-liu.github.io/posts/20180425-Lie-group-and-Lie-algebra/index.html'>Lie group and Lie algebra</a></p><p>201805?? <a href='https://yk-liu.github.io/posts/20180425-Statistical-mechanics/index.html'>Statistical Mechanics</a></p><p>&nbsp;</p><p><em>Python/Linux Notes</em></p><hr /><p>201805?? Python cheat sheet</p><p>&nbsp;</p></div>
 </body>
 </html>
