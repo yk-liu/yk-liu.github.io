@@ -32,7 +32,7 @@ $$
 \frac{\partial}{\partial t}\int_\omega \rho d \Gamma = -\int_\sigma \vec{v}\cdot \hat{n} d \sigma
 $$
 
-利用==格林公式==, 并且注意到$\nabla=(\frac{\partial}{\partial q_i}\hat{q}_i,\frac{\partial}{\partial p_i}\hat{p}_i)$, 即$\nabla$算符只与对应的速度项作用
+化为面积分, 并且注意到$\nabla=(\frac{\partial}{\partial q_i}\hat{q}_i,\frac{\partial}{\partial p_i}\hat{p}_i)$, 即$\nabla$算符只与对应的速度项作用
 $$
 \begin{align*}
 \vec{\nabla} \cdot \vec{v}&=(\frac{\partial}{\partial q_i}\hat{q}_i,\frac{\partial}{\partial p_i}\hat{p}_i)\cdot(\dot{q}_i \hat{q}_i,\dot{p}_i \hat{p}_i)\\
@@ -73,45 +73,7 @@ $$
 
 因此相空间内的代表点的集体像一个不可压缩液体. **而且**$\rho$**是一个守恒量.**
 
-### $\ln{\rho}$的可加性
-
-经典力学的系统之间的区别, 只有系统的粒子数和总能量$(E,N)$就可以确定.
-
-把一个系统$S$划分为两个子系统$A$,$B$
-$$
-N_S=\int{\rho_S \delta(E_S-\varepsilon_0) d \Gamma_S}\notag\\
-N_A=\int{\rho_A \delta(E_A-E_1) d \Gamma_A}\notag\\
-N_B=\int{\rho_B \delta(E_B-E_2) d \Gamma_B}\notag\\
-$$
-其中$E_S$和$E_A$,$E_B$的关系为:
-$$
-\begin{align*}
-N_S(\varepsilon_0)&=\int{ dE_a N_A(E_a) N_B(\varepsilon_0-E_a)}\\
-&=\int{ dE \left(\int{\rho_A \delta(E_A-E_a) d \Gamma_A}\int{\rho_B \delta(E_B-E_a-\varepsilon_0) d \Gamma_B}\right)}\\
-&=\int{\rho_A\rho_B \left(\int{dE_A \delta(E_A-E_a)\delta(E_B-E_a-\varepsilon_0)}\right) d\Gamma_A d\Gamma_B }\\
-&=\int{\rho_A\rho_B \delta(E_B-E_A-\varepsilon_0) d\Gamma_A d\Gamma_B }\\
-&=\int{\rho_S \delta(E_S-\varepsilon_0) d \Gamma_S}
-\end{align*}
-$$
-又有
-$$
-\begin{align}
-E_A+E_B=E_S\notag\\
-d\Gamma_A\cdot d\Gamma_B = d\Gamma_S \label{classicalDGammaProduct}
-\end{align}
-$$
-式$(\ref{classicalDGammaProduct})$建立在系统粒子可区分的基础上.
-
-我们得到总系统与子系统间$\rho$的关系:
-$$
-\rho_A\rho_B=\rho_S \notag
-$$
-取对数得到
-$$
-\ln{\rho_A}+\ln{\rho_B}=\ln{\rho_S}
-$$
-
-#### 对系统的观测
+### 对系统的观测
 
 有两种得到系统的某个观测量$O$的方法
 
@@ -139,7 +101,7 @@ $$
 
 ==**<u>也就是说, $\rho$包含了系统的全部信息</u>**==
 
-#### 系统的宏观量计算方法
+### 系统的宏观量计算方法
 
 为了得到系统的观测量的表达式, 要从粒子满足的运动方程出发, 得到$\rho$的表达式, 才能第一性地计算相应的宏观量.
 
@@ -183,6 +145,45 @@ $$
 \rho(p,q)=\rho(\varepsilon_0)\delta(E-\varepsilon_0)
 $$
 #### 孤立系的观测值计算
+
+##### $\ln{\rho}$的可加性
+
+经典力学的系统之间的区别, 只有系统的粒子数和总能量$(E,N)$就可以确定.
+
+把一个系统$S$划分为两个子系统$A$,$B$
+$$
+N_S=\int{\rho_S \delta(E_S-\varepsilon_0) d \Gamma_S}\notag\\
+N_A=\int{\rho_A \delta(E_A-E_1) d \Gamma_A}\notag\\
+N_B=\int{\rho_B \delta(E_B-E_2) d \Gamma_B}\notag\\
+$$
+其中$E_S$和$E_A$,$E_B$的关系为:
+$$
+\begin{align*}
+N_S(\varepsilon_0)&=\int{ dE_a N_A(E_a) N_B(\varepsilon_0-E_a)}\\
+&=\int{ dE \left(\int{\rho_A \delta(E_A-E_a) d \Gamma_A}\int{\rho_B \delta(E_B-E_a-\varepsilon_0) d \Gamma_B}\right)}\\
+&=\int{\rho_A\rho_B \left(\int{dE_A \delta(E_A-E_a)\delta(E_B-E_a-\varepsilon_0)}\right) d\Gamma_A d\Gamma_B }\\
+&=\int{\rho_A\rho_B \delta(E_B-E_A-\varepsilon_0) d\Gamma_A d\Gamma_B }\\
+&=\int{\rho_S \delta(E_S-\varepsilon_0) d \Gamma_S}
+\end{align*}
+$$
+又有
+$$
+\begin{align}
+E_A+E_B=E_S\notag\\
+d\Gamma_A\cdot d\Gamma_B = d\Gamma_S \label{classicalDGammaProduct}
+\end{align}
+$$
+式$(\ref{classicalDGammaProduct})$建立在系统粒子可区分的基础上.
+
+我们得到总系统与子系统间$\rho$的关系:
+$$
+\rho_A\rho_B=\rho_S \notag
+$$
+取对数得到
+$$
+\ln{\rho_A}+\ln{\rho_B}=\ln{\rho_S}
+$$
+
 
 ##### 概率密度的表达式
 
@@ -317,7 +318,7 @@ $$
 \frac{1}{\Omega_a(\varepsilon_a)}\int\delta(E_a-\varepsilon_a)d\Gamma_a=1 \notag\\
 \int\delta(E_a-\varepsilon_a)d\Gamma_a=\Omega_a(\varepsilon_a) \notag\\
 $$
-得到: ==这里的E 和 e貌似用混了, 有时间看一看==
+得到: 
 $$
 \begin{align*}
 \quad \delta(E_a-\varepsilon_a) &=\frac{d\Omega_a(\varepsilon_a)}{d\Gamma_a}\\
@@ -348,7 +349,6 @@ $$
 
 #### 封闭系的$\rho$
 
-==问题:这样忽略了粒子的交换. 在粒子可以区分的前提下, 这样做没有关系. 只要跟踪子系统的全部粒子即可, 在粒子不可以跟踪 没有确定轨迹的情况下, 这样做还成立吗?==
 仿照推导微正则分布的方法, 利用两个归一化条件, (总系统是一个孤立系)
 $$
 \begin{align*}
@@ -749,7 +749,7 @@ $$
 
 
 
-
+???
 
 
 
@@ -978,13 +978,61 @@ $$
 
 量子力学与经典力学的每一点不同都将反映在上述的推导过程中. 但是上述推导过程的差别, 可以用一系列替换来完成. 下面来推导这些替换, 并说明如何从经典描述过渡到量子描述.
 
+### 量子系统的相空间概率密度
+
+经典力学中的相空间概率密度很好定义. 但是
+
+1. 在量子力学中系统的共轭物理量(如坐标和动量)不可以同时确定, 也就不能定义像空间内的一个"点". 如何来描述一个系统?
+2. 在量子力学中一个系统可能处于叠加态, 测量本身有不确定性.
+
+如何定义系统在相空间的表达形式, 以及这个系统对应的可观测量的计算方法?
+
+用密度矩阵
+$$
+\hat{\rho}=\sum_{i}p_i\left| \psi_i \right\rangle  \left\langle \psi_i \right|
+$$
+则任意一个可观测量
+$$
+\begin{align*}
+\left\langle O \right\rangle &=\sum_ip_i \left\langle O \right\rangle_i\\
+&=\sum_i p_i \left\langle \psi_i \right| \hat{O}\left| \psi_i \right\rangle  \\
+&=\sum_i p_i \left\langle \psi_i \right| \mathbf{1} \hat{O}\left| \psi_i \right\rangle\\
+&=\sum_i p_i \left\langle \psi_i \right| \left(\sum_j \left| \psi_j \right\rangle  \left\langle \psi_j \right| \right) \hat{O}\left| \psi_i \right\rangle\\
+&=\sum_i\sum_j   p_i \left\langle \psi_i \right| \left| \psi_j \right\rangle  \left\langle \psi_j \right|  \hat{O}\left| \psi_i \right\rangle\\
+&=\sum_i \left\langle \psi_i \right| \left(\sum_j   p_i\left| \psi_j \right\rangle  \left\langle \psi_j \right| \right) \hat{O}\left| \psi_i \right\rangle\\
+&=\sum_i \left\langle \psi_i \right|\hat{\rho} \hat{O}\left| \psi_i \right\rangle\\
+&=\operatorname{Tr}{\hat{\rho} \hat{O}}
+\end{align*}
+$$
+因此对应于经典力学, $\hat{\rho}$包含了量子力学描述的系统的全部信息.
+
 ### 量子系统的刘维尔定理
+
+由薛定谔方程
+$$
+i\hbar\frac{\partial}{\partial t}\left| \psi \right\rangle   =\hat{H} \left| \psi \right\rangle
+$$
+得到
+$$
+\begin{align*}
+\frac{d}{d t}\hat\rho &=\frac{\partial \left| \psi \right\rangle }{\partial t} \left\langle \psi \right|+ \left| \psi \right\rangle\frac{\partial \left\langle \psi \right| }{\partial t} \\
+&=\frac{\hat{H}}{i\hbar} \left| \psi \right\rangle  \left\langle \psi \right| + \left| \psi \right\rangle  \left\langle \psi \right| \frac{\hat{H}}{-i\hbar} \\
+&=\frac{1}{i\hbar}[\hat{H},\hat{\rho}]
+\end{align*}
+$$
+如果选择的是能量表象,
+$$
+\begin{align*}
+\frac{d}{d t}\hat\rho 
+&=\frac{\hat{H}}{i\hbar} \left| \psi \right\rangle  \left\langle \psi \right| + \left| \psi \right\rangle  \left\langle \psi \right| \frac{\hat{H}}{-i\hbar} \\
+&=\frac{E}{i\hbar} \left| \psi \right\rangle  \left\langle \psi \right| + \left| \psi \right\rangle  \left\langle \psi \right| \frac{E}{-i\hbar} 
+\end{align*}
+$$
+得到对角元不随时间变化.
 
 ### 量子系统的能级
 
 ==我的问题是, 为什么可以直接把能量除一个hbar就代表相空间的疏密?==
-
-zl老师: 粒子在dq内的能级用hbar标记.
 
 我觉得这个没有道理
 
@@ -1072,6 +1120,7 @@ $$
 
 
 
+ [^\Gamma函数的性质][^Pathria][^zl]
 
 
 
@@ -1084,7 +1133,7 @@ $$
 [^\Gamma函数的性质]: https://en.wikipedia.org/wiki/Gamma_function#General
 
 [^Pathria]: Pathria statistical mechanisc
-[^zl]: zl thermodynamics
+[^zl]: Liu Zhao.  thermodynamics
 [^halley]: statistical mechanics: from first principle to ...
 
 [^]: an integrated approach
