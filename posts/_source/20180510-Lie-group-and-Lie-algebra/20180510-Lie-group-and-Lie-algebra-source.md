@@ -1,5 +1,7 @@
 # 李群和李群的李代数
 
+目前我对李群的疑问已经解决, 本文更新暂停
+
 [TOC]
 
 ## 基本概念
@@ -57,6 +59,7 @@ f(\varphi)=\sum_{-\infty}^{+\infty} a_m \exp{(i m \varphi)} \quad , m\in \mathbb
 $$
 
 ### 代数
+
 $$
 线性向量空间V + 矢量积 \square
 	\begin{cases} 
@@ -74,6 +77,40 @@ $$
 \vec{A} \square \left(\vec{B} \square \vec{C}\right) = \left(\vec{A} \square \vec{B}\right) \vec{C}+\vec{B} \square \left( \vec{A} \square \vec{C} \right)
 $$
 那么这样的代数称为Lie代数,这时常常把矢量积$\vec{A}\square \vec{B}$写作$[\vec{A},\vec{B}]$ 
+
+### 补充: 标量函数的变换算符
+
+对于标量函数, 对宗量(自变量)$x\in \mathbb{C}^n, \quad n\in \mathbb{N}$的变换, 总可以表示成对标量函数的变换, 即
+$$
+\begin{align*}
+x &\rightarrow \chi=Rx\\
+ \Psi&\rightarrow \Phi=P_R\Psi
+\end{align*}
+$$
+上面大写的希腊字母表示函数值, $\psi(x)=\Psi, \quad \psi(y)=\Phi$, $P_R$是对标量$\Phi$(一个数)的变换. 
+
+注意 而$\Psi \in \mathbb{C}$是一个标量, 因此就若采用矩阵表示, $R$是一个$n\times n$矩阵, 作用于$x\in \mathbb{C}^n$, 而$P_R$是一个算符, 作用于$\psi(x)= \Psi \in \mathbb{C}$
+
+又因为一般有$\Phi=P_R\Psi=P_R\psi(x)\neq \psi(\chi)$, 因而将$\Phi$记为$\Phi=\phi(\chi)$
+
+将上述关系整理为
+$$
+\begin{align*}
+x &\rightarrow \chi=Rx\\
+\psi(x)&\rightarrow \phi(\chi) =P_R\psi(\chi)
+\end{align*}
+$$
+因此$P_R$的作用是将函数$\phi$变换为一个新的函数$\psi$. 
+
+将上式改写之后可以得到
+$$
+\psi(x)={P_R}^{-1}\phi(x)=\psi(R^{-1}\chi)
+$$
+因此也可以说$P_R$的作用是"抵消" $R$的作用
+$$
+\phi(x)=P_R\psi(x)=\psi(R^{-1}x)
+$$
+标量函数变换算符与群元素一一对应
 
 ## 拓扑空间的相关概念,拓扑群
 
@@ -133,6 +170,8 @@ A[1维曲线]--> B[2维曲面]
 
 (未完)
 
+
+
 ## 李群
 ### 李群定义
 
@@ -178,7 +217,7 @@ $$
 
 诱导出一个切空间的微分映射$dL_g$. 如图所示.
 
-<img src="切空间.png" style="zoom:50%" />
+<img src="切空间.png" style="zoom:30%" />
 
 由此可以得到
 
@@ -188,10 +227,6 @@ graph LR
     A -->|dLg|C(g的切空间Tg的基矢)
     C -->|确定|D(g的切空间Tg)
 ```
-
-
-
-
 
 #### 指数映射
 
@@ -272,13 +307,13 @@ $$
 若上式 $(\ref{expProduct})$ 中 $\vec{x}$ , $ \vec{y} $ 对易, 则:
 $$
 \begin{align*}
-\exp{\vec{x}} \cdot \exp{\vec{y}}&=(1+(\vec{x}+\vec{y})+(\vec{x}+\vec{y})^2+(\vec{x}+\vec{y})^3+\cdots)
+\exp{\vec{x}} \cdot \exp{\vec{y}}&=(1+(\vec{x}+\vec{y})+\frac{1}{2!}(\vec{x}+\vec{y})^2+\frac{1}{3!}(\vec{x}+\vec{y})^3+\cdots)
 \end{align*}
 $$
 若上式 $(\ref{expProduct})$ 中 $\vec{x}$ , $ \vec{y} $ 不对易, 则
 $$
 \begin{align*}
-\exp{\vec{x}} \cdot \exp{\vec{y}}&=(1+(\vec{x}+\vec{y})+(\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})+(\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})+\cdots)
+\exp{\vec{x}} \cdot \exp{\vec{y}}&=(1+(\vec{x}+\vec{y})+\frac{1}{2!}(\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})+\frac{1}{3!}(\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})+\cdots)
 \end{align*}
 $$
 为了将$\vec{z}$表示成$\vec{x}+\vec{y}$的形式, 我们计算由于不对易性导致式 $(\ref{expProduct})$ 的差:
@@ -309,7 +344,7 @@ $$
 $$
 
 
-因此可以说,李代数是李群结构非对易性的线性化(即"低阶近似")
+因此可以说,李代数是李群结构非对易性的线性化(即"低阶近似"), (是反应不对易性的第一项)
 $$
 \begin{align}
 \exp{(A+B)}&=\exp{A}\exp{B}\exp{\left(-\frac{1}{2}[A,B]\right)}\notag\\
@@ -409,7 +444,7 @@ R_z(\omega)=\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\ome
 \end{align*}
 $$
 
-以上就是三维转动李群的$3 \times3$矩阵表示.  注意到他们之间的关系有
+以上就是三维转动李群生成元的$3 \times3$矩阵表示.  注意到
 $$
 \begin{align*}
 {\dot{\vec{R}}_x(0)}^2&=\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&-1&0\\0&0&-1\end{bmatrix}\\
@@ -439,9 +474,43 @@ $$
 \end{align}
 $$
 
-#### 三维转动群的"无穷小元素"与"生成元"
+#### 三维转动群的"无穷小元素"的作用: 计算生成元
 
 因此按照之前的说法, 三维转动李群的切空间元素就是三个矩阵(实际上是Pauli矩阵的变形). 
+
+无穷小元素按照之前定义, 具有下述性质
+$$
+(1+\delta\mathbf{1})(1+\varepsilon\mathbf{1})=(1+(\delta+\varepsilon)\mathbf{1})
+$$
+而与切空间向量对应的群元素有
+$$
+\begin{align*}
+\exp{(\delta\vec{R}_x)}\cdot\exp{(\varepsilon\vec{R}_x)}&=\left(1+\delta\vec{R}_x+\frac{1}{2!}\delta^2{\vec{R}_x}^2+\cdots\right)\cdot\left(1+\varepsilon\vec{R}_x+\frac{1}{2!}\varepsilon^2{\vec{R}_x}^2+\cdots\right)\\
+&=\left(1+(\delta+\varepsilon)\vec{R}_x+\frac{1}{2!}(\delta^2+2\delta\varepsilon+\varepsilon^2){\vec{R}_x}^2 +\cdots\right)\\
+&=\left(1+(\delta+\varepsilon)\vec{R}_x+\frac{1}{2!}(\delta+\varepsilon)^2{\vec{R}_x}^2+\cdots\right)\\
+&=\exp{((\delta+\varepsilon)\vec{R}_x)}
+\end{align*}
+$$
+可以看出,在最低阶近似下, 切空间向量指数映射满足"无穷小元素"的运算规则:
+
+可以说, ==无穷小元素只是一个计算的手段, 可以方便地得到**标量算符**生成元应当满足的关系.== 
+
+##### 无穷小元素计算举例
+
+例如对转动群
+$$
+\begin{align*}
+R&=1+\varepsilon g& R&=\exp(\varepsilon g)\\
+P_R&=1+\omega \varepsilon g & P_R&=\exp(\omega\varepsilon g)\\
+&\mathrm{some\ calculation} &&\mathrm{some\ calculation}\\
+f(\omega)&=0 & f(\omega)&=0\\
+\end{align*}\\
+\omega \mathrm{就是标量算符的生成元}\\
+两者计算结果是一样的
+$$
+
+
+#### 三维转动群的"生成元"
 
 下面研究这个李群的无穷小生成元.
 $$
@@ -452,7 +521,6 @@ P_{R(\alpha)}\psi(x)&=\psi({R(\alpha)}^{-1}x)\\
 &=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi(x)}{{\partial x}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{{\partial \alpha}^n} \alpha^n}\\
 \end{align*}
 $$
-
 
 
 
@@ -480,4 +548,4 @@ $$
 
 [^BCH公式]: https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula
 
-[^未完待续]
+[^]
