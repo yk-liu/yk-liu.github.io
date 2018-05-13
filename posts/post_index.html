@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>post_index</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}#write, body { height: auto; }
+<title>post_index</title><style type='text/css'>html {overflow-x: initial !important;}#write, body { height: auto; }
 #write, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write ol, #write p, #write ul { position: relative; }
 #write, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write, pre { white-space: pre-wrap; }
@@ -136,85 +136,75 @@ a.md-print-anchor { border-width: initial !important; border-style: none !import
 table tr th { border-bottom: 0px; }
 
 
-:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
-@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
-@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
-@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
-@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html, body, #write { color: rgb(94, 103, 109); font-family: "Open Sans", "Clear Sans", sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-weight: 100; color: rgb(94, 103, 109); font-family: "Open Sans", sans-serif; margin: 0.5rem 0px; }
 html { font-size: 16px; }
-body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
-#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
-#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
-body > :first-child { margin-top: 0px !important; }
-body > :last-child { margin-bottom: 0px !important; }
-a { color: rgb(65, 131, 196); }
-h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
-h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
-h1 tt, h1 code { font-size: inherit; }
-h2 tt, h2 code { font-size: inherit; }
-h3 tt, h3 code { font-size: inherit; }
-h4 tt, h4 code { font-size: inherit; }
-h5 tt, h5 code { font-size: inherit; }
-h6 tt, h6 code { font-size: inherit; }
-h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
-h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
-h3 { font-size: 1.5em; line-height: 1.43; }
-h4 { font-size: 1.25em; }
-h5 { font-size: 1em; }
-h6 { font-size: 1em; color: rgb(119, 119, 119); }
-p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
-li > ol, li > ul { margin: 0px; }
-hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border-width: 0px 0px 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(221, 221, 221); }
-body > h2:first-child { margin-top: 0px; padding-top: 0px; }
-body > h1:first-child { margin-top: 0px; padding-top: 0px; }
-body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
-body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
-a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
-h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
-li p.first { display: inline-block; }
-ul, ol { padding-left: 30px; }
-ul:first-child, ol:first-child { margin-top: 0px; }
-ul:last-child, ol:last-child { margin-bottom: 0px; }
-blockquote { border-left: 4px solid rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
-blockquote blockquote { padding-right: 0px; }
-table { padding: 0px; word-break: initial; }
-table tr { border-top: 1px solid rgb(204, 204, 204); margin: 0px; padding: 0px; }
-table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
-table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(204, 204, 204); border-right-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
-table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
-table tr th:first-child, table tr td:first-child { margin-top: 0px; }
-table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
-.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
-.md-fences, code, tt { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
-.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
-.md-task-list-item > input { margin-left: -1.3em; }
-@media screen and (min-width: 914px) {
+#write { max-width: 914px; text-align: justify; }
+#write > h1:first-child { margin-top: 2.75rem; }
+#write > h2:first-child { margin-top: 1.75rem; }
+#write > h3:first-child { margin-top: 1rem; }
+#write > h4:first-child { margin-top: 0.5rem; }
+h1 { margin: 1rem 0px; }
+h2 { margin: 0.8rem 0px; }
+h3 { }
+h4 { }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1.1rem; }
+p { color: rgb(94, 103, 109); font-size: 1rem; line-height: 1.5rem; margin: 0px 0px 1.25rem; }
+#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
+#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
+#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
+#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
+@media screen and (max-width: 48em) {
+  blockquote { margin-left: 1rem; margin-right: 0px; padding: 0.5em; }
+  .h1, h1 { font-size: 2.827rem; }
+  .h2, h2 { font-size: 1.999rem; }
+  .h3, h3 { font-size: 1.413rem; }
+  .h4, h4 { font-size: 1.25rem; }
+  .h5, h5 { font-size: 1.15rem; }
+  .h6, h6 { font-size: 1rem; }
 }
-@media print {
-  html { font-size: 13px; }
-  table, pre { break-inside: avoid; }
-  pre { word-wrap: break-word; }
+a, .md-def-url { color: rgb(0, 126, 229); text-decoration: none; }
+a:hover { text-decoration: underline; }
+table { border: 1px solid rgb(226, 226, 226); margin-bottom: 20px; }
+table th, table td { padding: 8px; line-height: 1.5rem; vertical-align: top; border: 1px solid rgb(226, 226, 226); }
+table th { font-weight: normal; background-color: rgb(240, 247, 253); }
+table thead th { vertical-align: bottom; }
+table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
+table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
+code, .md-fences { background: rgb(246, 249, 252); border: 1px solid rgb(208, 212, 217); border-radius: 3px; padding: 0.1em; margin-left: 0.2em; margin-right: 0.2em; font-size: 0.9rem !important; }
+.md-fences { margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 2.125rem; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .task-list-item input::before { margin-top: -0.2rem; }
+  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
 }
-.md-fences { background-color: rgb(248, 248, 248); }
-#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
-.mathjax-block > .code-tooltip { bottom: 0.375rem; }
-#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
-#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-.md-image > .md-meta { border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
-.md-tag { color: inherit; }
-.md-toc { margin-top: 20px; padding-bottom: 20px; }
-.sidebar-tabs { border-bottom: none; }
-#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
-#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
-#md-notification::before { top: 10px; }
-.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
-header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
-.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
-.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
-.md-lang { color: rgb(180, 101, 77); }
-.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid rgb(210, 210, 210); }
+blockquote, blockquote p { line-height: 1.6; color: rgb(143, 143, 143); }
+#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin: -1.5em -1000px 2em; color: rgb(153, 153, 153); border-left: 1000px solid rgb(248, 248, 248); border-right: 1000px solid rgb(248, 248, 248); }
+.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
+p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
+.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
+.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
+.md-image > img { margin-top: 2px; }
+.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
+#typora-source { color: rgb(85, 85, 85); }
+#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
+#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
+#md-notification::before { top: 14px; }
+#md-notification { background: rgb(238, 238, 238); }
+.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
+.mac-seamless-mode #typora-sidebar { background-color: rgb(247, 249, 250); }
+.pin-outline .outline-active { color: rgb(0, 112, 224); }
+.file-list-item { border-top: 1px solid rgb(230, 232, 235); border-bottom: 1px solid rgb(230, 232, 235); border-right-color: rgb(230, 232, 235); border-left-color: rgb(230, 232, 235); }
+.file-list-item-summary { font-weight: 400; color: rgb(99, 114, 130); }
+.file-list-item.active { color: rgb(0, 112, 224); background-color: rgb(230, 232, 235); }
+.file-tree-node.active > .file-node-background { background-color: rgb(230, 232, 235); }
+.file-tree-node.active > .file-node-content { color: rgb(0, 112, 224); }
+.file-node-content { color: rgb(94, 103, 109); }
+.sidebar-tab.active { font-weight: 400; }
+code, kbd, pre, samp { font-family: "Roboto Mono", Menlo, monospace; }
 
 
 .md-toc-inner { text-decoration: none; }
@@ -254,6 +244,6 @@ h5 { counter-reset: h6 0; }
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node show-fences-line-number'><h1><a name='header-n0' class='md-header-anchor '></a>My Posts</h1><p><em>Study Notes</em></p><hr /><p>201807?? Quantum Field Theory</p><p>201806?? <a href='https://yk-liu.github.io/posts/20180425-Statistical-mechanics/index.html'>Statistical Mechanics</a></p><p>20180510 <a href='https://yk-liu.github.io/posts/20180510-Lie-group-and-Lie-algebra/index.html'>Lie group and Lie algebra</a></p><p>&nbsp;</p><p><em>Python/Linux Notes</em></p><hr /><p>201805?? Python cheat sheet</p><p>&nbsp;</p></div>
+<div  id='write'  class = 'is-node show-fences-line-number'><h1><a name='header-n0' class='md-header-anchor '></a>My Posts</h1><p><em>Study Notes</em></p><hr /><ol><li><a href='https://yk-liu.github.io/posts/1-Lie-group-and-Lie-algebra/index.html'>Lie group and Lie algebra</a></li><li><a href='https://yk-liu.github.io/posts/2-Statistical-mechanics/index.html'>Statistical Mechanics</a></li><li><a href='https://yk-liu.github.io/posts/3-Introduction-to-QFT/index.html'>Introduction to QFT</a></li></ol><p>&nbsp;</p><p><em>Python/Linux Notes</em></p><hr /><ol><li>Python cheat sheet</li></ol><p>&nbsp;</p></div>
 </body>
 </html>
