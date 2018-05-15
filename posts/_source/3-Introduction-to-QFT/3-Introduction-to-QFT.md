@@ -7,12 +7,16 @@
 $$
 \newcommand{\d}{\mathrm{d}}
 \newcommand{\slash}[1]{\not{#1}}
+\newcommand{\bra }[1]{ \left\langle {#1} \right\vert }
+\newcommand{\ket }[1]{ \left\vert {#1} \right\rangle }
+\newcommand{\Res}{\operatorname{Res}}
+
 \begin{align}
 p=p^\mu&=(E/c,\vec{p})\\
 x^\mu&=(ct,\vec{x})\\
 g_{\mu\nu}&=(+,-,-,-)\\
 p=p^\mu&=(E/c,-\vec{p})\\
-E_{\pm p}&=\pm\sqrt{p^2+m^2}, \quad E_{-p}=-E_p
+E_{\pm p}&=\pm\sqrt{\vec{p}^2+m^2}, \quad E_{-p}=-E_p
 \end{align}
 $$
 
@@ -22,11 +26,12 @@ $$
 
 ### 哈密顿量
 
-要构建相对论量子力学, 哈密顿量H要满足
+要构建相对论量子力学, 哈密顿量$H$ 要满足
 $$
-p_\mu p^\mu=E^2-p^2=m^2
+p_\mu p^\mu=E^2-{\vec{p}}^2=m^2
 $$
 
+(由 $E^2={\vec{p}}^2c^2+m^2c^4$ 自然单位制$c=0$)
 ### 运动方程
 
 利用
@@ -56,16 +61,13 @@ $$
 > 三维..
 >
 > 根据以上傅里叶变换的结果得到
-
 $$
 \left(\Box ^2 + m^2\right)\phi(x)=0
 $$
-
 的傅里叶变换是4维的
 $$
 \phi(x)=\int \d^4p \operatorname{A}(p)e^{ipx}\delta(p_\mu p^\mu-m^2)+\int \d^4p \operatorname{B}(p)e^{-ipx}\delta(p_\mu p^\mu-m^2)
 $$
-
 > 由$\delta$函数的性质,
 > $$
 > \delta(f(x))=\sum_i{\frac{x-a_i}{\left\vert {f}^\prime(a_i)\right\vert}}
@@ -89,15 +91,13 @@ $$
 &=\int dp^0\int \d^3 {\vec{p} \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E_p)+\delta(p^0+E_p) \right)}\\
 \end{align*}
 $$
-
-注意到两个$delta$函数只有一个成立, 因此取$p^0\gt 0$的一个
+注意到两个 $delta$ 函数只有一个成立, 因此取$p^0\gt 0$的一个
 
 > 之前解方程曾有要求
 >
 > 是对123维情况的类比, $p^0\gt 0$规定了一个正方向
 >
 > 这里也可以写成更简单的形式
-
 $$
 \begin{align*}
 &=\int dp^0\int \d^3 {\vec{p} \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert} \delta(p^0-E_p)}\\
@@ -107,17 +107,14 @@ $$
 &=\int \d^3 \vec{p} \frac{\operatorname{A}(E_p,\vec{p})}{2  E_p }e^{i(E_pt-\vec{p}\cdot\vec{x})}\\
 \end{align*}
 $$
-
 因此可以将$\phi(x)$写成更简单的形式
 $$
 \phi(x)=\int \d^3 \vec{p} \left(\frac{\operatorname{A}(E_p,\vec{p})}{2 E_p }e^{i(E_pt-\vec{p}\cdot\vec{x})} + \frac{\operatorname{B}(E_p,\vec{p})}{2 E_p }e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right)
 $$
-
 令$a(\vec{p})=\frac{\operatorname{A}(E_p,\vec{p})}{\sqrt{2E_p }}$, $b(\vec{p})=\frac{\operatorname{B}(E_p,\vec{p})}{\sqrt{2E_p }}$(因为$E_p$是$p$的函数), $\phi(x)$可以写为:
 $$
 \phi(x)=\int \d^3 \vec{p} \left( \frac{a(\vec{p})}{\sqrt{2E_p}}e^{i(E_pt-\vec{p}\cdot\vec{x})} +  \frac{b(\vec{p})}{\sqrt{2E_p}} e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right)
 $$
-
 #### 实数解
 
 如果是实标量场, 有$\phi(x)=\phi^\dagger(x)$, 得到
@@ -131,12 +128,10 @@ a(\vec{p})&=b^\dagger(p)\\
 b(\vec{p})&=a^\dagger(p)
 \end{align}
 $$
-
 因此实标量场的解为
 $$
 \phi(x)=\int \frac{\d^3\vec{p}}{\sqrt{2E_p}}\left( a(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right)
 $$
-
 ### 场的量子化
 
 到此为止, 所有的分析都是基于量子力学的, 没有涉及场的概念
@@ -170,7 +165,6 @@ $$
 \tilde{\phi}(p)  =\int \frac{\d^3\vec{x}}{(2\pi)^{\frac32}\sqrt{2E_p}} \phi(x) e^{-ipx}\\
 \end{cases}
 $$
-
 > ==这里是三重积分, 四重积分可以转化为三重, 如何证明 文献忘记是哪一个了==
 
 对于共轭动量密度有
@@ -203,7 +197,6 @@ $$
 \tilde\pi(-p)&=\tilde\pi^\dagger(p)
 \end{align*}
 $$
-
 #### 二次量子化
 
 利用共轭动量密度和==???==的对易关系, 可以推导出$a$和$a^\dagger$ 的对易关系
@@ -214,7 +207,6 @@ $$
 &=i\delta(\vec{p}-\vec{q})
 \end{align}
 $$
-
 ---
 
 这里$a$与$a^\dagger$原本都是平面波展开的系数, 也就是常数(无论是实数还是复数). 常数的对易应当为零.
@@ -261,7 +253,6 @@ $$
 &= \int \d^3\vec{p}  \frac{-E_p}{2(2\pi)^{3}} \left(a(\vec p)a(-\vec p)e^{2iE_pt}+a^\dagger(\vec p)a^\dagger(-\vec p)e^{-2iE_pt}-a^\dagger(\vec p)a(\vec p)-a(\vec p)a^\dagger(\vec p) \right)\\
 \end{align}
 $$
-
 其余两项同理可得
 
 因此得到哈密顿量
@@ -271,10 +262,9 @@ $$
 &=\frac12\int \d^3 \vec{p} E_p \left(a^\dagger(\vec p)a(\vec p)+a(\vec p)a^\dagger(\vec p)\right)\\
 \end{align}
 $$
-
 和谐振子的很像
 
-### 零点能与normal ordering
+### 零点能与Normal Ordering
 
 一个重大问题在于, 这样的哈密顿量零点能是无穷大. 因为空间每一点都是一个谐振子, 每一个谐振子都有不为零的零点能, 导致场的零点能是无穷大. 
 $$
@@ -302,10 +292,124 @@ $$
 :H: \equiv \int \d^3 \vec{p} E_p a^\dagger(\vec p)a(\vec p)
 $$
 
-
 ### 对称性分析
 
 ### 传播子
+
+下面式子有点问题, ==需要把$e^{px}$展开成$\vec{p}\vec{x}$和$Et$结合后面证明
+$$
+\begin{align}
+ [\phi(x),\phi(y)]
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}}
+\left[(a(p)e^{-ipx}+a^\dagger(p) e^{ipx}),(a(q)e^{-iqy}+a^\dagger(q) e^{iqy})\right]\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}}
+(a(p)e^{-ipx}+a^\dagger(p) e^{ipx})(a(q)e^{-iqy}+a^\dagger(q) e^{iqy}) \notag \\
+& \qquad -(a(q)e^{-iqy}+a^\dagger(q) e^{iqy})(a(p)e^{-ipx}+a^\dagger(p) e^{ipx})
+\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} \notag\\
+&\qquad \left([a(p),a(q)]e^{-iqy-ipx}+[a^\dagger(p),a(q)]e^{-iqy+ipx} +[a(p),a^\dagger(q) ]e^{iqy-ipx}+[a^\dagger(p), a^\dagger(q) ]e^{iqy+ipx}\right)\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}}  \left(-\delta{(q-p)}e^{-iqy+ipx} +\delta(p-q)e^{iqy-ipx}\right)\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{ 2E_p}\left(- e^{ip(x-y)} + e^{-ip(x-y)}\right)\notag\\
+
+\end{align}
+$$
+得到
+$$
+\begin{align}
+\bra{0} [\phi(x),\phi(y)] \ket{0}&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}(e^{-ip(x-y)}-e^{ip(x-y)}) \notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}e^{-ip(x-y)}- \int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p} e^{ip(x-y)}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}e^{-ip(x-y)}+ \int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_{\color{Red}-p}} e^{ip(x-y)}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}e^{-ip(x-y)}+ \int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{{\color{Red}-}2E_p} e^{ip(x-y)}
+\label{propengatordp}
+\\
+\end{align}
+$$
+
+> 逆着利用留数定理,
+> $$
+> \begin{align}
+> &\int_{-\infty}^{\infty} \frac{1}{p^2-m^2}e^{-ip(x-y)} \d p_0 \\
+> =&\int_{-\infty}^{\infty} \frac{1}{(p_0)^2-(\vec{p}^2+m^2)}e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}e^{ip_0(t_x-t_y)}  \d p_0 \\
+> =&e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\int_{-\infty}^{\infty} \frac{1}{(p_0)^2-{E_p}^2}e^{ip_0(t_x-t_y)}  \d p_0 \\
+> :=&e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\int_{-\infty}^{\infty} f(p_0)  \d p_0 
+> \end{align}
+> $$
+>
+> 注意到$f(p_0)$有两个一阶极点$\pm E_p$, 
+> $$
+> \begin{align}
+> f(p_0)&=\frac{e^{ip_0(t_x-t_y)}}{(p_0)^2-{E_p}^2}\\
+> &=\frac{-\frac{1}{2E_p}e^{ip_0(t_x-t_y)}}{p_0-E_p}+\frac{\frac{1}{2E_p}e^{ip_0(t_x-t_y)}}{p_0+E_p}
+> \end{align}
+> $$
+> 因此$f(p_0)$在一阶极点的留数有
+> $$
+> \begin{align}
+> \Res(f(E_p))&=-\frac{1}{2E_p}e^{iE_p(t_x-t_y)}\\
+> \Res(f(-E_p))&=\frac{1}{2E_p}e^{-iE_p(t_x-t_y)}
+> \end{align}
+> $$
+> 对$p_0$解析延拓到复平面, 选取积分路径$C$, 得到
+> $$
+> \begin{align*}
+> &\int_C \frac{1}{p^2-m^2}e^{-ip(x-y)} \d p_0 \\
+> =&e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\int_C f(p_0)  \d p_0\\
+> =&2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})} \Big(\Res(f(E_p))+\Res(f(-E_p)) \Big)\\
+> =&2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\left( -\frac{1}{2E_p}e^{iE_p(t_x-t_y)} + \frac{1}{2E_p}e^{-iE_p(t_x-t_y)}\right)\\
+> =&2i\pi\left(-\frac{1}{2E_p} e^{ip(x-y)}+\frac{1}{2E_p}  e^{-ip(x-y)}\right)\\
+> \end{align*}
+> $$
+>
+> 其中积分路径$C$必须包括极点, 也就是要求$(t_x-t_y)\gt 0$才有路径在下方闭合, 无穷远的环路积分为$0$.
+>
+> <img src="progengator-int.png" style="zoom:50%" />
+>
+> 得到
+> $$
+> \begin{align}
+> \bra{0} [\phi(x),\phi(y)] \ket{0}
+> &=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}e^{-ip(x-y)}+ \int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{-2E_p} e^{ip(x-y)}\notag\\
+> &=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \left(\frac{1}{2E_p}e^{-ip(x-y)}+\frac{1}{-2E_p} e^{ip(x-y)}\right)\notag\\
+> &=\frac{1}{2i\pi}\int \frac{-1}{p^2-m^2}e^{-ip(x-y)} \d p_0 \\
+> \end{align}
+> $$
+> 
+
+因此可以将式$(\ref{propengatordp})$ 写作
+$$
+\begin{align}
+\bra{0} [\phi(x),\phi(y)] \ket{0}
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \int_C \frac{ \d p_0}{2\pi i} \frac{-1}{p^2-m^2}e^{-ip(x-y)}\notag\\
+&=\int_C \frac{\d^4 p}{(2\pi)^4} \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
+\end{align}
+$$
+
+如果采用不同的积分路径$C^\prime$, 
+
+<img src="feynman-pro.png" style="zoom:50%" />
+
+则根据$t_x-t_y$的符号, 积分路径分别取上半平面和下半平面, 为了表示方便, 引入如下记号
+$$
+\begin{align}
+D_F(x-y)&\equiv\int_{C^\prime} \frac{\d^4 p}{(2\pi)^4} \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
+&\equiv\int\frac{\d^4 p}{2\pi)^4} \frac{i}{p^2-m^2+i\varepsilon}e^{-ip(x-y)}\\
+\end{align}
+$$
+得到
+$$
+\begin{align}
+D_F(x-y)&=\begin{cases}D(x-y),\quad t_x\gt t_y\\D(y-x) ,\quad t_x\lt t_y \end{cases}\\
+&=\theta(t_x- t_y)\bra{0}\phi(x)\phi(y)\ket{0}+\theta(t_y-t_x)\bra{0}\phi(y)\phi(x)\ket{0}\\
+&\equiv \bra{0}T\phi(x)\phi(y)\ket{0}
+\end{align}
+$$
+
+
+
+其中$T$是编时算符
+
+
+
 
 ## Dirac方程
 
@@ -323,7 +427,6 @@ $$
 H^2=p^2+m^2\\
 \rightarrow H=\gamma^0(\vec{\gamma}\cdot\vec{p}+m)
 $$
-
 可以看作是对哈密顿量的开方操作
 
 #### $\gamma$矩阵的性质
@@ -331,16 +434,13 @@ $$
 ...
 
 ### 运动方程
-
 $$
 i\hbar \frac{\partial}{\partial t}\psi(x)=\gamma^0(-i\vec{\gamma}\cdot \vec{\nabla}+m)\psi(x)
 $$
-
 可以写为
 $$
 (i\gamma^\mu \partial_\mu-m)\psi(x)=0
 $$
-
 ### 方程的解
 
 对于平面波$\psi(x)=u(\vec p)e^{-ipx}$, $\psi(x)=v(\vec p)e^{ipx}$ 分别为方程的正频解和负频解
@@ -358,7 +458,6 @@ $$
 $$
 \mathcal{L}=\bar{\psi}(i\not\partial -m)\psi
 $$
-
 #### Dirac场的量子化
 
 狄拉克方程有两个解. 类似地可以写成
