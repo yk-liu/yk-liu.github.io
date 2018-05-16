@@ -9,7 +9,9 @@ $$
 \newcommand{\slash}[1]{\not{#1}}
 \newcommand{\bra }[1]{ \left\langle {#1} \right\vert }
 \newcommand{\ket }[1]{ \left\vert {#1} \right\rangle }
-\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Res}[1]{\operatorname{Res} \left( {#1} \right)}
+\newcommand{\imag}[1]{\operatorname{Im} \left( {#1} \right)}
+\underparen{\overparen{abcd}efef}
 
 \begin{align}
 p=p^\mu&=(E/c,\vec{p})\\
@@ -42,7 +44,7 @@ $$
 $$
 -\frac{\partial}{\partial {x}^\mu} \frac{\partial}{\partial {x}_\mu}=m^2
 $$
-带入薛定谔方程
+带入定态薛定谔方程
 $$
 H \phi = E \phi
 $$
@@ -66,7 +68,7 @@ $$
 $$
 的傅里叶变换是4维的
 $$
-\phi(x)=\int \d^4p \operatorname{A}(p)e^{ipx}\delta(p_\mu p^\mu-m^2)+\int \d^4p \operatorname{B}(p)e^{-ipx}\delta(p_\mu p^\mu-m^2)
+\phi(x)=\int \d^4p \operatorname{A}(\vec{p})e^{ipx}\delta(p_\mu p^\mu-m^2)+\int \d^4p \operatorname{B}(\vec{p})e^{-ipx}\delta(p_\mu p^\mu-m^2)
 $$
 > 由$\delta$函数的性质,
 > $$
@@ -86,12 +88,12 @@ $$
 带入傅里叶变换继续计算
 $$
 \begin{align*}
-\int \d^4p \operatorname{A}(p)e^{ipx}\delta(p_\mu p^\mu-m^2)
-&=\int \d^4p \operatorname{A}(p)e^{ipx}\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E_p)+\delta(p^0+E_p) \right)\\
+\int \d^4p \operatorname{A}(\vec{p})e^{ipx}\delta(p_\mu p^\mu-m^2)
+&=\int \d^4p \operatorname{A}(\vec{p})e^{ipx}\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E_p)+\delta(p^0+E_p) \right)\\
 &=\int dp^0\int \d^3 {\vec{p} \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E_p)+\delta(p^0+E_p) \right)}\\
 \end{align*}
 $$
-注意到两个 $delta$ 函数只有一个成立, 因此取$p^0\gt 0$的一个
+注意到两个 $\delta$ 函数只有一个成立, 因此取$p^0\gt 0$的一个
 
 > 之前解方程曾有要求
 >
@@ -124,8 +126,8 @@ $$
 得到
 $$
 \begin{align}
-a(\vec{p})&=b^\dagger(p)\\
-b(\vec{p})&=a^\dagger(p)
+a(\vec{p})&=b^\dagger(\vec{p})\\
+b(\vec{p})&=a^\dagger(\vec{p})
 \end{align}
 $$
 因此实标量场的解为
@@ -161,8 +163,8 @@ $$
 又有傅里叶变换
 $$
 \begin{cases}
-\phi(x)=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}} \tilde{\phi}(p) e^{ipx}\\\
-\tilde{\phi}(p)  =\int \frac{\d^3\vec{x}}{(2\pi)^{\frac32}\sqrt{2E_p}} \phi(x) e^{-ipx}\\
+\phi(x)=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}} \tilde{\phi}(\vec{p}) e^{ipx}\\\
+\tilde{\phi}(\vec{p})  =\int \frac{\d^3\vec{x}}{(2\pi)^{\frac32}\sqrt{2E_p}} \phi(x) e^{-ipx}\\
 \end{cases}
 $$
 > ==这里是三重积分, 四重积分可以转化为三重, 如何证明 文献忘记是哪一个了==
@@ -186,15 +188,15 @@ $$
 得到
 $$
 \begin{align}
-a(p)&=\frac12\left(\sqrt{2{E}_p}\tilde{\phi}(p)+i\sqrt{\frac{2}{E_p}}\tilde{\pi}(p)\right)\\
-a^\dagger(p)&=\frac12\left(\sqrt{2{E}_p}\tilde{\phi}(-p)-i\sqrt{\frac{2}{E_p}}\tilde{\pi}(-p)\right)
+a(\vec{p})&=\frac12\left(\sqrt{2{E}_p}\tilde{\phi}(\vec{p})+i\sqrt{\frac{2}{E_p}}\tilde{\pi}(\vec{p})\right)\\
+a^\dagger(\vec{p})&=\frac12\left(\sqrt{2{E}_p}\tilde{\phi}(-\vec{p})-i\sqrt{\frac{2}{E_p}}\tilde{\pi}(-\vec{p})\right)
 \end{align}
 $$
 又有
 $$
 \begin{align*}
-\tilde\phi(-p)&=\tilde\phi^\dagger(p)\\
-\tilde\pi(-p)&=\tilde\pi^\dagger(p)
+\tilde\phi(-\vec{p})&=\tilde\phi^\dagger(\vec{p})\\
+\tilde\pi(-\vec{p})&=\tilde\pi^\dagger(\vec{p})
 \end{align*}
 $$
 #### 二次量子化
@@ -237,7 +239,7 @@ $$
 $$
 分别计算三项
 $$
-\begin{align}
+\begin{align*}
 \int \d^3 \vec{x} {(\pi(x))}^2 
 &=\int \d^3\vec{x} \left( \int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}}i\sqrt{\frac{E_p}{2}} \left( -a(\vec{p})e^{ipx} +  a^\dagger(\vec{p}) e^{-ipx}\right)\right)
 \\& \qquad \cdot \left(\int \frac{\d^3\vec{q}}{(2\pi)^{\frac32}}  i\sqrt{\frac{E_q}{2}} \left( -a(\vec{q})e^{iqx} +  a^\dagger(\vec{q}) e^{-iqx}\right) \right)\\
@@ -245,13 +247,13 @@ $$
 \\& \qquad \cdot \left( -a(\vec{q})e^{iqx} +  a^\dagger(\vec{q}) e^{-iqx}\right)  \\
 &=\int \d^3 \vec{x}  \int \d^3\vec{p} \int  \d^3\vec{q} \frac{-1}{2(2\pi)^{3}} \sqrt{E_pE_q}\\
 & \qquad \left(a(\vec p)a(\vec q)e^{i(p+q)x}+a^\dagger(\vec p)a^\dagger(\vec q)e^{-i(p+q)x}-a^\dagger(\vec p)a(\vec q)e^{i(q-p)x}-a(\vec p)a^\dagger(\vec q)e^{i(p-q)x}\right)\\
-&= \int \d^3\vec{p} \int  \d^3\vec{q} \frac{-1}{2(2\pi)^{3}} \sqrt{E_pE_q}\\
-& \qquad \int \d^3 \vec{x} \left(a(\vec p)a(\vec q)e^{i(p+q)x}+a^\dagger(\vec p)a^\dagger(\vec q)e^{-i(p+q)x}-a^\dagger(\vec p)a(\vec q)e^{i(q-p)x}-a(\vec p)a^\dagger(\vec q)e^{i(p-q)x}\right)\\
+&= \int \d^3\vec{p} \int  \d^3\vec{q} \frac{-1}{2(2\pi)^{3}} \sqrt{E_pE_q}\int \d^3 \vec{x} \\
+& \qquad \left(a(\vec p)a(\vec q)e^{i(p+q)x}+a^\dagger(\vec p)a^\dagger(\vec q)e^{-i(p+q)x}-a^\dagger(\vec p)a(\vec q)e^{i(q-p)x}-a(\vec p)a^\dagger(\vec q)e^{i(p-q)x}\right)\\
 &= \int \d^3\vec{p} \int  \d^3\vec{q} \frac{- \sqrt{E_pE_q}}{2(2\pi)^{3}}
 \left(a(\vec p)a(\vec q)e^{i(E_p+E_q)t}+a^\dagger(\vec p)a^\dagger(\vec q) e^{-i(E_p+E_q)t}\right)\delta(\vec p+\vec q)\\
 &\qquad - \int \d^3\vec{p} \int  \d^3\vec{q} \frac{- \sqrt{E_pE_q}}{2(2\pi)^{3}}\left(a^\dagger(\vec p)a(\vec q)e^{i(E_p-E_q)t}+a(\vec p)a^\dagger(\vec q)e^{-i(E_p-E_q)t}\right)\delta(\vec p-\vec q)\\
 &= \int \d^3\vec{p}  \frac{-E_p}{2(2\pi)^{3}} \left(a(\vec p)a(-\vec p)e^{2iE_pt}+a^\dagger(\vec p)a^\dagger(-\vec p)e^{-2iE_pt}-a^\dagger(\vec p)a(\vec p)-a(\vec p)a^\dagger(\vec p) \right)\\
-\end{align}
+\end{align*}
 $$
 其余两项同理可得
 
@@ -296,120 +298,131 @@ $$
 
 ### 传播子
 
-下面式子有点问题, ==需要把$e^{px}$展开成$\vec{p}\vec{x}$和$Et$结合后面证明
-$$
-\begin{align}
- [\phi(x),\phi(y)]
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}}
-\left[(a(p)e^{-ipx}+a^\dagger(p) e^{ipx}),(a(q)e^{-iqy}+a^\dagger(q) e^{iqy})\right]\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}}
-(a(p)e^{-ipx}+a^\dagger(p) e^{ipx})(a(q)e^{-iqy}+a^\dagger(q) e^{iqy}) \notag \\
-& \qquad -(a(q)e^{-iqy}+a^\dagger(q) e^{iqy})(a(p)e^{-ipx}+a^\dagger(p) e^{ipx})
-\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} \notag\\
-&\qquad \left([a(p),a(q)]e^{-iqy-ipx}+[a^\dagger(p),a(q)]e^{-iqy+ipx} +[a(p),a^\dagger(q) ]e^{iqy-ipx}+[a^\dagger(p), a^\dagger(q) ]e^{iqy+ipx}\right)\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}}  \left(-\delta{(q-p)}e^{-iqy+ipx} +\delta(p-q)e^{iqy-ipx}\right)\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{ 2E_p}\left(- e^{ip(x-y)} + e^{-ip(x-y)}\right)\notag\\
+#### 传播子与格林函数
 
-\end{align}
+计算在$y$处粒子传播到$x$处的概率幅$\left\langle y| x\right\rangle$有:
 $$
-得到
+\begin{align*}
+ \bra{0}\phi(x)\phi(y)\ket{0}
+&=\bra{0}\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}}(a(\vec{p})e^{-ipx}+a^\dagger(\vec{p}) e^{ipx})(a(\vec{q})e^{-iqy}+a^\dagger(\vec{q}) e^{iqy}) \ket{0}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} \bra{0}(a(\vec{p})e^{-ipx}+a^\dagger(\vec{p}) e^{ipx})(a(\vec{q})e^{-iqy}+a^\dagger(\vec{q}) e^{iqy})\ket{0} \\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} \\
+& \qquad\bra{0}\left(a(\vec{p})a(\vec{q})e^{-iqy-ipx}+a^\dagger(\vec{p})a(\vec{q})e^{-iqy+ipx} +a(\vec{p})a^\dagger(\vec{q})e^{iqy-ipx}+a^\dagger(\vec{p})a^\dagger(\vec{q}) e^{iqy+ipx}\right)\ket{0}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} 
+\bra{0}a(\vec{p})a^\dagger(\vec{q})e^{iqy-ipx}\ket{0}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} 
+\left\langle{\vec p}\vert{\vec q}\right\rangle e^{iqy-ipx}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} 
+\delta(\vec p -\vec q) e^{iqy-ipx}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-ip(x-y)}\notag\\
+\end{align*}
 $$
-\begin{align}
-\bra{0} [\phi(x),\phi(y)] \ket{0}&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}(e^{-ip(x-y)}-e^{ip(x-y)}) \notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}e^{-ip(x-y)}- \int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p} e^{ip(x-y)}\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}e^{-ip(x-y)}+ \int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_{\color{Red}-p}} e^{ip(x-y)}\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}e^{-ip(x-y)}+ \int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{{\color{Red}-}2E_p} e^{ip(x-y)}
-\label{propengatordp}
-\\
-\end{align}
-$$
+得到的结论是有问题的, 即使$x$$y$是类空的, 得到的概率幅也不为零.
 
-> 逆着利用留数定理,
+> 注意到
 > $$
 > \begin{align}
-> &\int_{-\infty}^{\infty} \frac{1}{p^2-m^2}e^{-ip(x-y)} \d p_0 \\
-> =&\int_{-\infty}^{\infty} \frac{1}{(p_0)^2-(\vec{p}^2+m^2)}e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}e^{ip_0(t_x-t_y)}  \d p_0 \\
-> =&e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\int_{-\infty}^{\infty} \frac{1}{(p_0)^2-{E_p}^2}e^{ip_0(t_x-t_y)}  \d p_0 \\
-> :=&e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\int_{-\infty}^{\infty} f(p_0)  \d p_0 
+> \bra{0} [\phi(x),\phi(y)] \ket{0}&=\bra{0} \phi(x)\phi(y)\ket{0}-\bra{0} \phi(y)\phi(x) \ket{0}
 > \end{align}
 > $$
->
-> 注意到$f(p_0)$有两个一阶极点$\pm E_p$, 
+> 因此对于类空间隔, RHS 两项相消, 给出概率幅为$0$. 
+
+#### Feynman 传播子
+
+Feynman传播子的定义为
+$$
+D_F(x-y)\equiv \bra{0}T\phi(x)\phi(y)\ket{0}\\
+T\phi(x)\phi(y)\equiv \begin{cases}D(x-y),\quad t_x\gt t_y\\D(y-x) ,\quad t_x\lt t_y \end{cases}\\
+$$
+利用编时算符, 得到的编时乘积就不再违反相对论.
+
+可以利用$\Theta$函数将Feynman传播子写作
+$$
+\begin{align*}
+D_F(x-y)&=\Theta(t_x-t_y)\bra{0} \phi(x)\phi(y)\ket{0}-\Theta(t_y-t_x)\bra{0} \phi(y)\phi(x) \ket{0}\\
+&=\Theta(t_x-t_y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-ip(x-y)}+\Theta(t_y-t_x)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{ip(x-y)}\\
+&=\Theta(t_x-t_y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-iE_p(t_x-t_y)+i\vec{p}\cdot(\vec{x}-\vec{y})}+\Theta(t_y-t_x)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{iE_p(t_x-t_y)-i\vec{p}\cdot(\vec{x}-\vec{y})}\\
+\phantom{}\xrightarrow{q=(E_p,-\vec{p})} &=\Theta(t_x-t_y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-iE_p(t_x-t_y)+i\vec{p}\cdot(\vec{x}-\vec{y})}+\Theta(t_y-t_x)\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{2E_q} e^{iE_q(t_x-t_y)+i\vec{q}\cdot(\vec{x}-\vec{y})}\\
+\phantom{}\xrightarrow{p=q}&=\Theta(t_x-t_y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-iE_p(t_x-t_y)+i\vec{p}\cdot(\vec{x}-\vec{y})}+\Theta(t_y-t_x)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{iE_p(t_x-t_y)+i\vec{p}\cdot(\vec{x}-\vec{y})}\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \left(\Theta(t_x-t_y)\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}+\Theta(t_y-t_x)\frac{1}{2E_p} e^{iE_p(t_x-t_y)}\right)\\
+\end{align*}
+$$
+
+利用留数定理可以将这两项表示为一个积分, 即构造一个积分具有两个一阶极点, 在这两个一阶极点的积分值分别是上式中的$\frac{1}{2E_p} e^{iE_p(t_x-t_y)}$和$\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}$.
+
+> 逆着利用留数定理, 构造$f(p_0)$, 有两个一阶极点$\pm E_p$, 
 > $$
-> \begin{align}
-> f(p_0)&=\frac{e^{ip_0(t_x-t_y)}}{(p_0)^2-{E_p}^2}\\
-> &=\frac{-\frac{1}{2E_p}e^{ip_0(t_x-t_y)}}{p_0-E_p}+\frac{\frac{1}{2E_p}e^{ip_0(t_x-t_y)}}{p_0+E_p}
-> \end{align}
+> \begin{align*}
+> f(p_0)&= \frac{1}{p^2-m^2}e^{-ip(x-y)}  \\
+> &=\frac{1}{(p_0)^2-({\vec{p}}^2+m^2)}e^{-ip_0(t_x-t_y)}e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \\
+> &=\frac{e^{-ip_0(t_x-t_y)}}{(p_0)^2-{E_p}^2}e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \\
+> &=e^{i\vec{p}\cdot(\vec{x}-\vec{y})}\left(\frac{-\frac{1}{2E_p}e^{-ip_0(t_x-t_y)}}{p_0-E_p}+\frac{\frac{1}{2E_p}e^{-ip_0(t_x-t_y)}}{p_0+E_p}\right)
+> \end{align*}
 > $$
 > 因此$f(p_0)$在一阶极点的留数有
 > $$
 > \begin{align}
-> \Res(f(E_p))&=-\frac{1}{2E_p}e^{iE_p(t_x-t_y)}\\
-> \Res(f(-E_p))&=\frac{1}{2E_p}e^{-iE_p(t_x-t_y)}
+> \Res{f(E_p)}&=\frac{1}{2E_p}e^{-iE_p(t_x-t_y)}\\
+> \Res{f(-E_p)}&=-\frac{1}{2E_p}e^{iE_p(t_x-t_y)}
 > \end{align}
 > $$
-> 对$p_0$解析延拓到复平面, 选取积分路径$C$, 得到
+> 对$p_0$解析延拓到复平面, 根据$(t_x-t_y)$的符号, 选取积分路径$C_\pm$, 得到
+>
+> <img src="C:/Users/water/Documents/GitHub/yk-liu.github.io/posts/_source/3-Introduction-to-QFT/feynman-pro.png" style="zoom:50%" />
 > $$
 > \begin{align*}
-> &\int_C \frac{1}{p^2-m^2}e^{-ip(x-y)} \d p_0 \\
-> =&e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\int_C f(p_0)  \d p_0\\
-> =&2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})} \Big(\Res(f(E_p))+\Res(f(-E_p)) \Big)\\
-> =&2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\left( -\frac{1}{2E_p}e^{iE_p(t_x-t_y)} + \frac{1}{2E_p}e^{-iE_p(t_x-t_y)}\right)\\
-> =&2i\pi\left(-\frac{1}{2E_p} e^{ip(x-y)}+\frac{1}{2E_p}  e^{-ip(x-y)}\right)\\
+> &\quad \oint_{C_\pm}  f(p_0)  \d p_0 \\
+> &=e^{i\vec{p}\cdot(\vec{x}-\vec{y})}\oint_{C_\pm} \d p_0 \left(\frac{-\frac{1}{2E_p}e^{-ip_0(t_x-t_y)}}{p_0-E_p}+\frac{\frac{1}{2E_p}e^{-ip_0(t_x-t_y)}}{p_0+E_p}\right) \\
+> &= e^{-i\vec{p}\cdot(\vec{x}-\vec{y})} 2\pi i \begin{cases} -\Res{f(E_p)}&\quad t_x-t_y \gt 0, &  C_{+,{\color{Red}\circlearrowright }}: \imag{p_0} \lt 0\\  \Res{f(-E_p)} &\quad  t_x-t_y \lt 0, &  C_{-,{\color{Red} \circlearrowleft} } :  \imag{p_0} \gt 0\end{cases} \\
+> &=2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\begin{cases}- \frac{1}{2E_p}e^{iE_p(t_x-t_y)}&\quad t_x-t_y \gt 0 \\  - \frac{1}{2E_p}e^{-iE_p(t_x-t_y)}&\quad  t_x-t_y \lt 0\end{cases} \\
+> &= 2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}(-1)\begin{cases}\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}, & C_+\\ \frac{1}{2E_p} e^{iE_p(t_x-t_y)}, & C_-\end{cases}
 > \end{align*}
 > $$
 >
-> 其中积分路径$C$必须包括极点, 也就是要求$(t_x-t_y)\gt 0$才有路径在下方闭合, 无穷远的环路积分为$0$.
->
-> <img src="progengator-int.png" style="zoom:50%" />
->
-> 得到
+> 因此利用$\Theta(x-y)+\Theta(y-x)=\begin{cases} 1+0 x\gt y \\ \frac12+ \frac12  x=y \\ 0+1 x\lt y \end{cases}\quad\equiv1$得到化简的形式, 
 > $$
 > \begin{align}
-> \bra{0} [\phi(x),\phi(y)] \ket{0}
-> &=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{2E_p}e^{-ip(x-y)}+ \int \frac{\d^3 \vec{p}}{(2\pi)^3} \frac{1}{-2E_p} e^{ip(x-y)}\notag\\
-> &=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \left(\frac{1}{2E_p}e^{-ip(x-y)}+\frac{1}{-2E_p} e^{ip(x-y)}\right)\notag\\
-> &=\frac{1}{2i\pi}\int \frac{-1}{p^2-m^2}e^{-ip(x-y)} \d p_0 \\
-> \end{align}
+> &\phantom{=} \Theta(t_x-t_y)\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}+\Theta(t_y-t_x)\frac{1}{2E_p} e^{iE_p(t_x-t_y)}\notag\\
+> &=\Theta(t_x-t_y)\frac{1}{-2\pi i} \oint_{C_+}  f(p_0)  \d p_0 +\Theta(t_y-t_x) \frac{1}{-2\pi i}\oint_{C_-}  f(p_0)  \d p_0 \notag\\
+> &=\frac{1}{-2\pi i}\left(\Theta(t_x-t_y)\oint_{C_0+C_{l}}  f(p_0)  \d p_0+\Theta(t_y-t_x)\oint_{C_0+C_{u}}  f(p_0)  \d p_0\right) \notag\\
+> &=\frac{1}{-2\pi i}\left(\Theta(t_x-t_y)+\Theta(t_y-t_x)\right)\oint_{C_0}  f(p_0)  \d p_0 +\frac{1}{-2\pi i}\Theta(t_x-t_y)\oint_{C_{l}}  f(p_0)  \d p_0\notag \\
+> &\qquad +\frac{1}{-2\pi i}\Theta(t_y-t_x)\oint_{C_{u}}  f(p_0)  \d p_0 \notag\\
+> \xrightarrow[\oint_{C_{l,u}}  f(p_0)  \d p_0\rightarrow 0]{R\rightarrow\infty, }&=\frac{1}{-2\pi i}\oint_{C_0}  f(p_0)  \d p_0
+>  \label{residualFeynman}
+>  \end{align}
 > $$
-> 
+>
 
-因此可以将式$(\ref{propengatordp})$ 写作
+利用式$(\ref{residualFeynman})$ 得到
 $$
 \begin{align}
-\bra{0} [\phi(x),\phi(y)] \ket{0}
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^3} \int_C \frac{ \d p_0}{2\pi i} \frac{-1}{p^2-m^2}e^{-ip(x-y)}\notag\\
-&=\int_C \frac{\d^4 p}{(2\pi)^4} \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
+D_F(x-y)
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \left(\Theta(t_x-t_y)\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}+\Theta(t_y-t_x)\frac{1}{2E_p} e^{iE_p(t_x-t_y)}\right)\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32}\frac{1}{-2\pi i} \oint_{C_0} \d p_0\frac{1}{p^2-m^2}e^{-ip(x-y)}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32}\frac{1}{2\pi } \oint_{C_0} \d p_0\frac{i}{p^2-m^2}e^{-ip(x-y)}\notag\\
+&=\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi } \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
+\end{align}
+$$
+为了表示方便, 引入如下记号
+$$
+\begin{align}
+D_F(x-y)&\equiv\lim_{\varepsilon\rightarrow0}{\int\frac{\d^4 p}{2\pi)^4} \frac{i}{p^2-m^2+i\varepsilon}e^{-ip(x-y)}}\\
 \end{align}
 $$
 
-如果采用不同的积分路径$C^\prime$, 
+#### 格林函数
 
-<img src="feynman-pro.png" style="zoom:50%" />
-
-则根据$t_x-t_y$的符号, 积分路径分别取上半平面和下半平面, 为了表示方便, 引入如下记号
+带入K-G方程, 可以看出, Feynman传播子就是K-G方程的格林函数
 $$
-\begin{align}
-D_F(x-y)&\equiv\int_{C^\prime} \frac{\d^4 p}{(2\pi)^4} \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
-&\equiv\int\frac{\d^4 p}{2\pi)^4} \frac{i}{p^2-m^2+i\varepsilon}e^{-ip(x-y)}\\
-\end{align}
+\begin{align*}
+&\phantom{=}\left(\partial_\mu\partial^\mu+m^2\right)D_F(x-y)\\
+&=\left(\partial_\mu\partial^\mu+m^2\right)\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi } \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
+&=\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi }\frac{i}{p^2-m^2} \left(\partial_\mu\partial^\mu+m^2\right)e^{-ip(x-y)}\\
+&=\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi }\frac{i}{p^2-m^2}  \left(-p^2+m^2\right)e^{-ip(x-y)}\\
+&=\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{-i}{2\pi }e^{-ip(x-y)}\\
+&=\frac{-i}{2\pi }\delta(x-y)
+\end{align*}
 $$
-得到
-$$
-\begin{align}
-D_F(x-y)&=\begin{cases}D(x-y),\quad t_x\gt t_y\\D(y-x) ,\quad t_x\lt t_y \end{cases}\\
-&=\theta(t_x- t_y)\bra{0}\phi(x)\phi(y)\ket{0}+\theta(t_y-t_x)\bra{0}\phi(y)\phi(x)\ket{0}\\
-&\equiv \bra{0}T\phi(x)\phi(y)\ket{0}
-\end{align}
-$$
-
-
-
-其中$T$是编时算符
-
-
-
 
 ## Dirac方程
 
@@ -475,6 +488,8 @@ $$
 ### 传播子
 
 ## S矩阵
+
+
 
 ## Wick定理与费曼图
 
