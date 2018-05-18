@@ -12,7 +12,7 @@ $$
 \newcommand{\Res}[1]{\operatorname{Res} \left( {#1} \right)}
 \newcommand{\imag}[1]{\operatorname{Im} \left( {#1} \right)}
 \underparen{\overparen{abcd}efef}
-
+\\
 \begin{align}
 p=p^\mu&=(E/c,\vec{p})\\
 x^\mu&=(ct,\vec{x})\\
@@ -379,7 +379,7 @@ $$
 > \end{align*}
 > $$
 >
-> 因此利用$\Theta(x-y)+\Theta(y-x)=\begin{cases} 1+0 x\gt y \\ \frac12+ \frac12  x=y \\ 0+1 x\lt y \end{cases}\quad\equiv1$得到化简的形式, 
+> 因此利用$\Theta(x-y)+\Theta(y-x)=\begin{cases} 1+0 & x\gt y \\ \frac12+ \frac12 & x=y \\ 0+1 & x\lt y \end{cases}\quad\equiv1$得到化简的形式, 
 > $$
 > \begin{align}
 > &\phantom{=} \Theta(t_x-t_y)\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}+\Theta(t_y-t_x)\frac{1}{2E_p} e^{iE_p(t_x-t_y)}\notag\\
@@ -444,6 +444,10 @@ $$
 
 #### $\gamma$矩阵的性质
 
+$\gamma$矩阵的上下标的来源, 其实是因为他们是矢量. 把它们当作标量, 才导致旋量这一变换十分复杂的量. 详见[^gamma as vector]
+
+下面推导按$\gamma$矩阵是常数矩阵.
+
 ...
 
 ### 运动方程
@@ -487,15 +491,257 @@ $$
 
 ### 传播子
 
-## S矩阵
+$$
+\newcommand{\d}{\mathrm{d}}
+\newcommand{\slash}[1]{\not{#1}}
+\newcommand{\bra }[1]{ \left\langle {#1} \right\vert }
+\newcommand{\ket }[1]{ \left\vert {#1} \right\rangle }
+\newcommand{\Res}[1]{\operatorname{Res} \left( {#1} \right)}
+\newcommand{\imag}[1]{\operatorname{Im} \left( {#1} \right)}
+\newcommand{\D}[1]{ \frac{\d}{\d {#1}}}
+\newcommand{\Partial}[1]{ \frac{\partial}{\partial {#1}}}
+\newcommand{\Eqn}[1]{\text{Eqn. }\ref{#1} }
+\newcommand{\idmat}{\mathbb{I}} 
+\newcommand{\Torder}[1]{T \left\lbrace{#1}\right\rbrace }
+\newcommand{\expp}[1]{\exp{ \left({#1}\right)}}
+
+
+\underparen{\overparen{abcd}efef}
+\\
+
+\begin{align}
+p=p^\mu&=(E/c,\vec{p})\\
+x^\mu&=(ct,\vec{x})\\
+g_{\mu\nu}&=(+,-,-,-)\\
+p=p^\mu&=(E/c,-\vec{p})\\
+E_{\pm p}&=\pm\sqrt{\vec{p}^2+m^2}, \quad E_{-p}=-E_p
+\end{align}
+$$
 
 
 
-## Wick定理与费曼图
+## 相互作用
 
-## 散射截面的计算
+### 相互作用的形式[^langrangian1]
+
+相互作用的哈密顿量的一般形式是
+$$
+\mathcal{L}=\frac 12 (\partial \phi)^2-V_0(\phi)
+$$
+之前研究的都是自由粒子, 势场满足
+$$
+V_0(\phi)=\frac12 {m_0}^2\phi^2
+$$
+这样的势场是有解析解的. 不同的动量(振动模式)之间没有耦合.
+
+为了表示相互作用, 仿照固体物理中的做法, 引入高阶项(非谐效应), 会产生不同模式之间的耦合, 也就是粒子的相互作用.
+
+> 引用[^langrangian1], "where the *potential* V is a polynomial in $\phi$, e.g. $V(\phi)=\phi^4$. This contains no picture of "how" the field interacts, just as the $\frac 12 m^2 \phi^2$ term contains no explanation of "how" this is the mass. "
+
+因此势场可以表示成
+$$
+V(\phi) =\underbrace{\frac 12 {m_0}^2\phi^2}_{V_0}+\underbrace{\frac{1}{3!}g\phi^3+\frac{1}{4!}\lambda\phi^4+\cdots }_{V_{interaction}}
+$$
+高阶项[^first book]的系数量纲为质量的倒数, 会有问题, 目前不考虑.
+
+得到描述相互作用的拉格朗日量
+$$
+\mathcal{L}=\mathcal{L}_0+\mathcal{L}_{int}\\
+\mathcal{L}_{int}=-V_{int}
+$$
+此时K-G方程的解
+$$
+(\partial^2+m^2)\phi =V_{int}\neq 0
+$$
+因此$\phi\ket{\Omega}$与$\phi\ket{0}$不同, 不再是产生一个新的粒子. 从这一角度也可以说明为何要用$\ket{\Omega}$ 标记基态.
+
+### 相互作用哈密顿量
+
+引入相互作用绘景
+$$
+H_I=\underbrace{\underbrace{H_0}_\text{Hisenburg Picture}+\underbrace{H_{int}}_\text{Schrodinger  Picture}}_\text{Interaction Picture}
+$$
+即
+$$
+\begin{align}
+\ket{\psi}_I&=e^{iH_0t}\ket{\psi}_S   && \text{S for Schrodinger}\\
+\hat{O}_I&=e^{iH_0t}\hat{O}_H e^{-iH_0t}  &&\text{H for Hisenburg}\\
+\end{align}
+$$
+因此薛定谔方程
+$$
+i \D{t}\ket{\psi(t)}_S=H\ket{\psi(t)}_S
+$$
+可以化简得到
+$$
+\begin{align}
+i \D{t}\left( e^{-iH_0t}\ket{\psi(t)}_I\right)&=\left(H_0+H_{int}\right)e^{-iH_0t}\ket{\psi(t)}_I\notag\\
+H_0 e^{-iH_0t}\ket{\psi(t)}_I+e^{-iH_0t}\D{t} \ket{\psi(t)}_I&=H_0 e^{-iH_0t}\ket{\psi(t)}_I+H_{int} e^{-iH_0t}\ket{\psi(t)}_I\notag\\
+e^{-iH_0t}\D{t} \ket{\psi(t)}_I&=H_{int} e^{-iH_0t}\ket{\psi(t)}_I\notag\\
+\D{t} \ket{\psi(t)}_I&=e^{iH_0t}H_{int} e^{-iH_0t}\ket{\psi(t)}_I\notag\\
+\D{t} \ket{\psi(t)}_I&={(H_{int})}_I(t)\ket{\psi(t)}_I
+\label{simplifedSchrodingerEqn}
+\\
+\end{align}
+$$
+引入含时演化算符$U(t,t_0)$
+$$
+\ket{\psi(t)}_I=U(t,t_0)\ket{\psi(t_0)}_I
+\label{defU}
+$$
+带入$\Eqn{simplifedSchrodingerEqn}$得到
+$$
+i\D{t}U(t,t_0)=H_I(t)U(t,t_0) 
+\label{diffEqnforU}
+$$
+有边界条件的微分方程式$\Eqn{diffEqnforU}$可以表达为
+$$
+U(t,t_0)=U(t_0,t_0)-i\int_{t_0}^{t}H_I(\tau_1)U(\tau_1,t_0)\d \tau_1
+\label{intEqnforU}
+$$
+写出$\Eqn{intEqnforU}$的迭代形式, 初始值选取为$U(t_0,t_0)=\idmat$
+$$
+\begin{align*}
+U^{(1)}(t,t_0)&=\idmat-i\int_{t_0}^{t}H_I(\tau_1)\underbrace{U^{(0)}(\tau_1,t_0)}_{=\idmat}\d \tau_1\\
+U^{(2)}(t,t_0)&=\idmat-i\int_{t_0}^{t}H_I(\tau_2)U^{(1)}(\tau_2,t_0)\d \tau_2\\
+&= \idmat-i\int_{t_0}^{t}H_I(\tau_2) \left(\idmat -i\int_{t_0}^{\tau_2}H_I(\tau_1)\underbrace{U^{(0)}(\tau_1,t_0)}_{=\idmat}\d \tau_1\right) \d\tau_2\\
+&=\idmat + (-i)\int_{t_0}^{t}H_I(\tau_2)\d \tau_2 + (-i)^2 \int_{t_0}^{t} \d \tau_2 \int_{t_0}^{\tau_2} \d \tau_1 H_I(\tau_2) H_I(\tau_1)\\
+&=\idmat + (-i)\int_{t_0}^{t}H_I(\tau_1)\d \tau_1 + (-i)^2 \int_{t_0}^{t} \d \tau_1 \int_{t_0}^{\tau_1} \d \tau_2 H_I(\tau_1) H_I(\tau_2) \qquad \rm{interchange\ \tau_1\ and\ \tau_2}\\
+& \phantom{=}\vdots \\
+U^{(\infty)}(t,t_0)&=\idmat+\sum_{n=1}^{\infty}\left((-i)^n\int_{t_0}^{t} \d \tau_1\int_{t_0}^{\tau_1} \d \tau_2 \cdots  \int_{t_0}^{\tau_n} \d \tau_n H_I(\tau_1) H_I(\tau_2) \cdots H_I(\tau_n)\right)\\
+\end{align*}
+$$
+注意到, 由定义, 不同时间的哈密顿量对易
+$$
+H_I(x)H_I(y)=e^{iH_0x}H_{int}e^{-iH_0x}e^{iH_0y}H_{int}e^{-iH_0y}=e^{iH_0y}H_{int}e^{-iH_0y}e^{iH_0x}H_{int}e^{-iH_0x}=H_I(y)H_I(x)
+$$
+因此定义
+$$
+U(t,t_0)\equiv U^{(\infty)}(t,t_0)=\idmat+\sum_{n=1}^{\infty}\left((-i)^n\int_{t_0}^{t} \d \tau_1\int_{t_0}^{\tau_1} \d \tau_2 \cdots  \int_{t_0}^{\tau_n} \d \tau_n H_I(\tau_1) H_I(\tau_2) \cdots H_I(\tau_n)\right)\\
+\label{UnonTorder}
+$$
+利用编时算符, 可以将式$\Eqn{UnonTorder}$进一步化简.
+
+> 注意到对于$n=2$情形, $H(-t)=e^{iH_0t}He^{-iH_0t}=(e^{iH_0t}H^\dagger e^{-iH_0t})^\dagger=e^{-iH_0t}He^{iH_0t}=H(t)$
+> $$
+> \begin{align*}
+> \int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0} \d \tau_2 H_I(\tau_1) H_I(\tau_2)
+> &=\int_{t_0}^{t} \d \tau_2\int^{\tau_2}_{t_0} -\d \tau_1 H_I(\tau_2) H_I(-\tau_1) 
+> 	&  \tau_1\rightarrow \tau_2 , \ \tau_2\rightarrow -\tau_1 \\
+> &=\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2} \d \tau_1  H_I(\tau_2)H_I(\tau_1) \\
+> \end{align*}
+> $$
+> 利用编时算符:
+> $$
+> \Torder{H_I(\tau_2)H_I(\tau_1)}=\begin{cases}H_I(\tau_2)H_I(\tau_1),\quad t_x\gt t_y\\H_I(\tau_1)H_I(\tau_2) ,\quad t_x\lt t_y \end{cases}
+> $$
+> 可以将上式写成
+> $$
+> \begin{align*}
+> \underbrace{\int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0}}_{t_0\lt\tau_2\lt \tau_1\lt t} \d \tau_2 H_I(\tau_1) H_I(\tau_2)
+> &=\underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2}}_{t_0\lt\tau_1\lt \tau_2\lt t} \d \tau_1  H_I(\tau_2)H_I(\tau_1)
+> \\
+> \underbrace{\int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0} \d \tau_2 \underbrace{\Torder{H_I(\tau_1) H_I(\tau_2)}}_{t_0\lt\tau_2\lt \tau_1\lt t} }_\text {upper triangle}
+> &=\underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2} \d \tau_1   \underbrace{\Torder{H_I(\tau_1)H_I(\tau_2)}}_{t_0\lt\tau_1\lt \tau_2\lt t} }_\text{lower triangle}
+> \end{align*}
+> $$
+> <img src="Un.png" style="zoom:50%" />
+>
+> 因此可以得到
+> $$
+> \begin{align*}
+> \underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{t} \d \tau_1 \Torder{H_I(\tau_1)H_I(\tau_2)}}_\text{entire square}
+> &=2\underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2} \d \tau_1 \underbrace{\Torder{H_I(\tau_1)H_I(\tau_2)}}_{t_0\lt\tau_1\lt \tau_2\lt t} }_\text{lower triangle}
+> \\
+> &=2\int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0} \d \tau_2 H_I(\tau_1) H_I(\tau_2)
+> \end{align*}
+> $$
+>
+> 类似地, 对于$n=3$, 因子为$6=3!$. 因此
+> $$
+> \begin{align}
+> &\quad(-i)^n\int_{t_0}^{t} \d \tau_1\int_{t_0}^{\tau_1} \d \tau_2 \cdots  \int_{t_0}^{\tau_n} \d \tau_n H_I(\tau_1) H_I(\tau_2)\cdots  H_I(\tau_n)\notag\\
+> & =\frac{(-i)^n}{n!}\int_{t_0}^{t} \d \tau_1\int_{t_0}^{t} \d \tau_2 \cdots  \int_{t_0}^{t} \d \tau_n \Torder{H_I(\tau_1) H_I(\tau_2)\cdots  H_I(\tau_n)}\notag\\
+> &= \frac{(-i)^n}{n!}\int_{t_0}^{t} \d \tau_1\int_{t_0}^{t} \d \tau_2 \cdots  \int_{t_0}^{t} \d \tau_n \Torder{H_I(\tau_1) H_I(\tau_2)\cdots  H_I(\tau_n)}\notag\\
+> &= \frac{(-i)^n}{n!}\Torder{\int_{t_0}^{t} \d \tau_1\int_{t_0}^{t} \d \tau_2 \cdots  \int_{t_0}^{t} \d \tau_nH_I(\tau_1) H_I(\tau_2)\cdots  H_I(\tau_n)}\notag\\
+> &= \frac{(-i)^n}{n!}\Torder{\left(\int_{t_0}^{t} \d \tau_1H_I(\tau_1) \right)\left(\int_{t_0}^{t} \d \tau_2  H_I(\tau_2)\right)\cdots \left( \int_{t_0}^{t} \d \tau_n H_I(\tau_n)\right)}\notag\\
+> &=\Torder{\frac{(-i)^n}{n!}\left(\int_{t_0}^{t} \d \tau H_I(\tau) \right)^n}
+> \label{TorderProdH}
+> \end{align}
+> $$
+>
+
+利用$\Eqn{TorderProdH}$可以将$\Eqn{UnonTorder}$进一步化简为
+$$
+\begin{align*}
+U(t,t_0)&=\idmat+\sum_{n=1}^{\infty}\left((-i)^n\int_{t_0}^{t} \d \tau_1\int_{t_0}^{\tau_1} \d \tau_2 \cdots  \int_{t_0}^{\tau_n} \d \tau_n H_I(\tau_1) H_I(\tau_2) \cdots H_I(\tau_n)\right)\\
+&=\idmat + \sum_{n=1}^{\infty}\left(\Torder{\frac{(-i)^n}{n!}\left(\int_{t_0}^{t} \d \tau H_I(\tau) \right)^n}\right)\\
+&=\Torder{\idmat + \sum_{n=1}^{\infty}\left(\frac{(-i)^n}{n!}\left(\int_{t_0}^{t} \d \tau H_I(\tau) \right)^n\right)}\\
+&=\Torder{\expp{-i\int_{t_0}^{t} \d \tau H_I(\tau) }}\\
+\end{align*}
+$$
+
+### S矩阵
+
+注意$\Eqn{defU}$中, 
+$$
+\ket{\psi(t)}_I=U(t,t_0)\ket{\psi(t_0)}_I \notag
+$$
+如果取$t_0\rightarrow -\infty$, $t\rightarrow \infty$, 则有
+$$
+\ket{\psi(\infty)}=U(\infty,-\infty)\ket{\psi(-\infty)}
+$$
+注意到上式两边分别是初始和结束的波函数, 分别定义为$\ket{i}$, $\ket{f}$, 再定义S(scattering)矩阵:
+$$
+S=U(\infty,-\infty)=\Torder{\expp{-i\int_{-\infty}^{\infty} \d \tau H_I(\tau) }}\\
+$$
+将哈密顿量写成哈密顿量密度, 将S矩阵写成
+$$
+S=\Torder{\expp{-i\int_{-\infty}^{\infty} \d \tau \int \d^3 \vec{x} \mathcal{H}_I(\vec{x},\tau) }}
+=\Torder{\expp{-i\int_{-\infty}^{\infty} \d^4 x \mathcal{H}_I(x) }}
+$$
+
+### Wick 定理
+
+$S$矩阵含有编时乘积, 但哈密顿量密度是Normal Order的. 将编时乘积转换为Normal Ordering的过程由Wick 定理给出.
 
 
 
 
+
+
+
+
+### 相互作用的传播子
+
+目的是计算
+$$
+\bra{\Omega}T\phi(x)\phi(y)\ket{\Omega}
+$$
+对相互作用的假设如下:
+
+- 相互作用发生在$t=0$时刻
+- 相互作用的粒子来自于$t=-\infty$ , 此时的粒子处于自由状态
+- 相互作用产生的粒子到$t=\infty$时的粒子也处于自由状态
+
+
+
+
+
+
+
+
+
+
+
+# 参考文献
+
+[^gamma as vector]: Nikolić, H. (2014). How (not) to teach Lorentz covariance of the Dirac equation. *European Journal of Physics*, *35*(3), 035003.
+[^langrangian1]: About the notion of the self-interaction of a field, ACuriousMind (https://physics.stackexchange.com/users/50583/acuriousmind),Physics Stack Exchange, URL:https://physics.stackexchange.com/q/277861  version: 2016-09-02,https://physics.stackexchange.com/q/277861
+
+
+
+[^]
+
+[^]
 
