@@ -11,8 +11,16 @@ $$
 \newcommand{\ket }[1]{ \left\vert {#1} \right\rangle }
 \newcommand{\Res}[1]{\operatorname{Res} \left( {#1} \right)}
 \newcommand{\imag}[1]{\operatorname{Im} \left( {#1} \right)}
-\underparen{\overparen{abcd}efef}
-\\
+\newcommand{\D}[1]{ \frac{\d}{\d {#1}}}
+\newcommand{\Partial}[1]{ \frac{\partial}{\partial {#1}}}
+\newcommand{\Eqn}[1]{\text{Eqn. }\ref{#1} }
+\newcommand{\idmat}{\mathbb{I}} 
+\newcommand{\Torder}[1]{T \left\lbrace{#1}\right\rbrace }
+\newcommand{\expp}[1]{\exp{ \left({#1}\right)}}
+\newcommand{\Norder}[1]{:\!\!{#1}\!\!:}
+\newcommand{\Pbracket}[2]{\left[{#1},{#2}\right]}
+\newcommand{\contract}[1]{\overparen{ {#1} }}
+
 \begin{align}
 p=p^\mu&=(E/c,\vec{p})\\
 x^\mu&=(ct,\vec{x})\\
@@ -322,7 +330,7 @@ $$
 > 注意到
 > $$
 > \begin{align}
-> \bra{0} [\phi(x),\phi(y)] \ket{0}&=\bra{0} \phi(x)\phi(y)\ket{0}-\bra{0} \phi(y)\phi(x) \ket{0}
+> \bra{0} \Pbracket{\phi(x)}{\phi(y)} \ket{0}&=\bra{0} \phi(x)\phi(y)\ket{0}-\bra{0} \phi(y)\phi(x) \ket{0}
 > \end{align}
 > $$
 > 因此对于类空间隔, RHS 两项相消, 给出概率幅为$0$. 
@@ -491,32 +499,7 @@ $$
 
 ### 传播子
 
-$$
-\newcommand{\d}{\mathrm{d}}
-\newcommand{\slash}[1]{\not{#1}}
-\newcommand{\bra }[1]{ \left\langle {#1} \right\vert }
-\newcommand{\ket }[1]{ \left\vert {#1} \right\rangle }
-\newcommand{\Res}[1]{\operatorname{Res} \left( {#1} \right)}
-\newcommand{\imag}[1]{\operatorname{Im} \left( {#1} \right)}
-\newcommand{\D}[1]{ \frac{\d}{\d {#1}}}
-\newcommand{\Partial}[1]{ \frac{\partial}{\partial {#1}}}
-\newcommand{\Eqn}[1]{\text{Eqn. }\ref{#1} }
-\newcommand{\idmat}{\mathbb{I}} 
-\newcommand{\Torder}[1]{T \left\lbrace{#1}\right\rbrace }
-\newcommand{\expp}[1]{\exp{ \left({#1}\right)}}
 
-
-\underparen{\overparen{abcd}efef}
-\\
-
-\begin{align}
-p=p^\mu&=(E/c,\vec{p})\\
-x^\mu&=(ct,\vec{x})\\
-g_{\mu\nu}&=(+,-,-,-)\\
-p=p^\mu&=(E/c,-\vec{p})\\
-E_{\pm p}&=\pm\sqrt{\vec{p}^2+m^2}, \quad E_{-p}=-E_p
-\end{align}
-$$
 
 
 
@@ -705,6 +688,124 @@ $$
 
 $S$矩阵含有编时乘积, 但哈密顿量密度是Normal Order的. 将编时乘积转换为Normal Ordering的过程由Wick 定理给出.
 
+>  要计算$\bra{i}S\ket{f}$, 就要计算$\bra{0}H\ket{0}$, 即要计算类似$\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}$的式子.
+
+#### 举例计算
+
+先考虑两个标量场的乘积:
+$$
+\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}=\Theta(t_x-t_y) \bra{0}\phi(x)\phi(y)\ket{0} + \Theta(t_y-t_x) \bra{0}\phi(y)\phi(x)\ket{0}
+$$
+把$\phi(x)$和$\phi(y)$表示成湮灭算符和产生算符的部分.
+$$
+\begin{align}
+&\phi(x)=\phi_+(x)+\phi_-(x)\\
+&\phi_+(x)\ket{0}=0\\
+&\bra{0}\phi_-(x)=0
+\end{align}
+$$
+得到
+$$
+\bra{0}\phi(x)\phi(y)\ket{0} = \bra{0}\phi_+(x)\phi_+(y) + \phi_+(x) \phi_-(y)+ \phi_-(x)\phi_+(y) + \phi_-(x)\phi_-(y)\ket{0}
+$$
+Normal Order之后得到
+$$
+\begin{align*}
+\Norder{\phi(x)\phi(y)} &= \phi_+(x)\phi_+(y) + \phi_-(x)\phi_+(y)+ \phi_-(x)\phi_+(y) + \phi_-(x)\phi_-(y)\\
+&= \phi_+(x)\phi_+(y) + {\color{Red}\phi_+(x)\phi_-(y)}+ \phi_-(x)\phi_+(y) + \phi_-(x)\phi_-(y) + {\color{Green}\phi_-(x)\phi_+(y)} - {\color{Red}\phi_+(x)\phi_-(y)}\\
+&=\phi(x)\phi(y) + \phi_-(x)\phi_+(y)-\phi_+(x)\phi_-(y)\\
+&=\phi(x)\phi(y) +\Pbracket{\phi_-(x)}{\phi_+(y)}
+\end{align*}
+$$
+
+因此得到Normal Order和Time Order之间的关系, 利用$\Theta(t_x-t_y)+\Theta(t_y-t_x)=0$:
+$$
+\begin{align*}
+\Torder{\phi(x) \phi(y)}&=\Theta(t_x-t_y) \phi(x)\phi(y)+\Theta(t_y-t_x)\phi(y)\phi(x)\\
+&=\Theta(t_x-t_y)\left(\Norder{\phi(x)\phi(y)}+\Pbracket{\phi_+(x)}{\phi_-(y)}\right)+ \Theta(t_y-t_x)\left(\Norder{\phi(x)\phi(y)}+\Pbracket{\phi_+(x)}{\phi_-(y)}\right)\\
+&=\Norder{\phi(x)\phi(y)} +\Theta(t_x-t_y) \Pbracket{\phi_+(x)}{\phi_-(y)} + \Theta(t_y-t_x) \Pbracket{\phi_+(x)}{\phi_-(y)} 
+\end{align*}
+$$
+利用Feynman传播子:
+$$
+\begin{align*}
+\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}&=\bra{0}\Norder{\phi(x)\phi(y)}\ket{0}+\bra{0}\Big(\Theta(t_x-t_y) \Pbracket{\phi_+(x)}{\phi_-(y)} + \Theta(t_y-t_x) \Pbracket{\phi_+(x)}{\phi_-(y)}\Big)\ket{0}\\
+&=\bra{0}\Norder{\phi(x)\phi(y)}\ket{0}+D_F(x-y)
+\end{align*}
+$$
+而Time Order的乘积$\Norder{\phi(x)\phi(y)}$始终有湮灭算符在后,
+$$
+\bra{0}\Norder{\phi(x)\phi(y)}\ket{0}\equiv0
+$$
+得到
+$$
+\begin{align*}
+\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}&=D_F(x-y)
+\end{align*}
+$$
+利用contraction写为
+$$
+\bra{0}\Torder{\phi(x) \phi(y)}\ket{0} =\contract{\phi(x) \phi} (y)
+$$
+
+
+对于三个相乘的, 自然有
+$$
+\begin{align*}
+\bra{0}\Torder{\phi(x_1) \phi(x_2) \phi(x_3) }\ket{0}&=\bra{0}\contract{\phi(x_1) \phi}(x_2)\phi(x_3)\ket{0}+\bra{0}\phi(x_1)\contract{\phi(x_2) \phi}(x_3)\ket{0}+\bra{0}\contract{\phi(x_1) \phi(x_2) \phi}(x_3\ket{0})\\
+&=\bra{0}\Norder{\phi(x_1)}\ket{0}D_F(x_2-x_3)+\bra{0}\Norder{\phi(x_3)}\ket{0}D_F(x_1-x_2)+\bra{0}\Norder{\phi(x_2)}\ket{0}D_F(x_1-x_3)\\
+&=0
+\end{align*}
+$$
+
+#### 一般的Wick 定理
+
+$$
+\begin{align*}
+\bra{0}\Torder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) }\ket{0}
+&=\bra{0}\Norder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) }\ket{0}\\
+&+\bigg[\contract{\phi(x_1) \phi}(x_2) \phi(x_3) \cdots \phi(x_n)+\text{all permutaion} \bigg]\\
+&+\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \phi(x_n)+\text{all permutaion} \bigg]\\
+&+\cdots\\
+&+\begin{cases}
+	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-1})\phi}(x_n)+\text{all permutaion} \bigg] &n \text{ even} \\
+	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-2})\phi}(x_{n-1})\phi(x_n)+\text{all permutaion} \bigg] & n \text{ odd}
+\end{cases}
+\end{align*}
+$$
+
+> 证明:
+> $$
+> \begin{align*}
+> &\bra{0}\Torder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) }\ket{0}\\
+> &=\bra{0}\Norder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) }\ket{0}\\
+> &+\bigg[\contract{\phi(x_1) \phi}(x_2) \phi(x_3) \cdots \phi(x_n)+\text{all permutaion} \bigg]\\
+> &+\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \phi(x_n)+\text{all permutaion} \bigg]\\
+> &+\cdots\\
+> &+\begin{cases}
+> 	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-1})\phi}(x_n)+\text{all permutaion} \bigg] &n \text{ even} \\
+> 	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-2})\phi}(x_{n-1})\phi(x_n)+\text{all permutaion} \bigg] & n \text{ odd}
+> \end{cases}
+> \end{align*}
+> $$
+>
+> $$
+> \begin{align*}
+> &\bra{0}\Torder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) \phi(x_{n+1}) }\ket{0}\\
+> &=\bra{0}\Norder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) \phi(x_{n+1}) }\ket{0}\\
+> &+\bigg[\contract{\phi(x_1) \phi}(x_2) \phi(x_3) \cdots \phi(x_n)+\text{all permutaion} \bigg]\phi(x_{n+1}) \\
+> &+\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \phi(x_n)+\text{all permutaion} \bigg]\phi(x_{n+1}) \\
+> &+\cdots\\
+> &+\begin{cases}
+> 	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-1})\phi}(x_n)+\text{all permutaion} \bigg]\phi(x_{n+1})  &n \text{ even} \\
+> 	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-2})\phi}(x_{n-1})\phi(x_n)+\text{all permutaion} \bigg]\phi(x_{n+1})  & n \text{ odd}
+> \end{cases}
+> \end{align*}
+> $$
+>
+> 
+
+### Feynman图
 
 
 
@@ -723,6 +824,14 @@ $$
 - 相互作用发生在$t=0$时刻
 - 相互作用的粒子来自于$t=-\infty$ , 此时的粒子处于自由状态
 - 相互作用产生的粒子到$t=\infty$时的粒子也处于自由状态
+
+
+
+
+
+
+
+
 
 
 
