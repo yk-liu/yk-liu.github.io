@@ -9,18 +9,19 @@ $$
 \newcommand{\slash}[1]{\not{#1}}
 \newcommand{\bra }[1]{ \left\langle {#1} \right\vert }
 \newcommand{\ket }[1]{ \left\vert {#1} \right\rangle }
+\newcommand{\braket}[2]{\left\langle {#1} \vert   {#2} \right\rangle}
 \newcommand{\Res}[1]{\operatorname{Res} \left( {#1} \right)}
 \newcommand{\imag}[1]{\operatorname{Im} \left( {#1} \right)}
 \newcommand{\D}[1]{ \frac{\d}{\d {#1}}}
 \newcommand{\Partial}[1]{ \frac{\partial}{\partial {#1}}}
 \newcommand{\Eqn}[1]{\text{Eqn. }\ref{#1} }
 \newcommand{\idmat}{\mathbb{I}} 
-\newcommand{\Torder}[1]{T \left\lbrace{#1}\right\rbrace }
+\newcommand{\Torder}[1]{\mathrm{T} \left\lbrace{#1}\right\rbrace }
 \newcommand{\expp}[1]{\exp{ \left({#1}\right)}}
 \newcommand{\Norder}[1]{:\!\!{#1}\!\!:}
 \newcommand{\Pbracket}[2]{\left[{#1},{#2}\right]}
 \newcommand{\contract}[1]{\overparen{ {#1} }}
-
+\\
 \begin{align}
 p=p^\mu&=(E/c,\vec{p})\\
 x^\mu&=(ct,\vec{x})\\
@@ -805,9 +806,55 @@ $$
 >
 > 
 
+### 自由真空与相互作用真空
+
+之前计算的都是自由真空$\ket{0}$的期望值, 但是真正代表散射概率的$\bra{i}S\ket{f}$应该是相互作用真空$\ket{\Omega}$的期望值.
+
+二者的区别在于分别是总哈密顿量$H=H_0+H_{int}$中自由粒子哈密顿量$H_0$的不同本征矢量.
+$$
+\begin{align}
+H_0\ket{0}&=0\\
+H_0\ket{\Omega}&=E_\Omega \ket{\Omega}
+\end{align}
+$$
+利用总哈密顿量$H=H_0+H_{int}$的本征矢$\ket{n}$展开为完备基, 自由真空的含时演化有(薛定谔绘景)
+$$
+\begin{align}
+e^{-iHT}\ket{0}&=e^{-iHT}\sum_n{\ket{n}\bra{n}}\ket{0}\notag\\
+&=\sum_ne^{-iE_nT}\ket{n}\braket{n}{0}\notag \\
+&=e^{-iE_\Omega T}\ket{\Omega}\braket{\Omega}{0}+\sum_{n\neq \ket{\Omega}}e^{-iE_nT}\ket{n}\braket{n}{0} 
+\label{oandOmega}
+\\
+\end{align}
+$$
+
+
+
+在$\Eqn{oandOmega}$中中, 第一项的因子的指数是相互作用真空能量$E_\Omega$, 是所有本征值中最小的. 因此取$T\rightarrow \infty(1-i\varepsilon)$
+
+==为什么要这样取极限, 直接$\infty$不行吗, 这样是精确的还是近似?==
+$$
+\begin{align*}
+\lim_{T\rightarrow \infty(1-i\varepsilon)}e^{-iHT}\ket{0}&=\lim_{T\rightarrow \infty(1-i\varepsilon)} e^{-iE_\Omega T}\ket{\Omega}\braket{\Omega}{0}+\lim_{T\rightarrow \infty(1-i\varepsilon)}\sum_{n\neq \ket{\Omega}}e^{-iE_nT}\ket{n}\braket{n}{0} \\
+\lim_{T\rightarrow \infty(1-i\varepsilon)}e^{-iHT}\ket{0}&=\lim_{T\rightarrow \infty(1-i\varepsilon)} e^{-iE_\Omega T}\ket{\Omega}\braket{\Omega}{0}+0\\
+\left(\lim_{T\rightarrow \infty(1-i\varepsilon)}e^{-iHT}\right)\ket{0}&=\left(\lim_{T\rightarrow \infty(1-i\varepsilon)} e^{-iE_\Omega T} \right)\ket{\Omega}\braket{\Omega}{0}\\
+\end{align*}
+$$
+得到
+$$
+\ket{\Omega}=\lim_{ T\rightarrow \infty(1-i\varepsilon)} \frac{e^{-iHT}\ket{0}}{  e^{-iE_\Omega T} \braket{\Omega}{0}}
+$$
+这里要求$\braket{\Omega}{0}\neq 0$, 即低阶近似下的真空与自由真空"相似".
+
+==...==
+
+得到[^skriptQFT1]
+$$
+\bra{\Omega}\Torder{\prod_i{\phi(x_i)}}\ket{\Omega}=\lim_{T\rightarrow \infty(1-i\varepsilon)} \frac{\bra{0}\Torder{\prod_i{\phi(x_i)}e^{-i\int_{-T}^{T}dtH_I(t)}}\ket{0}}{\bra{0}\Torder{\ e^{-i\int_{-T}^{T}dtH_I(t)}}\ket{0}}
+$$
+可见在此处解释了T的路径问题(Eqn 2.107 & 2.110) [^skriptQFT1].
+
 ### Feynman图
-
-
 
 
 
@@ -848,9 +895,8 @@ $$
 [^gamma as vector]: Nikolić, H. (2014). How (not) to teach Lorentz covariance of the Dirac equation. *European Journal of Physics*, *35*(3), 035003.
 [^langrangian1]: About the notion of the self-interaction of a field, ACuriousMind (https://physics.stackexchange.com/users/50583/acuriousmind),Physics Stack Exchange, URL:https://physics.stackexchange.com/q/277861  version: 2016-09-02,https://physics.stackexchange.com/q/277861
 
-
-
-[^]
+[^ first book]: first book in quantum field theory
+[^skriptQFT1]: skriptQFT1
 
 [^]
 
