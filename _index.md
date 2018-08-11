@@ -2,8 +2,6 @@
 
 I am *Yingkai Liu*, a student major in Physics with a broad interest.
 
-This is a minimal set up mainly using  [`typora`](https:\\www.typora.io).
-
 
 
 Here are [`my posts`](https://yk-liu.github.io/posts/post_index.html). 
