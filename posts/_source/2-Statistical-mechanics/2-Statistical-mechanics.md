@@ -253,10 +253,9 @@ $$
 \langle H\rangle &=\frac{1}{\Omega(\varepsilon_0)} \int_{-\infty}^{{-\infty}}H(p,q)\delta(E-\varepsilon_0)d\Gamma \notag\\
 & =\int_{-\infty}^{{-\infty}}\varepsilon_0  \frac{1}{\Omega(\varepsilon_0)} d\Gamma \notag\\
 & = \varepsilon_0\int_{-\infty}^{{-\infty}}  \frac{1}{\Omega(\varepsilon_0)} d\Gamma \notag\\
-= \varepsilon_0
+& = \varepsilon_0
 \end{align}
 $$
-
 
 #### 孤立系的平衡
 

@@ -506,6 +506,15 @@ $$
 
 ## 相互作用
 
+```mermaid
+graph LR
+A[转移矩阵]-->|相互作用绘景|B[渐进形式]
+B-->|逐级展开|C[wick定理]
+C-->D[Feynman图]
+```
+
+
+
 ### 相互作用的形式[^langrangian1]
 
 相互作用的哈密顿量的一般形式是
@@ -635,9 +644,9 @@ $$
 > $$
 > \begin{align*}
 > \underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{t} \d \tau_1 \Torder{H_I(\tau_1)H_I(\tau_2)}}_\text{entire square}
-> &=2\underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2} \d \tau_1 \underbrace{\Torder{H_I(\tau_1)H_I(\tau_2)}}_{t_0\lt\tau_1\lt \tau_2\lt t} }_\text{lower triangle}
+> &=2\underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2} \d \tau_1 \underbrace{\Torder{H_I(\tau_1)H_I(\tau_2)}}_{t_0\lt\tau_1\lt \tau_2\lt t} }_\text{lower triangle, top-bottom}
 > \\
-> &=2\int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0} \d \tau_2 H_I(\tau_1) H_I(\tau_2)
+> &=\underbrace{2\int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0} \d \tau_2 H_I(\tau_1) H_I(\tau_2)}_\text{lower triangle, left-right}
 > \end{align*}
 > $$
 >
@@ -817,7 +826,7 @@ H_0\ket{0}&=0\\
 H_0\ket{\Omega}&=E_\Omega \ket{\Omega}
 \end{align}
 $$
-利用总哈密顿量$H=H_0+H_{int}$的本征矢$\ket{n}$展开为完备基, 自由真空的含时演化有(薛定谔绘景)
+利用总哈密顿量$H=H_0+H_{int}$的本征矢$\ket{n}$展开为完备基, 自由真空的含时演化有(相互作用绘景下,$H_0$部分是薛定谔绘景)
 $$
 \begin{align}
 e^{-iHT}\ket{0}&=e^{-iHT}\sum_n{\ket{n}\bra{n}}\ket{0}\notag\\
@@ -828,9 +837,7 @@ e^{-iHT}\ket{0}&=e^{-iHT}\sum_n{\ket{n}\bra{n}}\ket{0}\notag\\
 \end{align}
 $$
 
-
-
-在$\Eqn{oandOmega}$中中, 第一项的因子的指数是相互作用真空能量$E_\Omega$, 是所有本征值中最小的. 因此取$T\rightarrow \infty(1-i\varepsilon)$
+在$\Eqn{oandOmega}$中, 第一项的因子的指数是相互作用真空能量$E_\Omega$, 是所有本征值中最小的. 因此取$T\rightarrow \infty(1-i\varepsilon)$
 
 ==为什么要这样取极限, 直接$\infty$不行吗, 这样是精确的还是近似?==
 $$
