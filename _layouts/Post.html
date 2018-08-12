@@ -1,9 +1,19 @@
 ---
 layout: default
 ---
+  <head>
+    {% include html_meta %}
+    <title>{{ page.title }}</title>
+    <link href="/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    {% if page.use_math %}
+      {% include mathjax_support %}
+    {% endif %}
+  </head>
+
 <h1>{{ page.title }}</h1>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
+<div class="container">
   {{ content }}
 </div>

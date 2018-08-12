@@ -1,6 +1,7 @@
 ---
 　　layout: post
 　　title: 量子场论
+    use_math: true
 ---
 
 [TOC]
