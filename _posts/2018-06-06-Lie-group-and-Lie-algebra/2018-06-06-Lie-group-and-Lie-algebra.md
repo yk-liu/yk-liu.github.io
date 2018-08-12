@@ -521,9 +521,9 @@ $$
 $$
 \begin{align*}
 P_{R(\alpha)}\psi(x)&=\psi({R(\alpha)}^{-1}x)\\
-&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{{\partial \alpha}^n}\alpha^n}\\
-&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{{\partial \left({R(\alpha)}^{-1}x\right)}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{{\partial \alpha}^n} \alpha^n}\\
-&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi(x)}{{\partial x}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{{\partial \alpha}^n} \alpha^n}\\
+&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{ {\partial \alpha}^n}\alpha^n}\\
+&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{ {\partial \left({R(\alpha)}^{-1}x\right)}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{ {\partial \alpha}^n} \alpha^n}\\
+&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi(x)}{ {\partial x}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{ {\partial \alpha}^n} \alpha^n}\\
 \end{align*}
 $$
 
