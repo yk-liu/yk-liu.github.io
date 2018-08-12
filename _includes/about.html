@@ -13,7 +13,7 @@
       <p>recent notes</p>
       <p>
       {% for post in site.posts limit=1%}
-	    <li><span>{{ post.date | date_to_string }}</span> » 
+	    <li>{{ post.date | date_to_string }} » 
      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 	     {% endfor %}
       </p>
