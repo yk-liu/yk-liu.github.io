@@ -1,21 +1,21 @@
  <div class="user-details">
-  <h1> My codes </h1>
-  <p> {{site.user_description}} </p>
+  <h1> Yingkai Liu </h1>
+  <p> {{site.personal_statement}} </p>
 </div>
   <div class="user">
     <div class="tech">
       <h2>Codes</h2>
-      <p>my codes</p>
+      <p>my repo</p>
     </div>
     <div class="tech">
       <h2>Notes</h2>
-      <p>my notes</p>
+      <p></p>
       <p>recent notes</p>
-      
-      {% for post in site.posts limit=1 %}
+      {% for post in site.posts limit:1 %}
        <p>{{ post.date | date_to_string }} » 
        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
       {% endfor %}
-      
+      <p></p>
+      <p>Upcoming notes</p>
     </div>
 </div>
