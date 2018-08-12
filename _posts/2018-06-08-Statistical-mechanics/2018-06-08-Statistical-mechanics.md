@@ -241,10 +241,10 @@ $$
 至此得到
 $$
 \begin{align}
-\langle O\rangle&=\int_{-\infty}^{{-\infty}}{O(p,q)\mathbb{P}(p,q)dpdq}\notag\\
-&=\int_{-\infty}^{{-\infty}}O(p,q)\rho(p,q)d \Gamma \notag\\
-&=\int_{-\infty}^{{-\infty}}O(p,q)\frac{1}{\Omega(\varepsilon_0)} \delta(E-\varepsilon_0)d\Gamma \notag\\
-&=\frac{1}{\Omega(\varepsilon_0)} \int_{-\infty}^{{-\infty}}O(p,q)\delta(E-\varepsilon_0)d\Gamma \\
+\langle O\rangle&=\int_{-\infty}^{ {-\infty}}{O(p,q)\mathbb{P}(p,q)dpdq}\notag\\
+&=\int_{-\infty}^{ {-\infty}}O(p,q)\rho(p,q)d \Gamma \notag\\
+&=\int_{-\infty}^{ {-\infty}}O(p,q)\frac{1}{\Omega(\varepsilon_0)} \delta(E-\varepsilon_0)d\Gamma \notag\\
+&=\frac{1}{\Omega(\varepsilon_0)} \int_{-\infty}^{ {-\infty}}O(p,q)\delta(E-\varepsilon_0)d\Gamma \\
 \end{align}
 $$
 #### 一些特殊的宏观量
@@ -254,9 +254,9 @@ $$
 ==能量和粒子数是仅有的确定系统微观状态的物理量==, 
 $$
 \begin{align}
-\langle H\rangle &=\frac{1}{\Omega(\varepsilon_0)} \int_{-\infty}^{{-\infty}}H(p,q)\delta(E-\varepsilon_0)d\Gamma \notag\\
-& =\int_{-\infty}^{{-\infty}}\varepsilon_0  \frac{1}{\Omega(\varepsilon_0)} d\Gamma \notag\\
-& = \varepsilon_0\int_{-\infty}^{{-\infty}}  \frac{1}{\Omega(\varepsilon_0)} d\Gamma \notag\\
+\langle H\rangle &=\frac{1}{\Omega(\varepsilon_0)} \int_{-\infty}^{ {-\infty}}H(p,q)\delta(E-\varepsilon_0)d\Gamma \notag\\
+& =\int_{-\infty}^{ {-\infty}}\varepsilon_0  \frac{1}{\Omega(\varepsilon_0)} d\Gamma \notag\\
+& = \varepsilon_0\int_{-\infty}^{ {-\infty}}  \frac{1}{\Omega(\varepsilon_0)} d\Gamma \notag\\
 & = \varepsilon_0
 \end{align}
 $$
@@ -456,7 +456,7 @@ $$
 因此有
 $$
 \begin{align}
-\psi=-\frac{1}{{k_0 T}}\left(E-T\cdot S(E)\right)\\
+\psi=-\frac{1}{ {k_0 T}}\left(E-T\cdot S(E)\right)\\
 \end{align}
 $$
 因此借助孤立系的熵, 我们定义了一个新的可加量$\psi=\frac{1}{k_0T}(E-TS)$
@@ -612,7 +612,7 @@ $$
 
 仿照前面的做法, 注意到开放系粒子数$n_o$可以变化. 系统的微观分布函数也会随之改变. 也就是说, $\rho$和$\Omega$不仅仅是$E$的函数, 也是$n$的函数. 因此$\rho=\rho(n,E)$, $\Omega=\Omega(n,E)$
 
-为了方便地表示$\underbrace{\int\cdots\int}_{n_o}\rho_od\Gamma_o $和$\underbrace{\int\cdots\int}_{{n_o}^\prime}{\rho_o}^\prime d{\Gamma_o}^\prime $的不同, 把积分 $\underbrace{\int\cdots\int}_{n_o}d\Gamma_o$记为$\int d\Gamma_{o,n_o}$, 为了清晰起见, 先保留$\underbrace{\int\cdots\int}_{n_o}d\Gamma_o$ 记法.
+为了方便地表示$\underbrace{\int\cdots\int}_{n_o}\rho_od\Gamma_o $和$\underbrace{\int\cdots\int}_{ {n_o}^\prime}{\rho_o}^\prime d{\Gamma_o}^\prime $的不同, 把积分 $\underbrace{\int\cdots\int}_{n_o}d\Gamma_o$记为$\int d\Gamma_{o,n_o}$, 为了清晰起见, 先保留$\underbrace{\int\cdots\int}_{n_o}d\Gamma_o$ 记法.
 $$
 \begin{align*}
 1&=\underbrace{\int\cdots\int}_{n_s}\rho_{s}(s_o,E_o)d\Gamma_{s,n_s}\\
@@ -854,19 +854,19 @@ $$
 $$
 \begin{align*}
 \mathscr{A}_{ND-1}
-&=\frac{{2\pi}^{ND/2}}{\Gamma(ND/2)}\\
+&=\frac{ {2\pi}^{ND/2}}{\Gamma(ND/2)}\\
 \phantom{}\xrightarrow{N\rightarrow\infty} 
 &\phantom{=}\frac{2{\pi}^{ND/2}}{\sqrt{2\pi \left(\frac{ND}{2}\right)}{(\frac{ND}{2})}^{\frac{ND}{2}-1}e^{-\frac{ND}{2}}}\\
 &= \frac{\sqrt{2}{\left(e\pi\right)}^{\frac{ND}{2}}}{\pi^{-\frac{1}{2}}{(\frac{ND}{2})}^{\frac{ND-1}{2}}} \notag\\
 &=\frac{\sqrt{2}{\left(e\pi\right)}^{\frac{ND}{2}}}{\pi^{-\frac{1}{2}}{(\frac{ND}{2})}^{\frac{ND}{2}}(\frac{ND}{2})^{-\frac{1}{2}}}\\
-&= \left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\\
+&= \left(\frac{2e\pi}{ND}\right)^{ {\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\\
 \end{align*}
 $$
 因此
 $$
 \begin{align}
 \Omega(E) &=V^N\mathscr{A}_{ND-1}\left({2mE}\right)^{DN/2} \notag\\
-&=V^N\cdot\left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
+&=V^N\cdot\left(\frac{2e\pi}{ND}\right)^{ {\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
 &=V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} 
 \end{align}
 $$
@@ -891,7 +891,7 @@ $$
 
 \Omega(E) &=VN\mathscr{A}_{ND-1}\left({2mE}\right){DN/2} \notag\\
 
-&=VN\cdot\left(\frac{2e\pi}{ND}\right)^{{\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
+&=VN\cdot\left(\frac{2e\pi}{ND}\right)^{ {\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
 
 &=V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} 
 
