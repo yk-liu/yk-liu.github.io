@@ -1,6 +1,7 @@
 ---
-　　layout: post
-　　title: 第一性原理热统(未完成)
+layout: post
+title: 第一性原理热统(未完成)
+mathjax: true
 ---
 
 

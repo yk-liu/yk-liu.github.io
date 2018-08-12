@@ -1,6 +1,7 @@
 ---
-　　layout: post
-　　title: 量子场论
+layout: post
+title: 量子场论
+mathjax: true
 ---
 
 [TOC]
