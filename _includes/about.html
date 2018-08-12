@@ -11,11 +11,11 @@
       <h2>Notes</h2>
       <p>my notes</p>
       <p>recent notes</p>
-      <p>
-      {% for post in site.posts limit=1%}
-	    {{ post.date | date_to_string }} » 
-     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-	     {% endfor %}
-      </p>
+      
+      {% for post in site.posts limit=1 %}
+       <p>{{ post.date | date_to_string }} » 
+       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
+      {% endfor %}
+      
     </div>
 </div>
