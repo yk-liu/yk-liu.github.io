@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-      {% include header.html %}
+   {% include head.html %}
+   <body>
+      <div id="particles-js">
+         <div class="header">
+            <h1>
+               <span class="site-title">{{site.username}}</span>
+               <span class="site-description">{{site.user_title}}</span>
+            </h1>
+            <div class="header-links">
+               <a class="link" href="/codes" >Codes</a>
+               <a class="link" href="/blog">Posts</a>
+            </div>
+         </div>
+         <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+      </div>
       <section id="about">
-        {% include about.html %}
+         <div class="user-details">
+            <h1> Yingkai Liu </h1>
+            <p> {{site.personal_statement}} </p>
+         </div>
+         <div class="user">
+            <div class="tech">
+               <h2>
+                  <a herf='/repo' title="Codes">
+                     Codes
+               </h2>
+               <p>My Recent Repo</p>
+            </div>
+            <div class="tech">
+            <h2><a href="/blog" title="Notes"></a>Notes</h2>
+            <p></p>
+            <p>recent notes</p>
+            {% for post in site.posts limit:1 %}
+            <p>{{ post.date | date_to_string }} » 
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
+            {% endfor %}
+            <p></p>
+            <p>Upcoming notes</p>
+            </div>
+         </div>
       </section>
-        {{ content }}
-      {% include footer.html %}
-  </body>
+      <footer class="footer">
+         <p>Build with Jekyll</p>
+      </footer>
+      <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
+      <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+   </body>
