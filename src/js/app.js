@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "rotateY": 1200
         }
       },
-      nb: 80
     },
     "interactivity": {
       "detect_on": "window",
