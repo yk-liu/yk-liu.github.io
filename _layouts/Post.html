@@ -4,14 +4,16 @@ layout: default
 <!DOCTYPE html>
 <html>
   <head>
+    {% include html_meta %}
     <title>{{ page.title }}</title>
     <link href="/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
     {% if page.use_math %}
-      {% include mathjax_support.html %}
+      {% include mathjax_support %}
     {% endif %}
   </head>
   <body>
+    {% include navigation_bar %}
     <div class="container-narrow">
       <div class="content">
         {{ content }}

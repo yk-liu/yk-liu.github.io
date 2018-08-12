@@ -1,7 +1,6 @@
 ---
 　　layout: post
 　　title: 李群和李群的李代数
-use_math: true
 ---
 
 目前我对李群的疑问已经解决, 本文更新暂停
