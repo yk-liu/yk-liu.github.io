@@ -1,60 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-
-<title>{{ page.title }}</title>
-
-<style type='text/css'>
-html,body{ 
-	width:100%;
-	height:90%;
-	background:#000000;
-}
-canvas{
-  display:block;
-  vertical-align:bottom;
-}
-
-#write{
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  height: 90%;
-  z-index: 2;
-  background-color:rgba(255,255,255,1);
-}
-
-#particles-js{
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  z-index: 1;
-}
-
-
-
-</style>
-</head>
-
-
-<body >
- 
-</div>
-<!-- particles.js container -->
-<div id="particles-js"></div>
-
-<!-- scripts -->
-<script src="js/particles.js"></script>
-<script src="js/app.js"></script>
-
-
-{{ content }}
-
-
-
-</body>
-
+  {% include head.html %}
+  <body>
+      {% include header.html %}
+      <section id="about">
+        {% include about.html %}
+      </section>
+      <section id="projects">
+        {% include projects.html %}
+      </section>
+        {{ content }}
+      {% include footer.html %}
+  </body>
