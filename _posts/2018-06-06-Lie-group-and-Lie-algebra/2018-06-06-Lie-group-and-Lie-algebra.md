@@ -1,4 +1,7 @@
-# 李群和李群的李代数
+---
+　　layout: post
+　　title: 李群和李群的李代数
+---
 
 目前我对李群的疑问已经解决, 本文更新暂停
 
@@ -288,7 +291,7 @@ $$
 > &\Rightarrow \\
 > \left(\vec{x}f\right) \left( g \exp{u \vec{x}}\right) & = \frac{d}{d u} f  \left(g \exp{u \vec{x}}|_{t=0}\right) \\
 > &\Rightarrow \\
-> \left(\vec{x}^nf\right) \left( g \exp{u \vec{x}}\right) & = \frac{d^n}{{d u}^n} f  \left(g \exp{u \vec{x}}|_{t=0}\right) \\
+> \left(\vec{x}^nf\right) \left( g \exp{u \vec{x}}\right) & = \frac{d^n}{ {d u}^n} f  \left(g \exp{u \vec{x}}|_{t=0}\right) \\
 > \end{align*}
 > $$
 >
@@ -516,9 +519,9 @@ $$
 $$
 \begin{align*}
 P_{R(\alpha)}\psi(x)&=\psi({R(\alpha)}^{-1}x)\\
-&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{{\partial \alpha}^n}\alpha^n}\\
-&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{{\partial \left({R(\alpha)}^{-1}x\right)}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{{\partial \alpha}^n} \alpha^n}\\
-&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi(x)}{{\partial x}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{{\partial \alpha}^n} \alpha^n}\\
+&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{ {\partial \alpha}^n}\alpha^n}\\
+&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{ {\partial \left({R(\alpha)}^{-1}x\right)}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{ {\partial \alpha}^n} \alpha^n}\\
+&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi(x)}{ {\partial x}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{ {\partial \alpha}^n} \alpha^n}\\
 \end{align*}
 $$
 
