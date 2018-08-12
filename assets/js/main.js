@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "line_linked": {
         "enable": true,
-        "distance": 130,
+        "distance": 200,
         "color": "#ffffff",
         "opacity": 0.4,
         "width": 1
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "modes": {
         "grab": {
-          "distance": 120,
+          "distance": 150,
           "line_linked": {
             "opacity": 1
           }
