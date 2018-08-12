@@ -1,5 +1,5 @@
 ---
-　　layout: post
+　　layout: Post
 　　title: 李群和李群的李代数
 ---
 
