@@ -10,4 +10,4 @@ user_description: A Physics undergrad with a broad interest
 user_title: Physics Undergraduate
 email: yingkai.liu@outlook.com
 
-markdown: maruku
+markdown: kramdown
