@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html>
   <head>
     {% include html_meta %}
     <title>{{ page.title }}</title>
@@ -12,15 +10,10 @@ layout: default
       {% include mathjax_support %}
     {% endif %}
   </head>
-  <body>
-    {% include navigation_bar %}
-    <div class="container-narrow">
-      <div class="content">
-        {{ content }}
-      </div>
-      <hr/>
-      {% include footer %}
-    </div>
-    {% include JB/analytics %}
-  </body>
-  </html>
+
+<h1>{{ page.title }}</h1>
+<p class="meta">{{ page.date | date_to_string }}</p>
+
+<div class="container">
+  {{ content }}
+</div>
