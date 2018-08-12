@@ -1,7 +1,6 @@
 ---
 　　layout: post
 　　title: 第一性原理热统(未完成)
-    use_math: true
 ---
 
 
