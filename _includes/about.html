@@ -11,7 +11,7 @@
       <h2>Notes</h2>
       <p>my notes</p>
       <p>recent notes</p>
-      <p>
+      <p style="font-size:30px;">
       {% for post in site.posts limit=1%}
 	    <li>{{ post.date | date_to_string }} » 
      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
