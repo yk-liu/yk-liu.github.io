@@ -293,7 +293,7 @@ $$
 > &\Rightarrow \\
 > \left(\vec{x}f\right) \left( g \exp{u \vec{x}}\right) & = \frac{d}{d u} f  \left(g \exp{u \vec{x}}|_{t=0}\right) \\
 > &\Rightarrow \\
-> \left(\vec{x}^nf\right) \left( g \exp{u \vec{x}}\right) & = \frac{d^n}{{d u}^n} f  \left(g \exp{u \vec{x}}|_{t=0}\right) \\
+> \left(\vec{x}^nf\right) \left( g \exp{u \vec{x}}\right) & = \frac{d^n}{ {d u}^n} f  \left(g \exp{u \vec{x}}|_{t=0}\right) \\
 > \end{align*}
 > $$
 >
