@@ -20,8 +20,10 @@ links:
     url: /
     external: false
     icon: home
-  - title: Categories
-    url: /categories
-  - title: Tags
-    url: /tags
+  - title: Repos
+    url: /repo
+  - title: Blogs
+    url: /Blog
+  - title: Blog Tags
+    url /Blog/Tags
 
