@@ -22,14 +22,13 @@
          </div>
          <div class="user">
             <div class="tech">
-               <h2>
-                  <a herf='/repo' title="Codes">
-                     Codes
-               </h2>
+               <h2><a herf='/repo' title="Codes">Codes</a></h2>
                <p>My Recent Repo</p>
+               <p></p>
+               <p><a href="/repo" title="All Repos">All Repos</a></p>
             </div>
             <div class="tech">
-            <h2><a href="/blog" title="Notes"></a>Notes</h2>
+            <h2><a href="/blog" title="Notes">Notes</a></h2>
             <p></p>
             <p>recent notes</p>
             {% for post in site.posts limit:1 %}
@@ -37,7 +36,10 @@
             <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
             {% endfor %}
             <p></p>
-            <p>Upcoming notes</p>
+            <p>Upcoming Notes</p>
+            <p>Topological Insulator Study Notes</p>
+            <p></p>
+            <p><a href="/blog" title="All Notes">All Notes</a></p>
             </div>
          </div>
       </section>
