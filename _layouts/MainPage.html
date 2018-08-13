@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
    {% include head.html %}
+   
+   <link rel="stylesheet" type="text/css" href="/assets/css/search.css"/>
+   
    <body>
       <div id="particles-js">
          <div class="header">
@@ -15,6 +18,10 @@
          </div>
          <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
       </div>
+      
+      {% include search.html %}
+      
+      
       <section id="about">
          <div class="user-details">
             <h1> Yingkai Liu </h1>
@@ -49,5 +56,5 @@
       
       <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
       <script src="{{ "/assets/js/particles_conf.js" | prepend: site.baseurl }}"></script>
-      <script src="{{ "/assets/js/particles.js" | prepend: site.baseurl }}"></script>
+      <script src="{{ "/assets/js/particles.min.js" | prepend: site.baseurl }}"></script>
    </body>
