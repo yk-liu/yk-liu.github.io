@@ -3,7 +3,14 @@ title: Welcome
 description: A Github Page of Yingkai Liu
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
-
+search:           true
+gems:
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-seo-tag
 # User settings
 username: Yingkai Liu
 user_description: A Physics undergrad with a broad interest
