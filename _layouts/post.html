@@ -3,45 +3,34 @@
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+<!--Load Mathjax-->
 {% if page.mathjax %}
-<!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
+<script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
-         MathJax.Hub.Config({
-             config: ["MMLorHTML.js"],
-             extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
-             jax: ["input/TeX"],
-             tex2jax: {
-                 inlineMath: ['$', '$'],
-                 displayMath: ['$$', '$$'], ,
-                 processEscapes: false
-             },
-             TeX: {
-                 TagSide: "right",
-                 TagIndent: ".8em",
-                 MultLineWidth: "85%",
-                 equationNumbers: {
-                     autoNumber: "AMS",
-                 },
-                 unicode: {
-                     fonts: "STIXGeneral,'Arial Unicode MS'"
-                 }
-             },
-             showProcessingMessages: false
-         });
-      </script>
-      -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
-<script>
-    renderMathInElement(document.body,{delimiters: [
-    					{left: "$$", right: "$$", display: true},
-					  {left: "$", right: "$", display: false}
-]});
-
+    MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX"],
+        tex2jax: {
+            inlineMath: [['$', '$'], ["\\(", "\\)"]],
+            displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+            processEscapes: false
+        },
+        TeX: {
+            TagSide: "right",
+            TagIndent: ".8em",
+            MultLineWidth: "85%",
+            equationNumbers: {
+                autoNumber: "AMS",
+            },
+            unicode: {
+                fonts: "STIXGeneral,'Arial Unicode MS'"
+            }
+        },
+        showProcessingMessages: false
+    });
 </script>
 {% endif %}
    </head>
