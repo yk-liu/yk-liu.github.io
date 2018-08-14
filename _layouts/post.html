@@ -5,6 +5,7 @@
 
 
 {% if page.mathjax %}
+<!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 <script>
@@ -31,6 +32,17 @@
              showProcessingMessages: false
          });
       </script>
+      -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
+<script>
+    renderMathInElement(document.body,{delimiters: [
+    					{left: "$$", right: "$$", display: true},
+					  {left: "$", right: "$", display: false}
+]});
+
+</script>
 {% endif %}
    </head>
 
