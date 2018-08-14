@@ -6,8 +6,6 @@
 <!--Load Mathjax-->
 {% if page.mathjax %}
 <!-- LaTeX support -->
-
-
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
        <script type="text/x-mathjax-config">
          MathJax.Hub.Config({
@@ -21,6 +19,15 @@
        </head>
 <!-- LaTeX Support -->
 {% endif %}
+
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ "/assets/css/sidebar.css"   | relative_url }}">
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+<script src="{{ '/assets/js/docs.min.js' | relative_url }}"></script>
+
    </head>
 
    
