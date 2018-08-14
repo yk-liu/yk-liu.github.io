@@ -11,7 +11,7 @@ personal_statement: I am interested in the topological properties of materials a
 user_title: Physics Undergraduate
 email: yingkai.liu@outlook.com
 
-markdown: Maruku
+markdown: kramdown
 #kramdown:
 #  auto_ids: true
 #  footnote_nr: 1
