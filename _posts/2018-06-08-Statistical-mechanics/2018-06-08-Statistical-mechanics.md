@@ -17,13 +17,13 @@ mathjax: true
 
 ==用量子力学和经典力学描述系统的差别, 虽然根本上说求别在于运动方程是薛定谔方程还是哈密顿方程. 但是因为我们可以仅用能量和粒子数来描述一个系统, 这两种描述的差别在于这两者的推论: 刘维尔定理是否成立,能量是不是连续分布, 粒子是不是全同的.???==
 
-## 相空间数密度$\rho$的性质
+## 相空间数密度 $ \rho $ 的性质
 
-$\rho$为相空间点$(p,q)$处的点密度.
+ $ \rho $ 为相空间点 $ (p,q) $ 处的点密度.
 $$
 N=\int_V{\tilde{\rho}{(p,q)}d\Gamma}
 $$
-$\rho$ 为归一化的密度
+ $ \rho $  为归一化的密度
 $$
 \rho=\int_V\frac{\tilde{\rho}}{N}d\Gamma
 $$
@@ -33,9 +33,9 @@ $$
 
 相空间的点(状态)不会凭空产生或消失, 研究的状态数是一定的. (这里的系统状态不一定是平衡的). 这个连续性条件可以表述为
 
-> 相空间内代表点$(p,q)$的含时演化速率为$\vec{v}(p.q)$
+> 相空间内代表点 $ (p,q) $ 的含时演化速率为 $ \vec{v}(p.q) $ 
 >
-> 则相空间体积$\omega$内代表点的数目该变量等于从体积$\omega$的表面$\sigma$逸出的点的数目
+> 则相空间体积 $ \omega $ 内代表点的数目该变量等于从体积 $ \omega $ 的表面 $ \sigma $ 逸出的点的数目
 
 即为:
 
@@ -43,7 +43,7 @@ $$
 \frac{\partial}{\partial t}\int_\omega \rho d \Gamma = -\int_\sigma \vec{v}\cdot \hat{n} d \sigma
 $$
 
-化为面积分, 并且注意到$\nabla=(\frac{\partial}{\partial q_i}\hat{q}_i,\frac{\partial}{\partial p_i}\hat{p}_i)$, 即$\nabla$算符只与对应的速度项作用
+化为面积分, 并且注意到 $ \nabla=(\frac{\partial}{\partial q_i}\hat{q}_i,\frac{\partial}{\partial p_i}\hat{p}_i) $ , 即 $ \nabla $ 算符只与对应的速度项作用
 $$
 \begin{align*}
 \vec{\nabla} \cdot \vec{v}&=(\frac{\partial}{\partial q_i}\hat{q}_i,\frac{\partial}{\partial p_i}\hat{p}_i)\cdot(\dot{q}_i \hat{q}_i,\dot{p}_i \hat{p}_i)\\
@@ -73,7 +73,7 @@ $$
 $$
 
 
-移项,得到积分$\int_\omega\left(\frac{\partial}{\partial t}\rho - \left(\vec{\nabla}\rho\right)\cdot\vec{v}\right)d \Gamma =0$,因此, 被积函数$\frac{\partial}{\partial t}\rho-\left(\vec{\nabla}\rho\right)\cdot\vec{v}=0$. 将被积函数化简得到:
+移项,得到积分 $ \int_\omega\left(\frac{\partial}{\partial t}\rho - \left(\vec{\nabla}\rho\right)\cdot\vec{v}\right)d \Gamma =0 $ ,因此, 被积函数 $ \frac{\partial}{\partial t}\rho-\left(\vec{\nabla}\rho\right)\cdot\vec{v}=0 $ . 将被积函数化简得到:
 $$
 \begin{align}
 \frac{\partial}{\partial t}\rho - \left(\vec{\nabla}\rho\right)\cdot\vec{v}&=\frac{\partial}{\partial t}\rho+\frac{\partial\rho}{\partial q_i}\dot{q}_i+\frac{\partial\rho}{\partial p_i}\dot{p}_i \notag\\
@@ -82,15 +82,15 @@ $$
 \end{align}
 $$
 
-因此相空间内的代表点的集体像一个不可压缩液体. **而且**$\rho$**是一个守恒量.**
+因此相空间内的代表点的集体像一个不可压缩液体. **而且** $ \rho $ **是一个守恒量.**
 
 ### 对系统的观测
 
-有两种得到系统的某个观测量$O$的方法
+有两种得到系统的某个观测量 $ O $ 的方法
 
-> 1. 对同一个系统连续地测量$O$的值. 测量次数很大时, 观测值的加权平均就是最后的观测量. 
+> 1. 对同一个系统连续地测量 $ O $ 的值. 测量次数很大时, 观测值的加权平均就是最后的观测量. 
 >
->    ​	假设测量对系统的影响任意小$\leftrightarrow$ 总共只有一次测量, 但假设测量发生在不同的时间, 测量值的平均
+>    ​	假设测量对系统的影响任意小 $ \leftrightarrow $  总共只有一次测量, 但假设测量发生在不同的时间, 测量值的平均
 >
 > 2. 对许多个"一样的"系统进行测量. 测量系统数目很大时, 观测值的加权平均就是最后的观测量.
 
@@ -104,17 +104,17 @@ $$
 >
 >实验的可重复性指的是 无论是在不同的时刻对系统进行的测量, (测量1)  还是对多个初始条件相同的系统进行的测量(测量2), 都应当满足物理定律随空间平移和随时间平移的不变性. 因而这两种测量的值相同是物理定律的要求
 
-由测量2, 测量系统足够多时, 测量的概率密度$\mathbb{P}(p,q)$收敛于这个系综内的系统分布函数$\rho(p,q)$, 得到
+由测量2, 测量系统足够多时, 测量的概率密度 $ \mathbb{P}(p,q) $ 收敛于这个系综内的系统分布函数 $ \rho(p,q) $ , 得到
 $$
 \mathbb{P}(p,q)d\Gamma =\rho(p,q)d \Gamma
 $$
-即概率密度就是系综内的系统分布函数. 要求系统的宏观量, 就要求系统的概率分布,就要求数密度函数$\rho(p,q)$的值.
+即概率密度就是系综内的系统分布函数. 要求系统的宏观量, 就要求系统的概率分布,就要求数密度函数 $ \rho(p,q) $ 的值.
 
-==**<u>也就是说, $\rho$包含了系统的全部信息</u>**==
+==**<u>也就是说,  $ \rho $ 包含了系统的全部信息</u>**==
 
 ### 系统的宏观量计算方法
 
-为了得到系统的观测量的表达式, 要从粒子满足的运动方程出发, 得到$\rho$的表达式, 才能第一性地计算相应的宏观量.
+为了得到系统的观测量的表达式, 要从粒子满足的运动方程出发, 得到 $ \rho $ 的表达式, 才能第一性地计算相应的宏观量.
 
 ```mermaid
 graph LR
@@ -125,7 +125,7 @@ D-->E(ρ)
 E-->F(观测量)
 ```
 
-## 系统的分类与对应的$\rho$, 宏观量的计算
+## 系统的分类与对应的 $ \rho $ , 宏观量的计算
 
 ### 系统的分类
 #### 孤立系
@@ -138,15 +138,15 @@ $$
 
 #### 封闭系
 
-总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$ . 封闭系的$\rho$要利用孤立系的平衡来得出.
+总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量 $ E_c $ 可以连续变化, 就要求整个孤立系的能量 $ E_i $ 非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量 $ E_r $ 很大,  $ E_c\ll E_r $  . 封闭系的 $ \rho $ 要利用孤立系的平衡来得出.
 
 #### 开放系
 
-按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量$E_c$和粒子数$N_c$可以连续变化, 就要求整个孤立系的能量$E_i$和粒子数$N_i$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $N_r$很大, $E_c\ll E_r$. 开放系的$\rho$也要利用孤立系的平衡来得出.
+按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量 $ E_c $ 和粒子数 $ N_c $ 可以连续变化, 就要求整个孤立系的能量 $ E_i $ 和粒子数 $ N_i $ 非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量 $ E_r $ ,  $ N_r $ 很大,  $ E_c\ll E_r $ . 开放系的 $ \rho $ 也要利用孤立系的平衡来得出.
 
 ### 孤立系
 
-#### 孤立系的$\rho$
+#### 孤立系的 $ \rho $ 
 
 所有的系统都可以看作是孤立系统的一部分. 下面讨论孤立系的观测量的表达式.
 
@@ -157,17 +157,17 @@ $$
 $$
 #### 孤立系的观测值计算
 
-##### $\ln{\rho}$的可加性
+#####  $ \ln{\rho} $ 的可加性
 
-经典力学的系统之间的区别, 只有系统的粒子数和总能量$(E,N)$就可以确定.
+经典力学的系统之间的区别, 只有系统的粒子数和总能量 $ (E,N) $ 就可以确定.
 
-把一个系统$S$划分为两个子系统$A$,$B$
+把一个系统 $ S $ 划分为两个子系统 $ A $ , $ B $ 
 $$
 N_S=\int{\rho_S \delta(E_S-\varepsilon_0) d \Gamma_S}\notag\\
 N_A=\int{\rho_A \delta(E_A-E_1) d \Gamma_A}\notag\\
 N_B=\int{\rho_B \delta(E_B-E_2) d \Gamma_B}\notag\\
 $$
-其中$E_S$和$E_A$,$E_B$的关系为:
+其中 $ E_S $ 和 $ E_A $ , $ E_B $ 的关系为:
 $$
 \begin{align*}
 N_S(\varepsilon_0)&=\int{ dE_a N_A(E_a) N_B(\varepsilon_0-E_a)}\\
@@ -184,9 +184,9 @@ E_A+E_B=E_S\notag\\
 d\Gamma_A\cdot d\Gamma_B = d\Gamma_S \label{classicalDGammaProduct}
 \end{align}
 $$
-式$(\ref{classicalDGammaProduct})$建立在系统粒子可区分的基础上.
+式 $ (\ref{classicalDGammaProduct}) $ 建立在系统粒子可区分的基础上.
 
-我们得到总系统与子系统间$\rho$的关系:
+我们得到总系统与子系统间 $ \rho $ 的关系:
 $$
 \rho_A\rho_B=\rho_S \notag
 $$
@@ -198,14 +198,14 @@ $$
 
 ##### 概率密度的表达式
 
-利用$\delta$函数的性质 式$(\ref{integralofdeltafx})$ $\int_{-\infty}^{+\infty}\delta(f(x))=\sum_{i}\frac{1}{\lvert f'(a_i)\rvert}, \quad  f(a_i)=0$ 得到:
+利用 $ \delta $ 函数的性质 式 $ (\ref{integralofdeltafx}) $   $ \int_{-\infty}^{+\infty}\delta(f(x))=\sum_{i}\frac{1}{\lvert f'(a_i)\rvert}, \quad  f(a_i)=0 $  得到:
 $$
 \begin{align}
 \int\delta(E-\varepsilon_0)d\Gamma&=\int\delta(E(p,q)-\varepsilon_0)[dp][dq] \notag\\
 &= \frac{1}{\left. \frac{dE}{d\Gamma} \right| _{E=\varepsilon_0}} \label{deltaE-E0}\\
 \end{align}
 $$
-利用式$(\ref{deltaE-E0})​$得到
+利用式 $ (\ref{deltaE-E0})​ $ 得到
 $$
 \begin{align*}
 \int \mathbb{P}d\Gamma &=\int\rho(p,q)d \Gamma\\
@@ -214,24 +214,24 @@ $$
 & = \rho(\varepsilon_0) \cdot  \frac{1}{\left. \frac{dE}{d\Gamma} \right| _{E=\varepsilon_0}} \\
 \end{align*}
 $$
-又有$\int \mathbb{P}d\Gamma =1​$, 得到$\rho(\varepsilon_0)​$
+又有 $ \int \mathbb{P}d\Gamma =1​ $ , 得到 $ \rho(\varepsilon_0)​ $ 
 $$
 \rho(\varepsilon_0) \cdot \frac{1}{\left. \frac{dE}{d\Gamma} \right| _{E=\varepsilon_0}} =1 \notag
 $$
-带入$\rho(p,q)d \Gamma=\rho(\varepsilon_0)\delta(E-\varepsilon_0)d\Gamma$  得到:
+带入 $ \rho(p,q)d \Gamma=\rho(\varepsilon_0)\delta(E-\varepsilon_0)d\Gamma $   得到:
 $$
 \rho(p,q)= \left. \frac{dE}{d\Gamma} \right| _{E=\varepsilon_0}  \delta(E-\varepsilon_0) = \frac{1}{\left. \frac{d\Gamma}{dE} \right| _{E=\varepsilon_0}} \delta(E-\varepsilon_0)  \notag
 $$
 ##### 概率密度用能态密度表达
 
-定义能态密度$\Omega$为相空间体积对能量的微分:
+定义能态密度 $ \Omega $ 为相空间体积对能量的微分:
 $$
 \begin{gather}
 \Omega(E)=\frac{d\Gamma}{dE}\\
 \mathrm{Volume\ in\ phase\ space}=\int d\Gamma=\int \Omega(E)dE
 \end{gather}
 $$
-这里只要系统给定, $\Omega$就是一个已知量.
+这里只要系统给定,  $ \Omega $ 就是一个已知量.
 
 有:
 $$
@@ -268,13 +268,13 @@ $$
 
 接下来研究孤立系的平衡问题,即: 什么时候一个孤立系可以被看成和另外一个孤立系等价?
 
-考虑两个系统$A$,$B$. 他们平衡的条件是净能量交换为零. 由于$\rho$包含了系统的全部信息, 只要两个系统构成的总系统的分布函数与两个孤立系构成的分布函数, 我们就说这两个系统处在平衡态.
+考虑两个系统 $ A $ , $ B $ . 他们平衡的条件是净能量交换为零. 由于 $ \rho $ 包含了系统的全部信息, 只要两个系统构成的总系统的分布函数与两个孤立系构成的分布函数, 我们就说这两个系统处在平衡态.
 
 这个定义和直观感受是一致的. 如果两个系统平衡, 把他们变成孤立系, 放置一段时间之后再相互作用, 二者的能量都不再变化.
 
-如果无论如何划分系统$S$,子系统$A$,$B$都处在平衡态,就说系统S是平衡的.
+如果无论如何划分系统 $ S $ ,子系统 $ A $ , $ B $ 都处在平衡态,就说系统S是平衡的.
 
-这个定义也和直观理解是一致的. 如果一个系统"处处相同"(无论如何划分系统$S$), 系统就是稳定的, 就处在平衡态.
+这个定义也和直观理解是一致的. 如果一个系统"处处相同"(无论如何划分系统 $ S $ ), 系统就是稳定的, 就处在平衡态.
 
 这样定义的问题在于, 到底有没有这样的状态? 系统可不可能"处处相同"?
 
@@ -284,9 +284,9 @@ $$
 
 以下分两种情况计算, 来得到系统平衡的条件.
 
-设总系统$S$ 的能量为$E_s$, 子系统$A$ 的能量为$E_a$ , 子系统$B$ 的能量为$E_b$.  $E_a$ , $E_b$, $E_s$ 为变量, $E_a+E_b=E_s$. 总系统的能量守恒, $E_s \equiv \varepsilon_s$. 在平衡时$E_a= \varepsilon_a, \quad E_b= \varepsilon_b $, 且有$\varepsilon_a+\varepsilon_b=\varepsilon_s$,
+设总系统 $ S $  的能量为 $ E_s $ , 子系统 $ A $  的能量为 $ E_a $  , 子系统 $ B $  的能量为 $ E_b $ .   $ E_a $  ,  $ E_b $ ,  $ E_s $  为变量,  $ E_a+E_b=E_s $ . 总系统的能量守恒,  $ E_s \equiv \varepsilon_s $ . 在平衡时 $ E_a= \varepsilon_a, \quad E_b= \varepsilon_b  $ , 且有 $ \varepsilon_a+\varepsilon_b=\varepsilon_s $ ,
 
-对于系统$A$,$S$概率密度归一化:
+对于系统 $ A $ , $ S $ 概率密度归一化:
 $$
 \begin{align*}
 1&=\underbrace{\int\cdots\int}_{n_s}\rho_sd\Gamma_s\\
@@ -295,7 +295,7 @@ $$
 1&=\underbrace{\int\cdots\int}_{n_a}\rho_ad\Gamma_a
 \end{align*}
 $$
-对于与系统$B$平衡的系统$A$:
+对于与系统 $ B $ 平衡的系统 $ A $ :
 $$
 \begin{align}
 \rho_a^{\mathrm{equilibrium}}&=\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_b \notag\\
@@ -311,7 +311,7 @@ $$
 $$
 \rho_a^{\mathrm{isolated}}=\frac{1}{\Omega_a(E_a)}\delta(E_a-\varepsilon_a) \label{rhoaisolated}
 $$
-结合$(\ref{rhoaequilibrium}), (\ref{rhoaisolated})$ 平衡时, $\rho_a^{\mathrm{equilibrium}}=\rho_a^{\mathrm{isolated}}$ 得到:
+结合 $ (\ref{rhoaequilibrium}), (\ref{rhoaisolated}) $  平衡时,  $ \rho_a^{\mathrm{equilibrium}}=\rho_a^{\mathrm{isolated}} $  得到:
 $$
 \delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(\varepsilon_s-E_a)}{\Omega_s(E_s)}
 $$
@@ -319,11 +319,11 @@ $$
 $$
 \delta(E_b-\varepsilon_b)=\frac{\Omega_b(E_b)\Omega_a(\varepsilon_s-E_b)}{\Omega_s(E_s)}
 $$
-又有$E_a+E_b=E_s, \quad \varepsilon_a+\varepsilon_b=\varepsilon_s$,得到:
+又有 $ E_a+E_b=E_s, \quad \varepsilon_a+\varepsilon_b=\varepsilon_s $ ,得到:
 $$
 \delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(E_b)}{\Omega_s(E_s)}=\delta(E_b-\varepsilon_b)
 $$
-再由$\delta$函数与$\Omega$的关系:
+再由 $ \delta $ 函数与 $ \Omega $ 的关系:
 $$
 \frac{1}{\Omega_a(\varepsilon_a)}\int\delta(E_a-\varepsilon_a)d\Gamma_a=1 \notag\\
 \int\delta(E_a-\varepsilon_a)d\Gamma_a=\Omega_a(\varepsilon_a) \notag\\
@@ -353,11 +353,11 @@ $$
 
 ### 封闭系
 
-总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量$E_c$可以连续变化, 就要求整个孤立系的能量$E_i$非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量$E_r$很大, $E_c\ll E_r$
+总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量 $ E_c $ 可以连续变化, 就要求整个孤立系的能量 $ E_i $ 非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量 $ E_r $ 很大,  $ E_c\ll E_r $ 
 
 在封闭系与热库达成平衡时, 他们可以看作是两个孤立系. 这样就回到了前面定义孤立系的平衡状态.
 
-#### 封闭系的$\rho$
+#### 封闭系的 $ \rho $ 
 
 仿照推导微正则分布的方法, 利用两个归一化条件, (总系统是一个孤立系)
 $$
@@ -368,7 +368,7 @@ $$
 &=\int \left(\int\rho_sd\Gamma_r\right)d\Gamma_c
 \end{align*}
 $$
-得到$\rho_c$的表达式(热库的能量基本不改变, 因而也是一个孤立系)
+得到 $ \rho_c $ 的表达式(热库的能量基本不改变, 因而也是一个孤立系)
 $$
 \begin{align*}
 \rho_c&= \int \rho_sd\Gamma_r\\
@@ -378,7 +378,7 @@ $$
 &=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}\\
 \end{align*}
 $$
-这样就把未知的孤立系的分布函数表示成了已知的$\Omega$的比值.
+这样就把未知的孤立系的分布函数表示成了已知的 $ \Omega $ 的比值.
 
 #### 封闭系的稳定
 
@@ -406,7 +406,7 @@ $$
 
 重新考虑整个体系. 系统平衡时没有能量流动. 把总系统S看作孤立系, 系统AB都是孤立系
 
-再利用$k_0\ln\Omega=S$, 将$\rho$化简. 这里利用前面得到的结论$\frac{1}{T}=\frac{d S}{d E}$, 进行计算.
+再利用 $ k_0\ln\Omega=S $ , 将 $ \rho $ 化简. 这里利用前面得到的结论 $ \frac{1}{T}=\frac{d S}{d E} $ , 进行计算.
 $$
 \begin{align*}
 \rho_c&=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}\\
@@ -417,12 +417,12 @@ $$
 &=e^{-\frac{1}{k_0 T_r}\cdot E_c}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}
 \end{align*}
 $$
-得到封闭系的$\rho$的表达式:
+得到封闭系的 $ \rho $ 的表达式:
 $$
 \rho_c(E)=e^{-\psi -\frac{E}{k_0 T}}, \quad \psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)
 $$
-其中$\psi$是与研究的子系统无关的量.
-由$\rho$的归一性:
+其中 $ \psi $ 是与研究的子系统无关的量.
+由 $ \rho $ 的归一性:
 $$
 \begin{align*}
 1&=\int\mathbb{P}(p,q)d\Gamma\\
@@ -430,20 +430,20 @@ $$
 &=\int e^{-\psi -\frac{E}{k_0 T}} d\Gamma\\
 \end{align*}
 $$
-可以得到$\psi$的表达式:
+可以得到 $ \psi $ 的表达式:
 $$
 \begin{align*}
 e^{\psi}=\int e^{-\frac{E}{k_0 T}} d\Gamma\\
 \end{align*}
 $$
-等号右边全是已知量. 因此定义$e^\psi=Z$, 将​$\rho$重写为:
+等号右边全是已知量. 因此定义 $ e^\psi=Z $ , 将​ $ \rho $ 重写为:
 $$
 \begin{align}
 Z&=e^{\psi}=\int e^{-\frac{E}{k_0 T}} d\Gamma \\
 \rho_c&=\frac{1}{Z}e^{-\frac{E}{k_0 T}}=\frac{e^{-\frac{E}{k_0 T}}}{\int e^{-\frac{E}{k_0 T}}  d\Gamma}
 \end{align}
 $$
-当两个封闭系可以看作是孤立系时, 这样一来,$\psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)$中二者之差并不独立于研究的系统.
+当两个封闭系可以看作是孤立系时, 这样一来, $ \psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right) $ 中二者之差并不独立于研究的系统.
 $$
 \begin{align}
 \quad \psi &=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)\\
@@ -460,7 +460,7 @@ $$
 \psi=-\frac{1}{ {k_0 T}}\left(E-T\cdot S(E)\right)\\
 \end{align}
 $$
-因此借助孤立系的熵, 我们定义了一个新的可加量$\psi=\frac{1}{k_0T}(E-TS)$
+因此借助孤立系的熵, 我们定义了一个新的可加量 $ \psi=\frac{1}{k_0T}(E-TS) $ 
 
 ##### 封闭系的划分
 
@@ -470,7 +470,7 @@ $$
 
 先考虑两个无关的封闭系A,B. 它们与同一个热库相接触, 但是彼此之间隔绝,没有能量粒子或其他交换.
 
-将一个封闭系S分为两个封闭系A和B. 由封闭系的定义, 他们是同一个封闭系$S$的不同部分,因此两个封闭子系的温度是同一个定值, 都等于总系统S的温度 $T_a=T_b$.
+将一个封闭系S分为两个封闭系A和B. 由封闭系的定义, 他们是同一个封闭系 $ S $ 的不同部分,因此两个封闭子系的温度是同一个定值, 都等于总系统S的温度  $ T_a=T_b $ .
 $$
 \begin{align*}
 \rho^{closed}_a&=\frac{1}{Z_a}e^{-\frac{E_a}{k_0T_a}}\\
@@ -487,7 +487,7 @@ $$
 &=\int \frac{1}{Z_s}e^{-\frac{E_s}{k_0T_s}} d\Gamma_b\\
 \end{align*}
 $$
-==能量的可加性始终成立???==, $E_a+E_b=E_s$.得到
+==能量的可加性始终成立???==,  $ E_a+E_b=E_s $ .得到
 
 $$
 \begin{align*}
@@ -500,14 +500,14 @@ $$
 \end{align*}
 $$
 
-得到Z是一个可乘量, $\ln Z$是一个可加量
+得到Z是一个可乘量,  $ \ln Z $ 是一个可加量
 $$
 \begin{align}
 Z_aZ_b&=Z_s\\
 \ln{Z_a}+\ln{Z_b}&=\ln{Z_s}
 \end{align}
 $$
-定义$\psi=\ln{Z}$, 则有$Z=e^{-\psi}$
+定义 $ \psi=\ln{Z} $ , 则有 $ Z=e^{-\psi} $ 
 
 ##### 封闭系的稳态
 
@@ -522,7 +522,7 @@ $$
 
 先定义能量的改变量:
 
-由于温度不会变化, 封闭系的能量变化只能是对外做功有位移$dq$ 导致的.
+由于温度不会变化, 封闭系的能量变化只能是对外做功有位移 $ dq $  导致的.
 $$
 \begin{align*}
 E_a&=F_a+TS_a\\
@@ -549,14 +549,14 @@ $$
 $$
 \frac{\partial S_1 }{\partial E_1}=\frac{\partial S_2}{\partial E_2}
 $$
-继续推导, 定义$P_a:=\frac{\partial H}{\partial q}$可以得到:
+继续推导, 定义 $ P_a:=\frac{\partial H}{\partial q} $ 可以得到:
 $$
 \begin{align}
 \frac{\partial H_a}{\partial q_a}dq_a&=-\frac{\partial H_b}{\partial q_b}dq_b\\
 P_adV_a&=-P_bdV_b&
 \end{align}
 $$
-由于整体是一个孤立系, $dV_a+dV_b=0$ 得到:
+由于整体是一个孤立系,  $ dV_a+dV_b=0 $  得到:
 $$
 P_a=P_b
 $$
@@ -597,9 +597,9 @@ $$
 
 ### 开放系
 
-按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 开放系的能量$E_o$和粒子数$n_o$可以连续变化, 就要求整个孤立系的能量$E_s$和粒子数$n_s$非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量$E_r$, $n-r$很大, $E_o\ll E_r$, $n_o\ll n_s$.
+按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 开放系的能量 $ E_o $ 和粒子数 $ n_o $ 可以连续变化, 就要求整个孤立系的能量 $ E_s $ 和粒子数 $ n_s $ 非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量 $ E_r $ ,  $ n-r $ 很大,  $ E_o\ll E_r $ ,  $ n_o\ll n_s $ .
 
-#### 开放系的$\rho$
+#### 开放系的 $ \rho $ 
 
 $$
 \begin{align}
@@ -611,9 +611,9 @@ S(E)&=\ln{\Omega(E)} \notag\\
 \end{align}
 $$
 
-仿照前面的做法, 注意到开放系粒子数$n_o$可以变化. 系统的微观分布函数也会随之改变. 也就是说, $\rho$和$\Omega$不仅仅是$E$的函数, 也是$n$的函数. 因此$\rho=\rho(n,E)$, $\Omega=\Omega(n,E)$
+仿照前面的做法, 注意到开放系粒子数 $ n_o $ 可以变化. 系统的微观分布函数也会随之改变. 也就是说,  $ \rho $ 和 $ \Omega $ 不仅仅是 $ E $ 的函数, 也是 $ n $ 的函数. 因此 $ \rho=\rho(n,E) $ ,  $ \Omega=\Omega(n,E) $ 
 
-为了方便地表示$\underbrace{\int\cdots\int}_{n_o}\rho_od\Gamma_o $和$\underbrace{\int\cdots\int}_{ {n_o}^\prime}{\rho_o}^\prime d{\Gamma_o}^\prime $的不同, 把积分 $\underbrace{\int\cdots\int}_{n_o}d\Gamma_o$记为$\int d\Gamma_{o,n_o}$, 为了清晰起见, 先保留$\underbrace{\int\cdots\int}_{n_o}d\Gamma_o$ 记法.
+为了方便地表示 $ \underbrace{\int\cdots\int}_{n_o}\rho_od\Gamma_o  $ 和 $ \underbrace{\int\cdots\int}_{ {n_o}^\prime}{\rho_o}^\prime d{\Gamma_o}^\prime  $ 的不同, 把积分  $ \underbrace{\int\cdots\int}_{n_o}d\Gamma_o $ 记为 $ \int d\Gamma_{o,n_o} $ , 为了清晰起见, 先保留 $ \underbrace{\int\cdots\int}_{n_o}d\Gamma_o $  记法.
 $$
 \begin{align*}
 1&=\underbrace{\int\cdots\int}_{n_s}\rho_{s}(s_o,E_o)d\Gamma_{s,n_s}\\
@@ -622,7 +622,7 @@ $$
 1&=\underbrace{\int\cdots\int}_{n_o}\rho_{o}(n_o,E_o)d\Gamma_{o,n_o}
 \end{align*}
 $$
-得到$\rho_{o,n_o}$的表达式:
+得到 $ \rho_{o,n_o} $ 的表达式:
 $$
 \begin{align*}
 \rho_{o,n_o}^{equlibrium}&=\underbrace{\int\cdots\int}_{n_r}\rho_{s}(s_o,E_o) d\Gamma_{r,n_r}\\
@@ -672,11 +672,11 @@ $$
 &=e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}
 \end{align*}
 $$
-得到$\rho$的表达式:
+得到 $ \rho $ 的表达式:
 $$
 \rho=-\zeta+\frac{\mu}{k_0T}N-\frac{1}{k_0T}E,\quad \zeta=-(S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s))
 $$
-同样得到$\zeta$的表达式, 并将$\rho$重写:
+同样得到 $ \zeta $ 的表达式, 并将 $ \rho $ 重写:
 $$
 Z=e^{\zeta}=\int e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}d\Gamma\\
 \rho=\frac{1}{Z}e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}=\frac{e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}}{\int e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}d\Gamma}
@@ -712,7 +712,7 @@ $$
 
 先考虑两个无关的开放系A,B. 它们与同一个热库和粒子库相接触, 但是彼此之间隔绝,没有能量粒子或其他交换.
 
-将一个开放系S分为两个开放系A和B. 由孤开放系的定义, 他们是同一个开放系$S$的不同部分. 开放系的温度和化学势是一个定值.  这两个开放系温度相等, 都等于总系统S的温度 $T_a=T_b$, ==化学势也都相等??? 这不是平衡条件吗??????? 为啥?????? 封闭系温度相等怎么来的???== 
+将一个开放系S分为两个开放系A和B. 由孤开放系的定义, 他们是同一个开放系 $ S $ 的不同部分. 开放系的温度和化学势是一个定值.  这两个开放系温度相等, 都等于总系统S的温度  $ T_a=T_b $ , ==化学势也都相等??? 这不是平衡条件吗??????? 为啥?????? 封闭系温度相等怎么来的???== 
 $$
 \rho_a^{uncoupled}=\frac{1}{Z_a}e^{-\frac{1}{k_0T}\mu_a\cdot n_a}e^{-\frac{1}{k_0T}E_a}\\
 \rho_b^{uncoupled}=\frac{1}{Z_b}e^{-\frac{1}{k_0T}\mu_b\cdot n_b}e^{-\frac{1}{k_0T}E_b}
@@ -726,7 +726,7 @@ $$
 &=\int \frac{1}{Z_s}e^{-\frac{1}{k_0T}\mu_s\cdot n_s}e^{-\frac{1}{k_0T}E_s} d\Gamma_b\\
 \end{align*}
 $$
- $E_a+E_b=E_s$, $T_a=T_b$, $\mu_a=\mu_b=\mu_s$ 得到
+  $ E_a+E_b=E_s $ ,  $ T_a=T_b $ ,  $ \mu_a=\mu_b=\mu_s $  得到
 $$
 \begin{align*}
 \rho^{uncoupled}_a&= \rho^{equilibrium}_a\\
@@ -736,7 +736,7 @@ $$
 &=\frac{Z_b}{Z_s}e^{-\frac{1}{k_0T}\mu_s n_a}e^{-\frac{1}{k_0T}E_a} 
 \end{align*}
 $$
-得到$\ln{Z}$同样是一个可加量
+得到 $ \ln{Z} $ 同样是一个可加量
 $$
 \begin{align}
 Z_aZ_b&=Z_s\\
@@ -771,7 +771,7 @@ $$
 
 考虑一个自由的粒子. 显然粒子数和能量都是守恒的. 把这个粒子看作一个系统, 这个系统显然不是统计力学研究的系统, 因为自由度数目太小.
 
-按图1思路, 经典粒子的微观态空间为$\mu$空间. 粒子的动量和能量关系有:
+按图1思路, 经典粒子的微观态空间为 $ \mu $ 空间. 粒子的动量和能量关系有:
 $$
 \begin{align}
 d\vec{p}&=\mathscr{A}_{D-1}p^{D-1}dp \notag \\
@@ -790,7 +790,7 @@ $$
 &= \int V \mathscr{A}_{D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}dE 
 \end{align*}
 $$
-这里的体积$V=\int d \vec{q}$就是粒子的"宏观体积", 表示粒子的运动范围.
+这里的体积 $ V=\int d \vec{q} $ 就是粒子的"宏观体积", 表示粒子的运动范围.
 
 得到
 $$
@@ -799,7 +799,7 @@ $$
 
 #### 经典宏观系统
 
-类似地, 对于N个质量均为$m$的粒子的宏观系统, 定义如下动量$\vec{\mathfrak{p}}$
+类似地, 对于N个质量均为 $ m $ 的粒子的宏观系统, 定义如下动量 $ \vec{\mathfrak{p}} $ 
 $$
 \vec{\mathfrak{p}}=(\vec{p}_1,\vec{p}_2,\cdots,\vec{p}_N)
 $$
@@ -807,7 +807,7 @@ $$
 $$
 E=\sum_i \frac{\vec{p}_i^2}{2m}= \frac{\vec{\mathfrak{p}}^2}{2m}
 $$
-仿照式子$(\ref{singleParticleEP})$ 得到
+仿照式子 $ (\ref{singleParticleEP}) $  得到
 $$
 \begin{align}
 d\vec{\mathfrak{p}}&=d\vec{p}_1\cdot d\vec{p}_2\cdot\cdots\cdot d\vec{p}_N \notag \qquad 这里仿照d\vec{p}=d(p_x,p_y,p_z)=dp_xdp_ydp_z \notag \\
@@ -817,7 +817,7 @@ d\vec{\mathfrak{p}}&=d\vec{p}_1\cdot d\vec{p}_2\cdot\cdots\cdot d\vec{p}_N \nota
 d\mathfrak{p}&= {\left(2m\right)}^{1/2}E^{-1/2}dE 
 \end{align}
 $$
-接着得到对于N个质量均为$m$的粒子的宏观系统相空间体积:
+接着得到对于N个质量均为 $ m $ 的粒子的宏观系统相空间体积:
 $$
 \begin{align*}
 \Psi &= \int d\Gamma\\
@@ -831,19 +831,19 @@ $$
 \end{align*}
 $$
 
-得到$\Gamma$和$E$的关系:
+得到 $ \Gamma $ 和 $ E $ 的关系:
 $$
 d\Gamma=V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE
 $$
-从而得到得到$\Omega$的表达式:
+从而得到得到 $ \Omega $ 的表达式:
 $$
 \Omega(E)=\frac{d\Gamma}{dE} =V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}} \notag
 $$
-注意在这里出现了所谓Gibbs佯谬, 这样计算得到的$\Omega$ 与实验得到的结果不符合. 必须乘上一个因子$1/N!$才吻合. 这个因子无法从经典力学推导出来. 出现这个因子的原因就是物理测量的系统(如气体等)微观粒子具有不可分辨的特性. 所谓不可分辨, 指的是粒子具有波的性质, 而微观粒子没有轨迹, 在波函数重叠的部分无法区分这两个粒子. ==那么统计力学的系统内的微观粒子满足这个条件吗? 统计力学假定微观粒子之间的相互作用足够微弱(在哪里假设了?), 在这个假设的前提下, 微观粒子是不能分辨的吗? 粒子之间不是没有相互作用吗? 还是说这个假设没有必要?==
+注意在这里出现了所谓Gibbs佯谬, 这样计算得到的 $ \Omega $  与实验得到的结果不符合. 必须乘上一个因子 $ 1/N! $ 才吻合. 这个因子无法从经典力学推导出来. 出现这个因子的原因就是物理测量的系统(如气体等)微观粒子具有不可分辨的特性. 所谓不可分辨, 指的是粒子具有波的性质, 而微观粒子没有轨迹, 在波函数重叠的部分无法区分这两个粒子. ==那么统计力学的系统内的微观粒子满足这个条件吗? 统计力学假定微观粒子之间的相互作用足够微弱(在哪里假设了?), 在这个假设的前提下, 微观粒子是不能分辨的吗? 粒子之间不是没有相互作用吗? 还是说这个假设没有必要?==
 
-带入$ND-1$维球面面积得到:
+带入 $ ND-1 $ 维球面面积得到:
 
-$\Gamma$函数的性质有[^$\Gamma$函数的性质]
+ $ \Gamma $ 函数的性质有[^ $ \Gamma $ 函数的性质]
 利用Gamma函数的性质
 $$
 \Gamma(x+1)\approx \sqrt{2\pi x}x^{x}e^{-x}\\
@@ -851,7 +851,7 @@ $$
 \therefore
 \Gamma(x)=\frac{\Gamma(x+1)}{x}\approx \sqrt{2\pi x}x^{x-1}e^{-x}
 $$
-得到ND-1维球面面积为$(N\rightarrow \infty)$
+得到ND-1维球面面积为 $ (N\rightarrow \infty) $ 
 $$
 \begin{align*}
 \mathscr{A}_{ND-1}
@@ -873,7 +873,7 @@ $$
 $$
 > 注意:
 >
-> 这里==相空间的体积对能量的微分==与==相空间体积内代表点数目对能量的微分==不同. 一旦系统满足的运动规律给定, 相空间体积对能量的微分就给定了. 而相空间体积内代表点的数目对能量的微分还依赖于系统的种类, 具体的系综等等其他因素(包含在$\rho$中)
+> 这里==相空间的体积对能量的微分==与==相空间体积内代表点数目对能量的微分==不同. 一旦系统满足的运动规律给定, 相空间体积对能量的微分就给定了. 而相空间体积内代表点的数目对能量的微分还依赖于系统的种类, 具体的系综等等其他因素(包含在 $ \rho $ 中)
 > $$
 > \begin{align*}
 > \mathrm{Volume\ in\ phase\ space}&=\int \phantom{\rho}d\Gamma=\int \phantom{\rho}\Omega(E)dE g\\
@@ -960,7 +960,7 @@ S(E)&=\ln{\Omega(E)} \notag\\
 
 \end{align}
 $$
-注意到这个式子在热力学极限$\frac{V}{N}\rightarrow \infty$下行为并不好.
+注意到这个式子在热力学极限 $ \frac{V}{N}\rightarrow \infty $ 下行为并不好.
 
 与实验不符合的是, 考虑下述情况:
 
@@ -984,7 +984,7 @@ $$
 
 ### 回顾
 
-在经典力学的描述中, 从刘维尔定理出发, 根据粒子的可区分性建立了$\ln\rho$的可加性. 然后依据观测量的期望值的定义, 将概率密度表示为$\rho$的函数. 通过定义能态密度$\Omega$, 求出了$\rho$. 接下来通过定义不同的平衡, 得到了不同的划分等价类的函数, 得到了一系列宏观量.
+在经典力学的描述中, 从刘维尔定理出发, 根据粒子的可区分性建立了 $ \ln\rho $ 的可加性. 然后依据观测量的期望值的定义, 将概率密度表示为 $ \rho $ 的函数. 通过定义能态密度 $ \Omega $ , 求出了 $ \rho $ . 接下来通过定义不同的平衡, 得到了不同的划分等价类的函数, 得到了一系列宏观量.
 
 量子力学与经典力学的每一点不同都将反映在上述的推导过程中. 但是上述推导过程的差别, 可以用一系列替换来完成. 下面来推导这些替换, 并说明如何从经典描述过渡到量子描述.
 
@@ -1014,7 +1014,7 @@ $$
 &=\operatorname{Tr}{\hat{\rho} \hat{O}}
 \end{align*}
 $$
-因此对应于经典力学, $\hat{\rho}$包含了量子力学描述的系统的全部信息.
+因此对应于经典力学,  $ \hat{\rho} $ 包含了量子力学描述的系统的全部信息.
 
 ### 量子系统的刘维尔定理
 
@@ -1066,7 +1066,7 @@ $$
 
 
 # 附录
-## $\delta$函数的性质
+##  $ \delta $ 函数的性质
 
 性质一:
 $$
@@ -1111,7 +1111,7 @@ $$
 $$
 ## 斯特灵公式
 
-斯特灵公式是对$N!$的近似公式. 斯特灵公式的优点在于, 随着N的增大, ==近似结果与真实值的误差可以任意小(好像不对)==. 在$N\rightarrow \infty$时, 可以取等号. 对于研究的系统, 总是认为N无穷大. 这就是分析可测量可以利用斯特灵公式的数学依据.
+斯特灵公式是对 $ N! $ 的近似公式. 斯特灵公式的优点在于, 随着N的增大, ==近似结果与真实值的误差可以任意小(好像不对)==. 在 $ N\rightarrow \infty $ 时, 可以取等号. 对于研究的系统, 总是认为N无穷大. 这就是分析可测量可以利用斯特灵公式的数学依据.
 $$
 \Gamma(z)=\left(z-\frac{1}{2}\right)\ln(z)-z+\frac{\ln 2 \pi}{2}
 $$
@@ -1120,7 +1120,7 @@ $$
 \ln(N!)=\sum_{x=1}^N{\ln{x}}\approx\int_1^N\ln{x}dx=N\ln{N}-N+1
 $$
 
-对$\Gamma$函数也有斯特灵公式
+对 $ \Gamma $ 函数也有斯特灵公式
 $$
 \Gamma(x+1)\approx \sqrt{2\pi x}x^{x}e^{-x}\\
 

@@ -1806,6 +1806,8 @@ img.mfp-img {
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(0,0,0,0.2);
 }
+
+
 /* - Menu - */
 .menu-items {
   margin: 0;
