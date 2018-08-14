@@ -13,6 +13,7 @@ mathjax: true
 ### 集合
 
 ### 群
+
 $$
 集合+ 群乘\begin{cases} 封闭\\结合律\\存在单位元\\有唯一逆元\\ \end{cases}\notag
 $$
@@ -58,6 +59,7 @@ $$
 所有$N\times M$矩阵在矩阵加法下构成线性向量空间.
 
 定义在圆上$(0 \le \varphi \le 2 \pi)$的所有函数构成线性向量空间.
+
 $$
 f(\varphi)=\sum_{-\infty}^{+\infty} a_m \exp{(i m \varphi)} \quad , m\in \mathbb{Z}
 $$
@@ -77,20 +79,24 @@ $$
 $$
 
 以上定义的矢量积,还可以加上不同的性质,以构成不同的代数,其中如果矢量积$\vec{A}\square\vec{B}$还满足
+
 $$
 \vec{A} \square \left(\vec{B} \square \vec{C}\right) = \left(\vec{A} \square \vec{B}\right) \vec{C}+\vec{B} \square \left( \vec{A} \square \vec{C} \right)
 $$
+
 那么这样的代数称为Lie代数,这时常常把矢量积$\vec{A}\square \vec{B}$写作$[\vec{A},\vec{B}]$ 
 
 ### 补充: 标量函数的变换算符
 
 对于标量函数, 对宗量(自变量)$x\in \mathbb{C}^n, \quad n\in \mathbb{N}$的变换, 总可以表示成对标量函数的变换, 即
+
 $$
 \begin{align*}
 x &\rightarrow \chi=Rx\\
  \Psi&\rightarrow \Phi=P_R\Psi
 \end{align*}
 $$
+
 上面大写的希腊字母表示函数值, $\psi(x)=\Psi, \quad \psi(y)=\Phi$, $P_R$是对标量$\Phi$(一个数)的变换. 
 
 注意 而$\Psi \in \mathbb{C}$是一个标量, 因此就若采用矩阵表示, $R$是一个$n\times n$矩阵, 作用于$x\in \mathbb{C}^n$, 而$P_R$是一个算符, 作用于$\psi(x)= \Psi \in \mathbb{C}$
@@ -98,22 +104,28 @@ $$
 又因为一般有$\Phi=P_R\Psi=P_R\psi(x)\neq \psi(\chi)$, 因而将$\Phi$记为$\Phi=\phi(\chi)$
 
 将上述关系整理为
+
 $$
 \begin{align*}
 x &\rightarrow \chi=Rx\\
 \psi(x)&\rightarrow \phi(\chi) =P_R\psi(\chi)
 \end{align*}
 $$
+
 因此$P_R$的作用是将函数$\phi$变换为一个新的函数$\psi$. 
 
 将上式改写之后可以得到
+
 $$
 \psi(x)={P_R}^{-1}\phi(x)=\psi(R^{-1}\chi)
 $$
+
 因此也可以说$P_R$的作用是"抵消" $R$的作用
+
 $$
 \phi(x)=P_R\psi(x)=\psi(R^{-1}x)
 $$
+
 标量函数变换算符与群元素一一对应
 
 ## 拓扑空间的相关概念,拓扑群
@@ -121,6 +133,7 @@ $$
 ### 拓扑空间
 
 一个集合$X$以及它的<u>子集的集合</u>(称为子集族(a family of sets)) $\mathcal{T}$ 构成的对$(X,\mathcal{T})$称为拓扑空间，要求
+
 $$
 \begin{cases}
 \emptyset , X \in \mathcal{T}\\
@@ -128,6 +141,7 @@ $$
  \mathcal{T} 中有限多个集合的交集 \in \mathcal{T} \quad (有限交)\
 \end{cases}\notag
 $$
+
 > 拓扑空间通过定义开集, 定义了集合的"划分方法". 开集指定了$X$中的一个点(元素)与哪些点是在一个集合(邻域)中的, 也就通过连通性得到了拓扑
 
 #### Hausdorff空间
@@ -140,6 +154,7 @@ $$
 #### 度规(metric)
 
 度规是一个二元函数$d: X \times X \rightarrow \mathbb{R}$, 将两个$X$中的元素映射到实数中, 也就是定义了$X$中任意两点的距离. 要使$d$是一个度规, 还要求$d$满足:
+
 $$
 \begin{cases}
 对称性 & d(x,y) = d(y,x)\\
@@ -147,6 +162,7 @@ $$
 三角形不等式 & d(x,y)+d(y,z) \ge d(x,z)
 \end{cases}\notag
 $$
+
 配备了度规的拓扑空间(Topological space endowed with a metric)天然有一个度规拓扑$(X , \mathcal{T})$, 其中$\mathcal{T}$中的子集为"开球", 这样的空间$(X , \mathcal{T})$称为度规空间.
 
 ### 流形
@@ -180,6 +196,7 @@ A[1维曲线]--> B[2维曲面]
 ### 李群定义
 
 李群$G$的定义:
+
 $$
 \begin{cases}
 G 是一个群\\
@@ -215,6 +232,7 @@ $$
 ##### 李群的左平移
 
 李群的左平移$L_g$是一个李群到自身的映射:
+
 $$
 L_g:  G \rightarrow G \qquad x \rightarrow g \circ x
 $$
@@ -245,12 +263,14 @@ graph LR
 由$\vec{v}_1 \rightarrow g_{\vec{v}_1}(t)$是一一映射, 可以定义 $\exp(\vec{v}_1)=g_{\vec{v}_1}(1)$为指数映射.
 
 指数映射的性质和定义在实数上的指数映射基本一致:
+
 $$
 \begin{align}
 \exp{\left[\left(s+t\right)\vec{v}_1\right]}&=\exp{\left(s\vec{v}_1\right)}\exp{\left(s\vec{v}_1\right)}\\
 \left[ \exp{\left(t \vec{v}_1\right)}\right]^{-1}&=\exp{\left(-t \vec{v}_1\right)}
 \end{align}
 $$
+
 自此我们建立了李群中部分元素和李群单位元切空间$T_e$的一一对应.
 
 #### 李群切空间到李群的邻域
@@ -274,16 +294,21 @@ $$
 ##### 建立Taylor公式
 
 定理: 存在$\mathfrak{g}$的原点邻域$N_\vec{e}$.满足若$\vec{x} \in N_\vec{e}$, 则 $0\le t \le 1 $都有$t \vec{x} \in N_\vec{e}$, 且对$G$上解析的函数$f$有:
+
 $$
 f(g\cdot \exp{\vec{x}})=\sum_{n=0}^{\infty} \frac{1}{n!}\left(\vec{x}^n f\right)(g)=\exp{(\vec{x})} f\left(g\right)
 $$
+
 取$g=e,f(x)=x$可以看出上式就是指数函数的展开
+
 $$
 \exp{\vec{x}} = \sum_{n=0}^{\infty}\frac{1}{n!} \vec{x}^n \label{exponetialExpension}
 $$
+
 注意到这里第一次出现了切空间的运算$\vec{x}^n$
 
 > 定理的证明如下(待完善)
+> 
 > $$
 > \begin{align*}
 > \left(\vec{x}f\right) g & = \left(\vec{x}f \cdot L_g\right)(\exp{t \vec{x}}|_{t=0}) \\
@@ -302,25 +327,32 @@ $$
 切空间运算是依赖于映射的. 之前通过指数映射我们得到了切空间的运算规律.
 
 应用指数运算和群的封闭性:  
+
 $$
 \begin{align}
 \exp{\vec{x}} \cdot \exp{\vec{y}} & = \exp{\vec{z}}\notag\\
 &=(1+\vec{x}+\frac{1}{2} \vec{x}^2+\cdots)(1+\vec{y}+\frac{1}{2} \vec{y}^2+\cdots) \label{expProduct}\\
 \end{align}
 $$
+
 若上式 $(\ref{expProduct})$ 中 $\vec{x}$ , $ \vec{y} $ 对易, 则:
+
 $$
 \begin{align*}
 \exp{\vec{x}} \cdot \exp{\vec{y}}&=(1+(\vec{x}+\vec{y})+\frac{1}{2!}(\vec{x}+\vec{y})^2+\frac{1}{3!}(\vec{x}+\vec{y})^3+\cdots)
 \end{align*}
 $$
+
 若上式 $(\ref{expProduct})$ 中 $\vec{x}$ , $ \vec{y} $ 不对易, 则
+
 $$
 \begin{align*}
 \exp{\vec{x}} \cdot \exp{\vec{y}}&=(1+(\vec{x}+\vec{y})+\frac{1}{2!}(\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})+\frac{1}{3!}(\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})+\cdots)
 \end{align*}
 $$
+
 为了将$\vec{z}$表示成$\vec{x}+\vec{y}$的形式, 我们计算由于不对易性导致式 $(\ref{expProduct})$ 的差:
+
 $$
 \begin{align}
 (\vec{x}+\vec{y})^n-\begin{matrix} \underbrace{ (\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})\cdot\cdots\cdot(\vec{x}+\vec{y})} \\ n 个(\vec{x}+\vec{y})\end{matrix}
@@ -333,8 +365,8 @@ $$
 \end{align}
 $$
 
-
 如果$\left[\vec{x},\vec{y}\right]$是一个复数(c-number), 利用BCH公式[^BCH公式], 得到二者之差为:
+
 $$
 \begin{align}
 &=\left(1+\left(\vec{x}+\vec{y}\right)+\frac{1}{2}\left(\vec{x}^2+2\vec{x}\cdot\vec{y}+\vec{y}^2\right)+\mathcal{O}(3)\right) \notag\\
@@ -347,8 +379,8 @@ $$
 \end{align}
 $$
 
-
 因此可以说,李代数是李群结构非对易性的线性化(即"低阶近似"), (是反应不对易性的第一项)
+
 $$
 \begin{align}
 \exp{(A+B)}&=\exp{A}\exp{B}\exp{\left(-\frac{1}{2}[A,B]\right)}\notag\\
@@ -377,10 +409,13 @@ graph LR
 ```
 
 李群的"无穷小元素"实际上不在李群中. 他们指的实际上是单位元$e$所在切空间$T_e$的切向量. 但是可以将切向量映射到在单位元附近的李群元素. 他们的积表现为矢量和.对应逆表现为矢量反向.
+
 $$
 \left(1+\delta\right)\left(1+\varepsilon\right) = 1+\delta + \varepsilon +\delta\varepsilon \approx 1 +\left(\delta + \varepsilon\right)\notag
 $$
+
 很显然的是, $\left(1+\delta\right)+\left(1+\varepsilon\right) \neq 1 +\left(\delta + \varepsilon\right)$ . 用$\Delta $, $E$表示他们对应的切矢量,即$\Delta = \exp{\delta}$, $E = \exp{\varepsilon}$
+
 $$
 \begin{align}
 \delta \cdot \varepsilon&=\exp{\Delta} \cdot \exp{E} \notag\\
@@ -389,6 +424,7 @@ $$
 &=\exp{\left(\Delta+ E\right)} \label{productLikeVectorSum}
 \end{align}
 $$
+
 因此式$(\ref{productLikeVectorSum})$才是"元素积<u>表现</u>(在一阶近似下)为(对应切矢量的)矢量和"的真正含义.
 
 ### 李群的生成元
@@ -421,14 +457,19 @@ Z---C
 #### 三维转动群的群元素与切向量
 
 三维转动群的变换矩阵构成一个李群.其中选取绕$z$轴旋转$\omega$角度的矩阵, 构成一个单参数李群:
+
 $$
 R_z(\omega)=\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\omega}&0\\0&0&1\end{bmatrix}
 $$
+
 单位元为
+
 $$
 R_z(0)=\begin{bmatrix}1&0&0\\ 0&1&0\\0&0&1\end{bmatrix}=\mathbf{I} \notag
 $$
+
 单位元的切空间内切向量为
+
 $$
 \begin{align*}
 \dot{\vec{R}}_z(0)=\left.\frac{d}{d\omega}R_z(\omega)\right|_{\omega=0}&=\left.\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\omega}&0\\0&0&0\end{bmatrix}\right|_{\omega=0}\\
@@ -436,7 +477,9 @@ $$
 &=\begin{bmatrix}0&-1&0\\1&0&0\\0&0&0\end{bmatrix}
 \end{align*}
 $$
+
 同样可以得到其余两个轴的转动关系,总结得到:
+
 $$
 \begin{align*}
 R_x(\omega)=\begin{bmatrix}1&0&0\\ 0&\cos{\omega}&-\sin{\omega}\\0&\sin{\omega}&\cos{\omega}\end{bmatrix}\qquad
@@ -449,6 +492,7 @@ R_z(\omega)=\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\ome
 $$
 
 以上就是三维转动李群生成元的$3 \times3$矩阵表示.  注意到
+
 $$
 \begin{align*}
 {\dot{\vec{R}}_x(0)}^2&=\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&-1&0\\0&0&-1\end{bmatrix}\\
@@ -461,6 +505,7 @@ $$
 #### 三维转动群的指数映射
 
 因此有切矢量的指数映射, 泰勒展开后得到群元素(式$(\ref{exponetialExpension})$的类比):
+
 $$
 \begin{align}
 \exp{\left(\omega\dot{\vec{R}}_x(0)\right)}&=\sum_n{\frac{1}{n!}\left(\omega\dot{\vec{R}}_x(0)\right)^n} \notag\\ 
@@ -483,10 +528,13 @@ $$
 因此按照之前的说法, 三维转动李群的切空间元素就是三个矩阵(实际上是Pauli矩阵的变形). 
 
 无穷小元素按照之前定义, 具有下述性质
+
 $$
 (1+\delta\mathbf{1})(1+\varepsilon\mathbf{1})=(1+(\delta+\varepsilon)\mathbf{1})
 $$
+
 而与切空间向量对应的群元素有
+
 $$
 \begin{align*}
 \exp{(\delta\vec{R}_x)}\cdot\exp{(\varepsilon\vec{R}_x)}&=\left(1+\delta\vec{R}_x+\frac{1}{2!}\delta^2{\vec{R}_x}^2+\cdots\right)\cdot\left(1+\varepsilon\vec{R}_x+\frac{1}{2!}\varepsilon^2{\vec{R}_x}^2+\cdots\right)\\
@@ -495,6 +543,7 @@ $$
 &=\exp{((\delta+\varepsilon)\vec{R}_x)}
 \end{align*}
 $$
+
 可以看出,在最低阶近似下, 切空间向量指数映射满足"无穷小元素"的运算规则:
 
 可以说, ==无穷小元素只是一个计算的手段, 可以方便地得到**标量算符**生成元应当满足的关系.== 
@@ -502,6 +551,7 @@ $$
 ##### 无穷小元素计算举例
 
 例如对转动群
+
 $$
 \begin{align*}
 R&=1+\varepsilon g& R&=\exp(\varepsilon g)\\
@@ -513,10 +563,10 @@ f(\omega)&=0 & f(\omega)&=0\\
 两者计算结果是一样的
 $$
 
-
 #### 三维转动群的"生成元"
 
 下面研究这个李群的无穷小生成元.
+
 $$
 \begin{align*}
 P_{R(\alpha)}\psi(x)&=\psi({R(\alpha)}^{-1}x)\\
@@ -525,8 +575,6 @@ P_{R(\alpha)}\psi(x)&=\psi({R(\alpha)}^{-1}x)\\
 &=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi(x)}{ {\partial x}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{ {\partial \alpha}^n} \alpha^n}\\
 \end{align*}
 $$
-
-
 
 ### 物理中的对称性生成元
 
@@ -551,5 +599,3 @@ $$
 [^海森堡量子力学]: Heisenberg's QM", P58, Baker-Campbell-Hausdorff Formula
 
 [^BCH公式]: https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula
-
-[^]
