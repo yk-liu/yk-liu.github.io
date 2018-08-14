@@ -1,44 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-			<title>{{ page.title }}</title>
-
-   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-        MathJax.Hub.Config({
-            config: ["MMLorHTML.js"],
-            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
-            jax: ["input/TeX"],
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                processEscapes: false
-            },
-            TeX: {
-                TagSide: "right",
-                TagIndent: ".8em",
-                MultLineWidth: "85%",
-                equationNumbers: {
-                   autoNumber: "AMS",
-                },
-                unicode: {
-                   fonts: "STIXGeneral,'Arial Unicode MS'"
-                }
-            },
-            showProcessingMessages: false
-        });
-</script>
-
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-</head>
-
-<body>
-  <p class="meta">{{ page.date | date_to_string }}</p>
-<div class="container">
-			
-			{{ content }}
-			
-</div>
-</body>
-
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+      <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css"/>
+      <script type="text/javascript"
+         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+         MathJax.Hub.Config({
+             config: ["MMLorHTML.js"],
+             extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+             jax: ["input/TeX"],
+             tex2jax: {
+                 inlineMath: [['$', '$'], ["\\(", "\\)"]],
+                 displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+                 processEscapes: false
+             },
+             TeX: {
+                 TagSide: "right",
+                 TagIndent: ".8em",
+                 MultLineWidth: "85%",
+                 equationNumbers: {
+                     autoNumber: "AMS",
+                 },
+                 unicode: {
+                     fonts: "STIXGeneral,'Arial Unicode MS'"
+                 }
+             },
+             showProcessingMessages: false
+         });
+      </script>
+   </head>
+   <body class="post-template" itemscope itemtype="https://schema.org/WebPage">
+      <div class="search-wrapper">
+         <div class="search-form">
+            <input type="text" id="search-input" class="search-field" placeholder="Search...">
+            <i id="search-close" class="fa fa-times-circle"></i>
+            <h4>Search results</h4>
+            <ul id="results-container" class="search-results post-list">
+            </ul>
+            <!-- /.search-results -->
+         </div>
+         <!-- /.search-form -->
+      </div>
+      <!-- ./search-wrapper -->
+      <button class="menu-button animated fade dosearch">
+      <i class="fa fa-search"></i>
+      </button> 
+      <div id="main" class="content" role="main" itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/Blog">
+         <div class="container">
+            <div class="row">
+               <article class="post col-md-8 col-md-offset-2 hentry" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                  {% if site.wpm %}
+                  {% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:site.wpm %}
+                  {% else %}
+                  {% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:180 %}
+                  {% endif %}
+                  {% assign modifiedtime = page.modified | date: "%Y%m%d" %}
+                  {% assign posttime = page.date | date: "%Y%m%d" %}
+                  <div class="post-body bordered-bottom" itemprop="description">
+                     {% if page.video %}
+                     {% assign video_embed = page.video | remove:'https://www.youtube.com/watch?v=' %}
+                     <iframe width="940" height="529" src="//www.youtube.com/embed/{{ video_embed }}?theme=light&amp;color=white" frameborder="0" allowfullscreen> </iframe>
+                     {% endif %}
+                     {{ content }}
+                     <br>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+         crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+         crossorigin="anonymous"></script>
+      <script type="text/javascript" src="/assets/js/plugins/jekyll-search.min.js"></script>
+      <script type="text/javascript" src="/assets/js/plugins/jquery.fitvids.js"></script>
+      <script type="text/javascript" src="/assets/js/plugins/jquery.waypoints.min.js"></script>
+      <script type="text/javascript" src="/assets/js/plugins/jquery.magnific-popup.min.js"></script>
+      <script type="text/javascript" src="/assets/js/main.js"></script>
+      <script type="text/javascript" src="/assets/js/script.js"></script>
+      <script type='text/javascript'>$(document).ready(function(){$(".time").text(function(a,b){return Math.round(parseFloat(b))})});</script>
+      <!-- Jekyll Simple Search option -->
+      <script>
+         SimpleJekyllSearch({
+              searchInput: document.getElementById('search-input'),
+              resultsContainer: document.getElementById('results-container'),
+              json: '{{ site.url}}/assets/json/search.json',
+              searchResultTemplate: '<li><article><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></article></li>',
+              noResultsText: '<p>Nothing found.</p>',
+              limit: 10,
+              fuzzy: false,
+              exclude: ['Welcome']
+            });
+         
+         (function( $, window, undefined ) {
+          
+           var bs = {
+                close: $("#search-close"),
+                searchform: $(".search-form"),
+                canvas: $("body"),
+                dothis: $('.dosearch')
+            };
+          
+          bs.dothis.on('click', function() {
+            $('.search-wrapper').css({ display: "block" });
+            bs.searchform.toggleClass('active');
+            bs.searchform.find('input').focus();
+            bs.canvas.toggleClass('search-overlay');
+          });
+          
+            bs.close.on('click', function() {
+              $('.search-wrapper').removeAttr( 'style' );
+              bs.searchform.toggleClass('active');
+              bs.canvas.removeClass('search-overlay');
+          });
+         })( jQuery, window );
+      </script>
+   </body>
 </html>
