@@ -4,8 +4,7 @@ title: 量子场论
 mathjax: true
 ---
 
-- TOC
-{:toc}
+# 量子场论
 
 ## 约定
 
