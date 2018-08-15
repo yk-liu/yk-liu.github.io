@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ "/assets/css/docs.css"   | relative_url }}">
+<link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+
+<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+<style>
+    #jumbotron-header {
+        background: {{ site.ui.header.color1 }};
+        background: linear-gradient(135deg, {{ site.ui.header.color1 }}, {{ site.ui.header.color2 }});
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+<script src="{{ '/assets/js/docs.min.js' | relative_url }}"></script>
+
+    </head>
+
+    <body>
+        <header class="navbar navbar-static-top bs-docs-nav" id="top">
+    <div class="container">
+        <div class="navbar-header" role="banner">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ 'index.html' | relative_url }}">{{ site.name }}</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                {% assign sorted_pages = site.pages | sort: "name" %}
+                {% for p in sorted_pages %}
+                    {% if p.isHome != true and p.hide != true and p.title !=  %}
+                        <li {% if page.title == p.title %}class="active"{% endif %}>
+                            <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% for p in site.links.header %}
+                    <li>
+                        <a href="{{ p.url }}">{{ p.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="bs-docs-container row">
+        <div class="col-md-12" role="main">
+            <div class="bs-docs-section">
+                {{ content }}
+            </div>
+        </div>
+
+        <div class="col-md-3 bs-docs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-docs-sidenav"></ul>
+
+            <a class="back-to-top" href="#top"> 
+            <i class="glyphicon glyphicon-chevron-up"></i>
+                Back to top
+            </a>
+        </div>
+    </div>
+</div>
+        {{ content }}
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+        <p>
+            Licensed under <a href="{{ site.license.software_url }}" target="_blank">{{ site.license.software }}</a>, documentation under <a href="{{ site.license.docs_url }}">{{ site.license.docs }}</a>.
+        </p>
+        <p>
+            Documentation template by <a href="http://getbootstrap.com">Bootstrap team</a>, generated with <a href="https://github.com/allejo/jekyll-docs-theme">Jekyll Docs Theme</a>
+        </p>
+
+        <ul class="bs-docs-footer-links muted">
+            {% if site.project.version %}
+                <li>Currently v{{ site.project.version }}</li>
+            {% endif %}
+            {% for l in site.links.footer %}
+                <li>&middot;</li>
+                <li>
+                    <a href="{{ l.url }}">{{ l.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</footer>
+
+    </body>
+
+
+</html>
