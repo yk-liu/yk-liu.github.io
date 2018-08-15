@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "random": false,
         "anim": {
           "enable": true,
-          "speed": 1,
+          "speed": 4,
           "opacity_min": 0.1,
           "sync": false
         }
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "anim": {
           "enable": false,
           "speed": 20,
-          "size_min": 0.1,
+          "size_min": 0.5,
           "sync": false
         }
       },
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "out_mode": "out",
         "bounce": false,
         "attract": {
-          "enable": false,
+          "enable": true,
           "rotateX": 600,
           "rotateY": 1200
         }
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "modes": {
         "grab": {
-          "distance": 150,
+          "distance": 200,
           "line_linked": {
             "opacity": 1
           }
