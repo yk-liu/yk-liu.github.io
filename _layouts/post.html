@@ -33,28 +33,7 @@
     </div>
 </div>
 {% include toc.html html=content %}
-<footer class="bs-docs-footer" role="contentinfo">
-    <div class="container">
-        <p>
-            Licensed under <a href="{{ site.license.software_url }}" target="_blank">{{ site.license.software }}</a>, documentation under <a href="{{ site.license.docs_url }}">{{ site.license.docs }}</a>.
-        </p>
-        <p>
-            Documentation template by <a href="http://getbootstrap.com">Bootstrap team</a>, generated with <a href="https://github.com/allejo/jekyll-docs-theme">Jekyll Docs Theme</a>
-        </p>
 
-        <ul class="bs-docs-footer-links muted">
-            {% if site.project.version %}
-                <li>Currently v{{ site.project.version }}</li>
-            {% endif %}
-            {% for l in site.links.footer %}
-                <li>&middot;</li>
-                <li>
-                    <a href="{{ l.url }}">{{ l.title }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</footer>
 
     </body>
 
