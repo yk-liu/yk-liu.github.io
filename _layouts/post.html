@@ -1,20 +1,26 @@
-<!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ "/assets/css/sidebar.css"   | relative_url }}">
+<link rel="stylesheet" href="{{ "/assets/css/sidebar.scss" | relative_url }}">
+
+<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
 <script src="{{ '/assets/js/docs.min.js' | relative_url }}"></script>
-<link rel="stylesheet" href="{{ "/assets/css/sidebar.css"   | relative_url }}">
-<link rel="stylesheet" href="{{ "/assets/css/sidebar.scss" | relative_url }}">
 
     </head>
 
-    <body>        
+    <body>
+
 
 <div class="container">
     <div class="bs-docs-container row">
@@ -26,9 +32,6 @@
 
         <div class="col-md-3 bs-docs-sidebar hidden-print" role="complementary">
             <ul class="nav bs-docs-sidenav">{% include toc.html html=content %}</ul>
-            llal
-            {% include toc.html html=content %}
-
             <a class="back-to-top" href="#top"> 
             <i class="glyphicon glyphicon-chevron-up"></i>
                 Back to top
@@ -36,8 +39,12 @@
         </div>
     </div>
 </div>
-       
+
+        {{ content }}
+
+
     </body>
 
 
 </html>
+
