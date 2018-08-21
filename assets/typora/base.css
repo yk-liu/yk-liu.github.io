@@ -1,0 +1,618 @@
+:root{
+    --bg-color:#ffffff;
+    --text-color:#333333;
+    --select-text-bg-color:#B5D6FC;
+    --select-text-font-color:auto;
+    --monospace:"Lucida Console",Consolas,"Courier",monospace
+}
+html{
+    font-size:14px;
+    background-color:#fff;
+    background-color:var(--bg-color);
+    color:#333;
+    color:var(--text-color);
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased
+}
+body{
+    margin:0;
+    padding:0;
+    height:auto;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    font-size:1rem;
+    line-height:1.42857143;
+    overflow-x:hidden;
+    background:inherit
+}
+iframe{
+    margin:auto
+}
+a.url{
+    word-break:break-all
+}
+a:active,a:hover{
+    outline:0
+}
+.in-text-selection,::selection{
+    background:#B5D6FC;
+    text-shadow:none;
+    background:var(--select-text-bg-color);
+    color:var(--select-text-font-color)
+}
+#write{
+    margin:0 auto 0;
+    height:auto;
+    width:inherit;
+    word-break:normal;
+    word-wrap:break-word;
+    position:relative;
+    white-space:normal;
+    padding-bottom:70px;
+    overflow-x:visible
+}
+.first-line-indent #write div,.first-line-indent #write li,.first-line-indent #write p{
+    text-indent:2em
+}
+.first-line-indent #write div :not(p):not(div),.first-line-indent #write div.md-htmlblock-container,.first-line-indent #write p *,.first-line-indent pre{
+    text-indent:0
+}
+.for-image #write{
+    padding-left:8px;
+    padding-right:8px
+}
+body.typora-export{
+    padding-left:30px;
+    padding-right:30px
+}
+@media screen and (max-width:500px){
+    body.typora-export{
+        padding-left:0;
+        padding-right:0
+    }
+    .CodeMirror-sizer{
+        margin-left:0!important
+    }
+    .CodeMirror-gutters{
+        display:none!important
+    }
+}
+#write>blockquote:first-child,#write>div:first-child,#write>figure:first-child,#write>ol:first-child,#write>p:first-child,#write>pre:first-child,#write>ul:first-child{
+    margin-top:30px
+}
+#write li>figure:first-child{
+    margin-top:-20px
+}
+#write ol,#write ul{
+    position:relative
+}
+img{
+    max-width:100%;
+    vertical-align:middle
+}
+button,input,select,textarea{
+    font-size:inherit;
+    color:inherit;
+    font:inherit
+}
+input[type=checkbox],input[type=radio]{
+    line-height:normal;
+    padding:0
+}
+*,:after,:before{
+    box-sizing:border-box
+}
+#write h1,#write h2,#write h3,#write h4,#write h5,#write h6,#write p,#write pre{
+    width:inherit
+}
+#write h1,#write h2,#write h3,#write h4,#write h5,#write h6,#write p{
+    position:relative
+}
+h1,h2,h3,h4,h5,h6{
+    page-break-after:avoid;
+    break-after:avoid-page;
+    page-break-inside:avoid;
+    orphans:2
+}
+p{
+    orphans:4
+}
+h1{
+    font-size:2rem
+}
+h2{
+    font-size:1.8rem
+}
+h3{
+    font-size:1.6rem
+}
+h4{
+    font-size:1.4rem
+}
+h5{
+    font-size:1.2rem
+}
+h6{
+    font-size:1rem
+}
+.md-math-block,.md-rawblock,h1,h2,h3,h4,h5,h6,p{
+    margin-top:1rem;
+    margin-bottom:1rem
+}
+.hidden{
+    display:none
+}
+.md-blockmeta{
+    color:#CCC;
+    font-weight:700;
+    font-style:italic
+}
+a{
+    cursor:pointer
+}
+sup.md-footnote{
+    padding:2px;
+    padding-left:4px;
+    padding-right:4px;
+    background-color:rgba(238,238,238,.7);
+    color:#555;
+    border-radius:4px;
+    cursor:pointer
+}
+sup.md-footnote a,sup.md-footnote a:hover{
+    color:inherit;
+    text-transform:inherit;
+    text-decoration:inherit
+}
+#write input[type=checkbox]{
+    cursor:pointer;
+    width:inherit;
+    height:inherit
+}
+figure{
+    overflow-x:auto;
+    margin:0;
+    max-width:calc(100% + 16px);
+    padding:0;
+    margin-left:0;
+    margin-top:1.2em;
+    margin-bottom:1.2em
+}
+figure>table{
+    margin:0!important
+}
+tr{
+    page-break-inside:avoid;
+    page-break-after:auto
+}
+thead{
+    display:table-header-group
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+    width:100%;
+    overflow:auto;
+    page-break-inside:auto;
+    text-align:left
+}
+table.md-table td{
+    min-width:80px
+}
+.CodeMirror-gutters{
+    border-right:0;
+    background-color:inherit
+}
+.CodeMirror{
+    text-align:left
+}
+.CodeMirror-placeholder{
+    opacity:.3
+}
+.CodeMirror pre{
+    padding:0 4px
+}
+.CodeMirror-lines{
+    padding:0
+}
+div.hr:focus{
+    cursor:none
+}
+#write pre{
+    white-space:pre-wrap
+}
+#write.fences-no-line-wrapping pre{
+    white-space:pre
+}
+#write pre.ty-contain-cm{
+    white-space:normal
+}
+.CodeMirror-gutters{
+    margin-right:4px
+}
+.md-fences{
+    font-size:.9rem;
+    position:relative!important;
+    display:block;
+    page-break-inside:avoid;
+    text-align:left;
+    overflow:visible;
+    white-space:pre;
+    background:inherit
+}
+.md-diagram-panel{
+    width:100%;
+    margin-top:10px;
+    text-align:center;
+    padding-top:0;
+    padding-bottom:8px;
+    overflow-x:auto
+}
+#write .md-fences.mock-cm{
+    white-space:pre-wrap
+}
+.md-fences.md-fences-with-lineno{
+    padding-left:0
+}
+#write.fences-no-line-wrapping .md-fences.mock-cm{
+    white-space:pre;
+    overflow-x:auto
+}
+.md-fences.mock-cm.md-fences-with-lineno{
+    padding-left:8px
+}
+.CodeMirror-line,twitterwidget{
+    page-break-inside:avoid
+}
+.footnotes{
+    opacity:.8;
+    font-size:.9rem;
+    margin-top:1em;
+    margin-bottom:1em
+}
+.footnotes+.footnotes{
+    margin-top:0
+}
+.md-reset{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:top;
+    background:0 0;
+    text-decoration:none;
+    text-shadow:none;
+    float:none;
+    position:static;
+    width:auto;
+    height:auto;
+    white-space:nowrap;
+    cursor:inherit;
+    -webkit-tap-highlight-color:transparent;
+    line-height:normal;
+    font-weight:400;
+    text-align:left;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+    box-sizing:content-box;
+    direction:ltr
+}
+li div{
+    padding-top:0
+}
+blockquote{
+    margin:1rem 0
+}
+li .mathjax-block,li p{
+    margin:.5rem 0
+}
+li{
+    margin:0;
+    position:relative
+}
+blockquote>:last-child{
+    margin-bottom:0
+}
+blockquote>:first-child,li>:first-child{
+    margin-top:0
+}
+.footnotes-area{
+    color:#888;
+    margin-top:.714rem;
+    padding-bottom:.143rem;
+    white-space:normal
+}
+#write .footnote-line{
+    white-space:pre-wrap
+}
+@media print{
+    body,html{
+        border:1px solid transparent;
+        height:99%;
+        page-break-after:avoid;
+        page-break-before:avoid
+    }
+    #write{
+        border-color:transparent!important;
+        margin-top:0
+    }
+    .typora-export *{
+        -webkit-print-color-adjust:exact
+    }
+    html.blink-to-pdf{
+        font-size:13px
+    }
+    .typora-export #write{
+        padding-left:1cm;
+        padding-right:1cm;
+        padding-bottom:0;
+        page-break-after:avoid
+    }
+    .typora-export #write:after{
+        height:0
+    }
+    @page{
+        margin-top:20mm;
+        margin-bottom:20mm;
+        margin-left:0;
+        margin-right:0
+    }
+}
+.footnote-line{
+    margin-top:.714em;
+    font-size:.7em
+}
+a img,img a{
+    cursor:pointer
+}
+pre.md-meta-block{
+    font-size:.8rem;
+    min-height:.8rem;
+    white-space:pre-wrap;
+    background:#ccc;
+    display:block;
+    overflow-x:hidden
+}
+p>img:only-child{
+    display:block;
+    margin:auto
+}
+p>.md-image:only-child{
+    display:inline-block;
+    width:100%;
+    text-align:center
+}
+#write .MathJax_Display{
+    margin:.8em 0 0 0
+}
+.md-math-block{
+    width:100%
+}
+.md-math-block:not(:empty):after{
+    display:none
+}
+[contenteditable=true]:active,[contenteditable=true]:focus{
+    outline:0;
+    box-shadow:none
+}
+.md-task-list-item{
+    position:relative;
+    list-style-type:none
+}
+.task-list-item.md-task-list-item{
+    padding-left:0
+}
+.md-task-list-item>input{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-left:-1.2em;
+    margin-top:calc(1em - 10px)
+}
+.math{
+    font-size:1rem
+}
+.md-toc{
+    min-height:3.58rem;
+    position:relative;
+    font-size:.9rem;
+    border-radius:10px
+}
+.md-toc-content{
+    position:relative;
+    margin-left:0
+}
+.md-toc-content:after,.md-toc:after{
+    display:none
+}
+.md-toc-item{
+    display:block;
+    color:#4183c4
+}
+.md-toc-item a{
+    text-decoration:none
+}
+.md-toc-inner:hover{
+    //text-decoration:underline
+}
+.md-toc-inner{
+    display:inline-block;
+    cursor:pointer
+}
+.md-toc-h1 .md-toc-inner{
+    margin-left:0;
+    font-weight:700
+}
+.md-toc-h2 .md-toc-inner{
+    margin-left:2em
+}
+.md-toc-h3 .md-toc-inner{
+    margin-left:4em
+}
+.md-toc-h4 .md-toc-inner{
+    margin-left:6em
+}
+.md-toc-h5 .md-toc-inner{
+    margin-left:8em
+}
+.md-toc-h6 .md-toc-inner{
+    margin-left:10em
+}
+@media screen and (max-width:48em){
+    .md-toc-h3 .md-toc-inner{
+        margin-left:3.5em
+    }
+    .md-toc-h4 .md-toc-inner{
+        margin-left:5em
+    }
+    .md-toc-h5 .md-toc-inner{
+        margin-left:6.5em
+    }
+    .md-toc-h6 .md-toc-inner{
+        margin-left:8em
+    }
+}
+a.md-toc-inner{
+    font-size:inherit;
+    font-style:inherit;
+    font-weight:inherit;
+    line-height:inherit
+}
+.footnote-line a:not(.reversefootnote){
+    color:inherit
+}
+.md-attr{
+    display:none
+}
+.md-fn-count:after{
+    content:"."
+}
+code,pre,samp,tt{
+    font-family:var(--monospace)
+}
+kbd{
+    margin:0 .1em;
+    padding:.1em .6em;
+    font-size:.8em;
+    color:#242729;
+    background:#fff;
+    border:1px solid #adb3b9;
+    border-radius:3px;
+    box-shadow:0 1px 0 rgba(12,13,14,.2),0 0 0 2px #FFF inset;
+    white-space:nowrap;
+    vertical-align:middle
+}
+.md-comment{
+    color:#a27f03;
+    opacity:.8;
+    font-family:monospace;
+    font-family:var(--monospace)
+}
+code{
+    text-align:left
+}
+a.md-print-anchor{
+    white-space:pre!important;
+    border-left:none!important;
+    border-right:none!important;
+    border-top:none!important;
+    border-bottom:none!important;
+    display:inline-block!important;
+    position:absolute!important;
+    width:1px!important;
+    right:0!important;
+    outline:0!important;
+    background:0 0!important;
+    text-decoration:initial!important;
+    text-shadow:initial!important
+}
+.md-inline-math .MathJax_SVG .noError{
+    display:none!important
+}
+.md-math-block .MathJax_SVG_Display{
+    display:block!important;
+    text-align:center;
+    margin:0;
+    position:relative;
+    text-indent:0;
+    max-width:none;
+    max-height:none;
+    min-width:0;
+    min-height:0;
+    min-width:100%;
+    width:auto;
+    overflow-y:hidden
+}
+.MathJax_SVG_Display,.md-inline-math .MathJax_SVG_Display{
+    display:inline-block!important;
+    width:auto;
+    margin:inherit
+}
+.MathJax_SVG .MJX-monospace{
+    font-family:monospace;
+    font-family:var(--monospace)
+}
+.MathJax_SVG .MJX-sans-serif{
+    font-family:sans-serif
+}
+.MathJax_SVG{
+    display:inline;
+    font-style:normal;
+    font-weight:400;
+    line-height:normal;
+    zoom:90%;
+    font-size-adjust:none;
+    text-indent:0;
+    text-align:left;
+    text-transform:none;
+    letter-spacing:normal;
+    word-spacing:normal;
+    word-wrap:normal;
+    white-space:nowrap;
+    float:none;
+    direction:ltr;
+    max-width:none;
+    max-height:none;
+    min-width:0;
+    min-height:0;
+    border:0;
+    padding:0;
+    margin:0
+}
+.MathJax_SVG *{
+    transition:none;
+    -webkit-transition:none;
+    -moz-transition:none;
+    -ms-transition:none;
+    -o-transition:none
+}
+.os-windows.monocolor-emoji .md-emoji{
+    font-family:"Segoe UI Symbol",sans-serif
+}
+.md-diagram-panel>svg{
+    max-width:100%
+}
+[lang=mermaid] svg,[lang=flow] svg{
+    max-width:100%
+}
+[lang=mermaid] .node text{
+    font-size:1rem
+}
+table tr th{
+    border-bottom:0
+}
+video{
+    max-width:100%;
+    display:block;
+    margin:0 auto
+}
+iframe{
+    max-width:100%;
+    width:100%;
+    border:none
+}
+.highlight td,.highlight tr{
+    border:0
+}
