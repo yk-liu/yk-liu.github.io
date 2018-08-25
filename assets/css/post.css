@@ -158,8 +158,7 @@ header {
   top: 0;
   bottom: 0;
   border-right: 1px solid #bbb;
-  text-align: right;
-  padding: 30px;
+  padding: 10px 30px;
   box-shadow: 1px 0 10px rgba(0,0,0,0.35),
               inset -1px 0 1px rgba(255,255,255,0.4);
 }
@@ -167,77 +166,20 @@ header {
 header h1 {
   text-shadow: 0 1px 1px #fff;
 }
-header ul {
-  margin: 20px 0;
-  background: -moz-linear-gradient(top, #ccc 0%, #ebebeb 50%, #f7f7f7 100%, #f7f7f7 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccc), color-stop(50%,#ebebeb), color-stop(100%,#f7f7f7), color-stop(100%,#f7f7f7)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ccc 0%,#ebebeb 50%,#f7f7f7 100%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ccc 0%,#ebebeb 50%,#f7f7f7 100%,#f7f7f7 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #ccc 0%,#ebebeb 50%,#f7f7f7 100%,#f7f7f7 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #ccc 0%,#ebebeb 50%,#f7f7f7 100%,#f7f7f7 100%); /* W3C */
-  display: inline-block;
-  border-radius: 8px;
-  border: 1px solid #bbb;
-  box-shadow: inset 1px 1px 1px rgba(255,255,255,.1),
-              1px 1px 1px rgba(0,0,0,0.25);
-  width: 194px;
-}
-header ul li {
-  display: inline;
-  float: left;
-}
-header ul li:first-child a {
-  text-indent: -500px;
-  overflow: hidden;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-left: none;
-}
-header ul li:last-child a {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-header ul li:first-child a:before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 12px;
-  height: 60px;
-  width: 64px;
-  background: url(../images/octocat.png) 0 0 no-repeat;
-}
-header ul li a {
-  display: inline-block;
-  color: #666;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  height: 50px;
-  position: relative;
-  width: 64px;
-  vertical-align: middle;
-  border-left: 1px solid #bbb;
-  text-shadow: 0 1px 1px rgba(255,255,255,.1);
-  -webkit-transition: background .2s;
-  font-family: helvetica, arial, sans-serif;
-  font-size: .8em;
-}
-header ul li a:hover {
-  background: rgba(255,255,255,.5);
-}
-header ul li a span {
-  display: block;
-  font-size: .4em;
-  text-transform: capitalize;
-  margin-top: 10px;
-  line-height: 10px;
-  font-weight: bold;
-}
 header h4 {
   color: #666;
   max-width: 350px;
   display: inline-block;
 }
+
+/* nav {
+  background-color: #FFF;
+  margin: 5px 0;
+  padding: 10px 30px;
+  border: 1px solid #E8E8E8;
+  border-radius: 3px;
+} */
+
 section {
   margin-left: 30%;
   padding: 50px;
