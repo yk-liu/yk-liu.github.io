@@ -4,14 +4,31 @@
       {% include head.html %}  
       {% include mathjax.html %}  
       {% include theme-vue.html%}
+      <!-- change font -->
+      <!-- <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'> -->
+      <!-- link to post.css -->
+      <link rel="stylesheet" href="{{ "/assets/css/post.css" | prepend: site.baseurl }}">
+      <!-- -->
    </head>
    
    {% include header.html %}
    
    <body>
-      <div class="container">
-         {{ content }}
-      </div>
+      <!-- this is actually side bar -->
+      <header>
+         <h1>Simple</h1>
+         <div>
+            <h4>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h4>
+         </div>
+         {% include toc.html html=content %}
+      </header>
+      
+      <section>
+         <div class="container">
+            {{ content }}
+         </div>
+      </section>
+      
    </body>
    
    {% include footer.html %} 
