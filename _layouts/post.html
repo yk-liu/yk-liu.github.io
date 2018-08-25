@@ -5,7 +5,7 @@
       {% include mathjax.html %}  
       {% include theme-vue.html%}
       <!-- change font -->
-      <!-- <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'> -->
+      <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
       <!-- link to post.css -->
       <link rel="stylesheet" href="{{ "/assets/css/post.css" | prepend: site.baseurl }}">
       <!-- -->
@@ -16,10 +16,7 @@
    <body>
       <!-- this is actually side bar -->
       <header>
-         <h1>Post</h1>
-         <div>
-            <h4>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h4>
-         </div>
+         <h1>{{ page.title }}</h1>
          {% include toc.html html=content %}
       </header>
       
