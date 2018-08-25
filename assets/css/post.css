@@ -84,6 +84,7 @@ a:hover { background: #ffc; }
 /* LAYOUT & THEME SPECIFIC
 ========================================================*/
 header {
+  color: #fff;
   display: inline-block;
   width: 15%;
   background: #1a222c;
@@ -98,16 +99,14 @@ header {
 }
 
 header h4 {
-  color: #fff;
   max-width: 350px;
   display: inline-block;
 }
 
 section {
-  color: #fff;
   top: 0;
   margin-left: 18%;
-  margin-right: 5%;
+  margin-right: 3%;
   padding: 50px;
 }
 
