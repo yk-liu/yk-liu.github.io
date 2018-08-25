@@ -97,11 +97,6 @@ header {
               inset -1px 0 1px rgba(255,255,255,0.4);
 }
 
-header h1 {
- color: #FFFFE0
-  text-shadow: 0 1px 1px #fff;
-}
-
 header h4 {
   color: #FFFFE0;
   max-width: 350px;
@@ -109,7 +104,7 @@ header h4 {
 }
 
 section {
-   top: 0;
+  top: 0;
   margin-left: 18%;
   margin-right: 5%;
   padding: 50px;
