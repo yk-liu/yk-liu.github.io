@@ -1,0 +1,24 @@
+sidebar 
+prototype: http://michaelparenteau.github.io/simple/
+css: http://michaelparenteau.github.io/simple/
+toc: https://github.com/dafi/jekyll-toc-generator
+
+homepage 
+prototype: https://vincentgarreau.com/particles.js/ && https://nrandecker.github.io/particle/
+
+404 page
+https://github.com/wayou/t-rex-runner
+
+
+TODO:
+404: https://github.com/coconauts/404-games
+sidebar : height issue with contents/scrolling? autofolding?/ nosidebar on phones
+footer
+header
+index page
+tag/catagories/archives pages
+more yml confg.
+
+seperate sidebar to include file?
+
+organize main.css?

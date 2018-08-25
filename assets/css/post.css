@@ -42,17 +42,11 @@ q:before, q:after {
 /* BASIC HTML
 ========================================================*/
 body {
-  background-color: #f7f7f7;
-  color: #666;
-  font-size: 65%;
   line-height: 1.5;
   font-family: 'PT Serif', serif;
   -webkit-font-smoothing: antialiased;
 }
 
-::selection {
-  background: #ffc;
-}
 
 /* FONT STUFF, LINKS, LISTS & TABLES
 ========================================================*/
@@ -99,6 +93,7 @@ header {
 }
 
 header h4 {
+  color: #fff;
   max-width: 350px;
   display: inline-block;
 }
