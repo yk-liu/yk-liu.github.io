@@ -86,7 +86,7 @@ a:hover { background: #ffc; }
 header {
   display: inline-block;
   width: 15%;
-  background: #2F4F4F;
+  background: #1a222c;
   position: sticky;
   left: 0;
   top: 0;
@@ -98,12 +98,13 @@ header {
 }
 
 header h4 {
-  color: #FFFFE0;
+  color: #fff;
   max-width: 350px;
   display: inline-block;
 }
 
 section {
+  color: #fff;
   top: 0;
   margin-left: 18%;
   margin-right: 5%;
