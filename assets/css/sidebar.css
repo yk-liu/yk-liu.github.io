@@ -58,18 +58,15 @@
 
 
 
-
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #1a222c; /* Match homepage*/
-    overflow: hidden;
-    width: 100%; /* 0 Full width */
+    background-color: #1a222c;
+    width: 100%;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -83,51 +80,11 @@
     color: black;
 }
 
-/* Add an active class to highlight the current page */
-.active {
+/* Add a color to the active/current link */
+.topnav a.active {
     background-color: #4CAF50;
     color: white;
 }
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
