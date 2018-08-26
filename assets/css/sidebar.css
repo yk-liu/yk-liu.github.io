@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 .mybarcontainer{
     height: 100%;
-    width: 0% ;/* 0 width - change this with JavaScript */
+    width: 0 ;/* 0 width - change this with JavaScript */
     overflow: hidden;
 =======
 /* The side navigation menu */
@@ -24,9 +24,13 @@
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
+<<<<<<< HEAD
     width: 0%; 
 =======
 >>>>>>> parent of 95bec4c... try hide scroll bar
+=======
+    width: 100%; 
+>>>>>>> parent of 157c768... try again hide sidebar scroll
     background-color: #1a222c; /* Match homepage*/
     color: #000;
     display: inline-block;
