@@ -6,7 +6,9 @@
       {% include theme-vue.html%}
       <!-- change font -->
       <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-      <!-- link to post.css -->
+      <!-- link to sidebar.css -->
+      <link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | prepend: site.baseurl }}">
+      <!-- link to topbar.css -->
       <link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | prepend: site.baseurl }}">
       <!-- -->
    </head>
@@ -16,16 +18,18 @@
    <header>
     <div class="topnav">
      <!-- Use any element to open the sidenav -->
-     <a style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TOC </a>
-     <a class="active" href="{{ site.baseurl }}">Top</a>
+     <a style="cursor:pointer" onclick="openNav()">&#9776; TOC </a>
+     <a class="active" href="{{ site.baseurl }}">Back to Top</a>
     </div>
    </header>
    
    <body>
       <!-- this is actually side bar -->
+      <div id="mybarcontainer">
       <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
          {% include toc.html html=content %}
+      </div>
       </div>
 
 
@@ -42,12 +46,12 @@
    
 <script>
 function openNav() {
-    document.getElementById("mySidenav").style.width = "15%";
-    document.getElementById("main").style.marginLeft = "18%";
+    document.getElementById("mybarcontainer").style.width = "20%";
+    document.getElementById("main").style.marginLeft = "22%";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mybarcontainer").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
 }
 
