@@ -12,14 +12,12 @@ user_title: Physics Undergraduate
 email: yingkai.liu@outlook.com
 
 markdown: kramdown
-#kramdown:
-#  auto_ids: true
-#  footnote_nr: 1
-#  entity_output: as_char
-#  toc_levels: 1..6
+kramdown:
+ auto_ids: true
+ footnote_nr: 1
+ entity_output: as_char
 
-# Links to include in top navigation
-# For external links add external: true
+
 links:
   - title: Home
     url: /
@@ -31,4 +29,25 @@ links:
     url: /Blog
   - title: Blog Tags
     url: /Blog/Tags
+    
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  
+author:
+  name:           Yingkai Liu
+  picture:        
+  # email:          
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:    Be Water
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  facebook:
+  github: "yk-liu"
+  linkedin:
+  instagram:
+  tumblr:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:
 
