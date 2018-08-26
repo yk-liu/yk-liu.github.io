@@ -6,6 +6,7 @@
     position: fixed;
     z-index: 2; /* Stay on top */
     top: 0; /* Stay at the top */
+    height: 8%;
 }
 
 /* Style the links inside the navigation bar */
