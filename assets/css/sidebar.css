@@ -1,5 +1,6 @@
 /* The side navigation menu */
 .sidenav {
+    display: none; /*hide initially*/
     height: 100%; /* 100% Full-height */
     width: 25%; 
     background-color: #1a222c; /* Match homepage*/
