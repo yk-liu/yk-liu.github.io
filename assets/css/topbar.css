@@ -3,7 +3,9 @@
 .topnav {
     background-color: #1a222c;
     width: 100%;
-    position: sticky;
+    position: fixed;
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
 }
 
 /* Style the links inside the navigation bar */

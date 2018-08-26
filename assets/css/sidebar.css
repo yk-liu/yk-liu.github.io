@@ -4,9 +4,10 @@
     width: 0%; 
     background-color: #1a222c; /* Match homepage*/
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 2; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
+    bottom: 0;
     display: inline-block;
     font-size: 18px;
     padding: 8px 5px; /* list padding nest*/
