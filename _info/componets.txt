@@ -15,7 +15,6 @@ prototype: https://vincentgarreau.com/particles.js/ && https://nrandecker.github
 404 page
 https://github.com/wayou/t-rex-runner
 
-
 TODO:
 404: https://github.com/coconauts/404-games
 sidebar : height issue with contents/scrolling? autofolding?/ nosidebar on phones
