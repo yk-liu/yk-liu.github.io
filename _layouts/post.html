@@ -8,18 +8,19 @@
       <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
       <!-- link to post.css -->
       <link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | prepend: site.baseurl }}">
+      <!-- link to topbar.css-->
+      <link rel="stylesheet" href="{{ "/assets/css/topbar.css" | prepend: site.baseurl }}">
       <!-- -->
    </head>
-   
    {% include header.html %}
    
-   <header>
+
     <div class="topnav">
      <!-- Use any element to open the sidenav -->
      <a style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TOC </a>
      <a class="active" href="{{ site.baseurl }}">Top</a>
     </div>
-   </header>
+
    
    <body>
       <!-- this is actually side bar -->

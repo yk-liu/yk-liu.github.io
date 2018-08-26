@@ -1,42 +1,12 @@
-<<<<<<< HEAD
-.mybarcontainer{
-    height: 100%;
-    width: 0 ;/* 0 width - change this with JavaScript */
-    overflow: hidden;
-=======
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0%; /* 0 width - change this with JavaScript */
->>>>>>> parent of 95bec4c... try hide scroll bar
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-<<<<<<< HEAD
-    padding-top: 30px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    box-shadow: 1px 0 10px rgba(0,0,0,0.35),
-                inset -1px 0 1px rgba(255,255,255,0.4);
-}
-
-
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-<<<<<<< HEAD
     width: 0%; 
-=======
->>>>>>> parent of 95bec4c... try hide scroll bar
-=======
-    width: 100%; 
->>>>>>> parent of 157c768... try again hide sidebar scroll
     background-color: #1a222c; /* Match homepage*/
     color: #000;
     display: inline-block;
     font-size: 18px;
     padding: 8px 5px; /* list padding nest*/
-    
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: scroll; /* Enable vertical scroll*/
     padding-top: 60px; /* Place content 60px from the top */
