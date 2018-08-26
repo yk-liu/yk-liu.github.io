@@ -1,15 +1,15 @@
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 0%; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #1a222c; /* Match homepage*/
-    
+    color: #000;
     display: inline-block;
-
+    font-size: 18px;
     padding: 8px 5px; /* list padding nest*/
     
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -20,15 +20,6 @@
                 inset -1px 0 1px rgba(255,255,255,0.4);
 }
 
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-}
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
@@ -84,99 +75,4 @@
 .topnav a.active {
     background-color: #4CAF50;
     color: white;
-}
-
-
-
-
-
-
-/* FONT STUFF, LINKS, LISTS & TABLES
-========================================================*/
-
-h1 {
-  font-size: 4.8em;
-  letter-spacing: -1px;
-}
-h2 { font-size: 4em; }
-h3 { font-size: 3em; }
-h4 { font-size: 2.4em; }
-h5 { font-size: 2.2em; }
-h6, p, blockquote, dt, dd { font-size: 2em; }
-li {
-  font-size: 1.8em;
-  line-height: 1.2;
-}
-
-pre, code {
-  font-family: Courier, monospace;
-  overflow: auto;
-}
-li *, p *, blockquote *, h6 * { font-size: 1em; }
-li pre, p pre { font-size: 0.8em; }
-
-a:hover { background: #ffc; }
-
-
-/* LAYOUT & THEME SPECIFIC
-========================================================*/
-header {
-  color: #fff;
-  display: inline-block;
-  width: 15%;
-  background: #1a222c;
-  position: sticky;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  border-right: 1px solid #bbb;
-  padding: 8px 5px;
-  box-shadow: 1px 0 10px rgba(0,0,0,0.35),
-              inset -1px 0 1px rgba(255,255,255,0.4);
-}
-
-header h4 {
-  color: #fff;
-  max-width: 350px;
-  display: inline-block;
-}
-
-section {
-  top: 0;
-  margin-left: 18%;
-  margin-right: 3%;
-  padding: 50px;
-}
-
-
-/* MEDIA QUERY MAGIC
-========================================================*/
-@media screen and (max-width: 1220px) { body { font-size: 60%; } }
-@media screen and (max-width: 1120px) { body { font-size: 55%; } }
-@media screen and (max-width: 1020px) { body { font-size: 50%; } }
-@media screen and (max-width: 820px) {
-  header {
-    width: auto;
-    display: block;
-    text-align: center;
-    bottom: auto;
-    padding: 10px 30px;
-    right: 0;
-    border-right: none;
-    border-bottom: 1px solid #bbb;
-    position: absolute;
-  }
-  header h4 {
-    max-width: 100% !important;
-    display: block;
-    margin: 0 ;
-    padding: 0;
-    font-size: 2em;
-  }
-  section {
-    padding: 200px 40px 40px;
-    margin: 0;
-    max-width: 768px;
-  }
-
 }
