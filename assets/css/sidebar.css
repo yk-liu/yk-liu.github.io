@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 .mybarcontainer{
     height: 100%;
     width: 0% ;/* 0 width - change this with JavaScript */
     overflow: hidden;
+=======
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0%; /* 0 width - change this with JavaScript */
+>>>>>>> parent of 95bec4c... try hide scroll bar
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
+<<<<<<< HEAD
     padding-top: 30px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     box-shadow: 1px 0 10px rgba(0,0,0,0.35),
@@ -17,15 +25,20 @@
 .sidenav {
     height: 100%; /* 100% Full-height */
     width: 0%; 
+=======
+>>>>>>> parent of 95bec4c... try hide scroll bar
     background-color: #1a222c; /* Match homepage*/
     color: #000;
-
+    display: inline-block;
     font-size: 18px;
     padding: 8px 5px; /* list padding nest*/
     
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: scroll; /* Enable vertical scroll*/
-
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 1px 0 10px rgba(0,0,0,0.35),
+                inset -1px 0 1px rgba(255,255,255,0.4);
 }
 
 
@@ -43,12 +56,6 @@
     margin-left: 50px;
 }
 
-.sidenav li {
-  font-size: 1.8em;
-  line-height: 1.2;
-}
-
-
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
@@ -59,4 +66,34 @@
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #1a222c;
+    width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
 }
