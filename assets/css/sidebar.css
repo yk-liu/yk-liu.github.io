@@ -1,6 +1,6 @@
 .mybarcontainer{
     height: 100%;
-    width: 0 ;/* 0 width - change this with JavaScript */
+    width: 0% ;/* 0 width - change this with JavaScript */
     overflow: hidden;
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
@@ -16,7 +16,7 @@
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 100%; 
+    width: 0%; 
     background-color: #1a222c; /* Match homepage*/
     color: #000;
 
