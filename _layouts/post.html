@@ -13,15 +13,12 @@
    
    {% include header.html %}
    
-   
-   
    <header>
     <div class="topnav">
-     <a class="active" href="{{ site.baseurl }}">Home</a>
+     <!-- Use any element to open the sidenav -->
      <a style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TOC </a>
+     <a class="active" href="{{ site.baseurl }}">Top</a>
     </div>
-   
-     
    </header>
    
    <body>
@@ -32,8 +29,7 @@
          {% include toc.html html=content %}
       </div>
 
-     <!-- Use any element to open the sidenav -->
-     <span onclick="openNav()">open</span>
+
 
       <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
       <div id="main">
