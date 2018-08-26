@@ -4,7 +4,7 @@
     background-color: #1a222c;
     width: 100%;
     position: fixed;
-    z-index: 1; /* Stay on top */
+    z-index: 2; /* Stay on top */
     top: 0; /* Stay at the top */
 }
 
