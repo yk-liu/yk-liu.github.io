@@ -4,7 +4,7 @@
     width: 0%; 
     background-color: #1a222c; /* Match homepage*/
     position: fixed; /* Stay in place */
-    z-index: 2; /* Stay on top */
+    z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     bottom: 0;
@@ -12,11 +12,10 @@
     font-size: 18px;
     padding: 8px 5px; /* list padding nest*/
     overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: hidden; /* hide vertical scroll bar?*/
     overflow-y: scroll; /* Enable vertical scroll*/
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    box-shadow: 1px 0 10px rgba(0,0,0,0.35),
-                inset -1px 0 1px rgba(255,255,255,0.4);
 }
 
 
