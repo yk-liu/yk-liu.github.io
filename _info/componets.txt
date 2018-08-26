@@ -3,6 +3,12 @@ prototype: http://michaelparenteau.github.io/simple/
 css: http://michaelparenteau.github.io/simple/
 toc: https://github.com/dafi/jekyll-toc-generator
 
+new sidebar: https://www.w3schools.com/howto/howto_js_sidenav.asp
+
+topbar: 
+prototype: https://www.w3schools.com/howto/howto_js_topnav.asp
+toggle: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+
 homepage 
 prototype: https://vincentgarreau.com/particles.js/ && https://nrandecker.github.io/particle/
 
