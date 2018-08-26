@@ -16,13 +16,12 @@
    {% include header.html %}
     <div class="topnav">
     <!-- Use any element to open the sidenav -->
-    <a style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TOC </a>
+    <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
     <a class="active" href="{{ site.baseurl }}">Top</a>
     </div>
    
       <!-- this is side bar -->
       <div id="mySidenav" class="sidenav">
-         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
          {% include toc.html html=content %}
       </div>
       
@@ -38,15 +37,17 @@
 
    
    <script>
-      function openNav() {
-          document.getElementById("mySidenav").style.display = "block";
-          document.getElementById("main").style.marginLeft = "24%";
-      }
-      
-      function closeNav() {
-          document.getElementById("mySidenav").style.display = "none";
-          document.getElementById("main").style.marginLeft = "3%";
-      }
+   
+   function ToggleTOC() {
+    var x = document.getElementById("mySidenav");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById("main").style.marginLeft = "24%";
+    } else {
+        x.style.display = "none";
+        document.getElementById("main").style.marginLeft = "3%";
+    }
+}
    </script>
    
    {% include footer.html %} 
