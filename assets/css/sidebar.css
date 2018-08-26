@@ -16,6 +16,7 @@
     overflow-y: scroll; /* Enable vertical scroll*/
     color: #fff;/*white font*/
     padding-top:10%;
+    padding-bottom: 5%;
 }
 
 
@@ -27,7 +28,7 @@
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
-    top: 1%;
+    top: 10%;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
