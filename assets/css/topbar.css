@@ -3,6 +3,7 @@
 .topnav {
     background-color: #1a222c;
     width: 100%;
+    position: sticky;
 }
 
 /* Style the links inside the navigation bar */
