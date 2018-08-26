@@ -14,6 +14,7 @@
     padding: 8px 5px; /* list padding nest*/
     overflow-x: scroll; /* Disable horizontal scroll */
     overflow-y: scroll; /* Enable vertical scroll*/
+    color: #fff;/*white font*/
 }
 
 
