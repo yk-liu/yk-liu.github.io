@@ -185,7 +185,7 @@ A[1维曲线]--> B[2维曲面]
 
 简单地说, 给一个拓扑空间配备一个性质足够好(可<u>微分</u>)的坐标映射, 就得到<u>微分</u>流形
 
-<img src="流形.png" style="zoom:50%" />
+<img src="{{page.url}}流形.png" style="zoom:50%" />
 
 (未完)
 
@@ -238,7 +238,7 @@ $$
 
 诱导出一个切空间的微分映射$dL_g$. 如图所示.
 
-<img src="切空间.png" style="zoom:30%" />
+<img src="{{page.url}}切空间.png" style="zoom:30%" />
 
 由此可以得到
 

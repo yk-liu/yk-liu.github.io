@@ -450,7 +450,7 @@ $$
 > 
 > 对$p_0$解析延拓到复平面, 根据$(t_x-t_y)$的符号, 选取积分路径$C_\pm$, 得到
 >
-> <img src="feynman-pro.png" style="zoom:50%" />
+> <img src="{{page.url}}feynman-pro.png" style="zoom:50%" />
 > 
 > $$
 > \begin{align*}
@@ -763,7 +763,7 @@ $$
 > \end{align*}
 > $$
 > 
-> <img src="Un.png" style="zoom:50%" />
+> <img src="{{page.url}}Un.png" style="zoom:50%" />
 >
 > 因此可以得到
 > 
