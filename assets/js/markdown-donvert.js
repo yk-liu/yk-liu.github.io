@@ -21,11 +21,18 @@ var result = string.replace("<img = ' ", "<img src=\"https://raw.githubuserconte
 // and put that behind
 string.replace("<img = ' ", "<img src=\"https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/");
 string2="{page.url}".replace("https://yk-liu.github.io/","")
-string2.replace("/","-")
+string2.replace("///g","/-")
+
 add "/" to the tail
 // convert all in-page reference to lower case, comply with kramdown
 // replace )[#latters-and-hypens]) to lowercase
+var string = "It's around August AND THEN I get an email",
 
+var modified = string.replace(")]#/\b[A-Z]{2,}\b/g", function(match) {
+    return match.toLowerCase();
+});
+
+console.log(modified);
 
 // highlight support
 
