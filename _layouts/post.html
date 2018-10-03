@@ -32,10 +32,12 @@
          (not used if you only want the sidenav to sit on top of the page -->
       <div id="main">
            <body>
-         <div style = "margin-right: 3%;padding: 50px" class="container">
-            {{ content }}
-         </div>
-               </body>
+              <div style = "margin-right: 3%;padding: 50px" class="container">
+                 Title: {{page.title}}
+                 Last Edit: {{page.LastEdit}}
+                 {{ content }}
+              </div>
+           </body>
       </div>
 
    
