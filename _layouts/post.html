@@ -10,7 +10,9 @@
       <link rel="stylesheet" href="{{ "/assets/css/topbar.css" | prepend: site.baseurl }}">
       <!-- link to siebar.css -->
       <link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | prepend: site.baseurl }}">
-      <!-- -->
+      <!-- link to backtotopbtn.css -->
+      <link rel="stylesheet" href="{{ "/assets/css/baktotopbtn.css" | prepend: site.baseurl }}">
+      <!--  -->
    </head>
    
    {% include header.html %}
@@ -27,6 +29,9 @@
       <div id="mySidenav" class="sidenav">
          {% include toc.html html=content %}
       </div>
+      
+      <!-- this is Back to Top Button -->
+      <button onclick="topFunction()" id="BackToTopBtn" title="Go to top">Top</button>
       
       <!-- Add all page content inside this div if you want the side nav to push page content to the right
          (not used if you only want the sidenav to sit on top of the page -->
