@@ -496,21 +496,6 @@ table tr td:last-child {
     margin-bottom: 0;
 }
 
-
-/* heighlight. */
-#write mark {
-    background-color:#EBFFEB;
-    border-radius: 2px;
-    padding: 2px 4px;
-    margin: 0 2px;
-    color: #222;
-    font-weight: 500;
-}
-
-#write del {
-    padding: 1px 2px;
-}
-
 .cm-s-inner .cm-link,
 .cm-s-inner.cm-link {
     color: #22a2c9;
@@ -552,25 +537,6 @@ table tr td:last-child {
     bottom: .375rem;
 }
 
-#write>h3.md-focus:before {
-    left: -1.5625rem;
-    top: .375rem;
-}
-
-#write>h4.md-focus:before {
-    left: -1.5625rem;
-    top: .285714286rem;
-}
-
-#write>h5.md-focus:before {
-    left: -1.5625rem;
-    top: .285714286rem;
-}
-
-#write>h6.md-focus:before {
-    left: -1.5625rem;
-    top: .285714286rem;
-}
 
 .md-image>.md-meta {
     /*border: 1px solid #ddd;*/
@@ -589,24 +555,3 @@ table tr td:last-child {
     margin-top: 20px;
     padding-bottom: 20px;
 }
-
-.sidebar-tabs {
-    border-bottom: none;
-}
-
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-}
-
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-}
-
-#md-notification:before {
-    top: 10px;
-}
-
