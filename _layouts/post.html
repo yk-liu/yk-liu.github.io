@@ -19,10 +19,9 @@
     <div class="topnav">
     <!-- Use any element to open the sidenav -->
     <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
-    <a onclick="BackToTop()" id="myBtn" title="Go to top">Back to Top</button>
-    <!-- future link to parent
+    
     <a class="active" href="{{ site.post }}">Posts</a>
-    -->
+    
     </div>
    
       <!-- this is side bar -->
@@ -63,8 +62,8 @@
 
    // When the user clicks on the button, scroll to the top of the document
    function topFunction() {
-       document.body.scrollTop = 0;
-       document.documentElement.scrollTop = 0;
+       document.body.scrollTop = 0;// For Safari
+       document.documentElement.scrollTop = 0;// For Chrome, Firefox, IE and Opera
    }
    
    function ToggleTOC() {
@@ -79,10 +78,6 @@
 }
    ToggleTOC()
 
-    function BackToTop() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
    </script>
    
    {% include footer.html %} 
