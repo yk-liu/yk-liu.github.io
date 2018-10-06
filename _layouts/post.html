@@ -14,39 +14,46 @@
       <link rel="stylesheet" href="{{ "/assets/css/backtotopbtn.css" | prepend: site.baseurl }}">
       <!--  -->
    </head>
-   
    {% include header.html %}
-    <div class="topnav">
-    <!-- Use any element to open the sidenav -->
-    <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
-    
-    <a class="active" href="{{ site.post }}">Posts</a>
-    
-    </div>
-   
-      <!-- this is side bar -->
-      <div id="mySidenav" class="sidenav">
-         {% include toc.html html=content %}
-      </div>
-      
-      <!-- this is Back to Top Button -->
-      <button onclick="topFunction()" id="BackToTopBtn" title="Go to top">&#10514; Top</button>
-      
-      <!-- Add all page content inside this div if you want the side nav to push page content to the right
-         (not used if you only want the sidenav to sit on top of the page -->
-      <div id="main">
-           <body>
-              <div style = "margin-right: 3%;padding: 50px" class="container">
-                 <p style="padding-bottom: .4rem;font-size: 2.2rem;line-height: 1.3;">
-                 {{page.title}}<p>
-                 <p style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
-                 Last Edit: {% if page.LastEdit %}{{ page.LastEdit | date: '%B %d, %Y' }}{% else %}{{page.date | date: '%B %d, %Y' }}{% endif %}
-                 </p>
-                 <hr>
-                 {{ content }}
-              </div>
-           </body>
-      </div>
+   <div class="topnav">
+      <!-- Use any element to open the sidenav -->
+      <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
+      <a class="active" href="{{ site.post }}">Posts</a>
+   </div>
+   <!-- this is side bar -->
+   <div id="mySidenav" class="sidenav">
+      {% include toc.html html=content %}
+   </div>
+   <!-- this is Back to Top Button -->
+   <button onclick="topFunction()" id="BackToTopBtn" title="Go to top">&#10514; Top</button>
+   <!-- Add all page content inside this div if you want the side nav to push page content to the right
+      (not used if you only want the sidenav to sit on top of the page -->
+   <div id="main">
+      <body>
+         <div style = "margin-right: 3%;padding: 50px" class="container">
+            <p style="padding-bottom: .4rem;font-size: 2.2rem;line-height: 1.3;">
+               {{page.title}}
+            <p>
+            <p style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
+               Last Edit: {% if page.LastEdit %}{{ page.LastEdit | date: '%B %d, %Y' }}{% else %}{{page.date | date: '%B %d, %Y' }}{% endif %}
+            </p>
+            <span>
+            Tags :
+               {% for tag in page.tags %}
+               {% capture tag_name %}{{ tag }}{% endcapture %}
+               <a href="/tag/{{ tag_name }}">
+                  <code class="highligher-rouge">
+                     <nobr>{{ tag_name }}</nobr>
+                  </code>
+                  &nbsp;
+               </a>
+               {% endfor %}
+            </span>
+            <hr>
+            {{ content }}
+         </div>
+      </body>
+   </div>
    {% include footer.html %} 
    <script src="{{ "/assets/js/PostJS.js" | prepend: site.baseurl }}"></script>
 </html>
