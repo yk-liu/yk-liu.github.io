@@ -1,7 +1,75 @@
 ---
 layout: default
 ---
-<div class="post">
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  {% include head.html %}
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+{% include tagCloud.html %}  
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
+        <a href="/">Home</a>
+      </li>
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+              <a href="{{ node.url }}">{{ node.title }}</a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <li class="sidebar-nav-item"><a href="{{ site.emailme }}">Contact Me</a></li>
+      <li class="sidebar-nav-item"><a href="{{ site.github.repo }}">Hosted by Github</a></li>
+    
+            <!-- social buttons -->
+      {% if site.github_username %}
+      <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none">
+        <i class="fa fa-fw fa-github"></i>
+      </a>
+      {% endif %}
+      {% if site.facebook_username %}
+      <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" style="text-decoration:none">
+        <i class="fa fa-fw fa-facebook"></i>
+      </a>
+      {% endif %}
+      {% if site.linkedin_username %}
+      <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" style="text-decoration:none">
+        <i class="fa fa-fw fa-linkedin"></i>
+      </a>
+      {% endif %}
+      {% if site.google_plus_username %}
+      <a href="https://plus.google.com/{{ site.google_plus_username }}" target="_blank" style="text-decoration:none">
+        <i class="fa fa-fw fa-google-plus"></i>
+      </a>
+      {% endif %}
+
+    </ul>
+    
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
 <h1>Tag: {{ page.tag }}</h1>
 <ul>
 {% for post in site.tags[page.tag] %}
@@ -12,3 +80,8 @@ layout: default
 </ul>
 </div>
 <hr>
+    </div>
+
+  </body>
+</html>
+
