@@ -298,7 +298,7 @@ summary{
     font-size:2em
 }
 .fa-inverse{
-    color:#fff
+    color:white
 }
 .fa-glass:before{
     content:"\f000"
@@ -3381,7 +3381,7 @@ sub,sup{
 .header{
     z-index:1;
     text-align:center;
-    color:#fff;
+    color:white;
     position:absolute;
     top:50%;
     left:50%;
@@ -3393,7 +3393,7 @@ sub,sup{
     font-size:50px;
     display:block;
     line-height:1;
-    color:#fff
+    color:white
 }
 @media only screen and (min-width:550px){
     .header .site-title{
@@ -3405,7 +3405,7 @@ sub,sup{
     font-size:20px;
     display:block;
     line-height:1;
-    color:#fff;
+    color:white;
     margin-top:10px
 }
 @media only screen and (min-width:550px){
@@ -3417,7 +3417,7 @@ sub,sup{
     margin:10px
 }
 .header-links .link{
-    color:#fff;
+    color:white;
     text-decoration:none;
     font-size:15px;
     margin:10px
@@ -3433,14 +3433,14 @@ sub,sup{
     text-align:center
 }
 .down,.header-icons .icon{
-    color:#fff;
+    color:white;
     text-align:center
 }
 .header-icons .icon{
     height:20px;
     padding:10px;
     border-radius:50%;
-    border:2px solid #fff;
+    border:2px solid white;
     transition:all .7s;
     width:20px;
     font-size:20px;
@@ -3448,7 +3448,7 @@ sub,sup{
 }
 .header-icons .icon:active,.header-icons .icon:hover{
     color:#1a222c;
-    background:#fff
+    background:white
 }
 @media only screen and (min-width:550px){
     .header-icons .icon{
@@ -3476,7 +3476,7 @@ sub,sup{
     transform:translate(-50%,-50%);
     width:100px;
     height:100px;
-    fill:#fff;
+    fill:white;
     -webkit-animation:pulse 1.3s infinite;
     animation:pulse 1.3s infinite
 }
@@ -3493,10 +3493,10 @@ sub,sup{
         width:80%
     }
 }
-.tech{
+.permlinks{
     margin:10px
 }
-.user{
+.lower{
     text-align:center;
     font-size:60px;
     display:flex;
@@ -3504,11 +3504,11 @@ sub,sup{
     flex-wrap:wrap;
     justify-content:space-between
 }
-.user p{
+.lower p{
     font-size:16px
 }
 @media only screen and (min-width:550px){
-    .user{
+    .lower{
         flex-wrap:nowrap;
         font-size:75px
     }
@@ -3517,37 +3517,7 @@ sub,sup{
     text-align:center;
     margin:5px auto
 }
-#projects{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    width:90%;
-    max-width:960px;
-    margin:0 auto
-}
-@media only screen and (min-width:550px){
-    #projects{
-        width:80%
-    }
-}
-.user-projects{
-    margin:20px auto
-}
-.user-projects img{
-    max-width:100%;
-    height:auto;
-    border-radius:5px
-}
-.user-projects h5,body{
-    margin:0
-}
-.user-projects li{
-    color:#1a222c;
-    font-size:1.1rem
-}
-.user-projects p{
-    margin-right:5px
-}
+
 @media only screen and (min-width:550px){
     .contents{
         margin-left:0;
@@ -3589,7 +3559,7 @@ sub,sup{
 .project-link:active,.project-link:hover{
     background-color:#54516a;
     border-color:#54516a;
-    color:#fff;
+    color:white;
     transition:color .3s ease-in,background-color .3s ease-in,border-color .3s ease-in
 }
 .footer{
@@ -3597,7 +3567,7 @@ sub,sup{
     padding:10px 0;
     margin-top:100px;
     text-align:center;
-    color:#fff
+    color:white
 }
 
  
