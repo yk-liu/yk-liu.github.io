@@ -22,7 +22,7 @@
    </div>
    <!-- this is side bar -->
    <div id="mySidenav" class="sidenav">
-      {% if page.toc != true}
+      {% if page.notoc}
          {% include toc.html html=content %}
       {% end if %}
    </div>
