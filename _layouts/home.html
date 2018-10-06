@@ -35,11 +35,13 @@
             <p></p>
             <p>Recent Notes</p>
             {% for post in site.posts limit:2 %}
-               <a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
+               <p><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
                   {% if post.description %}
-                     {{ post.description }}<br>
+                     {{ post.description }}
                   {% endif %}
+               </p>
             {% endfor %}
+            <br>
             <p></p>
             <p>Upcoming Notes</p>
             <p>K theory study notes</p>
