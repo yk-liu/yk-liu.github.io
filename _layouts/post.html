@@ -35,16 +35,16 @@
                {{page.title}}
             <p>
             <p style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
-               Last Edit: {% if page.LastEdit %}{{ page.LastEdit | date: '%B %d, %Y' }}{% else %}{{page.date | date: '%B %d, %Y' }}{% endif %}
+               Last Edit:  &nbsp {% if page.LastEdit %}{{ page.LastEdit | date: '%B %d, %Y' }}{% else %}{{page.date | date: '%B %d, %Y' }}{% endif %}
             </p>
             <p>
-            Tags :[
+            Tags:  &nbsp[
                {% for tag in page.tags %}
                {% capture tag_name %}{{ tag }}{% endcapture %}
                   <code class="highligher-rouge">
                      <nobr><a href="/tag/{{ tag_name }}">{{ tag_name }} </a></nobr>
                   </code>
-                  , 
+                  &nbsp
                {% endfor %}]
             </p>
             <hr>
