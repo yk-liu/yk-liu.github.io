@@ -34,7 +34,7 @@
             <h2><a href="/blog" title="Notes">Notes</a></h2>
             <p></p>
             <p>Recent Notes</p>
-            {% for post in site.posts limit:3 %}
+            {% for post in site.posts limit:1 %}
                <li><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
                   {% if post.description %}
                      {{ post.description }}
