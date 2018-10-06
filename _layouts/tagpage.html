@@ -9,38 +9,35 @@ layout: default
    <!-- -->
    <body>
       <div class="sidebar">
-         <div class="container sidebar-sticky">
-            <div class="sidebar-about">
-               <h1>{{ site.title }}</h1>
-               <p class="lead">{{ site.description }}</p>
-            </div>
-            {% include tagCloud.html %}  
-            <ul class="sidebar-nav">
-               <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
-               <a href="/">Home</a>
-               </li>
-               {% comment %}
-               The code below dynamically generates a sidebar nav of pages with
-               `layout: page` in the front-matter. See readme for usage.
-               {% endcomment %}
-               {% assign pages_list = site.pages %}
-               {% for node in pages_list %}
-               {% if node.title != null %}
-               {% if node.layout == "page" %}
-               <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
-                  <a href="{{ node.url }}">{{ node.title }}</a>
-               </li>
-               {% endif %}
-               {% endif %}
-               {% endfor %}
-               <li class="sidebar-nav-item"><a href="{{ site.emailme }}">Contact Me</a></li>
-               <li class="sidebar-nav-item"><a href="{{ site.github.repo }}">Hosted by Github</a></li>
-               <!-- social buttons -->
-               {% if site.github_username %}
-               <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none">
-               <i class="fa fa-fw fa-github"></i>
-               </a>
-               {% endif %}
+         <div class="sidebar-about">
+            <h1>{{ site.title }}</h1>
+            <p class="lead">{{ site.description }}</p>
+         </div>
+         {% assign rawtags = "" %}
+         {% for post in site.posts %}
+           {% assign ttags = post.tags | join:'|' | append:'|' %}
+           {% assign rawtags = rawtags | append:ttags %}
+         {% endfor %}
+         {% assign rawtags = rawtags | split:'|' | sort %}
+         {% assign site.tags = "" %}
+         {% for tag in rawtags %}
+           {% if tag != "" %}
+             {% if tags == "" %}
+               {% assign tags = tag | split:'|' %}
+             {% endif %}
+             {% unless tags contains tag %}
+               {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+             {% endunless %}
+           {% endif %}
+         {% endfor %}
+         <ul>
+            <!-- social buttons -->
+            {% if site.github_username %}
+            <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none">
+            <i class="fa fa-fw fa-github"></i>
+            </a>
+            {% endif %}
+            <!--
                {% if site.facebook_username %}
                <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" style="text-decoration:none">
                <i class="fa fa-fw fa-facebook"></i>
@@ -56,9 +53,9 @@ layout: default
                <i class="fa fa-fw fa-google-plus"></i>
                </a>
                {% endif %}
-            </ul>
-            <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
-         </div>
+               -->
+         </ul>
+         <p>{{ site.time | date: '%Y' }}</p>
       </div>
       <div class="content container">
          <div class="content">

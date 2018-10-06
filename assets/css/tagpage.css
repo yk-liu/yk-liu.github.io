@@ -17,7 +17,6 @@
   width: 50%;
 }
 
-
 /* Sidebar links */
 .sidebar a {
   color: white;
@@ -27,25 +26,8 @@
 .sidebar-about h1 {
   color: white;
   margin-top: 0;
-  font-family: 'Average', serif;
   font-weight: bold;
   font-size: 3.25rem;
-}
-
-/* Sidebar nav */
-.sidebar-nav {
-  padding-left: 0;
-  list-style: none;
-}
-.sidebar-nav-item {
-  display: block;
-}
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
-  text-decoration: underline;
-}
-.sidebar-nav-item.active {
-  font-weight: bold;
 }
 
 .content {
