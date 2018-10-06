@@ -51,4 +51,4 @@ author:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
 
-permalink: /:year/:month/:day/:title/
+permalink: none
