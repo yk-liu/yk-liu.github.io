@@ -13,23 +13,7 @@ layout: default
             <h1>{{ site.title }}</h1>
             <p class="lead">{{ site.description }}</p>
          </div>
-         {% assign rawtags = "" %}
-         {% for post in site.posts %}
-           {% assign ttags = post.tags | join:'|' | append:'|' %}
-           {% assign rawtags = rawtags | append:ttags %}
-         {% endfor %}
-         {% assign rawtags = rawtags | split:'|' | sort %}
-         {% assign site.tags = "" %}
-         {% for tag in rawtags %}
-           {% if tag != "" %}
-             {% if tags == "" %}
-               {% assign tags = tag | split:'|' %}
-             {% endif %}
-             {% unless tags contains tag %}
-               {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
-             {% endunless %}
-           {% endif %}
-         {% endfor %}
+         {% include tagCloud.html %}  
          <ul>
             <!-- social buttons -->
             {% if site.github_username %}
