@@ -7,5 +7,9 @@
    {% seo %}
    <!-- main style sheet -->
    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+   <!-- tags management -->
+   {% if site.tags != "" %}
+      {% include collecttags.html %}
+   {% endif %}
    
 </head>

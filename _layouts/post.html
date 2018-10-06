@@ -38,7 +38,7 @@
                Last Edit: {% if page.LastEdit %}{{ page.LastEdit | date: '%B %d, %Y' }}{% else %}{{page.date | date: '%B %d, %Y' }}{% endif %}
             </p>
             <p>
-            Tags :
+            Tags :[
                {% for tag in page.tags %}
                {% capture tag_name %}{{ tag }}{% endcapture %}
                <a href="/tag/{{ tag_name }}">
@@ -47,7 +47,7 @@
                   </code>
                   &nbsp;
                </a>
-               {% endfor %}
+               {% endfor %}]
             </p>
             <hr>
             {{ content }}
