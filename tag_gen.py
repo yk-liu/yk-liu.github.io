@@ -1,6 +1,10 @@
 import glob
 import os
 
+# run with command (in wsl)
+# cd /mnt/c/Users/[username]/Documents/GitHub/yk-liu.github.io && python3 tag_gen.py
+
+
 post_pattern = '_posts/**/*.md'
 tag_dir = 'tag/'
 
