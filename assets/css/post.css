@@ -78,7 +78,7 @@ a:hover { background: #ffc; }
 /* LAYOUT & THEME SPECIFIC
 ========================================================*/
 header {
-  color: #fff;
+  color: white;
   display: inline-block;
   width: 15%;
   background: #1a222c;
