@@ -1,25 +1,12 @@
-#!/usr/bin/env python
-
-'''
-tag_generator.py
-
-Copyright 2017 Long Qian
-Contact: lqian8@jhu.edu
-
-This script creates tags for your Jekyll blog hosted by Github page.
-No plugins required.
-'''
-
 import glob
 import os
 
-post_dir = '_posts/'
+post_pattern = '_posts/**/*.md'
 tag_dir = 'tag/'
 
-filenames = glob.glob(post_dir + '*md')
 
 total_tags = []
-for filename in filenames:
+for filename in glob.glob(post_pattern, recursive=True):
     f = open(filename, 'r')
     crawl = False
     for line in f:
