@@ -33,10 +33,14 @@
             <div class="tech">
             <h2><a href="/blog" title="Notes">Notes</a></h2>
             <p></p>
-            <p>recent notes</p>
-            {% for post in site.posts limit:1 %}
-            <p>{{ post.date | date_to_string }} » 
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
+            <p>Recent Notes</p>
+            {% for post in site.posts limit:3 %}
+               <li><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
+                  {% if post.description %}
+                     {{ post.description }}
+                  {% endif %}
+               </li>
+               {% endif %}
             {% endfor %}
             <p></p>
             <p>Upcoming Notes</p>
@@ -48,9 +52,7 @@
          
       </section>
       
-      <footer class="footer">
-         <p>Build with Jekyll </p>
-      </footer>
+     {% include footer.html %} 
       
       <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
       <script src="{{ "/assets/js/particles_conf.js" | prepend: site.baseurl }}"></script>
