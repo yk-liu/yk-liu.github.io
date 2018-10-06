@@ -37,7 +37,7 @@
             <p style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
                Last Edit: {% if page.LastEdit %}{{ page.LastEdit | date: '%B %d, %Y' }}{% else %}{{page.date | date: '%B %d, %Y' }}{% endif %}
             </p>
-            <span>
+            <p>
             Tags :
                {% for tag in page.tags %}
                {% capture tag_name %}{{ tag }}{% endcapture %}
@@ -48,7 +48,7 @@
                   &nbsp;
                </a>
                {% endfor %}
-            </span>
+            </p>
             <hr>
             {{ content }}
          </div>
