@@ -461,6 +461,7 @@ code, tt {
 /* code fence */
 div.highlight {
  background-color: #f8f8f8;
+ font-family: Roboto Mono
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
