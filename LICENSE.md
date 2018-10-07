@@ -1,4 +1,4 @@
-BSD 2-Clause License
+Everything in this repository except in the _post folder is under The BSD 2-Clause License
 
 Copyright (c) 2018, Yingkai Liu
 All rights reserved.
