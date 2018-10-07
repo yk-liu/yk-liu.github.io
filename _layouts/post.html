@@ -56,9 +56,10 @@
             </p>
             <hr>
             {{ content }}
+            {% include footer.html %} 
          </div>
       </body>
    </div>
-   {% include footer.html %} 
+   
    <script src="{{ "/assets/js/PostJS.js" | prepend: site.baseurl }}"></script>
 </html>
