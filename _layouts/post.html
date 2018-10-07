@@ -22,9 +22,11 @@
    </div>
    <!-- this is side bar -->
    <div id="mySidenav" class="sidenav">
+      {% comment %}
       {% if page.notoc}
          {% include toc.html html=content %}
       {% end if %}
+      {% endcomment %}
    </div>
    <!-- this is Back to Top Button -->
    <button onclick="topFunction()" id="BackToTopBtn" title="Go to top">&#10514; Top</button>
