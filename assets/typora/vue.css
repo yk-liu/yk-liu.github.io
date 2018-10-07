@@ -457,6 +457,11 @@ code, tt {
     background-color: #f8f8f8;
 }
 
+
+/* code fence */
+div.highlight {
+ background-color: #f8f8f8;
+}
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
