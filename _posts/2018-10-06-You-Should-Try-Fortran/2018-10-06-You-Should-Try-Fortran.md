@@ -29,14 +29,14 @@ My first reaction was overwhelmed ecstasy. With C++'s all kinds of [sorting meth
 > 
 > int main()
 > {
->   std::cout << "Hello, world!\n";
+>     std::cout << "Hello, world!\n";
 > }
 > ```
 >
 
 > Python hello world
 > ```python
->  print("Hello, world!")
+> print("Hello, world!")
 > ```
 >
 
