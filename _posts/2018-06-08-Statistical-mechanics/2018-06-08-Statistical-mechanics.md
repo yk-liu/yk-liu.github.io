@@ -3,8 +3,8 @@ layout: post
 title: 第一性原理热统(未完成)
 mathjax: true
 category: Blog
-tags: Statistcal-mechanics Firt-Principle
-description: My interpretation on one-forms
+tags: Statistcal-mechanics First-Principle
+description: My attempt at building Statistcal Mechanics from First Principles
 ---
 
 # 第一性原理热统(未完成)
