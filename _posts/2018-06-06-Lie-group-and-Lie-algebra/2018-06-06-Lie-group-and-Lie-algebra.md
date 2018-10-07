@@ -2,6 +2,9 @@
 layout: post
 title: 李群和李群的李代数
 mathjax: true
+category: Blog
+tags: Lie-algrbra Lie-group
+description: 
 ---
 
 # 李群和李群的李代数

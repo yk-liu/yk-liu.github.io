@@ -1,5 +1,8 @@
 ---
 title : Fortran with VS2017
+category: Blog
+tags: Fortran Coding
+description: Instructions on using Fortran with VS2017
 ---
 
 # Fortran with VS2017

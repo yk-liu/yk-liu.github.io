@@ -2,6 +2,9 @@
 layout: post
 title: 第一性原理热统(未完成)
 mathjax: true
+category: Blog
+tags: Statistcal-mechanics Firt-Principle
+description: My interpretation on one-forms
 ---
 
 # 第一性原理热统(未完成)
