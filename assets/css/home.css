@@ -3494,7 +3494,9 @@ sub,sup{
     }
 }
 .permlinks{
-    margin:10px
+    margin:10px;
+    width:50%;
+    text-align:left
 }
 .lower{
     text-align:center;
