@@ -23,8 +23,8 @@ hr{
     height:0;
     overflow:visible
 }
-kbd,pre,samp{
-    font-family:monospace,monospace;
+kbd,samp{
+    font-family:monospace;
     font-size:1em
 }
 a{
