@@ -12,6 +12,10 @@
       <link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | prepend: site.baseurl }}">
       <!-- link to backtotopbtn.css -->
       <link rel="stylesheet" href="{{ "/assets/css/backtotopbtn.css" | prepend: site.baseurl }}">
+      <!-- tags management -->
+      {% if site.tags != "" %}
+         {% include collectTags.html %}
+      {% endif %}
       <!--  -->
    </head>
    {% include header.html %}
