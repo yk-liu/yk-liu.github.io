@@ -6,7 +6,7 @@ import os
 
 
 post_pattern = '_posts/**/*.md'
-tag_dir = 'tag/'
+tag_dir = 'tags/'
 
 
 total_tags = []
