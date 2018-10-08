@@ -3,7 +3,7 @@
 {% for tag in tags %}
  <span class="site-tag">
     <a href="/tag/{{ tag | first | slugify }}/"  style="text-decoration: none;">
-       <code class="highligher-rouge" style="font-size: {{ tag | last | size  |  times: 2 | plus: 80  }}%">
+       <code class="highligher-rouge" style="font-weight: bold;font-size: {{ tag | last | size  |  times: 2 | plus: 80  }}%">
           <nobr>{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</nobr>
        </code>
     </a> &nbsp;
