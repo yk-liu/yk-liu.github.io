@@ -13,9 +13,7 @@
       <!-- link to backtotopbtn.css -->
       <link rel="stylesheet" href="{{ "/assets/css/backtotopbtn.css" | prepend: site.baseurl }}">
       <!-- tags management -->
-      {% if site.tags != "" %}
-         {% include collectTags.html %}
-      {% endif %}
+
       <!--  -->
    </head>
    {% include header.html %}
@@ -48,6 +46,7 @@
                    {{page.date | date: '%B %d, %Y' }}
                  {% endif %}
             </p>
+            {% if site.tags %}
             <p>
             Tags:  &nbsp[
                {% for tag in page.tags %}
@@ -58,6 +57,7 @@
                   &nbsp
                {% endfor %}]
             </p>
+            {% endif %}
             <hr>
             {{ content }}
             {% include footer.html %} 
