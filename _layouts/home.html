@@ -12,7 +12,7 @@
                <span class="site-description">{{site.user_title}}</span>
             </h1>
             <div class="header-links">
-               <a class="link" href="/codes" >Codes</a>
+               <a class="link" href="/repo" >Codes</a>
                <a class="link" href="/blog">Posts</a>
             </div>
          </div>
@@ -22,7 +22,7 @@
       <section id="about">
          <div class="user-details">
             <h1> Yingkai Liu </h1>
-            <p> I am interested in the topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am interested in how particles subject to relatively simple laws can exhibit to collective novel properties as a whole. I am also a coding enthusiast. </p>
+            <p> I am interested in the topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am interested in how particles subject to relatively simple laws can exhibit to collective novel properties as a whole. I am also kind of a coding enthusiast. </p>
          </div>
          
          <div class="lower">
@@ -36,16 +36,26 @@
             <h2><a href="/blog" title="Notes">Notes</a></h2>
             <p></p>
             <p>Recent Notes</p>
+            <ul>
             {% for post in site.posts limit:2 %}
-               <p><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
+               <li><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
                   {% if post.description %}
-                     {{ post.description }}
+                     <dd>{{ post.description }}<dd>
                   {% endif %}
-               </p>
+               </li>
             {% endfor %}
+            </ul>
             <p>Upcoming Notes</p>
-            <p>K theory study notes</p>
-            <p></p>
+            <ul>
+            {% for draft in site.drafts limit:1 %}
+               <li><a >{{ draft.title }}</a>  
+                  {% if draft.description %}
+                     <dd>{{ draft.description }}<dd>
+                  {% endif %}
+               </li>
+            {% endfor %}
+            </ul>
+            <br>
             <p><a href="/blog" title="All Notes">All Notes</a></p>
             </div>
          </div>

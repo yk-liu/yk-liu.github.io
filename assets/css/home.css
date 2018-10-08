@@ -3328,6 +3328,11 @@ ol,ul{
 figure,ol,p,ul{
     margin:1em 0
 }
+dt{
+     padding-left:50px;
+     color:grey;
+     font-size:small
+}
 a img{
     border:none
 }
