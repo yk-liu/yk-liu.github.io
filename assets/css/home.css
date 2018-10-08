@@ -3330,7 +3330,7 @@ figure,ol,p,ul{
     margin:1em 0
 }
 dd{ 
-    padding-left:10px;
+    margin:10px;
     color:grey;
     font-size:medium
 }
