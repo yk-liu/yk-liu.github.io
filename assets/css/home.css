@@ -3329,7 +3329,8 @@ ol,ul{
 figure,ol,p,ul{
     margin:1em 0
 }
-dd{
+dd{ 
+    padding-left:10px
     color:grey;
     font-size:medium
 }
