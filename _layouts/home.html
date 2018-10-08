@@ -45,16 +45,18 @@
                </li>
             {% endfor %}
             </ul>
-            <p>Upcoming Notes</p>
-            <ul>
-            {% for draft in site.drafts limit:1 %}
-               <li><a >{{ draft.title }}</a>  
-                  {% if draft.description %}
-                     <dd>{{ draft.description }}<dd>
-                  {% endif %}
-               </li>
-            {% endfor %}
-            </ul>
+            {% if site.drafts %}
+               <p>Upcoming Notes</p>
+               <ul>
+               {% for draft in site.drafts limit:1 %}
+                  <li><a >{{ draft.title }}</a>  
+                     {% if draft.description %}
+                        <dd>{{ draft.description }}<dd>
+                     {% endif %}
+                  </li>
+               {% endfor %}
+               </ul>
+            {% endif %}
             <br>
             <p><a href="/blog" title="All Notes">All Notes</a></p>
             </div>
