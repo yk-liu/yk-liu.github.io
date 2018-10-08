@@ -42,7 +42,7 @@
             {% for post in site.posts limit:2 %}
                <li><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
                   {% if post.description %}
-                     <dd style="text-align: justify">&nbsp;&#9658;{{ post.description }}<dd>
+                     <dd style="text-align: justify">&#9656;&nbsp;{{ post.description }}<dd>
                   {% endif %}
                </li>
             {% endfor %}
@@ -53,7 +53,7 @@
                {% for draft in site.drafts limit:1 %}
                   <li><a >{{ draft.title }}</a>  
                      {% if draft.description %}
-                        <dd style="text-align: justify">&nbsp;&#9658;{{ draft.description }}<dd>
+                        <dd style="text-align: justify">&#9656;&nbsp;{{ draft.description }}<dd>
                      {% endif %}
                   </li>
                {% endfor %}
