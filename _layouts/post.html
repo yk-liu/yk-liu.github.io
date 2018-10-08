@@ -46,13 +46,13 @@
                    {{page.date | date: '%B %d, %Y' }}
                  {% endif %}
             </p>
-            {% if site.tags %}
+            {% if site.tags != '' %}
             <p>
             Tags:  &nbsp[
                {% for tag in page.tags %}
                {% capture tag_name %}{{ tag }}{% endcapture %}
                   <code class="highligher-rouge">
-                     <nobr><a href="/tag/{{ tag_name }}">{{ tag_name }} </a></nobr>
+                     <nobr><a href="/tags/{{ tag_name }}">{{ tag_name }} </a></nobr>
                   </code>
                   &nbsp
                {% endfor %}]
