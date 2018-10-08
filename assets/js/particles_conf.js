@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   particlesJS('particles-js', {
     "particles": {
       "number": {
-        "value": 60,
+        "value": 80,
         "density": {
           "enable": true,
           "value_area": 800
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "color": "#000000"
         },
         "polygon": {
-          "nb_sides": 5
+          "nb_sides": 0
         },
         "image": {
           "src": "img/github.svg",
@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       },
       "opacity": {
-        "value": 2,
+        "value": 1,
         "random": false,
         "anim": {
           "enable": true,
-          "speed": 4,
+          "speed": 0.5,
           "opacity_min": 0.1,
           "sync": false
         }
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "random": true,
         "anim": {
           "enable": false,
-          "speed": 20,
+          "speed": 10,
           "size_min": 0.5,
           "sync": false
         }
