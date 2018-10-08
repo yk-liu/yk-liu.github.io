@@ -12,6 +12,6 @@
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '/search.json'
+  json: '{{'/archive/search.json' | prepend: site.baseurl }}'
 })
 </script>
