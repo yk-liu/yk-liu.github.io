@@ -42,7 +42,7 @@
             {% for post in site.posts limit:2 %}
                <li><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
                   {% if post.description %}
-                     <dd style="text-align: justify">&nbsp;&nbsp;{{ post.description }}<dd>
+                     -<dd style="text-align: justify">{{ post.description }}<dd>
                   {% endif %}
                </li>
             {% endfor %}
@@ -59,7 +59,6 @@
                {% endfor %}
                </ul>
             {% endif %}
-            <br>
             <p><a href="/blog" title="All Notes">All Notes</a></p>
             </div>
          </div>
