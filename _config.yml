@@ -24,11 +24,11 @@ links:
     external: false
     icon: home
   - title: Repos
-    url: /repo
+    url: /Repo
   - title: Blogs
     url: /Blog
-  - title: Blog Tags
-    url: /Blog/Tags
+  - title: Drafts
+    url: /drafts
     
 plugins:
   - jekyll-seo-tag
