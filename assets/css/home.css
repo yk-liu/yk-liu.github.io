@@ -3324,7 +3324,7 @@ h4{
 }
 ol,ul{
     padding-left:40px;
-    font-size:60px
+    font-size:large
 }
 figure,ol,p,ul{
     margin:1em 0
@@ -3332,7 +3332,7 @@ figure,ol,p,ul{
 dt{
      padding-left:50px;
      color:grey;
-     font-size:40px
+     font-size:medium
 }
 a img{
     border:none
