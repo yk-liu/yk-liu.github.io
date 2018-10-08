@@ -42,6 +42,7 @@
             {% for post in site.posts limit:2 %}
                <li><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
                   {% if post.description %}
+                     <nobr> - </nobr>
                      <dd style="text-align: justify">{{ post.description }}<dd>
                   {% endif %}
                </li>
@@ -53,6 +54,7 @@
                {% for draft in site.drafts limit:1 %}
                   <li><a >{{ draft.title }}</a>  
                      {% if draft.description %}
+                        <nobr> - </nobr>
                         <dd style="text-align: justify">&nbsp;&nbsp;{{ draft.description }}<dd>
                      {% endif %}
                   </li>
