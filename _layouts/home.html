@@ -23,7 +23,7 @@
          <div class="user-details">
             <h1> Yingkai Liu </h1>
             <center>
-            <p style="width: 80%;text-align: justify"> I am interested in the topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am interested in how particles subject to relatively simple laws can exhibit to collective novel properties as a whole. I am also kind of a coding enthusiast. </p>
+            <p style="width: 80%;text-align: justify"> &nbsp;&nbsp;I am interested in the topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am interested in how particles subject to relatively simple laws can exhibit novel collective properties. I also like coding and enjoys sharing my thoughts. </p>
             </center>
          </div>
          
@@ -42,8 +42,7 @@
             {% for post in site.posts limit:2 %}
                <li><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
                   {% if post.description %}
-                     <nobr> - </nobr>
-                     <dd style="text-align: justify">{{ post.description }}<dd>
+                     <dd style="text-align: justify">&nbsp;&#9658;{{ post.description }}<dd>
                   {% endif %}
                </li>
             {% endfor %}
@@ -54,8 +53,7 @@
                {% for draft in site.drafts limit:1 %}
                   <li><a >{{ draft.title }}</a>  
                      {% if draft.description %}
-                        <nobr> - </nobr>
-                        <dd style="text-align: justify">&nbsp;&nbsp;{{ draft.description }}<dd>
+                        <dd style="text-align: justify">&nbsp;&#9658;{{ draft.description }}<dd>
                      {% endif %}
                   </li>
                {% endfor %}
