@@ -316,10 +316,20 @@ body {
   padding-bottom: 2rem;
 }
 
+div.lower a{
+    color: #42b983;
+    font-weight: 600;
+    padding: 0px 2px;
+}
+
 code.highligher-rouge 
 {
-    font-family: Roboto Mono, Monaco, courier, monospace !important;
-    color: #1a222c;
+    margin: 0 2px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important;
+    font-size: 0.92rem;
+    color: #e96900;
     background-color: #f8f8f8;
  
 }
