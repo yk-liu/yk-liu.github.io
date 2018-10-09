@@ -9,7 +9,7 @@ notoc: true
 
 # My impression with Python
 
-It's well know that Python makes you fly. Undoubtedly, Python is a very charming language that can reduce heavy workloads to simple codes. Due to its amazingly abundant libraries, Complicated jobs can be done easily within a few lines such as "antigravity".  
+It's well know that Python makes you fly. Undoubtedly, Python is a very charming language that can reduce heavy workloads to simple codes. Due to its amazingly abundant libraries, complicated jobs can be done easily within a few lines such as "antigravity".  
 
 <img src="https://imgs.xkcd.com/comics/python.png" width="50%" />
 
@@ -21,7 +21,7 @@ I was a freshman in Physics eager to learn a few trick in "computer" to aid my u
 
 I have heard of Python. It made an impression on me that it's the slower kind of language, so I waited a long time starting to check it out. But there is one particular function that stroke me hard, it was called `sort`.
 
-My first reaction was overwhelmed ecstasy. With C++'s all kinds of [sorting method](https://en.wikipedia.org/wiki/Sorting_algorithm) and comparison and different range of application, **there is a built-in function in Python that does the sorting!?** Who would ever care about speed of 10% improvement anymore? 
+My first reaction was overwhelmed with ecstasy. With C++'s all kinds of [sorting method](https://en.wikipedia.org/wiki/Sorting_algorithm) and comparison and different range of application, **there is a built-in function in Python that does the sorting!?** Who would even care about that speed of 10% improvement anymore? 
 
 > C++ hello world
 > ```c++
