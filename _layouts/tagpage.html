@@ -8,6 +8,19 @@ layout: default
    <link rel="stylesheet" href="{{ "/assets/css/tagpage.css" | prepend: site.baseurl }}">
    <!-- -->
    <body>
+   <div class="topnav">
+      <!-- Use any element to open the sidenav -->
+      <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
+      <a class="active" href="{{ site.post }}">Posts</a>
+   </div>
+   
+   <div class="topnav">
+      <!-- Use any element to open the sidenav -->
+      <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
+      <a class="active" href="{{ site.post }}">Posts</a>
+   </div>
+   
+   
       <h1>Tag Cloud</h1>
       {% assign tags = site.tags | sort %}
       {% for tag in tags %}
