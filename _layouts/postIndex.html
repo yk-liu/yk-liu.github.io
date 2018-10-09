@@ -4,15 +4,13 @@
    {% include header.html %}
    <!-- link to tagpage.css-->
    <link rel="stylesheet" href="{{ "/assets/css/tagpage.css" | prepend: site.baseurl }}">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
    <!-- -->
    <div class="topnav">
       <a class="active" href="{{ site.post }}">Posts</a>
-      
    </div>
    <body>
-      <!--{% include search.html %}-->
-      {% include tagCloud.html %}  
-      <div>
+      <div style = "margin-right: 3%;padding: 50px" class="container">
       <ul>
          <!-- social buttons -->
          {% if site.github_username %}
@@ -38,6 +36,9 @@
             {% endif %}
             -->
       </ul>
+      <!--{% include search.html %}-->
+      {% include tagCloud.html %} 
+      <hr>      
       <p>{{ site.time | date: '%Y' }}</p>
       </div>
       <div class="content container">
