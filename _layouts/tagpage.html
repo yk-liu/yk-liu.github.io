@@ -22,9 +22,12 @@
                <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
                <li>
                    {{ post.title }}
-                   <small class="post-date">
                    <i class="fas fa-angle-double-right"></i>
                    {{ post.date | date_to_string }}
+                   
+                   <small class="post-description">
+                   <i class="fas fa-caret-right"></i>
+                   {{ post.description }}
                    </small>
                </li>
             </a>
