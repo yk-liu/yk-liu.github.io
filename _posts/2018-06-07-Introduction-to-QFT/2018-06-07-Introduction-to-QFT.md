@@ -3,6 +3,7 @@ layout: post
 title: 量子场论
 category: Blog
 tags: QFT
+keywords: QFT
 description: My interpretation on one-forms
 mathjax: true
 ---
@@ -750,7 +751,7 @@ $$
 > 
 > 利用编时算符:
 >
->  $$
+> $$
 > \Torder{H_I(\tau_2)H_I(\tau_1)}=\begin{cases}H_I(\tau_2)H_I(\tau_1),\quad t_x\gt t_y\\H_I(\tau_1)H_I(\tau_2) ,\quad t_x\lt t_y \end{cases}
 > $$
 > 

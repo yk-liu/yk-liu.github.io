@@ -3,8 +3,9 @@ layout: post
 title: 第一性原理热统(未完成)
 mathjax: true
 category: Blog
-tags: Statistcal-mechanics First-Principle
-description: My attempt at building Statistcal Mechanics from First Principles
+tags: Statistical-mechanics First-Principle
+keywords: Statistical-mechanics First-Principle
+description: My attempt at building Statistical Mechanics from First Principles
 ---
 
 # 第一性原理热统(未完成)
@@ -296,7 +297,6 @@ $$
 & = \varepsilon_0\int_{-\infty}^{ {-\infty}}  \frac{1}{\Omega(\varepsilon_0)} d\Gamma \notag\\
 & = \varepsilon_0
 \end{align}
-
 $$
 
 #### 孤立系的平衡

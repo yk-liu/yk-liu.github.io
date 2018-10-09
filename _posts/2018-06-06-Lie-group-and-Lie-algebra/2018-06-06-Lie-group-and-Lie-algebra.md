@@ -3,8 +3,9 @@ layout: post
 title: 李群和李群的李代数
 mathjax: true
 category: Blog
-tags: Lie-algrbra Lie-group
-description: ...
+tags: Lie-algebra Lie-group
+keywords: Lie-algebra Lie-group
+description: My understanding of Lie-group and its Lie-algebra
 ---
 
 # 李群和李群的李代数
