@@ -31,6 +31,14 @@ a{
     background-color:transparent;
     -webkit-text-decoration-skip:objects
 }
+
+div.lower a{
+    color: #42b983;
+    font-weight: 600;
+    padding: 0px 2px;
+}
+
+
 abbr[title]{
     border-bottom:none;
     text-decoration:underline dotted
