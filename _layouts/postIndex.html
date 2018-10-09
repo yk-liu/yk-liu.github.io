@@ -16,30 +16,7 @@
       {% endif %}
    </div>
    <body>
-      <div style = "margin-right: 3%;padding: 50px" class="container">
-      <ul>
-         <!-- social buttons -->
-         {% if site.github_username %}
-         <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none">
-         <i class="fab fa-github"></i>
-         </a>
-         {% endif %}
-         {% if site.facebook_username %}
-         <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" style="text-decoration:none">
-         <i class="fa fa-fw fa-facebook"></i>
-         </a>
-         {% endif %}
-         {% if site.linkedin_username %}
-         <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" style="text-decoration:none">
-         <i class="fa fa-fw fa-linkedin"></i>
-         </a>
-         {% endif %}
-         {% if site.google_plus_username %}
-         <a href="https://plus.google.com/{{ site.google_plus_username }}" target="_blank" style="text-decoration:none">
-         <i class="fa fa-fw fa-google-plus"></i>
-         </a>
-         {% endif %}
-      </ul>
+      <div style = "margin-right: 8%;margin-left: 8%;padding: 50px" class="container">
       {% include tagCloud.html %} 
       <hr>      
       <div class="container">
