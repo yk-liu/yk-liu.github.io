@@ -19,19 +19,19 @@
           <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
           <ul class="tags-expo-posts">
              {% for post in tag[1] %}
-               <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-               <li>
-                   {{ post.title }}
-                   <i class="fas fa-angle-double-right"></i>
-                   {{ post.date | date_to_string }}
-                   
-                   <small class="post-description">
-                   <i class="fas fa-caret-right"></i>
-                   {{ post.description }}
-                   </small>
-               </li>
-            </a>
-            {% endfor %}
+             <li>
+                <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+                </a>
+                <i class="fas fa-angle-double-right"></i>
+                {{ post.date | date_to_string }}
+                <br>
+                <small class="post-description">
+                <i class="fas fa-caret-right"></i>
+                {{ post.description }}
+                </small>
+             </li>
+             {% endfor %}
           </ul>
       {% endfor %}
    </div>
