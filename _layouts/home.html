@@ -3,7 +3,7 @@
    {% include head.html %}
    <!-- main style sheet -->  
    <link rel="stylesheet" href="{{ "/assets/css/home.css" | prepend: site.baseurl }}"> 
-   <!-- --> 
+   <!-- font awesome --> 
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
    <!-- -->  
    <body>
@@ -42,9 +42,9 @@
             <p>Recent Notes</p>
             <ul>
             {% for post in site.posts limit:2 %}
-               <li><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
+               <li><a href="{{ post.url }}">{{ post.title }}</a> <i class="fas fa-angle-double-right"></i>{{ post.date | date_to_string }} <br>
                   {% if post.description %}
-                     <dd style="text-align: justify">&#9654;&nbsp;{{ post.description }}<dd>
+                     <dd style="text-align: justify"><i class="fas fa-caret-right"></i>&nbsp;{{ post.description }}<dd>
                   {% endif %}
                </li>
             {% endfor %}
@@ -55,7 +55,7 @@
             {% for draft in site.drafts limit:1 %}
                <li><a >{{ draft.title }}</a>  
                   {% if draft.description %}
-                     <dd style="text-align: justify">&#9654;&nbsp;{{ draft.description }}<dd>
+                     <dd style="text-align: justify"><i class="fas fa-caret-right"></i>;&nbsp;{{ draft.description }}<dd>
                   {% endif %}
                </li>
             {% endfor %}
