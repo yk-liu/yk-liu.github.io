@@ -22,7 +22,12 @@
    <div class="topnav">
       <!-- Use any element to open the sidenav -->
       <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
-      <a class="active" href="{{ site.post }}">Posts</a>
+      <a class="active" href="{{ "/blog" | prepend: site.baseurl }}">Posts</a>
+      {% if site.github_username %}
+         <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none;float: right;">
+         <i class="fab fa-github"></i>
+         </a>
+      {% endif %}
    </div>
    <!-- this is side bar -->
    <div id="mySidenav" class="sidenav">

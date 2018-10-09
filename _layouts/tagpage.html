@@ -10,6 +10,11 @@
    <!-- -->
    <div class="topnav">
       <a class="active" href="{{ site.post }}">Posts</a>
+      {% if site.github_username %}
+         <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none;float: right;">
+         <i class="fab fa-github"></i>
+         </a>
+      {% endif %}
    </div>
    <body>
    <div style = "margin-right: 3%;padding: 50px" class="container">
