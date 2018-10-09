@@ -5,29 +5,36 @@
  * out above content in mobile and later moves to the side with wider viewports.
  */
 
-.sidebar {
-  text-align: center;
-  padding: 2rem 2rem 2rem 2rem;
-  color: white;
-  background-color: #1a222c;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 50%;
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #1a222c;
+    width: 100%;
+    position: fixed;
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    height: 8%;
 }
 
-/* Sidebar links */
-.sidebar a {
-  color: white;
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-/* About section */
-.sidebar-about h1 {
-  color: white;
-  margin-top: 0;
-  font-weight: bold;
-  font-size: 3.25rem;
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .content {
