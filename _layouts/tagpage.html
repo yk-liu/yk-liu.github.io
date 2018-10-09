@@ -1,25 +1,14 @@
----
-layout: default
----
 <!DOCTYPE html>
 <html>
    {% include head.html %}
    <!-- link to tagpage.css-->
    <link rel="stylesheet" href="{{ "/assets/css/tagpage.css" | prepend: site.baseurl }}">
    <!-- -->
+   <div class="topnav">
+      <a class="active" href="{{ site.post }}">Posts</a>
+      <a class="active" href="{{ site.tags }}">Tags</a>
+   </div>
    <body>
-   <div class="topnav">
-      <!-- Use any element to open the sidenav -->
-      <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
-      <a class="active" href="{{ site.post }}">Posts</a>
-   </div>
-   
-   <div class="topnav">
-      <!-- Use any element to open the sidenav -->
-      <a class="active" href="{{ site.post }}">Posts</a>
-   </div>
-   
-   
       <h1>Tag Cloud</h1>
       {% assign tags = site.tags | sort %}
       {% for tag in tags %}
@@ -32,21 +21,20 @@ layout: default
       </span>
       {% endfor %}
       <hr>
-      
-{% for tag in site.tags %}
-    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
-    <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-      <li>
-        {{ post.title }}
-      <small class="post-date">{{ post.date | date_to_string }}</small>
-      </li>
-      </a>
+      {% for tag in site.tags %}
+          <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+          <ul class="tags-expo-posts">
+             {% for post in tag[1] %}
+               <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+               <li>
+                   {{ post.title }}
+                   <small class="post-date">{{ post.date | date_to_string }}
+                   </small>
+               </li>
+            </a>
+            {% endfor %}
+          </ul>
       {% endfor %}
-    </ul>
-    {% endfor %}
-   
-   
+
    </body>
 </html>
