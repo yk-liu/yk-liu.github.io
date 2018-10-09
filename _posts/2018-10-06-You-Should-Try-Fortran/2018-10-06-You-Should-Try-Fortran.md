@@ -42,7 +42,7 @@ My first reaction was overwhelmed with ecstasy. With C++'s all kinds of [sorting
 
 To be fair, Python is not that slow with proper optimizations. It's also a interpreted language, meaning you don't need to compile. There is always a library for whatever you wanna do, `numpy`, `scipy`, `matplotlib` being three prominent packages. The `numba` offers `jit` decorator that can drastically improve speed with a magical command `@jit`. The most attractive advantage is that you can read Python like natural language.  The list goes on and on ... The only draw back of Python is that it's a little complicated to run anything in parallel.
 
-  # My impression with Fortran
+# My impression with Fortran
 
 After my monologue about how I disliked C++ and loved Python you can probably imagine how I felt for Fortran in the beginning. I am now quoting an objective essay ([Why physicists still use Fortran](http://moreisdifferent.com/2015/07/16/why-physicsts-still-use-fortran/)) I found online which described the common view of Fortran as a "historical anachronism" and then tried to justify the use of Fortran due to its speed.
 
