@@ -35,7 +35,8 @@
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     padding: 20px;
-    margin-left : 24%;
+    margin-left : 6%;
+    margin-right : 6%
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
