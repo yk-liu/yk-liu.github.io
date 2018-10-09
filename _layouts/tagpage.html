@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: default
 ---
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
@@ -7,85 +7,34 @@ layout: none
    <!-- link to tagpage.css-->
    <link rel="stylesheet" href="{{ "/assets/css/tagpage.css" | prepend: site.baseurl }}">
    <!-- -->
-   <head>
-      <base target="_blank">
-   </head>
    <body>
       <h1>Tag Cloud</h1>
       {% assign tags = site.tags | sort %}
       {% for tag in tags %}
        <span class="site-tag">
           <a href="/tag/{{ tag | first | slugify }}/"  style="text-decoration: none;">
-             <code class="highligher-rouge" style="font-weight: bold;font-size: {{ tag | last | size  |  times: 2 | plus: 80  }}%">
+             <code class="highligher-rouge" style="font-size: {{ tag | last | size  |  times: 2 | plus: 80  }}%">
                 <nobr>{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</nobr>
              </code>
           </a> &nbsp;
       </span>
       {% endfor %}
       <hr>
-      {% for tag in tags %}
-      <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
-      <ul class="codinfox-category-list">
-        {% for post in site.posts %}
-        {% if post.tags contains tag %}
-        <li>
-          <h3>
-            <a href="{{ post.url }}">
-              {{ post.title }}
-              <small>{{ post.date | date_to_string }}</small>
-              <br>
-              {{ post.description }}
-            </a>
-          </h3>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-{% endfor %}
+      
+{% for tag in site.tags %}
+    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+    <ul class="tags-expo-posts">
+      {% for post in tag[1] %}
+        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+      <li>
+        {{ post.title }}
+      <small class="post-date">{{ post.date | date_to_string }}</small>
+      </li>
+      </a>
+      {% endfor %}
+    </ul>
+    {% endfor %}
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-      <div class="sidebar">
-         <div class="sidebar-about">
-            <h1>{{ site.title }}</h1>
-            <p class="lead">{{ site.description }}</p>
-         </div>
-         {% include search.html %}
-         {% include tagCloud.html %}  
-         <ul>
-            <!-- social buttons -->
-            {% if site.github_username %}
-            <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none">
-            <i class="fa fa-fw fa-github"></i>
-            </a>
-            {% endif %}
-         </ul>
-         <p>{{ site.time | date: '%Y' }}</p>
-      </div>
-      <div class="content container">
-         <div class="content">
-            <h1>Tag: {{ page.tag }}</h1>
-            <ul>
-               {% for post in site.tags[page.tag] %}
-               <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
-                  {{ post.description }}
-               </li>
-               {% endfor %}
-            </ul>
-         </div>
-         <hr>
-      </div>
    </body>
 </html>
