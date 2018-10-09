@@ -19,9 +19,9 @@
     var x = document.getElementById("mySidenav");
     if (x.style.display === "none") {
         x.style.display = "inline-block";
-        document.getElementById("main").style.marginLeft = "24%";
+        // document.getElementById("main").style.marginLeft = "24%";
     } else {
         x.style.display = "none";
-        document.getElementById("main").style.marginLeft = "3%";
+        // document.getElementById("main").style.marginLeft = "3%";
     }
 }
