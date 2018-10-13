@@ -46,11 +46,11 @@
                {{page.title}}
             <p>
             <p style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
-               Last Edit:  &nbsp 
-                 {% if page.LastEdit %}
-                   {{ page.LastEdit | date: '%B %d, %Y' }}
+                 {% if page.Edit %}
+                   Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }} <br>
+                   Edited:  &nbsp {{ page.Edit | date: '%B %d, %Y' }}
                  {% else %}
-                   {{page.date | date: '%B %d, %Y' }}
+                   Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }}
                  {% endif %}
             </p>
             {% if site.tags != '' %}
