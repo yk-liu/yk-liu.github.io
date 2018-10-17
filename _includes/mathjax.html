@@ -6,13 +6,13 @@
       MathJax.Hub.Config({
         extensions: ["tex2jax.js"],
         jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js"],
+        extensions: ["tex2jax.js","MathZoom.js"],
         TeX: {
-        extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js","color.js","cancel.js"]
+        extensions: ["AMSmath.js","AMSsymbols.js","color.js","cancel.js","noErrors.js","noUndefined.js"]
         },
         tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ],
           processEscapes: true
         },
         "HTML-CSS": { fonts: ["TeX"] }
