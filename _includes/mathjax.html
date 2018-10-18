@@ -1,18 +1,18 @@
 <head>
    <!--Load Mathjax-->
    {% if page.mathjax %}
+   <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
    <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         extensions: ["tex2jax.js"],
         jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","MathZoom.js", "toMathML.js"],
+        extensions: ["tex2jax.js","MathZoom.js"],
         TeX: {
-        extensions: ["AMSmath.js","AMSsymbols.js","mediawiki-texvc.js""color.js","cancel.js","noUndefined.js"],
-        equationNumbers: { autoNumber: "AMS" }
+        extensions: ["AMSmath.js","AMSsymbols.js","color.js","cancel.js","noErrors.js","noUndefined.js"]
         },
         tex2jax: {
-          displayMath: [['$$\n', '\n$$'], ['$$\r\n', '\r\n$$']],
           inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ],
           processEscapes: true
         },
         "HTML-CSS": { fonts: ["TeX"] }
