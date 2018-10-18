@@ -1,25 +1,34 @@
 <head>
    <!--Load Mathjax-->
    {% if page.mathjax %}
-   <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
    <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","MathZoom.js"],
+        jax: ["input/TeX", "output/SVG"],
+        extensions: ["tex2jax.js","MathZoom.js", "toMathML.js"],
+        showProcessingMessages: false,
         TeX: {
-        extensions: ["AMSmath.js","AMSsymbols.js","color.js","cancel.js","noErrors.js","noUndefined.js"]
+           extensions: ["autoload-all.js","AMSmath.js","AMSsymbols.js","mediawiki-texvc.js""color.js","cancel.js","noUndefined.js"],
+           equationNumbers: { autoNumber: "all" }
+        },
+        SVG: {
+           useGlobalCache: false,
+           scale: 100, 
+           minScaleAdjust: 80,
+           blacker: 0
         },
         tex2jax: {
+          displayMath: [['$$\n', '\n$$'], ['$$\r\n', '\r\n$$']],
           inlineMath: [ ['$','$'] ],
-          displayMath: [ ['$$','$$'] ],
           processEscapes: true
         },
         "HTML-CSS": { fonts: ["TeX"] }
       });
    </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML" type="text/javascript"></script>
+   
+   <script type="text/javascript" src="{{ site.baseurl }}/assets/js/MathJax.js"></script>
+   <!-- -->
    <!--
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML" type="text/javascript"></script>
    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
    -->
    {% endif %}
