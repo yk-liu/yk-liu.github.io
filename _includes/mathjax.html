@@ -3,18 +3,12 @@
    {% if page.mathjax %}
    <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
-        jax: ["input/TeX", "output/SVG"],
-        extensions: ["tex2jax.js", "toMathML.js"],
-        showProcessingMessages: false,
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","MathZoom.js", "toMathML.js"],
         TeX: {
-           extensions: ["autoload-all.js","AMSmath.js","AMSsymbols.js","mediawiki-texvc.js""color.js","cancel.js","noUndefined.js"],
-           equationNumbers: { autoNumber: "AMS" }
-        },
-        SVG: {
-           useGlobalCache: false,
-           scale: 100, 
-           minScaleAdjust: 80,
-           blacker: 0
+        extensions: ["AMSmath.js","AMSsymbols.js","mediawiki-texvc.js""color.js","cancel.js","noUndefined.js"],
+        equationNumbers: { autoNumber: "AMS" }
         },
         tex2jax: {
           displayMath: [['$$\n', '\n$$'], ['$$\r\n', '\r\n$$']],
@@ -24,8 +18,7 @@
         "HTML-CSS": { fonts: ["TeX"] }
       });
    </script>
-   <!-- -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML" type="text/javascript"></script>
    <!--
    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
    -->
