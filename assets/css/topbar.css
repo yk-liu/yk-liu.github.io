@@ -3,14 +3,16 @@
 .topnav {
     background-color: #1a222c;
     width: 100%;
-    position: fixed;
+    position: sticky;
     z-index: 2; /* Stay on top */
     top: 0; /* Stay at the top */
-    height: 8%;
+    overflow: hidden;
+    /*height: 8%;*/
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
+    display: block;
     float: left;
     color: #f2f2f2;
     text-align: center;
