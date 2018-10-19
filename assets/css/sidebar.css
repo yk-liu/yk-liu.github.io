@@ -23,11 +23,6 @@
     padding-bottom: 50px;
 }
 
-.sidenav ul:last-child,{
-    margin-bottom: 8%;
-    padding-bottom: 50px;
-}
-
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
