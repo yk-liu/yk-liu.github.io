@@ -644,3 +644,9 @@ table tr td:last-child {
     margin-top: 20px;
     padding-bottom: 20px;
 }
+
+#main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
