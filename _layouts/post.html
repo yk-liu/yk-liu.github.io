@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <base target="_blank">
+      <base >
       {% include head.html %}  
       {% include mathjax.html %}  
       {% include theme-vue.html%}
@@ -22,7 +22,7 @@
    <div class="topnav">
       <!-- Use any element to open the sidenav -->
       <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
-      <a class="active" href="{{ "/blog" | prepend: site.baseurl }}">Posts</a>
+      <a class="active" href="{{ "/blog" | prepend: site.baseurl }}" target="_blank">Posts</a>
       {% if site.github_username %}
          <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none;float: right;">
          <i class="fab fa-github fa-2x" ></i>
@@ -59,7 +59,7 @@
                {% for tag in page.tags %}
                {% capture tag_name %}{{ tag }}{% endcapture %}
                   <code class="highligher-rouge">
-                     <nobr><a href="/blog/tags#{{ tag_name }}">{{ tag_name }} </a></nobr>
+                     <nobr><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }} </a></nobr>
                   </code>
                   &nbsp
                {% endfor %}]
