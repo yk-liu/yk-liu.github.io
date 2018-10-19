@@ -1,6 +1,5 @@
 /* The side navigation menu */
 .sidenav {
-    display: none; /*hide initially*/
     height: 100%; /* 100% Full-height */
     width: 25%; 
     background-color: #1a222c; /* Match homepage*/
@@ -17,11 +16,9 @@
     padding-top:8%;
     padding-bottom: 3%;
     margin-bottom: 8%;
-    
 }
 
 .toc-container {
-    
     height: 100%;
     margin-bottom: 8%;
     

@@ -194,13 +194,13 @@ ol {
     padding-left: 30px;
 }
 
-ul:first-child,
-ol:first-child {
+#main ul:first-child,
+#main ol:first-child {
     margin-top: 0;
 }
 
-ul:last-child,
-ol:last-child {
+#main ul:last-child,
+#main ol:last-child {
     margin-bottom: 0;
 }
 
@@ -364,7 +364,6 @@ table tr td:last-child {
     bottom: .375rem;
 }
 
-
 .md-image>.md-meta {
     /*border: 1px solid #ddd;*/
     border-radius: 3px;
@@ -376,11 +375,6 @@ table tr td:last-child {
 
 .md-tag {
     color: inherit;
-}
-
-.md-toc {
-    margin-top: 20px;
-    padding-bottom: 20px;
 }
 
 #main img {
