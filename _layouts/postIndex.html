@@ -4,6 +4,8 @@
    {% include header.html %}
    <!-- link to tagpage.css-->
    <link rel="stylesheet" href="{{ "/assets/css/tagpage.css" | prepend: site.baseurl }}">
+   <!-- link to topbar.css-->
+   <link rel="stylesheet" href="{{ "/assets/css/topbar.css" | prepend: site.baseurl }}">
    <!-- font awesome -->
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
    <!-- -->
@@ -11,7 +13,7 @@
       <a class="active" href="{{ site.post }}" target="_blank">Posts</a>
       {% if site.github_username %}
          <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none;float: right;">
-         <i class="fab fa-github fa-2x" ></i>
+         <i class="fab fa-github fa-lg" ></i>
          </a>
       {% endif %}
    </div>
