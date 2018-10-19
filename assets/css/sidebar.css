@@ -21,10 +21,9 @@
     height: 100%;
     margin-bottom: 8%;
     padding-bottom: 50px;
-    
 }
 
-.sidenav ul{
+.sidenav ul:last-child,{
     margin-bottom: 8%;
     padding-bottom: 50px;
 }
