@@ -20,11 +20,11 @@
 .toc-container {
     height: 100%;
     margin-bottom: 8%;
-    padding-bottom: 3%;
+    padding-bottom: 50px;
     
 }
 
-.toc_container ul{
+.sidenav ul{
     margin-bottom: 8%;
     padding-bottom: 50px;
 }
