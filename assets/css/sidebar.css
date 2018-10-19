@@ -7,7 +7,6 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    bottom: 0;
     font-size: 18px;
     padding: 8px 5px; /* list padding nest*/
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -21,8 +20,10 @@
 .toc-container {
     height: 100%;
     margin-bottom: 8%;
+    padding-bottom: 3%;
     
 }
+
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
