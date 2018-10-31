@@ -49,24 +49,24 @@
                {{page.title}}
             <p>
             <p style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
-                 {% if page.Edit %}
-                   Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }} <br>
-                   Edited:  &nbsp {{ page.Edit | date: '%B %d, %Y' }}
-                 {% else %}
-                   Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }}
-                 {% endif %}
+               {% if page.Edit %}
+                 Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }} <br>
+                 Edited:  &nbsp {{ page.Edit | date: '%B %d, %Y' }}
+               {% else %}
+                 Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }}
+               {% endif %}
             </p>
             {% if site.tags != '' %}
-            <p>
-            Tags:  &nbsp[
-               {% for tag in page.tags %}
-               {% capture tag_name %}{{ tag }}{% endcapture %}
-                  <code class="highligher-rouge">
-                     <nobr><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }} </a></nobr>
-                  </code>
-                  &nbsp
-               {% endfor %}]
-            </p>
+               <p>
+               Tags:  &nbsp[
+                  {% for tag in page.tags %}
+                  {% capture tag_name %}{{ tag }}{% endcapture %}
+                     <code class="highligher-rouge">
+                        <nobr><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }} </a></nobr>
+                     </code>
+                     &nbsp
+                  {% endfor %}]
+               </p>
             {% endif %}
             <hr>
             {{ content }}
