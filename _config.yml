@@ -1,0 +1,53 @@
+# Site settings
+title: Welcome
+description: A Github Page of Yingkai Liu
+# baseurl: "/particle" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+username: Yingkai Liu
+github_username: yk-liu
+user_description: A Physics undergrad with a broad interest
+user_title: Physics Undergraduate
+email: yingkai.liu@outlook.com
+
+markdown: kramdown
+kramdown:
+ auto_ids: true
+ footnote_nr: 1
+ entity_output: as_char
+ 
+highlighter: rouge
+
+links:
+  - title: Home
+    url: /
+    external: false
+    icon: home
+  - title: Repos
+    url: /Repo
+  - title: Blogs
+    url: /Blog
+  - title: Drafts
+    url: /drafts
+    
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  
+author:
+  name:           Yingkai Liu
+  picture:        
+  email:          yingkai.liu@outlook.com
+  description:    Be Water
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  facebook:
+  github:         https://github.com/yk-liu
+  linkedin:
+  instagram:
+  tumblr:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:
+
+permalink: none

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+   {% include head.html %}
+   {% include header.html %}
+   <!-- link to tagpage.css-->
+   <link rel="stylesheet" href="{{ "/assets/css/tagpage.css" | prepend: site.baseurl }}">
+   <!-- -->
+   <body>
+      <div class="content container">
+         <div class="content">
+            {{ content }}
+         </div>
+         <hr>
+      </div>
+   </body>
+</html>

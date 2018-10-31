@@ -1,0 +1,151 @@
+/*
+Eggplant: a github pages theme
+By Michael Parenteau, @parenteau
+License: 
+  The Muthaefffing OpenSource 
+  (Use what/how/ever the f*k you like)
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* reset html styles */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+
+/* BASIC HTML
+========================================================*/
+body {
+  line-height: 1.5;
+  font-family: 'PT Serif', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* FONT STUFF, LINKS, LISTS & TABLES
+========================================================*/
+
+h1 {
+  font-size: 4.8em;
+  letter-spacing: -1px;
+}
+h2 { font-size: 4em; }
+h3 { font-size: 3em; }
+h4 { font-size: 2.4em; }
+h5 { font-size: 2.2em; }
+h6, p, blockquote, dt, dd { font-size: 2em; }
+li {
+  font-size: 1.8em;
+  line-height: 1.2;
+}
+
+pre, code {
+  font-family: Courier, monospace;
+  overflow: auto;
+}
+li *, p *, blockquote *, h6 * { font-size: 1em; }
+li pre, p pre { font-size: 0.8em; }
+
+a:hover { background: #ffc; }
+
+
+/* LAYOUT & THEME SPECIFIC
+========================================================*/
+header {
+  color: white;
+  display: inline-block;
+  width: 15%;
+  background: #1a222c;
+  position: sticky;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-right: 1px solid #bbb;
+  padding: 8px 5px;
+  box-shadow: 1px 0 10px rgba(0,0,0,0.35),
+              inset -1px 0 1px rgba(255,255,255,0.4);
+}
+
+footer {
+    display:block
+}
+
+.footer{
+    background:#1a222c;
+    padding:10px 0;
+    margin-top:100px;
+    text-align:center;
+    color:white;
+}
+
+header h4 {
+  color: #fff;
+  max-width: 350px;
+  display: inline-block;
+}
+
+section {
+  top: 0;
+  margin-left: 18%;
+  margin-right: 3%;
+  padding: 50px;
+}
+
+
+/* MEDIA QUERY MAGIC
+========================================================*/
+@media screen and (max-width: 1220px) { body { font-size: 60%; } }
+@media screen and (max-width: 1120px) { body { font-size: 55%; } }
+@media screen and (max-width: 1020px) { body { font-size: 50%; } }
+@media screen and (max-width: 820px) {
+  header {
+    width: auto;
+    display: block;
+    text-align: center;
+    bottom: auto;
+    padding: 10px 30px;
+    right: 0;
+    border-right: none;
+    border-bottom: 1px solid #bbb;
+    position: absolute;
+  }
+  header h4 {
+    max-width: 100% !important;
+    display: block;
+    margin: 0 ;
+    padding: 0;
+    font-size: 2em;
+  }
+  section {
+    padding: 200px 40px 40px;
+    margin: 0;
+    max-width: 768px;
+  }
+
+}

@@ -1,0 +1,22 @@
+---
+layout: postIndex
+title: Posts Index
+---
+<head>
+<base target="_blank">
+</head>
+
+<body>
+<h1>{{ page.title }}</h1>
+	<ul class="posts">
+	  {% for post in site.posts %}
+     <li><a href="{{ post.url }}">{{ post.title }}</a>  » {{ post.date | date_to_string }} <br>
+               {% if post.description %}
+               {{ post.description }}
+               {% endif %}
+     </li>
+	  {% endfor %}
+	</ul>
+
+  </body>
+	

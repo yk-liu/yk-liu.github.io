@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <base >
+      {% include head.html %}  
+      {% include mathjax.html %}  
+      {% include theme-vue.html%}
+      <!-- font awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <!-- change font -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet">
+      <!-- link to topbar.css-->
+      <link rel="stylesheet" href="{{ "/assets/css/topbar.css" | prepend: site.baseurl }}">
+      <!-- link to siebar.css -->
+      <link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | prepend: site.baseurl }}">
+      <!-- link to backtotopbtn.css -->
+      <link rel="stylesheet" href="{{ "/assets/css/backtotopbtn.css" | prepend: site.baseurl }}">
+      <!-- tags management -->
+      <!--  -->
+   </head>
+   {% include header.html %}
+   <div class="topnav">
+      <!-- Use any element to open the sidenav -->
+      <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
+      <a class="active" href="{{ "/blog" | prepend: site.baseurl }}" target="_blank">Posts</a>
+      {% if site.github_username %}
+         <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none;float: right;">
+         <i class="fab fa-github fa-lg" ></i>
+         </a>
+      {% endif %}
+   </div>
+   <!-- this is side bar -->
+   <div id="mySidenav" class="sidenav" style="display: none;">
+      <div class='toc-container'>
+         {% include toc.html html=content %}
+         <p style="line-height: 1500%;">
+         <br> <!-- walk around to make bottom toc visible -->
+         </p>
+      </div>
+   </div>
+   <!-- this is Back to Top Button -->
+   <button onclick="topFunction()" id="BackToTopBtn" title="Go to top"><i class="fas fa-angle-double-up"></i> Top</button>
+   <!-- Add all page content inside this div if you want the side nav to push page content to the right
+      (not used if you only want the sidenav to sit on top of the page -->
+   <div id="main">
+      <body>
+         <div style = "margin-right: 3%;padding: 50px" class="container">
+            <p style="padding-bottom: .4rem;font-size: 2.5rem;line-height: 1.3;font-weight:bold">
+               {{page.title}}
+            <p>
+            <p style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
+               {% if page.Edit %}
+                 Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }} <br>
+                 Edited:  &nbsp {{ page.Edit | date: '%B %d, %Y' }}
+               {% else %}
+                 Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }}
+               {% endif %}
+            </p>
+            {% if site.tags != '' %}
+               <p>
+               Tags:  &nbsp[
+                  {% for tag in page.tags %}
+                  {% capture tag_name %}{{ tag }}{% endcapture %}
+                     <code class="highligher-rouge">
+                        <nobr><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }} </a></nobr>
+                     </code>
+                     &nbsp
+                  {% endfor %}]
+               </p>
+            {% endif %}
+            <hr>
+            {{ content }}
+            {% include footer.html %} 
+         </div>
+      </body>
+   </div>
+   
+   <script src="{{ "/assets/js/PostJS.js" | prepend: site.baseurl }}" async ></script>
+</html>
