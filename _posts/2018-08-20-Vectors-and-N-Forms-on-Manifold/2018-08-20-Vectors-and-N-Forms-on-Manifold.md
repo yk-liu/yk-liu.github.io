@@ -1,8 +1,8 @@
 ---
-title: One Forms
+title: Vectors and N-Forms on Manifold
 Edit: 2018-11-01
 category: Blog
-tags: One-form Topology
+tags: One-form Topology Vector
 keywords: one-form manifold Topology covector dual-space tangent-vector
 description: My interpretation on one-forms
 mathjax: true
@@ -40,8 +40,6 @@ $$
 
 One form is a concept useful in integration, the integrand is a one-form. To perform integration on Manifold, one-form is critical.
 
-[[A. Mishchenko and A. Fomenko](https://archive.org/details/MishchenkoFomenkoACourseOfDifferentialGeometryAndTopology)] wrote an excellent book on Differential Geometry And Topology, you should check.
-
 # Curves and Functions
 
 The definitions of curves and functions are as follow. A curve on a manifold is a linear map from interval $[a,b]$ to a set of points. Functions are defined over curves on manifold, *not* over curves in $\R^n$. With the help of local coordinates, curves and functions each have coordinate representations.
@@ -58,7 +56,7 @@ Formally the vector space is a set of four things, $(V,k,+,*) $  where $ V $ is 
 
 ## Covectors
 
-Now consider the set of linear functions defined on $V$ (vectors) that have values in $K$ (numbers), i.e. $f:V\rightarrow K$. Such linear functions on vector spaces are called **linear functionals**. They apparently form a vector space $V^*$, since: 
+Now consider the set of linear functions defined on $V$ (vectors) that have values in $K$ (numbers), i.e. $f:V\rightarrow K$. Such linear functions on vector spaces are called **linear functionals**. They are also called **covectors**. They apparently form a vector space $V^*$, since: 
 
 - $(f_1+f_2)(V) = f_1(V) + f_2(V)$ where the R.H.S. is addition of two scalars in the field $K$. 
 - $(kf)(V) = kf(V)$, again where the R.H.S. is multiplication of two scalars in the field $K$.
@@ -87,7 +85,7 @@ This isomorphism is fairly simple: just swap the basis and nothing is changed.
 
 Here we construct the **covector space** of $V$ and map from vectors to covectors:
 
-1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x_1,\uvec x_2, \uvec x_3)$, where $\uvec x_i$ is a unit vector in the positive $x_i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x_1,\d x_2,\d x_3)$ (this suspiciously looking name is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply abbreviation of "dual"). 
+1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x_1,\uvec x_2, \uvec x_3)$, where $\uvec x_i$ is a unit vector in the positive $x_i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x_1,\d x_2,\d x_3)$ (this suspiciously looking name is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
 
 2. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number.
 
@@ -165,10 +163,6 @@ Though on a manifold, things are a little different. There are three equivalent 
 
 These definitions are equivalent to each other [(proof)](https://maths-people.anu.edu.au/~andrews/DG/DG_chap4.pdf). So after this chapter we will make no distinction over these three definitions.
 
-[[Sean Carroll](https://arxiv.org/pdf/gr-qc/9712019.pdf)] gave a very good explanation in Chapter 2. Nevertheless, here are my two cents.
-
-
-
 ## Vector is an arrow
 
 When I think about vector on a manifold, I have the picture of some arrow tangent to the "surface" of manifold. 
@@ -180,6 +174,8 @@ Since in general there is no way to define a "straight arrow" connecting two poi
 Obviously, once the vector is in an ambient space, it can be represented by a tuple of numbers. How to represent a vector although "it can be represented by a tuple of numbers"? There will be different basis on each point of a manifold and
 
 ## Vector is a (differential) operator
+
+*After I have finished writing this section, I stumbled on* [[A. Mishchenko and A. Fomenko's book](https://archive.org/details/MishchenkoFomenkoACourseOfDifferentialGeometryAndTopology)] *and they really excelled at introducing the vectors in a natural way. You should check it out.*
 
 The word "tangent" cries for taking derivatives. Besides, the naïve vector-as-arrow picture lacks necessary algebraic tools to perform calculations with.
 
@@ -228,12 +224,16 @@ Reverse the above order, we will find the way to assign an operator to a vector.
 > **Theorem:** The directional derivative of a function defined on the manifold $f(t)$ along the vector $v$ (which is the tangent vector at $t_0$ along the curve $\Gamma(t)$) is the differential operator $\op{v}$ acting on $f$.
 >
 > $$
-> \nabla_{\vec v}f(t)\equiv\op{v}(f)
+> \begin{align}
+> \op{v}(f)&\dfdas\nabla_{\vec v}f(t)\notag\\
+> &=\lim_{t\rightarrow 0}{\frac{f(\gamma(t))-f(\gamma(0))}{t}}\notag\\
+> &=\lim_{t\rightarrow 0}{\frac{f(\vec x_0+t\vec v)-f(\vec x_0)}{t}}\notag\\
 > \label{vector-as-directional-derivative}
+> \end{align}
 > $$
 >
 > proof:
-> 
+>
 > $$
 > \begin{align*}
 > \op v (f) &=\left.\D{}{t}f(\Gamma(t))\right\vert_{\substack{t=t_0,\\\text{along }\vec{v}}}\\
@@ -330,9 +330,7 @@ The next steps would be
    Using the identity,
 
    $$
-   \begin{align*}
-   \nabla_{\vec v} f &=\sum_{i=1}^{n}{\left.\D{x_i}{t}\right\vert_{t=t_0}\Partial{f}{x^i}}\\
-   \end{align*}
+   \nabla_{\vec v} f =\sum_{i=1}^{n}{\left.\D{x_i}{t}\right\vert_{t=t_0}\Partial{f}{x^i}} \label{directional-derivative}
    $$
 
    Notice the following identity
@@ -352,14 +350,14 @@ The next steps would be
    \end{align*}
    $$
 
-   Following the same procedure, we try to isolate the $\vec v$. This is more complicated than the above, by first multiplying the basis of $\vec v$ to isolate it, and then introduce the basis for one form $f$, namely $\uvec e^i$ to keep the equality. 
+   Following the same procedure, we try to isolate the $\vec v$. This is more complicated than the above, by first multiplying the basis of $\vec v$ to isolate it, and then introduce the basis for one form $f$, namely $\uvec e^i$ to maintain the equality. 
 
    $$
    \begin{align}
    f(\vec v)&= \sum_{i=1}^{n}{ \left.\D{x_i}{t}\right\vert_{t=t_0}{\blue\Partial{f}{x^i}}} \notag\\
    &=\sum_{i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x_i}{t}\right\vert_{t=t_0}\notag\\
    &=\sum_{i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {e}^i \right)\cdot \left(\dot{x_i}(t_0)\Partial{}{x^i}\right) \label{basis-of-oneform}
-   \end{align}  
+   \end{align}
    $$
 
    The basis of one form $\form f$ is itself a one form and thus can take $\vec v$ as an input, written as
@@ -375,10 +373,10 @@ The next steps would be
    Now the one form $\form f$ is identified as 
 
    $$
-   \form f = \sum_{i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i
+   \form f = \sum_{i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i \notag
    $$
 
-   where $\uvec e$ is a hungry operator on vectors. Now the job is to find the exact expression of $\uvec e$. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. Putting the context of vectors and covectors aside, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e_i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
+   where $\uvec e$ is a hungry operator on vectors. Now the job is to find the exact expression of $\uvec e$. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e_i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
 
    $$
    \begin{align*}
@@ -387,7 +385,13 @@ The next steps would be
    \end{align*}
    $$
 
-   The answer self-evident, $\uvec{e^i}$ should be $\int \d x^i$, such that
+   The answer self-evident, 
+
+   $$
+   \uvec{e^i}=\int \d x^i, \label{basis-one-form}
+   $$
+
+   so that,
 
    $$
    \begin{align*}
@@ -399,65 +403,89 @@ The next steps would be
 
 
 
-
-
 By the above deduction, we finally arrive at the conclusion that
 
 $$
  \form f = \sum_{i=1}^n\Partial{f}{x^i}\int \d x^i\\
 $$
 
-Well, that is a boring result. Turns out that this "one form" can be completely written in the form of integration. Notice that the $\form f$ is actually an equivalent class of functions $f$ such that a set of functions $\set{f\mid \d f=\d f_0}$
+Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. 
+
+Still, the expression deserves more investigation. Leaving the context of vectors and covectors aside, the expression $\Eqn{directional-derivative}$ as function's derivative show that if two functions $f$ and $g$ have the same differential at $t=t_0$, 
+
+$$
+\d f=\sum \Partial{f}{x^i}\d x^i=\d g \notag
+$$
+
+
+they will yield the same result,
+
+$$
+\begin{align*}
+\nabla_{\vec v} f -\nabla_{\vec v} g &=\lim_{t\rightarrow 0}{\frac{f(\vec x_0+t\vec v)-f(\vec x_0)}{t}}-\lim_{t\rightarrow 0}{\frac{g(\vec x_0+t\vec v)-g(\vec x_0)}{t}}\\
+&=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert_{\substack{t=t_0,\\\text{along }\vec{v}}}-\left.\D{}{t}g(x^1(t),\cdots,x^n(t))\right\vert_{\substack{t=t_0,\\\text{along }\vec{v}}}\\
+&=\D{(f-g)}{t}\\
+&=0
+\end{align*}
+$$
+
+In other words, $\form f$ is actually an equivalent class of functions $f$, such that a set of functions $\set{f\mid \d f=\d f_0}$, can now be represented as
 
 $$
 \d f = \sum_{i=1}^n\Partial{f}{x^i} \d x^i
 $$
 
+## The Puzzle of $\frac{\partial (dx^\mu )}{\partial x^\nu}$
+
+Now we have made out what vectors and covectors are:
+
+ - Vectors are (differential) operators. They are entities of the form 
+
+   $$
+   \vec v =\sum a^i\Partial{}{x^i}
+   $$
+
+ - Similarly, covectors are entities of the form
+
+   $$
+   \form \omega =\sum a_i\d x^i
+   $$
 
 
 
+So far so good. 
 
-## One Forms on Manifold
-
-According to $\Eqn{directionalderivative}$ of [`Example of Covectors`](#example-of-covectors), the one-form of a tangent vector is the derivative of the function along the vector.
-
-Since the tangent vector is on a manifold is in some sense a "directional derivative" $\Eqn{vector-as-directional-derivative}$, and the dual of "directional derivative" is a "gradient", and vice versa. 
-
-Recall that a vector is defined as $X\dfdas X^\mu\uvec x_\mu=X^\mu \Partial{}{x^\mu}$, and vector's action on a function $f$ is defined as $X[f]\dfdas X^\mu \Partial{f}{x^\mu}$. 
-
-The total derivative $\d $ denoted as a vector as $\vard$. Being a vector, $\vard$ can have it's component form of $\vard = \vard^\mu \uvec d_\mu$, with $\uvec{d}_\mu$ an operator, $\vard^\mu$ a real number seen as a coefficient of linear combination. Write down the component form of this map,
-
-$$
-\begin{align}
-\inner{\vard}{X}&=\vard (X^\mu \Partial{}{x^\mu})\notag\\
-&=\vard_\nu\uvec{d}^\nu (X^\mu \Partial{}{x^\mu})\notag\\
-\xrightarrow{\text{linearity}}&=\left(\vard_\nu X^\mu\right)\uvec{d}^\nu ( \Partial{}{x^\mu})\notag\\
-\small\text{notice that $\Partial{}{x^\mu}$ is }&\small \text{simply a basis like in $\Eqn{df-nablaf-vec-1}$}\notag\\
-&=\left(\vard_\nu X^\mu\right)\uvec{d}^\nu (\uvec x_\mu)\notag\\
-&=\left(\vard_\nu X^\mu \right)\delta^\nu_\mu \\
-&=\vard_\mu X^\mu\label{dxDef}
-\end{align}
-$$
-
-The basis of total derivative can now be expressed as $\uvec d^\mu(\uvec x^\nu)=\uvec{d}^\mu ( \Partial{}{x^\nu})=\delta^{\mu,\nu}$. 
-
-Mapping the one-form (total derivative) to a covector (gradient), and take the inner product of the vector and the covector gives $\d x^\mu \cdot \Partial{}{x^\mu}=1$. 
-
-> ***Remark:***
+> The problem rises when you read *"A one-form is 'a thing you plug vectors into': you feed it a vector and it spits out a number which depends linearly on the input."*. You are happy to do some exercises to enhance your understanding of this new concept of covectors. You are smart enough to only use basis of aforementioned vectors and the covectors. That gives you
+> $$
+> \d x^i(\Partial{}{x^j}) =??? \notag
+> $$
+> Well, that is not clear. You thought maybe if reversing the roles of vector and covector (since they are dual to each other), the result will make more sense. You arrive at
+> $$
+> \Partial{(\d x^i)}{x^j}=??? \notag
+> $$
+> That is something you have never seen in calculus, yet it doesn't look entirely wrong. 
 >
-> Despite the fact that the covector (gradient) is a vector, it's obvious that gradient lives in a different vector space as tangent vectors does, since their basis is completely different objects. Moreover, There are no dot product defined in tangent space without further mapping, because the product of two tangent vector bases $\Partial{}{x^\mu}​$ would not be a number.
+> Then you turned to a text book for answer, [[Sean Carroll](https://arxiv.org/pdf/gr-qc/9712019.pdf)] for example. In most (if not all) text books, the equation reads
+> $$
+> \d x^i(\Partial{}{x^j}) =\Partial{(\d x^i)}{x^j}=\delta_j^i \notag
+> $$
+> That can't be right! You know very clear that $\Partial{x^i}{x^j}=\delta_j^i$ and $\Partial{(\d x^i)}{x^j}\neq\Partial{x^i}{x^j}$. 
+>
+> A quick google search tells you that these operators [**are merely "notations"**](https://math.stackexchange.com/questions/1478544/basis-one-form-and-basis-vector-confusion). An [answer](https://math.stackexchange.com/a/2318102) went so far as to give the explanation that $\d f$ should be
+> $$
+> \frac{df}{d} = \frac{\partial{f}}{\partial{x}}\frac{dx}{d} + \frac{\partial{f}}{\partial{y}}\frac{dy}{d}... \notag
+> $$
+> just to cancel out the $\Partial{}{x}​$.
 
-Now it's clear that a tangent vector is defined as $X\dfdas X^\mu\uvec x_\mu=X^\mu \Partial{}{x^\mu}$, the corresponding one-forms are defined as $\dual X \dfdas  X^\mu \dual x_\mu=X^\mu \d x_\mu$. 
+That bugged me a long time as well. However, if I start from $\Eqn{basis-one-form}$, I know that the basis of "canonical one-form" should be $\int \d x$ rather than $\d x$. We only used $\d x$ to rule out the redundant one forms to establish a one-to-one correspondence. There should be no puzzle anymore, since in some sense, $\d x$ is indeed a notation. And the expression $\frac{d\phi}{d}$ do resemble $\int \d x$ if you think of $\d $ and $\int$ as inverse operations. These two explanations each being only half of the story. Only by combining them can one get a solid understanding of the basis of covectors. 
 
-## Example of one-form and Vector
+## Redefined Vector and One-Forms
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-One-Forms/assets/vector.png" width="80%"/>
+At the end of last section, vectors were generalized as mathematical objects with the form $X=X^\mu\Partial{}{x^\mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X^\mu \d x_\mu$. 
 
-The vector is the directional derivative of a curve. The one-form is actually the total derivative of the function $f$. The covector is the gradient of the field $f$ over a open set.
+This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is not a total derivative of a function.
 
-## Redefined Vector and one-forms
-
-At the end of [vector is a (differential) operator](#vector-is-a-differential-operator), vectors were generalized as mathematical objects with the form $X=X^\mu\Partial{}{x^\mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X^\mu \d x_\mu$. This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is no function's total derivative.
+This property is called exactness. Which we will investigate later.
 
 # Two-Forms and Higher Forms
 
@@ -543,14 +571,14 @@ $$
 >
 >     However, this result is not the area of this two vectors. $\vec u \wedge\vec v$ is a bivector, it's norm $A^2=\norm{\vec u\wedge \vec v}^2\overset{\small\text{numerically}}{=\!=\!=\!=\!=}(\vec u \times \vec v)^2$ is the area of the parallelogram.
 >
-> 4. **Generalization as a direction way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$,$ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u_1 v_2 w_3 + u_2 v_3 w_1 + u_3 v_1 w_2 - u_1 v_3 w_2 - u_2 v_1 w_3 - u_3 v_2 w_1) (\uvec{e}_1 \wedge \uvec{e}_2 \wedge \uvec{e}_3) $. Still the volume($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
+> 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$,$ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u_1 v_2 w_3 + u_2 v_3 w_1 + u_3 v_1 w_2 - u_1 v_3 w_2 - u_2 v_1 w_3 - u_3 v_2 w_1) (\uvec{e}_1 \wedge \uvec{e}_2 \wedge \uvec{e}_3) $. Still the volume($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
 >
 >     There is more to it. While $\vec{u} \wedge \vec{v} \wedge \vec{w}$ is a simple construction of three vectors, it is also a wedge product of vector and yet a wedge product $\vec{u} \wedge (\vec{v} \wedge \vec{w})$. The volume of the parallelepiped ($3$-dimensional area) is now the span of a vector and an parallelogram ($2$-dimensional area). Similarly, a $(n+m)$-dimensional area can be spanned by a $n$-dimensional area and $m$-dimensional area.
 >
 
 ## Wedge Product of One-Forms
 
-Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X_{\mu\nu}\d x^\mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. 
+Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X_{\mu\nu}\d x^\mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
 
 This can be seen as a tensor product of two one-forms.
 $$
@@ -569,9 +597,7 @@ $$
 \d (\form X) &= \d (X^\mu \d x_\mu)\\
 &=(\d X^\mu )\wedge\d x_\mu + X^\mu\d( \d x_\mu)\\
 \xrightarrow[\d( \d x_\mu)=0]{\text{by def.}}&=(\d X^\mu )\wedge\d x_\mu\\
-\xrightarrow[\Eqn{dxDef}]{\text{See}}&=\inner{\vard}{X^\mu}\wedge\d x_\mu\\
-{\tiny\text{see $\Eqn{df-nablaf-vec-1}$}}&=\Partial{X^\mu}{x_\nu}\d x_\nu \wedge\d x_\mu \\
-\xrightarrow[\Eqn{wedgeExample}]{\text{See}}&=\Partial{X^\mu}{x_\nu}\d x_\nu \wedge\d x_\mu 
+&=\Partial{X^\mu}{x_\nu}\d x_\nu \wedge\d x_\mu 
 \end{align*}
 $$
 
@@ -587,19 +613,9 @@ $$
 $$
 
 
-
-
 Thus the exterior derivative of a $p$-form is a $(p+1)$-form.
 
 
 A $2$-form is an expression built using wedge products of pairs of $1$-forms. 
 
-
-
-
-
-
-
-
-
-The real significance of $2$-forms will come later when we do surface integrals. A $2$-form will be an expression that can be integrated over a surface in the same way that a $1$-form can be integrated over a curve.
+The real significance of $2​$-forms will come later when we do surface integrals. A $2​$-form will be an expression that can be integrated over a surface in the same way that a $1​$-form can be integrated over a curve.
