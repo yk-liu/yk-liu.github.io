@@ -12,6 +12,7 @@ user_title: Physics Undergraduate
 email: yingkai.liu@outlook.com
 
 markdown: kramdown
+
 kramdown:
  auto_ids: true
  footnote_nr: 1
@@ -50,4 +51,8 @@ author:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
 
+google_site_verification:
+  
+mathjax: true
+  
 permalink: none
