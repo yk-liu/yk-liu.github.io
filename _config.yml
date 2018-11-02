@@ -3,6 +3,8 @@ title: Welcome
 description: A Github Page of Yingkai Liu
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "https://yk-liu.github.io"
+
 
 # User settings
 username: Yingkai Liu
@@ -40,7 +42,7 @@ author:
   name:           Yingkai Liu
   picture:        
   email:          yingkai.liu@outlook.com
-  description:    Be Water
+  description:    This is a blog for a Physics undergrad with a broad interest. I proudly share my study notes here. 
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook:
