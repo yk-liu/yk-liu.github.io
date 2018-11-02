@@ -1,16 +1,1 @@
-<!-- Html Elements for Search -->
-<div id="search-container">
-<input type="text" id="search-input" placeholder="type in to search">
-<ul id="results-container"></ul>
-</div>
-
-<script src="{{ site.baseurl }}/assets/js/search-script.js"  ></script>
-
-<!-- Configuration -->
-<script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '{{'/archive/search.json' | prepend: site.baseurl }}'
-})
-</script>
+{% include search.html %}
