@@ -112,7 +112,11 @@ A simplicial complex $K$ is a set of simplexes glued together, such that
 1. Any face of a simplex of $K$ is part of $K$. 
 2. Any non-empty intersection of two simplexes belongs to $K$.
 
-This definition is quite intuitive.
+This definition is quite intuitive. By requirement 1., a simplicial complex has a well defined boundary (surface). All bodies must be covered by a surface. For example, an interior of a cube is not a simplicial complex. By requirement 2., simplexes in a simplicial complex is connected. The simplexes are not allowed to pass through each other. whenever they intersect, 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersection.png" width="30%">
+
+ 
 
 ## Oriented simplexes
 
