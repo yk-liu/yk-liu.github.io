@@ -36,21 +36,35 @@ Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count
 | Cube with a hole |  |  |  |  |  |
 | Hollow cube |  |  |  |  |  |
 
+
+
+
+
 # Homology
 
-## Triangulation of space
+## Triangulation of objects
 
 Triangulation is again no stranger for anyone who ever took part in IYPT, CUPT, or any PTs, and had some experience with COMSOL®. The following is a triangulation, or a "meshing" as in COMSOL®, of a spring, from [Nishant Nath](https://nishantnath.wordpress.com/2012/06/21/comsol-tutorials-meshing/)
 
 <img src="assets/COMSOL(R)mesh.png">
 
-It's also very commonly seen at 3D modeling (image from [freepik](https://www.freepik.com/blog/10-free-low-poly-animal-vector-images/)), see [here](https://poly.google.com/view/46bXrRt8pFF).
+It's also very commonly seen at 3D modeling (image from [freepik](https://www.freepik.com/blog/10-free-low-poly-animal-vector-images/)), see also [here](https://poly.google.com/view/46bXrRt8pFF).
 
 <img src="assets/lowPolyBear.png" width=30%>
 
-this
+It's self-evident that this technique is very useful as it converts a smooth object to a "discrete" one, while maintaining its most important traits. 
+
+Similar techniques can be adopted to topology spaces. We can use "triangles" to mesh out any oddly shaped topological space, turning it into a "polyhedron". From this polyhedron, we can calculate the Euler characteristic of the space, telling us how many "holes" are in this topological space.
+
+## Simplexes
 
 
+
+## Simple complexes
+
+
+
+ 
 
 # De Rham Cohomology
 
