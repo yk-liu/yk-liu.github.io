@@ -10,17 +10,47 @@ mathjax: true
 
 # Funny Name
 
-I struggled a little for all the terms in Topology meaning "equivalence" (with their even messier Chinese translations:  homomorphism(同态), isomorphism(同构), homeomorphism(同胚), homotopy(同伦), homology(同调), isotopy(同痕). Well, Zexian Cao wrote an [article](http://www.wuli.ac.cn/fileup/PDF/2014-43-08-010.pdf) in Chinese acclimating the strange names. 
+I struggled a little for all the terms in Topology meaning "equivalence" (with their even messier Chinese translations:  homomorphism(同态), isomorphism(同构), homeomorphism(同胚), homotopy(同伦), homology(同调), isotopy(同痕). Well, Zexian Cao wrote an [article](http://www.wuli.ac.cn/fileup/PDF/2014-43-08-010.pdf) in Chinese acclimating the strange names, and here's a explanation from [Wiktionary](https://en.wiktionary.org/wiki/homology).
 
 Guess I will write an article once I have understood these concepts. 
 
-Here is a explanation from [Wiktionary](https://en.wiktionary.org/wiki/homology).
+# Euler characteristic
 
-> **Etymology**
+The Homology is very similar to the Euler characteristic, which is a topological invarirant. Many of Chinese students encounter this concept around primary school or middle school, as a interesting excerise to develop a sense of space. Nevertheless, it's probably the most famous topological invariant. The law is somethings stated as Eular's rule, it states:
+
+>Let $V, E,F$ denote respectively the numbers of vertices (corners), edges and faces of a polyhedron, then
+>$$
+>V-E+F=2
+>$$
 >
-> From *homo-* +‎ *-logy*.
->
-> In mathematics, the term was first used in a topological sense by French polymath [Henri Poincaré](https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9), in a sense close to what is now called a *bordism*. Thus, he thought of a **homology** as a relation between [manifolds](https://en.wiktionary.org/wiki/manifold) mapped into a reference manifold. Such manifolds form a **homology** when they form the boundary of a higher-dimensional manifold inside the reference manifold. Poincaré simplified his definition by considering only spaces that were [simplicial complexes](https://en.wiktionary.org/wiki/simplicial_complex) (that had a [triangulation](https://en.wiktionary.org/wiki/triangulation)), and only objects in the space made up of [simplices](https://en.wiktionary.org/wiki/simplex) in the triangulation. Eventually, Poincaré's version was replaced by the more general *singular homology*, which is what mathematicians mean by ***homology***.
+
+Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count these numbers can get the number $2$ and call it a day. But that is only part of the story. If you really try to break the rules, you can come up with at least two more "polyhedrons" to prove your teacher wrong.
+
+
+
+
+| Name                                                     | Image                                                        | Vertices $V$ | Edges $E$ | Faces $F$ | Euler characteristic: $V-E+F$ |
+| -------------------------------------------------------- | ------------------------------------------------------------ | ------------ | --------- | --------- | ------------------------------------- |
+| Tetrahedron | ![Tetrahedron.png](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Tetrahedron.png/50px-Tetrahedron.png) | 4    | 6    | 4    | **2** |
+| Cube        | ![Hexahedron.png](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Hexahedron.png/50px-Hexahedron.png) | 8    | 12   | 6    | **2** |
+| Cube with a hole |  |  |  |  |  |
+| Hollow cube |  |  |  |  |  |
+
+# Homology
+
+## Triangulation of space
+
+Triangulation is again no stranger for anyone who ever took part in IYPT, CUPT, or any PTs, and had some experience with COMSOL®. The following is a triangulation, or a "meshing" as in COMSOL®, of a spring, from [Nishant Nath](https://nishantnath.wordpress.com/2012/06/21/comsol-tutorials-meshing/)
+
+<img src="assets/COMSOL(R)mesh.png">
+
+It's also very commonly seen at 3D modeling (image from [freepik](https://www.freepik.com/blog/10-free-low-poly-animal-vector-images/)), see [here](https://poly.google.com/view/46bXrRt8pFF).
+
+<img src="assets/lowPolyBear.png" width=30%>
+
+this
+
+
 
 # De Rham Cohomology
 
