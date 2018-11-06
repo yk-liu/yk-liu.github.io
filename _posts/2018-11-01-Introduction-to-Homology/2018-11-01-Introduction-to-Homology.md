@@ -27,14 +27,12 @@ The Homology is very similar to the Euler characteristic, which is a topological
 Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count these numbers can get the number $2$ and call it a day. But that is only part of the story. If you really try to break the rules, you can come up with at least two more "polyhedrons" to prove your teacher wrong.
 
 
-
-
 | Name                                                     | Image                                                        | Vertices $V$ | Edges $E$ | Faces $F$ | Euler characteristic: $V-E+F$ |
-| -------------------------------------------------------- | ------------------------------------------------------------ | ------------ | --------- | --------- | ------------------------------------- |
-| Tetrahedron | ![Tetrahedron.png](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Tetrahedron.png/50px-Tetrahedron.png) | 4    | 6    | 4    | **2** |
-| Cube        | ![Hexahedron.png](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Hexahedron.png/50px-Hexahedron.png) | 8    | 12   | 6    | **2** |
-| Cube with a hole |  |  |  |  |  |
-| Hollow cube |  |  |  |  |  |
+| :------------------: | :-------------------------: | ------------ | --------- | --------- | ------------------------------------- |
+| Tetrahedron | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/tetrahedron.png" width=40%> | 4    | 6    | 4   | 2                             |
+| Cube        | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Cube.png" width=40%> | 8    | 12   | 6    | 2 |
+| Cube with a hole | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CubeWithHole.png" width=40%> |  |  |  |  |
+| Hollow cube | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/hollowCube.png" width=40%> |  |  |  |  |
 
 
 
@@ -46,15 +44,17 @@ Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count
 
 Triangulation is again no stranger for anyone who ever took part in IYPT, CUPT, or any PTs, and had some experience with COMSOL®. The following is a triangulation, or a "meshing" as in COMSOL®, of a spring, from [Nishant Nath](https://nishantnath.wordpress.com/2012/06/21/comsol-tutorials-meshing/)
 
-<img src="assets/COMSOL(R)mesh.png">
+<img src=<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/COMSOL(R)mesh.png"> width=100%>
 
 It's also very commonly seen at 3D modeling (image from [freepik](https://www.freepik.com/blog/10-free-low-poly-animal-vector-images/)), see also [here](https://poly.google.com/view/46bXrRt8pFF).
 
-<img src="assets/lowPolyBear.png" width=30%>
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/LowPolyBear.png" width=30%>
 
-It's self-evident that this technique is very useful as it converts a smooth object to a "discrete" one, while maintaining its most important traits. 
+It's self-evident that this technique is very useful as it converts a smooth object to a "discrete" one, while maintaining its most important traits so that you can still recognize it's a bear. 
 
-Similar techniques can be adopted to topology spaces. We can use "triangles" to mesh out any oddly shaped topological space, turning it into a "polyhedron". From this polyhedron, we can calculate the Euler characteristic of the space, telling us how many "holes" are in this topological space.
+Similar techniques can be adopted to topology spaces. We can use "triangles" to mesh out any oddly shaped topological space, turning it into a "polyhedron". From this polyhedron, we can calculate the Euler characteristic of the space, telling us how many "holes" are in this topological space. This gives us a way to classify topology spaces according to its "holes". This is an important aspect of a topological space as in the famous example of topology - a cup and a doughnut is topological equivalent.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif">
 
 ## Simplexes
 
@@ -66,5 +66,5 @@ Similar techniques can be adopted to topology spaces. We can use "triangles" to 
 
  
 
-# De Rham Cohomology
+
 
