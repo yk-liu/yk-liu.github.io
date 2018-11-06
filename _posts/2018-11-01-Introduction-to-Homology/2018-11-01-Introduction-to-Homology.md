@@ -27,12 +27,13 @@ The Homology is very similar to the Euler characteristic, which is a topological
 Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count these numbers can get the number $2$ and call it a day. But that is only part of the story. If you really try to break the rules, you can come up with at least two more "polyhedrons" to prove your teacher wrong.
 
 
-| Name                                                     | Image                                                        | Vertices $V$ | Edges $E$ | Faces $F$ | Euler characteristic: $V-E+F$ |
-| :------------------: | :-------------------------: | ------------ | --------- | --------- | ------------------------------------- |
-| Tetrahedron | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/tetrahedron.png" width=40%> | 4    | 6    | 4   | 2                             |
-| Cube        | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Cube.png" width=40%> | 8    | 12   | 6    | 2 |
-| Cube with a hole | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CubeWithHole.png" width=40%> |  |  |  |  |
-| Hollow cube | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/hollowCube.png" width=40%> |  |  |  |  |
+|            Name            |                            Image                             | Vertices $V$ | Edges $E$ | Faces $F$ | Euler characteristic: $V-E+F$ |
+| :------------------------: | :----------------------------------------------------------: | ------------ | --------- | --------- | ----------------------------- |
+|        Tetrahedron         | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/tetrahedron.png" width=30%> | 4            | 6         | 4         | 2                             |
+|            Cube            | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Cube.png" width=30%> | 8            | 12        | 6         | 2                             |
+|  Cube with a hole (wrong)  | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CubeWithHoleWrong.png" width=30%> | 16           | 24        | 10        | 2                             |
+| Cube with a hole (correct) | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CubeWithHole.png" width=30%> |              |           |           |                               |
+|        Hollow cube         | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/hollowCube.png" width=30%> | 16           | 24        | 12        | 4                             |
 
 
 
