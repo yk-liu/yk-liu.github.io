@@ -4,7 +4,7 @@ Edit: 2018-11-05
 category: Blog
 tags: De-Rahm-Cohomology Topology
 keywords: Topology Homology 
-description: My interpretation on homology, as a preparation for K-theory
+description: My study notes on homology, as a preparation for Cohomology and to K-theory.
 mathjax: true
 ---
 
@@ -12,6 +12,7 @@ $$
 \newcommand{\spl}[1]{\langle{#1}\rangle}
 \newcommand{\inner}[2]{\left\langle{#1,#2}\right\rangle}
 \newcommand{\form}{\tilde}
+\newcommand{\abs}[1]{\left\vert{#1}\right\vert}
 %\renewcommand{\vec}{\mathbf}
 \newcommand{\bra}[1]{\left\langle{#1}\right\vert }
 \newcommand{\ket}[1]{\left| {#1}\right\rangle}
@@ -47,6 +48,8 @@ I struggled a little for all the terms in Topology meaning "equivalence" (with t
 
 # Euler Characteristic
 
+This section follows [[Armstrong](https://www.springer.com/gb/book/9780387908397)].
+
 Euler characteristic is actually a topological invariant. Many of Chinese students encounter this concept around primary school or middle school, as a interesting exercise to develop a sense of space. Nevertheless, it's probably the most famous topological invariant. The law is somethings stated as Euler's rule, it states:
 
 >Let $V, E,F$ denote respectively the numbers of vertices (corners), edges and faces of a polyhedron, then
@@ -73,9 +76,9 @@ Any quantity We say that this number characterizes the space, hence the name.
 
 # Homology
 
-Homology, however, is just a natural way of defining Euler characteristics on topological spaces.
+Homology, however, is just a natural way of defining Euler characteristics on topological spaces. This section follows closely to [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)].
 
-## Triangulation of objects
+## Triangulation of Objects
 
 Triangulation is again no stranger for anyone who ever took part in [IYPT](http://iypt.org)(International Young Physicists' Tournament), [CUPT](http://adsabs.harvard.edu/abs/2013APS..MARF38013L)(China Undergraduate Physics Tournament), or any PTs, and had some experience with [COMSOL Multiphysics® software](https://www.comsol.com/comsol-multiphysics). The following is a triangulation, or a "meshing" as is called in the software, of a spring, from [Nishant Nath](https://nishantnath.wordpress.com/2012/06/21/comsol-tutorials-meshing/).
 
@@ -85,7 +88,7 @@ It's also very commonly seen at 3D modeling (image from [freepik](https://www.fr
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/LowPolyBear.png" width="30%">
 
-It's self-evident that this technique is very useful as it converts a smooth object to a "discrete" one, while maintaining its most important traits so that you can still recognize it's a bear. 
+It's self-evident that this technique is very useful as it converts a smooth object to a "discrete" one, while maintaining its most important traits so that you can still recognize it's a bear. Acute readers might have known where we are heading: we are going to calculate the Euler Characteristic of smooth objects (topological spaces) by triangulating. 
 
 Similar techniques can be adopted to topology spaces. We can use "triangles" to mesh out any oddly shaped topological space, turning it into a "polyhedron". From this polyhedron, we can calculate the Euler characteristic of the space, telling us how many "holes" are in this topological space. This gives us a way to classify topology spaces according to its "holes". This is an important aspect of a topological space as in the famous example of topology - a cup and a doughnut is topological equivalent. (image from [Wikipedia](https://en.wikipedia.org/wiki/Topology))
 
@@ -103,7 +106,9 @@ Informally, a $n$-simplex is the solid polyhedron constructed by $n+1$ points th
 
 A simplex can have generalized "faces". These are named $k$-faces. For instance, a $3$-simplex can have $0$-faces (vertices), $1$-faces (lines), $2$-faces (faces) and $3$-faces (the simplex itself). Since simplex is "simple", the number of $k$-faces of a $n$-simplex is given by $\binom{k+1}{n+1}=\frac{(k+1)!}{(n+1)!(n-k)!} $.
 
-## Simplicial Complexes
+## Simplicial Complexes and Polyhedrons
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersection.png" width="30%">
 
 From simplexes, simplicial complexes can be constructed. Simplicial complexes are again generalizations of polyhedrons in higher or lower dimensions.
 
@@ -112,19 +117,38 @@ A simplicial complex $K$ is a set of simplexes glued together, such that
 1. Any face of a simplex of $K$ is part of $K$. 
 2. Any non-empty intersection of two simplexes belongs to $K$.
 
-This definition is quite intuitive. By requirement 1., a simplicial complex has a well defined boundary (surface). All bodies must be covered by a surface. For example, an interior of a cube is not a simplicial complex. By requirement 2., simplexes in a simplicial complex are not allowed to freely pass through each other. By "not passing though", we mean all the points generated by the intersection must be included. 
+This definition is quite intuitive. By requirement 1., a simplicial complex has a well defined boundary (surface). All bodies must be covered by a surface. For example, an interior of a cube is not a simplicial complex. By requirement 2., simplexes in a simplicial complex are not allowed to freely pass through each other. By "not passing though", we mean all the points generated by the intersection must be included. For example, the left is not a simplicial complex for the intersection is not counted. While the right is a lawful simplicial complex. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersectionExample.png" width="30%">
 
+Formally, the simplicial complex $K$ is defined as a set of simplexes.
+
+The dimension of $K$, denoted as $\dim K$ is defined as the largest dimension of simplexes in $K$. This means that although a complex can be in a high dimensional space, for example a triangle embedded in a $4$-dimensional space, the dimension of the complex itself is unchanged, $3$ as in the example.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/complex.png" width="30%">
+
+The set of the above object is
+$$
+\begin{align*}
+K=\{& p_0,p_1,p_2,p_3,\spl{p_0,p_1},\spl{p_0,p_2},\spl{p_0,p_3},
+\spl{p_1,p_2},\spl{p_1,p_3},\spl{p_2,p_3},\spl{p_1,p_2,p_3}\}
+\end{align*}
+$$
+If every simplex in the set is regarded as a subset of $\R^n$, the simplicial complex is called a **polyhedron** $\abs {K}$.
+
+## Triangulation of Topological Space
+
+If there is a homeomorphism $f:\abs{K}\rightarrow X$, topological space is said to be **triangulable** and the pair $(K,f)​$ is called a **triangulation**. 
+
+## Oriented Simplexes
+
+The notation of a simplex as $\spl{p_1,p_2,\cdots,p_n}$ seems insufficient. These two triangles cannot be bought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersection.png" width="30%">
 
 
 
- 
 
-## Oriented simplexes
 
 [to be continued]
 
