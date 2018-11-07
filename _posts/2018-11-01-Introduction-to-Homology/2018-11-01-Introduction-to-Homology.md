@@ -143,7 +143,11 @@ If there is a homeomorphism $f:\abs{K}\rightarrow X$, topological space is said 
 
 ## Oriented Simplexes
 
-The notation of a simplex as $\spl{p_1,p_2,\cdots,p_n}$ seems insufficient. These two triangles cannot be bought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
+The notation of a simplex as $\spl{p_1,p_2,\cdots,p_n}$ seems insufficient. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png">
+
+These two triangles cannot be bought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
 $$
 (p_{i_0},p_{i_1},\cdots,p_{i_n})=\sgn (P)(p_0,p_1,\cdots,p_n)
 $$
