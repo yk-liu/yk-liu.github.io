@@ -2,8 +2,8 @@
 title: Introduction to Homology
 Edit: 2018-11-05
 category: Blog
-tags: De-Rahm-Cohomology Topology
-keywords: Topology Homology 
+tags: homology Topology Euler-Characteristic
+keywords: simplex complex triangulation 
 description: My study notes on homology, as a preparation for Cohomology and to K-theory.
 mathjax: true
 ---
@@ -37,6 +37,7 @@ $$
 \newcommand{\red}{\color{red}}
 \newcommand{\norm}[1]{\left\|{#1}\right\|}
 \newcommand{\set}[1]{\left\lbrace{#1}\right\rbrace}
+\newcommand{\sgn}{\operatorname{sgn}}
 \notag
 $$
 
@@ -144,9 +145,16 @@ If there is a homeomorphism $f:\abs{K}\rightarrow X$, topological space is said 
 
 The notation of a simplex as $\spl{p_1,p_2,\cdots,p_n}$ seems insufficient. These two triangles cannot be bought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
 $$
-(p_1,p_2,\cdots,p_n)=sgn(P)()
+(p_{i_0},p_{i_1},\cdots,p_{i_n})=\sgn (P)(p_0,p_1,\cdots,p_n)
 $$
 
+where 
+$$
+P=\begin{pmatrix}
+  0   & 1   & \cdots & n   \\
+  i_0 & i_1 & \cdots & i_n
+  \end{pmatrix}
+$$
 
 
 
