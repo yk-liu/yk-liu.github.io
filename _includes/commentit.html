@@ -1,5 +1,4 @@
-<noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
-   
+
    {% if page.commentable %}
      {% if page.comments %}
        {% assign sorted_comments = (page.comments | sort: 'date') %}
@@ -18,16 +17,21 @@
          </div>
        </div>
      {% else %}
-       <div> &#128517; There are no comments on this post. </div>
+       <div> There are no comments on this post. Be the firt one!</div>
      {% endfor %}
    {% else %}
      <div>&#128517; Comments on this post is disabled.</div>
    {% endif %}
    
+<hr>
 
+<noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 
 
 <div id="commentit"></div>
+
+<hr>
+
 <script type="text/javascript">
   /** CONFIGURATION VARIABLES **/
   var commentitUsername = 'yk-liu';
