@@ -66,6 +66,6 @@ defaults:
       type: "posts"
     values:
       mathjax: "true"
-      comments: "true"
+      commentable: "true"
 
 
