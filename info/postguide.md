@@ -3,27 +3,32 @@ layout: blank
 commentable: false
 ---
 
-# Commenting and Discussion FAQs & Guidelines
+# Commenting FAQs & Guidelines
 
-## Why my comments not shown on the page?
+## Why aren't my comments shown on the page?
 
-Well, this website means alot to me. I don't want any possible
+Well, this website means *a lot* to me. I don't want to get into any trouble because anyone else's comments. **So all comments will be moderated**. So it might take a few days before it finally shows up on the website. Still, I reserve the right to edit or delete comments that do not meet the standards. See how the system ([comm(enit|it)](https://commentit.io/)) works [here](https://commentit.io/faq).
 
-We want you to be a resource for your fellow readers and we hope that you’ll use our comment section to do that. We’ve designed it to elevate and amplify the most intelligent and civil responses, and diminish or hide the worst. These are the rules of the road:
+## Do you read comment?
 
-## I read comments.
-Though I may not be monitoring the comment section on a daily basis, I do pay close attention to them. I reserve the right to edit or delete comments that do not meet the standards.
+**Yes**. All comments on any of the post, no matter how long ago it was posted, is visible to me as soon as you posted it. 
 
-## Stay on point.
-When making a comment, don't go off-topic. You can make suggestions that you think can make 
+I read your comments because your comments matter to me.
 
-## Show respect.
-We encourage and appreciate thoughtful debate. Just make sure that when you disagree with a story's premise or another commenter that you do so in a respectful and courteous manner.
+First of all, I get encouragement from comments ( this is the main reason I opened the comment section).
 
-## Be responsible and authentic.
-Post only your opinions in your own words. You are responsible for the content you post.
+Second, I am aware that I will be making mistakes on posts. Some maybe grammatic, some might be of facts. Commenting is the most effective way for you to reach out to me so I can correct them. 
 
-## Don't post spam or ads.
-This website is not a billboard for your business. Don't post spam, self-promotional content, or ad campaigns.
+## What are the guidelines of posting a comment?
+
+Well, there really isn't much. **You can be a resource for your fellow readers and I sincerely hope that you’ll use our comment section to do that**. Just follow your common sense and you should be good. For those who really need a document, here are the rules.
+
+### Stay on point.
+
+When making a comment, try not to go off-topic. 
+
+### Show respect.
+
+I encourage and appreciate thoughtful debate. Just make sure that when you disagree with the author or another commenter, you do so in a respectful and courteous manner.
 
 
