@@ -54,6 +54,7 @@ This section follows [[Armstrong](https://www.springer.com/gb/book/9780387908397
 Euler characteristic is actually a topological invariant. Many of Chinese students encounter this concept around primary school or middle school, as a interesting exercise to develop a sense of space. Nevertheless, it's probably the most famous topological invariant. The law is somethings stated as Euler's rule, it states:
 
 >Let $V, E,F$ denote respectively the numbers of vertices (corners), edges and faces of a polyhedron, then
+>
 >$$
 >V-E+F=2
 >$$
@@ -129,12 +130,14 @@ The dimension of $K$, denoted as $\dim K$ is defined as the largest dimension of
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/complex.png" width="30%">
 
 The set of the above object is
+
 $$
 \begin{align*}
 K=\{& p_0,p_1,p_2,p_3,\spl{p_0,p_1},\spl{p_0,p_2},\spl{p_0,p_3},
 \spl{p_1,p_2},\spl{p_1,p_3},\spl{p_2,p_3},\spl{p_1,p_2,p_3}\}
 \end{align*}
 $$
+
 If every simplex in the set is regarded as a subset of $\R^n$, the simplicial complex is called a **polyhedron** $\abs {K}$.
 
 ## Triangulation of Topological Space
@@ -152,10 +155,13 @@ The notation of a simplex as $\spl{p_1,p_2,\cdots,p_n}$ is actually insufficient
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png">
 
 These two triangles cannot be bought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
+
 $$
 (p_{i_0},p_{i_1},\cdots,p_{i_n})=\sgn (P)(p_0,p_1,\cdots,p_n)
 $$
+
 where 
+
 $$
 P=\begin{pmatrix}
   0   & 1   & \cdots & n   \\
@@ -170,16 +176,18 @@ The boundary of a complex is of particular interest to us. \[why...\]\[need elab
 The boundary operator $\partial_r$ acts on a $r$-simplex gives its boundary. The $0$-simplex is defined as has no boundary, denoted as $\partial_0p_0=0$. 
 
 Utilizing the orientated simplexes, higher dimensional simplexes can have well defined boundaries.
+
 $$
 \begin{align*}
 \partial_r\sigma_r&=\sum_{i=0}^{r}(-1)^i(p_0,p_1,\cdots,p_{i-1},p_{i+1},\cdots,p_r)\\
 &\dfdas\sum_{i=0}^{r}(-1)^i(p_0,p_1,\cdots,\hat{p_{i}},\cdots,p_r)\\
 \end{align*}
 $$
+
 Using boundary operator we can build a chain complex:
+
 $$
 \require{mathtools}
-
 0\substack{i\\\hookrightarrow}C_r\xrightarrow{\partial_r}C_{r-1}\xrightarrow{\partial_r}C_{r-2}\xrightarrow{\partial_r} \cdots\xrightarrow{\partial_2}C_{1}\xrightarrow{\partial_1}0
 $$
 
