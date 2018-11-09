@@ -58,3 +58,14 @@ google_site_verification:
 mathjax: true
   
 permalink: none
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      mathjax: "true"
+      comments: "true"
+
+
