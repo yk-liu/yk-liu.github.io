@@ -31,4 +31,7 @@ When making a comment, try not to go off-topic.
 
 I encourage and appreciate thoughtful debate. Just make sure that when you disagree with the author or another commenter, you do so in a respectful and courteous manner.
 
+### Disclaimer
+
+Users of website participate at their own risk, and take personal responsibility for their comments, username, and any information provided. The blog owner accepts no responsibility or liability for any data, text, images, messages, or any other materials whatsoever (“Content”) in any comments on this Blog. The opinions expressed in the comments are the responsibility of the commenter.
 

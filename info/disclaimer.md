@@ -28,7 +28,9 @@ Comments are welcome. However, the blog owner reserves the right to edit or dele
 
 - Comments containing hate speech, credible threats, or direct attacks on an individual or group.
 
-The blog owner is not responsible for the content in comments.
+The blog owner is not responsible for the content in comments. 
+
+Users of website participate at their own risk, and take personal responsibility for their comments, username, and any information provided. The blog owner accepts no responsibility or liability for any data, text, images, messages, or any other materials whatsoever (“Content”) in any comments on this Blog.
 
 ## Change of Disclaimer
 
