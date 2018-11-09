@@ -67,5 +67,6 @@ defaults:
     values:
       mathjax: "true"
       commentable: "true"
+      toc: "true"
 
 
