@@ -15,7 +15,7 @@
              <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
              on {{ c.date | date_to_string }}
            </p>
-           <p>{{ c.content | newline_to_br }}</p>
+           <p>{{ c.content | newline_to_br | markdownify }}</p>
          </div>
        </div>
      {% else %}
@@ -28,7 +28,7 @@
 
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 
-
+<div> You can use markdown in your comment. </div>
 <div id="commentit"></div>
 
 <hr>
