@@ -3,7 +3,7 @@ title: Introduction to Homology
 Edit: 2018-11-05
 category: Blog
 tags: homology Topology Euler-Characteristic
-keywords: simplex complex triangulation 
+keywords: simplex complex triangulation cycle boundary chain
 description: My study notes on homology, as a preparation for Cohomology and to K-theory.
 mathjax: true
 ---
@@ -45,7 +45,7 @@ $$
 
 # Funny Name
 
-I struggled a little for all the terms in Topology meaning "equivalence" (with their even messier Chinese translations:  homomorphism(同态), homeomorphism(同胚), isomorphism(同构), homology(同调), homotopy(同伦), isotopy(同痕). Zexian Cao wrote an [article](http://www.wuli.ac.cn/fileup/PDF/2014-43-08-010.pdf) in Chinese discussing these strange names, and here's a explanation of homology from [Wiktionary](https://en.wiktionary.org/wiki/homology). They are not satisfactory as far as I am concerned. I might write an article as soon as I have understood these concepts. 
+I struggled a little for all the terms in Topology meaning "equivalence" (with their even messier Chinese translations:  homomorphism (同态), homeomorphism (同胚), isomorphism (同构), homology (同调), homotopy (同伦), isotopy (同痕). Zexian Cao wrote an [article](http://www.wuli.ac.cn/fileup/PDF/2014-43-08-010.pdf) in Chinese discussing these strange names, and here's a explanation of homology from [Wiktionary](https://en.wiktionary.org/wiki/homology). They are not satisfactory as far as I am concerned. I might write an article as soon as I have understood these concepts. 
 
 # Euler Characteristic
 
@@ -69,15 +69,15 @@ Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count
 | Cube with a hole (correct) | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CubeWithHole.png) | 16           | 32        | 16        | 0                             |
 |        Hollow cube         | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/hollowCube.png) | 16           | 24        | 12        | 4                             |
 
-Notice that a polyhedron's faces must be simple connected, so the correct cube with a hole needs a few extra lines.
+Notice that a polyhedron's faces must be simple connected (any two vertices must be connected by an edge), so the correct cube with a hole needs a few extra lines.
 
 You can see that by continuously deforming a cube, to tetrahedron, [Octahedron](https://en.wikipedia.org/wiki/Octahedron), [Dodecahedron](https://en.wikipedia.org/wiki/Dodecahedron), [Icosahedron](https://en.wikipedia.org/wiki/Icosahedron), you end up with the same number. Once you poke a hole on the polyhedron, the number changes immediately. You can keep deformingly continuously until the next hole, the number will remain unchanged. This is the very definition of a **topological invariant**.
 
 Any quantity We say that this number characterizes the space, hence the name.
 
-# Homology
+# Triangulation
 
-Homology, however, is just a natural way of defining Euler characteristics on topological spaces. This section follows closely to [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)].
+Homology, however, is just a natural way of defining Euler characteristics on topological spaces. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)].
 
 ## Triangulation of Objects
 
@@ -141,9 +141,13 @@ If every simplex in the set is regarded as a subset of $\R^n$, the simplicial co
 
 If there is a homeomorphism $f:\abs{K}\rightarrow X$, topological space is said to be **triangulable** and the pair $(K,f)​$ is called a **triangulation**. 
 
+# Homology Group
+
+From polyhedrons we are going to construct three groups. By combining these groups we will be able to find a topological invariant called homology group. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)].
+
 ## Oriented Simplexes
 
-The notation of a simplex as $\spl{p_1,p_2,\cdots,p_n}$ seems insufficient. 
+The notation of a simplex as $\spl{p_1,p_2,\cdots,p_n}$ is actually insufficient. It also helps defining the boundary of simplexes.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png">
 
@@ -151,7 +155,6 @@ These two triangles cannot be bought to overlap without flipping, neither can th
 $$
 (p_{i_0},p_{i_1},\cdots,p_{i_n})=\sgn (P)(p_0,p_1,\cdots,p_n)
 $$
-
 where 
 $$
 P=\begin{pmatrix}
@@ -159,6 +162,49 @@ P=\begin{pmatrix}
   i_0 & i_1 & \cdots & i_n
   \end{pmatrix}
 $$
+
+## Boundary Operator
+
+The boundary of a complex is of particular interest to us. \[why...\]\[need elaboration on Euler Characteristic\].
+
+The boundary operator $\partial_r$ acts on a $r$-simplex gives its boundary. The $0$-simplex is defined as has no boundary, denoted as $\partial_0p_0=0$. 
+
+Utilizing the orientated simplexes, higher dimensional simplexes can have well defined boundaries.
+$$
+\begin{align*}
+\partial_r\sigma_r&=\sum_{i=0}^{r}(-1)^i(p_0,p_1,\cdots,p_{i-1},p_{i+1},\cdots,p_r)\\
+&\dfdas\sum_{i=0}^{r}(-1)^i(p_0,p_1,\cdots,\hat{p_{i}},\cdots,p_r)\\
+\end{align*}
+$$
+Using boundary operator we can build a chain complex:
+$$
+\require{mathtools}
+
+0\substack{i\\\hookrightarrow}C_r\xrightarrow{\partial_r}C_{r-1}\xrightarrow{\partial_r}C_{r-2}\xrightarrow{\partial_r} \cdots\xrightarrow{\partial_2}C_{1}\xrightarrow{\partial_1}0
+$$
+
+
+## Chains
+
+Using simplexes from a polyhedron, we can build chains.
+
+The simplest example is building chains from points.
+
+
+
+## Cycles and Boundaries
+
+
+
+
+
+
+
+## Homology Group
+
+
+
+
 
 
 
