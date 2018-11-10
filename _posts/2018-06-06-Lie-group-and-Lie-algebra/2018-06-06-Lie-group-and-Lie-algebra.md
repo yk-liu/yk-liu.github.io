@@ -100,9 +100,9 @@ x &\rightarrow \chi=Rx\\
 \end{align*}
 $$
 
-上面大写的希腊字母表示函数值, $\psi(x)=\Psi, \quad \psi(y)=\Phi$, $P_R$是对标量$\Phi$(一个数)的变换. 
+上面大写的希腊字母表示函数值, $\psi(x)=\Psi, \quad \psi(y)=\Phi$ ,  $P_R$ 是对标量 $\Phi$ (一个数)的变换. 
 
-注意 而$\Psi \in \mathbb{C}$是一个标量, 因此就若采用矩阵表示, $R$是一个$n\times n$矩阵, 作用于$x\in \mathbb{C}^n$, 而$P_R$是一个算符, 作用于$\psi(x)= \Psi \in \mathbb{C}$
+注意 而 $\Psi \in \mathbb{C}$ 是一个标量, 因此就若采用矩阵表示, $R$是一个$n\times n$矩阵, 作用于$x\in \mathbb{C}^n$, 而$P_R$是一个算符, 作用于$\psi(x)= \Psi \in \mathbb{C}$
 
 又因为一般有$\Phi=P_R\Psi=P_R\psi(x)\neq \psi(\chi)$, 因而将$\Phi$记为$\Phi=\phi(\chi)$
 
@@ -225,9 +225,11 @@ $$
 为了先有一个直观的理解, 先从李群的单参数子群入手. 李群的单参数子群可以理解为李群$G$所在流形$\mathcal{M}$上的一条单参数曲线. 
 
 > 李群的来源是数学家Lie 在研究形如
+> 
 > $$
 > \dot{x}(x_1,x_2,\cdots, x_n)=f(x_1,x_2,\cdots, x_n)\notag
 > $$
+> 
 > 的微分方程时引入的. 一组初始条件,就对应了一个解,即李群的一个单参数子群
 
 #### 李群的切丛性质
@@ -261,9 +263,9 @@ graph LR
 
 但是对于李群我们不能这样做. 李群的切空间的元素之间的运算关系必须由李群群乘来确定. 这样对群乘"微分",得到的运算就会是李群切空间的运算. 因此,只要确定了切空间内元素与李群中元素的对应关系, 就可以确定切空间内元素的运算了.
 
-这样的映射之一,就是指数映射. 为了不与单位元$e$混淆, 指数映射一律记为$\exp(x)$, 而不是$e^x$
+这样的映射之一,就是指数映射. 为了不与单位元 $e$ 混淆, 指数映射一律记为$\exp(x)$, 而不是$e^x$
 
-由$\vec{v}_1 \rightarrow g_{\vec{v}_1}(t)$是一一映射, 可以定义 $\exp(\vec{v}_1)=g_{\vec{v}_1}(1)$为指数映射.
+由 $\vec{v}_1 \rightarrow g _ {\vec{v}_ 1}(t) $ 是一一映射, 可以定义 $\exp(\vec{v}_1)=g _ { \vec{v}_ 1} (1) $ 为指数映射.
 
 指数映射的性质和定义在实数上的指数映射基本一致:
 
@@ -280,7 +282,7 @@ $$
 
 有了映射,我们得到如下定理:
 
-$e$处切空间$T_e$中存在切空间单位元$\vec{e}$的邻域$TU_\vec{e}$, 使得$TU_\vec{e}$通过指数映射,与$e$的邻域微分同构.
+$e$处切空间$T _ e$中存在切空间单位元$\vec{e}$的邻域$TU_\vec{e}$, 使得$T U _ {\vec{e}}$通过指数映射,与$e$的邻域微分同构.
 
 #### 指数映射的Taylor展开
 
@@ -292,11 +294,12 @@ $e$处切空间$T_e$中存在切空间单位元$\vec{e}$的邻域$TU_\vec{e}$, �
 $$
 N_e=\lbrace \exp{\sum_{i=1}^{n}{x_i \vec{E}_i} | \sum_{i=1}^{n}{x_i \vec{E}_i} \in N_\vec{e}}\rbrace
 $$
-这个坐标系的含义是, 通过切空间的基矢量$\vec{E}_i$, 展开切空间单位元邻域$N_\vec{e}$得到$ N_\vec{e}$中的坐标$x_i$, 然后将切空间的任意一个向量$\vec{v}= \sum_{i=1}^{n}{x_i \vec{E}_i}$通过指数映射$\exp{\vec{v}}$得到李群单位元素邻域的元素$\exp{\sum_{i=1}^{n}{x_i \vec{E}_i}}$. 
+
+这个坐标系的含义是, 通过切空间的基矢量 $\vec{E}_i$, 展开切空间单位元邻域 $ N _ { \vec{e} } $得到$N _ \vec{e}$ 中的坐标$x_i$ , 然后将切空间的任意一个向量$\vec{v}= \sum_{i=1}^{n}{x_i \vec{E}_i}$通过指数映射$\exp{\vec{v}}$得到李群单位元素邻域的元素$\exp{\sum _ {i=1}^{n}{x_i \vec{E}_i}}$. 
 
 ##### 建立Taylor公式
 
-定理: 存在$\mathfrak{g}$的原点邻域$N_\vec{e}$.满足若$\vec{x} \in N_\vec{e}$, 则 $0\le t \le 1 $都有$t \vec{x} \in N_\vec{e}$, 且对$G$上解析的函数$f$有:
+定理: 存在$\mathfrak{g}$的原点邻域$N_\vec{e}$.满足若$\vec{x} \in N _ \vec{e}$, 则 $0\le t \le 1 $都有$t \vec{x} \in N _ \vec{e}$, 且对$G$上解析的函数$f$有:
 
 $$
 f(g\cdot \exp{\vec{x}})=\sum_{n=0}^{\infty} \frac{1}{n!}\left(\vec{x}^n f\right)(g)=\exp{(\vec{x})} f\left(g\right)
