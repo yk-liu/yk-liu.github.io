@@ -22,7 +22,7 @@
    <div style = "margin-right: 3%;padding: 50px" class="container">
       {% include tagCloud.html %}  
 	  <hr>
-	  <h2>Too much? Try <a href="/blog/tags">Search</a> it!</h2>
+	  <h2>Too much? Try <a href="/blog/search">Search</a> it!</h2>
       <hr>
       {% for tag in site.tags %}
           <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
