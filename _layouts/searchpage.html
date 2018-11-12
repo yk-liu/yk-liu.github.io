@@ -20,29 +20,8 @@
    </div>
    <body>
    <div style = "margin-right: 3%;padding: 50px" class="container">
-      {% include tagCloud.html %}  
-	  <hr>
-	  <h2>Too much? Try <a href="/blog/tags">Search</a> it!</h2>
-      <hr>
-      {% for tag in site.tags %}
-          <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
-          <ul class="tags-expo-posts">
-             {% for post in tag[1] %}
-             <li>
-                <a class="post-title" href="{{ site.baseurl }}{{ post.url }}" target="_blank">
-                {{ post.title }}
-                </a>
-                <i class="fas fa-angle-double-right"></i>
-                {{ post.date | date_to_string }}
-                <br>
-                <small class="post-description">
-                <i class="fas fa-caret-right"></i>
-                {{ post.description }}
-                </small>
-             </li>
-             {% endfor %}
-          </ul>
-      {% endfor %}
+   <h2>Can't find it? Take a look at <a href="/blog/">Tags</a></h2>
+     {% include search.html %}
    </div>
    </body>
-</html> 
+</html>
