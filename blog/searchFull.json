@@ -10,8 +10,8 @@ layout: null
       "keywords"    : "{{ post.keywords | join: ', ' }}",
       "url"         : "{{ site.baseurl }}{{ post.url }}",
       "date"        : "{{ post.date }}",
-      "description" : "{{ post.description }}"
-      "content"     : {{ post.content | strip_html | strip_newlines| jsonify }}
+      "description" : "{{ post.description }}",
+      "content"     : "{{ post.content | strip_html | jsonify }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
