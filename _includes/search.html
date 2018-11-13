@@ -1,16 +1,39 @@
 <!-- Html Elements for Search -->
 <div id="search-container">
-<input type="text" id="search-input" placeholder="type in to search">
+<input type="text" id="search-input" style="width: 100%;" placeholder="type in to search...">
 <ul id="results-container"></ul>
 </div>
+
+<br>
+
+Enable Full-content search: <input type="checkbox" id="Full-content"  onclick="CheckBox()">
 
 <script src="{{ site.baseurl }}/assets/js/search-script.js" type="text/javascript" ></script>
 
 <!-- Configuration -->
 <script type="text/javascript">
+
 SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '{{site.baseurl }}/blog/search.json'
-}) 
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{site.baseurl }}/blog/search.json'
+        }) 
+		
+function CheckBox() {
+   var checkBox = document.getElementById("Full-content");
+   if (checkBox.checked == true){
+        return SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{site.baseurl }}/blog/search-fullcontent.json'
+        }) 
+    } else {
+        return SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{site.baseurl }}/blog/search.json'
+        }) 
+    }
+   }
+
 </script>
