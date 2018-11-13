@@ -10,6 +10,12 @@ Enable Full-content search: <input type="checkbox" id="Full-content"  onclick="C
 
 <!-- Configuration -->
 <script type="text/javascript">
+
+SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: 'https://yk-liu.github.io/blog/search.json'
+        }) 
 		
 function CheckBox() {
    var checkBox = document.getElementById("Full-content");
@@ -17,13 +23,13 @@ function CheckBox() {
         return SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
-            json: "https://yk-liu.github.io/blog/searchfull.json"
+            json: 'https://yk-liu.github.io/blog/searchfull.json'
         }) 
     } else {
         return SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
-            json: "https://yk-liu.github.io/blog/search.json"
+            json: 'https://yk-liu.github.io/blog/search.json'
         }) 
     }
    }
