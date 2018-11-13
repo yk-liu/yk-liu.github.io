@@ -25,13 +25,13 @@ description: My attempt at building Statistical Mechanics from First Principles
  $ \rho $ 为相空间点 $ (p,q) $ 处的点密度.
 
 $$
-N=\int_V{\tilde{\rho}{(p,q)}d\Gamma}
+N=\int _ V{\tilde{\rho}{(p,q)}d\Gamma}
 $$
 
 $ \rho $  为归一化的密度
 
 $$
-\rho=\int_V\frac{\tilde{\rho}}{N}d\Gamma
+\rho=\int _ V\frac{\tilde{\rho}}{N}d\Gamma
 $$
 
 
@@ -46,16 +46,16 @@ $$
 即为:
 
 $$
-\frac{\partial}{\partial t}\int_\omega \rho d \Gamma = -\int_\sigma \vec{v}\cdot \hat{n} d \sigma
+\frac{\partial}{\partial t}\int _ \omega \rho d \Gamma = -\int _ \sigma \vec{v}\cdot \hat{n} d \sigma
 $$
 
-化为面积分, 并且注意到 $ \nabla=(\frac{\partial}{\partial q_i}\hat{q}_i,\frac{\partial}{\partial p_i}\hat{p}_i) $ , 即 $ \nabla $ 算符只与对应的速度项作用
+化为面积分, 并且注意到 $ \nabla=(\frac{\partial}{\partial q _ i}\hat{q} _ i,\frac{\partial}{\partial p _ i}\hat{p} _ i) $ , 即 $ \nabla $ 算符只与对应的速度项作用
 
 $$
 \begin{align*}
-\vec{\nabla} \cdot \vec{v}&=(\frac{\partial}{\partial q_i}\hat{q}_i,\frac{\partial}{\partial p_i}\hat{p}_i)\cdot(\dot{q}_i \hat{q}_i,\dot{p}_i \hat{p}_i)\\
-&=\frac{\partial}{\partial q_i}\dot{q}_i {\hat{q}_i}^2 +\frac{\partial}{\partial p_i}\dot{p}_i {\hat{p}_i}^2+\frac{\partial}{\partial q_i}\dot{p}_i \hat{q}_i  \hat{p}_i +\frac{\partial}{\partial p_i}\dot{q}_i \hat{q}_i  \hat{p}_i\\
-&=\frac{\partial}{\partial q_i}\dot{q}_i+\frac{\partial}{\partial p_i}\dot{p}_i
+\vec{\nabla} \cdot \vec{v}&=(\frac{\partial}{\partial q _ i}\hat{q} _ i,\frac{\partial}{\partial p _ i}\hat{p} _ i)\cdot(\dot{q} _ i \hat{q} _ i,\dot{p} _ i \hat{p} _ i)\\
+&=\frac{\partial}{\partial q _ i}\dot{q} _ i {\hat{q} _ i}^2 +\frac{\partial}{\partial p _ i}\dot{p} _ i {\hat{p} _ i}^2+\frac{\partial}{\partial q _ i}\dot{p} _ i \hat{q} _ i  \hat{p} _ i +\frac{\partial}{\partial p _ i}\dot{q} _ i \hat{q} _ i  \hat{p} _ i\\
+&=\frac{\partial}{\partial q _ i}\dot{q} _ i+\frac{\partial}{\partial p _ i}\dot{p} _ i
 \end{align*}
 $$
 
@@ -63,8 +63,8 @@ $$
 
 $$
 \begin{align*}
-\vec{\nabla} \cdot \vec{v}&=\frac{\partial}{\partial q_i}\dot{q}_i+\frac{\partial}{\partial p_i}\dot{p}_i\\
-&=\frac{\partial}{\partial q_i} \frac{\partial H}{\partial q_i}+\frac{\partial}{\partial p_i}\left(-\frac{\partial H}{\partial q_i}\right)\\
+\vec{\nabla} \cdot \vec{v}&=\frac{\partial}{\partial q _ i}\dot{q} _ i+\frac{\partial}{\partial p _ i}\dot{p} _ i\\
+&=\frac{\partial}{\partial q _ i} \frac{\partial H}{\partial q _ i}+\frac{\partial}{\partial p _ i}\left(-\frac{\partial H}{\partial q _ i}\right)\\
 &=0
 \end{align*}
 $$
@@ -73,18 +73,18 @@ $$
 
 $$
 \begin{align*}
-\frac{\partial}{\partial t}\int\omega \rho d \Gamma &= -\int_\sigma \rho\vec{v}\cdot \hat{n} d \sigma\\
-&=-\int_\omega \mathbf{\nabla}\cdot \left(\rho \vec{v}\right) d \Gamma\\
-&=\int_\omega{\left(\left(\vec{\nabla}\rho\right)\cdot\vec{v}+\rho\left(\vec{\nabla}\cdot\vec{v}\right)\right)d \Gamma }\\
-&=\int_\omega{\left(\vec{\nabla}\rho\right)\cdot\vec{v}d \Gamma }\\
+\frac{\partial}{\partial t}\int\omega \rho d \Gamma &= -\int _ \sigma \rho\vec{v}\cdot \hat{n} d \sigma\\
+&=-\int _ \omega \mathbf{\nabla}\cdot \left(\rho \vec{v}\right) d \Gamma\\
+&=\int _ \omega{\left(\left(\vec{\nabla}\rho\right)\cdot\vec{v}+\rho\left(\vec{\nabla}\cdot\vec{v}\right)\right)d \Gamma }\\
+&=\int _ \omega{\left(\vec{\nabla}\rho\right)\cdot\vec{v}d \Gamma }\\
 \end{align*}
 $$
 
-移项,得到积分 $ \int_\omega\left(\frac{\partial}{\partial t}\rho - \left(\vec{\nabla}\rho\right)\cdot\vec{v}\right)d \Gamma =0 $ ,因此, 被积函数 $ \frac{\partial}{\partial t}\rho-\left(\vec{\nabla}\rho\right)\cdot\vec{v}=0 $ . 将被积函数化简得到:
+移项,得到积分 $ \int _ \omega\left(\frac{\partial}{\partial t}\rho - \left(\vec{\nabla}\rho\right)\cdot\vec{v}\right)d \Gamma =0 $ ,因此, 被积函数 $ \frac{\partial}{\partial t}\rho-\left(\vec{\nabla}\rho\right)\cdot\vec{v}=0 $ . 将被积函数化简得到:
 
 $$
 \begin{align}
-\frac{\partial}{\partial t}\rho - \left(\vec{\nabla}\rho\right)\cdot\vec{v}&=\frac{\partial}{\partial t}\rho+\frac{\partial\rho}{\partial q_i}\dot{q}_i+\frac{\partial\rho}{\partial p_i}\dot{p}_i \notag\\
+\frac{\partial}{\partial t}\rho - \left(\vec{\nabla}\rho\right)\cdot\vec{v}&=\frac{\partial}{\partial t}\rho+\frac{\partial\rho}{\partial q _ i}\dot{q} _ i+\frac{\partial\rho}{\partial p _ i}\dot{p} _ i \notag\\
 &=\frac{d}{dt}\rho \notag\\
 &=0
 \end{align}
@@ -144,16 +144,16 @@ E-->F(观测量)
 孤立系由于能量不变, 孤立系的能量只有一个允许值
 
 $$
-\rho(p,q)=\rho(\varepsilon_0)\delta(E-\varepsilon_0)
+\rho(p,q)=\rho(\varepsilon _ 0)\delta(E-\varepsilon _ 0)
 $$
 
 #### 封闭系
 
-总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量 $ E_c $ 可以连续变化, 就要求整个孤立系的能量 $ E_i $ 非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量 $ E_r $ 很大,  $ E_c\ll E_r $  . 封闭系的 $ \rho $ 要利用孤立系的平衡来得出.
+总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量 $ E _ c $ 可以连续变化, 就要求整个孤立系的能量 $ E _ i $ 非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量 $ E _ r $ 很大,  $ E _ c\ll E _ r $  . 封闭系的 $ \rho $ 要利用孤立系的平衡来得出.
 
 #### 开放系
 
-按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量 $ E_c $ 和粒子数 $ N_c $ 可以连续变化, 就要求整个孤立系的能量 $ E_i $ 和粒子数 $ N_i $ 非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量 $ E_r $ ,  $ N_r $ 很大,  $ E_c\ll E_r $ . 开放系的 $ \rho $ 也要利用孤立系的平衡来得出.
+按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 封闭系的能量 $ E _ c $ 和粒子数 $ N _ c $ 可以连续变化, 就要求整个孤立系的能量 $ E _ i $ 和粒子数 $ N _ i $ 非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量 $ E _ r $ ,  $ N _ r $ 很大,  $ E _ c\ll E _ r $ . 开放系的 $ \rho $ 也要利用孤立系的平衡来得出.
 
 ### 孤立系
 
@@ -165,7 +165,7 @@ $$
 孤立系由于能量不变, 孤立系的能量只有一个允许值
 
 $$
-\rho(p,q)=\rho(\varepsilon_0)\delta(E-\varepsilon_0)
+\rho(p,q)=\rho(\varepsilon _ 0)\delta(E-\varepsilon _ 0)
 $$
 
 #### 孤立系的观测值计算
@@ -177,20 +177,20 @@ $$
 把一个系统 $ S $ 划分为两个子系统 $ A $ , $ B $ 
 
 $$
-N_S=\int{\rho_S \delta(E_S-\varepsilon_0) d \Gamma_S}\notag\\
-N_A=\int{\rho_A \delta(E_A-E_1) d \Gamma_A}\notag\\
-N_B=\int{\rho_B \delta(E_B-E_2) d \Gamma_B}\notag\\
+N _ S=\int{\rho _ S \delta(E _ S-\varepsilon _ 0) d \Gamma _ S}\notag\\
+N _ A=\int{\rho _ A \delta(E _ A-E _ 1) d \Gamma _ A}\notag\\
+N _ B=\int{\rho _ B \delta(E _ B-E _ 2) d \Gamma _ B}\notag\\
 $$
 
-其中 $ E_S $ 和 $ E_A $ , $ E_B $ 的关系为:
+其中 $ E _ S $ 和 $ E _ A $ , $ E _ B $ 的关系为:
 
 $$
 \begin{align*}
-N_S(\varepsilon_0)&=\int{ dE_a N_A(E_a) N_B(\varepsilon_0-E_a)}\\
-&=\int{ dE \left(\int{\rho_A \delta(E_A-E_a) d \Gamma_A}\int{\rho_B \delta(E_B-E_a-\varepsilon_0) d \Gamma_B}\right)}\\
-&=\int{\rho_A\rho_B \left(\int{dE_A \delta(E_A-E_a)\delta(E_B-E_a-\varepsilon_0)}\right) d\Gamma_A d\Gamma_B }\\
-&=\int{\rho_A\rho_B \delta(E_B-E_A-\varepsilon_0) d\Gamma_A d\Gamma_B }\\
-&=\int{\rho_S \delta(E_S-\varepsilon_0) d \Gamma_S}
+N _ S(\varepsilon _ 0)&=\int{ dE _ a N _ A(E _ a) N _ B(\varepsilon _ 0-E _ a)}\\
+&=\int{ dE \left(\int{\rho _ A \delta(E _ A-E _ a) d \Gamma _ A}\int{\rho _ B \delta(E _ B-E _ a-\varepsilon _ 0) d \Gamma _ B}\right)}\\
+&=\int{\rho _ A\rho _ B \left(\int{dE _ A \delta(E _ A-E _ a)\delta(E _ B-E _ a-\varepsilon _ 0)}\right) d\Gamma _ A d\Gamma _ B }\\
+&=\int{\rho _ A\rho _ B \delta(E _ B-E _ A-\varepsilon _ 0) d\Gamma _ A d\Gamma _ B }\\
+&=\int{\rho _ S \delta(E _ S-\varepsilon _ 0) d \Gamma _ S}
 \end{align*}
 $$
 
@@ -198,8 +198,8 @@ $$
 
 $$
 \begin{align}
-E_A+E_B=E_S\notag\\
-d\Gamma_A\cdot d\Gamma_B = d\Gamma_S \label{classicalDGammaProduct}
+E _ A+E _ B=E _ S\notag\\
+d\Gamma _ A\cdot d\Gamma _ B = d\Gamma _ S \label{classicalDGammaProduct}
 \end{align}
 $$
 
@@ -208,24 +208,24 @@ $$
 我们得到总系统与子系统间 $ \rho $ 的关系:
 
 $$
-\rho_A\rho_B=\rho_S \notag
+\rho _ A\rho _ B=\rho _ S \notag
 $$
 
 取对数得到
 
 $$
-\ln{\rho_A}+\ln{\rho_B}=\ln{\rho_S}
+\ln{\rho _ A}+\ln{\rho _ B}=\ln{\rho _ S}
 $$
 
 
 ##### 概率密度的表达式
 
-利用 $ \delta $ 函数的性质 式 $ (\ref{integralofdeltafx}) $   $ \int_{-\infty}^{+\infty}\delta(f(x))=\sum_{i}\frac{1}{\lvert f'(a_i)\rvert}, \quad  f(a_i)=0 $  得到:
+利用 $ \delta $ 函数的性质 式 $ (\ref{integralofdeltafx}) $   $ \int _ {-\infty}^{+\infty}\delta(f(x))=\sum _ {i}\frac{1}{\lvert f'(a _ i)\rvert}, \quad  f(a _ i)=0 $  得到:
 
 $$
 \begin{align}
-\int\delta(E-\varepsilon_0)d\Gamma&=\int\delta(E(p,q)-\varepsilon_0)[dp][dq] \notag\\
-&= \frac{1}{\left. \frac{dE}{d\Gamma} \right| _{E=\varepsilon_0}} \label{deltaE-E0}\\
+\int\delta(E-\varepsilon _ 0)d\Gamma&=\int\delta(E(p,q)-\varepsilon _ 0)[dp][dq] \notag\\
+&= \frac{1}{\left. \frac{dE}{d\Gamma} \right|  _ {E=\varepsilon _ 0}} \label{deltaE-E0}\\
 \end{align}
 $$
 
@@ -234,22 +234,22 @@ $$
 $$
 \begin{align*}
 \int \mathbb{P}d\Gamma &=\int\rho(p,q)d \Gamma\\
-& =\int\rho(\varepsilon_0)\delta(E-\varepsilon_0)d\Gamma\\
-&= \rho(\varepsilon_0)\int\delta(E-\varepsilon_0)d\Gamma\\
-& = \rho(\varepsilon_0) \cdot  \frac{1}{\left. \frac{dE}{d\Gamma} \right| _{E=\varepsilon_0}} \\
+& =\int\rho(\varepsilon _ 0)\delta(E-\varepsilon _ 0)d\Gamma\\
+&= \rho(\varepsilon _ 0)\int\delta(E-\varepsilon _ 0)d\Gamma\\
+& = \rho(\varepsilon _ 0) \cdot  \frac{1}{\left. \frac{dE}{d\Gamma} \right|  _ {E=\varepsilon _ 0}} \\
 \end{align*}
 $$
 
-又有 $ \int \mathbb{P}d\Gamma =1​ $ , 得到 $ \rho(\varepsilon_0)​ $ 
+又有 $ \int \mathbb{P}d\Gamma =1​ $ , 得到 $ \rho(\varepsilon _ 0)​ $ 
 
 $$
-\rho(\varepsilon_0) \cdot \frac{1}{\left. \frac{dE}{d\Gamma} \right| _{E=\varepsilon_0}} =1 \notag
+\rho(\varepsilon _ 0) \cdot \frac{1}{\left. \frac{dE}{d\Gamma} \right|  _ {E=\varepsilon _ 0}} =1 \notag
 $$
 
-带入 $ \rho(p,q)d \Gamma=\rho(\varepsilon_0)\delta(E-\varepsilon_0)d\Gamma $   得到:
+带入 $ \rho(p,q)d \Gamma=\rho(\varepsilon _ 0)\delta(E-\varepsilon _ 0)d\Gamma $   得到:
 
 $$
-\rho(p,q)= \left. \frac{dE}{d\Gamma} \right| _{E=\varepsilon_0}  \delta(E-\varepsilon_0) = \frac{1}{\left. \frac{d\Gamma}{dE} \right| _{E=\varepsilon_0}} \delta(E-\varepsilon_0)  \notag
+\rho(p,q)= \left. \frac{dE}{d\Gamma} \right|  _ {E=\varepsilon _ 0}  \delta(E-\varepsilon _ 0) = \frac{1}{\left. \frac{d\Gamma}{dE} \right|  _ {E=\varepsilon _ 0}} \delta(E-\varepsilon _ 0)  \notag
 $$
 
 ##### 概率密度用能态密度表达
@@ -268,7 +268,7 @@ $$
 有:
 
 $$
-\rho(E)=\frac{1}{\Omega(\varepsilon_0)} \delta(E-\varepsilon_0)\\
+\rho(E)=\frac{1}{\Omega(\varepsilon _ 0)} \delta(E-\varepsilon _ 0)\\
 $$
 
 ##### 系统宏观量用能态密度表达
@@ -277,10 +277,10 @@ $$
 
 $$
 \begin{align}
-\langle O\rangle&=\int_{-\infty}^{ {-\infty}}{O(p,q)\mathbb{P}(p,q)dpdq}\notag\\
-&=\int_{-\infty}^{ {-\infty}}O(p,q)\rho(p,q)d \Gamma \notag\\
-&=\int_{-\infty}^{ {-\infty}}O(p,q)\frac{1}{\Omega(\varepsilon_0)} \delta(E-\varepsilon_0)d\Gamma \notag\\
-&=\frac{1}{\Omega(\varepsilon_0)} \int_{-\infty}^{ {-\infty}}O(p,q)\delta(E-\varepsilon_0)d\Gamma \\
+\langle O\rangle&=\int _ {-\infty}^{ {-\infty}}{O(p,q)\mathbb{P}(p,q)dpdq}\notag\\
+&=\int _ {-\infty}^{ {-\infty}}O(p,q)\rho(p,q)d \Gamma \notag\\
+&=\int _ {-\infty}^{ {-\infty}}O(p,q)\frac{1}{\Omega(\varepsilon _ 0)} \delta(E-\varepsilon _ 0)d\Gamma \notag\\
+&=\frac{1}{\Omega(\varepsilon _ 0)} \int _ {-\infty}^{ {-\infty}}O(p,q)\delta(E-\varepsilon _ 0)d\Gamma \\
 \end{align}
 $$
 
@@ -292,10 +292,10 @@ $$
 
 $$
 \begin{align}
-\langle H\rangle &=\frac{1}{\Omega(\varepsilon_0)} \int_{-\infty}^{ {-\infty}}H(p,q)\delta(E-\varepsilon_0)d\Gamma \notag\\
-& =\int_{-\infty}^{ {-\infty}}\varepsilon_0  \frac{1}{\Omega(\varepsilon_0)} d\Gamma \notag\\
-& = \varepsilon_0\int_{-\infty}^{ {-\infty}}  \frac{1}{\Omega(\varepsilon_0)} d\Gamma \notag\\
-& = \varepsilon_0
+\langle H\rangle &=\frac{1}{\Omega(\varepsilon _ 0)} \int _ {-\infty}^{ {-\infty}}H(p,q)\delta(E-\varepsilon _ 0)d\Gamma \notag\\
+& =\int _ {-\infty}^{ {-\infty}}\varepsilon _ 0  \frac{1}{\Omega(\varepsilon _ 0)} d\Gamma \notag\\
+& = \varepsilon _ 0\int _ {-\infty}^{ {-\infty}}  \frac{1}{\Omega(\varepsilon _ 0)} d\Gamma \notag\\
+& = \varepsilon _ 0
 \end{align}
 $$
 
@@ -321,16 +321,16 @@ $$
 
 以下分两种情况计算, 来得到系统平衡的条件.
 
-设总系统 $ S $  的能量为 $ E_s $ , 子系统 $ A $  的能量为 $ E_a $  , 子系统 $ B $  的能量为 $ E_b $ .   $ E_a $  ,  $ E_b $ ,  $ E_s $  为变量,  $ E_a+E_b=E_s $ . 总系统的能量守恒,  $ E_s \equiv \varepsilon_s $ . 在平衡时 $ E_a= \varepsilon_a, \quad E_b= \varepsilon_b  $ , 且有 $ \varepsilon_a+\varepsilon_b=\varepsilon_s $ ,
+设总系统 $ S $  的能量为 $ E _ s $ , 子系统 $ A $  的能量为 $ E _ a $  , 子系统 $ B $  的能量为 $ E _ b $ .   $ E _ a $  ,  $ E _ b $ ,  $ E _ s $  为变量,  $ E _ a+E _ b=E _ s $ . 总系统的能量守恒,  $ E _ s \equiv \varepsilon _ s $ . 在平衡时 $ E _ a= \varepsilon _ a, \quad E _ b= \varepsilon _ b  $ , 且有 $ \varepsilon _ a+\varepsilon _ b=\varepsilon _ s $ ,
 
 对于系统 $ A $ , $ S $ 概率密度归一化:
 
 $$
 \begin{align*}
-1&=\underbrace{\int\cdots\int}_{n_s}\rho_sd\Gamma_s\\
-&=\underbrace{\int\cdots\int}_{n_a}\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_ad\Gamma_b\\
-&=\underbrace{\int\cdots\int}_{n_a}\left(\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_b\right)d\Gamma_a\\
-1&=\underbrace{\int\cdots\int}_{n_a}\rho_ad\Gamma_a
+1&=\underbrace{\int\cdots\int} _ {n _ s}\rho _ sd\Gamma _ s\\
+&=\underbrace{\int\cdots\int} _ {n _ a}\underbrace{\int\cdots\int} _ {n _ b}\rho _ s d\Gamma _ ad\Gamma _ b\\
+&=\underbrace{\int\cdots\int} _ {n _ a}\left(\underbrace{\int\cdots\int} _ {n _ b}\rho _ s d\Gamma _ b\right)d\Gamma _ a\\
+1&=\underbrace{\int\cdots\int} _ {n _ a}\rho _ ad\Gamma _ a
 \end{align*}
 $$
 
@@ -338,12 +338,12 @@ $$
 
 $$
 \begin{align}
-\rho_a^{\mathrm{equilibrium}}&=\underbrace{\int\cdots\int}_{n_b}\rho_s d\Gamma_b \notag\\
-&=\int\rho_s d\Gamma_b\notag\\
-&=\int\frac{1}{\Omega_s(E_s)}\delta(E_s-\varepsilon_s)d\Gamma_b\notag\\
-&=\int\frac{1}{\Omega_s(E_s)}\delta(E_b+E_a-\varepsilon_s)d\Gamma_b\notag\\
-&=\frac{1}{\Omega_s(E_s)}\int\delta(E_b-(\varepsilon_s-E_a))d\Gamma_b\notag\\
-&=\frac{1}{\Omega_s(E_s)}\Omega_b(\varepsilon_s-E_a)\notag\\
+\rho _ a^{\mathrm{equilibrium}}&=\underbrace{\int\cdots\int} _ {n _ b}\rho _ s d\Gamma _ b \notag\\
+&=\int\rho _ s d\Gamma _ b\notag\\
+&=\int\frac{1}{\Omega _ s(E _ s)}\delta(E _ s-\varepsilon _ s)d\Gamma _ b\notag\\
+&=\int\frac{1}{\Omega _ s(E _ s)}\delta(E _ b+E _ a-\varepsilon _ s)d\Gamma _ b\notag\\
+&=\frac{1}{\Omega _ s(E _ s)}\int\delta(E _ b-(\varepsilon _ s-E _ a))d\Gamma _ b\notag\\
+&=\frac{1}{\Omega _ s(E _ s)}\Omega _ b(\varepsilon _ s-E _ a)\notag\\
 \label{rhoaequilibrium}
 \end{align}
 $$
@@ -351,50 +351,50 @@ $$
 子系统A在平衡时可视作孤立系:
 
 $$
-\rho_a^{\mathrm{isolated}}=\frac{1}{\Omega_a(E_a)}\delta(E_a-\varepsilon_a) \label{rhoaisolated}
+\rho _ a^{\mathrm{isolated}}=\frac{1}{\Omega _ a(E _ a)}\delta(E _ a-\varepsilon _ a) \label{rhoaisolated}
 $$
 
-结合 $ (\ref{rhoaequilibrium}), (\ref{rhoaisolated}) $  平衡时,  $ \rho_a^{\mathrm{equilibrium}}=\rho_a^{\mathrm{isolated}} $  得到:
+结合 $ (\ref{rhoaequilibrium}), (\ref{rhoaisolated}) $  平衡时,  $ \rho _ a^{\mathrm{equilibrium}}=\rho _ a^{\mathrm{isolated}} $  得到:
 
 $$
-\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(\varepsilon_s-E_a)}{\Omega_s(E_s)}
+\delta(E _ a-\varepsilon _ a)=\frac{\Omega _ a(E _ a)\Omega _ b(\varepsilon _ s-E _ a)}{\Omega _ s(E _ s)}
 $$
 
 同理对B系统也有:
 
 $$
-\delta(E_b-\varepsilon_b)=\frac{\Omega_b(E_b)\Omega_a(\varepsilon_s-E_b)}{\Omega_s(E_s)}
+\delta(E _ b-\varepsilon _ b)=\frac{\Omega _ b(E _ b)\Omega _ a(\varepsilon _ s-E _ b)}{\Omega _ s(E _ s)}
 $$
 
-又有 $ E_a+E_b=E_s, \quad \varepsilon_a+\varepsilon_b=\varepsilon_s $ ,得到:
+又有 $ E _ a+E _ b=E _ s, \quad \varepsilon _ a+\varepsilon _ b=\varepsilon _ s $ ,得到:
 
 $$
-\delta(E_a-\varepsilon_a)=\frac{\Omega_a(E_a)\Omega_b(E_b)}{\Omega_s(E_s)}=\delta(E_b-\varepsilon_b)
+\delta(E _ a-\varepsilon _ a)=\frac{\Omega _ a(E _ a)\Omega _ b(E _ b)}{\Omega _ s(E _ s)}=\delta(E _ b-\varepsilon _ b)
 $$
 
 再由 $ \delta $ 函数与 $ \Omega $ 的关系:
 
 $$
-\frac{1}{\Omega_a(\varepsilon_a)}\int\delta(E_a-\varepsilon_a)d\Gamma_a=1 \notag\\
-\int\delta(E_a-\varepsilon_a)d\Gamma_a=\Omega_a(\varepsilon_a) \notag\\
+\frac{1}{\Omega _ a(\varepsilon _ a)}\int\delta(E _ a-\varepsilon _ a)d\Gamma _ a=1 \notag\\
+\int\delta(E _ a-\varepsilon _ a)d\Gamma _ a=\Omega _ a(\varepsilon _ a) \notag\\
 $$
 
 得到: 
 
 $$
 \begin{align*}
-\quad \delta(E_a-\varepsilon_a) &=\frac{d\Omega_a(\varepsilon_a)}{d\Gamma_a}\\
-&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{d \varepsilon_a}{d\Gamma_a}\\
-&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a} {\left.\frac{d E_a}{d\Gamma_a}\right|}_{E_a=\varepsilon_a}\\
-&=\frac{d\Omega_a(\varepsilon_a)}{d \varepsilon_a}\frac{1}{\Omega(\varepsilon_a)}\\
-&=\left.\frac{d \ln{(\Omega(E_a))}}{d E_a}\right|_{E_a=\varepsilon_a}
+\quad \delta(E _ a-\varepsilon _ a) &=\frac{d\Omega _ a(\varepsilon _ a)}{d\Gamma _ a}\\
+&=\frac{d\Omega _ a(\varepsilon _ a)}{d \varepsilon _ a}\frac{d \varepsilon _ a}{d\Gamma _ a}\\
+&=\frac{d\Omega _ a(\varepsilon _ a)}{d \varepsilon _ a} {\left.\frac{d E _ a}{d\Gamma _ a}\right|} _ {E _ a=\varepsilon _ a}\\
+&=\frac{d\Omega _ a(\varepsilon _ a)}{d \varepsilon _ a}\frac{1}{\Omega(\varepsilon _ a)}\\
+&=\left.\frac{d \ln{(\Omega(E _ a))}}{d E _ a}\right| _ {E _ a=\varepsilon _ a}
 \end{align*}
 $$
 
 得到:
 
 $$
-\left.\frac{d}{d E_a}\ln{(\Omega(E_a))}\right|_{E_a=\varepsilon_a}=\left.\frac{d}{d E_b}\ln{(\Omega(E_b))}\right|_{E_b=\varepsilon_b}
+\left.\frac{d}{d E _ a}\ln{(\Omega(E _ a))}\right| _ {E _ a=\varepsilon _ a}=\left.\frac{d}{d E _ b}\ln{(\Omega(E _ b))}\right| _ {E _ b=\varepsilon _ b}
 $$
 
 至此我们得到一个表征等价关系的量S'
@@ -406,12 +406,12 @@ $$
 若两个系统平衡,
 
 $$
-S'_a(E_a)=S'_b(E_b)=\frac{1}{T}
+S' _ a(E _ a)=S' _ b(E _ b)=\frac{1}{T}
 $$
 
 ### 封闭系
 
-总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量 $ E_c $ 可以连续变化, 就要求整个孤立系的能量 $ E_i $ 非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量 $ E_r $ 很大,  $ E_c\ll E_r $ 
+总可以把一个封闭系看成是一个孤立系的一部分. 孤立系的其余部分称为热库. 封闭系的能量 $ E _ c $ 可以连续变化, 就要求整个孤立系的能量 $ E _ i $ 非常大, 才能满足封闭系的能量可以取任意值的条件. 等价于要求热库的能量 $ E _ r $ 很大,  $ E _ c\ll E _ r $ 
 
 在封闭系与热库达成平衡时, 他们可以看作是两个孤立系. 这样就回到了前面定义孤立系的平衡状态.
 
@@ -421,22 +421,22 @@ $$
 
 $$
 \begin{align*}
-1&=\int\rho_cd\Gamma_c\\
-1&=\int \rho_sd\Gamma_s\\
-&=\iint \rho_s d \Gamma_rd\Gamma_c\\
-&=\int \left(\int\rho_sd\Gamma_r\right)d\Gamma_c
+1&=\int\rho _ cd\Gamma _ c\\
+1&=\int \rho _ sd\Gamma _ s\\
+&=\iint \rho _ s d \Gamma _ rd\Gamma _ c\\
+&=\int \left(\int\rho _ sd\Gamma _ r\right)d\Gamma _ c
 \end{align*}
 $$
 
-得到 $ \rho_c $ 的表达式(热库的能量基本不改变, 因而也是一个孤立系)
+得到 $ \rho _ c $ 的表达式(热库的能量基本不改变, 因而也是一个孤立系)
 
 $$
 \begin{align*}
-\rho_c&= \int \rho_sd\Gamma_r\\
-&=\int\frac{1}{\Omega_s(E_s)}\delta(E_s-(E_r+E_c)) d\Gamma_r\\
-&=\int\frac{1}{\Omega_s(\varepsilon_s)}\delta(\varepsilon_s-(E_r+E_c))d\Gamma_r\\
-&=\int\frac{1}{\Omega_s(\varepsilon_s)}\delta(E_r-(\varepsilon_s-E_c))d\Gamma_r, \quad (\delta(x)=\delta(-x))\\
-&=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}\\
+\rho _ c&= \int \rho _ sd\Gamma _ r\\
+&=\int\frac{1}{\Omega _ s(E _ s)}\delta(E _ s-(E _ r+E _ c)) d\Gamma _ r\\
+&=\int\frac{1}{\Omega _ s(\varepsilon _ s)}\delta(\varepsilon _ s-(E _ r+E _ c))d\Gamma _ r\\
+&=\int\frac{1}{\Omega _ s(\varepsilon _ s)}\delta(E _ r-(\varepsilon _ s-E _ c))d\Gamma _ r, \quad (\delta(x)=\delta(-x))\\
+&=\frac{\Omega _ r(\varepsilon _ s-E _ c)}{\Omega _ s(\varepsilon _ s)}\\
 \end{align*}
 $$
 
@@ -468,23 +468,23 @@ $$
 
 重新考虑整个体系. 系统平衡时没有能量流动. 把总系统S看作孤立系, 系统AB都是孤立系
 
-再利用 $ k_0\ln\Omega=S $ , 将 $ \rho $ 化简. 这里利用前面得到的结论 $ \frac{1}{T}=\frac{d S}{d E} $ , 进行计算.
+再利用 $ k _ 0\ln\Omega=S $ , 将 $ \rho $ 化简. 这里利用前面得到的结论 $ \frac{1}{T}=\frac{d S}{d E} $ , 进行计算.
 
 $$
 \begin{align*}
-\rho_c&=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_s(\varepsilon_s)}\\
-&=\frac{\Omega_r(\varepsilon_s-E_c)}{\Omega_b(\varepsilon_s)}\cdot\frac{\Omega_b(\varepsilon_s)}{\Omega_s(\varepsilon_s)}\\
-&=e^{S_b(\varepsilon_s-E_c)-S_b(\varepsilon_s)}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
-&=e^{\frac{S_b(\varepsilon_s-E_c)-S_b(\varepsilon_s)}{(-E_c)}\cdot (-E_c)}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
-\xrightarrow{E_c\ll\varepsilon_s}&=e^{\left.\frac{S_b(E)}{d E}\right|_{E=\varepsilon_s}\cdot (-E_c)}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}\\
-&=e^{-\frac{1}{k_0 T_r}\cdot E_c}\cdot e^{S_b(\varepsilon_s)-S_s(\varepsilon_s)}
+\rho _ c&=\frac{\Omega _ r(\varepsilon _ s-E _ c)}{\Omega _ s(\varepsilon _ s)}\\
+&=\frac{\Omega _ r(\varepsilon _ s-E _ c)}{\Omega _ b(\varepsilon _ s)}\cdot\frac{\Omega _ b(\varepsilon _ s)}{\Omega _ s(\varepsilon _ s)}\\
+&=e^{S _ b(\varepsilon _ s-E _ c)-S _ b(\varepsilon _ s)}\cdot e^{S _ b(\varepsilon _ s)-S _ s(\varepsilon _ s)}\\
+&=e^{\frac{S _ b(\varepsilon _ s-E _ c)-S _ b(\varepsilon _ s)}{(-E _ c)}\cdot (-E _ c)}\cdot e^{S _ b(\varepsilon _ s)-S _ s(\varepsilon _ s)}\\
+\xrightarrow{E _ c\ll\varepsilon _ s}&=e^{\left.\frac{S _ b(E)}{d E}\right| _ {E=\varepsilon _ s}\cdot (-E _ c)}\cdot e^{S _ b(\varepsilon _ s)-S _ s(\varepsilon _ s)}\\
+&=e^{-\frac{1}{k _ 0 T _ r}\cdot E _ c}\cdot e^{S _ b(\varepsilon _ s)-S _ s(\varepsilon _ s)}
 \end{align*}
 $$
 
 得到封闭系的 $ \rho $ 的表达式:
 
 $$
-\rho_c(E)=e^{-\psi -\frac{E}{k_0 T}}, \quad \psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)
+\rho _ c(E)=e^{-\psi -\frac{E}{k _ 0 T}}, \quad \psi=-\left(S _ b(\varepsilon _ s)-S _ s(\varepsilon _ s)\right)
 $$
 
 其中 $ \psi $ 是与研究的子系统无关的量.
@@ -493,8 +493,8 @@ $$
 $$
 \begin{align*}
 1&=\int\mathbb{P}(p,q)d\Gamma\\
-&=\int\rho_c(E(p,q))d\Gamma\\
-&=\int e^{-\psi -\frac{E}{k_0 T}} d\Gamma\\
+&=\int\rho _ c(E(p,q))d\Gamma\\
+&=\int e^{-\psi -\frac{E}{k _ 0 T}} d\Gamma\\
 \end{align*}
 $$
 
@@ -502,7 +502,7 @@ $$
 
 $$
 \begin{align*}
-e^{\psi}=\int e^{-\frac{E}{k_0 T}} d\Gamma\\
+e^{\psi}=\int e^{-\frac{E}{k _ 0 T}} d\Gamma\\
 \end{align*}
 $$
 
@@ -510,21 +510,21 @@ $$
 
 $$
 \begin{align}
-Z&=e^{\psi}=\int e^{-\frac{E}{k_0 T}} d\Gamma \\
-\rho_c&=\frac{1}{Z}e^{-\frac{E}{k_0 T}}=\frac{e^{-\frac{E}{k_0 T}}}{\int e^{-\frac{E}{k_0 T}}  d\Gamma}
+Z&=e^{\psi}=\int e^{-\frac{E}{k _ 0 T}} d\Gamma \\
+\rho _ c&=\frac{1}{Z}e^{-\frac{E}{k _ 0 T}}=\frac{e^{-\frac{E}{k _ 0 T}}}{\int e^{-\frac{E}{k _ 0 T}}  d\Gamma}
 \end{align}
 $$
 
-当两个封闭系可以看作是孤立系时, 这样一来, $ \psi=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right) $ 中二者之差并不独立于研究的系统.
+当两个封闭系可以看作是孤立系时, 这样一来, $ \psi=-\left(S _ b(\varepsilon _ s)-S _ s(\varepsilon _ s)\right) $ 中二者之差并不独立于研究的系统.
 
 $$
 \begin{align}
-\quad \psi &=-\left(S_b(\varepsilon_s)-S_s(\varepsilon_s)\right)\\
-&=-\left(S_b(\varepsilon_s)-(S_b(\varepsilon_b)+S_c(\varepsilon_c))\right)\\
-&=-\left((S_b(\varepsilon_s)-S_b(\varepsilon_b))-S_c(\varepsilon_c)\right)\\
-&=-\left(\frac{S_b(\varepsilon_b+\varepsilon_c)-S_b(\varepsilon_b)}{\varepsilon_c}\varepsilon_c-S_c(\varepsilon_c)\right)\\
-&=-\left(\left.\frac{\partial S_b(E)}{\partial E}\right|_{E=\varepsilon_b}\varepsilon_c-S_c(\varepsilon_c)\right)\\
-&=-\left(\frac{\varepsilon_c}{k_0 T}-S_c(\varepsilon_c)\right)\\
+\quad \psi &=-\left(S _ b(\varepsilon _ s)-S _ s(\varepsilon _ s)\right)\\
+&=-\left(S _ b(\varepsilon _ s)-(S _ b(\varepsilon _ b)+S _ c(\varepsilon _ c))\right)\\
+&=-\left((S _ b(\varepsilon _ s)-S _ b(\varepsilon _ b))-S _ c(\varepsilon _ c)\right)\\
+&=-\left(\frac{S _ b(\varepsilon _ b+\varepsilon _ c)-S _ b(\varepsilon _ b)}{\varepsilon _ c}\varepsilon _ c-S _ c(\varepsilon _ c)\right)\\
+&=-\left(\left.\frac{\partial S _ b(E)}{\partial E}\right| _ {E=\varepsilon _ b}\varepsilon _ c-S _ c(\varepsilon _ c)\right)\\
+&=-\left(\frac{\varepsilon _ c}{k _ 0 T}-S _ c(\varepsilon _ c)\right)\\
 \end{align}
 $$
 
@@ -532,11 +532,11 @@ $$
 
 $$
 \begin{align}
-\psi=-\frac{1}{ {k_0 T}}\left(E-T\cdot S(E)\right)\\
+\psi=-\frac{1}{ {k _ 0 T}}\left(E-T\cdot S(E)\right)\\
 \end{align}
 $$
 
-因此借助孤立系的熵, 我们定义了一个新的可加量 $ \psi=\frac{1}{k_0T}(E-TS) $ 
+因此借助孤立系的熵, 我们定义了一个新的可加量 $ \psi=\frac{1}{k _ 0T}(E-TS) $ 
 
 ##### 封闭系的划分
 
@@ -546,12 +546,12 @@ $$
 
 先考虑两个无关的封闭系A,B. 它们与同一个热库相接触, 但是彼此之间隔绝,没有能量粒子或其他交换.
 
-将一个封闭系S分为两个封闭系A和B. 由封闭系的定义, 他们是同一个封闭系 $ S $ 的不同部分,因此两个封闭子系的温度是同一个定值, 都等于总系统S的温度  $ T_a=T_b $ .
+将一个封闭系S分为两个封闭系A和B. 由封闭系的定义, 他们是同一个封闭系 $ S $ 的不同部分,因此两个封闭子系的温度是同一个定值, 都等于总系统S的温度  $ T _ a=T _ b $ .
 
 $$
 \begin{align*}
-\rho^{closed}_a&=\frac{1}{Z_a}e^{-\frac{E_a}{k_0T_a}}\\
-\rho^{closed}_b&=\frac{1}{Z_b}e^{-\frac{E_b}{k_0T_b}}\\
+\rho^{closed} _ a&=\frac{1}{Z _ a}e^{-\frac{E _ a}{k _ 0T _ a}}\\
+\rho^{closed} _ b&=\frac{1}{Z _ b}e^{-\frac{E _ b}{k _ 0T _ b}}\\
 \end{align*}
 $$
 
@@ -559,23 +559,23 @@ $$
 
 $$
 \begin{align*}
-1 &= \int\rho^{equilibrium}_ad\Gamma_a\\
-&=\iint \rho_s d\Gamma_a d\Gamma_ b\\
-\Rightarrow \rho^{equilibrium}_a&=\int \rho_s d\Gamma_b\\
-&=\int \frac{1}{Z_s}e^{-\frac{E_s}{k_0T_s}} d\Gamma_b\\
+1 &= \int\rho^{equilibrium} _ ad\Gamma _ a\\
+&=\iint \rho _ s d\Gamma _ a d\Gamma _  b\\
+\Rightarrow \rho^{equilibrium} _ a&=\int \rho _ s d\Gamma _ b\\
+&=\int \frac{1}{Z _ s}e^{-\frac{E _ s}{k _ 0T _ s}} d\Gamma _ b\\
 \end{align*}
 $$
 
-==能量的可加性始终成立???==,  $ E_a+E_b=E_s $ .得到
+==能量的可加性始终成立???==,  $ E _ a+E _ b=E _ s $ .得到
 
 $$
 \begin{align*}
-\rho^{closed}_a&= \rho^{equilibrium}_a\\
-\frac{1}{Z_a}e^{-\frac{E_a}{k_0T_a}}&=\int \frac{1}{Z_s}e^{-\frac{E_s}{k_0T_s}} d\Gamma_b\\
-\frac{1}{Z_a}e^{-\frac{E_a}{k_0T}}&=\frac{1}{Z_s}\int e^{-\frac{E_a}{k_0T}-\frac{E_b}{k_0T}}d\Gamma_b\\
-&=\frac{1}{Z_s} e^{-\frac{E_a}{k_0T}} \int e^{-\frac{E_b}{k_0T}}d\Gamma_b\\
-&=\frac{1}{Z_s} e^{-\frac{E_a}{k_0T}}\cdot Z_b\cdot \int \frac{1}{Z_b}e^{-\frac{E_b}{k_0T}}d\Gamma_b\\
-&=\frac{Z_b}{Z_s} e^{-\frac{E_a}{k_0T}}
+\rho^{closed} _ a&= \rho^{equilibrium} _ a\\
+\frac{1}{Z _ a}e^{-\frac{E _ a}{k _ 0T _ a}}&=\int \frac{1}{Z _ s}e^{-\frac{E _ s}{k _ 0T _ s}} d\Gamma _ b\\
+\frac{1}{Z _ a}e^{-\frac{E _ a}{k _ 0T}}&=\frac{1}{Z _ s}\int e^{-\frac{E _ a}{k _ 0T}-\frac{E _ b}{k _ 0T}}d\Gamma _ b\\
+&=\frac{1}{Z _ s} e^{-\frac{E _ a}{k _ 0T}} \int e^{-\frac{E _ b}{k _ 0T}}d\Gamma _ b\\
+&=\frac{1}{Z _ s} e^{-\frac{E _ a}{k _ 0T}}\cdot Z _ b\cdot \int \frac{1}{Z _ b}e^{-\frac{E _ b}{k _ 0T}}d\Gamma _ b\\
+&=\frac{Z _ b}{Z _ s} e^{-\frac{E _ a}{k _ 0T}}
 \end{align*}
 $$
 
@@ -583,8 +583,8 @@ $$
 
 $$
 \begin{align}
-Z_aZ_b&=Z_s\\
-\ln{Z_a}+\ln{Z_b}&=\ln{Z_s}
+Z _ aZ _ b&=Z _ s\\
+\ln{Z _ a}+\ln{Z _ b}&=\ln{Z _ s}
 \end{align}
 $$
 
@@ -607,52 +607,52 @@ $$
 
 $$
 \begin{align*}
-E_a&=F_a+TS_a\\
-dE_a&=dF_a+S_adT_a\\
+E _ a&=F _ a+TS _ a\\
+dE _ a&=dF _ a+S _ adT _ a\\
 &=(\frac{\partial F}{\partial T}dT+\frac{\partial F}{\partial q}dq)\\
-&=\frac{\partial E_a}{\partial q_a}dq_a
+&=\frac{\partial E _ a}{\partial q _ a}dq _ a
 \end{align*}
 $$
 
 因此有:
 
 $$
-dE_b=\frac{\partial E}{\partial q_b}d q_b
+dE _ b=\frac{\partial E}{\partial q _ b}d q _ b
 $$
 
 由于总系统是一个孤立系, 能量改变量为0
 
 $$
 \begin{align*}
-dE_a+dE_b&=dE_s=0\\
+dE _ a+dE _ b&=dE _ s=0\\
 \end{align*}
 $$
 
 至此我们得到封闭系等价的重要关系
 
 $$
-dE_a=-dE_b
+dE _ a=-dE _ b
 $$
 
 这与孤立系等价关系具有类比;
 
 $$
-\frac{\partial S_1 }{\partial E_1}=\frac{\partial S_2}{\partial E_2}
+\frac{\partial S _ 1 }{\partial E _ 1}=\frac{\partial S _ 2}{\partial E _ 2}
 $$
 
-继续推导, 定义 $ P_a:=\frac{\partial H}{\partial q} $ 可以得到:
+继续推导, 定义 $ P _ a:=\frac{\partial H}{\partial q} $ 可以得到:
 
 $$
 \begin{align}
-\frac{\partial H_a}{\partial q_a}dq_a&=-\frac{\partial H_b}{\partial q_b}dq_b\\
-P_adV_a&=-P_bdV_b&
+\frac{\partial H _ a}{\partial q _ a}dq _ a&=-\frac{\partial H _ b}{\partial q _ b}dq _ b\\
+P _ adV _ a&=-P _ bdV _ b&
 \end{align}
 $$
 
-由于整体是一个孤立系,  $ dV_a+dV_b=0 $  得到:
+由于整体是一个孤立系,  $ dV _ a+dV _ b=0 $  得到:
 
 $$
-P_a=P_b
+P _ a=P _ b
 $$
 
 #### 封闭系的观测量
@@ -664,9 +664,9 @@ $$
 $$
 \begin{align}
 \langle E\rangle &=\int H(p,q) \mathbb{P}(p,q) d\Gamma\notag\\
-& =\int H(p,q) \rho_cd\Gamma\notag\\
-&=\int E\frac{1}{Z}e^{-\frac{E}{k_0 T}}\notag\\
-&=\frac{1}{Z}\int E e^{-\frac{E}{k_0 T} } d\Gamma\\
+& =\int H(p,q) \rho _ cd\Gamma\notag\\
+&=\int E\frac{1}{Z}e^{-\frac{E}{k _ 0 T}}\notag\\
+&=\frac{1}{Z}\int E e^{-\frac{E}{k _ 0 T} } d\Gamma\\
 \end{align}
 $$
 
@@ -674,10 +674,10 @@ $$
 
 $$
 \begin{align*}
-\frac{\partial Z}{\partial (\frac{1}{k_0T})}&=\frac{\partial }{\partial (\frac{1}{k_0T})}{\int  e^{-\frac{E}{k_0 T} } d\Gamma}\\
-\xrightarrow{偏导与积分变量不同可交换}&=\int \frac{\partial }{\partial (\frac{1}{k_0T})} e^{-\frac{E}{k_0 T} } d\Gamma\\
-&=\int -E e^{-\frac{E}{k_0 T} } d\Gamma\\
-&=-\int E e^{-\frac{E}{k_0 T} } d\Gamma\\
+\frac{\partial Z}{\partial (\frac{1}{k _ 0T})}&=\frac{\partial }{\partial (\frac{1}{k _ 0T})}{\int  e^{-\frac{E}{k _ 0 T} } d\Gamma}\\
+\xrightarrow{偏导与积分变量不同可交换}&=\int \frac{\partial }{\partial (\frac{1}{k _ 0T})} e^{-\frac{E}{k _ 0 T} } d\Gamma\\
+&=\int -E e^{-\frac{E}{k _ 0 T} } d\Gamma\\
+&=-\int E e^{-\frac{E}{k _ 0 T} } d\Gamma\\
 \end{align*}
 $$
 
@@ -686,17 +686,17 @@ $$
 $$
 \begin{align}
 \langle E\rangle 
-&=\frac{1}{Z}\int E e^{-\frac{E}{k_0 T} } d\Gamma \notag\\
-&=-\frac{1}{Z}\frac{\partial Z}{\partial (\frac{1}{k_0T})}\notag \\
-&=-\frac{\partial}{\partial (\frac{1}{k_0T})} \ln Z\\
-&=-\frac{\partial}{\partial (\frac{1}{k_0T})} \psi\\
+&=\frac{1}{Z}\int E e^{-\frac{E}{k _ 0 T} } d\Gamma \notag\\
+&=-\frac{1}{Z}\frac{\partial Z}{\partial (\frac{1}{k _ 0T})}\notag \\
+&=-\frac{\partial}{\partial (\frac{1}{k _ 0T})} \ln Z\\
+&=-\frac{\partial}{\partial (\frac{1}{k _ 0T})} \psi\\
 \end{align}
 $$
 
 
 ### 开放系
 
-按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 开放系的能量 $ E_o $ 和粒子数 $ n_o $ 可以连续变化, 就要求整个孤立系的能量 $ E_s $ 和粒子数 $ n_s $ 非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量 $ E_r $ ,  $ n-r $ 很大,  $ E_o\ll E_r $ ,  $ n_o\ll n_s $ .
+按照求封闭系的思路, 总可以把一个开放系看成是一个孤立系的一部分. 孤立系的其余部分称为粒子库, 同时也是热库. 开放系的能量 $ E _ o $ 和粒子数 $ n _ o $ 可以连续变化, 就要求整个孤立系的能量 $ E _ s $ 和粒子数 $ n _ s $ 非常大, 才能满足封闭系的能量可以取任意值, 粒子数可以任意多的条件. 等价于就要求粒子库的能量 $ E _ r $ ,  $ n-r $ 很大,  $ E _ o\ll E _ r $ ,  $ n _ o\ll n _ s $ .
 
 #### 开放系的 $ \rho $ 
 
@@ -710,29 +710,29 @@ S(E)&=\ln{\Omega(E)} \notag\\
 \end{align}
 $$
 
-仿照前面的做法, 注意到开放系粒子数 $ n_o $ 可以变化. 系统的微观分布函数也会随之改变. 也就是说,  $ \rho $ 和 $ \Omega $ 不仅仅是 $ E $ 的函数, 也是 $ n $ 的函数. 因此 $ \rho=\rho(n,E) $ ,  $ \Omega=\Omega(n,E) $ 
+仿照前面的做法, 注意到开放系粒子数 $ n _ o $ 可以变化. 系统的微观分布函数也会随之改变. 也就是说,  $ \rho $ 和 $ \Omega $ 不仅仅是 $ E $ 的函数, 也是 $ n $ 的函数. 因此 $ \rho=\rho(n,E) $ ,  $ \Omega=\Omega(n,E) $ 
 
-为了方便地表示 $ \underbrace{\int\cdots\int}_{n_o}\rho_od\Gamma_o  $ 和 $ \underbrace{\int\cdots\int}_{ {n_o}^\prime}{\rho_o}^\prime d{\Gamma_o}^\prime  $ 的不同, 把积分  $ \underbrace{\int\cdots\int}_{n_o}d\Gamma_o $ 记为 $ \int d\Gamma_{o,n_o} $ , 为了清晰起见, 先保留 $ \underbrace{\int\cdots\int}_{n_o}d\Gamma_o $  记法.
+为了方便地表示 $ \underbrace{\int\cdots\int} _ {n _ o}\rho _ od\Gamma _ o  $ 和 $ \underbrace{\int\cdots\int} _ { {n _ o}^\prime}{\rho _ o}^\prime d{\Gamma _ o}^\prime  $ 的不同, 把积分  $ \underbrace{\int\cdots\int} _ {n _ o}d\Gamma _ o $ 记为 $ \int d\Gamma _ {o,n _ o} $ , 为了清晰起见, 先保留 $ \underbrace{\int\cdots\int} _ {n _ o}d\Gamma _ o $  记法.
 
 $$
 \begin{align*}
-1&=\underbrace{\int\cdots\int}_{n_s}\rho_{s}(s_o,E_o)d\Gamma_{s,n_s}\\
-&=\underbrace{\int\cdots\int}_{n_o}\underbrace{\int\cdots\int}_{n_r}\rho_{s}(s_o,E_o) d\Gamma_{r,n_r}d\Gamma_{o,n_o}\\
-&=\underbrace{\int\cdots\int}_{n_o}\left(\underbrace{\int\cdots\int}_{n_r}\rho_{s}(s_o,E_o) d\Gamma_{r,n_r}\right)d\Gamma_{o,n_o}\\
-1&=\underbrace{\int\cdots\int}_{n_o}\rho_{o}(n_o,E_o)d\Gamma_{o,n_o}
+1&=\underbrace{\int\cdots\int} _ {n _ s}\rho _ {s}(s _ o,E _ o)d\Gamma _ {s,n _ s}\\
+&=\underbrace{\int\cdots\int} _ {n _ o}\underbrace{\int\cdots\int} _ {n _ r}\rho _ {s}(s _ o,E _ o) d\Gamma _ {r,n _ r}d\Gamma _ {o,n _ o}\\
+&=\underbrace{\int\cdots\int} _ {n _ o}\left(\underbrace{\int\cdots\int} _ {n _ r}\rho _ {s}(s _ o,E _ o) d\Gamma _ {r,n _ r}\right)d\Gamma _ {o,n _ o}\\
+1&=\underbrace{\int\cdots\int} _ {n _ o}\rho _ {o}(n _ o,E _ o)d\Gamma _ {o,n _ o}
 \end{align*}
 $$
 
-得到 $ \rho_{o,n_o} $ 的表达式:
+得到 $ \rho _ {o,n _ o} $ 的表达式:
 
 $$
 \begin{align*}
-\rho_{o,n_o}^{equlibrium}&=\underbrace{\int\cdots\int}_{n_r}\rho_{s}(s_o,E_o) d\Gamma_{r,n_r}\\
-&=\int \rho_{s}(s_o,E_o) d\Gamma_{r,n_r}\\
-&=\int \frac{1}{\Omega_{s}(n_s,E_s)}\delta(E_s-\varepsilon_s)d\Gamma_{r,n_r}\\
-&=\int \frac{1}{\Omega_{s}(n_s,E_s)}\delta(E_o+E_r-\varepsilon_s)d\Gamma_{r,n_r}\\
-&=\frac{\Omega_{r}(n_r,\varepsilon_s-E_o)}{\Omega_{s}(n_s,\varepsilon_s)}\\
-&=\frac{\Omega_{r}(n_r,\varepsilon_s-E_o)}{\Omega_{s}(n_s,\varepsilon_s)}\\
+\rho _ {o,n _ o}^{equlibrium}&=\underbrace{\int\cdots\int} _ {n _ r}\rho _ {s}(s _ o,E _ o) d\Gamma _ {r,n _ r}\\
+&=\int \rho _ {s}(s _ o,E _ o) d\Gamma _ {r,n _ r}\\
+&=\int \frac{1}{\Omega _ {s}(n _ s,E _ s)}\delta(E _ s-\varepsilon _ s)d\Gamma _ {r,n _ r}\\
+&=\int \frac{1}{\Omega _ {s}(n _ s,E _ s)}\delta(E _ o+E _ r-\varepsilon _ s)d\Gamma _ {r,n _ r}\\
+&=\frac{\Omega _ {r}(n _ r,\varepsilon _ s-E _ o)}{\Omega _ {s}(n _ s,\varepsilon _ s)}\\
+&=\frac{\Omega _ {r}(n _ r,\varepsilon _ s-E _ o)}{\Omega _ {s}(n _ s,\varepsilon _ s)}\\
 \end{align*}
 $$
 
@@ -766,39 +766,39 @@ end
 
 $$
 \begin{align*}
-\rho^{equlibrium}_{o,n_o}&=\frac{\Omega_{r}(n_r,\varepsilon_s-E_o)}{\Omega_{s}(n_s,\varepsilon_s)}\\
-&=\frac{\Omega_{r}(n_r,\varepsilon_s-E_o)}{\Omega_{r}(n_s,\varepsilon_s-E_o)}\cdot\frac{\Omega_{r}(n_s,\varepsilon_s-E_o)}{\Omega_{r}(n_s,\varepsilon_s)}\cdot\frac{\Omega_{r}(n_s,\varepsilon_s)}{\Omega_{s}(n_s,\varepsilon_s)}\\
-&=e^{S_r(n_r,\varepsilon_s-E_o)-S_r(n_s,\varepsilon_s-E_o)}e^{S_r(n_s,\varepsilon_s-E_o)-S_r(n_s,\varepsilon_s)}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}\\
-&=e^{\frac{S_r(n_s-n_o,\varepsilon_s-E_o)-S_r(n_s,\varepsilon_s-E_o)}{-n_o}(-n_o)}e^{\frac{S_r(n_s,\varepsilon_s-E_o)-S_r(n_s,\varepsilon_s)}{-E_o}(-E_o)}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}\\
-&=e^{\left.\frac{\partial S_r}{\partial n}\right|_{n=n_s}(-n_o)}e^{\left.\frac{\partial S_r}{\partial E}\right|_{E=\varepsilon_r}(-E_o)}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}\\
-&=e^{\left.\frac{\partial S_r}{\partial E}\frac{\partial E}{\partial n}\right|_{n=n_s}(-n_o)}e^{\left.\frac{\partial S_r}{\partial E}\right|_{E=\varepsilon_r}(-E_o)}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}\\
-&=e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}e^{S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s)}
+\rho^{equlibrium} _ {o,n _ o}&=\frac{\Omega _ {r}(n _ r,\varepsilon _ s-E _ o)}{\Omega _ {s}(n _ s,\varepsilon _ s)}\\
+&=\frac{\Omega _ {r}(n _ r,\varepsilon _ s-E _ o)}{\Omega _ {r}(n _ s,\varepsilon _ s-E _ o)}\cdot\frac{\Omega _ {r}(n _ s,\varepsilon _ s-E _ o)}{\Omega _ {r}(n _ s,\varepsilon _ s)}\cdot\frac{\Omega _ {r}(n _ s,\varepsilon _ s)}{\Omega _ {s}(n _ s,\varepsilon _ s)}\\
+&=e^{S _ r(n _ r,\varepsilon _ s-E _ o)-S _ r(n _ s,\varepsilon _ s-E _ o)}e^{S _ r(n _ s,\varepsilon _ s-E _ o)-S _ r(n _ s,\varepsilon _ s)}e^{S _ r(n _ s,\varepsilon _ s)-S _ s(n _ s,\varepsilon _ s)}\\
+&=e^{\frac{S _ r(n _ s-n _ o,\varepsilon _ s-E _ o)-S _ r(n _ s,\varepsilon _ s-E _ o)}{-n _ o}(-n _ o)}e^{\frac{S _ r(n _ s,\varepsilon _ s-E _ o)-S _ r(n _ s,\varepsilon _ s)}{-E _ o}(-E _ o)}e^{S _ r(n _ s,\varepsilon _ s)-S _ s(n _ s,\varepsilon _ s)}\\
+&=e^{\left.\frac{\partial S _ r}{\partial n}\right| _ {n=n _ s}(-n _ o)}e^{\left.\frac{\partial S _ r}{\partial E}\right| _ {E=\varepsilon _ r}(-E _ o)}e^{S _ r(n _ s,\varepsilon _ s)-S _ s(n _ s,\varepsilon _ s)}\\
+&=e^{\left.\frac{\partial S _ r}{\partial E}\frac{\partial E}{\partial n}\right| _ {n=n _ s}(-n _ o)}e^{\left.\frac{\partial S _ r}{\partial E}\right| _ {E=\varepsilon _ r}(-E _ o)}e^{S _ r(n _ s,\varepsilon _ s)-S _ s(n _ s,\varepsilon _ s)}\\
+&=e^{-\frac{1}{k _ 0T}\frac{\partial E}{\partial n}\cdot n _ o}e^{-\frac{1}{k _ 0T}E _ o}e^{S _ r(n _ s,\varepsilon _ s)-S _ s(n _ s,\varepsilon _ s)}
 \end{align*}
 $$
 
 得到 $ \rho $ 的表达式:
 
 $$
-\rho=-\zeta+\frac{\mu}{k_0T}N-\frac{1}{k_0T}E,\quad \zeta=-(S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s))
+\rho=-\zeta+\frac{\mu}{k _ 0T}N-\frac{1}{k _ 0T}E,\quad \zeta=-(S _ r(n _ s,\varepsilon _ s)-S _ s(n _ s,\varepsilon _ s))
 $$
 
 同样得到 $ \zeta $ 的表达式, 并将 $ \rho $ 重写:
 
 $$
-Z=e^{\zeta}=\int e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}d\Gamma\\
-\rho=\frac{1}{Z}e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}=\frac{e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}}{\int e^{-\frac{1}{k_0T}\frac{\partial E}{\partial n}\cdot n_o}e^{-\frac{1}{k_0T}E_o}d\Gamma}
+Z=e^{\zeta}=\int e^{-\frac{1}{k _ 0T}\frac{\partial E}{\partial n}\cdot n _ o}e^{-\frac{1}{k _ 0T}E _ o}d\Gamma\\
+\rho=\frac{1}{Z}e^{-\frac{1}{k _ 0T}\frac{\partial E}{\partial n}\cdot n _ o}e^{-\frac{1}{k _ 0T}E _ o}=\frac{e^{-\frac{1}{k _ 0T}\frac{\partial E}{\partial n}\cdot n _ o}e^{-\frac{1}{k _ 0T}E _ o}}{\int e^{-\frac{1}{k _ 0T}\frac{\partial E}{\partial n}\cdot n _ o}e^{-\frac{1}{k _ 0T}E _ o}d\Gamma}
 $$
 
 还是类似地, 当两个开放系可以看做两个封闭系时(把两个开放系看成孤立系也可以 只不过多了一次推导)
 
 $$
 \begin{align*}
-\zeta&=-(S_r(n_s,\varepsilon_s)-S_s(n_s,\varepsilon_s))\\
-&=-\bigg(\Big(S_r(n_s,\varepsilon_s)-S_r(n_r,\varepsilon_r)\Big)-S_o(n_o,\varepsilon_o)\bigg)\\
-&=-\Bigg(\bigg(\Big(S_r(n_s,\varepsilon_s)-S_r(n_s,\varepsilon_r)\Big)+\Big(S_r(n_s,\varepsilon_r)-S_r(n_r,\varepsilon_r)\Big)\bigg)-S_o(n_o,\varepsilon_o)\Bigg)\\
-&=-\left(\frac{S_r(n_s,\varepsilon_s)-S_r(n_s,\varepsilon_r)}{\varepsilon_o}\varepsilon_o+\frac{S_r(n_s,\varepsilon_r)-S_r(n_r,\varepsilon_r)}{n_o}n_o-S_o(n_o,\varepsilon_o)\right)\\
-&=-\left(\frac{1}{k_0T}\varepsilon_o+\frac{\partial S}{\partial E}\frac{\partial E}{\partial n}-S_o(n_o,\varepsilon_o)\right)\\
-&=-\left(\frac{1}{k_0T}\varepsilon_o+\frac{1}{k_0T}\frac{\partial E}{\partial n}-S_o(n_o,\varepsilon_o)\right)\\
+\zeta&=-(S _ r(n _ s,\varepsilon _ s)-S _ s(n _ s,\varepsilon _ s))\\
+&=-\bigg(\Big(S _ r(n _ s,\varepsilon _ s)-S _ r(n _ r,\varepsilon _ r)\Big)-S _ o(n _ o,\varepsilon _ o)\bigg)\\
+&=-\Bigg(\bigg(\Big(S _ r(n _ s,\varepsilon _ s)-S _ r(n _ s,\varepsilon _ r)\Big)+\Big(S _ r(n _ s,\varepsilon _ r)-S _ r(n _ r,\varepsilon _ r)\Big)\bigg)-S _ o(n _ o,\varepsilon _ o)\Bigg)\\
+&=-\left(\frac{S _ r(n _ s,\varepsilon _ s)-S _ r(n _ s,\varepsilon _ r)}{\varepsilon _ o}\varepsilon _ o+\frac{S _ r(n _ s,\varepsilon _ r)-S _ r(n _ r,\varepsilon _ r)}{n _ o}n _ o-S _ o(n _ o,\varepsilon _ o)\right)\\
+&=-\left(\frac{1}{k _ 0T}\varepsilon _ o+\frac{\partial S}{\partial E}\frac{\partial E}{\partial n}-S _ o(n _ o,\varepsilon _ o)\right)\\
+&=-\left(\frac{1}{k _ 0T}\varepsilon _ o+\frac{1}{k _ 0T}\frac{\partial E}{\partial n}-S _ o(n _ o,\varepsilon _ o)\right)\\
 \end{align*}
 $$
 
@@ -812,8 +812,8 @@ $$
 
 $$
 \begin{align*}
-\zeta&=-\left(\frac{1}{k_0T}\varepsilon_o+\frac{1}{k_0T}\frac{\partial E}{\partial n}-k_0S_o(n_o,\varepsilon_o)\right)\\
-&=-\frac{1}{k_0T}\left(\varepsilon_o+\mu-S_oT\right)
+\zeta&=-\left(\frac{1}{k _ 0T}\varepsilon _ o+\frac{1}{k _ 0T}\frac{\partial E}{\partial n}-k _ 0S _ o(n _ o,\varepsilon _ o)\right)\\
+&=-\frac{1}{k _ 0T}\left(\varepsilon _ o+\mu-S _ oT\right)
 \end{align*}
 $$
 
@@ -825,33 +825,33 @@ $$
 
 先考虑两个无关的开放系A,B. 它们与同一个热库和粒子库相接触, 但是彼此之间隔绝,没有能量粒子或其他交换.
 
-将一个开放系S分为两个开放系A和B. 由孤开放系的定义, 他们是同一个开放系 $ S $ 的不同部分. 开放系的温度和化学势是一个定值.  这两个开放系温度相等, 都等于总系统S的温度  $ T_a=T_b $ , ==化学势也都相等??? 这不是平衡条件吗??????? 为啥?????? 封闭系温度相等怎么来的???== 
+将一个开放系S分为两个开放系A和B. 由孤开放系的定义, 他们是同一个开放系 $ S $ 的不同部分. 开放系的温度和化学势是一个定值.  这两个开放系温度相等, 都等于总系统S的温度  $ T _ a=T _ b $ , ==化学势也都相等??? 这不是平衡条件吗??????? 为啥?????? 封闭系温度相等怎么来的???== 
 
 $$
-\rho_a^{uncoupled}=\frac{1}{Z_a}e^{-\frac{1}{k_0T}\mu_a\cdot n_a}e^{-\frac{1}{k_0T}E_a}\\
-\rho_b^{uncoupled}=\frac{1}{Z_b}e^{-\frac{1}{k_0T}\mu_b\cdot n_b}e^{-\frac{1}{k_0T}E_b}
+\rho _ a^{uncoupled}=\frac{1}{Z _ a}e^{-\frac{1}{k _ 0T}\mu _ a\cdot n _ a}e^{-\frac{1}{k _ 0T}E _ a}\\
+\rho _ b^{uncoupled}=\frac{1}{Z _ b}e^{-\frac{1}{k _ 0T}\mu _ b\cdot n _ b}e^{-\frac{1}{k _ 0T}E _ b}
 $$
 
 对于平衡中的开放系A和B
 
 $$
 \begin{align*}
-1 &= \int\rho^{equilibrium}_ad\Gamma_a\\
-&=\iint \rho_s d\Gamma_a d\Gamma_ b\\
-\Rightarrow \rho^{equilibrium}_a&=\int \rho_s d\Gamma_b\\
-&=\int \frac{1}{Z_s}e^{-\frac{1}{k_0T}\mu_s\cdot n_s}e^{-\frac{1}{k_0T}E_s} d\Gamma_b\\
+1 &= \int\rho^{equilibrium} _ ad\Gamma _ a\\
+&=\iint \rho _ s d\Gamma _ a d\Gamma _  b\\
+\Rightarrow \rho^{equilibrium} _ a&=\int \rho _ s d\Gamma _ b\\
+&=\int \frac{1}{Z _ s}e^{-\frac{1}{k _ 0T}\mu _ s\cdot n _ s}e^{-\frac{1}{k _ 0T}E _ s} d\Gamma _ b\\
 \end{align*}
 $$
 
-  $ E_a+E_b=E_s $ ,  $ T_a=T_b $ ,  $ \mu_a=\mu_b=\mu_s $  得到
+  $ E _ a+E _ b=E _ s $ ,  $ T _ a=T _ b $ ,  $ \mu _ a=\mu _ b=\mu _ s $  得到
 
 $$
 \begin{align*}
-\rho^{uncoupled}_a&= \rho^{equilibrium}_a\\
-\frac{1}{Z_a}e^{-\frac{1}{k_0T}\mu_a\cdot n_a}e^{-\frac{1}{k_0T}E_a} &= \int \frac{1}{Z_s}e^{-\frac{1}{k_0T}\mu_s\cdot n_s}e^{-\frac{1}{k_0T}E_s} d\Gamma_b\\
-&= \int \frac{1}{Z_s}e^{-\frac{1}{k_0T}\mu_s\cdot (n_a+n_b)}e^{-\frac{1}{k_0T}(E_a+E_b)} d\Gamma_b\\
-&=\frac{1}{Z_s}e^{-\frac{1}{k_0T}\mu_s n_a}e^{-\frac{1}{k_0T}E_a} \int e^{-\frac{1}{k_0T}\mu_s\cdot n_b }e^{-\frac{1}{k_0T} E_b } d\Gamma_b\\
-&=\frac{Z_b}{Z_s}e^{-\frac{1}{k_0T}\mu_s n_a}e^{-\frac{1}{k_0T}E_a} 
+\rho^{uncoupled} _ a&= \rho^{equilibrium} _ a\\
+\frac{1}{Z _ a}e^{-\frac{1}{k _ 0T}\mu _ a\cdot n _ a}e^{-\frac{1}{k _ 0T}E _ a} &= \int \frac{1}{Z _ s}e^{-\frac{1}{k _ 0T}\mu _ s\cdot n _ s}e^{-\frac{1}{k _ 0T}E _ s} d\Gamma _ b\\
+&= \int \frac{1}{Z _ s}e^{-\frac{1}{k _ 0T}\mu _ s\cdot (n _ a+n _ b)}e^{-\frac{1}{k _ 0T}(E _ a+E _ b)} d\Gamma _ b\\
+&=\frac{1}{Z _ s}e^{-\frac{1}{k _ 0T}\mu _ s n _ a}e^{-\frac{1}{k _ 0T}E _ a} \int e^{-\frac{1}{k _ 0T}\mu _ s\cdot n _ b }e^{-\frac{1}{k _ 0T} E _ b } d\Gamma _ b\\
+&=\frac{Z _ b}{Z _ s}e^{-\frac{1}{k _ 0T}\mu _ s n _ a}e^{-\frac{1}{k _ 0T}E _ a} 
 \end{align*}
 $$
 
@@ -859,8 +859,8 @@ $$
 
 $$
 \begin{align}
-Z_aZ_b&=Z_s\\
-\ln{Z_a}+\ln{Z_b}&=\ln{Z_s}
+Z _ aZ _ b&=Z _ s\\
+\ln{Z _ a}+\ln{Z _ b}&=\ln{Z _ s}
 \end{align}
 $$
 
@@ -895,7 +895,7 @@ $$
 
 $$
 \begin{align}
-d\vec{p}&=\mathscr{A}_{D-1}p^{D-1}dp \notag \\
+d\vec{p}&=\mathscr{A} _ {D-1}p^{D-1}dp \notag \\
 \quad p &= {\left(2mE\right)}^{1/2} \label{singleParticleEP} \\
 dp &= {\left(2m\right)}^{1/2}E^{-1/2}dE \notag
 \end{align}
@@ -908,9 +908,9 @@ $$
 \Psi &= \int d\Gamma\\
 & = \iint d\vec{q} d\vec{p}\\
 &= \int V d\vec{p}\\
-&= \int V \mathscr{A}_{D-1}p^{D-1}dp \\\
-&= \int V \mathscr{A}_{D-1} {\left(2mE\right)}^{\frac{D-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
-&= \int V \mathscr{A}_{D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}dE 
+&= \int V \mathscr{A} _ {D-1}p^{D-1}dp \\\
+&= \int V \mathscr{A} _ {D-1} {\left(2mE\right)}^{\frac{D-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
+&= \int V \mathscr{A} _ {D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}dE 
 \end{align*}
 $$
 
@@ -919,7 +919,7 @@ $$
 得到
 
 $$
-\frac{d \Gamma}{d E} =\Omega(E) = V \mathscr{A}_{D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}
+\frac{d \Gamma}{d E} =\Omega(E) = V \mathscr{A} _ {D-1}{\left(2m\right)}^{\frac{D}{2}}E^{\frac{D-2}{2}}
 $$
 
 #### 经典宏观系统
@@ -927,22 +927,22 @@ $$
 类似地, 对于N个质量均为 $ m $ 的粒子的宏观系统, 定义如下动量 $ \vec{\mathfrak{p}} $ 
 
 $$
-\vec{\mathfrak{p}}=(\vec{p}_1,\vec{p}_2,\cdots,\vec{p}_N)
+\vec{\mathfrak{p}}=(\vec{p} _ 1,\vec{p} _ 2,\cdots,\vec{p} _ N)
 $$
 
 系统的能量可以表示为:
 
 $$
-E=\sum_i \frac{\vec{p}_i^2}{2m}= \frac{\vec{\mathfrak{p}}^2}{2m}
+E=\sum _ i \frac{\vec{p} _ i^2}{2m}= \frac{\vec{\mathfrak{p}}^2}{2m}
 $$
 
 仿照式子 $ (\ref{singleParticleEP}) $  得到
 
 $$
 \begin{align}
-d\vec{\mathfrak{p}}&=d\vec{p}_1\cdot d\vec{p}_2\cdot\cdots\cdot d\vec{p}_N \notag \qquad 这里仿照d\vec{p}=d(p_x,p_y,p_z)=dp_xdp_ydp_z \notag \\
-&=\mathscr{A}_{ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p}, \\
-\mathfrak{p}&=\left( \sum_i {\vec{p}_i^2}\right)^{\frac{1}{2}}\notag \\
+d\vec{\mathfrak{p}}&=d\vec{p} _ 1\cdot d\vec{p} _ 2\cdot\cdots\cdot d\vec{p} _ N \notag \qquad 这里仿照d\vec{p}=d(p _ x,p _ y,p _ z)=dp _ xdp _ ydp _ z \notag \\
+&=\mathscr{A} _ {ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p}, \\
+\mathfrak{p}&=\left( \sum _ i {\vec{p} _ i^2}\right)^{\frac{1}{2}}\notag \\
 &=\left( 2m E\right)^{\frac{1}{2}}\\
 d\mathfrak{p}&= {\left(2m\right)}^{1/2}E^{-1/2}dE 
 \end{align}
@@ -954,25 +954,25 @@ $$
 \begin{align*}
 \Psi &= \int d\Gamma\\
 & = \iint [d\vec{q}] [d\vec{p}]\\
-&=\left(\iint\cdots\int d\vec{q}_1d\vec{q}_2\cdots d\vec{q}_N\right) \left(\iint\cdots\int d\vec{p}_1d\vec{p}_2\cdots d\vec{p}_N\right)\\
-&=\left((\int d\vec{q}_1)(\int d\vec{q}_2)\cdots (\int d\vec{q}_N)\right) \int d\vec{\mathfrak{p}}\\
+&=\left(\iint\cdots\int d\vec{q} _ 1d\vec{q} _ 2\cdots d\vec{q} _ N\right) \left(\iint\cdots\int d\vec{p} _ 1d\vec{p} _ 2\cdots d\vec{p} _ N\right)\\
+&=\left((\int d\vec{q} _ 1)(\int d\vec{q} _ 2)\cdots (\int d\vec{q} _ N)\right) \int d\vec{\mathfrak{p}}\\
  &\\
-&= V\cdot V\cdots V \int  \mathscr{A}_{ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p} \\\
-&= \int V^N \mathscr{A}_{ND-1} {\left(2mE\right)}^{\frac{ND-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
-&= \int V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE 
+&= V\cdot V\cdots V \int  \mathscr{A} _ {ND-1}\mathfrak{p}^{ND-1}d\mathfrak{p} \\\
+&= \int V^N \mathscr{A} _ {ND-1} {\left(2mE\right)}^{\frac{ND-1}{2}} {\left(2m\right)}^{\frac{1}{2}}E^{-\frac{1}{2}}dE \\
+&= \int V^N \mathscr{A} _ {ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE 
 \end{align*}
 $$
 
 得到 $ \Gamma $ 和 $ E $ 的关系:
 
 $$
-d\Gamma=V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE
+d\Gamma=V^N \mathscr{A} _ {ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}}dE
 $$
 
 从而得到得到 $ \Omega $ 的表达式:
 
 $$
-\Omega(E)=\frac{d\Gamma}{dE} =V^N \mathscr{A}_{ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}} \notag
+\Omega(E)=\frac{d\Gamma}{dE} =V^N \mathscr{A} _ {ND-1}{\left(2m\right)}^{\frac{ND}{2}}E^{\frac{ND-2}{2}} \notag
 $$
 
 注意在这里出现了所谓Gibbs佯谬, 这样计算得到的 $ \Omega $  与实验得到的结果不符合. 必须乘上一个因子 $ 1/N! $ 才吻合. 这个因子无法从经典力学推导出来. 出现这个因子的原因就是物理测量的系统(如气体等)微观粒子具有不可分辨的特性. 所谓不可分辨, 指的是粒子具有波的性质, 而微观粒子没有轨迹, 在波函数重叠的部分无法区分这两个粒子. ==那么统计力学的系统内的微观粒子满足这个条件吗? 统计力学假定微观粒子之间的相互作用足够微弱(在哪里假设了?), 在这个假设的前提下, 微观粒子是不能分辨的吗? 粒子之间不是没有相互作用吗? 还是说这个假设没有必要?==
@@ -991,7 +991,7 @@ $$
 得到ND-1维球面面积为 $ (N\rightarrow \infty) $ 
 $$
 \begin{align*}
-\mathscr{A}_{ND-1}
+\mathscr{A} _ {ND-1}
 &=\frac{ {2\pi}^{ND/2}}{\Gamma(ND/2)}\\
 \phantom{}\xrightarrow{N\rightarrow\infty} 
 &\phantom{=}\frac{2{\pi}^{ND/2}}{\sqrt{2\pi \left(\frac{ND}{2}\right)}{(\frac{ND}{2})}^{\frac{ND}{2}-1}e^{-\frac{ND}{2}}}\\
@@ -1005,7 +1005,7 @@ $$
 
 $$
 \begin{align}
-\Omega(E) &=V^N\mathscr{A}_{ND-1}\left({2mE}\right)^{DN/2} \notag\\
+\Omega(E) &=V^N\mathscr{A} _ {ND-1}\left({2mE}\right)^{DN/2} \notag\\
 &=V^N\cdot\left(\frac{2e\pi}{ND}\right)^{ {\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
 &=V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} 
 \end{align}
@@ -1032,7 +1032,7 @@ $$
 $$
 \begin{align}
 
-\Omega(E) &=VN\mathscr{A}_{ND-1}\left({2mE}\right){DN/2} \notag\\
+\Omega(E) &=VN\mathscr{A} _ {ND-1}\left({2mE}\right){DN/2} \notag\\
 
 &=VN\cdot\left(\frac{2e\pi}{ND}\right)^{ {\frac{ND}{2}}}2\left(\pi ND\right)^{\frac{1}{2}}\cdot \left(2mE\right)^{DN/2}\notag\\
 
@@ -1060,11 +1060,11 @@ $$
 
 \frac{1}{T}&=\frac{dS(E)}{dE} \\
 
-&=k_0\frac{1}{\Omega(E)}\frac{d\Omega(E)}{dE} \\
+&=k _ 0\frac{1}{\Omega(E)}\frac{d\Omega(E)}{dE} \\
 
-&=\frac{k_0}{V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} }\cdot V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{1}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \frac{dE^{\frac{ND}{2}}}{dE} \\
+&=\frac{k _ 0}{V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{E}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} }\cdot V^N \left(\frac{2e\pi m}{D}\right)^{\frac{ND}{2}}\left(\frac{1}{N}\right)^{\frac{ND}{2}} 2\left(\pi ND\right)^{\frac{1}{2}} \frac{dE^{\frac{ND}{2}}}{dE} \\
 
-&=k_0\frac{ND}{2}E^{-1} 
+&=k _ 0\frac{ND}{2}E^{-1} 
 
 \end{align*}
 $$
@@ -1072,7 +1072,7 @@ $$
 得到了系统的能态方程:
 
 $$
-E=\frac{1}{2}NDk_0T
+E=\frac{1}{2}NDk _ 0T
 $$
 
 可以看出, 仿照上面的做法, 可以定义不同的平衡条件而得到不同的等价关系, 从而得到不同的==等价量==.
@@ -1151,20 +1151,20 @@ $$
 用密度矩阵
 
 $$
-\hat{\rho}=\sum_{i}p_i\left| \psi_i \right\rangle  \left\langle \psi_i \right|
+\hat{\rho}=\sum _ {i}p _ i\left| \psi _ i \right\rangle  \left\langle \psi _ i \right|
 $$
 
 则任意一个可观测量
 
 $$
 \begin{align*}
-\left\langle O \right\rangle &=\sum_ip_i \left\langle O \right\rangle_i\\
-&=\sum_i p_i \left\langle \psi_i \right| \hat{O}\left| \psi_i \right\rangle  \\
-&=\sum_i p_i \left\langle \psi_i \right| \mathbf{1} \hat{O}\left| \psi_i \right\rangle\\
-&=\sum_i p_i \left\langle \psi_i \right| \left(\sum_j \left| \psi_j \right\rangle  \left\langle \psi_j \right| \right) \hat{O}\left| \psi_i \right\rangle\\
-&=\sum_i\sum_j   p_i \left\langle \psi_i \right| \left| \psi_j \right\rangle  \left\langle \psi_j \right|  \hat{O}\left| \psi_i \right\rangle\\
-&=\sum_i \left\langle \psi_i \right| \left(\sum_j   p_i\left| \psi_j \right\rangle  \left\langle \psi_j \right| \right) \hat{O}\left| \psi_i \right\rangle\\
-&=\sum_i \left\langle \psi_i \right|\hat{\rho} \hat{O}\left| \psi_i \right\rangle\\
+\left\langle O \right\rangle &=\sum _ ip _ i \left\langle O \right\rangle _ i\\
+&=\sum _ i p _ i \left\langle \psi _ i \right| \hat{O}\left| \psi _ i \right\rangle  \\
+&=\sum _ i p _ i \left\langle \psi _ i \right| \mathbf{1} \hat{O}\left| \psi _ i \right\rangle\\
+&=\sum _ i p _ i \left\langle \psi _ i \right| \left(\sum _ j \left| \psi _ j \right\rangle  \left\langle \psi _ j \right| \right) \hat{O}\left| \psi _ i \right\rangle\\
+&=\sum _ i\sum _ j   p _ i \left\langle \psi _ i \right| \left| \psi _ j \right\rangle  \left\langle \psi _ j \right|  \hat{O}\left| \psi _ i \right\rangle\\
+&=\sum _ i \left\langle \psi _ i \right| \left(\sum _ j   p _ i\left| \psi _ j \right\rangle  \left\langle \psi _ j \right| \right) \hat{O}\left| \psi _ i \right\rangle\\
+&=\sum _ i \left\langle \psi _ i \right|\hat{\rho} \hat{O}\left| \psi _ i \right\rangle\\
 &=\operatorname{Tr}{\hat{\rho} \hat{O}}
 \end{align*}
 $$
@@ -1232,22 +1232,22 @@ $$
 性质一:
 
 $$
-\int^{+\infty}_{-\infty}\delta(ax)dx =\frac{1}{\left| a\right|}\int^{+\infty}_{-\infty}\delta(y)dy \label{deltaax}
+\int^{+\infty} _ {-\infty}\delta(ax)dx =\frac{1}{\left| a\right|}\int^{+\infty} _ {-\infty}\delta(y)dy \label{deltaax}
 $$
 
 证明:
 
 $$
-\int^{+\infty}_{-\infty}\delta(ax)dx =
+\int^{+\infty} _ {-\infty}\delta(ax)dx =
 \begin{cases}
-\int^{+\infty}_{-\infty}\delta(y)\frac{dy}{a}= \frac{1}{a}\int^{+\infty}_{-\infty}\delta(y) dy ,\quad (a>0) \\\\
-\int^{\color{Red}-\infty}_{\color{Red}+\infty}\delta(y)\frac{dy}{a} =-\frac{1}{a}\int^{\color{Red}+\infty}_{\color{Red}-\infty}\delta(y) dy ,\quad (a<0) \end{cases} \notag
+\int^{+\infty} _ {-\infty}\delta(y)\frac{dy}{a}= \frac{1}{a}\int^{+\infty} _ {-\infty}\delta(y) dy ,\quad (a>0) \\\\
+\int^{\color{Red}-\infty} _ {\color{Red}+\infty}\delta(y)\frac{dy}{a} =-\frac{1}{a}\int^{\color{Red}+\infty} _ {\color{Red}-\infty}\delta(y) dy ,\quad (a<0) \end{cases} \notag
 $$
 
 性质二:
 
 $$
-\delta(f(x))=\sum_{i}\frac{\delta(x-a_i)}{\lvert f'(a_i)\rvert}, \qquad \mathrm{where}\ f(a_i)=0
+\delta(f(x))=\sum _ {i}\frac{\delta(x-a _ i)}{\lvert f'(a _ i)\rvert}, \qquad \mathrm{where}\ f(a _ i)=0
 $$
 
 
@@ -1255,11 +1255,11 @@ $$
 
 $$
 \begin{align*}
-\int^{+\infty}_{-\infty}g(x)\delta\left(f(x)\right)dx &=\sum_{i}{\int^{a_i+\varepsilon}_{a_i-\varepsilon}g(x)\delta\left(f(x)\right)dx}\\
+\int^{+\infty} _ {-\infty}g(x)\delta\left(f(x)\right)dx &=\sum _ {i}{\int^{a _ i+\varepsilon} _ {a _ i-\varepsilon}g(x)\delta\left(f(x)\right)dx}\\
 & \qquad\qquad\uparrow 只在f(x)=0时 \delta 函数才不为零, 取f(x)=0的邻域计算 \\
-\notag\xrightarrow{Taylor\ expension} &= \sum_{i}{\int^{a_i+\varepsilon}_{a_i-\varepsilon}g(x)\delta\left(f(a_i)+f'(a_i)x + \mathcal{O}(x^2)\right)dx}\\
-\xrightarrow{\varepsilon\rightarrow 0}&=\sum_{i}\int^{a_i+\varepsilon}_{a_i-\varepsilon}g(x)\delta\left(f'(a_i)x \right)dx\\
-\xrightarrow{\mathrm{use\ eqn. \ \ref{deltaax}}}&= \sum_{i}\frac{g(a_i)}{\lvert f'(a_i)\rvert}
+\notag\xrightarrow{Taylor\ expension} &= \sum _ {i}{\int^{a _ i+\varepsilon} _ {a _ i-\varepsilon}g(x)\delta\left(f(a _ i)+f'(a _ i)x + \mathcal{O}(x^2)\right)dx}\\
+\xrightarrow{\varepsilon\rightarrow 0}&=\sum _ {i}\int^{a _ i+\varepsilon} _ {a _ i-\varepsilon}g(x)\delta\left(f'(a _ i)x \right)dx\\
+\xrightarrow{\mathrm{use\ eqn. \ \ref{deltaax}}}&= \sum _ {i}\frac{g(a _ i)}{\lvert f'(a _ i)\rvert}
 \end{align*}
 $$
 
@@ -1267,8 +1267,8 @@ $$
 
 $$
 \begin{align*}
-\sum_{i}\frac{g(a_i)}{\lvert f'(a_i)\rvert}&=\int^{+\infty}_{-\infty}\sum_{i}\frac{\delta(x-a_i)}{\lvert f'(a_i)\rvert}dx\\
-&=\int^{+\infty}_{-\infty}g(x)\delta\left(f(x)\right)dx
+\sum _ {i}\frac{g(a _ i)}{\lvert f'(a _ i)\rvert}&=\int^{+\infty} _ {-\infty}\sum _ {i}\frac{\delta(x-a _ i)}{\lvert f'(a _ i)\rvert}dx\\
+&=\int^{+\infty} _ {-\infty}g(x)\delta\left(f(x)\right)dx
 \end{align*}
 $$
 
@@ -1276,8 +1276,8 @@ $$
 
 $$
 \begin{align}
-\delta(f(x))&=\sum_{i}\frac{\delta(x-a_i)}{\lvert f'(a_i)\rvert}, \qquad \mathrm{where}\ f(a_i)=0 \notag\\
-\int_{-\infty}^{+\infty}\delta(f(x))&=\int^{+\infty}_{-\infty}1\cdot\delta\left(f(x)\right)dx =\sum_{i}\frac{1}{\lvert f'(a_i)\rvert}, \qquad \mathrm{where}\ f(a_i)=0 \label{integralofdeltafx}
+\delta(f(x))&=\sum _ {i}\frac{\delta(x-a _ i)}{\lvert f'(a _ i)\rvert}, \qquad \mathrm{where}\ f(a _ i)=0 \notag\\
+\int _ {-\infty}^{+\infty}\delta(f(x))&=\int^{+\infty} _ {-\infty}1\cdot\delta\left(f(x)\right)dx =\sum _ {i}\frac{1}{\lvert f'(a _ i)\rvert}, \qquad \mathrm{where}\ f(a _ i)=0 \label{integralofdeltafx}
 \end{align}
 $$
 
@@ -1292,7 +1292,7 @@ $$
 我们常用的公式是:
 
 $$
-\ln(N!)=\sum_{x=1}^N{\ln{x}}\approx\int_1^N\ln{x}dx=N\ln{N}-N+1
+\ln(N!)=\sum _ {x=1}^N{\ln{x}}\approx\int _ 1^N\ln{x}dx=N\ln{N}-N+1
 $$
 
 对 $ \Gamma $ 函数也有斯特灵公式
@@ -1315,7 +1315,7 @@ $$
 
 # 参考文献
 
-[^\Gamma函数的性质]: https://en.wikipedia.org/wiki/Gamma_function#General
+[^\Gamma函数的性质]: https://en.wikipedia.org/wiki/Gamma _ function#General
 
 [^Pathria]: Pathria statistical mechanisc
 [^zl]: Liu Zhao.  thermodynamics

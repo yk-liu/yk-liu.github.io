@@ -33,9 +33,9 @@ $$
 \begin{align}
 p=p^\mu&=(E/c,\vec{p})\\
 x^\mu&=(ct,\vec{x})\\
-g_{\mu\nu}&=(+,-,-,-)\\
+g _ {\mu\nu}&=(+,-,-,-)\\
 p=p^\mu&=(E/c,-\vec{p})\\
-E_{\pm p}&=\pm\sqrt{\vec{p}^2+m^2}, \quad E_{-p}=-E_p
+E _ {\pm p}&=\pm\sqrt{\vec{p}^2+m^2}, \quad E _ {-p}=-E _ p
 \end{align}
 $$
 
@@ -48,7 +48,7 @@ $$
 要构建相对论量子力学, 哈密顿量$H$ 要满足
 
 $$
-p_\mu p^\mu=E^2-{\vec{p}}^2=m^2
+p _ \mu p^\mu=E^2-{\vec{p}}^2=m^2
 $$
 
 (由 $E^2={\vec{p}}^2c^2+m^2c^4$ 自然单位制$c=0$)
@@ -63,7 +63,7 @@ $$
 得到
 
 $$
--\frac{\partial}{\partial {x}^\mu} \frac{\partial}{\partial {x}_\mu}=m^2
+-\frac{\partial}{\partial {x}^\mu} \frac{\partial}{\partial {x} _ \mu}=m^2
 $$
 
 带入定态薛定谔方程
@@ -97,13 +97,13 @@ $$
 的傅里叶变换是4维的
 
 $$
-\phi(x)=\int \d^4p \operatorname{A}(\vec{p})e^{ipx}\delta(p_\mu p^\mu-m^2)+\int \d^4p \operatorname{B}(\vec{p})e^{-ipx}\delta(p_\mu p^\mu-m^2)
+\phi(x)=\int \d^4p \operatorname{A}(\vec{p})e^{ipx}\delta(p _ \mu p^\mu-m^2)+\int \d^4p \operatorname{B}(\vec{p})e^{-ipx}\delta(p _ \mu p^\mu-m^2)
 $$
 
 > 由$\delta$函数的性质,
 > 
 > $$
-> \delta(f(x))=\sum_i{\frac{x-a_i}{\left\vert {f}^\prime(a_i)\right\vert}}
+> \delta(f(x))=\sum _ i{\frac{x-a _ i}{\left\vert {f}^\prime(a _ i)\right\vert}}
 > $$
 >
 
@@ -111,10 +111,10 @@ $$
 
 $$
 \begin{align*}
-\delta(p_\mu p^\mu-m^2)&=\delta\left(p_0p^0-{\vec{p}}^2-m^2\right)\\
-&=\delta\left(p_0p^0-({\vec{p}}^2+m^2)\right)\\
-&=\delta((p^0)^2-E_p^2)\\
-&=\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E_p)+\delta(p^0+E_p) \right)
+\delta(p _ \mu p^\mu-m^2)&=\delta\left(p _ 0p^0-{\vec{p}}^2-m^2\right)\\
+&=\delta\left(p _ 0p^0-({\vec{p}}^2+m^2)\right)\\
+&=\delta((p^0)^2-E _ p^2)\\
+&=\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E _ p)+\delta(p^0+E _ p) \right)
 \end{align*}
 $$
 
@@ -122,9 +122,9 @@ $$
 
 $$
 \begin{align*}
-\int \d^4p \operatorname{A}(\vec{p})e^{ipx}\delta(p_\mu p^\mu-m^2)
-&=\int \d^4p \operatorname{A}(\vec{p})e^{ipx}\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E_p)+\delta(p^0+E_p) \right)\\
-&=\int dp^0\int \d^3 {\vec{p} \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E_p)+\delta(p^0+E_p) \right)}\\
+\int \d^4p \operatorname{A}(\vec{p})e^{ipx}\delta(p _ \mu p^\mu-m^2)
+&=\int \d^4p \operatorname{A}(\vec{p})e^{ipx}\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E _ p)+\delta(p^0+E _ p) \right)\\
+&=\int dp^0\int \d^3 {\vec{p} \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert} \left( \delta(p^0-E _ p)+\delta(p^0+E _ p) \right)}\\
 \end{align*}
 $$
 
@@ -138,24 +138,24 @@ $$
 
 $$
 \begin{align*}
-&=\int dp^0\int \d^3 {\vec{p} \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert} \delta(p^0-E_p)}\\
-&=\int \d^3 \vec{p}\left({ \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert} \int dp^0\delta(p^0-E_p)}\right)\\
-&=\int \d^3 \vec{p}\left( \int dp^0\delta(p^0-E_p){  \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert }} \right)\\
-&=\int \d^3 \vec{p} \operatorname{A}(E_p,\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert E_p \right\vert }\\
-&=\int \d^3 \vec{p} \frac{\operatorname{A}(E_p,\vec{p})}{2  E_p }e^{i(E_pt-\vec{p}\cdot\vec{x})}\\
+&=\int dp^0\int \d^3 {\vec{p} \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert} \delta(p^0-E _ p)}\\
+&=\int \d^3 \vec{p}\left({ \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert} \int dp^0\delta(p^0-E _ p)}\right)\\
+&=\int \d^3 \vec{p}\left( \int dp^0\delta(p^0-E _ p){  \operatorname{A}(p^0,\vec{p})e^{i(p^0t-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert p^0 \right\vert }} \right)\\
+&=\int \d^3 \vec{p} \operatorname{A}(E _ p,\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})}\frac{1}{2\left\vert E _ p \right\vert }\\
+&=\int \d^3 \vec{p} \frac{\operatorname{A}(E _ p,\vec{p})}{2  E _ p }e^{i(E _ pt-\vec{p}\cdot\vec{x})}\\
 \end{align*}
 $$
 
 因此可以将$\phi(x)$写成更简单的形式
 
 $$
-\phi(x)=\int \d^3 \vec{p} \left(\frac{\operatorname{A}(E_p,\vec{p})}{2 E_p }e^{i(E_pt-\vec{p}\cdot\vec{x})} + \frac{\operatorname{B}(E_p,\vec{p})}{2 E_p }e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right)
+\phi(x)=\int \d^3 \vec{p} \left(\frac{\operatorname{A}(E _ p,\vec{p})}{2 E _ p }e^{i(E _ pt-\vec{p}\cdot\vec{x})} + \frac{\operatorname{B}(E _ p,\vec{p})}{2 E _ p }e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right)
 $$
 
-令$a(\vec{p})=\frac{\operatorname{A}(E_p,\vec{p})}{\sqrt{2E_p }}$, $b(\vec{p})=\frac{\operatorname{B}(E_p,\vec{p})}{\sqrt{2E_p }}$(因为$E_p$是$p$的函数), $\phi(x)$可以写为:
+令$a(\vec{p})=\frac{\operatorname{A}(E _ p,\vec{p})}{\sqrt{2E _ p }}$, $b(\vec{p})=\frac{\operatorname{B}(E _ p,\vec{p})}{\sqrt{2E _ p }}$(因为$E _ p$是$p$的函数), $\phi(x)$可以写为:
 
 $$
-\phi(x)=\int \d^3 \vec{p} \left( \frac{a(\vec{p})}{\sqrt{2E_p}}e^{i(E_pt-\vec{p}\cdot\vec{x})} +  \frac{b(\vec{p})}{\sqrt{2E_p}} e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right)
+\phi(x)=\int \d^3 \vec{p} \left( \frac{a(\vec{p})}{\sqrt{2E _ p}}e^{i(E _ pt-\vec{p}\cdot\vec{x})} +  \frac{b(\vec{p})}{\sqrt{2E _ p}} e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right)
 $$
 
 #### 实数解
@@ -163,7 +163,7 @@ $$
 如果是实标量场, 有$\phi(x)=\phi^\dagger(x)$, 得到
 
 $$
-\phi^\dagger(x)=\int \d^3\vec{p}\frac{1}{\sqrt{2E_p}}\left( b^\dagger(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right)
+\phi^\dagger(x)=\int \d^3\vec{p}\frac{1}{\sqrt{2E _ p}}\left( b^\dagger(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right)
 $$
 
 得到
@@ -178,7 +178,7 @@ $$
 因此实标量场的解为
 
 $$
-\phi(x)=\int \frac{\d^3\vec{p}}{\sqrt{2E_p}}\left( a(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right)
+\phi(x)=\int \frac{\d^3\vec{p}}{\sqrt{2E _ p}}\left( a(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right)
 $$
 
 ### 场的量子化
@@ -201,11 +201,11 @@ C-->|傅里叶变换|D[平面波形式解]
 
 $$
 \begin{align*}
-\phi(x)&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}}\left( a(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right)\\
-&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}} a(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} + \int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}}  a^\dagger(\vec{p}) e^{-i(E_pt-\vec{p}\cdot\vec{x})} \\
-&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}} a(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} + \int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}}  a^\dagger( {\color{Red}-\vec{p}}) e^{-i(E_{\color{Red}-p}t {\color{Red}+\vec{p}}\cdot\vec{x})} \\
-&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}} \left(a(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} + a^\dagger( -\vec{p}) e^{-i(-E_pt +\vec{p}\cdot\vec{x})} \right)\\
-&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}} \left(a(\vec{p})+a^\dagger( -\vec{p}) \right)e^{ipx}\\
+\phi(x)&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}}\left( a(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right)\\
+&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}} a(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} + \int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}}  a^\dagger(\vec{p}) e^{-i(E _ pt-\vec{p}\cdot\vec{x})} \\
+&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}} a(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} + \int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}}  a^\dagger( {\color{Red}-\vec{p}}) e^{-i(E _ {\color{Red}-p}t {\color{Red}+\vec{p}}\cdot\vec{x})} \\
+&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}} \left(a(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} + a^\dagger( -\vec{p}) e^{-i(-E _ pt +\vec{p}\cdot\vec{x})} \right)\\
+&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}} \left(a(\vec{p})+a^\dagger( -\vec{p}) \right)e^{ipx}\\
 \end{align*}
 $$
 
@@ -213,8 +213,8 @@ $$
 
 $$
 \begin{cases}
-\phi(x)=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}} \tilde{\phi}(\vec{p}) e^{ipx}\\\
-\tilde{\phi}(\vec{p})  =\int \frac{\d^3\vec{x}}{(2\pi)^{\frac32}\sqrt{2E_p}} \phi(x) e^{-ipx}\\
+\phi(x)=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}} \tilde{\phi}(\vec{p}) e^{ipx}\\\
+\tilde{\phi}(\vec{p})  =\int \frac{\d^3\vec{x}}{(2\pi)^{\frac32}\sqrt{2E _ p}} \phi(x) e^{-ipx}\\
 \end{cases}
 $$
 
@@ -230,9 +230,9 @@ $$
 
 $$
 \begin{align*}
-\pi(x)&=\frac{\partial}{\partial t} \int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}}\left( a(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right) \\
-&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E_p}}\frac{\partial}{\partial t} \left( a(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right) \\
-&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}}i\sqrt{\frac{E_p}{2}} \left( -a(\vec{p})e^{i(E_pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E_pt-\vec{p}\cdot\vec{x})}\right)\\
+\pi(x)&=\frac{\partial}{\partial t} \int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}}\left( a(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right) \\
+&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}\sqrt{2E _ p}}\frac{\partial}{\partial t} \left( a(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right) \\
+&=\int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}}i\sqrt{\frac{E _ p}{2}} \left( -a(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right)\\
 \end{align*}
 $$
 
@@ -244,8 +244,8 @@ $$
 
 $$
 \begin{align}
-a(\vec{p})&=\frac12\left(\sqrt{2{E}_p}\tilde{\phi}(\vec{p})+i\sqrt{\frac{2}{E_p}}\tilde{\pi}(\vec{p})\right)\\
-a^\dagger(\vec{p})&=\frac12\left(\sqrt{2{E}_p}\tilde{\phi}(-\vec{p})-i\sqrt{\frac{2}{E_p}}\tilde{\pi}(-\vec{p})\right)
+a(\vec{p})&=\frac12\left(\sqrt{2{E} _ p}\tilde{\phi}(\vec{p})+i\sqrt{\frac{2}{E _ p}}\tilde{\pi}(\vec{p})\right)\\
+a^\dagger(\vec{p})&=\frac12\left(\sqrt{2{E} _ p}\tilde{\phi}(-\vec{p})-i\sqrt{\frac{2}{E _ p}}\tilde{\pi}(-\vec{p})\right)
 \end{align}
 $$
 
@@ -264,7 +264,7 @@ $$
 
 $$
 \begin{align}
-[a_p,a^\dagger_q]&=a_pa^\dagger_q-a^\dagger_qa_p\\
+[a _ p,a^\dagger _ q]&=a _ pa^\dagger _ q-a^\dagger _ qa _ p\\
 &=...\\
 &=i\delta(\vec{p}-\vec{q})
 \end{align}
@@ -294,7 +294,7 @@ $$
 
 $$
 \begin{align}
-\mathcal{L}&=\frac12(\partial^\mu\phi)((\partial_\mu\phi)-\frac12m^2\phi^2\\
+\mathcal{L}&=\frac12(\partial^\mu\phi)((\partial _ \mu\phi)-\frac12m^2\phi^2\\
 \pi(x)&=\frac{\eth \mathcal{L}}{\eth (\partial^0\phi)}=\frac{\eth \mathcal{L}}{\eth (\dot\phi)}=...=\dot\phi(x)\\
 \mathcal{H}&=\pi(x)\dot{\phi}(x)-\mathcal{L}\\
 &=\pi^2(x)-\frac12({(\dot{\phi}(x))}^2-{(\nabla\phi(x))}^2-m^2{\phi(x)}^2)\\
@@ -307,18 +307,18 @@ $$
 $$
 \begin{align*}
 \int \d^3 \vec{x} {(\pi(x))}^2 
-&=\int \d^3\vec{x} \left( \int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}}i\sqrt{\frac{E_p}{2}} \left( -a(\vec{p})e^{ipx} +  a^\dagger(\vec{p}) e^{-ipx}\right)\right)
-\\& \qquad \cdot \left(\int \frac{\d^3\vec{q}}{(2\pi)^{\frac32}}  i\sqrt{\frac{E_q}{2}} \left( -a(\vec{q})e^{iqx} +  a^\dagger(\vec{q}) e^{-iqx}\right) \right)\\
-&=\int \d^3 \vec{x}  \int \d^3\vec{p} \int  \d^3\vec{q} \frac{-1}{2(2\pi)^{3}} \sqrt{E_pE_q}\left( -a(\vec{p})e^{ipx} +  a^\dagger(\vec{p}) e^{-ipx}\right) 
+&=\int \d^3\vec{x} \left( \int \frac{\d^3\vec{p}}{(2\pi)^{\frac32}}i\sqrt{\frac{E _ p}{2}} \left( -a(\vec{p})e^{ipx} +  a^\dagger(\vec{p}) e^{-ipx}\right)\right)
+\\& \qquad \cdot \left(\int \frac{\d^3\vec{q}}{(2\pi)^{\frac32}}  i\sqrt{\frac{E _ q}{2}} \left( -a(\vec{q})e^{iqx} +  a^\dagger(\vec{q}) e^{-iqx}\right) \right)\\
+&=\int \d^3 \vec{x}  \int \d^3\vec{p} \int  \d^3\vec{q} \frac{-1}{2(2\pi)^{3}} \sqrt{E _ pE _ q}\left( -a(\vec{p})e^{ipx} +  a^\dagger(\vec{p}) e^{-ipx}\right) 
 \\& \qquad \cdot \left( -a(\vec{q})e^{iqx} +  a^\dagger(\vec{q}) e^{-iqx}\right)  \\
-&=\int \d^3 \vec{x}  \int \d^3\vec{p} \int  \d^3\vec{q} \frac{-1}{2(2\pi)^{3}} \sqrt{E_pE_q}\\
+&=\int \d^3 \vec{x}  \int \d^3\vec{p} \int  \d^3\vec{q} \frac{-1}{2(2\pi)^{3}} \sqrt{E _ pE _ q}\\
 & \qquad \left(a(\vec p)a(\vec q)e^{i(p+q)x}+a^\dagger(\vec p)a^\dagger(\vec q)e^{-i(p+q)x}-a^\dagger(\vec p)a(\vec q)e^{i(q-p)x}-a(\vec p)a^\dagger(\vec q)e^{i(p-q)x}\right)\\
-&= \int \d^3\vec{p} \int  \d^3\vec{q} \frac{-1}{2(2\pi)^{3}} \sqrt{E_pE_q}\int \d^3 \vec{x} \\
+&= \int \d^3\vec{p} \int  \d^3\vec{q} \frac{-1}{2(2\pi)^{3}} \sqrt{E _ pE _ q}\int \d^3 \vec{x} \\
 & \qquad \left(a(\vec p)a(\vec q)e^{i(p+q)x}+a^\dagger(\vec p)a^\dagger(\vec q)e^{-i(p+q)x}-a^\dagger(\vec p)a(\vec q)e^{i(q-p)x}-a(\vec p)a^\dagger(\vec q)e^{i(p-q)x}\right)\\
-&= \int \d^3\vec{p} \int  \d^3\vec{q} \frac{- \sqrt{E_pE_q}}{2(2\pi)^{3}}
-\left(a(\vec p)a(\vec q)e^{i(E_p+E_q)t}+a^\dagger(\vec p)a^\dagger(\vec q) e^{-i(E_p+E_q)t}\right)\delta(\vec p+\vec q)\\
-&\qquad - \int \d^3\vec{p} \int  \d^3\vec{q} \frac{- \sqrt{E_pE_q}}{2(2\pi)^{3}}\left(a^\dagger(\vec p)a(\vec q)e^{i(E_p-E_q)t}+a(\vec p)a^\dagger(\vec q)e^{-i(E_p-E_q)t}\right)\delta(\vec p-\vec q)\\
-&= \int \d^3\vec{p}  \frac{-E_p}{2(2\pi)^{3}} \left(a(\vec p)a(-\vec p)e^{2iE_pt}+a^\dagger(\vec p)a^\dagger(-\vec p)e^{-2iE_pt}-a^\dagger(\vec p)a(\vec p)-a(\vec p)a^\dagger(\vec p) \right)\\
+&= \int \d^3\vec{p} \int  \d^3\vec{q} \frac{- \sqrt{E _ pE _ q}}{2(2\pi)^{3}}
+\left(a(\vec p)a(\vec q)e^{i(E _ p+E _ q)t}+a^\dagger(\vec p)a^\dagger(\vec q) e^{-i(E _ p+E _ q)t}\right)\delta(\vec p+\vec q)\\
+&\qquad - \int \d^3\vec{p} \int  \d^3\vec{q} \frac{- \sqrt{E _ pE _ q}}{2(2\pi)^{3}}\left(a^\dagger(\vec p)a(\vec q)e^{i(E _ p-E _ q)t}+a(\vec p)a^\dagger(\vec q)e^{-i(E _ p-E _ q)t}\right)\delta(\vec p-\vec q)\\
+&= \int \d^3\vec{p}  \frac{-E _ p}{2(2\pi)^{3}} \left(a(\vec p)a(-\vec p)e^{2iE _ pt}+a^\dagger(\vec p)a^\dagger(-\vec p)e^{-2iE _ pt}-a^\dagger(\vec p)a(\vec p)-a(\vec p)a^\dagger(\vec p) \right)\\
 \end{align*}
 $$
 
@@ -329,7 +329,7 @@ $$
 $$
 \begin{align}
 \notag  H&=\int \d^3 \vec{x} \mathcal{H} \\ \notag
-&=\frac12\int \d^3 \vec{p} E_p \left(a^\dagger(\vec p)a(\vec p)+a(\vec p)a^\dagger(\vec p)\right)\\
+&=\frac12\int \d^3 \vec{p} E _ p \left(a^\dagger(\vec p)a(\vec p)+a(\vec p)a^\dagger(\vec p)\right)\\
 \end{align}
 $$
 
@@ -341,9 +341,9 @@ $$
 
 $$
 \begin{align}
-H &=\frac12 \int \d^3 \vec{p} E_p \left(a^\dagger(\vec p)a(\vec p)+a(\vec p)a^\dagger(\vec p)\right)\\
-&=\int \d^3 \vec{p} E_p \left(a^\dagger(\vec p)a(\vec p)+\frac12\left[a(\vec p),a^\dagger(\vec p)\right]\right)\\
-&=\int \d^3 \vec{p} E_p \left(a^\dagger(\vec p)a(\vec p)+\frac12\delta(\vec0) \right)\\
+H &=\frac12 \int \d^3 \vec{p} E _ p \left(a^\dagger(\vec p)a(\vec p)+a(\vec p)a^\dagger(\vec p)\right)\\
+&=\int \d^3 \vec{p} E _ p \left(a^\dagger(\vec p)a(\vec p)+\frac12\left[a(\vec p),a^\dagger(\vec p)\right]\right)\\
+&=\int \d^3 \vec{p} E _ p \left(a^\dagger(\vec p)a(\vec p)+\frac12\delta(\vec0) \right)\\
 \end{align}
 $$
 
@@ -353,10 +353,10 @@ $$
 
 $$
 \begin{align}
-\langle n |H | n\rangle &=\langle n |\int \d^3 \vec{p} E_p \left(a^\dagger(\vec p)a(\vec p)+\frac12\left[a(\vec p),a^\dagger(\vec p)\right]\right)  | n\rangle\\
-&=\int \d^3 \vec{p} E_p \langle n |\left(a^\dagger(\vec p)a(\vec p)+\frac12\left[a(\vec p),a^\dagger(\vec p)\right]\right)| n\rangle  \\
-&=\int \d^3 \vec{p} E_p \langle n |a^\dagger(\vec p)a(\vec p)| n\rangle  +\int \d^3 \vec{p} E_p \langle n |\frac12\left[a(\vec p),a^\dagger(\vec p)\right] | n\rangle  \\
-&=nE_p+\langle 0 |H | 0\rangle
+\langle n |H | n\rangle &=\langle n |\int \d^3 \vec{p} E _ p \left(a^\dagger(\vec p)a(\vec p)+\frac12\left[a(\vec p),a^\dagger(\vec p)\right]\right)  | n\rangle\\
+&=\int \d^3 \vec{p} E _ p \langle n |\left(a^\dagger(\vec p)a(\vec p)+\frac12\left[a(\vec p),a^\dagger(\vec p)\right]\right)| n\rangle  \\
+&=\int \d^3 \vec{p} E _ p \langle n |a^\dagger(\vec p)a(\vec p)| n\rangle  +\int \d^3 \vec{p} E _ p \langle n |\frac12\left[a(\vec p),a^\dagger(\vec p)\right] | n\rangle  \\
+&=nE _ p+\langle 0 |H | 0\rangle
 \end{align}
 $$
 
@@ -365,7 +365,7 @@ $$
 采用Normal Ordering的方式计算更为简便. 即先令$\left[a(\vec p),a^\dagger(\vec p)\right] =0$, 把$a^\dagger(\vec p)$一律放在$a(\vec p)$前面, 再恢复二者对易关系, 往后计算. 这种计算方法在前面的例子中等价于直接舍去对易项. 因此把normal ordering 之后的哈密顿量写作
 
 $$
-:H: \equiv \int \d^3 \vec{p} E_p a^\dagger(\vec p)a(\vec p)
+:H: \equiv \int \d^3 \vec{p} E _ p a^\dagger(\vec p)a(\vec p)
 $$
 
 
@@ -380,17 +380,17 @@ $$
 $$
 \begin{align*}
  \bra{0}\phi(x)\phi(y)\ket{0}
-&=\bra{0}\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}}(a(\vec{p})e^{-ipx}+a^\dagger(\vec{p}) e^{ipx})(a(\vec{q})e^{-iqy}+a^\dagger(\vec{q}) e^{iqy}) \ket{0}\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} \bra{0}(a(\vec{p})e^{-ipx}+a^\dagger(\vec{p}) e^{ipx})(a(\vec{q})e^{-iqy}+a^\dagger(\vec{q}) e^{iqy})\ket{0} \\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} \\
+&=\bra{0}\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ q}}(a(\vec{p})e^{-ipx}+a^\dagger(\vec{p}) e^{ipx})(a(\vec{q})e^{-iqy}+a^\dagger(\vec{q}) e^{iqy}) \ket{0}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ q}} \bra{0}(a(\vec{p})e^{-ipx}+a^\dagger(\vec{p}) e^{ipx})(a(\vec{q})e^{-iqy}+a^\dagger(\vec{q}) e^{iqy})\ket{0} \\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ q}} \\
 & \qquad\bra{0}\left(a(\vec{p})a(\vec{q})e^{-iqy-ipx}+a^\dagger(\vec{p})a(\vec{q})e^{-iqy+ipx} +a(\vec{p})a^\dagger(\vec{q})e^{iqy-ipx}+a^\dagger(\vec{p})a^\dagger(\vec{q}) e^{iqy+ipx}\right)\ket{0}\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} 
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ q}} 
 \bra{0}a(\vec{p})a^\dagger(\vec{q})e^{iqy-ipx}\ket{0}\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} 
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ q}} 
 \left\langle{\vec p}\vert{\vec q}\right\rangle e^{iqy-ipx}\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E_q}} 
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ p}}\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{\sqrt{2E _ q}} 
 \delta(\vec p -\vec q) e^{iqy-ipx}\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-ip(x-y)}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E _ p} e^{-ip(x-y)}\notag\\
 \end{align*}
 $$
 
@@ -411,8 +411,8 @@ $$
 Feynman传播子的定义为
 
 $$
-D_F(x-y)\equiv \bra{0}T\phi(x)\phi(y)\ket{0}\\
-T\phi(x)\phi(y)\equiv \begin{cases}D(x-y),\quad t_x\gt t_y\\D(y-x) ,\quad t_x\lt t_y \end{cases}\\
+D _ F(x-y)\equiv \bra{0}T\phi(x)\phi(y)\ket{0}\\
+T\phi(x)\phi(y)\equiv \begin{cases}D(x-y),\quad t _ x\gt t _ y\\D(y-x) ,\quad t _ x\lt t _ y \end{cases}\\
 $$
 
 利用编时算符, 得到的编时乘积就不再违反相对论.
@@ -421,48 +421,48 @@ $$
 
 $$
 \begin{align*}
-D_F(x-y)&=\Theta(t_x-t_y)\bra{0} \phi(x)\phi(y)\ket{0}-\Theta(t_y-t_x)\bra{0} \phi(y)\phi(x) \ket{0}\\
-&=\Theta(t_x-t_y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-ip(x-y)}+\Theta(t_y-t_x)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{ip(x-y)}\\
-&=\Theta(t_x-t_y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-iE_p(t_x-t_y)+i\vec{p}\cdot(\vec{x}-\vec{y})}+\Theta(t_y-t_x)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{iE_p(t_x-t_y)-i\vec{p}\cdot(\vec{x}-\vec{y})}\\
-\phantom{}\xrightarrow{q=(E_p,-\vec{p})} &=\Theta(t_x-t_y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-iE_p(t_x-t_y)+i\vec{p}\cdot(\vec{x}-\vec{y})}+\Theta(t_y-t_x)\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{2E_q} e^{iE_q(t_x-t_y)+i\vec{q}\cdot(\vec{x}-\vec{y})}\\
-\phantom{}\xrightarrow{p=q}&=\Theta(t_x-t_y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{-iE_p(t_x-t_y)+i\vec{p}\cdot(\vec{x}-\vec{y})}+\Theta(t_y-t_x)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E_p} e^{iE_p(t_x-t_y)+i\vec{p}\cdot(\vec{x}-\vec{y})}\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \left(\Theta(t_x-t_y)\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}+\Theta(t_y-t_x)\frac{1}{2E_p} e^{iE_p(t_x-t_y)}\right)\\
+D _ F(x-y)&=\Theta(t _ x-t _ y)\bra{0} \phi(x)\phi(y)\ket{0}-\Theta(t _ y-t _ x)\bra{0} \phi(y)\phi(x) \ket{0}\\
+&=\Theta(t _ x-t _ y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E _ p} e^{-ip(x-y)}+\Theta(t _ y-t _ x)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E _ p} e^{ip(x-y)}\\
+&=\Theta(t _ x-t _ y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)+i\vec{p}\cdot(\vec{x}-\vec{y})}+\Theta(t _ y-t _ x)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E _ p} e^{iE _ p(t _ x-t _ y)-i\vec{p}\cdot(\vec{x}-\vec{y})}\\
+\phantom{}\xrightarrow{q=(E _ p,-\vec{p})} &=\Theta(t _ x-t _ y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)+i\vec{p}\cdot(\vec{x}-\vec{y})}+\Theta(t _ y-t _ x)\int \frac{\d^3 \vec{q}}{(2\pi)^\frac32} \frac{1}{2E _ q} e^{iE _ q(t _ x-t _ y)+i\vec{q}\cdot(\vec{x}-\vec{y})}\\
+\phantom{}\xrightarrow{p=q}&=\Theta(t _ x-t _ y)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)+i\vec{p}\cdot(\vec{x}-\vec{y})}+\Theta(t _ y-t _ x)\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} \frac{1}{2E _ p} e^{iE _ p(t _ x-t _ y)+i\vec{p}\cdot(\vec{x}-\vec{y})}\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \left(\Theta(t _ x-t _ y)\frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)}+\Theta(t _ y-t _ x)\frac{1}{2E _ p} e^{iE _ p(t _ x-t _ y)}\right)\\
 \end{align*}
 $$
 
-利用留数定理可以将这两项表示为一个积分, 即构造一个积分具有两个一阶极点, 在这两个一阶极点的积分值分别是上式中的$\frac{1}{2E_p} e^{iE_p(t_x-t_y)}$和$\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}$.
+利用留数定理可以将这两项表示为一个积分, 即构造一个积分具有两个一阶极点, 在这两个一阶极点的积分值分别是上式中的$\frac{1}{2E _ p} e^{iE _ p(t _ x-t _ y)}$和$\frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)}$.
 
-> 逆着利用留数定理, 构造$f(p_0)$, 有两个一阶极点$\pm E_p$, 
+> 逆着利用留数定理, 构造$f(p _ 0)$, 有两个一阶极点$\pm E _ p$, 
 > 
 > $$
 > \begin{align*}
-> f(p_0)&= \frac{1}{p^2-m^2}e^{-ip(x-y)}  \\
-> &=\frac{1}{(p_0)^2-({\vec{p}}^2+m^2)}e^{-ip_0(t_x-t_y)}e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \\
-> &=\frac{e^{-ip_0(t_x-t_y)}}{(p_0)^2-{E_p}^2}e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \\
-> &=e^{i\vec{p}\cdot(\vec{x}-\vec{y})}\left(\frac{-\frac{1}{2E_p}e^{-ip_0(t_x-t_y)}}{p_0-E_p}+\frac{\frac{1}{2E_p}e^{-ip_0(t_x-t_y)}}{p_0+E_p}\right)
+> f(p _ 0)&= \frac{1}{p^2-m^2}e^{-ip(x-y)}  \\
+> &=\frac{1}{(p _ 0)^2-({\vec{p}}^2+m^2)}e^{-ip _ 0(t _ x-t _ y)}e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \\
+> &=\frac{e^{-ip _ 0(t _ x-t _ y)}}{(p _ 0)^2-{E _ p}^2}e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \\
+> &=e^{i\vec{p}\cdot(\vec{x}-\vec{y})}\left(\frac{-\frac{1}{2E _ p}e^{-ip _ 0(t _ x-t _ y)}}{p _ 0-E _ p}+\frac{\frac{1}{2E _ p}e^{-ip _ 0(t _ x-t _ y)}}{p _ 0+E _ p}\right)
 > \end{align*}
 > $$
 > 
-> 因此$f(p_0)$在一阶极点的留数有
+> 因此$f(p _ 0)$在一阶极点的留数有
 > 
 > $$
 > \begin{align}
-> \Res{f(E_p)}&=\frac{1}{2E_p}e^{-iE_p(t_x-t_y)}\\
-> \Res{f(-E_p)}&=-\frac{1}{2E_p}e^{iE_p(t_x-t_y)}
+> \Res{f(E _ p)}&=\frac{1}{2E _ p}e^{-iE _ p(t _ x-t _ y)}\\
+> \Res{f(-E _ p)}&=-\frac{1}{2E _ p}e^{iE _ p(t _ x-t _ y)}
 > \end{align}
 > $$
 > 
-> 对$p_0$解析延拓到复平面, 根据$(t_x-t_y)$的符号, 选取积分路径$C_\pm$, 得到
+> 对$p _ 0$解析延拓到复平面, 根据$(t _ x-t _ y)$的符号, 选取积分路径$C _ \pm$, 得到
 >
 > <img src="{{page.url}}feynman-pro.png" style="zoom:50%" />
 > 
 > $$
 > \begin{align*}
-> &\quad \oint_{C_\pm}  f(p_0)  \d p_0 \\
-> &=e^{i\vec{p}\cdot(\vec{x}-\vec{y})}\oint_{C_\pm} \d p_0 \left(\frac{-\frac{1}{2E_p}e^{-ip_0(t_x-t_y)}}{p_0-E_p}+\frac{\frac{1}{2E_p}e^{-ip_0(t_x-t_y)}}{p_0+E_p}\right) \\
-> &= e^{-i\vec{p}\cdot(\vec{x}-\vec{y})} 2\pi i \begin{cases} -\Res{f(E_p)}&\quad t_x-t_y \gt 0, &  C_{+,{\color{Red}\circlearrowright }}: \imag{p_0} \lt 0\\  \Res{f(-E_p)} &\quad  t_x-t_y \lt 0, &  C_{-,{\color{Red} \circlearrowleft} } :  \imag{p_0} \gt 0\end{cases} \\
-> &=2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\begin{cases}- \frac{1}{2E_p}e^{iE_p(t_x-t_y)}&\quad t_x-t_y \gt 0 \\  - \frac{1}{2E_p}e^{-iE_p(t_x-t_y)}&\quad  t_x-t_y \lt 0\end{cases} \\
-> &= 2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}(-1)\begin{cases}\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}, & C_+\\ \frac{1}{2E_p} e^{iE_p(t_x-t_y)}, & C_-\end{cases}
+> &\quad \oint _ {C _ \pm}  f(p _ 0)  \d p _ 0 \\
+> &=e^{i\vec{p}\cdot(\vec{x}-\vec{y})}\oint _ {C _ \pm} \d p _ 0 \left(\frac{-\frac{1}{2E _ p}e^{-ip _ 0(t _ x-t _ y)}}{p _ 0-E _ p}+\frac{\frac{1}{2E _ p}e^{-ip _ 0(t _ x-t _ y)}}{p _ 0+E _ p}\right) \\
+> &= e^{-i\vec{p}\cdot(\vec{x}-\vec{y})} 2\pi i \begin{cases} -\Res{f(E _ p)}&\quad t _ x-t _ y \gt 0, &  C _ {+,{\color{Red}\circlearrowright }}: \imag{p _ 0} \lt 0\\  \Res{f(-E _ p)} &\quad  t _ x-t _ y \lt 0, &  C _ {-,{\color{Red} \circlearrowleft} } :  \imag{p _ 0} \gt 0\end{cases} \\
+> &=2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}\begin{cases}- \frac{1}{2E _ p}e^{iE _ p(t _ x-t _ y)}&\quad t _ x-t _ y \gt 0 \\  - \frac{1}{2E _ p}e^{-iE _ p(t _ x-t _ y)}&\quad  t _ x-t _ y \lt 0\end{cases} \\
+> &= 2i\pi e^{-i\vec{p}\cdot(\vec{x}-\vec{y})}(-1)\begin{cases}\frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)}, & C _ +\\ \frac{1}{2E _ p} e^{iE _ p(t _ x-t _ y)}, & C _ -\end{cases}
 > \end{align*}
 > $$
 >
@@ -470,12 +470,12 @@ $$
 > 
 > $$
 > \begin{align}
-> &\phantom{=} \Theta(t_x-t_y)\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}+\Theta(t_y-t_x)\frac{1}{2E_p} e^{iE_p(t_x-t_y)}\notag\\
-> &=\Theta(t_x-t_y)\frac{1}{-2\pi i} \oint_{C_+}  f(p_0)  \d p_0 +\Theta(t_y-t_x) \frac{1}{-2\pi i}\oint_{C_-}  f(p_0)  \d p_0 \notag\\
-> &=\frac{1}{-2\pi i}\left(\Theta(t_x-t_y)\oint_{C_0+C_{l}}  f(p_0)  \d p_0+\Theta(t_y-t_x)\oint_{C_0+C_{u}}  f(p_0)  \d p_0\right) \notag\\
-> &=\frac{1}{-2\pi i}\left(\Theta(t_x-t_y)+\Theta(t_y-t_x)\right)\oint_{C_0}  f(p_0)  \d p_0 +\frac{1}{-2\pi i}\Theta(t_x-t_y)\oint_{C_{l}}  f(p_0)  \d p_0\notag \\
-> &\qquad +\frac{1}{-2\pi i}\Theta(t_y-t_x)\oint_{C_{u}}  f(p_0)  \d p_0 \notag\\
-> \xrightarrow[\oint_{C_{l,u}}  f(p_0)  \d p_0\rightarrow 0]{R\rightarrow\infty, }&=\frac{1}{-2\pi i}\oint_{C_0}  f(p_0)  \d p_0
+> &\phantom{=} \Theta(t _ x-t _ y)\frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)}+\Theta(t _ y-t _ x)\frac{1}{2E _ p} e^{iE _ p(t _ x-t _ y)}\notag\\
+> &=\Theta(t _ x-t _ y)\frac{1}{-2\pi i} \oint _ {C _ +}  f(p _ 0)  \d p _ 0 +\Theta(t _ y-t _ x) \frac{1}{-2\pi i}\oint _ {C _ -}  f(p _ 0)  \d p _ 0 \notag\\
+> &=\frac{1}{-2\pi i}\left(\Theta(t _ x-t _ y)\oint _ {C _ 0+C _ {l}}  f(p _ 0)  \d p _ 0+\Theta(t _ y-t _ x)\oint _ {C _ 0+C _ {u}}  f(p _ 0)  \d p _ 0\right) \notag\\
+> &=\frac{1}{-2\pi i}\left(\Theta(t _ x-t _ y)+\Theta(t _ y-t _ x)\right)\oint _ {C _ 0}  f(p _ 0)  \d p _ 0 +\frac{1}{-2\pi i}\Theta(t _ x-t _ y)\oint _ {C _ {l}}  f(p _ 0)  \d p _ 0\notag \\
+> &\qquad +\frac{1}{-2\pi i}\Theta(t _ y-t _ x)\oint _ {C _ {u}}  f(p _ 0)  \d p _ 0 \notag\\
+> \xrightarrow[\oint _ {C _ {l,u}}  f(p _ 0)  \d p _ 0\rightarrow 0]{R\rightarrow\infty, }&=\frac{1}{-2\pi i}\oint _ {C _ 0}  f(p _ 0)  \d p _ 0
 >  \label{residualFeynman}
 >  \end{align}
 > $$
@@ -485,11 +485,11 @@ $$
 
 $$
 \begin{align}
-D_F(x-y)
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \left(\Theta(t_x-t_y)\frac{1}{2E_p} e^{-iE_p(t_x-t_y)}+\Theta(t_y-t_x)\frac{1}{2E_p} e^{iE_p(t_x-t_y)}\right)\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32}\frac{1}{-2\pi i} \oint_{C_0} \d p_0\frac{1}{p^2-m^2}e^{-ip(x-y)}\notag\\
-&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32}\frac{1}{2\pi } \oint_{C_0} \d p_0\frac{i}{p^2-m^2}e^{-ip(x-y)}\notag\\
-&=\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi } \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
+D _ F(x-y)
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32} e^{i\vec{p}\cdot(\vec{x}-\vec{y})} \left(\Theta(t _ x-t _ y)\frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)}+\Theta(t _ y-t _ x)\frac{1}{2E _ p} e^{iE _ p(t _ x-t _ y)}\right)\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32}\frac{1}{-2\pi i} \oint _ {C _ 0} \d p _ 0\frac{1}{p^2-m^2}e^{-ip(x-y)}\notag\\
+&=\int \frac{\d^3 \vec{p}}{(2\pi)^\frac32}\frac{1}{2\pi } \oint _ {C _ 0} \d p _ 0\frac{i}{p^2-m^2}e^{-ip(x-y)}\notag\\
+&=\oint _ {C _ 0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi } \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
 \end{align}
 $$
 
@@ -497,7 +497,7 @@ $$
 
 $$
 \begin{align}
-D_F(x-y)&\equiv\lim_{\varepsilon\rightarrow0}{\int\frac{\d^4 p}{2\pi)^4} \frac{i}{p^2-m^2+i\varepsilon}e^{-ip(x-y)}}\\
+D _ F(x-y)&\equiv\lim _ {\varepsilon\rightarrow0}{\int\frac{\d^4 p}{2\pi)^4} \frac{i}{p^2-m^2+i\varepsilon}e^{-ip(x-y)}}\\
 \end{align}
 $$
 
@@ -507,11 +507,11 @@ $$
 
 $$
 \begin{align*}
-&\phantom{=}\left(\partial_\mu\partial^\mu+m^2\right)D_F(x-y)\\
-&=\left(\partial_\mu\partial^\mu+m^2\right)\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi } \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
-&=\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi }\frac{i}{p^2-m^2} \left(\partial_\mu\partial^\mu+m^2\right)e^{-ip(x-y)}\\
-&=\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi }\frac{i}{p^2-m^2}  \left(-p^2+m^2\right)e^{-ip(x-y)}\\
-&=\oint_{C_0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{-i}{2\pi }e^{-ip(x-y)}\\
+&\phantom{=}\left(\partial _ \mu\partial^\mu+m^2\right)D _ F(x-y)\\
+&=\left(\partial _ \mu\partial^\mu+m^2\right)\oint _ {C _ 0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi } \frac{i}{p^2-m^2}e^{-ip(x-y)}\\
+&=\oint _ {C _ 0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi }\frac{i}{p^2-m^2} \left(\partial _ \mu\partial^\mu+m^2\right)e^{-ip(x-y)}\\
+&=\oint _ {C _ 0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{1}{2\pi }\frac{i}{p^2-m^2}  \left(-p^2+m^2\right)e^{-ip(x-y)}\\
+&=\oint _ {C _ 0}\frac{\d^4 p}{(2\pi)^\frac32}\frac{-i}{2\pi }e^{-ip(x-y)}\\
 &=\frac{-i}{2\pi }\delta(x-y)
 \end{align*}
 $$
@@ -552,7 +552,7 @@ $$
 可以写为
 
 $$
-(i\gamma^\mu \partial_\mu-m)\psi(x)=0
+(i\gamma^\mu \partial _ \mu-m)\psi(x)=0
 $$
 
 ### 方程的解
@@ -561,8 +561,8 @@ $$
 
 $$
 \begin{align}
-(p^\mu\gamma_\mu-m)u(\vec p ) &= 0\\
-(p^\mu\gamma_\mu+m)v(\vec p ) &= 0
+(p^\mu\gamma _ \mu-m)u(\vec p ) &= 0\\
+(p^\mu\gamma _ \mu+m)v(\vec p ) &= 0
 \end{align}
 $$
 
@@ -613,13 +613,13 @@ C-->D[Feynman图]
 相互作用的哈密顿量的一般形式是
 
 $$
-\mathcal{L}=\frac 12 (\partial \phi)^2-V_0(\phi)
+\mathcal{L}=\frac 12 (\partial \phi)^2-V _ 0(\phi)
 $$
 
 之前研究的都是自由粒子, 势场满足
 
 $$
-V_0(\phi)=\frac12 {m_0}^2\phi^2
+V _ 0(\phi)=\frac12 {m _ 0}^2\phi^2
 $$
 
 这样的势场是有解析解的. 不同的动量(振动模式)之间没有耦合.
@@ -631,7 +631,7 @@ $$
 因此势场可以表示成
 
 $$
-V(\phi) =\underbrace{\frac 12 {m_0}^2\phi^2}_{V_0}+\underbrace{\frac{1}{3!}g\phi^3+\frac{1}{4!}\lambda\phi^4+\cdots }_{V_{interaction}}
+V(\phi) =\underbrace{\frac 12 {m _ 0}^2\phi^2} _ {V _ 0}+\underbrace{\frac{1}{3!}g\phi^3+\frac{1}{4!}\lambda\phi^4+\cdots } _ {V _ {interaction}}
 $$
 
 高阶项[^first book]的系数量纲为质量的倒数, 会有问题, 目前不考虑.
@@ -639,14 +639,14 @@ $$
 得到描述相互作用的拉格朗日量
 
 $$
-\mathcal{L}=\mathcal{L}_0+\mathcal{L}_{int}\\
-\mathcal{L}_{int}=-V_{int}
+\mathcal{L}=\mathcal{L} _ 0+\mathcal{L} _ {int}\\
+\mathcal{L} _ {int}=-V _ {int}
 $$
 
 此时K-G方程的解
 
 $$
-(\partial^2+m^2)\phi =V_{int}\neq 0
+(\partial^2+m^2)\phi =V _ {int}\neq 0
 $$
 
 因此$\phi\ket{\Omega}$与$\phi\ket{0}$不同, 不再是产生一个新的粒子. 从这一角度也可以说明为何要用$\ket{\Omega}$ 标记基态.
@@ -656,114 +656,114 @@ $$
 引入相互作用绘景
 
 $$
-H_I=\underbrace{\underbrace{H_0}_\text{Hisenburg Picture}+\underbrace{H_{int}}_\text{Schrodinger  Picture}}_\text{Interaction Picture}
+H _ I=\underbrace{\underbrace{H _ 0} _ \text{Hisenburg Picture}+\underbrace{H _ {int}} _ \text{Schrodinger  Picture}} _ \text{Interaction Picture}
 $$
 
 即
 
 $$
 \begin{align}
-\ket{\psi}_I&=e^{iH_0t}\ket{\psi}_S   && \text{S for Schrodinger}\\
-\hat{O}_I&=e^{iH_0t}\hat{O}_H e^{-iH_0t}  &&\text{H for Hisenburg}\\
+\ket{\psi} _ I&=e^{iH _ 0t}\ket{\psi} _ S   && \text{S for Schrodinger}\\
+\hat{O} _ I&=e^{iH _ 0t}\hat{O} _ H e^{-iH _ 0t}  &&\text{H for Hisenburg}\\
 \end{align}
 $$
 
 因此薛定谔方程
 
 $$
-i \D{t}\ket{\psi(t)}_S=H\ket{\psi(t)}_S
+i \D{t}\ket{\psi(t)} _ S=H\ket{\psi(t)} _ S
 $$
 
 可以化简得到
 
 $$
 \begin{align}
-i \D{t}\left( e^{-iH_0t}\ket{\psi(t)}_I\right)&=\left(H_0+H_{int}\right)e^{-iH_0t}\ket{\psi(t)}_I\notag\\
-H_0 e^{-iH_0t}\ket{\psi(t)}_I+e^{-iH_0t}\D{t} \ket{\psi(t)}_I&=H_0 e^{-iH_0t}\ket{\psi(t)}_I+H_{int} e^{-iH_0t}\ket{\psi(t)}_I\notag\\
-e^{-iH_0t}\D{t} \ket{\psi(t)}_I&=H_{int} e^{-iH_0t}\ket{\psi(t)}_I\notag\\
-\D{t} \ket{\psi(t)}_I&=e^{iH_0t}H_{int} e^{-iH_0t}\ket{\psi(t)}_I\notag\\
-\D{t} \ket{\psi(t)}_I&={(H_{int})}_I(t)\ket{\psi(t)}_I
+i \D{t}\left( e^{-iH _ 0t}\ket{\psi(t)} _ I\right)&=\left(H _ 0+H _ {int}\right)e^{-iH _ 0t}\ket{\psi(t)} _ I\notag\\
+H _ 0 e^{-iH _ 0t}\ket{\psi(t)} _ I+e^{-iH _ 0t}\D{t} \ket{\psi(t)} _ I&=H _ 0 e^{-iH _ 0t}\ket{\psi(t)} _ I+H _ {int} e^{-iH _ 0t}\ket{\psi(t)} _ I\notag\\
+e^{-iH _ 0t}\D{t} \ket{\psi(t)} _ I&=H _ {int} e^{-iH _ 0t}\ket{\psi(t)} _ I\notag\\
+\D{t} \ket{\psi(t)} _ I&=e^{iH _ 0t}H _ {int} e^{-iH _ 0t}\ket{\psi(t)} _ I\notag\\
+\D{t} \ket{\psi(t)} _ I&={(H _ {int})} _ I(t)\ket{\psi(t)} _ I
 \label{simplifedSchrodingerEqn}
 \\
 \end{align}
 $$
 
-引入含时演化算符$U(t,t_0)$
+引入含时演化算符$U(t,t _ 0)$
 
 $$
-\ket{\psi(t)}_I=U(t,t_0)\ket{\psi(t_0)}_I
+\ket{\psi(t)} _ I=U(t,t _ 0)\ket{\psi(t _ 0)} _ I
 \label{defU}
 $$
 
 带入$\Eqn{simplifedSchrodingerEqn}$得到
 
 $$
-i\D{t}U(t,t_0)=H_I(t)U(t,t_0) 
+i\D{t}U(t,t _ 0)=H _ I(t)U(t,t _ 0) 
 \label{diffEqnforU}
 $$
 
 有边界条件的微分方程式$\Eqn{diffEqnforU}$可以表达为
 
 $$
-U(t,t_0)=U(t_0,t_0)-i\int_{t_0}^{t}H_I(\tau_1)U(\tau_1,t_0)\d \tau_1
+U(t,t _ 0)=U(t _ 0,t _ 0)-i\int _ {t _ 0}^{t}H _ I(\tau _ 1)U(\tau _ 1,t _ 0)\d \tau _ 1
 \label{intEqnforU}
 $$
 
-写出$\Eqn{intEqnforU}$的迭代形式, 初始值选取为$U(t_0,t_0)=\idmat$
+写出$\Eqn{intEqnforU}$的迭代形式, 初始值选取为$U(t _ 0,t _ 0)=\idmat$
 
 $$
 \begin{align*}
-U^{(1)}(t,t_0)&=\idmat-i\int_{t_0}^{t}H_I(\tau_1)\underbrace{U^{(0)}(\tau_1,t_0)}_{=\idmat}\d \tau_1\\
-U^{(2)}(t,t_0)&=\idmat-i\int_{t_0}^{t}H_I(\tau_2)U^{(1)}(\tau_2,t_0)\d \tau_2\\
-&= \idmat-i\int_{t_0}^{t}H_I(\tau_2) \left(\idmat -i\int_{t_0}^{\tau_2}H_I(\tau_1)\underbrace{U^{(0)}(\tau_1,t_0)}_{=\idmat}\d \tau_1\right) \d\tau_2\\
-&=\idmat + (-i)\int_{t_0}^{t}H_I(\tau_2)\d \tau_2 + (-i)^2 \int_{t_0}^{t} \d \tau_2 \int_{t_0}^{\tau_2} \d \tau_1 H_I(\tau_2) H_I(\tau_1)\\
-&=\idmat + (-i)\int_{t_0}^{t}H_I(\tau_1)\d \tau_1 + (-i)^2 \int_{t_0}^{t} \d \tau_1 \int_{t_0}^{\tau_1} \d \tau_2 H_I(\tau_1) H_I(\tau_2) \qquad \rm{interchange\ \tau_1\ and\ \tau_2}\\
+U^{(1)}(t,t _ 0)&=\idmat-i\int _ {t _ 0}^{t}H _ I(\tau _ 1)\underbrace{U^{(0)}(\tau _ 1,t _ 0)} _ {=\idmat}\d \tau _ 1\\
+U^{(2)}(t,t _ 0)&=\idmat-i\int _ {t _ 0}^{t}H _ I(\tau _ 2)U^{(1)}(\tau _ 2,t _ 0)\d \tau _ 2\\
+&= \idmat-i\int _ {t _ 0}^{t}H _ I(\tau _ 2) \left(\idmat -i\int _ {t _ 0}^{\tau _ 2}H _ I(\tau _ 1)\underbrace{U^{(0)}(\tau _ 1,t _ 0)} _ {=\idmat}\d \tau _ 1\right) \d\tau _ 2\\
+&=\idmat + (-i)\int _ {t _ 0}^{t}H _ I(\tau _ 2)\d \tau _ 2 + (-i)^2 \int _ {t _ 0}^{t} \d \tau _ 2 \int _ {t _ 0}^{\tau _ 2} \d \tau _ 1 H _ I(\tau _ 2) H _ I(\tau _ 1)\\
+&=\idmat + (-i)\int _ {t _ 0}^{t}H _ I(\tau _ 1)\d \tau _ 1 + (-i)^2 \int _ {t _ 0}^{t} \d \tau _ 1 \int _ {t _ 0}^{\tau _ 1} \d \tau _ 2 H _ I(\tau _ 1) H _ I(\tau _ 2) \qquad \rm{interchange\ \tau _ 1\ and\ \tau _ 2}\\
 & \phantom{=}\vdots \\
-U^{(\infty)}(t,t_0)&=\idmat+\sum_{n=1}^{\infty}\left((-i)^n\int_{t_0}^{t} \d \tau_1\int_{t_0}^{\tau_1} \d \tau_2 \cdots  \int_{t_0}^{\tau_n} \d \tau_n H_I(\tau_1) H_I(\tau_2) \cdots H_I(\tau_n)\right)\\
+U^{(\infty)}(t,t _ 0)&=\idmat+\sum _ {n=1}^{\infty}\left((-i)^n\int _ {t _ 0}^{t} \d \tau _ 1\int _ {t _ 0}^{\tau _ 1} \d \tau _ 2 \cdots  \int _ {t _ 0}^{\tau _ n} \d \tau _ n H _ I(\tau _ 1) H _ I(\tau _ 2) \cdots H _ I(\tau _ n)\right)\\
 \end{align*}
 $$
 
 注意到, 由定义, 不同时间的哈密顿量对易
 
 $$
-H_I(x)H_I(y)=e^{iH_0x}H_{int}e^{-iH_0x}e^{iH_0y}H_{int}e^{-iH_0y}=e^{iH_0y}H_{int}e^{-iH_0y}e^{iH_0x}H_{int}e^{-iH_0x}=H_I(y)H_I(x)
+H _ I(x)H _ I(y)=e^{iH _ 0x}H _ {int}e^{-iH _ 0x}e^{iH _ 0y}H _ {int}e^{-iH _ 0y}=e^{iH _ 0y}H _ {int}e^{-iH _ 0y}e^{iH _ 0x}H _ {int}e^{-iH _ 0x}=H _ I(y)H _ I(x)
 $$
 
 因此定义
 
 $$
-U(t,t_0)\equiv U^{(\infty)}(t,t_0)=\idmat+\sum_{n=1}^{\infty}\left((-i)^n\int_{t_0}^{t} \d \tau_1\int_{t_0}^{\tau_1} \d \tau_2 \cdots  \int_{t_0}^{\tau_n} \d \tau_n H_I(\tau_1) H_I(\tau_2) \cdots H_I(\tau_n)\right)\\
+U(t,t _ 0)\equiv U^{(\infty)}(t,t _ 0)=\idmat+\sum _ {n=1}^{\infty}\left((-i)^n\int _ {t _ 0}^{t} \d \tau _ 1\int _ {t _ 0}^{\tau _ 1} \d \tau _ 2 \cdots  \int _ {t _ 0}^{\tau _ n} \d \tau _ n H _ I(\tau _ 1) H _ I(\tau _ 2) \cdots H _ I(\tau _ n)\right)\\
 \label{UnonTorder}
 $$
 
 利用编时算符, 可以将式$\Eqn{UnonTorder}$进一步化简.
 
-> 注意到对于$n=2$情形, $H(-t)=e^{iH_0t}He^{-iH_0t}=(e^{iH_0t}H^\dagger e^{-iH_0t})^\dagger=e^{-iH_0t}He^{iH_0t}=H(t)$
+> 注意到对于$n=2$情形, $H(-t)=e^{iH _ 0t}He^{-iH _ 0t}=(e^{iH _ 0t}H^\dagger e^{-iH _ 0t})^\dagger=e^{-iH _ 0t}He^{iH _ 0t}=H(t)$
 > 
 > $$
 > \begin{align*}
-> \int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0} \d \tau_2 H_I(\tau_1) H_I(\tau_2)
-> &=\int_{t_0}^{t} \d \tau_2\int^{\tau_2}_{t_0} -\d \tau_1 H_I(\tau_2) H_I(-\tau_1) 
-> 	&  \tau_1\rightarrow \tau_2 , \ \tau_2\rightarrow -\tau_1 \\
-> &=\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2} \d \tau_1  H_I(\tau_2)H_I(\tau_1) \\
+> \int _ {t _ 0}^{t} \d \tau _ 1\int^{\tau _ 1} _ {t _ 0} \d \tau _ 2 H _ I(\tau _ 1) H _ I(\tau _ 2)
+> &=\int _ {t _ 0}^{t} \d \tau _ 2\int^{\tau _ 2} _ {t _ 0} -\d \tau _ 1 H _ I(\tau _ 2) H _ I(-\tau _ 1) 
+> 	&  \tau _ 1\rightarrow \tau _ 2 , \ \tau _ 2\rightarrow -\tau _ 1 \\
+> &=\int _ {t _ 0}^{t} \d \tau _ 2\int _ {t _ 0}^{\tau _ 2} \d \tau _ 1  H _ I(\tau _ 2)H _ I(\tau _ 1) \\
 > \end{align*}
 > $$
 > 
 > 利用编时算符:
 >
 > $$
-> \Torder{H_I(\tau_2)H_I(\tau_1)}=\begin{cases}H_I(\tau_2)H_I(\tau_1),\quad t_x\gt t_y\\H_I(\tau_1)H_I(\tau_2) ,\quad t_x\lt t_y \end{cases}
+> \Torder{H _ I(\tau _ 2)H _ I(\tau _ 1)}=\begin{cases}H _ I(\tau _ 2)H _ I(\tau _ 1),\quad t _ x\gt t _ y\\H _ I(\tau _ 1)H _ I(\tau _ 2) ,\quad t _ x\lt t _ y \end{cases}
 > $$
 > 
 > 可以将上式写成
 > 
 > $$
 > \begin{align*}
-> \underbrace{\int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0}}_{t_0\lt\tau_2\lt \tau_1\lt t} \d \tau_2 H_I(\tau_1) H_I(\tau_2)
-> &=\underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2}}_{t_0\lt\tau_1\lt \tau_2\lt t} \d \tau_1  H_I(\tau_2)H_I(\tau_1)
+> \underbrace{\int _ {t _ 0}^{t} \d \tau _ 1\int^{\tau _ 1} _ {t _ 0}} _ {t _ 0\lt\tau _ 2\lt \tau _ 1\lt t} \d \tau _ 2 H _ I(\tau _ 1) H _ I(\tau _ 2)
+> &=\underbrace{\int _ {t _ 0}^{t} \d \tau _ 2\int _ {t _ 0}^{\tau _ 2}} _ {t _ 0\lt\tau _ 1\lt \tau _ 2\lt t} \d \tau _ 1  H _ I(\tau _ 2)H _ I(\tau _ 1)
 > \\
-> \underbrace{\int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0} \d \tau_2 \underbrace{\Torder{H_I(\tau_1) H_I(\tau_2)}}_{t_0\lt\tau_2\lt \tau_1\lt t} }_\text {upper triangle}
-> &=\underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2} \d \tau_1   \underbrace{\Torder{H_I(\tau_1)H_I(\tau_2)}}_{t_0\lt\tau_1\lt \tau_2\lt t} }_\text{lower triangle}
+> \underbrace{\int _ {t _ 0}^{t} \d \tau _ 1\int^{\tau _ 1} _ {t _ 0} \d \tau _ 2 \underbrace{\Torder{H _ I(\tau _ 1) H _ I(\tau _ 2)}} _ {t _ 0\lt\tau _ 2\lt \tau _ 1\lt t} } _ \text {upper triangle}
+> &=\underbrace{\int _ {t _ 0}^{t} \d \tau _ 2\int _ {t _ 0}^{\tau _ 2} \d \tau _ 1   \underbrace{\Torder{H _ I(\tau _ 1)H _ I(\tau _ 2)}} _ {t _ 0\lt\tau _ 1\lt \tau _ 2\lt t} } _ \text{lower triangle}
 > \end{align*}
 > $$
 > 
@@ -773,10 +773,10 @@ $$
 > 
 > $$
 > \begin{align*}
-> \underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{t} \d \tau_1 \Torder{H_I(\tau_1)H_I(\tau_2)}}_\text{entire square}
-> &=2\underbrace{\int_{t_0}^{t} \d \tau_2\int_{t_0}^{\tau_2} \d \tau_1 \underbrace{\Torder{H_I(\tau_1)H_I(\tau_2)}}_{t_0\lt\tau_1\lt \tau_2\lt t} }_\text{lower triangle, top-bottom}
+> \underbrace{\int _ {t _ 0}^{t} \d \tau _ 2\int _ {t _ 0}^{t} \d \tau _ 1 \Torder{H _ I(\tau _ 1)H _ I(\tau _ 2)}} _ \text{entire square}
+> &=2\underbrace{\int _ {t _ 0}^{t} \d \tau _ 2\int _ {t _ 0}^{\tau _ 2} \d \tau _ 1 \underbrace{\Torder{H _ I(\tau _ 1)H _ I(\tau _ 2)}} _ {t _ 0\lt\tau _ 1\lt \tau _ 2\lt t} } _ \text{lower triangle, top-bottom}
 > \\
-> &=\underbrace{2\int_{t_0}^{t} \d \tau_1\int^{\tau_1}_{t_0} \d \tau_2 H_I(\tau_1) H_I(\tau_2)}_\text{lower triangle, left-right}
+> &=\underbrace{2\int _ {t _ 0}^{t} \d \tau _ 1\int^{\tau _ 1} _ {t _ 0} \d \tau _ 2 H _ I(\tau _ 1) H _ I(\tau _ 2)} _ \text{lower triangle, left-right}
 > \end{align*}
 > $$
 >
@@ -784,12 +784,12 @@ $$
 > 
 > $$
 > \begin{align}
-> &\quad(-i)^n\int_{t_0}^{t} \d \tau_1\int_{t_0}^{\tau_1} \d \tau_2 \cdots  \int_{t_0}^{\tau_n} \d \tau_n H_I(\tau_1) H_I(\tau_2)\cdots  H_I(\tau_n)\notag\\
-> & =\frac{(-i)^n}{n!}\int_{t_0}^{t} \d \tau_1\int_{t_0}^{t} \d \tau_2 \cdots  \int_{t_0}^{t} \d \tau_n \Torder{H_I(\tau_1) H_I(\tau_2)\cdots  H_I(\tau_n)}\notag\\
-> &= \frac{(-i)^n}{n!}\int_{t_0}^{t} \d \tau_1\int_{t_0}^{t} \d \tau_2 \cdots  \int_{t_0}^{t} \d \tau_n \Torder{H_I(\tau_1) H_I(\tau_2)\cdots  H_I(\tau_n)}\notag\\
-> &= \frac{(-i)^n}{n!}\Torder{\int_{t_0}^{t} \d \tau_1\int_{t_0}^{t} \d \tau_2 \cdots  \int_{t_0}^{t} \d \tau_nH_I(\tau_1) H_I(\tau_2)\cdots  H_I(\tau_n)}\notag\\
-> &= \frac{(-i)^n}{n!}\Torder{\left(\int_{t_0}^{t} \d \tau_1H_I(\tau_1) \right)\left(\int_{t_0}^{t} \d \tau_2  H_I(\tau_2)\right)\cdots \left( \int_{t_0}^{t} \d \tau_n H_I(\tau_n)\right)}\notag\\
-> &=\Torder{\frac{(-i)^n}{n!}\left(\int_{t_0}^{t} \d \tau H_I(\tau) \right)^n}
+> &\quad(-i)^n\int _ {t _ 0}^{t} \d \tau _ 1\int _ {t _ 0}^{\tau _ 1} \d \tau _ 2 \cdots  \int _ {t _ 0}^{\tau _ n} \d \tau _ n H _ I(\tau _ 1) H _ I(\tau _ 2)\cdots  H _ I(\tau _ n)\notag\\
+> & =\frac{(-i)^n}{n!}\int _ {t _ 0}^{t} \d \tau _ 1\int _ {t _ 0}^{t} \d \tau _ 2 \cdots  \int _ {t _ 0}^{t} \d \tau _ n \Torder{H _ I(\tau _ 1) H _ I(\tau _ 2)\cdots  H _ I(\tau _ n)}\notag\\
+> &= \frac{(-i)^n}{n!}\int _ {t _ 0}^{t} \d \tau _ 1\int _ {t _ 0}^{t} \d \tau _ 2 \cdots  \int _ {t _ 0}^{t} \d \tau _ n \Torder{H _ I(\tau _ 1) H _ I(\tau _ 2)\cdots  H _ I(\tau _ n)}\notag\\
+> &= \frac{(-i)^n}{n!}\Torder{\int _ {t _ 0}^{t} \d \tau _ 1\int _ {t _ 0}^{t} \d \tau _ 2 \cdots  \int _ {t _ 0}^{t} \d \tau _ nH _ I(\tau _ 1) H _ I(\tau _ 2)\cdots  H _ I(\tau _ n)}\notag\\
+> &= \frac{(-i)^n}{n!}\Torder{\left(\int _ {t _ 0}^{t} \d \tau _ 1H _ I(\tau _ 1) \right)\left(\int _ {t _ 0}^{t} \d \tau _ 2  H _ I(\tau _ 2)\right)\cdots \left( \int _ {t _ 0}^{t} \d \tau _ n H _ I(\tau _ n)\right)}\notag\\
+> &=\Torder{\frac{(-i)^n}{n!}\left(\int _ {t _ 0}^{t} \d \tau H _ I(\tau) \right)^n}
 > \label{TorderProdH}
 > \end{align}
 > $$
@@ -799,10 +799,10 @@ $$
 
 $$
 \begin{align*}
-U(t,t_0)&=\idmat+\sum_{n=1}^{\infty}\left((-i)^n\int_{t_0}^{t} \d \tau_1\int_{t_0}^{\tau_1} \d \tau_2 \cdots  \int_{t_0}^{\tau_n} \d \tau_n H_I(\tau_1) H_I(\tau_2) \cdots H_I(\tau_n)\right)\\
-&=\idmat + \sum_{n=1}^{\infty}\left(\Torder{\frac{(-i)^n}{n!}\left(\int_{t_0}^{t} \d \tau H_I(\tau) \right)^n}\right)\\
-&=\Torder{\idmat + \sum_{n=1}^{\infty}\left(\frac{(-i)^n}{n!}\left(\int_{t_0}^{t} \d \tau H_I(\tau) \right)^n\right)}\\
-&=\Torder{\expp{-i\int_{t_0}^{t} \d \tau H_I(\tau) }}\\
+U(t,t _ 0)&=\idmat+\sum _ {n=1}^{\infty}\left((-i)^n\int _ {t _ 0}^{t} \d \tau _ 1\int _ {t _ 0}^{\tau _ 1} \d \tau _ 2 \cdots  \int _ {t _ 0}^{\tau _ n} \d \tau _ n H _ I(\tau _ 1) H _ I(\tau _ 2) \cdots H _ I(\tau _ n)\right)\\
+&=\idmat + \sum _ {n=1}^{\infty}\left(\Torder{\frac{(-i)^n}{n!}\left(\int _ {t _ 0}^{t} \d \tau H _ I(\tau) \right)^n}\right)\\
+&=\Torder{\idmat + \sum _ {n=1}^{\infty}\left(\frac{(-i)^n}{n!}\left(\int _ {t _ 0}^{t} \d \tau H _ I(\tau) \right)^n\right)}\\
+&=\Torder{\expp{-i\int _ {t _ 0}^{t} \d \tau H _ I(\tau) }}\\
 \end{align*}
 $$
 
@@ -811,10 +811,10 @@ $$
 注意$\Eqn{defU}$中, 
 
 $$
-\ket{\psi(t)}_I=U(t,t_0)\ket{\psi(t_0)}_I \notag
+\ket{\psi(t)} _ I=U(t,t _ 0)\ket{\psi(t _ 0)} _ I \notag
 $$
 
-如果取$t_0\rightarrow -\infty$, $t\rightarrow \infty$, 则有
+如果取$t _ 0\rightarrow -\infty$, $t\rightarrow \infty$, 则有
 
 $$
 \ket{\psi(\infty)}=U(\infty,-\infty)\ket{\psi(-\infty)}
@@ -823,14 +823,14 @@ $$
 注意到上式两边分别是初始和结束的波函数, 分别定义为$\ket{i}$, $\ket{f}$, 再定义S(scattering)矩阵:
 
 $$
-S=U(\infty,-\infty)=\Torder{\expp{-i\int_{-\infty}^{\infty} \d \tau H_I(\tau) }}\\
+S=U(\infty,-\infty)=\Torder{\expp{-i\int _ {-\infty}^{\infty} \d \tau H _ I(\tau) }}\\
 $$
 
 将哈密顿量写成哈密顿量密度, 将S矩阵写成
 
 $$
-S=\Torder{\expp{-i\int_{-\infty}^{\infty} \d \tau \int \d^3 \vec{x} \mathcal{H}_I(\vec{x},\tau) }}
-=\Torder{\expp{-i\int_{-\infty}^{\infty} \d^4 x \mathcal{H}_I(x) }}
+S=\Torder{\expp{-i\int _ {-\infty}^{\infty} \d \tau \int \d^3 \vec{x} \mathcal{H} _ I(\vec{x},\tau) }}
+=\Torder{\expp{-i\int _ {-\infty}^{\infty} \d^4 x \mathcal{H} _ I(x) }}
 $$
 
 ### Wick 定理
@@ -844,43 +844,43 @@ $S$矩阵含有编时乘积, 但哈密顿量密度是Normal Order的. 将编时�
 先考虑两个标量场的乘积:
 
 $$
-\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}=\Theta(t_x-t_y) \bra{0}\phi(x)\phi(y)\ket{0} + \Theta(t_y-t_x) \bra{0}\phi(y)\phi(x)\ket{0}
+\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}=\Theta(t _ x-t _ y) \bra{0}\phi(x)\phi(y)\ket{0} + \Theta(t _ y-t _ x) \bra{0}\phi(y)\phi(x)\ket{0}
 $$
 
 把$\phi(x)$和$\phi(y)$表示成湮灭算符和产生算符的部分.
 
 $$
 \begin{align}
-&\phi(x)=\phi_+(x)+\phi_-(x)\\
-&\phi_+(x)\ket{0}=0\\
-&\bra{0}\phi_-(x)=0
+&\phi(x)=\phi _ +(x)+\phi _ -(x)\\
+&\phi _ +(x)\ket{0}=0\\
+&\bra{0}\phi _ -(x)=0
 \end{align}
 $$
 
 得到
 
 $$
-\bra{0}\phi(x)\phi(y)\ket{0} = \bra{0}\phi_+(x)\phi_+(y) + \phi_+(x) \phi_-(y)+ \phi_-(x)\phi_+(y) + \phi_-(x)\phi_-(y)\ket{0}
+\bra{0}\phi(x)\phi(y)\ket{0} = \bra{0}\phi _ +(x)\phi _ +(y) + \phi _ +(x) \phi _ -(y)+ \phi _ -(x)\phi _ +(y) + \phi _ -(x)\phi _ -(y)\ket{0}
 $$
 
 Normal Order之后得到
 
 $$
 \begin{align*}
-\Norder{\phi(x)\phi(y)} &= \phi_+(x)\phi_+(y) + \phi_-(x)\phi_+(y)+ \phi_-(x)\phi_+(y) + \phi_-(x)\phi_-(y)\\
-&= \phi_+(x)\phi_+(y) + {\color{Red}\phi_+(x)\phi_-(y)}+ \phi_-(x)\phi_+(y) + \phi_-(x)\phi_-(y) + {\color{Green}\phi_-(x)\phi_+(y)} - {\color{Red}\phi_+(x)\phi_-(y)}\\
-&=\phi(x)\phi(y) + \phi_-(x)\phi_+(y)-\phi_+(x)\phi_-(y)\\
-&=\phi(x)\phi(y) +\Pbracket{\phi_-(x)}{\phi_+(y)}
+\Norder{\phi(x)\phi(y)} &= \phi _ +(x)\phi _ +(y) + \phi _ -(x)\phi _ +(y)+ \phi _ -(x)\phi _ +(y) + \phi _ -(x)\phi _ -(y)\\
+&= \phi _ +(x)\phi _ +(y) + {\color{Red}\phi _ +(x)\phi _ -(y)}+ \phi _ -(x)\phi _ +(y) + \phi _ -(x)\phi _ -(y) + {\color{Green}\phi _ -(x)\phi _ +(y)} - {\color{Red}\phi _ +(x)\phi _ -(y)}\\
+&=\phi(x)\phi(y) + \phi _ -(x)\phi _ +(y)-\phi _ +(x)\phi _ -(y)\\
+&=\phi(x)\phi(y) +\Pbracket{\phi _ -(x)}{\phi _ +(y)}
 \end{align*}
 $$
 
-因此得到Normal Order和Time Order之间的关系, 利用$\Theta(t_x-t_y)+\Theta(t_y-t_x)=0$:
+因此得到Normal Order和Time Order之间的关系, 利用$\Theta(t _ x-t _ y)+\Theta(t _ y-t _ x)=0$:
 
 $$
 \begin{align*}
-\Torder{\phi(x) \phi(y)}&=\Theta(t_x-t_y) \phi(x)\phi(y)+\Theta(t_y-t_x)\phi(y)\phi(x)\\
-&=\Theta(t_x-t_y)\left(\Norder{\phi(x)\phi(y)}+\Pbracket{\phi_+(x)}{\phi_-(y)}\right)+ \Theta(t_y-t_x)\left(\Norder{\phi(x)\phi(y)}+\Pbracket{\phi_+(x)}{\phi_-(y)}\right)\\
-&=\Norder{\phi(x)\phi(y)} +\Theta(t_x-t_y) \Pbracket{\phi_+(x)}{\phi_-(y)} + \Theta(t_y-t_x) \Pbracket{\phi_+(x)}{\phi_-(y)} 
+\Torder{\phi(x) \phi(y)}&=\Theta(t _ x-t _ y) \phi(x)\phi(y)+\Theta(t _ y-t _ x)\phi(y)\phi(x)\\
+&=\Theta(t _ x-t _ y)\left(\Norder{\phi(x)\phi(y)}+\Pbracket{\phi _ +(x)}{\phi _ -(y)}\right)+ \Theta(t _ y-t _ x)\left(\Norder{\phi(x)\phi(y)}+\Pbracket{\phi _ +(x)}{\phi _ -(y)}\right)\\
+&=\Norder{\phi(x)\phi(y)} +\Theta(t _ x-t _ y) \Pbracket{\phi _ +(x)}{\phi _ -(y)} + \Theta(t _ y-t _ x) \Pbracket{\phi _ +(x)}{\phi _ -(y)} 
 \end{align*}
 $$
 
@@ -888,8 +888,8 @@ $$
 
 $$
 \begin{align*}
-\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}&=\bra{0}\Norder{\phi(x)\phi(y)}\ket{0}+\bra{0}\Big(\Theta(t_x-t_y) \Pbracket{\phi_+(x)}{\phi_-(y)} + \Theta(t_y-t_x) \Pbracket{\phi_+(x)}{\phi_-(y)}\Big)\ket{0}\\
-&=\bra{0}\Norder{\phi(x)\phi(y)}\ket{0}+D_F(x-y)
+\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}&=\bra{0}\Norder{\phi(x)\phi(y)}\ket{0}+\bra{0}\Big(\Theta(t _ x-t _ y) \Pbracket{\phi _ +(x)}{\phi _ -(y)} + \Theta(t _ y-t _ x) \Pbracket{\phi _ +(x)}{\phi _ -(y)}\Big)\ket{0}\\
+&=\bra{0}\Norder{\phi(x)\phi(y)}\ket{0}+D _ F(x-y)
 \end{align*}
 $$
 
@@ -903,7 +903,7 @@ $$
 
 $$
 \begin{align*}
-\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}&=D_F(x-y)
+\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}&=D _ F(x-y)
 \end{align*}
 $$
 
@@ -918,8 +918,8 @@ $$
 
 $$
 \begin{align*}
-\bra{0}\Torder{\phi(x_1) \phi(x_2) \phi(x_3) }\ket{0}&=\bra{0}\contract{\phi(x_1) \phi}(x_2)\phi(x_3)\ket{0}+\bra{0}\phi(x_1)\contract{\phi(x_2) \phi}(x_3)\ket{0}+\bra{0}\contract{\phi(x_1) \phi(x_2) \phi}(x_3\ket{0})\\
-&=\bra{0}\Norder{\phi(x_1)}\ket{0}D_F(x_2-x_3)+\bra{0}\Norder{\phi(x_3)}\ket{0}D_F(x_1-x_2)+\bra{0}\Norder{\phi(x_2)}\ket{0}D_F(x_1-x_3)\\
+\bra{0}\Torder{\phi(x _ 1) \phi(x _ 2) \phi(x _ 3) }\ket{0}&=\bra{0}\contract{\phi(x _ 1) \phi}(x _ 2)\phi(x _ 3)\ket{0}+\bra{0}\phi(x _ 1)\contract{\phi(x _ 2) \phi}(x _ 3)\ket{0}+\bra{0}\contract{\phi(x _ 1) \phi(x _ 2) \phi}(x _ 3\ket{0})\\
+&=\bra{0}\Norder{\phi(x _ 1)}\ket{0}D _ F(x _ 2-x _ 3)+\bra{0}\Norder{\phi(x _ 3)}\ket{0}D _ F(x _ 1-x _ 2)+\bra{0}\Norder{\phi(x _ 2)}\ket{0}D _ F(x _ 1-x _ 3)\\
 &=0
 \end{align*}
 $$
@@ -928,14 +928,14 @@ $$
 
 $$
 \begin{align*}
-\bra{0}\Torder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) }\ket{0}
-&=\bra{0}\Norder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) }\ket{0}\\
-&+\bigg[\contract{\phi(x_1) \phi}(x_2) \phi(x_3) \cdots \phi(x_n)+\text{all permutaion} \bigg]\\
-&+\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \phi(x_n)+\text{all permutaion} \bigg]\\
+\bra{0}\Torder{\phi(x _ 1) \phi(x _ 2) \cdots \phi(x _ n) }\ket{0}
+&=\bra{0}\Norder{\phi(x _ 1) \phi(x _ 2) \cdots \phi(x _ n) }\ket{0}\\
+&+\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \phi(x _ 3) \cdots \phi(x _ n)+\text{all permutaion} \bigg]\\
+&+\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \contract{\phi(x _ 3) \phi}(x _ 4) \cdots \phi(x _ n)+\text{all permutaion} \bigg]\\
 &+\cdots\\
 &+\begin{cases}
-	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-1})\phi}(x_n)+\text{all permutaion} \bigg] &n \text{ even} \\
-	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-2})\phi}(x_{n-1})\phi(x_n)+\text{all permutaion} \bigg] & n \text{ odd}
+	\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \contract{\phi(x _ 3) \phi}(x _ 4) \cdots \contract{\phi(x _ {n-1})\phi}(x _ n)+\text{all permutaion} \bigg] &n \text{ even} \\
+	\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \contract{\phi(x _ 3) \phi}(x _ 4) \cdots \contract{\phi(x _ {n-2})\phi}(x _ {n-1})\phi(x _ n)+\text{all permutaion} \bigg] & n \text{ odd}
 \end{cases}
 \end{align*}
 $$
@@ -944,14 +944,14 @@ $$
 > 
 > $$
 > \begin{align*}
-> &\bra{0}\Torder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) }\ket{0}\\
-> &=\bra{0}\Norder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) }\ket{0}\\
-> &+\bigg[\contract{\phi(x_1) \phi}(x_2) \phi(x_3) \cdots \phi(x_n)+\text{all permutaion} \bigg]\\
-> &+\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \phi(x_n)+\text{all permutaion} \bigg]\\
+> &\bra{0}\Torder{\phi(x _ 1) \phi(x _ 2) \cdots \phi(x _ n) }\ket{0}\\
+> &=\bra{0}\Norder{\phi(x _ 1) \phi(x _ 2) \cdots \phi(x _ n) }\ket{0}\\
+> &+\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \phi(x _ 3) \cdots \phi(x _ n)+\text{all permutaion} \bigg]\\
+> &+\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \contract{\phi(x _ 3) \phi}(x _ 4) \cdots \phi(x _ n)+\text{all permutaion} \bigg]\\
 > &+\cdots\\
 > &+\begin{cases}
-> 	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-1})\phi}(x_n)+\text{all permutaion} \bigg] &n \text{ even} \\
-> 	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-2})\phi}(x_{n-1})\phi(x_n)+\text{all permutaion} \bigg] & n \text{ odd}
+> 	\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \contract{\phi(x _ 3) \phi}(x _ 4) \cdots \contract{\phi(x _ {n-1})\phi}(x _ n)+\text{all permutaion} \bigg] &n \text{ even} \\
+> 	\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \contract{\phi(x _ 3) \phi}(x _ 4) \cdots \contract{\phi(x _ {n-2})\phi}(x _ {n-1})\phi(x _ n)+\text{all permutaion} \bigg] & n \text{ odd}
 > \end{cases}
 > \end{align*}
 > $$
@@ -959,14 +959,14 @@ $$
 >
 > $$
 > \begin{align*}
-> &\bra{0}\Torder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) \phi(x_{n+1}) }\ket{0}\\
-> &=\bra{0}\Norder{\phi(x_1) \phi(x_2) \cdots \phi(x_n) \phi(x_{n+1}) }\ket{0}\\
-> &+\bigg[\contract{\phi(x_1) \phi}(x_2) \phi(x_3) \cdots \phi(x_n)+\text{all permutaion} \bigg]\phi(x_{n+1}) \\
-> &+\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \phi(x_n)+\text{all permutaion} \bigg]\phi(x_{n+1}) \\
+> &\bra{0}\Torder{\phi(x _ 1) \phi(x _ 2) \cdots \phi(x _ n) \phi(x _ {n+1}) }\ket{0}\\
+> &=\bra{0}\Norder{\phi(x _ 1) \phi(x _ 2) \cdots \phi(x _ n) \phi(x _ {n+1}) }\ket{0}\\
+> &+\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \phi(x _ 3) \cdots \phi(x _ n)+\text{all permutaion} \bigg]\phi(x _ {n+1}) \\
+> &+\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \contract{\phi(x _ 3) \phi}(x _ 4) \cdots \phi(x _ n)+\text{all permutaion} \bigg]\phi(x _ {n+1}) \\
 > &+\cdots\\
 > &+\begin{cases}
-> 	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-1})\phi}(x_n)+\text{all permutaion} \bigg]\phi(x_{n+1})  &n \text{ even} \\
-> 	\bigg[\contract{\phi(x_1) \phi}(x_2) \contract{\phi(x_3) \phi}(x_4) \cdots \contract{\phi(x_{n-2})\phi}(x_{n-1})\phi(x_n)+\text{all permutaion} \bigg]\phi(x_{n+1})  & n \text{ odd}
+> 	\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \contract{\phi(x _ 3) \phi}(x _ 4) \cdots \contract{\phi(x _ {n-1})\phi}(x _ n)+\text{all permutaion} \bigg]\phi(x _ {n+1})  &n \text{ even} \\
+> 	\bigg[\contract{\phi(x _ 1) \phi}(x _ 2) \contract{\phi(x _ 3) \phi}(x _ 4) \cdots \contract{\phi(x _ {n-2})\phi}(x _ {n-1})\phi(x _ n)+\text{all permutaion} \bigg]\phi(x _ {n+1})  & n \text{ odd}
 > \end{cases}
 > \end{align*}
 > $$
@@ -977,43 +977,43 @@ $$
 
 之前计算的都是自由真空$\ket{0}$的期望值, 但是真正代表散射概率的$\bra{i}S\ket{f}$应该是相互作用真空$\ket{\Omega}$的期望值.
 
-二者的区别在于分别是总哈密顿量$H=H_0+H_{int}$中自由粒子哈密顿量$H_0$的不同本征矢量.
+二者的区别在于分别是总哈密顿量$H=H _ 0+H _ {int}$中自由粒子哈密顿量$H _ 0$的不同本征矢量.
 
 $$
 \begin{align}
-H_0\ket{0}&=0\\
-H_0\ket{\Omega}&=E_\Omega \ket{\Omega}
+H _ 0\ket{0}&=0\\
+H _ 0\ket{\Omega}&=E _ \Omega \ket{\Omega}
 \end{align}
 $$
 
-利用总哈密顿量$H=H_0+H_{int}$的本征矢$\ket{n}$展开为完备基, 自由真空的含时演化有(相互作用绘景下,$H_0$部分是薛定谔绘景)
+利用总哈密顿量$H=H _ 0+H _ {int}$的本征矢$\ket{n}$展开为完备基, 自由真空的含时演化有(相互作用绘景下,$H _ 0$部分是薛定谔绘景)
 
 $$
 \begin{align}
-e^{-iHT}\ket{0}&=e^{-iHT}\sum_n{\ket{n}\bra{n}}\ket{0}\notag\\
-&=\sum_ne^{-iE_nT}\ket{n}\braket{n}{0}\notag \\
-&=e^{-iE_\Omega T}\ket{\Omega}\braket{\Omega}{0}+\sum_{n\neq \ket{\Omega}}e^{-iE_nT}\ket{n}\braket{n}{0} 
+e^{-iHT}\ket{0}&=e^{-iHT}\sum _ n{\ket{n}\bra{n}}\ket{0}\notag\\
+&=\sum _ ne^{-iE _ nT}\ket{n}\braket{n}{0}\notag \\
+&=e^{-iE _ \Omega T}\ket{\Omega}\braket{\Omega}{0}+\sum _ {n\neq \ket{\Omega}}e^{-iE _ nT}\ket{n}\braket{n}{0} 
 \label{oandOmega}
 \\
 \end{align}
 $$
 
-在$\Eqn{oandOmega}$中, 第一项的因子的指数是相互作用真空能量$E_\Omega$, 是所有本征值中最小的. 因此取$T\rightarrow \infty(1-i\varepsilon)$
+在$\Eqn{oandOmega}$中, 第一项的因子的指数是相互作用真空能量$E _ \Omega$, 是所有本征值中最小的. 因此取$T\rightarrow \infty(1-i\varepsilon)$
 
 ==为什么要这样取极限, 直接$\infty$不行吗, 这样是精确的还是近似?==
 
 $$
 \begin{align*}
-\lim_{T\rightarrow \infty(1-i\varepsilon)}e^{-iHT}\ket{0}&=\lim_{T\rightarrow \infty(1-i\varepsilon)} e^{-iE_\Omega T}\ket{\Omega}\braket{\Omega}{0}+\lim_{T\rightarrow \infty(1-i\varepsilon)}\sum_{n\neq \ket{\Omega}}e^{-iE_nT}\ket{n}\braket{n}{0} \\
-\lim_{T\rightarrow \infty(1-i\varepsilon)}e^{-iHT}\ket{0}&=\lim_{T\rightarrow \infty(1-i\varepsilon)} e^{-iE_\Omega T}\ket{\Omega}\braket{\Omega}{0}+0\\
-\left(\lim_{T\rightarrow \infty(1-i\varepsilon)}e^{-iHT}\right)\ket{0}&=\left(\lim_{T\rightarrow \infty(1-i\varepsilon)} e^{-iE_\Omega T} \right)\ket{\Omega}\braket{\Omega}{0}\\
+\lim _ {T\rightarrow \infty(1-i\varepsilon)}e^{-iHT}\ket{0}&=\lim _ {T\rightarrow \infty(1-i\varepsilon)} e^{-iE _ \Omega T}\ket{\Omega}\braket{\Omega}{0}+\lim _ {T\rightarrow \infty(1-i\varepsilon)}\sum _ {n\neq \ket{\Omega}}e^{-iE _ nT}\ket{n}\braket{n}{0} \\
+\lim _ {T\rightarrow \infty(1-i\varepsilon)}e^{-iHT}\ket{0}&=\lim _ {T\rightarrow \infty(1-i\varepsilon)} e^{-iE _ \Omega T}\ket{\Omega}\braket{\Omega}{0}+0\\
+\left(\lim _ {T\rightarrow \infty(1-i\varepsilon)}e^{-iHT}\right)\ket{0}&=\left(\lim _ {T\rightarrow \infty(1-i\varepsilon)} e^{-iE _ \Omega T} \right)\ket{\Omega}\braket{\Omega}{0}\\
 \end{align*}
 $$
 
 得到
 
 $$
-\ket{\Omega}=\lim_{ T\rightarrow \infty(1-i\varepsilon)} \frac{e^{-iHT}\ket{0}}{  e^{-iE_\Omega T} \braket{\Omega}{0}}
+\ket{\Omega}=\lim _ { T\rightarrow \infty(1-i\varepsilon)} \frac{e^{-iHT}\ket{0}}{  e^{-iE _ \Omega T} \braket{\Omega}{0}}
 $$
 
 这里要求$\braket{\Omega}{0}\neq 0$, 即低阶近似下的真空与自由真空"相似".
@@ -1023,7 +1023,7 @@ $$
 得到[^skriptQFT1]
 
 $$
-\bra{\Omega}\Torder{\prod_i{\phi(x_i)}}\ket{\Omega}=\lim_{T\rightarrow \infty(1-i\varepsilon)} \frac{\bra{0}\Torder{\prod_i{\phi(x_i)}e^{-i\int_{-T}^{T}dtH_I(t)}}\ket{0}}{\bra{0}\Torder{\ e^{-i\int_{-T}^{T}dtH_I(t)}}\ket{0}}
+\bra{\Omega}\Torder{\prod _ i{\phi(x _ i)}}\ket{\Omega}=\lim _ {T\rightarrow \infty(1-i\varepsilon)} \frac{\bra{0}\Torder{\prod _ i{\phi(x _ i)}e^{-i\int _ {-T}^{T}dtH _ I(t)}}\ket{0}}{\bra{0}\Torder{\ e^{-i\int _ {-T}^{T}dtH _ I(t)}}\ket{0}}
 $$
 
 可见在此处解释了T的路径问题(Eqn 2.107 & 2.110) [^skriptQFT1].

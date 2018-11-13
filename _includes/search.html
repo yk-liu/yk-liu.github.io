@@ -16,7 +16,7 @@ Enable Full-content search: <input type="checkbox" id="Full-content"  onclick="C
 SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
-            json: '{{site.baseurl }}/blog/search.json'
+            json: 'https://{{ site.baseurl }}/blog/search.json'
         }) 
 		
 function CheckBox() {
@@ -25,13 +25,13 @@ function CheckBox() {
         return SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
-            json: '{{site.baseurl }}/blog/searchfull.json'
+            json: 'https://{{ site.baseurl }}/blog/searchfull.json'
         }) 
     } else {
         return SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
-            json: '{{site.baseurl }}/blog/search.json'
+            json: 'https://{{ site.baseurl }}/blog/search.json'
         }) 
     }
    }

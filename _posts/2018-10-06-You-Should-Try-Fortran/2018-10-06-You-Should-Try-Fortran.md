@@ -21,7 +21,7 @@ I was a freshman in Physics eager to learn a few trick in "computer" to aid my u
 
 I have heard of Python. It made an impression on me that it's the slower kind of language, so I waited a long time starting to check it out. But there is one particular function that stroke me hard, it was called `sort`.
 
-My first reaction was overwhelmed with ecstasy. With C++'s all kinds of [sorting method](https://en.wikipedia.org/wiki/Sorting_algorithm) and comparison and different range of application, **there is a built-in function in Python that does the sorting!?** Who would even care about that speed of 10% improvement anymore? 
+My first reaction was overwhelmed with ecstasy. With C++'s all kinds of [sorting method](https://en.wikipedia.org/wiki/Sorting _ algorithm) and comparison and different range of application, **there is a built-in function in Python that does the sorting!?** Who would even care about that speed of 10% improvement anymore? 
 
 > C++ hello world
 > ```c++
@@ -55,7 +55,7 @@ Also Fortran has a bad reputation of hard to maintain old codes, which is the ex
 
 Later I found out that 
 
-1. Fortran is not old and certainly not a "historical anachronism". Intel publishes a new [Fortran complier](https://software.intel.com/en-us/articles/intel-fortran-compiler-release-notes) ***EVERY THREE MONTHS***(it works smoothly on [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)). There is a brief [introduction into modern Fortran](https://www.tacc.utexas.edu/documents/13601/162125/fortran_class.pdf). If you think Fortran hasn’t changed since the 60s, you are wrong.
+1. Fortran is not old and certainly not a "historical anachronism". Intel publishes a new [Fortran complier](https://software.intel.com/en-us/articles/intel-fortran-compiler-release-notes) ***EVERY THREE MONTHS***(it works smoothly on [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)). There is a brief [introduction into modern Fortran](https://www.tacc.utexas.edu/documents/13601/162125/fortran _ class.pdf). If you think Fortran hasn’t changed since the 60s, you are wrong.
 2. Fortran is not hard to maintain if you know what you are doing. Fortran is actually **very straight forward** (and quite convenient compared to C++). The code is basically just operations you would do on a scratch paper. This is in my opinion the most prominent trait of Fortran and the most persuasion reason why you should try Fortran.
 
 # I tried Fortran and it's AMAZING

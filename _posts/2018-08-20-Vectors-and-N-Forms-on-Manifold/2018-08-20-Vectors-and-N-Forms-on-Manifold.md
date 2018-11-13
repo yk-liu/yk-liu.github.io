@@ -44,7 +44,7 @@ One form is a concept useful in integration, the integrand is a one-form. To per
 
 The definitions of curves and functions are as follow. A curve on a manifold is a linear map from interval $[a,b]$ to a set of points. Functions are defined over curves on manifold, *not* over curves in $\R^n$. With the help of local coordinates, curves and functions each have coordinate representations.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/curve-function.png" width="80%" />
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/curve-function.png" width="80%" />
 
 # General Vectors and Covectors
 
@@ -58,7 +58,7 @@ Formally the vector space is a set of four things, $(V,k,+,*) $  where $ V $ is 
 
 Now consider the set of linear functions defined on $V$ (vectors) that have values in $K$ (numbers), i.e. $f:V\rightarrow K$. Such linear functions on vector spaces are called **linear functionals**. They are also called **covectors**. They apparently form a vector space $V^*$, since: 
 
-- $(f_1+f_2)(V) = f_1(V) + f_2(V)$ where the R.H.S. is addition of two scalars in the field $K$. 
+- $(f _ 1+f _ 2)(V) = f _ 1(V) + f _ 2(V)$ where the R.H.S. is addition of two scalars in the field $K$. 
 - $(kf)(V) = kf(V)$, again where the R.H.S. is multiplication of two scalars in the field $K$.
 
 The vector space $V^*$ of linear functionals over $V$ is said to be **dual** to the vector space. 
@@ -79,35 +79,35 @@ The inner product look suspiciously like dot product. A natural insight is that 
 
 ## Connect Covectors and Vectors with Isomorphism
 
-If  the vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension and are thus isomorphic (see [here](https://en.wikipedia.org/wiki/Vector_space#Linear_maps_and_matrices)).
+If  the vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension and are thus isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
 
 This isomorphism is fairly simple: just swap the basis and nothing is changed. 
 
 Here we construct the **covector space** of $V$ and map from vectors to covectors:
 
-1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x_1,\uvec x_2, \uvec x_3)$, where $\uvec x_i$ is a unit vector in the positive $x_i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x_1,\d x_2,\d x_3)$ (this suspiciously looking name is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
+1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x _ 1,\d x _ 2,\d x _ 3)$ (this suspiciously looking name is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
 
 2. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number.
 
-   Writing that down as $\d x_i(\vec v)\in \R$.
+   Writing that down as $\d x _ i(\vec v)\in \R$.
 
-3. Due to linearity of the vectors and covectors, $\d x_i(\vec v)$ can be seen as act on basis of vector
+3. Due to linearity of the vectors and covectors, $\d x _ i(\vec v)$ can be seen as act on basis of vector
    $$
-   \d x_i(\vec v) =\d x_i (v_1\uvec x_1+v_2\uvec x_2+v_3\uvec x_3)= v_1\d x_i (\uvec x_1)+v_2\d x_i (\uvec x_2)+v_3\d x_i (\uvec x_3)\in \R
+   \d x _ i(\vec v) =\d x _ i (v _ 1\uvec x _ 1+v _ 2\uvec x _ 2+v _ 3\uvec x _ 3)= v _ 1\d x _ i (\uvec x _ 1)+v _ 2\d x _ i (\uvec x _ 2)+v _ 3\d x _ i (\uvec x _ 3)\in \R
    $$
 
-4. Define $\d x_i (\uvec x_j)\dfdas \delta_{i,j}$. Recall that $\d x_i (\uvec x_j)=\inner{\d x_i}{\uvec x_j}=\delta_{ij}$.
+4. Define $\d x _ i (\uvec x _ j)\dfdas \delta _ {i,j}$. Recall that $\d x _ i (\uvec x _ j)=\inner{\d x _ i}{\uvec x _ j}=\delta _ {ij}$.
 
-5. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v^\mu\d x_\mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v^\mu \uvec x_\mu$ by directly interchanging $\d x_\mu$ between $\uvec x_\mu$.
+5. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v^\mu\d x _ \mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v^\mu \uvec x _ \mu$ by directly interchanging $\d x _ \mu$ between $\uvec x _ \mu$.
 
-6. A covector $\dual {\vec v}(\vec v)=\dual v^i \d x_i (v^i\uvec x_i)=\dual v^i v_i=\vec{\dual v }\cdot\vec v\in \R$
+6. A covector $\dual {\vec v}(\vec v)=\dual v^i \d x _ i (v^i\uvec x _ i)=\dual v^i v _ i=\vec{\dual v }\cdot\vec v\in \R$
 
-So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x_i \leftrightarrow \d x_i$
+So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _ i \leftrightarrow \d x _ i$
 
 > ***Remark:***
 >
 > - For vector spaces with finite bases the dual spaces are not very exotic; they are essentially the same as the original spaces. **There are some infinite dimensional vector spaces that have dual spaces that are different in nature from the original space**.
-> - If the original space is finite dimensional, vectors can be sent to covectors through a isomorphism. For example, Dirac-bras $ \bra{v} $ and -kets $ \ket{v} $ are dual vectors, the contravariant vector $x^\mu$ and covariant vectors $x_\mu$ are dual to each other. The isomorphisms are both just transpose.
+> - If the original space is finite dimensional, vectors can be sent to covectors through a isomorphism. For example, Dirac-bras $ \bra{v} $ and -kets $ \ket{v} $ are dual vectors, the contravariant vector $x^\mu$ and covariant vectors $x _ \mu$ are dual to each other. The isomorphisms are both just transpose.
 > - The aforementioned isomorphism can be written as a definition of map 
 >
 > $$
@@ -115,7 +115,7 @@ So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x_i \leftrighta
 > \label{1formvec}
 > $$
 >
-> - A Euclidean vector space comes with a dot product $(x, y) → x·y$, which can be used to describe one-forms in terms of vector fields (or equivalently, to identify cotangent vectors and tangent vectors):  Specifically, for every one-form $\form \omega$ there is a unique vector field ${\scr F }: \R^n\rightarrow V$  such that $\form ω_x(\vec v) \dfdas \vec{F}(x) · \vec{v}$ for all $x\in \R^n, v \in V$. [[Tao](http://www.math.ucla.edu/~tao/preprints/forms.pdf)] 
+> - A Euclidean vector space comes with a dot product $(x, y) → x·y$, which can be used to describe one-forms in terms of vector fields (or equivalently, to identify cotangent vectors and tangent vectors):  Specifically, for every one-form $\form \omega$ there is a unique vector field ${\scr F }: \R^n\rightarrow V$  such that $\form ω _ x(\vec v) \dfdas \vec{F}(x) · \vec{v}$ for all $x\in \R^n, v \in V$. [[Tao](http://www.math.ucla.edu/~tao/preprints/forms.pdf)] 
 >
 
 ## Example of Covectors
@@ -139,12 +139,12 @@ For future reference, the dual spaces to the spaces of vector fields over Euclid
 > $$
 > \begin{align}
 > \d f(\vec v)&=\Partial{f}{x^\mu}\d x^\mu(\vec v)\notag\\
-> &=\Partial{f}{x^\mu}\d x^\mu(v^\nu \uvec x_\nu)\notag\\
-> &=\Partial{f}{x^\mu}v^\nu \d x^\mu(\uvec x_\nu)\notag\\
-> &=\Partial{f}{x^\mu}v^\nu \delta^\mu_\nu\label{df-nablaf-vec-1}\\
+> &=\Partial{f}{x^\mu}\d x^\mu(v^\nu \uvec x _ \nu)\notag\\
+> &=\Partial{f}{x^\mu}v^\nu \d x^\mu(\uvec x _ \nu)\notag\\
+> &=\Partial{f}{x^\mu}v^\nu \delta^\mu _ \nu\label{df-nablaf-vec-1}\\
 > &=\Partial{f}{x^\mu}v^\mu \notag\\
 > &=\vec \nabla f\cdot \vec v \label{df-nablaf-vec-2}\\
-> &\dfdas\nabla_{\vec v}f=\lim_{h\rightarrow0}\frac{f(\vec x + h\vec v)-f(\vec x)}{h}\in\R \label{directionalderivative}
+> &\dfdas\nabla _ {\vec v}f=\lim _ {h\rightarrow0}\frac{f(\vec x + h\vec v)-f(\vec x)}{h}\in\R \label{directionalderivative}
 > \end{align}
 > $$
 >
@@ -161,7 +161,7 @@ Though on a manifold, things are a little different. There are three equivalent 
 2. Vector is an equivalent class of curves;
 3. Vector is a (derivation) operator.
 
-These definitions are equivalent to each other [(proof)](https://maths-people.anu.edu.au/~andrews/DG/DG_chap4.pdf). So after this chapter we will make no distinction over these three definitions.
+These definitions are equivalent to each other [(proof)](https://maths-people.anu.edu.au/~andrews/DG/DG _ chap4.pdf). So after this chapter we will make no distinction over these three definitions.
 
 ## Vector is an arrow
 
@@ -169,7 +169,7 @@ When I think about vector on a manifold, I have the picture of some arrow tangen
 
 Since in general there is no way to define a "straight arrow" connecting two points. Vectors can only be "tangent vectors". In other words, vectors cannot live on the manifold itself, but the collection of tangent spaces over the entire manifold, called the **tangent bundle**. That way, the vector is a kept at a geometrical view. This is a generalization of the notion of a bound vector in a Euclidean space. But this requires embedding the manifold in some higher dimensional space, which is not very convenient, since Differential Geometry aims at investigating the space (or maybe space-time) without jumping out of it.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing_tangent_vector.JPG" width="90%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing _ tangent _ vector.JPG" width="90%">
 
 Obviously, once the vector is in an ambient space, it can be represented by a tuple of numbers. How to represent a vector although "it can be represented by a tuple of numbers"? There will be different basis on each point of a manifold and
 
@@ -183,15 +183,15 @@ Still, the problem is that vectors do not live on the manifold. This forbids def
 
 >  Let's start with a concrete example. Here is a curved surface being the manifold in focus embed in $\R^3$. Although this is not always possible for any manifold, we are going to use this as a tool to gain some intuition. 
 >
->  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing_tangent_vector_as_operator.png" width="90%">
+>  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing _ tangent _ vector _ as _ operator.png" width="90%">
 >
->  First we are going to see the surface in $ \R^3 $ as $\vec r(x,y,z) = Const.$ On this surface we can have different local coordinates $(u,v)$ (left) or $(w,s)$ (right). With a curve $\Sigma$ on the surface we can have both a using embedded coordinates as $\vec r(t)=(x(t),y(t),z(t))$, or local coordinates as $\vec r(t) = (u(t),v(t))$ or $\vec r(t) = (w(t),s(t))$. The tangent vector $X$ at $p=\vec r(t_0)=(u_0,v_0)=(w_0,s_0)$ has a very simple definition in $\R^3 $ as $\vec X = \D{\vec r(t)}{t}$. Using the chain rule, 
+>  First we are going to see the surface in $ \R^3 $ as $\vec r(x,y,z) = Const.$ On this surface we can have different local coordinates $(u,v)$ (left) or $(w,s)$ (right). With a curve $\Sigma$ on the surface we can have both a using embedded coordinates as $\vec r(t)=(x(t),y(t),z(t))$, or local coordinates as $\vec r(t) = (u(t),v(t))$ or $\vec r(t) = (w(t),s(t))$. The tangent vector $X$ at $p=\vec r(t _ 0)=(u _ 0,v _ 0)=(w _ 0,s _ 0)$ has a very simple definition in $\R^3 $ as $\vec X = \D{\vec r(t)}{t}$. Using the chain rule, 
 >  
 >  $$
 >  \begin{align}
 >  \vec X &= \D{\vec r(t)}{t} \notag \\
->  &=\left.\Partial{\vec r(u,v)}{u}\right\vert_{\substack{u=u_0\\ v=v_0}} \left.\D{u(t)}{t}\right\vert_{t=t_0}+ \left.\Partial{\vec r(u,v)}{v}\right\vert _{\substack{u=u_0\\v=v_0}}\left.\D{v(t)}{t}\right\vert_{t=t_0} \notag \\
->  &=\dot u(t_0)\ \left.\Partial{\vec r(u,v)}{u}\right\vert_{\substack{u=u_0\\v=v_0}} +\dot v(t_0)\ \left.\Partial{\vec r(u,v)}{v}\right\vert_{\substack{u=u_0\\v=v_0}}
+>  &=\left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\ v=v _ 0}} \left.\D{u(t)}{t}\right\vert _ {t=t _ 0}+ \left.\Partial{\vec r(u,v)}{v}\right\vert  _ {\substack{u=u _ 0\\v=v _ 0}}\left.\D{v(t)}{t}\right\vert _ {t=t _ 0} \notag \\
+>  &=\dot u(t _ 0)\ \left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\v=v _ 0}} +\dot v(t _ 0)\ \left.\Partial{\vec r(u,v)}{v}\right\vert _ {\substack{u=u _ 0\\v=v _ 0}}
 >  \label{vectorToOperator}
 >  \end{align}
 >  $$
@@ -204,30 +204,30 @@ Still, the problem is that vectors do not live on the manifold. This forbids def
 >  $$
 >  \begin{align}
 >  \vec X &= \D{\vec r(t)}{t} \notag \\
->  &=\left.\Partial{\vec r(u,v)}{u}\right\vert_{\substack{u=u_0\\v=v_0}} \left.\D{u(t)}{t}\right\vert_{t=t_0}+0 \notag\\
->  &=\dot u (t_0)\ \left.\Partial{\vec r(u,v)}{u}\right\vert_{\substack{u=u_0\\v=v_0}} 
->  \label{operator_basis}
+>  &=\left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\v=v _ 0}} \left.\D{u(t)}{t}\right\vert _ {t=t _ 0}+0 \notag\\
+>  &=\dot u (t _ 0)\ \left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\v=v _ 0}} 
+>  \label{operator _ basis}
 >  \end{align}
 >  $$
 >
 >
->  notice for example,  $ \Gamma: \cases{ u=k\cdot t\\ v=2} , \vec X =k\left.\Partial{\vec r(u,v)}{u}\right\vert_{\substack{u=u_0\\ v=v_0}} $ or $ \Gamma^\prime\cases{u=\tan t\\ v=2} , \vec X =\left.\tan(t_0)\Partial{\vec r(u,v)}{u}\right\vert_{\substack{u=u_0\\ v=v_0}} $  This means if we take a parametrized curve along $v=2$, the tangent vector at point $p$ will always be some number times $ \left.\Partial{\vec r(u,v)}{u}\right\vert_{\substack{u=u_0 \\ v=v_0}} $ .
+>  notice for example,  $ \Gamma: \cases{ u=k\cdot t\\ v=2} , \vec X =k\left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\ v=v _ 0}} $ or $ \Gamma^\prime\cases{u=\tan t\\ v=2} , \vec X =\left.\tan(t _ 0)\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\ v=v _ 0}} $  This means if we take a parametrized curve along $v=2$, the tangent vector at point $p$ will always be some number times $ \left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0 \\ v=v _ 0}} $ .
 
-By far, $\Eqn{vectorToOperator}$ means any operator have a "component" form using differential operators. $\Eqn{operator_basis}$ means the partial differential operators act like unit vectors or bases of the space of operators. There is nothing we don't already know about differential operators. But the above example provide us a good we to identify a vector with a differential operator.
+By far, $\Eqn{vectorToOperator}$ means any operator have a "component" form using differential operators. $\Eqn{operator _ basis}$ means the partial differential operators act like unit vectors or bases of the space of operators. There is nothing we don't already know about differential operators. But the above example provide us a good we to identify a vector with a differential operator.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing_find_operator_for_vector.png" width="90%" >
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing _ find _ operator _ for _ vector.png" width="90%" >
 
-Reverse the above order, we will find the way to assign an operator to a vector. Starting from a vector $\vec X$, we can choose a basis $\set{\uvec e_1, \uvec e_2}$, where $\vec X = a\uvec e_1+b \uvec e_2$. According to the basis, we can find a local coordinate $(x_ 1,x _2)$. Now combine the differential operators $\set{\Partial{}{x_1},\Partial{}{x_2}}$ like the basis vector, we have the differential operator $a\Partial{}{x_1}+b\Partial{}{x_2}\dfdas X$. We can go further to find some curve (indicated by black lines) $\Gamma : \cases{ u=u(t)\\ v= v(t)}$ such that $ \left( \dot u(t_0) ,\dot v(t_0)\right)=(a,b) $ .
+Reverse the above order, we will find the way to assign an operator to a vector. Starting from a vector $\vec X$, we can choose a basis $\set{\uvec e _ 1, \uvec e _ 2}$, where $\vec X = a\uvec e _ 1+b \uvec e _ 2$. According to the basis, we can find a local coordinate $(x _  1,x  _ 2)$. Now combine the differential operators $\set{\Partial{}{x _ 1},\Partial{}{x _ 2}}$ like the basis vector, we have the differential operator $a\Partial{}{x _ 1}+b\Partial{}{x _ 2}\dfdas X$. We can go further to find some curve (indicated by black lines) $\Gamma : \cases{ u=u(t)\\ v= v(t)}$ such that $ \left( \dot u(t _ 0) ,\dot v(t _ 0)\right)=(a,b) $ .
 
 > Side Note:
 >
-> **Theorem:** The directional derivative of a function defined on the manifold $f(t)$ along the vector $v$ (which is the tangent vector at $t_0$ along the curve $\Gamma(t)$) is the differential operator $\op{v}$ acting on $f$.
+> **Theorem:** The directional derivative of a function defined on the manifold $f(t)$ along the vector $v$ (which is the tangent vector at $t _ 0$ along the curve $\Gamma(t)$) is the differential operator $\op{v}$ acting on $f$.
 >
 > $$
 > \begin{align}
-> \op{v}(f)&\dfdas\nabla_{\vec v}f(t)\notag\\
-> &=\lim_{t\rightarrow 0}{\frac{f(\gamma(t))-f(\gamma(0))}{t}}\notag\\
-> &=\lim_{t\rightarrow 0}{\frac{f(\vec x_0+t\vec v)-f(\vec x_0)}{t}}\notag\\
+> \op{v}(f)&\dfdas\nabla _ {\vec v}f(t)\notag\\
+> &=\lim _ {t\rightarrow 0}{\frac{f(\gamma(t))-f(\gamma(0))}{t}}\notag\\
+> &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+t\vec v)-f(\vec x _ 0)}{t}}\notag\\
 > \label{vector-as-directional-derivative}
 > \end{align}
 > $$
@@ -236,12 +236,12 @@ Reverse the above order, we will find the way to assign an operator to a vector.
 >
 > $$
 > \begin{align*}
-> \op v (f) &=\left.\D{}{t}f(\Gamma(t))\right\vert_{\substack{t=t_0,\\\text{along }\vec{v}}}\\
-> &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert_{\substack{t=t_0,\\\text{along }\vec{v}}}\\
-> &=\sum_{i=1}^{n}{\dot{x_i}(t_0)\Partial{f}{x^i}}\\
+> \op v (f) &=\left.\D{}{t}f(\Gamma(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
+> &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
+> &=\sum _ {i=1}^{n}{\dot{x _ i}(t _ 0)\Partial{f}{x^i}}\\
 > \text{notice that } &\vec v =(\dot x^1(t),\cdots,\dot x^n(t)),\vec \nabla f =(\Partial{f}{x^1},\cdots,\Partial{f}{x^n}) \\
 > &=\vec \nabla f \cdot \vec v\\
-> &=\nabla_{\vec v} f
+> &=\nabla _ {\vec v} f
 > \end{align*}
 > $$
 >
@@ -250,15 +250,15 @@ Reverse the above order, we will find the way to assign an operator to a vector.
 
 From above we already know that one can find different curves such that the differential operator have the right coefficient correspond to the vector. If we make a collection of all the curves correspond to the same vector, we would have establish the same "one-to-one" correspondence. 
 
-Here it goes from [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf):
+Here it goes from [Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometry _ topology _ and _ physics _ 2nd _ ed..pdf):
 
-> To be more mathematical, we introduce an equivalence class of curves in $\mani M$. If two curves $c_1(t)$ and $c_2(t)$ satisfy
+> To be more mathematical, we introduce an equivalence class of curves in $\mani M$. If two curves $c _ 1(t)$ and $c _ 2(t)$ satisfy
 >
-> 1. $c_1(0) = c_2(0) = p$
-> 2. $ \left. \frac{\d x^\mu(c_1(t))}{\d t} \right\rvert_{t=0} =\left.\frac{\d x^\mu(c_2(t))}{\d t}\right\rvert_{t=0}$
+> 1. $c _ 1(0) = c _ 2(0) = p$
+> 2. $ \left. \frac{\d x^\mu(c _ 1(t))}{\d t} \right\rvert _ {t=0} =\left.\frac{\d x^\mu(c _ 2(t))}{\d t}\right\rvert _ {t=0}$
 >
-> then $c_1(t)​$ and $c_2(t)​$ yield the same differential operator $X​$ at $p​$, in which case we deﬁne $c_1(t) \sim c_2(t)​$. Clearly $ \sim ​$ is an equivalence relation and deﬁnes the equivalence classes. We identify the tangent vector $X​$ with the equivalence class of curves
-> $[c(t)] = \left\lbrace \tilde{c}(t) \mid \tilde{c}(0)=c(0) \text{ and } \left.\frac{\d x^\mu (\tilde{c}(t))}{\d t} \right\vert_{t=0} = \left.\frac{\d x^\mu (c(t))}{\d t} \right\vert_{t=0} \right\rbrace ​$
+> then $c _ 1(t)​$ and $c _ 2(t)​$ yield the same differential operator $X​$ at $p​$, in which case we deﬁne $c _ 1(t) \sim c _ 2(t)​$. Clearly $ \sim ​$ is an equivalence relation and deﬁnes the equivalence classes. We identify the tangent vector $X​$ with the equivalence class of curves
+> $[c(t)] = \left\lbrace \tilde{c}(t) \mid \tilde{c}(0)=c(0) \text{ and } \left.\frac{\d x^\mu (\tilde{c}(t))}{\d t} \right\vert _ {t=0} = \left.\frac{\d x^\mu (c(t))}{\d t} \right\vert _ {t=0} \right\rbrace ​$
 >
 > rather than a curve itself.
 
@@ -269,13 +269,13 @@ A vector field can be seen as arrows sprinkled on a manifold as shown in the lef
 
 >  A point follows the direction of vector field moves at a "velocity" of the magnitude of the vector, tracing out a curve on the manifold.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/vector-curve.png" width="80%"/>
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/vector-curve.png" width="80%"/>
 
 
 
-The Lorentz attractor can also be seen as a complicated manifold sprinkled with "velocity vectors." (image from [Wikipedia](https://en.wikipedia.org/wiki/File:A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif).)
+The Lorentz attractor can also be seen as a complicated manifold sprinkled with "velocity vectors." (image from [Wikipedia](https://en.wikipedia.org/wiki/File:A _ Trajectory _ Through _ Phase _ Space _ in _ a _ Lorenz _ Attractor.gif).)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/13/A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/13/A _ Trajectory _ Through _ Phase _ Space _ in _ a _ Lorenz _ Attractor.gif">
 
 
 
@@ -298,7 +298,7 @@ Having defined vectors on manifold, now we are ready to see what is forms the du
 Notice that the tangent vector act on a function gives the "directional derivative" of that function along the direction of the vector, rewriting $\Eqn{vector-as-directional-derivative}$ with special attention paid to the LHS:
 
 $$
-\op{v}(f)\equiv \nabla_{\vec v}f(t)\in \R.
+\op{v}(f)\equiv \nabla _ {\vec v}f(t)\in \R.
 $$
 
 Remember, vectors and covectors are dual to each other. If one seek the covector of $\vec v$, he can be equally satisfied asking the question: if the vector $\vec v$ is treated as a *covector*, what would be the corresponding *vector*? The LHS is the definition of inner product of a one form and a vector in $\Eqn{innerproduct}$. 
@@ -306,7 +306,7 @@ Remember, vectors and covectors are dual to each other. If one seek the covector
 Simply by playing with definitions, we obtain a natural **definition of covectors** on manifold. This is written as
 
 $$
-\form f(\vec v)\dfdas\hat v(f) = \nabla_\vec v f(t)\in \R.
+\form f(\vec v)\dfdas\hat v(f) = \nabla _ \vec v f(t)\in \R.
 $$
 
 The next steps would be 
@@ -318,8 +318,8 @@ The next steps would be
    $$
    \begin{align*}
    (a f+b g)(\vec v)&=a f(\vec v)+b g(\vec v)\\
-   &=a\nabla_\vec vf+b\nabla_\vec v g\\
-   &=\nabla_\vec v(a f+b g)
+   &=a\nabla _ \vec vf+b\nabla _ \vec v g\\
+   &=\nabla _ \vec v(a f+b g)
    \end{align*}
    $$
 
@@ -330,7 +330,7 @@ The next steps would be
    Using the identity,
 
    $$
-   \nabla_{\vec v} f =\sum_{i=1}^{n}{\left.\D{x_i}{t}\right\vert_{t=t_0}\Partial{f}{x^i}} \label{directional-derivative}
+   \nabla _ {\vec v} f =\sum _ {i=1}^{n}{\left.\D{x _ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative}
    $$
 
    Notice the following identity
@@ -345,8 +345,8 @@ The next steps would be
 
    $$
    \begin{align*}
-   \vec v(f) &= \sum_{i=1}^{n}{ {\red \left.\D{x_i}{t}\right\vert_{t=t_0}}\Partial{f}{x^i}}\\
-   &=\left(\sum_{i=1}^{n}{ {\red \dot{x_i}(t_0)}\Partial{}{x^i}}\right) (f)\\
+   \vec v(f) &= \sum _ {i=1}^{n}{ {\red \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}}\Partial{f}{x^i}}\\
+   &=\left(\sum _ {i=1}^{n}{ {\red \dot{x _ i}(t _ 0)}\Partial{}{x^i}}\right) (f)\\
    \end{align*}
    $$
 
@@ -354,9 +354,9 @@ The next steps would be
 
    $$
    \begin{align}
-   f(\vec v)&= \sum_{i=1}^{n}{ \left.\D{x_i}{t}\right\vert_{t=t_0}{\blue\Partial{f}{x^i}}} \notag\\
-   &=\sum_{i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x_i}{t}\right\vert_{t=t_0}\notag\\
-   &=\sum_{i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {e}^i \right)\cdot \left(\dot{x_i}(t_0)\Partial{}{x^i}\right) \label{basis-of-oneform}
+   f(\vec v)&= \sum _ {i=1}^{n}{ \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}\notag\\
+   &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {e}^i \right)\cdot \left(\dot{x _ i}(t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
    \end{align}
    $$
 
@@ -364,19 +364,19 @@ The next steps would be
 
    $$
    \begin{align*}
-   &=\sum_{i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot{x_i}(t_0)\Partial{}{x^i}\right)\\
-   &=\sum_{i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i (\vec v)\\
-   &=\left(\sum_{i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i\right) (\vec v)
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot{x _ i}(t _ 0)\Partial{}{x^i}\right)\\
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i (\vec v)\\
+   &=\left(\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i\right) (\vec v)
    \end{align*}
    $$
 
    Now the one form $\form f$ is identified as 
 
    $$
-   \form f = \sum_{i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i \notag
+   \form f = \sum _ {i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i \notag
    $$
 
-   where $\uvec e$ is a hungry operator on vectors. Now the job is to find the exact expression of $\uvec e$. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e_i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
+   where $\uvec e$ is a hungry operator on vectors. Now the job is to find the exact expression of $\uvec e$. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e _ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
 
    $$
    \begin{align*}
@@ -407,12 +407,12 @@ The next steps would be
 By the above deduction, we finally arrive at the conclusion that
 
 $$
- \form f = \sum_{i=1}^n\Partial{f}{x^i}\int \d x^i\\
+ \form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i\\
 $$
 
 Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. 
 
-Still, the expression deserves more investigation. Leaving the context of vectors and covectors aside, the expression $\Eqn{directional-derivative}$ as function's derivative show that if two functions $f$ and $g$ have the same differential at $t=t_0$, 
+Still, the expression deserves more investigation. Leaving the context of vectors and covectors aside, the expression $\Eqn{directional-derivative}$ as function's derivative show that if two functions $f$ and $g$ have the same differential at $t=t _ 0$, 
 
 $$
 \d f=\sum \Partial{f}{x^i}\d x^i=\d g \notag
@@ -423,17 +423,17 @@ they will yield the same result,
 
 $$
 \begin{align*}
-\nabla_{\vec v} f -\nabla_{\vec v} g &=\lim_{t\rightarrow 0}{\frac{f(\vec x_0+t\vec v)-f(\vec x_0)}{t}}-\lim_{t\rightarrow 0}{\frac{g(\vec x_0+t\vec v)-g(\vec x_0)}{t}}\\
-&=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert_{\substack{t=t_0,\\\text{along }\vec{v}}}-\left.\D{}{t}g(x^1(t),\cdots,x^n(t))\right\vert_{\substack{t=t_0,\\\text{along }\vec{v}}}\\
+\nabla _ {\vec v} f -\nabla _ {\vec v} g &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+t\vec v)-f(\vec x _ 0)}{t}}-\lim _ {t\rightarrow 0}{\frac{g(\vec x _ 0+t\vec v)-g(\vec x _ 0)}{t}}\\
+&=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}-\left.\D{}{t}g(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 &=\D{(f-g)}{t}\\
 &=0
 \end{align*}
 $$
 
-In other words, $\form f$ is actually an equivalent class of functions $f$, such that a set of functions $\set{f\mid \d f=\d f_0}$, can now be represented as
+In other words, $\form f$ is actually an equivalent class of functions $f$, such that a set of functions $\set{f\mid \d f=\d f _ 0}$, can now be represented as
 
 $$
-\d f = \sum_{i=1}^n\Partial{f}{x^i} \d x^i
+\d f = \sum _ {i=1}^n\Partial{f}{x^i} \d x^i
 $$
 
 ## The Puzzle of $\frac{\partial (dx^\mu )}{\partial x^\nu}$
@@ -449,7 +449,7 @@ Now we have made out what vectors and covectors are:
  - Similarly, covectors are entities of the form
 
    $$
-   \form \omega =\sum a_i\d x^i
+   \form \omega =\sum a _ i\d x^i
    $$
 
 
@@ -469,9 +469,9 @@ So far so good.
 >
 > Then you turned to a text book for answer, [[Sean Carroll](https://arxiv.org/pdf/gr-qc/9712019.pdf)] for example. In most (if not all) text books, the equation reads
 > $$
-> \d x^i(\Partial{}{x^j}) =\Partial{(\d x^i)}{x^j}=\delta_j^i \notag
+> \d x^i(\Partial{}{x^j}) =\Partial{(\d x^i)}{x^j}=\delta _ j^i \notag
 > $$
-> That can't be right! You know very clear that $\Partial{x^i}{x^j}=\delta_j^i$ and $\Partial{(\d x^i)}{x^j}\neq\Partial{x^i}{x^j}$. 
+> That can't be right! You know very clear that $\Partial{x^i}{x^j}=\delta _ j^i$ and $\Partial{(\d x^i)}{x^j}\neq\Partial{x^i}{x^j}$. 
 >
 > A quick google search tells you that these operators [**are merely "notations"**](https://math.stackexchange.com/questions/1478544/basis-one-form-and-basis-vector-confusion). An [answer](https://math.stackexchange.com/a/2318102) went so far as to give the explanation that $\d f$ should be
 > $$
@@ -483,7 +483,7 @@ That bugged me a long time as well. However, if I start from $\Eqn{basis-one-for
 
 ## Redefined Vector and One-Forms
 
-At the end of last section, vectors were generalized as mathematical objects with the form $X=X^\mu\Partial{}{x^\mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X^\mu \d x_\mu$. 
+At the end of last section, vectors were generalized as mathematical objects with the form $X=X^\mu\Partial{}{x^\mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X^\mu \d x _ \mu$. 
 
 This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is not a total derivative of a function.
 
@@ -498,7 +498,7 @@ The cross product of vectors $\vec u \times \vec v$ is a very useful operation i
 The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product. 
 
 $$
-\vec x^{\mu_1} \wedge \vec x^{\mu_2} \wedge. . .\wedge \vec x^{\mu_r} = \sum_{P\in \mathbb S_r} \operatorname{sgn}(P) \vec x^{\mu_{P(1)}} \otimes\vec x^{\mu_{P(2)}}\otimes \cdots\otimes \vec x^{\mu _{P(r)}} \label{wedgeDef}
+\vec x^{\mu _ 1} \wedge \vec x^{\mu _ 2} \wedge. . .\wedge \vec x^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) \vec x^{\mu _ {P(1)}} \otimes\vec x^{\mu _ {P(2)}}\otimes \cdots\otimes \vec x^{\mu  _ {P(r)}} \label{wedgeDef}
 $$
 
 For example, 
@@ -516,7 +516,7 @@ Given a vector space $V$, a space of wedge product can be constructed as
 $$
 \wedge ^2 V = \set{ \vec u\wedge\vec v  {\mid}  \vec u,\vec v \in V  }\\
 \wedge ^3 V = \set{ \vec u\wedge\vec v \wedge \vec w {\mid} \vec u,\vec v,\vec w \in V  }\\
-\wedge ^n V = \set{ \vec u_1\wedge\vec u_2 \wedge\cdots\wedge \vec u_n {\mid} \vec u_i\in V ,i=1,2,\cdots,n }
+\wedge ^n V = \set{ \vec u _ 1\wedge\vec u _ 2 \wedge\cdots\wedge \vec u _ n {\mid} \vec u _ i\in V ,i=1,2,\cdots,n }
 $$
 
 Considering wedge products actually being $n\times n$ antisymmetric tensors can be seen as vectors, it's no wonder that this space is indeed a vector space.
@@ -550,17 +550,17 @@ $$
 >     $$
 >     \begin{align}
 >     \vec{u} \wedge \vec{v}
->     &=(u_1,u_2,u_3)\wedge(v_1,v_2,v_3)\notag\\
+>     &=(u _ 1,u _ 2,u _ 3)\wedge(v _ 1,v _ 2,v _ 3)\notag\\
 >     &= \begin{pmatrix}
->      0        & \red u_1v_2 − u_2v_1  & \red u_1v_3 − u_3v_1\\
->      \blue −u_1v_2 + u_2v_1 & 0        & \red u_2v_3 − u_3v_2\\
->      \blue −u_1v_3 + u_3v_1 & \blue −u_2v_3 + u_3v_2 & 0        
+>      0        & \red u _ 1v _ 2 − u _ 2v _ 1  & \red u _ 1v _ 3 − u _ 3v _ 1\\
+>      \blue −u _ 1v _ 2 + u _ 2v _ 1 & 0        & \red u _ 2v _ 3 − u _ 3v _ 2\\
+>      \blue −u _ 1v _ 3 + u _ 3v _ 1 & \blue −u _ 2v _ 3 + u _ 3v _ 2 & 0        
 >     \end{pmatrix}\notag\\
->     &= (u_1 v_2 - u_2 v_1) (\uvec{e}_1 \wedge \uvec{e}_2) + (u_3 v_1 - u_1 v_3) (\uvec{e}_3 \wedge \uvec{e}_1) + (u_2 v_3 - u_3 v_2) (\uvec{e}_2 \wedge \uvec{e}_3) \label{wedgetensorvector}\\
+>     &= (u _ 1 v _ 2 - u _ 2 v _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2) + (u _ 3 v _ 1 - u _ 1 v _ 3) (\uvec{e} _ 3 \wedge \uvec{e} _ 1) + (u _ 2 v _ 3 - u _ 3 v _ 2) (\uvec{e} _ 2 \wedge \uvec{e} _ 3) \label{wedgetensorvector}\\
 >          \notag\\
 >     \vec{u} \times \vec{v}
->     &=(u_1, u_2, u_3) \times (v_1, v_2, v_3) \notag\\
->     &= {\red(u_2v_3 − u_3v_2)}\uvec i + {\red(−u_1v_3 + u_3v_1)}\uvec j + {\red(u_1v_2 − u_2v_1)}\uvec k\notag\\
+>     &=(u _ 1, u _ 2, u _ 3) \times (v _ 1, v _ 2, v _ 3) \notag\\
+>     &= {\red(u _ 2v _ 3 − u _ 3v _ 2)}\uvec i + {\red(−u _ 1v _ 3 + u _ 3v _ 1)}\uvec j + {\red(u _ 1v _ 2 − u _ 2v _ 1)}\uvec k\notag\\
 >          \end{align}
 >     $$
 >
@@ -573,14 +573,14 @@ $$
 >
 >     However, this result is not the area of this two vectors. $\vec u \wedge\vec v$ is a bivector, it's norm $A^2=\norm{\vec u\wedge \vec v}^2\overset{\small\text{numerically}}{=\!=\!=\!=\!=}(\vec u \times \vec v)^2$ is the area of the parallelogram.
 >
-> 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$,$ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u_1 v_2 w_3 + u_2 v_3 w_1 + u_3 v_1 w_2 - u_1 v_3 w_2 - u_2 v_1 w_3 - u_3 v_2 w_1) (\uvec{e}_1 \wedge \uvec{e}_2 \wedge \uvec{e}_3) $. Still the volume($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
+> 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$,$ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u _ 1 v _ 2 w _ 3 + u _ 2 v _ 3 w _ 1 + u _ 3 v _ 1 w _ 2 - u _ 1 v _ 3 w _ 2 - u _ 2 v _ 1 w _ 3 - u _ 3 v _ 2 w _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2 \wedge \uvec{e} _ 3) $. Still the volume($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
 >
 >     There is more to it. While $\vec{u} \wedge \vec{v} \wedge \vec{w}$ is a simple construction of three vectors, it is also a wedge product of vector and yet a wedge product $\vec{u} \wedge (\vec{v} \wedge \vec{w})$. The volume of the parallelepiped ($3$-dimensional area) is now the span of a vector and an parallelogram ($2$-dimensional area). Similarly, a $(n+m)$-dimensional area can be spanned by a $n$-dimensional area and $m$-dimensional area.
 >
 
 ## Wedge Product of One-Forms
 
-Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X_{\mu\nu}\d x^\mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
+Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X _ {\mu\nu}\d x^\mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
 
 This can be seen as a tensor product of two one-forms.
 $$
@@ -596,10 +596,10 @@ Another way to see a two-form is that it's a second derivative of something. So 
 
 $$
 \begin{align*}
-\d (\form X) &= \d (X^\mu \d x_\mu)\\
-&=(\d X^\mu )\wedge\d x_\mu + X^\mu\d( \d x_\mu)\\
-\xrightarrow[\d( \d x_\mu)=0]{\text{by def.}}&=(\d X^\mu )\wedge\d x_\mu\\
-&=\Partial{X^\mu}{x_\nu}\d x_\nu \wedge\d x_\mu 
+\d (\form X) &= \d (X^\mu \d x _ \mu)\\
+&=(\d X^\mu )\wedge\d x _ \mu + X^\mu\d( \d x _ \mu)\\
+\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d X^\mu )\wedge\d x _ \mu\\
+&=\Partial{X^\mu}{x _ \nu}\d x _ \nu \wedge\d x _ \mu 
 \end{align*}
 $$
 

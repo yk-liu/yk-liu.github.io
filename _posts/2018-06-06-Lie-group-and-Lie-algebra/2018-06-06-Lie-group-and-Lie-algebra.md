@@ -44,11 +44,11 @@ $$
 		标量积  & 
 		\begin{cases} 
 			封闭性 & a \circ \vec{b} \in B \\ 
-			结合律 & a_1 \circ \left ( a_2 \circ \vec{b}_i \right) = \left( a_1 \circ a_2 \right)\circ \vec{b}_i  \\
-			单位元 & 1\circ \vec{b}_i=\vec{b}_i=\vec{b}_i \circ 1  \\
+			结合律 & a _ 1 \circ \left ( a _ 2 \circ \vec{b} _ i \right) = \left( a _ 1 \circ a _ 2 \right)\circ \vec{b} _ i  \\
+			单位元 & 1\circ \vec{b} _ i=\vec{b} _ i=\vec{b} _ i \circ 1  \\
 			\underline{双线性性} (分配律)&  \begin{cases}
-				a_1 \circ \left ( \vec{b}_1 + \vec{b}_2 \right) &= a \circ  \vec{b}_1 + a \circ \vec{b}_2\\
-				\left (a_1 +a_2\right) \circ \vec{b} &= a_1\circ \vec{b} +a_2\circ \vec{b}\\
+				a _ 1 \circ \left ( \vec{b} _ 1 + \vec{b} _ 2 \right) &= a \circ  \vec{b} _ 1 + a \circ \vec{b} _ 2\\
+				\left (a _ 1 +a _ 2\right) \circ \vec{b} &= a _ 1\circ \vec{b} +a _ 2\circ \vec{b}\\
 				\end{cases}
 		\end{cases}
 	\end{cases}
@@ -64,7 +64,7 @@ $$
 定义在圆上$(0 \le \varphi \le 2 \pi)$的所有函数构成线性向量空间.
 
 $$
-f(\varphi)=\sum_{-\infty}^{+\infty} a_m \exp{(i m \varphi)} \quad , m\in \mathbb{Z}
+f(\varphi)=\sum _ {-\infty}^{+\infty} a _ m \exp{(i m \varphi)} \quad , m\in \mathbb{Z}
 $$
 
 ### 代数
@@ -72,11 +72,11 @@ $$
 $$
 线性向量空间V + 矢量积 \square
 	\begin{cases} 
-		封闭性 &\vec{v}_1 \square \vec{v}_2 \in V\\
+		封闭性 &\vec{v} _ 1 \square \vec{v} _ 2 \in V\\
 		双线性性
 		&\begin{cases}
-			\left(\vec{v}_1+\vec{v}_2 \right)\square \vec{v}_3 = \vec{v}_1 \square \vec{v}_3+\vec{v}_2 \square \vec{v}_3\\ 
-			\vec{v}_1 \square \left(\vec{v}_2+\vec{v}_3 \right) =\vec{v}_1 \square \vec{v}_2+\vec{v}_1 \square \vec{v}_3
+			\left(\vec{v} _ 1+\vec{v} _ 2 \right)\square \vec{v} _ 3 = \vec{v} _ 1 \square \vec{v} _ 3+\vec{v} _ 2 \square \vec{v} _ 3\\ 
+			\vec{v} _ 1 \square \left(\vec{v} _ 2+\vec{v} _ 3 \right) =\vec{v} _ 1 \square \vec{v} _ 2+\vec{v} _ 1 \square \vec{v} _ 3
 		\end{cases}
         \end{cases}\notag
 $$
@@ -96,37 +96,37 @@ $$
 $$
 \begin{align*}
 x &\rightarrow \chi=Rx\\
- \Psi&\rightarrow \Phi=P_R\Psi
+ \Psi&\rightarrow \Phi=P _ R\Psi
 \end{align*}
 $$
 
-上面大写的希腊字母表示函数值, $\psi(x)=\Psi, \quad \psi(y)=\Phi$ ,  $P_R$ 是对标量 $\Phi$ (一个数)的变换. 
+上面大写的希腊字母表示函数值, $\psi(x)=\Psi, \quad \psi(y)=\Phi$ ,  $P _ R$ 是对标量 $\Phi$ (一个数)的变换. 
 
-注意 而 $\Psi \in \mathbb{C}$ 是一个标量, 因此就若采用矩阵表示, $R$是一个$n\times n$矩阵, 作用于$x\in \mathbb{C}^n$, 而$P_R$是一个算符, 作用于$\psi(x)= \Psi \in \mathbb{C}$
+注意 而 $\Psi \in \mathbb{C}$ 是一个标量, 因此就若采用矩阵表示, $R$是一个$n\times n$矩阵, 作用于$x\in \mathbb{C}^n$, 而$P _ R$是一个算符, 作用于$\psi(x)= \Psi \in \mathbb{C}$
 
-又因为一般有$\Phi=P_R\Psi=P_R\psi(x)\neq \psi(\chi)$, 因而将$\Phi$记为$\Phi=\phi(\chi)$
+又因为一般有$\Phi=P _ R\Psi=P _ R\psi(x)\neq \psi(\chi)$, 因而将$\Phi$记为$\Phi=\phi(\chi)$
 
 将上述关系整理为
 
 $$
 \begin{align*}
 x &\rightarrow \chi=Rx\\
-\psi(x)&\rightarrow \phi(\chi) =P_R\psi(\chi)
+\psi(x)&\rightarrow \phi(\chi) =P _ R\psi(\chi)
 \end{align*}
 $$
 
-因此$P_R$的作用是将函数$\phi$变换为一个新的函数$\psi$. 
+因此$P _ R$的作用是将函数$\phi$变换为一个新的函数$\psi$. 
 
 将上式改写之后可以得到
 
 $$
-\psi(x)={P_R}^{-1}\phi(x)=\psi(R^{-1}\chi)
+\psi(x)={P _ R}^{-1}\phi(x)=\psi(R^{-1}\chi)
 $$
 
-因此也可以说$P_R$的作用是"抵消" $R$的作用
+因此也可以说$P _ R$的作用是"抵消" $R$的作用
 
 $$
-\phi(x)=P_R\psi(x)=\psi(R^{-1}x)
+\phi(x)=P _ R\psi(x)=\psi(R^{-1}x)
 $$
 
 标量函数变换算符与群元素一一对应
@@ -149,7 +149,7 @@ $$
 
 #### Hausdorff空间
 
-若对任意两点$x,x'$, 都可以找到的$x,\,x'$的邻域$U_x,\, U_{x'}$,使得$x\in U_x,\, x' \in U_{x'}, \, U_x \bigcap  U_{x'} =\emptyset$, 就称此空间是Hausdorff空间.
+若对任意两点$x,x'$, 都可以找到的$x,\,x'$的邻域$U _ x,\, U _ {x'}$,使得$x\in U _ x,\, x' \in U _ {x'}, \, U _ x \bigcap  U _ {x'} =\emptyset$, 就称此空间是Hausdorff空间.
 > 直观的理解是, 这样的空间中任意两个点都是可以区分的.
 >
 > 注意并不能理解成这样的空间中,点无限致密. 因为在两个邻域"之间", 并不一定存在点. 举例来说,离散的点集中, 离散拓扑定义的拓扑空间就是Hausdorff空间.
@@ -185,7 +185,7 @@ A[1维曲线]--> B[2维曲面]
 
 为了研究方便,我们可以将$n$维流形映射到$\mathbb{R}^n$
 
-若$\mathcal{M}$是一个拓扑空间, ${U_i}$是$\mathcal{M}$的一个开覆盖(即$\bigcup U_i=\mathcal{M}$), $\varphi_i $是从$U_i$到$\mathbb{R}^m$的映射, 满足对于任意$U_i \bigcup U_j \neq \emptyset$的$U_i$和$U_j$, $\varphi_i \circ \varphi_j^{-1}$(这个映射即为$\varphi_i \circ \varphi_j^{-1}(x)=\varphi_i \left(\varphi_j^{-1}(x)\right)$) 是无穷可微的(光滑). 这样的拓扑空间就称为流形.
+若$\mathcal{M}$是一个拓扑空间, ${U _ i}$是$\mathcal{M}$的一个开覆盖(即$\bigcup U _ i=\mathcal{M}$), $\varphi _ i $是从$U _ i$到$\mathbb{R}^m$的映射, 满足对于任意$U _ i \bigcup U _ j \neq \emptyset$的$U _ i$和$U _ j$, $\varphi _ i \circ \varphi _ j^{-1}$(这个映射即为$\varphi _ i \circ \varphi _ j^{-1}(x)=\varphi _ i \left(\varphi _ j^{-1}(x)\right)$) 是无穷可微的(光滑). 这样的拓扑空间就称为流形.
 
 简单地说, 给一个拓扑空间配备一个性质足够好(可<u>微分</u>)的坐标映射, 就得到<u>微分</u>流形
 
@@ -227,7 +227,7 @@ $$
 > 李群的来源是数学家Lie 在研究形如
 > 
 > $$
-> \dot{x}(x_1,x_2,\cdots, x_n)=f(x_1,x_2,\cdots, x_n)\notag
+> \dot{x}(x _ 1,x _ 2,\cdots, x _ n)=f(x _ 1,x _ 2,\cdots, x _ n)\notag
 > $$
 > 
 > 的微分方程时引入的. 一组初始条件,就对应了一个解,即李群的一个单参数子群
@@ -236,13 +236,13 @@ $$
 
 ##### 李群的左平移
 
-李群的左平移$L_g$是一个李群到自身的映射:
+李群的左平移$L _ g$是一个李群到自身的映射:
 
 $$
-L_g:  G \rightarrow G \qquad x \rightarrow g \circ x
+L _ g:  G \rightarrow G \qquad x \rightarrow g \circ x
 $$
 
-诱导出一个切空间的微分映射$dL_g$. 如图所示.
+诱导出一个切空间的微分映射$dL _ g$. 如图所示.
 
 <img src="{{page.url}}切空间.png" style="zoom:30%" />
 
@@ -265,24 +265,24 @@ graph LR
 
 这样的映射之一,就是指数映射. 为了不与单位元 $  e  $ 混淆, 指数映射一律记为$  \exp(x)  $, 而不是$  e^x  $
 
-由`$  \vec{v}_{1} \rightarrow g _ {\vec{v}_ 1}(t)  $`是一一映射, 可以定义`$  \exp(\vec{v}_1)=g _ { \vec{v}_ 1} (1)  $`为指数映射.
+由`$  \vec{v} _ {1} \rightarrow g  _  {\vec{v} _  1}(t)  $`是一一映射, 可以定义`$  \exp(\vec{v} _ 1)=g  _  { \vec{v} _  1} (1)  $`为指数映射.
 
 指数映射的性质和定义在实数上的指数映射基本一致:
 
 $$
 \begin{align}
-\exp{\left[\left(s+t\right)\vec{v}_1\right]}&=\exp{\left(s\vec{v}_1\right)}\exp{\left(s\vec{v}_1\right)}\\
-\left[ \exp{\left(t \vec{v}_1\right)}\right]^{-1}&=\exp{\left(-t \vec{v}_1\right)}
+\exp{\left[\left(s+t\right)\vec{v} _ 1\right]}&=\exp{\left(s\vec{v} _ 1\right)}\exp{\left(s\vec{v} _ 1\right)}\\
+\left[ \exp{\left(t \vec{v} _ 1\right)}\right]^{-1}&=\exp{\left(-t \vec{v} _ 1\right)}
 \end{align}
 $$
 
-自此我们建立了李群中部分元素和李群单位元切空间$T_e$的一一对应.
+自此我们建立了李群中部分元素和李群单位元切空间$T _ e$的一一对应.
 
 #### 李群切空间到李群的邻域
 
 有了映射,我们得到如下定理:
 
-$e$处切空间$T _ e$中存在切空间单位元$\vec{e}$的邻域$TU_\vec{e}$, 使得$T U _ {\vec{e}}$通过指数映射,与$e$的邻域微分同构.
+$e$处切空间$T  _  e$中存在切空间单位元$\vec{e}$的邻域$TU _ \vec{e}$, 使得$T U  _  {\vec{e}}$通过指数映射,与$e$的邻域微分同构.
 
 #### 指数映射的Taylor展开
 
@@ -292,23 +292,23 @@ $e$处切空间$T _ e$中存在切空间单位元$\vec{e}$的邻域$TU_\vec{e}$,
 
 
 $$
-N_e=\lbrace \exp{\sum_{i=1}^{n}{x_i \vec{E}_i} | \sum_{i=1}^{n}{x_i \vec{E}_i} \in N_\vec{e}}\rbrace
+N _ e=\lbrace \exp{\sum _ {i=1}^{n}{x _ i \vec{E} _ i} | \sum _ {i=1}^{n}{x _ i \vec{E} _ i} \in N _ \vec{e}}\rbrace
 $$
 
-这个坐标系的含义是, 通过切空间的基矢量 $\vec{E}_i$, 展开切空间单位元邻域 $ N _ { \vec{e} } $得到$N _ \vec{e}$ 中的坐标$x_i$ , 然后将切空间的任意一个向量$\vec{v}= \sum_{i=1}^{n}{x_i \vec{E}_i}$通过指数映射$\exp{\vec{v}}$得到李群单位元素邻域的元素$\exp{\sum _ {i=1}^{n}{x_i \vec{E}_i}}$. 
+这个坐标系的含义是, 通过切空间的基矢量 $\vec{E} _ i$, 展开切空间单位元邻域 $ N  _  { \vec{e} } $得到$N  _  \vec{e}$ 中的坐标$x _ i$ , 然后将切空间的任意一个向量$\vec{v}= \sum _ {i=1}^{n}{x _ i \vec{E} _ i}$通过指数映射$\exp{\vec{v}}$得到李群单位元素邻域的元素$\exp{\sum  _  {i=1}^{n}{x _ i \vec{E} _ i}}$. 
 
 ##### 建立Taylor公式
 
-定理: 存在$\mathfrak{g}$的原点邻域$N_\vec{e}$.满足若$\vec{x} \in N _ \vec{e}$, 则 $0\le t \le 1 $都有$t \vec{x} \in N _ \vec{e}$, 且对$G$上解析的函数$f$有:
+定理: 存在$\mathfrak{g}$的原点邻域$N _ \vec{e}$.满足若$\vec{x} \in N  _  \vec{e}$, 则 $0\le t \le 1 $都有$t \vec{x} \in N  _  \vec{e}$, 且对$G$上解析的函数$f$有:
 
 $$
-f(g\cdot \exp{\vec{x}})=\sum_{n=0}^{\infty} \frac{1}{n!}\left(\vec{x}^n f\right)(g)=\exp{(\vec{x})} f\left(g\right)
+f(g\cdot \exp{\vec{x}})=\sum _ {n=0}^{\infty} \frac{1}{n!}\left(\vec{x}^n f\right)(g)=\exp{(\vec{x})} f\left(g\right)
 $$
 
 取$g=e,f(x)=x$可以看出上式就是指数函数的展开
 
 $$
-\exp{\vec{x}} = \sum_{n=0}^{\infty}\frac{1}{n!} \vec{x}^n \label{exponetialExpension}
+\exp{\vec{x}} = \sum _ {n=0}^{\infty}\frac{1}{n!} \vec{x}^n \label{exponetialExpension}
 $$
 
 注意到这里第一次出现了切空间的运算$\vec{x}^n$
@@ -317,13 +317,13 @@ $$
 > 
 > $$
 > \begin{align*}
-> \left(\vec{x}f\right) g & = \left(\vec{x}f \cdot L_g\right)(\exp{t \vec{x}}|_{t=0}) \\
-> & = \left(d \theta \left(\frac{d}{dt}\right)f \cdot L_g\right)(\exp{t \vec{x}}|_{t=0})\\
-> & =\frac{d}{dt} f  \left(g \exp{t \vec{x}}|_{t=0}\right)\\
+> \left(\vec{x}f\right) g & = \left(\vec{x}f \cdot L _ g\right)(\exp{t \vec{x}}| _ {t=0}) \\
+> & = \left(d \theta \left(\frac{d}{dt}\right)f \cdot L _ g\right)(\exp{t \vec{x}}| _ {t=0})\\
+> & =\frac{d}{dt} f  \left(g \exp{t \vec{x}}| _ {t=0}\right)\\
 > &\Rightarrow \\
-> \left(\vec{x}f\right) \left( g \exp{u \vec{x}}\right) & = \frac{d}{d u} f  \left(g \exp{u \vec{x}}|_{t=0}\right) \\
+> \left(\vec{x}f\right) \left( g \exp{u \vec{x}}\right) & = \frac{d}{d u} f  \left(g \exp{u \vec{x}}| _ {t=0}\right) \\
 > &\Rightarrow \\
-> \left(\vec{x}^nf\right) \left( g \exp{u \vec{x}}\right) & = \frac{d^n}{ {d u}^n} f  \left(g \exp{u \vec{x}}|_{t=0}\right) \\
+> \left(\vec{x}^nf\right) \left( g \exp{u \vec{x}}\right) & = \frac{d^n}{ {d u}^n} f  \left(g \exp{u \vec{x}}| _ {t=0}\right) \\
 > \end{align*}
 > $$
 >
@@ -362,9 +362,9 @@ $$
 $$
 \begin{align}
 (\vec{x}+\vec{y})^n-\begin{matrix} \underbrace{ (\vec{x}+\vec{y})\cdot(\vec{x}+\vec{y})\cdot\cdots\cdot(\vec{x}+\vec{y})} \\ n 个(\vec{x}+\vec{y})\end{matrix}
-&=\sum_i{\binom{i}{n}\vec{x}^i\vec{y}^{n-i}}-\sum_i{P_n^i(\vec{x},\vec{y})} \notag \\
-&=\sum_i{
-\binom{i}{n}\sum_j{
+&=\sum _ i{\binom{i}{n}\vec{x}^i\vec{y}^{n-i}}-\sum _ i{P _ n^i(\vec{x},\vec{y})} \notag \\
+&=\sum _ i{
+\binom{i}{n}\sum _ j{
 \left(\vec{x}^i\vec{y}^{n-i}-
 \begin{matrix} \underbrace{ \vec{x}\cdot\vec{y}\cdot\vec{x}\cdot\vec{x}\cdot\vec{y}\cdot\cdots} \\ 第j 种排列\end{matrix}\right)
 }}\notag\\
@@ -414,7 +414,7 @@ graph LR
     end
 ```
 
-李群的"无穷小元素"实际上不在李群中. 他们指的实际上是单位元$e$所在切空间$T_e$的切向量. 但是可以将切向量映射到在单位元附近的李群元素. 他们的积表现为矢量和.对应逆表现为矢量反向.
+李群的"无穷小元素"实际上不在李群中. 他们指的实际上是单位元$e$所在切空间$T _ e$的切向量. 但是可以将切向量映射到在单位元附近的李群元素. 他们的积表现为矢量和.对应逆表现为矢量反向.
 
 $$
 \left(1+\delta\right)\left(1+\varepsilon\right) = 1+\delta + \varepsilon +\delta\varepsilon \approx 1 +\left(\delta + \varepsilon\right)\notag
@@ -465,21 +465,21 @@ Z---C
 三维转动群的变换矩阵构成一个李群.其中选取绕$z$轴旋转$\omega$角度的矩阵, 构成一个单参数李群:
 
 $$
-R_z(\omega)=\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\omega}&0\\0&0&1\end{bmatrix}
+R _ z(\omega)=\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\omega}&0\\0&0&1\end{bmatrix}
 $$
 
 单位元为
 
 $$
-R_z(0)=\begin{bmatrix}1&0&0\\ 0&1&0\\0&0&1\end{bmatrix}=\mathbf{I} \notag
+R _ z(0)=\begin{bmatrix}1&0&0\\ 0&1&0\\0&0&1\end{bmatrix}=\mathbf{I} \notag
 $$
 
 单位元的切空间内切向量为
 
 $$
 \begin{align*}
-\dot{\vec{R}}_z(0)=\left.\frac{d}{d\omega}R_z(\omega)\right|_{\omega=0}&=\left.\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\omega}&0\\0&0&0\end{bmatrix}\right|_{\omega=0}\\
-&=\left.\begin{bmatrix}-\sin{\omega}&-\cos{\omega}&0\\ \cos{\omega}&-\sin{\omega}&0\\0&0&0\end{bmatrix}\right|_{\omega=0}\\
+\dot{\vec{R}} _ z(0)=\left.\frac{d}{d\omega}R _ z(\omega)\right| _ {\omega=0}&=\left.\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\omega}&0\\0&0&0\end{bmatrix}\right| _ {\omega=0}\\
+&=\left.\begin{bmatrix}-\sin{\omega}&-\cos{\omega}&0\\ \cos{\omega}&-\sin{\omega}&0\\0&0&0\end{bmatrix}\right| _ {\omega=0}\\
 &=\begin{bmatrix}0&-1&0\\1&0&0\\0&0&0\end{bmatrix}
 \end{align*}
 $$
@@ -488,12 +488,12 @@ $$
 
 $$
 \begin{align*}
-R_x(\omega)=\begin{bmatrix}1&0&0\\ 0&\cos{\omega}&-\sin{\omega}\\0&\sin{\omega}&\cos{\omega}\end{bmatrix}\qquad
-\dot{\vec{R}}_x(0)&=\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\\
-R_y(\omega)=\begin{bmatrix}\cos{\omega}&0&\sin{\omega}\\ 0&1&0\\-\sin{\omega}&0&\cos{\omega}\end{bmatrix}\qquad
-\dot{\vec{R}}_y(0) &=\begin{bmatrix}0&0&1\\0&0&0\\-1&0&0\end{bmatrix}\\
-R_z(\omega)=\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\omega}&0\\0&0&1\end{bmatrix}\qquad
-\dot{\vec{R}}_z(0)&=\begin{bmatrix}0&-1&0\\1&0&0\\0&0&0\end{bmatrix}
+R _ x(\omega)=\begin{bmatrix}1&0&0\\ 0&\cos{\omega}&-\sin{\omega}\\0&\sin{\omega}&\cos{\omega}\end{bmatrix}\qquad
+\dot{\vec{R}} _ x(0)&=\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\\
+R _ y(\omega)=\begin{bmatrix}\cos{\omega}&0&\sin{\omega}\\ 0&1&0\\-\sin{\omega}&0&\cos{\omega}\end{bmatrix}\qquad
+\dot{\vec{R}} _ y(0) &=\begin{bmatrix}0&0&1\\0&0&0\\-1&0&0\end{bmatrix}\\
+R _ z(\omega)=\begin{bmatrix}\cos{\omega}&-\sin{\omega}&0\\ \sin{\omega}&\cos{\omega}&0\\0&0&1\end{bmatrix}\qquad
+\dot{\vec{R}} _ z(0)&=\begin{bmatrix}0&-1&0\\1&0&0\\0&0&0\end{bmatrix}
 \end{align*}
 $$
 
@@ -501,10 +501,10 @@ $$
 
 $$
 \begin{align*}
-{\dot{\vec{R}}_x(0)}^2&=\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&-1&0\\0&0&-1\end{bmatrix}\\
-{\dot{\vec{R}}_x(0)}^3&=\begin{bmatrix}0&0&0\\0&-1&0\\0&0&-1\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&0&1\\0&-1&0\end{bmatrix}\\
-{\dot{\vec{R}}_x(0)}^4&=\begin{bmatrix}0&0&0\\0&0&1\\0&-1&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&1&0\\0&0&1\end{bmatrix}\\
-{\dot{\vec{R}}_x(0)}^5&=\begin{bmatrix}0&0&0\\0&1&0\\0&0&1\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\\
+{\dot{\vec{R}} _ x(0)}^2&=\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&-1&0\\0&0&-1\end{bmatrix}\\
+{\dot{\vec{R}} _ x(0)}^3&=\begin{bmatrix}0&0&0\\0&-1&0\\0&0&-1\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&0&1\\0&-1&0\end{bmatrix}\\
+{\dot{\vec{R}} _ x(0)}^4&=\begin{bmatrix}0&0&0\\0&0&1\\0&-1&0\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&1&0\\0&0&1\end{bmatrix}\\
+{\dot{\vec{R}} _ x(0)}^5&=\begin{bmatrix}0&0&0\\0&1&0\\0&0&1\end{bmatrix}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}=\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\\
 \end{align*}
 $$
 
@@ -514,9 +514,9 @@ $$
 
 $$
 \begin{align}
-\exp{\left(\omega\dot{\vec{R}}_x(0)\right)}&=\sum_n{\frac{1}{n!}\left(\omega\dot{\vec{R}}_x(0)\right)^n} \notag\\ 
-&=I\cdot(1+{\frac{1}{2!}\omega^2{\left(\dot{\vec{R}}_x(0)\right)}^2}+{\frac{1}{4!}\omega^4{\left(\dot{\vec{R}}_x(0)\right)}^4}+\cdots)
-+(\omega \dot{\vec{R}}_x(0)+{\frac{1}{3!}\omega^3{\left(\dot{\vec{R}}_x(0)\right)}^3}+{\frac{1}{5!}\omega^5{\left(\dot{\vec{R}}_x(0)\right)}^5}\cdots)\notag\\
+\exp{\left(\omega\dot{\vec{R}} _ x(0)\right)}&=\sum _ n{\frac{1}{n!}\left(\omega\dot{\vec{R}} _ x(0)\right)^n} \notag\\ 
+&=I\cdot(1+{\frac{1}{2!}\omega^2{\left(\dot{\vec{R}} _ x(0)\right)}^2}+{\frac{1}{4!}\omega^4{\left(\dot{\vec{R}} _ x(0)\right)}^4}+\cdots)
++(\omega \dot{\vec{R}} _ x(0)+{\frac{1}{3!}\omega^3{\left(\dot{\vec{R}} _ x(0)\right)}^3}+{\frac{1}{5!}\omega^5{\left(\dot{\vec{R}} _ x(0)\right)}^5}\cdots)\notag\\
 &=I+(-{\frac{1}{2!}\omega^2}+{\frac{1}{4!}\omega^4}+\cdots)\begin{bmatrix}0&0&0\\0&1&0\\0&0&1\end{bmatrix}
 +(\omega-{\frac{1}{3!}\omega^3}+{\frac{1}{5!}\omega^5}\cdots)\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\notag\\
 &=\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}+\begin{bmatrix}0&0&0\\0&1&0\\0&0&1\end{bmatrix}+(-{\frac{1}{2!}\omega^2}+{\frac{1}{4!}\omega^4}+\cdots)\begin{bmatrix}0&0&0\\0&1&0\\0&0&1\end{bmatrix}
@@ -525,7 +525,7 @@ $$
 +(\omega-{\frac{1}{3!}\omega^3}+{\frac{1}{5!}\omega^5}\cdots)\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\notag\\
 &=\begin{bmatrix}1&0&0\\0&0&0\\0&0&0\end{bmatrix}+\cos{\omega}\begin{bmatrix}0&0&0\\0&1&0\\0&0&1\end{bmatrix}+\sin{\omega}\begin{bmatrix}0&0&0\\0&0&-1\\0&1&0\end{bmatrix}\notag\\
 &=\begin{bmatrix}1&0&0\\0&\cos{\omega}&-\sin{\omega}\\0&\sin{\omega}&\cos{\omega}\end{bmatrix}\notag\\
-&=R_x(\omega)
+&=R _ x(\omega)
 \end{align}
 $$
 
@@ -543,10 +543,10 @@ $$
 
 $$
 \begin{align*}
-\exp{(\delta\vec{R}_x)}\cdot\exp{(\varepsilon\vec{R}_x)}&=\left(1+\delta\vec{R}_x+\frac{1}{2!}\delta^2{\vec{R}_x}^2+\cdots\right)\cdot\left(1+\varepsilon\vec{R}_x+\frac{1}{2!}\varepsilon^2{\vec{R}_x}^2+\cdots\right)\\
-&=\left(1+(\delta+\varepsilon)\vec{R}_x+\frac{1}{2!}(\delta^2+2\delta\varepsilon+\varepsilon^2){\vec{R}_x}^2 +\cdots\right)\\
-&=\left(1+(\delta+\varepsilon)\vec{R}_x+\frac{1}{2!}(\delta+\varepsilon)^2{\vec{R}_x}^2+\cdots\right)\\
-&=\exp{((\delta+\varepsilon)\vec{R}_x)}
+\exp{(\delta\vec{R} _ x)}\cdot\exp{(\varepsilon\vec{R} _ x)}&=\left(1+\delta\vec{R} _ x+\frac{1}{2!}\delta^2{\vec{R} _ x}^2+\cdots\right)\cdot\left(1+\varepsilon\vec{R} _ x+\frac{1}{2!}\varepsilon^2{\vec{R} _ x}^2+\cdots\right)\\
+&=\left(1+(\delta+\varepsilon)\vec{R} _ x+\frac{1}{2!}(\delta^2+2\delta\varepsilon+\varepsilon^2){\vec{R} _ x}^2 +\cdots\right)\\
+&=\left(1+(\delta+\varepsilon)\vec{R} _ x+\frac{1}{2!}(\delta+\varepsilon)^2{\vec{R} _ x}^2+\cdots\right)\\
+&=\exp{((\delta+\varepsilon)\vec{R} _ x)}
 \end{align*}
 $$
 
@@ -561,7 +561,7 @@ $$
 $$
 \begin{align*}
 R&=1+\varepsilon g& R&=\exp(\varepsilon g)\\
-P_R&=1+\omega \varepsilon g & P_R&=\exp(\omega\varepsilon g)\\
+P _ R&=1+\omega \varepsilon g & P _ R&=\exp(\omega\varepsilon g)\\
 &\mathrm{some\ calculation} &&\mathrm{some\ calculation}\\
 f(\omega)&=0 & f(\omega)&=0\\
 \end{align*}\\
@@ -575,10 +575,10 @@ $$
 
 $$
 \begin{align*}
-P_{R(\alpha)}\psi(x)&=\psi({R(\alpha)}^{-1}x)\\
-&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{ {\partial \alpha}^n}\alpha^n}\\
-&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{ {\partial \left({R(\alpha)}^{-1}x\right)}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{ {\partial \alpha}^n} \alpha^n}\\
-&=\psi(x)+\sum_{n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi(x)}{ {\partial x}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{ {\partial \alpha}^n} \alpha^n}\\
+P _ {R(\alpha)}\psi(x)&=\psi({R(\alpha)}^{-1}x)\\
+&=\psi(x)+\sum _ {n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{ {\partial \alpha}^n}\alpha^n}\\
+&=\psi(x)+\sum _ {n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi({R(\alpha)}^{-1}x)}{ {\partial \left({R(\alpha)}^{-1}x\right)}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{ {\partial \alpha}^n} \alpha^n}\\
+&=\psi(x)+\sum _ {n=2}^{\infty}{\frac{1}{n!}\frac{\partial^n \psi(x)}{ {\partial x}^n}\frac{\partial^n \left({R(\alpha)}^{-1}x\right)}{ {\partial \alpha}^n} \alpha^n}\\
 \end{align*}
 $$
 
@@ -600,8 +600,8 @@ $$
 
 [^李群短文2]: Tom Church. *LIE GROUPS AND LIE ALGEBRAS.* PDF file.April 25, 2018. <http://math.uchicago.edu/~womp/2007/lie2007.pdf>
 
-[^李群短文3]: <http://idv.sinica.edu.tw/ftliang/diff_geom/*diff_geometry(II)/Lie_theory/2lie_algebra.pdf>
+[^李群短文3]: <http://idv.sinica.edu.tw/ftliang/diff _ geom/*diff _ geometry(II)/Lie _ theory/2lie _ algebra.pdf>
 
 [^海森堡量子力学]: Heisenberg's QM", P58, Baker-Campbell-Hausdorff Formula
 
-[^BCH公式]: https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula
+[^BCH公式]: https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff _ formula
