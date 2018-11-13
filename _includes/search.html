@@ -5,7 +5,9 @@
 </div>
 
 Enable Full-content search: <input type="checkbox" id="Full-content"  onclick="CheckBox()">
-<!-- Enable Fuzzy search: <input type="checkbox" id="fuzzy"  onclick="CheckBox()"> -->
+<!-- Enable Fuzzy search: <input type="checkbox" id="fuzzy"  onclick="CheckBox()"> 
+fuzzy search is awful
+-->
 
 <script src="{{ site.baseurl }}/assets/js/search-script.js" type="text/javascript" ></script>
 
@@ -18,7 +20,7 @@ SimpleJekyllSearch({
             json: 'https://yk-liu.github.io/blog/searchFull.json',
             noResultsText: 'No results found',
             limit: 15,
-            fuzzy: true
+            fuzzy: false
         }) 
 		
 function CheckBox() {
@@ -30,7 +32,7 @@ function CheckBox() {
             json: 'https://yk-liu.github.io/blog/searchFull.json',
 			noResultsText: 'No results found',
             limit: 15,
-            fuzzy: true
+            fuzzy: false
         }) 
     } else {
         return SimpleJekyllSearch({
@@ -39,7 +41,7 @@ function CheckBox() {
             json: 'https://yk-liu.github.io/blog/search.json',
 			noResultsText: 'No results found',
             limit: 15,
-            fuzzy: true
+            fuzzy: false
         }) 
     }
    }
