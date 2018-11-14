@@ -3,9 +3,9 @@
 
    function scrollFunction() {
        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-           document.getElementById("BackToTopBtn").style.display = "block";
+           document.getElementById("BackToTop").style.display = "block";
        } else {
-           document.getElementById("BackToTopBtn").style.display = "none";
+           document.getElementById("BackToTop").style.display = "none";
        }
    }
 
