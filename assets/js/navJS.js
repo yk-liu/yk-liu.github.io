@@ -24,6 +24,7 @@
         x.style.display = "none";
         document.getElementById("main").style.marginLeft = "6%";
     }
+   }
 	
 	/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 	var prevScrollpos = window.pageYOffset;
@@ -37,4 +38,3 @@
 	  prevScrollpos = currentScrollPos;
 	}
 		
-}
