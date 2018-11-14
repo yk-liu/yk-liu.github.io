@@ -17,7 +17,7 @@
             <div class="header-links">
                <a class="link" href="/repo" >Codes</a>
                <a class="link" href="/blog">Posts</a>
-			   <a class="link" href="/about" >About</a>
+			   <!-- <a class="link" href="/about" >About</a> -->
             </div>
          </div>
          <a class="down" href="#about" data-scroll><i class="icon fas fa-chevron-down fa-lg" aria-hidden="true"></i></a>
@@ -31,43 +31,36 @@
          </div>
          <div class="lower">
             <div class="permlinks">
-               <h2><a href="/blog" title="Notes">Notes</a></h2>
+               <h2><a href="/blog" title="Posts">Posts</a></h2>
                <p></p>
                <p>Recent Posts</p>
                <ul>
                   {% for post in site.posts limit:2 %}
                   <li>
-                     <a href="{{ post.url }}">{{ post.title }}</a> <i class="fas fa-angle-double-right"></i>{{ post.date | date_to_string }} <br>
+                     <a href="{{ post.url }}">{{ post.title }}</a> <i class="fas fa-angle-double-right"></i>&nbsp;{{ post.date | date_to_string }} <br>
                      {% if post.description %}
                      <dd style="text-align: justify"><i class="fas fa-caret-right"></i>&nbsp;{{ post.description }}
                      <dd>
-                        {% endif %}
+                     {% endif %}
                   </li>
                   {% endfor %}
                </ul>
                <p>Upcoming Notes</p>
                <ul>
                K-theory Study Notes
-               {% for draft in site.drafts limit:1 %}
-               <li><a >{{ draft.title }}</a>  
-               {% if draft.description %}
-               <dd style="text-align: justify"><i class="fas fa-caret-right"></i>;&nbsp;{{ draft.description }}<dd>
-               {% endif %}
-               </li>
-               {% endfor %}
                </ul>
                <p><a href="/blog" title="All Posts">All Posts</a></p>
                <hr>
             </div >
          </div >
-         <div class="lower"> 
+         <!-- <div class="lower"> 
          <div class="permlinks">
          <h2><a herf='/repo' title="Codes">Codes</a></h2>
          <p>My Recent Repo</p>
          <p></p>
          <p><a href="/repo" title="All Repos">All Repos</a></p>
          </div>
-         </div>
+         </div> -->
       </section>
       {% include footer.html %} 
       <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
