@@ -16,7 +16,6 @@ email: yingkai.liu@outlook.com
 markdown: kramdown
 
 kramdown:
- auto_ids: true
  footnote_nr: 1
  entity_output: as_char
  
