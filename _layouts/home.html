@@ -21,60 +21,54 @@
          </div>
          <a class="down" href="#about" data-scroll><i class="icon fas fa-chevron-down fa-lg" aria-hidden="true"></i></a>
       </div>
-      
       <section id="about">
          <div class="user-details">
             <h1> Yingkai Liu </h1>
             <center>
-            <p style="width: 80%;text-align: justify"> &nbsp;&nbsp;&nbsp;&nbsp;I am interested in the Topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am interested in how particles subject to relatively simple laws can exhibit novel collective properties. I also like coding and enjoy sharing my thoughts. </p>
+               <p style="width: 80%;text-align: justify"> &nbsp;&nbsp;&nbsp;&nbsp;I am interested in the Topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am interested in how particles subject to relatively simple laws can exhibit novel collective properties. I also like coding and enjoy sharing my thoughts. </p>
             </center>
          </div>
-         
-         <div class="lower"> 
- <div class="permlinks">		 
-            <h2><a href="/blog" title="Notes">Notes</a></h2>
-            <p></p>
-            <p>Recent Posts</p>
-            <ul>
-            {% for post in site.posts limit:2 %}
-               <li><a href="{{ post.url }}">{{ post.title }}</a> <i class="fas fa-angle-double-right"></i>{{ post.date | date_to_string }} <br>
-                  {% if post.description %}
-                     <dd style="text-align: justify"><i class="fas fa-caret-right"></i>&nbsp;{{ post.description }}<dd>
-                  {% endif %}
-               </li>
-            {% endfor %}
-            </ul>
-            
-            <p>Upcoming Notes</p>
-            <ul>
-            K-theory Study Notes
-            {% for draft in site.drafts limit:1 %}
+         <div class="lower">
+            <div class="permlinks">
+               <h2><a href="/blog" title="Notes">Notes</a></h2>
+               <p></p>
+               <p>Recent Posts</p>
+               <ul>
+                  {% for post in site.posts limit:2 %}
+                  <li>
+                     <a href="{{ post.url }}">{{ post.title }}</a> <i class="fas fa-angle-double-right"></i>{{ post.date | date_to_string }} <br>
+                     {% if post.description %}
+                     <dd style="text-align: justify"><i class="fas fa-caret-right"></i>&nbsp;{{ post.description }}
+                     <dd>
+                        {% endif %}
+                  </li>
+                  {% endfor %}
+               </ul>
+               <p>Upcoming Notes</p>
+               <ul>
+               K-theory Study Notes
+               {% for draft in site.drafts limit:1 %}
                <li><a >{{ draft.title }}</a>  
-                  {% if draft.description %}
-                     <dd style="text-align: justify"><i class="fas fa-caret-right"></i>;&nbsp;{{ draft.description }}<dd>
-                  {% endif %}
+               {% if draft.description %}
+               <dd style="text-align: justify"><i class="fas fa-caret-right"></i>;&nbsp;{{ draft.description }}<dd>
+               {% endif %}
                </li>
-            {% endfor %}
-            </ul>
-            
-            <p><a href="/blog" title="All Posts">All Posts</a></p>
-            
-			<hr>
-		</div >
-		</div >
-		<div class="lower"> 
-		 <div class="permlinks">
-			<h2><a herf='/repo' title="Codes">Codes</a></h2>
-		    <p>My Recent Repo</p>
-		    <p></p>
-		    <p><a href="/repo" title="All Repos">All Repos</a></p>
-			</div>
+               {% endfor %}
+               </ul>
+               <p><a href="/blog" title="All Posts">All Posts</a></p>
+               <hr>
+            </div >
+         </div >
+         <div class="lower"> 
+         <div class="permlinks">
+         <h2><a herf='/repo' title="Codes">Codes</a></h2>
+         <p>My Recent Repo</p>
+         <p></p>
+         <p><a href="/repo" title="All Repos">All Repos</a></p>
          </div>
-         
+         </div>
       </section>
-      
-     {% include footer.html %} 
-      
+      {% include footer.html %} 
       <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
       <script src="{{ "/assets/js/particles_conf.js" | prepend: site.baseurl }}"></script>
       <script src="{{ "/assets/js/particles.min.js" | prepend: site.baseurl }}"></script>
