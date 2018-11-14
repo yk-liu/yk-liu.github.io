@@ -16,8 +16,6 @@
       <link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | prepend: site.baseurl }}">
       <!-- link to TOCbtn.css -->
       <link rel="stylesheet" href="{{ "/assets/css/TOCbtn.css" | prepend: site.baseurl }}">
-	  <!-- link to post.css -->
-      <link rel="stylesheet" href="{{ "/assets/css/post.css" | prepend: site.baseurl }}">
       <!--  -->
    </head>
    
@@ -67,10 +65,10 @@
             {% endif %}
             <hr>
             {{ content }}
-			
-            {% include commentit.html %}
-            {% include footer.html %} 
          </div>
+		 {% include commentit.html %}
    </div>
+   
    </body>
+    {% include footer.html %} 
 </html>
