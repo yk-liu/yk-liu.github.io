@@ -15,9 +15,9 @@ email: yingkai.liu@outlook.com
 
 markdown: kramdown
 
-kramdown:
- footnote_nr: 1
- entity_output: as_char
+#kramdown:
+# footnote_nr: 1
+# entity_output: as_char
  
 highlighter: rouge
 
