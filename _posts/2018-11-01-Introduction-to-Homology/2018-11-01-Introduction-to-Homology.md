@@ -152,7 +152,7 @@ From polyhedrons we are going to construct three groups. By combining these grou
 
 The notation of a simplex as $\spl{p _ 1,p _ 2,\cdots,p _ n}$ is actually insufficient. It also helps defining the boundary of simplexes.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="50%">
 
 These two triangles cannot be bought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
 
