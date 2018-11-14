@@ -189,7 +189,7 @@ A[1维曲线]--> B[2维曲面]
 
 简单地说, 给一个拓扑空间配备一个性质足够好(可<u>微分</u>)的坐标映射, 就得到<u>微分</u>流形
 
-<img src="{{page.url}}流形.png" style="zoom:50%" />
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra/流形.png" style="zoom:50%" />
 
 (未完)
 
@@ -244,7 +244,7 @@ $$
 
 诱导出一个切空间的微分映射$dL _ g$. 如图所示.
 
-<img src="{{page.url}}切空间.png" style="zoom:30%" />
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra/%E5%88%87%E7%A9%BA%E9%97%B4.png" style="zoom:30%" />
 
 由此可以得到
 

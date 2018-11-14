@@ -433,7 +433,7 @@ $$
 利用留数定理可以将这两项表示为一个积分, 即构造一个积分具有两个一阶极点, 在这两个一阶极点的积分值分别是上式中的$\frac{1}{2E _ p} e^{iE _ p(t _ x-t _ y)}$和$\frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)}$.
 
 > 逆着利用留数定理, 构造$f(p _ 0)$, 有两个一阶极点$\pm E _ p$, 
-> 
+>
 > $$
 > \begin{align*}
 > f(p _ 0)&= \frac{1}{p^2-m^2}e^{-ip(x-y)}  \\
@@ -442,20 +442,19 @@ $$
 > &=e^{i\vec{p}\cdot(\vec{x}-\vec{y})}\left(\frac{-\frac{1}{2E _ p}e^{-ip _ 0(t _ x-t _ y)}}{p _ 0-E _ p}+\frac{\frac{1}{2E _ p}e^{-ip _ 0(t _ x-t _ y)}}{p _ 0+E _ p}\right)
 > \end{align*}
 > $$
-> 
+>
 > 因此$f(p _ 0)$在一阶极点的留数有
-> 
+>
 > $$
 > \begin{align}
 > \Res{f(E _ p)}&=\frac{1}{2E _ p}e^{-iE _ p(t _ x-t _ y)}\\
 > \Res{f(-E _ p)}&=-\frac{1}{2E _ p}e^{iE _ p(t _ x-t _ y)}
 > \end{align}
 > $$
-> 
+>
 > 对$p _ 0$解析延拓到复平面, 根据$(t _ x-t _ y)$的符号, 选取积分路径$C _ \pm$, 得到
 >
-> <img src="{{page.url}}feynman-pro.png" style="zoom:50%" />
-> 
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-07-Introduction-to-QFT/feynman-pro.png" style="zoom:50%" />
 > $$
 > \begin{align*}
 > &\quad \oint _ {C _ \pm}  f(p _ 0)  \d p _ 0 \\
@@ -467,7 +466,7 @@ $$
 > $$
 >
 > 因此利用$\Theta(x-y)+\Theta(y-x)=\begin{cases} 1+0 & x\gt y \\ \frac12+ \frac12 & x=y \\ 0+1 & x\lt y \end{cases}\quad\equiv1$得到化简的形式, 
-> 
+>
 > $$
 > \begin{align}
 > &\phantom{=} \Theta(t _ x-t _ y)\frac{1}{2E _ p} e^{-iE _ p(t _ x-t _ y)}+\Theta(t _ y-t _ x)\frac{1}{2E _ p} e^{iE _ p(t _ x-t _ y)}\notag\\
@@ -739,7 +738,7 @@ $$
 利用编时算符, 可以将式$\Eqn{UnonTorder}$进一步化简.
 
 > 注意到对于$n=2$情形, $H(-t)=e^{iH _ 0t}He^{-iH _ 0t}=(e^{iH _ 0t}H^\dagger e^{-iH _ 0t})^\dagger=e^{-iH _ 0t}He^{iH _ 0t}=H(t)$
-> 
+>
 > $$
 > \begin{align*}
 > \int _ {t _ 0}^{t} \d \tau _ 1\int^{\tau _ 1} _ {t _ 0} \d \tau _ 2 H _ I(\tau _ 1) H _ I(\tau _ 2)
@@ -748,15 +747,15 @@ $$
 > &=\int _ {t _ 0}^{t} \d \tau _ 2\int _ {t _ 0}^{\tau _ 2} \d \tau _ 1  H _ I(\tau _ 2)H _ I(\tau _ 1) \\
 > \end{align*}
 > $$
-> 
+>
 > 利用编时算符:
 >
 > $$
 > \Torder{H _ I(\tau _ 2)H _ I(\tau _ 1)}=\begin{cases}H _ I(\tau _ 2)H _ I(\tau _ 1),\quad t _ x\gt t _ y\\H _ I(\tau _ 1)H _ I(\tau _ 2) ,\quad t _ x\lt t _ y \end{cases}
 > $$
-> 
+>
 > 可以将上式写成
-> 
+>
 > $$
 > \begin{align*}
 > \underbrace{\int _ {t _ 0}^{t} \d \tau _ 1\int^{\tau _ 1} _ {t _ 0}} _ {t _ 0\lt\tau _ 2\lt \tau _ 1\lt t} \d \tau _ 2 H _ I(\tau _ 1) H _ I(\tau _ 2)
@@ -766,11 +765,15 @@ $$
 > &=\underbrace{\int _ {t _ 0}^{t} \d \tau _ 2\int _ {t _ 0}^{\tau _ 2} \d \tau _ 1   \underbrace{\Torder{H _ I(\tau _ 1)H _ I(\tau _ 2)}} _ {t _ 0\lt\tau _ 1\lt \tau _ 2\lt t} } _ \text{lower triangle}
 > \end{align*}
 > $$
-> 
-> <img src="{{page.url}}Un.png" style="zoom:50%" />
+>
+> ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-07-Introduction-to-QFT/Un.png)
+>
+>
+>
+>
 >
 > 因此可以得到
-> 
+>
 > $$
 > \begin{align*}
 > \underbrace{\int _ {t _ 0}^{t} \d \tau _ 2\int _ {t _ 0}^{t} \d \tau _ 1 \Torder{H _ I(\tau _ 1)H _ I(\tau _ 2)}} _ \text{entire square}
@@ -781,7 +784,7 @@ $$
 > $$
 >
 > 类似地, 对于$n=3$, 因子为$6=3!$. 因此
-> 
+>
 > $$
 > \begin{align}
 > &\quad(-i)^n\int _ {t _ 0}^{t} \d \tau _ 1\int _ {t _ 0}^{\tau _ 1} \d \tau _ 2 \cdots  \int _ {t _ 0}^{\tau _ n} \d \tau _ n H _ I(\tau _ 1) H _ I(\tau _ 2)\cdots  H _ I(\tau _ n)\notag\\
