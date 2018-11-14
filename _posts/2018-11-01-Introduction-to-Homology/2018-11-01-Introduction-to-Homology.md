@@ -64,11 +64,11 @@ Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count
 
 |            Name            |                            Image                             | Vertices $V$ | Edges $E$ | Faces $F$ | Euler characteristic: $V-E+F$ |
 | :------------------------: | :----------------------------------------------------------: | ------------ | --------- | --------- | ----------------------------- |
-|        Tetrahedron         | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/tetrahedron.png) | 4            | 6         | 4         | 2                             |
-|            Cube            | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/Cube.png) | 8            | 12        | 6         | 2                             |
-|  Cube with a hole (wrong)  | ![](https://raw.github.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/wrongCubeWithHole.png) | 16           | 24        | 10        | 2                             |
-| Cube with a hole (correct) | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/CubeWithHole.png) | 16           | 32        | 16        | 0                             |
-|        Hollow cube         | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/hollowCube.png) | 16           | 24        | 12        | 4                             |
+|        Tetrahedron         | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/tetrahedron.png) | 4            | 6         | 4         | 2                             |
+|            Cube            | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Cube.png) | 8            | 12        | 6         | 2                             |
+|  Cube with a hole (wrong)  | ![](https://raw.github.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/wrongCubeWithHole.png) | 16           | 24        | 10        | 2                             |
+| Cube with a hole (correct) | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CubeWithHole.png) | 16           | 32        | 16        | 0                             |
+|        Hollow cube         | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/hollowCube.png) | 16           | 24        | 12        | 4                             |
 
 Notice that a polyhedron's faces must be simple connected (any two vertices must be connected by an edge), so the correct cube with a hole needs a few extra lines.
 
@@ -84,11 +84,11 @@ Homology, however, is just a natural way of defining Euler characteristics on to
 
 Triangulation is again no stranger for anyone who ever took part in [IYPT](http://iypt.org)(International Young Physicists' Tournament), [CUPT](http://adsabs.harvard.edu/abs/2013APS..MARF38013L)(China Undergraduate Physics Tournament), or any PTs, and had some experience with [COMSOL Multiphysics® software](https://www.comsol.com/comsol-multiphysics). The following is a triangulation, or a "meshing" as is called in the software, of a spring, from [Nishant Nath](https://nishantnath.wordpress.com/2012/06/21/comsol-tutorials-meshing/).
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/COMSOL(R)mesh.png" width="100%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/COMSOL(R)mesh.png" width="100%">
 
 It's also very commonly seen at 3D modeling (image from [freepik](https://www.freepik.com/blog/10-free-low-poly-animal-vector-images/)), see also [here](https://poly.google.com/view/46bXrRt8pFF).
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/LowPolyBear.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/LowPolyBear.png" width="30%">
 
 It's self-evident that this technique is very useful as it converts a smooth object to a "discrete" one, while maintaining its most important traits so that you can still recognize it's a bear. Acute readers might have known where we are heading: we are going to calculate the Euler Characteristic of smooth objects (topological spaces) by triangulating. 
 
@@ -110,7 +110,7 @@ A simplex can have generalized "faces". These are named $k$-faces. For instance,
 
 ## Simplicial Complexes and Polyhedrons
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/intersection.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersection.png" width="30%">
 
 From simplexes, simplicial complexes can be constructed. Simplicial complexes are again generalizations of polyhedrons in higher or lower dimensions.
 
@@ -121,13 +121,13 @@ A simplicial complex $K$ is a set of simplexes glued together, such that
 
 This definition is quite intuitive. By requirement 1., a simplicial complex has a well defined boundary (surface). All bodies must be covered by a surface. For example, an interior of a cube is not a simplicial complex. By requirement 2., simplexes in a simplicial complex are not allowed to freely pass through each other. By "not passing though", we mean all the points generated by the intersection must be included. For example, the left is not a simplicial complex for the intersection is not counted. While the right is a lawful simplicial complex. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/intersectionExample.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersectionExample.png" width="30%">
 
 Formally, the simplicial complex $K$ is defined as a set of simplexes.
 
 The dimension of $K$, denoted as $\dim K$ is defined as the largest dimension of simplexes in $K$. This means that although a complex can be in a high dimensional space, for example a triangle embedded in a $4$-dimensional space, the dimension of the complex itself is unchanged, $3$ as in the example.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/complex.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/complex.png" width="30%">
 
 The set of the above object is
 
@@ -152,7 +152,7 @@ From polyhedrons we are going to construct three groups. By combining these grou
 
 The notation of a simplex as $\spl{p _ 1,p _ 2,\cdots,p _ n}$ is actually insufficient. It also helps defining the boundary of simplexes.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-11-01-Introduction-to-Homology/assets/triangles.png">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png">
 
 These two triangles cannot be bought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
 

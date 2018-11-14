@@ -44,7 +44,7 @@ One form is a concept useful in integration, the integrand is a one-form. To per
 
 The definitions of curves and functions are as follow. A curve on a manifold is a linear map from interval $[a,b]$ to a set of points. Functions are defined over curves on manifold, *not* over curves in $\R^n$. With the help of local coordinates, curves and functions each have coordinate representations.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/curve-function.png" width="80%" />
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/curve-function.png" width="80%" />
 
 # General Vectors and Covectors
 
@@ -169,7 +169,7 @@ When I think about vector on a manifold, I have the picture of some arrow tangen
 
 Since in general there is no way to define a "straight arrow" connecting two points. Vectors can only be "tangent vectors". In other words, vectors cannot live on the manifold itself, but the collection of tangent spaces over the entire manifold, called the **tangent bundle**. That way, the vector is a kept at a geometrical view. This is a generalization of the notion of a bound vector in a Euclidean space. But this requires embedding the manifold in some higher dimensional space, which is not very convenient, since Differential Geometry aims at investigating the space (or maybe space-time) without jumping out of it.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing _ tangent _ vector.JPG" width="90%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing _ tangent _ vector.JPG" width="90%">
 
 Obviously, once the vector is in an ambient space, it can be represented by a tuple of numbers. How to represent a vector although "it can be represented by a tuple of numbers"? There will be different basis on each point of a manifold and
 
@@ -183,7 +183,7 @@ Still, the problem is that vectors do not live on the manifold. This forbids def
 
 >  Let's start with a concrete example. Here is a curved surface being the manifold in focus embed in $\R^3$. Although this is not always possible for any manifold, we are going to use this as a tool to gain some intuition. 
 >
->  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing _ tangent _ vector _ as _ operator.png" width="90%">
+>  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing _ tangent _ vector _ as _ operator.png" width="90%">
 >
 >  First we are going to see the surface in $ \R^3 $ as $\vec r(x,y,z) = Const.$ On this surface we can have different local coordinates $(u,v)$ (left) or $(w,s)$ (right). With a curve $\Sigma$ on the surface we can have both a using embedded coordinates as $\vec r(t)=(x(t),y(t),z(t))$, or local coordinates as $\vec r(t) = (u(t),v(t))$ or $\vec r(t) = (w(t),s(t))$. The tangent vector $X$ at $p=\vec r(t _ 0)=(u _ 0,v _ 0)=(w _ 0,s _ 0)$ has a very simple definition in $\R^3 $ as $\vec X = \D{\vec r(t)}{t}$. Using the chain rule, 
 >  
@@ -215,7 +215,7 @@ Still, the problem is that vectors do not live on the manifold. This forbids def
 
 By far, $\Eqn{vectorToOperator}$ means any operator have a "component" form using differential operators. $\Eqn{operator _ basis}$ means the partial differential operators act like unit vectors or bases of the space of operators. There is nothing we don't already know about differential operators. But the above example provide us a good we to identify a vector with a differential operator.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing _ find _ operator _ for _ vector.png" width="90%" >
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing _ find _ operator _ for _ vector.png" width="90%" >
 
 Reverse the above order, we will find the way to assign an operator to a vector. Starting from a vector $\vec X$, we can choose a basis $\set{\uvec e _ 1, \uvec e _ 2}$, where $\vec X = a\uvec e _ 1+b \uvec e _ 2$. According to the basis, we can find a local coordinate $(x _  1,x  _ 2)$. Now combine the differential operators $\set{\Partial{}{x _ 1},\Partial{}{x _ 2}}$ like the basis vector, we have the differential operator $a\Partial{}{x _ 1}+b\Partial{}{x _ 2}\dfdas X$. We can go further to find some curve (indicated by black lines) $\Gamma : \cases{ u=u(t)\\ v= v(t)}$ such that $ \left( \dot u(t _ 0) ,\dot v(t _ 0)\right)=(a,b) $ .
 
@@ -269,7 +269,7 @@ A vector field can be seen as arrows sprinkled on a manifold as shown in the lef
 
 >  A point follows the direction of vector field moves at a "velocity" of the magnitude of the vector, tracing out a curve on the manifold.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/ _ posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/vector-curve.png" width="80%"/>
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/vector-curve.png" width="80%"/>
 
 
 
