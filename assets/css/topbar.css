@@ -7,6 +7,7 @@
     z-index: 2; /* Stay on top */
     top: 0; /* Stay at the top */
     overflow: hidden;
+	transition: top 0.3s; /* Transition effect when sliding down (and up) */
     /*height: 8%;*/
 }
 
