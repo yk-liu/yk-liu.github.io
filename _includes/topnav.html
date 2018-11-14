@@ -1,0 +1,13 @@
+<div class="topnav">
+      <a class="active" href="{{ site.baseurl }}" target="_blank">Home</a>
+      <a class="active" href="{{ site.post }}" target="_blank">Posts</a>
+	  <a class="active" href="{{ site.baseurl }}/tags" target="_blank">Tags</a>
+	  <a class="active" href="{{ site.baseurl }}/about" target="_blank">About</a>
+      {% if site.github_username %}
+         <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none;float: right;">
+         <i class="fab fa-github fa-lg" ></i>
+         </a>
+      {% endif %}
+   </div>
+   
+<script src="{{ "/assets/js/navJS.js" | prepend: site.baseurl }}" async ></script>

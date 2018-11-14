@@ -1,0 +1,3 @@
+all _ in math need to be sourounded by spaces. see "kramdown italic"
+but the raw.git... links may contain "_post", dont change them to " _ post"
+all | in math need to be replaced by \vert or \mid, or it will be seen as table

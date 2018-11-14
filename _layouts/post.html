@@ -18,17 +18,7 @@
       <link rel="stylesheet" href="{{ "/assets/css/backtotopbtn.css" | prepend: site.baseurl }}">
       <!--  -->
    </head>
-   {% include header.html %}
-   <div class="topnav" id="topnav">
-      <!-- Use any element to open the sidenav -->
-      <a style="font-size:30px;cursor:pointer" onclick="ToggleTOC()">&#9776; TOC </a>
-      <a class="active" href="{{ "/blog" | prepend: site.baseurl }}" target="_blank">Posts</a>
-      {% if site.github_username %}
-         <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none;float: right;">
-         <i class="fab fa-github fa-lg" ></i>
-         </a>
-      {% endif %}
-   </div>
+   {% include topnav.html %}
    <!-- this is side bar -->
    <div id="mySidenav" class="sidenav" style="display: none;">
       <div class='toc-container'>
@@ -75,6 +65,4 @@
          </div>
       </body>
    </div>
-   
-   <script src="{{ "/assets/js/PostJS.js" | prepend: site.baseurl }}" async ></script>
 </html>
