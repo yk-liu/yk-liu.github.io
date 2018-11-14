@@ -16,7 +16,7 @@
    }
    
    function ToggleTOC() {
-    var x = document.getElementById("mySidenav");
+    var x = document.getElementById("TOCBtn");
     if (x.style.display === "none") {
         x.style.display = "inline-block";
         document.getElementById("main").style.marginLeft = "24%";

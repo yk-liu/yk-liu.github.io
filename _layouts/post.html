@@ -30,6 +30,7 @@
    </div>
    <!-- this is Back to Top Button -->
    <button onclick="topFunction()" id="BackToTopBtn" title="Go to top"><i class="fas fa-angle-double-up"></i> Top</button>
+   <button onclick="ToggleTOC()" id="TOCBtn" title="Toggle ToC">&#9776; TOC </button>
    <!-- Add all page content inside this div if you want the side nav to push page content to the right
       (not used if you only want the sidenav to sit on top of the page -->
    <div id="main">
@@ -60,6 +61,7 @@
             {% endif %}
             <hr>
             {{ content }}
+			
             {% include commentit.html %}
             {% include footer.html %} 
          </div>
