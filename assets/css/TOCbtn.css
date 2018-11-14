@@ -1,5 +1,5 @@
 #TOCBtn {
-  display: none;
+  display: block;
   position: fixed;
   top: 20px;
   left: 30px;
