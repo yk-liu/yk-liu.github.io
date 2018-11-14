@@ -1,4 +1,4 @@
-#BackToTopBtn {
+#BackToTop {
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -13,6 +13,6 @@
   border-radius: 4px;
 }
 
-#BackToTopBtn:hover {
+#BackToTop:hover {
   background-color: #1a222c;
 }
