@@ -94,7 +94,7 @@ It's self-evident that this technique is very useful as it converts a smooth obj
 
 Similar techniques can be adopted to topology spaces. We can use "triangles" to mesh out any oddly shaped topological space, turning it into a "polyhedron". From this polyhedron, we can calculate the Euler characteristic of the space, telling us how many "holes" are in this topological space. This gives us a way to classify topology spaces according to its "holes". This is an important aspect of a topological space as in the famous example of topology - a cup and a doughnut is topological equivalent. (image from [Wikipedia](https://en.wikipedia.org/wiki/Topology))
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Mug _ and _ Torus _ morph.gif">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif">
 
 ## Simplexes
 
@@ -187,7 +187,7 @@ $$
 Using boundary operator we can build a chain complex:
 
 $$
-\require{mathtools}
+
 0\substack{i\\\hookrightarrow}C _ r\xrightarrow{\partial _ r}C _ {r-1}\xrightarrow{\partial _ r}C _ {r-2}\xrightarrow{\partial _ r} \cdots\xrightarrow{\partial _ 2}C _ {1}\xrightarrow{\partial _ 1}0
 $$
 
