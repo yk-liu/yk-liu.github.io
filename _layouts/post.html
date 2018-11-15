@@ -42,18 +42,15 @@
                </div>
                <div id="info">
                   <div id="date" style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
-                     <p>
     					{% if page.Edit %}
                         Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }} <br>
                         Edited:  &nbsp {{ page.Edit | date: '%B %d, %Y' }}
                         {% else %}
                         Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }}
                         {% endif %}
-                     </p>
                   </div>
                   {% if site.tags != '' %}
                   <div id="tag-list">
-                     <p>
                         Tags:  &nbsp [
                         {% for tag in page.tags %}
                         {% capture tag_name %}{{ tag }}{% endcapture %}
@@ -62,14 +59,11 @@
                         </code>
                         &nbsp
                         {% endfor %}]
-                     </p>
                   </div>
                   {% endif %}	
                </div>
                <div id="info">
-			     <p>
                   Font Size: &nbsp {% include fontAdj.html %}
-				 </p>
                </div>
             </div>
             <hr>
