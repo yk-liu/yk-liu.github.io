@@ -1,0 +1,16 @@
+button {
+	vertical-align: bottom;
+	margin: 0 0.3125em;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	background-color: #42b983;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+}
+
+button:hover {
+  background-color: #1a222c;
+}
