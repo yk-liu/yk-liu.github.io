@@ -1,9 +1,8 @@
 <div class="topnav" id="topnav">
-<!--TODO: add class:"active" to active btn-->
-      <a href="{{ site.baseurl }}">Home</a>
-      <a href="{{ site.baseurl}}/blog" target="_blank">Posts</a>
-	  <a href="{{ site.baseurl }}/blog/tags" target="_blank">Tags</a>
-	  <a href="{{ site.baseurl }}/about" target="_blank">About</a>
+      <a href="{{ site.baseurl }}" {% if include.active == "home" %}  class="active"  {% endif %} >Home</a>
+      <a href="{{ site.baseurl}}/blog" target="_blank" {% if include.active == "post" %}  class="active"  {% endif %} >Posts</a>
+	  <a href="{{ site.baseurl }}/blog/tags" target="_blank" {% if include.active == "tags" %}  class="active"  {% endif %} >Tags</a>
+	  <a href="{{ site.baseurl }}/about" target="_blank" {% if include.active == "about" %}  class="active"  {% endif %} >About</a>
       {% if site.github_username %}
          <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none;float: right;">
          <i class="fab fa-github fa-lg" ></i>
@@ -11,8 +10,11 @@
       {% endif %}
 </div>
 
-      <!-- this is Back to Top Button -->
-   <button onclick="topFunction()" id="BackToTop" title="Go to top" style="display: block;"><i class="fas fa-angle-double-up"></i> Top</button>
-   <!-- link to backtotopbtn.css -->
+<!-- this is Back to Top Button -->
+<button onclick="topFunction()" id="BackToTop" title="Go to top" style="display: block;"><i class="fas fa-angle-double-up"></i> Top</button>
+<!-- link to backtotopbtn.css -->
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/backtotopbtn.css">
+<!-- link to topbar.css-->
+<link rel="stylesheet" href="{{ "/assets/css/topbar.css" | prepend: site.baseurl }}">
+<!---->
 <script src="{{ "/assets/js/navJS.js" | prepend: site.baseurl }}" async ></script>

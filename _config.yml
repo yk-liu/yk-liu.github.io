@@ -67,5 +67,7 @@ defaults:
       mathjax: "true"
       commentable: "true"
       toc: "true"
+      status: "finished"
+      protected: "false"
 
 

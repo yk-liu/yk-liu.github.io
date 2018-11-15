@@ -3,14 +3,12 @@
    {% include head.html %}
    <!-- link to tagpage.css-->
    <link rel="stylesheet" href="{{ "/assets/css/tagpage.css" | prepend: site.baseurl }}">
-   <!-- link to topbar.css-->
-   <link rel="stylesheet" href="{{ "/assets/css/topbar.css" | prepend: site.baseurl }}">
    <!-- google PT sans for tags -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
    <!-- font awesome --> 
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
    <!-- -->
-   {% include topnav.html %}
+   {% include topnav.html active="tags"%}
    <body>
    <div style = "margin-right: 3%;padding: 50px" class="container">
       {% include tagCloud.html %}  
