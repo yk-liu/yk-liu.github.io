@@ -81,3 +81,13 @@ code.highligher-rouge
     background-color: #f8f8f8;
  
 }
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
