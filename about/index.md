@@ -17,6 +17,8 @@ As for my current interest, on homepage I wrote:
 
 > I am interested in the Topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am also interested in how particles subject to relatively simple laws can exhibit novel collective properties. I also like coding and enjoy sharing my thoughts.
 
+Here is my [CV]() (last update: 2018-11-14).
+
 # The Site
 
 This website, built from code pieces from various sources, is not unlike the Frankenstein's Monster. This website, having responsibility in conveying knowledge and a nice touch of humor, however, is unlike the Frankenstein's Monster.
