@@ -306,6 +306,15 @@ thead {
     background-color: #fafafa;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    overflow: auto;
+    page-break-inside: auto;
+    text-align: left;
+}
+
 table tr th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
@@ -334,6 +343,16 @@ table tr td:last-child {
 
 .md-task-list-item>input {
     margin-left: -1.3em;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
 }
 
 @media screen and (min-width: 914px) {
