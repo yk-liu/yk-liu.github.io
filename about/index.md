@@ -14,7 +14,7 @@ My name is Yingkai Liu. I am currently a senior student in Nankai University, Ch
 
 With more understanding of physics, I found the theory used to describe a phenomenon is more and more elegant but in the same time complicated. I was happy about the differential equations, impressed by linear algebra, struck by group theory and now mesmerized by topology and differential geometry. **I am aware that physics requires much more than *just* mathematics. In the same time I believe that with more mathematics there will be deeper physics.** 
 
-As for my current interest, on homepage I wrote:
+As for my current interest, on my CV I wrote:
 
 > I am interested in the Topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am also interested in how particles subject to relatively simple laws can exhibit novel collective properties. I also like coding and enjoy sharing my thoughts.
 
