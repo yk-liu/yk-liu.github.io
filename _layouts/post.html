@@ -39,9 +39,12 @@
    <div id="main">
          <div style = "margin-right: 3%;padding: 50px" class="container">
 		  <div id="front-matter">
+		    <div id="title">
             <p style="padding-bottom: .4rem;font-size: 2.5rem;line-height: 1.3;font-weight:bold">
                {{page.title}}
             </p>
+			</div>
+			<div id="info">
             <p style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
                {% if page.Edit %}
                  Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }} <br>
@@ -63,8 +66,8 @@
                </p>
             {% endif %}	
 			</div>
-			
 			{% include fontAdj.html %}
+			</div>
 			
             <hr>
 			
