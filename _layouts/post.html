@@ -45,16 +45,16 @@
             </p>
 			</div>
 			<div id="info">
-            <p style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
+            <div id="date" style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
                {% if page.Edit %}
                  Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }} <br>
                  Edited:  &nbsp {{ page.Edit | date: '%B %d, %Y' }}
                {% else %}
                  Posted:  &nbsp {{ page.date | date: '%B %d, %Y' }}
                {% endif %}
-            </p>
+            </div>
             {% if site.tags != '' %}
-               <p>
+               <div id="tag-list">
                Tags:  &nbsp [
                   {% for tag in page.tags %}
                   {% capture tag_name %}{{ tag }}{% endcapture %}
@@ -63,7 +63,7 @@
                      </code>
                      &nbsp
                   {% endfor %}]
-               </p>
+               </div>
             {% endif %}	
 			</div>
 			{% include fontAdj.html %}
