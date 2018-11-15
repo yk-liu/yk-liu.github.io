@@ -11,7 +11,7 @@
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
-  transition: 0.3s;
+  transition-duration: 0.3s;
 }
 
 #BackToTop:hover {

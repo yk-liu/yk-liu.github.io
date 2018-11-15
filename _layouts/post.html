@@ -60,12 +60,37 @@
                      &nbsp
                   {% endfor %}]
                </p>
-            {% endif %}
+            {% endif %}	
+			<div class="textcontrols" >
+			<button role="button" id="decreasetext"> <span style="font-size: smaller">A-</span></button>
+			<button role="button" id="resettext">   <span>A </span> </button>
+			<button role="button" id="increasetext"><span style="font-size: larger">A+</span></button>
+			</div>
             <hr>
             {{ content }}
          </div>
 		 {% include commentit.html %}
    </div>
+   
+   <script>
+   	// Increase/descrease font size
+	$('#increasetext').click(function() {
+		curSize = parseInt($('html').css('font-size')) + 2;
+		if (curSize <= 32)
+			$('html').css('font-size', curSize);
+	});
+
+	$('#resettext').click(function() {
+		if (curSize != 18)
+			$('html').css('font-size', 18);
+	});
+
+	$('#decreasetext').click(function() {
+		curSize = parseInt($('html').css('font-size')) - 2;
+		if (curSize >= 14)
+			$('html').css('font-size', curSize);
+	});
+   </script>
    
    </body>
     {% include footer.html %} 
