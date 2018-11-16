@@ -7,7 +7,7 @@ commentable: false
 
 ## Why aren't my comments shown on the page?
 
-Well, this website means *a lot* to me. I don't want to get into any trouble because anyone else's comments. **So all comments will be moderated**. So it might take a few days before it finally shows up on the website. Still, I reserve the right to edit or delete comments that do not meet the standards. See how the system ([comm(enit|it)](https://commentit.io/)) works [here](https://commentit.io/faq).
+Well, this website means *a lot* to me. I don't want to get into any trouble because anyone else's comments. **So all comments will be moderated**. So it might take a few days before it finally shows up on the website. Still, I reserve the right to edit or delete comments that do not meet the standards. See how the system ([comm(enit\|it)](https://commentit.io/)) works [here](https://commentit.io/faq).
 
 ## Do you read comment?
 
