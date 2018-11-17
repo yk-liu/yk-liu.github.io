@@ -57,17 +57,17 @@ html, body {
   line-height: 1.55;
   margin: 0 auto;
   max-width: 600px;
-  padding-top: 100px;
+  padding-top: 200px;
   width: 100%;
 }
 
 .offline .runner-container {
-  height: 150px;
-  max-width: 600px;
-  overflow: hidden;
-  position: absolute;
-  top: 35px;
-  width: 44px;
+    height: 150px;
+    max-width: 600px;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    width: 44px;
 }
 
 .offline .runner-canvas {
