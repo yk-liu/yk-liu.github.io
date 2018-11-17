@@ -1,9 +1,15 @@
+body {
+	position: relative;
+}
+
 footer {
     display:block
 }
 
 .footer{
 	bottom: 0;
+	left:0;
+	right:0;
 	position: absolute;
 	width:100%;
     background:#1a222c;
