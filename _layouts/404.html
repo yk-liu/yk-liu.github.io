@@ -40,6 +40,18 @@
          p {text-align:center;}
       </style>
    </head>
+   
+   
+{% include topnav.html active="home"%}
+      
+      <!-- link to topbar.css-->
+      <link rel="stylesheet" href="https://yk-liu.github.io/assets/css/topbar.css">
+	     {% include theme-vue.html%}
+		 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet" async>
+      <!---->
+   
+   
+   
    <body id="t" class="offline" >
       <link rel="stylesheet" href="{{ "/404/index.css" | prepend: site.baseurl }}">
       <!-- -->
@@ -65,5 +77,8 @@
       <h2>Return to previous page or have some fun!</h2>
       <h2>Press space to play.</h2>
       <p style='width = 80%'>I must have forgotten to correct this link, or the page you seek for is no longer here. You can try search the result or contact me.</p>
+	  
+	  
    </body>
+   {% include footer.html %} 
 </html>
