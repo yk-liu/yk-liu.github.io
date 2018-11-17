@@ -41,7 +41,7 @@
                   </p>
                </div>
                <div id="info">
-                  <div id="date" style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;color = grey">
+                  <div id="date">
     					{% if page.Edit %}
                         <p><code class="highligher-rouge"> <nobr>Posted</nobr></code>:  &nbsp {{ page.date | date: '%B %d, %Y' }} </p>
                         <p><code class="highligher-rouge"> <nobr>Edited</nobr></code>:  &nbsp {{ page.Edit | date: '%B %d, %Y' }} </p>
@@ -62,7 +62,7 @@
                   </div>
                   {% endif %}	
                </div>
-               <div id="info">
+               <div id="info" style="padding-bottom: .4rem;">
                   <p><code class="highligher-rouge"> <nobr>Fonts</nobr></code>: &nbsp {% include fontAdj.html %}</p>
                </div>
             </div>
