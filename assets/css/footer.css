@@ -3,9 +3,10 @@ footer {
 }
 
 .footer{
+	bottom: 0;
     background:#1a222c;
     padding:10px 0;
-    margin-top:100px;
+    margin-top:80px;
     text-align:center;
     color:white;
 }
