@@ -1,6 +1,6 @@
 ---
 title: About
-layout: about
+layout: info
 Edit: 2018-11-14
 toc: false
 commentable: false

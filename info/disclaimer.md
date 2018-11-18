@@ -13,11 +13,11 @@ All content provided on this blog is for informational purposes only. The owner 
 
 The owner will not be liable for any errors or omissions in this information nor for the availability of this information. The owner will not be liable for any losses, injuries, or damages from the display or use of this information.
 
-## Downloadable Files and Images
+# Downloadable Files and Images
 
 Any downloadable file, including but not limited to pdfs, docs, jpegs, pngs, is provided at the user’s own risk. The owner will not be liable for any losses, injuries, or damages resulting from a corrupted or damaged file.
 
-## Comments
+# Comments
 
 Comments are welcome. However, the blog owner reserves the right to edit or delete any comments submitted to this blog without notice due to :
 
@@ -33,6 +33,6 @@ The blog owner is not responsible for the content in comments.
 
 Users of website participate at their own risk, and take personal responsibility for their comments, username, and any information provided. The blog owner accepts no responsibility or liability for any data, text, images, messages, or any other materials whatsoever (“Content”) in any comments on this Blog.
 
-## Change of Disclaimer
+# Change of Disclaimer
 
 This blog disclaimer is subject to change at anytime.
