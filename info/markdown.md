@@ -1,3 +1,11 @@
+---
+layout: info
+title: Markdown Syntax
+commentable: false
+Edit: 2018-11-01
+---
+
+
 # Highlights
 
 ```
