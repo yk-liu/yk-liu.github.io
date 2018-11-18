@@ -185,7 +185,7 @@ $$
 
 The boundary of a complex is of particular interest to us. If we want to somehow calculate the Euler Characteristic, the notions of faces, edges and points are very helpful. They are conveniently the boundaries of bodies, faces and edges respectively.
 
-The boundary operator $\partial _ r$ acts on a $r$-simplex gives its boundary. The $0$-simplex is defined as has no boundary, denoted as $\partial _ 0p _ 0=0$. 
+The boundary operator $\partial _ r$ acts on an $r$-simplex gives its boundary. The $0$-simplex is defined as has no boundary, denoted as $\partial _ 0p _ 0=0$. 
 
 Utilizing the orientated simplexes, higher dimensional simplexes can have well defined boundaries.
 
@@ -195,6 +195,10 @@ $$
 &\dfdas\sum _ {i=0}^{r}(-1)^i(p _ 0,p _ 1,\cdots,\hat{p _ {i}},\cdots,p _ r)\\
 \end{align*}
 $$
+
+> Geometrical examples:
+>
+> A cube's boundary is it's surface. This surface have no boundary. (Think like this: the surface is equivalent to the surface of a sphere, which is "enclosed", "whole".) **Similarly, all boundaries have no boundary.** Proof see [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)] `Lemma 3.3`.
 
 ## Interlude: Free Abelian Group
 
@@ -229,34 +233,35 @@ $$
 $$
 The $r$-chain group of simplicial complex $K$ is denoted as $C_r(K)$. We allow $r$ to be greater than $\dim(K)$, by setting all such $C_r$s to be $\set{0}$.
 
-## Chain Complex
-
-Using boundary operator we can build a chain complex:
-$$
-0\substack{i\\\hookrightarrow}C _ n\xrightarrow{\partial _ n}C _ {n-1}\xrightarrow{\partial _ {n-1}}C _ {n-2}\xrightarrow{\partial _ {n-2}} \cdots\xrightarrow{\partial _ 2}C _ {1}\xrightarrow{\partial _ 1}C_0\xrightarrow{\partial _ 0}0
-$$
-Where $\substack{i\\\hookrightarrow}$ denotes the inclusion map. Given a subset $B$ of a set $A$, the injection $f:B\rightarrow A$ defined by $f(b)=b$ for all $b \in B$ is called the inclusion map. That is to say:
-$$
-i:0 \rightarrow 0 \in C_n
-$$
-
-> Insisting on putting $0$ on the left side seems to me purely an aesthetic choice. This chain complex is commonly seen in k-theories.
+> **Chain Complex**
+>
+> Using boundary operator we can build a chain complex:
+> $$
+> 0\substack{i\\\hookrightarrow}C _ n\xrightarrow{\partial _ n}C _ {n-1}\xrightarrow{\partial _ {n-1}}C _ {n-2}\xrightarrow{\partial _ {n-2}} \cdots\xrightarrow{\partial _ 2}C _ {1}\xrightarrow{\partial _ 1}C_0\xrightarrow{\partial _ 0}0
+> $$
+> Where $\substack{i\\\hookrightarrow}$ denotes the inclusion map. Given a subset $B$ of a set $A$, the injection $f:B\rightarrow A$ defined by $f(b)=b$ for all $b \in B$ is called the inclusion map. That is to say:
+> $$
+> i:0 \rightarrow 0 \in C_n
+> $$
+>
+> > Insisting on putting $0$ on the left side seems to me purely an aesthetic choice. This chain complex is commonly seen in k-theories.
 
 ## Cycles
 
-A $r$-cycle is a chain with no boundary. We can also say that a $r$-cycle $c$ is the kernel of $\partial_r$:
+An $r$-cycle is a chain with no boundary. We can also say that an $r$-cycle $c$ is the kernel of $\partial_r$:
 $$
 \partial_r c = 0
 $$
 
-> Geometrical examples:
->
-> - A cube's boundary is it's surface. This surface have no boundary. (Think like this: the surface is equivalent to the surface of a sphere, which is "enclosed", "whole".) **Similarly, all boundaries have no boundary.** Proof see [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)] `Lemma 3.3`.
-> - A doughnut has no boundary.  
+All $r$-cycles forms $r$-cycle group.
 
 ## Boundaries
 
-A 
+An $r$-boundary is an $r$-chain such that it is the boundary of a $(r+1)$-chain. We can also say that an $r$-boundary $b$ is the image of $\partial_{r+1}$:
+$$
+b =\partial_{r+1} c
+$$
+A
 
 
 
