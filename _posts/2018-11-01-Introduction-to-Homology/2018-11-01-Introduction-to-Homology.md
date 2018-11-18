@@ -51,6 +51,8 @@ I struggled a little for all the terms in Topology meaning "equivalence" (with t
 
 This section follows [[Armstrong](https://www.springer.com/gb/book/9780387908397)].
 
+## The Counterexample
+
 Euler characteristic is actually a topological invariant. Many of Chinese students encounter this concept around primary school or middle school, as a interesting exercise to develop a sense of space. Nevertheless, it's probably the most famous topological invariant. The law is somethings stated as Euler's rule, it states:
 
 >Let $V, E,F$ denote respectively the numbers of vertices (corners), edges and faces of a polyhedron, then
@@ -76,9 +78,19 @@ You can see that by continuously deforming a cube, to tetrahedron, [Octahedron](
 
 Any quantity We say that this number characterizes the space, hence the name.
 
+## Insights of the counterexample
+
+Why is a cube with a hole different with other polyhedrons and how can we characterize it without using Euler Characteristic? 
+
+One way to see it is that it has a hole in it. But a hole is a concept from daily life, which a typical mathematician might ask unhumorously for clarification. One way to see it is that there exist some loops, as is shown below, that will not cut the **surface** of this polyhedron in to halves. This partly explain the motivation of defining chains and boundaries later.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CutCubeWithHole.png" width=80%>
+
+
+
 # Triangulation
 
-Homology, however, is just a natural way of defining Euler characteristics on topological spaces. Notice that it's not the only one as a "hole-indicator". The fundamental group and higher homotopy groups will also help to define "holes" on a manifold. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometry _ topology _ and _ physics _ 2nd _ ed..pdf)].
+Homology, however, is just a natural way of defining Euler characteristics on topological spaces. Notice that it's not the only one as a "hole-indicator". The fundamental group and higher homotopy groups will also help to define "holes" on a manifold. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)].
 
 ## Triangulation of Objects
 
@@ -146,15 +158,15 @@ If there is a homeomorphism $f:\abs{K}\rightarrow X$, topological space is said 
 
 # Homology Group - Elements
 
-From polyhedrons we are going to construct three groups. By combining these groups we will be able to find a topological invariant called homology group. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometry _ topology _ and _ physics _ 2nd _ ed..pdf)].
+From polyhedrons we are going to construct three groups. By combining these groups we will be able to find a topological invariant called homology group. This section follows [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)] and  [[Armstrong](https://www.springer.com/gb/book/9780387908397)].
 
 ## Oriented Simplexes
 
-The notation of a simplex as $\spl{p _ 1,p _ 2,\cdots,p _ n}$ is actually insufficient. It also helps defining the boundary of simplexes.
+The notation of a simplex as $\spl{p _ 1,p _ 2,\cdots,p _ n}$ is actually insufficient.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="50%">
 
-These two triangles cannot be brought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
+These two triangles cannot be brought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.  It also helps defining the boundary of simplexes.
 
 $$
 (p _ {i _ 0},p _ {i _ 1},\cdots,p _ {i _ n})=\sgn (P)(p _ 0,p _ 1,\cdots,p _ n)
@@ -171,7 +183,7 @@ $$
 
 ## Boundary Operator
 
-The boundary of a complex is of particular interest to us. \[why...\]\[need elaboration on Euler Characteristic\].
+The boundary of a complex is of particular interest to us. If we want to somehow calculate the Euler Characteristic, the notions of faces, edges and points are very helpful. They are conveniently the boundaries of bodies, faces and edges respectively.
 
 The boundary operator $\partial _ r$ acts on a $r$-simplex gives its boundary. The $0$-simplex is defined as has no boundary, denoted as $\partial _ 0p _ 0=0$. 
 
@@ -184,23 +196,31 @@ $$
 \end{align*}
 $$
 
-Using boundary operator we can build a chain complex:
+ ## Chains
 
+Using simplexes from a polyhedron, we can build chains.
+
+"Chains", like the name suggests, are just multiple (i.e., integer number of) oriented $r$-simplexes. Formally, an **$r​$-chain** of a
+
+
+
+The simplest example is building chains from points.
+
+
+
+ 
+
+Using boundary operator we can build a chain complex:
 $$
 0\substack{i\\\hookrightarrow}C _ n\xrightarrow{\partial _ n}C _ {n-1}\xrightarrow{\partial _ {n-1}}C _ {n-2}\xrightarrow{\partial _ {n-2}} \cdots\xrightarrow{\partial _ 2}C _ {1}\xrightarrow{\partial _ 1}C_0\xrightarrow{\partial _ 0}0
 $$
-
 Where $\substack{i\\\hookrightarrow}$ denotes the inclusion map. Given a subset $B$ of a set $A$, the injection $f:B\rightarrow A$ defined by $f(b)=b$ for all $b \in B$ is called the inclusion map. That is to say:
 $$
 i:0 \rightarrow 0 \in C_n
 $$
 In my opinion, this is introduced so that we can have $0$ on both sides.
 
- ## Chains
 
-Using simplexes from a polyhedron, we can build chains.
-
-"Chains", like the name suggests, are just multiple (i.e., integer number of) oriented $r$-simplexes. .The simplest example is building chains from points.
 
 
 
