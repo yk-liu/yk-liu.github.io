@@ -1,7 +1,7 @@
    
 <hr>
 
-   {% if page.commentable %}
+   {% if page.commentable == true %}
      {% if page.comments %}
        {% assign sorted_comments = (page.comments | sort: 'date') %}
      {% endif %}
@@ -22,13 +22,13 @@
        <h6> Be the first one to comment on this page!</h6>
      {% endfor %}
    {% else %}
-     {% if page.protected%}
+     {% if page.protected == true %}
      {% else %}
 	 <h6>&#128517; Comments on this post is disabled.</h6>
 	 {% endif %}
    {% endif %}
 
-{% if page.protected %}
+{% if page.protected == true %}
     <h6>&#128517; The comments on this page is now protected.</h6>
 {% else %}
     <hr>
