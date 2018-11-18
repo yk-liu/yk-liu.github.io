@@ -244,7 +244,7 @@ The $r$-chain group of simplicial complex $K$ is denoted as $C_r(K)$. We allow $
 > i:0 \rightarrow 0 \in C_n
 > $$
 >
-> > Insisting on putting $0$ on the left side seems to me purely an aesthetic choice. This chain complex is commonly seen in k-theories.
+> > Insisting on putting $0$ on the left side seems to me purely an aesthetic choice. The boundary group $B_n(K) = 0$ is a definition (see [`Boundaries`](#Boundaries)). This chain complex is commonly seen in k-theories.
 
 ## Cycles
 
@@ -253,7 +253,7 @@ $$
 \partial_r c = 0
 $$
 
-All $r$-cycles forms $r$-cycle group.
+All $r$-cycles of $K$ forms $r$-cycle group $C_r(K)$.
 
 ## Boundaries
 
@@ -261,13 +261,13 @@ An $r$-boundary is an $r$-chain such that it is the boundary of a $(r+1)$-chain.
 $$
 b =\partial_{r+1} c
 $$
-A
-
-
-
-
+All $r$-boundaries of $K$ forms $r$-boundary group $B_r(K)$. $B_{\dim K}$ is defined to be $0$. 
 
 # Homology Group
+
+## 1D Example
+
+
 
 
 
