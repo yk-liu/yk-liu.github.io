@@ -19,33 +19,38 @@
          </div>
        </div>
      {% else %}
-       <h6> There are no comments on this post. Be the first one!</h6>
+       <h6> Be the first one to comment on this page!</h6>
      {% endfor %}
    {% else %}
-     <h1>&#128517; Comments on this post is disabled.</h1>
+     {% if page.protected%}
+     {% else %}
+	 <h6>&#128517; Comments on this post is disabled.</h6>
+	 {% endif %}
    {% endif %}
 
-<hr>
+{% if page.protected %}
+    <h6>&#128517; The comments on this page is now protected.</h6>
+{% else %}
+    <hr>
+    <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
+    <div id="commentit"></div>
+	<div> You can use <a href="https://daringfireball.net/projects/markdown/syntax">markdown</a> in your comment. <a href="{{ site.baseurl }}/info/postguide">Commenting FAQs & Guidelines </a></div> 
+	<hr>
 
-<noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
+	<script type="text/javascript">
+	  /** CONFIGURATION VARIABLES **/
+	  var commentitUsername = 'yk-liu';
+	  var commentitRepo = 'yk-liu/yk-liu.github.io';
+	  var commentitPath = '{{ page.path }}';
 
-<div id="commentit"></div>
-<div> You can use <a href="https://daringfireball.net/projects/markdown/syntax">markdown</a> in your comment. <a href="{{ site.baseurl }}/info/postguide">Commenting FAQs & Guidelines </a></div> 
-<hr>
-
-<script type="text/javascript">
-  /** CONFIGURATION VARIABLES **/
-  var commentitUsername = 'yk-liu';
-  var commentitRepo = 'yk-liu/yk-liu.github.io';
-  var commentitPath = '{{ page.path }}';
-
-  /** DON'T EDIT FOLLOWING LINES **/
-  (function() {
-      var commentit = document.createElement('script');
-      commentit.type = 'text/javascript';
-      commentit.async = true;
-      commentit.src = 'https://commentit.io/static/embed/dist/commentit.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
-  })();
-</script>
+	  /** DON'T EDIT FOLLOWING LINES **/
+	  (function() {
+		  var commentit = document.createElement('script');
+		  commentit.type = 'text/javascript';
+		  commentit.async = true;
+		  commentit.src = 'https://commentit.io/static/embed/dist/commentit.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
+	  })();
+	</script>
+{% endif %}
 
