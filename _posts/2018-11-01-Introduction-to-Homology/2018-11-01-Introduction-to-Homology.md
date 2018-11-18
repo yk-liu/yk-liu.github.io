@@ -78,7 +78,7 @@ Any quantity We say that this number characterizes the space, hence the name.
 
 # Triangulation
 
-Homology, however, is just a natural way of defining Euler characteristics on topological spaces. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometry _ topology _ and _ physics _ 2nd _ ed..pdf)].
+Homology, however, is just a natural way of defining Euler characteristics on topological spaces. Notice that it's not the only one as a "hole-indicator". The fundamental group and higher homotopy groups will also help to define "holes" on a manifold. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometry _ topology _ and _ physics _ 2nd _ ed..pdf)].
 
 ## Triangulation of Objects
 
@@ -144,7 +144,7 @@ If every simplex in the set is regarded as a subset of $\R^n$, the simplicial co
 
 If there is a homeomorphism $f:\abs{K}\rightarrow X$, topological space is said to be **triangulable** and the pair $(K,f)​$ is called a **triangulation**. 
 
-# Homology Group
+# Homology Group - Elements
 
 From polyhedrons we are going to construct three groups. By combining these groups we will be able to find a topological invariant called homology group. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometry _ topology _ and _ physics _ 2nd _ ed..pdf)].
 
@@ -154,7 +154,7 @@ The notation of a simplex as $\spl{p _ 1,p _ 2,\cdots,p _ n}$ is actually insuff
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="50%">
 
-These two triangles cannot be bought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
+These two triangles cannot be brought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex we need to define an "orientation", characterized by the arrangement of the points.
 
 $$
 (p _ {i _ 0},p _ {i _ 1},\cdots,p _ {i _ n})=\sgn (P)(p _ 0,p _ 1,\cdots,p _ n)
@@ -187,16 +187,20 @@ $$
 Using boundary operator we can build a chain complex:
 
 $$
-
-0\substack{i\\\hookrightarrow}C _ r\xrightarrow{\partial _ r}C _ {r-1}\xrightarrow{\partial _ r}C _ {r-2}\xrightarrow{\partial _ r} \cdots\xrightarrow{\partial _ 2}C _ {1}\xrightarrow{\partial _ 1}0
+0\substack{i\\\hookrightarrow}C _ n\xrightarrow{\partial _ n}C _ {n-1}\xrightarrow{\partial _ {n-1}}C _ {n-2}\xrightarrow{\partial _ {n-2}} \cdots\xrightarrow{\partial _ 2}C _ {1}\xrightarrow{\partial _ 1}C_0\xrightarrow{\partial _ 0}0
 $$
 
+Where $\substack{i\\\hookrightarrow}$ denotes the inclusion map. Given a subset $B$ of a set $A$, the injection $f:B\rightarrow A$ defined by $f(b)=b$ for all $b \in B$ is called the inclusion map. That is to say:
+$$
+i:0 \rightarrow 0 \in C_n
+$$
+In my opinion, this is introduced so that we can have $0$ on both sides.
 
-## Chains
+ ## Chains
 
 Using simplexes from a polyhedron, we can build chains.
 
-The simplest example is building chains from points.
+"Chains", like the name suggests, are just multiple (i.e., integer number of) oriented $r$-simplexes. .The simplest example is building chains from points.
 
 
 
@@ -208,7 +212,7 @@ The simplest example is building chains from points.
 
 
 
-## Homology Group
+# Homology Group
 
 
 
