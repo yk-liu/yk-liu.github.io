@@ -1,9 +1,10 @@
 ---
-layout: blank
+layout: info
+title: Commenting FAQs & Guidelines
 commentable: false
+Edit: 2018-11-01
 ---
 
-# Commenting FAQs & Guidelines
 
 ## Why aren't my comments shown on the page?
 
