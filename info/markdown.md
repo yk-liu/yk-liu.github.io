@@ -88,9 +88,11 @@ You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[thi
 ```
 
 ```
+
 ```
   This is a simple code fence. You can use it to display text. The fonts are mono spaced.
 ```
+
 ```
 
 ```
@@ -310,10 +312,10 @@ So I prefer using HTML tags like this:
 # Foot Notes
 
 ```
-This is a note[^1]. Footnotes can have captions like[^this]
+This is a note[^1]. Footnotes can have captions like[^this]. Foot notes can have many other options like[^this one]. Or just like [^that].
 ```
 
-This is a note[^1]. Footnotes can have captions like[^this]
+This is a note[^1]. Footnotes can have captions like[^this]. Foot notes can have many other options like[^this one]. Or just like [^that].
 
 
 # Titles
@@ -349,11 +351,34 @@ This is a note[^1]. Footnotes can have captions like[^this]
 The Foot notes are like this
 
 ```
-[1]: https://yk-liu.github.io
-[this]: https://yk-liu.github.io
+[^1]: https://yk-liu.github.io
+
+[^this]: https://yk-liu.github.io
+
+[^this one]: 
+> Blockquotes can be in a footnote.
+
 ```
+as well as code blocks
+```
+or, naturally, simple paragraphs.
+
+[^that] : hi
+```
+
+# Useful Links
 
 Useful Links: https://blog.github.com/2016-02-01-github-pages-now-faster-and-simpler-with-jekyll-3-0/
 
-[1]: https://yk-liu.github.io
-[this]: https://yk-liu.github.io
+[^1]: https://yk-liu.github.io
+
+[^this]: https://yk-liu.github.io
+
+[^this one]: 
+> Blockquotes can be in a footnote.
+
+```
+as well as code blocks
+```
+
+[^that]: or, naturally, simple paragraphs.
