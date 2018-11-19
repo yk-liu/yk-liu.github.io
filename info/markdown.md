@@ -219,7 +219,8 @@ Markdown use `![caption](link)` to reference pictures, caption is optional. You 
 
 So I prefer using HTML tags like this:
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width=30%>
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
+
 
 # Lists
 
@@ -368,7 +369,9 @@ or, naturally, simple paragraphs.
 
 # Useful Links
 
-Useful Links: https://blog.github.com/2016-02-01-github-pages-now-faster-and-simpler-with-jekyll-3-0/
+- https://blog.github.com/2016-02-01-github-pages-now-faster-and-simpler-with-jekyll-3-0/
+
+- https://kramdown.gettalong.org/syntax.html#footnotes
 
 [^1]: https://yk-liu.github.io
 
