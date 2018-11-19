@@ -354,5 +354,7 @@ The Foot notes are like this
 [this]: https://yk-liu.github.io
 ```
 
+Useful Links: https://blog.github.com/2016-02-01-github-pages-now-faster-and-simpler-with-jekyll-3-0/
+
 [1]: https://yk-liu.github.io
 [this]: https://yk-liu.github.io
