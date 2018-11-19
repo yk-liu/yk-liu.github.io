@@ -316,7 +316,7 @@ So I prefer using HTML tags like this:
 This is a note[^1]. Footnotes can have captions like[^this]. Foot notes can have many other options like[^this one]. Or just like [^that].
 ```
 
-This is a note[^1]. Footnotes can have captions like[^this]. Foot notes can have many other options like[^this one]. Or just like [^that].
+This is a note[^1]. Footnotes can have captions like[^this]. You can reference to the same note multiple times like[^this]. Foot notes can have many other options like[^this one]. Or just like [^that].
 
 
 # Titles
