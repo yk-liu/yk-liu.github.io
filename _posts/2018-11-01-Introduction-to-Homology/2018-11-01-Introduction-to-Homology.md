@@ -38,6 +38,7 @@ $$
 \newcommand{\norm}[1]{\left\|{#1}\right\|}
 \newcommand{\set}[1]{\left\lbrace{#1}\right\rbrace}
 \newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\Z}{\mathbb{Z}}
 \notag
 $$
 
@@ -84,7 +85,7 @@ Why is a cube with a hole different with other polyhedrons and how can we charac
 
 One way to see it is that it has a hole in it. But a hole is a concept from daily life, which a typical mathematician might ask unhumorously for clarification. One way to see it is that there exist some loops, as is shown below, that will not cut the **surface** of this polyhedron in to halves. This partly explain the motivation of defining chains and boundaries later.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CutCubeWithHole.png" width=80%>
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CutCubeWithHole.png" width="80%">
 
 
 
@@ -268,16 +269,6 @@ All $r$-boundaries of $K$ forms $r$-boundary group $B_r(K)$. $B_{\dim K}$ is def
 ## 1D Example
 
 
-
-
-
-
-
-
-
-
-
-[to be continued]
 
 
 
