@@ -88,13 +88,10 @@ You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[thi
 ```
 
 ```
-
+ ```
+ This is a simple code fence. You can use it to display text. The fonts are mono spaced.
+  ```
 ```
-  This is a simple code fence. You can use it to display text. The fonts are mono spaced.
-```
-
-```
-
 ```
  This is a simple code fence. You can use it to display text. The fonts are mono spaced.
 ```
@@ -210,7 +207,7 @@ Markdown use `![caption](link)` to reference pictures, caption is optional. You 
 
 So I prefer using HTML tags like this:
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width=30%>
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%">
 ```
 
 Markdown use `![caption](link)` to reference pictures, caption is optional. You cannot control the size. 
@@ -301,14 +298,14 @@ So I prefer using HTML tags like this:
 | 3                           |            6            |                            9 |
 
 ```
-| You can only use `![caption](link)` in tables.               | You can use Math in tables. | You cannot use `<img src="" width=30%>` in tables.           |
+| You can only use `![caption](link)` in tables.               | You can use Math in tables. | You cannot use `<img src="" width="">` in tables.           |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| ![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width=30%> |
+| ![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
 ```
 
-| You can only use `![caption](link)` in tables.               | You can use Math in tables. | You cannot use `<img src="" width=30%>` in tables.           |
+| You can only use `![caption](link)` in tables.               | You can use Math in tables. | You cannot use `<img src="" width="">` in tables.            |
 | ------------------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| ![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width=30%> |
+| ![caption](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png) | $1+1=2$                     | <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="30%"> |
 
 # Foot Notes
 
