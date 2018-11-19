@@ -6,6 +6,7 @@ category: Blog
 tags: Lie-algebra Lie-group
 keywords: Lie-algebra Lie-group
 description: My understanding of Lie-group and its Lie-algebra
+mermaid: true
 ---
 
 # 李群和李群的李代数
