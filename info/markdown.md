@@ -314,7 +314,7 @@ So I prefer using HTML tags like this:
 This is a note[^1]. Footnotes can have captions like[^this]. Foot notes can have many other options like[^this-one]. Or just like [^that].
 ```
 
-This is a note[^1]. Footnotes can have captions like[^this]. You can reference to the same note multiple times like[^this]. Foot notes can have many other options like[^this-one]. Or just like [^that].
+This is a note[^1]. Footnotes can have captions like[^this]. You can reference to the same note multiple times like[^this]. Foot notes can have many other options like[^this-one]. Or just like [^that]. This is a [reference style link][linkid] to a page. And [this][linkid] is also a link. As is [this][] and [that].
 
 
 # Titles
@@ -351,37 +351,34 @@ The Foot notes are like this
 
 ```
 [^1]: https://yk-liu.github.io
-
-[^this]: https://yk-liu.github.io
-
-[^this-one]: 
-> Blockquotes can be in a footnote.
-
-```
-as well as code blocks
-```
-or, naturally, simple paragraphs.
-
-[^that] : hi
-```
-
-# Useful Links
-
-- https://blog.github.com/2016-02-01-github-pages-now-faster-and-simpler-with-jekyll-3-0/
-
-- https://kramdown.gettalong.org/syntax.html#footnotes
-
-[^1]: https://yk-liu.github.io
-
 [^this]: https://yk-liu.github.io
 
 [^this-one]: 
     > Blockquotes can be in a footnote.
     
-    ```
+```
     as well as code blocks
-    ```
+ ``` 
 
 
 
 [^that]: or, naturally, simple paragraphs.
+
+[linkid]: https://yk-liu.github.io "Optional Title"
+ ```
+
+[^1]: https://yk-liu.github.io
+[^this]: https://yk-liu.github.io
+
+[^this-one]: 
+    > Blockquotes can be in a footnote.
+
+```
+    as well as code blocks
+```
+
+
+
+[^that]: or, naturally, simple paragraphs.
+
+[linkid]: https://yk-liu.github.io "Optional Title"
