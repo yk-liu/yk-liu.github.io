@@ -18,7 +18,7 @@ As for my current interest, on my CV I wrote:
 
 > I am interested in the Topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am also interested in how particles subject to relatively simple laws can exhibit novel collective properties. I also like coding and enjoy sharing my thoughts.
 
-Here is my [CV](https://github.com/yk-liu/yk-liu.github.io/raw/master/about/CV-of-Liu-Yingkai.pdf) (last update: 2018-11-17).
+Here is my [CV](https://yk-liu.github.io/about/CV-of-Liu-Yingkai.pdf) (last update: 2018-11-17).
 
 # This Site
 
