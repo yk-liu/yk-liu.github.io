@@ -1,8 +1,8 @@
 <div class="topnav" id="topnav">
-      <a href="{{ site.baseurl }}" {% if include.active == "home" %}  class="active"  {% endif %} >Home</a>
-      <a href="{{ site.baseurl}}/blog" target="_blank" {% if include.active == "post" %}  class="active"  {% endif %} >Posts</a>
-	  <a href="{{ site.baseurl }}/blog/tags" target="_blank" {% if include.active == "tags" %}  class="active"  {% endif %} >Tags</a>
-	  <a href="{{ site.baseurl }}/about" {% if include.active == "about" %}  class="active"  {% endif %} >About</a>
+      <a href="/" {% if include.active == "home" %}  class="active"  {% endif %} >Home</a>
+      <a href="/blog" target="_blank" {% if include.active == "post" %}  class="active"  {% endif %} >Posts</a>
+	  <a href="/blog/tags" target="_blank" {% if include.active == "tags" %}  class="active"  {% endif %} >Tags</a>
+	  <a href="/about" {% if include.active == "about" %}  class="active"  {% endif %} >About</a>
       {% if site.github_username %}
          <a href="https://github.com/{{site.github_username}}" target="_blank" style="text-decoration:none;float: right;">
          <i class="fab fa-github fa-lg" ></i>
