@@ -14,15 +14,15 @@ user_title: Physics Undergraduate
 email: yingkai.liu@outlook.com
 
 markdown: kramdown
-   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
-   syntax_highlighter: rouge
-   syntax_highlighter_opts:
-      # Use existing pygments syntax highlighting css
-      css_class: 'highlight'
-
-#kramdown:
-# footnote_nr: 1
-# entity_output: as_char
+  
+kramdown:
+ footnote_nr: 1
+ entity_output: as_char
+ # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+ syntax_highlighter: rouge
+ syntax_highlighter_opts:
+  # Use existing pygments syntax highlighting css
+  css_class: 'highlight'
  
 highlighter: rouge
 
@@ -76,3 +76,6 @@ defaults:
       protected: "false"
 
 
+exclude:
+ - LICENSE.md
+ - README.md
