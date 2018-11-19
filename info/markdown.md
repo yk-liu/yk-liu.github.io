@@ -3,6 +3,7 @@ layout: info
 title: Markdown Syntax
 commentable: false
 Edit: 2018-11-01
+mathjax: true
 ---
 
 
@@ -11,11 +12,13 @@ Edit: 2018-11-01
 ```
 *This is italic.* **This is Bold**. * If asterisk is surrounded by spaces, it is not parsed. *
 ```
+
 *This is italic.* **This is Bold**. * If asterisk is surrounded by spaces, it is not parsed. *
 
 ```
 _This is also italic._ __This is also Bold__. _ If underscore is surrounded by spaces, it is not parsed. _
 ```
+
 _This is also italic._ __This is also Bold__. _ If underscore is surrounded by spaces, it is not parsed. _
 
 ```
@@ -85,15 +88,14 @@ You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[thi
 ```
 
 ```
- ```
-  This is a simple code fence. You can use it to display text. The fonts are mono spaced
- ```
+```
+  This is a simple code fence. You can use it to display text. The fonts are mono spaced.
+```
 ```
 
-
- ```
- This is a simple code fence. You can use it to display text. The fonts are mono spaced
- ```
+```
+ This is a simple code fence. You can use it to display text. The fonts are mono spaced.
+```
 
 ```
  You can mix them as well, like 
@@ -125,8 +127,6 @@ This is horizontal line
 This is horizontal line
 
 ---
-
-
 
 # Math Blocks
 
