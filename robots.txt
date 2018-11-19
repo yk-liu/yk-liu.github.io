@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /about/CV-of-Liu-Yingkai.pdf
+
+SITEMAP: https://yk-liu.github.io/sitemap.xml
