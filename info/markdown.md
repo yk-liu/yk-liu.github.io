@@ -73,37 +73,36 @@ You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[thi
 ```
 
 ```
- ```fortran
- "This is a fortran code fence"
- implicit none
-```
-```
-
 ​```fortran
  "This is a fortran code fence"
  implicit none
+​```
 ```
 
+```fortran
+ "This is a fortran code fence"
+ implicit none
+```
+
+```
  ```
+  This is a simple code fence. You can use it to display text. The fonts are mono spaced
+ ```
+```
+
 
  ```
  This is a simple code fence. You can use it to display text. The fonts are mono spaced
  ```
 
- ```
+```
+ You can mix them as well, like 
 
- ```
- This is a simple code fence. You can use it to display text. The fonts are mono spaced
- ```
-
-``` 
-You can mix them as well, like 
-
-> 
-> ```
-> This
-> ```
-> 
+ > 
+ > ```
+ > This
+ > ```
+ > 
 ```
 
 You can mix them as well, like 
