@@ -67,7 +67,7 @@ You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[thi
 ​```python
   import numpy as np
   print("""This is a python code fence""")
-​```
+​``` 
 ```
 
 ```python
@@ -79,7 +79,7 @@ You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[thi
 ​```fortran
  "This is a fortran code fence"
  implicit none
-​```
+​``` 
 ```
 
 ```fortran
@@ -88,10 +88,11 @@ You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[thi
 ```
 
 ```
- ```
+`` ``` `` 
  This is a simple code fence. You can use it to display text. The fonts are mono spaced.
-  ```
+`` ``` `` 
 ```
+
 ```
  This is a simple code fence. You can use it to display text. The fonts are mono spaced.
 ```
@@ -310,10 +311,10 @@ So I prefer using HTML tags like this:
 # Foot Notes
 
 ```
-This is a note[^1]. Footnotes can have captions like[^this]. Foot notes can have many other options like[^this one]. Or just like [^that].
+This is a note[^1]. Footnotes can have captions like[^this]. Foot notes can have many other options like[^this-one]. Or just like [^that].
 ```
 
-This is a note[^1]. Footnotes can have captions like[^this]. You can reference to the same note multiple times like[^this]. Foot notes can have many other options like[^this one]. Or just like [^that].
+This is a note[^1]. Footnotes can have captions like[^this]. You can reference to the same note multiple times like[^this]. Foot notes can have many other options like[^this-one]. Or just like [^that].
 
 
 # Titles
@@ -353,7 +354,7 @@ The Foot notes are like this
 
 [^this]: https://yk-liu.github.io
 
-[^this one]: 
+[^this-one]: 
 > Blockquotes can be in a footnote.
 
 ```
@@ -374,11 +375,13 @@ or, naturally, simple paragraphs.
 
 [^this]: https://yk-liu.github.io
 
-[^this one]: 
-> Blockquotes can be in a footnote.
+[^this-one]: 
+    > Blockquotes can be in a footnote.
+    
+    ```
+    as well as code blocks
+    ```
 
-```
-as well as code blocks
-```
+
 
 [^that]: or, naturally, simple paragraphs.
