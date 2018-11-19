@@ -1,0 +1,54 @@
+{% if page.mermaid %}
+<!--
+<code class="language-mermaid">graph LR
+  subgraph 结构关系
+  A(单位元附近邻域) --&gt;|生成| B(李群)
+    C(单位元的切空间) ---|"指数映射(微分同构)"| A
+    C -.-&gt;|因此生成| B
+    end
+  subgraph 运算关系
+  X[群乘] --&gt; |指数映射|Y1["切空间矢量和+:exp(A)exp(B)=exp(A+B)"]
+    X --&gt;|利用指数映射于坐标,泰勒展开从群元素得到切矢量积|Y2["切空间矢量积AB,BA"]
+    Y2--&gt;|构造|Z[李代数]
+    Z--&gt;|指数映射泰勒展开,是度量群乘不对易性的最低阶项|X
+    end
+</code> -->
+
+<!-- Change above to below -->
+
+<!--
+<div class="mermaid">
+  graph LR
+      A --- B
+      B-- >C[fa:fa-ban forbidden]
+      B-- >D(fa:fa-spinner);
+  </div>
+-->
+
+<script> 
+$(".language-mermaid").each(function() {
+    
+  $(this).replaceWith($('<div class=\"mermaid\" >' + this.innerHTML + '</div>'));
+ 
+});
+</script>
+
+<!-- call mermaid -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.2/mermaid.min.js"></script>
+<script>
+
+var config = {
+    startOnReady:true,
+    theme: 'forest'
+    flowchart:{
+            useMaxWidth:false,
+            htmlLabels:true
+        }
+};
+
+mermaid.initialize(config);
+
+</script>
+
+{% endif %}
