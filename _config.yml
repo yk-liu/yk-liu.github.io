@@ -32,11 +32,9 @@ links:
     external: false
     icon: home
   - title: Repos
-    url: /Repo
+    url: /repo
   - title: Blogs
-    url: /Blog
-  - title: Drafts
-    url: /drafts
+    url: /blog
     
 plugins:
   - jekyll-seo-tag
@@ -52,15 +50,11 @@ author:
   facebook:
   github:         https://github.com/yk-liu
   linkedin:
-  instagram:
-  tumblr:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
 
 google_site_verification:
-  
-mathjax: true
-  
+ 
 permalink: none
 
 defaults:
