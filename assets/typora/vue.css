@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Source Sans Pro', sans-serif;
     /* font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important; */
     color: #34495e;
     -webkit-font-smoothing: antialiased;
@@ -36,8 +36,8 @@ a {
     padding: 0px 2px;
 }
 
-h0#firstname {
-	font-family: 'Roboto', sans-serif;
+div.h0 {
+	font-family: 'Source Sans Pro', sans-serif;
     position: relative;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -52,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
     position: relative;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -223,19 +223,19 @@ code, tt {
 	font-family: 'Roboto Mono', monospace;
     /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
     font-size: 0.92rem;
-    background-color: #f8f8f8;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 code.highlighter-rouge {
 	color: #e96900;
 	font-weight: bold;
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'Ubuntu Mono', monospace;
 }
 
 /* code fence */
 div.highlight {
  background-color: #f8f8f8;
- font-family: 'Roboto Mono', monospace;
+ font-family: 'Ubuntu Mono', monospace;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
