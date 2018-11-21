@@ -244,7 +244,7 @@ The $r$-chain group of simplicial complex $K$ is denoted as $C_r(K)$. We allow $
 > 0\substack{i\\\hookrightarrow}C _ n\xrightarrow{\partial _ n}C _ {n-1}\xrightarrow{\partial _ {n-1}}C _ {n-2}\xrightarrow{\partial _ {n-2}} \cdots\xrightarrow{\partial _ 2}C _ {1}\xrightarrow{\partial _ 1}C_0\xrightarrow{\partial _ 0}0
 > $$
 > 
-> Where $\substack{i \\ \hookrightarrow}$ denotes the inclusion map. Given a subset $B$ of a set $A$, the injection $f:B\rightarrow A$ defined by $f(b)=b$ for all $b \in B$ is called the inclusion map. That is to say:
+> Where $\substack{i \newline \hookrightarrow}$ denotes the inclusion map. Given a subset $B$ of a set $A$, the injection $f:B\rightarrow A$ defined by $f(b)=b$ for all $b \in B$ is called the inclusion map. That is to say:
 > 
 > $$
 > i:0 \rightarrow 0 \in C_n
