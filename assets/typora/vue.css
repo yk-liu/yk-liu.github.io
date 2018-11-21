@@ -38,12 +38,9 @@ a {
 
 .h0 {
 	font-family: 'Source Sans Pro', sans-serif;
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
 }
 
 h1,
