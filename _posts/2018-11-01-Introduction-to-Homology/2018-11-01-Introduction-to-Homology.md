@@ -268,6 +268,10 @@ All $r$-boundaries of $K$ forms $r$-boundary group $B_r(K)$. $B_{\dim K}$ is def
 
 ## 1D Example
 
+For a set of connecting points, 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/1dHomology.png" width="60%">
+
 
 
 

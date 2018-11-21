@@ -12,7 +12,8 @@ html {
 }
 
 body {
-    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+	font-family: 'Slabo 27px', serif;
+    /* font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important; */
     color: #34495e;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6rem;
@@ -41,6 +42,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: 'Roboto', sans-serif;
     position: relative;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -208,7 +210,8 @@ code, tt {
     margin: 0 2px;
     padding: 2px 4px;
     border-radius: 2px;
-    font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important;
+	font-family: 'Roboto Mono', monospace;
+    /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
     font-size: 0.92rem;
     background-color: #f8f8f8;
 }
@@ -216,12 +219,13 @@ code, tt {
 code.highlighter-rouge {
 	color: #e96900;
 	font-weight: bold;
+	font-family: 'Roboto Mono', monospace;
 }
 
 /* code fence */
 div.highlight {
  background-color: #f8f8f8;
- font-family: Roboto Mono
+ font-family: 'Roboto Mono', monospace;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
@@ -384,15 +388,6 @@ hr {
 
 .mathjax-block>.code-tooltip {
     bottom: .375rem;
-}
-
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
 }
 
 .md-tag {
