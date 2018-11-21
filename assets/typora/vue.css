@@ -232,6 +232,7 @@ pre.highlight > code, tt {
     page-break-inside: avoid;
     text-align: left;
     overflow: visible;
+	overflow-x: scroll;
 }
 
 p > code.highlighter-rouge {
