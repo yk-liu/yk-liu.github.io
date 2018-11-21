@@ -45,19 +45,19 @@
                <div id="info">
                   <div id="date">
     					{% if page.Edit %}
-                        <p><code class="highligher-rouge"> <nobr>Posted</nobr></code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
-                        <p><code class="highligher-rouge"> <nobr>Edited</nobr></code>:  &nbsp; {{ page.Edit | date: '%B %d, %Y' }} </p>
+                        <p><code class="highligher-rouge">Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
+                        <p><code class="highligher-rouge">Edited</code>:  &nbsp; {{ page.Edit | date: '%B %d, %Y' }} </p>
                         {% else %}
-                        <p><code class="highligher-rouge"> <nobr>Posted</nobr></code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
+                        <p><code class="highligher-rouge">Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
                         {% endif %}
                   </div>
                   {% if site.tags != '' %}
                   <div id="tag-list">
-                        <p><code class="highligher-rouge"> <nobr>Tags</nobr></code>:  &nbsp; [
+                        <p><code class="highligher-rouge"> Tags </code>:  &nbsp; [
                         {% for tag in page.tags %}
                         {% capture tag_name %}{{ tag }}{% endcapture %}
                         <a href="/blog/tags#{{ tag_name }}" target="_blank">
-                           <code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>
+                           <code class="highligher-rouge">{{ tag_name }}</code>
 						</a>
                         &nbsp;
                         {% endfor %}]</p>
