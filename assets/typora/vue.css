@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	font-family: 'Slabo 27px', serif;
+	font-family: 'Roboto Slab', serif;
     /* font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important; */
     color: #34495e;
     -webkit-font-smoothing: antialiased;
@@ -34,6 +34,16 @@ a {
     color: #42b983;
     font-weight: 600;
     padding: 0px 2px;
+}
+
+h0#firstname {
+	font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
 }
 
 h1,
