@@ -256,6 +256,10 @@ a > code.highlighter-rouge {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+code.highlighter-rouge > nobr {
+    color: #e96900;
+}
+
 /* code fence */
 div.highlight {
  	background-color: #eeeeee;
