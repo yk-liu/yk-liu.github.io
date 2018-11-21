@@ -231,11 +231,21 @@ pre.highlight > code, tt {
 	display: block;
     page-break-inside: avoid;
     text-align: left;
-    overflow: visible;
 	overflow-x: scroll;
 }
 
 p > code.highlighter-rouge {
+	margin: 0 2px;
+    padding: 2px 4px;
+	font-size: 0.92rem;
+	background-color: #eeeeee;
+	border-radius: 4px;
+	color: #e96900;
+	font-weight: bold;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a > code.highlighter-rouge {
 	margin: 0 2px;
     padding: 2px 4px;
 	font-size: 0.92rem;
