@@ -217,13 +217,18 @@ code, tt {
     margin: 0 2px;
     padding: 2px 4px;
     border-radius: 2px;
-	font-family: 'Roboto Mono', monospace;
     /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
     font-size: 0.92rem;
     font-family: 'Ubuntu Mono', monospace;
+	display: block;
+    page-break-inside: avoid;
+    text-align: left;
+    overflow: visible;
 }
 
 code.highlighter-rouge {
+	background-color: #f8f8f8;
+	border-radius: 2px;
 	color: #e96900;
 	font-weight: bold;
 	font-family: 'Ubuntu Mono', monospace;
