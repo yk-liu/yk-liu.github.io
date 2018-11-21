@@ -226,7 +226,7 @@ code, tt {
     overflow: visible;
 }
 
-code.highlighter-rouge {
+p > code.highlighter-rouge {
 	background-color: #f8f8f8;
 	border-radius: 2px;
 	color: #e96900;
