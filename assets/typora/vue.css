@@ -227,11 +227,14 @@ pre.highlight > code, tt {
 }
 
 p > code.highlighter-rouge {
+	margin: 0 2px;
+    padding: 2px 4px;
+	font-size: 0.92rem;
 	background-color: #f8f8f8;
 	border-radius: 2px;
 	color: #e96900;
 	font-weight: bold;
-	font-family: 'Ubuntu Mono', monospace;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* code fence */
