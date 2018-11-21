@@ -230,8 +230,8 @@ p > code.highlighter-rouge {
 	margin: 0 2px;
     padding: 2px 4px;
 	font-size: 0.92rem;
-	background-color: #f8f8f8;
-	border-radius: 2px;
+	background-color: #dcdcdc;
+	border-radius: 4px;
 	color: #e96900;
 	font-weight: bold;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -239,8 +239,8 @@ p > code.highlighter-rouge {
 
 /* code fence */
 div.highlight {
- background-color: #f8f8f8;
- font-family: 'Ubuntu Mono', monospace;
+ 	background-color: #dcdcdc;
+    font-family: 'Ubuntu Mono', monospace;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
