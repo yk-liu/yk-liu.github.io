@@ -213,10 +213,14 @@ ol {
     margin-bottom: 0;
 }
 
-pre.highlight > code, tt {
+code {
     margin: 0 2px;
     padding: 2px 4px;
-    border-radius: 2px;
+    border-radius: 4px;
+}
+
+
+pre.highlight > code, tt {
     /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
     font-size: 0.92rem;
     font-family: 'Ubuntu Mono', monospace;
@@ -230,7 +234,7 @@ p > code.highlighter-rouge {
 	margin: 0 2px;
     padding: 2px 4px;
 	font-size: 0.92rem;
-	background-color: #dcdcdc;
+	background-color: #eeeeee;
 	border-radius: 4px;
 	color: #e96900;
 	font-weight: bold;
@@ -239,7 +243,8 @@ p > code.highlighter-rouge {
 
 /* code fence */
 div.highlight {
- 	background-color: #dcdcdc;
+ 	background-color: #eeeeee;
+	border-radius: 4px;
     font-family: 'Ubuntu Mono', monospace;
 }
 .highlight .hll { background-color: #ffffcc }
