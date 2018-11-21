@@ -213,7 +213,7 @@ ol {
     margin-bottom: 0;
 }
 
-code, tt {
+pre.highlight > code, tt {
     margin: 0 2px;
     padding: 2px 4px;
     border-radius: 2px;
