@@ -213,20 +213,11 @@ ol {
     margin-bottom: 0;
 }
 
-code {
-    margin: 0 2px;
-    padding: 2px 4px;
-    border-radius: 4px;
-	font-size: 0.92rem;
-    font-family: 'Ubuntu Mono', monospace;
-	background-color: #eeeeee;
-    /* font-weight: bold; */
-}
-
-
 pre.highlight > code, tt {
     /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
-    font-size: 0.92rem;
+	margin: 0 2px;
+    padding: 2px 4px;
+    border-radius: 4px;
     font-family: 'Ubuntu Mono', monospace;
 	display: block;
     page-break-inside: avoid;
@@ -234,7 +225,18 @@ pre.highlight > code, tt {
 	overflow-x: scroll;
 }
 
-p > code.highlighter-rouge {
+/* p > code.highlighter-rouge { */
+	/* margin: 0 2px; */
+    /* padding: 2px 4px; */
+	/* font-size: 0.92rem; */
+	/* background-color: #eeeeee; */
+	/* border-radius: 4px; */
+	/* color: #e96900; */
+	/* font-weight: bold; */
+	/* font-family: 'Source Sans Pro', sans-serif; */
+/* } */
+
+code.highlighter-rouge {
 	margin: 0 2px;
     padding: 2px 4px;
 	font-size: 0.92rem;
@@ -245,20 +247,9 @@ p > code.highlighter-rouge {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-a > code.highlighter-rouge {
-	margin: 0 2px;
-    padding: 2px 4px;
-	font-size: 0.92rem;
-	background-color: #eeeeee;
-	border-radius: 4px;
-	color: #e96900;
-	font-weight: bold;
-	font-family: 'Source Sans Pro', sans-serif;
-}
-
-code.highlighter-rouge > nobr {
-    color: #e96900;
-}
+/* code.highlighter-rouge > nobr { */
+    /* color: #e96900; */
+/* } */
 
 /* code fence */
 div.highlight {
