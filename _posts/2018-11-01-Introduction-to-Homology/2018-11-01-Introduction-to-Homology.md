@@ -1,6 +1,6 @@
 ---
 title: Introduction to Homology
-Edit: 2018-11-05
+Edit: 2018-11-21
 category: Blog
 tags: homology Topology Euler-Characteristic
 keywords: simplex complex triangulation cycle boundary chain
@@ -79,7 +79,7 @@ You can see that by continuously deforming a cube, to tetrahedron, [Octahedron](
 
 Any quantity We say that this number characterizes the space, hence the name.
 
-## Insights of the counterexample
+## Insights of the Counterexample
 
 Why is a cube with a hole different with other polyhedrons and how can we characterize it without using Euler Characteristic? 
 
@@ -271,11 +271,11 @@ All $r$-boundaries of $K$ forms $r$-boundary group $B_r(K)$. $B_{\dim K}$ is def
 
 # Homology Group
 
-## 1D Example
+## Examples
 
 For a set of connecting points, 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/1dHomology.png" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/1dHomology.png" width="40%">
 
 
 
