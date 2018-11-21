@@ -56,9 +56,9 @@
                         <p><code class="highligher-rouge"> <nobr>Tags</nobr></code>:  &nbsp [
                         {% for tag in page.tags %}
                         {% capture tag_name %}{{ tag }}{% endcapture %}
-                        <code class="highligher-rouge">
-                           <nobr><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }} </a></nobr>
-                        </code>
+                        <a href="/blog/tags#{{ tag_name }}" target="_blank">
+                           <code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>
+						</a>
                         &nbsp
                         {% endfor %}]</p>
                   </div>
