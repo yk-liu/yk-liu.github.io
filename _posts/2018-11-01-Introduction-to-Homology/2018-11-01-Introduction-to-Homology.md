@@ -277,7 +277,7 @@ It's always a good idea to base discussion on some concrete examples. Here are s
 
 ​    The most natural way of seeing the triangulation of a cylinder is to see it as "equivalent" with a triangular prism. However, since the surface of a cylinder is only $2$ dimensional, mathematicians prefer to draw them as flat as possible, so we introduce a notation of "gluing", as is shown on the right. The arrows on edge $(p_0,p_1)$ emphasize the way of gluing.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfCylinder.png" width="80%">
+   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfCylinder.png" width="80%">
 
  2. Triangulation of the Mobius strip.
 
@@ -301,6 +301,14 @@ It's always a good idea to base discussion on some concrete examples. Here are s
 
 # Homology Group
 
+The chain group $C_r(K)$, cycle group $Z_r(K)$ and boundary group $B_r(K)$ of simplicial complex $K$ are obviously not topological invariant. The Homology group $H_r(K)$ is defined as 
+
+$$
+H_r(K)\dfdas Z_r(K)/B_r(K)
+$$
+
+The notation involves quotient group and equivalent classes. If you are not familiar with those concepts, this [reference](https://math.stackexchange.com/questions/838797/quotient-spaces-and-quotient-groups-equivalence-classes-and-cosets) might help.
+
 ## 1-D Example
 
 For a set of connecting points, 
@@ -319,3 +327,4 @@ For a set of connecting points,
 
 
 
+ 
