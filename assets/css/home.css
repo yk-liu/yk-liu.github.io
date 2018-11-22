@@ -71,6 +71,13 @@ sup{
 audio,canvas,video{
     display:inline-block
 }
+
+canvas {
+	position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
 audio:not([controls]){
     display:none;
     height:0
@@ -235,7 +242,7 @@ sub,sup{
     height:100vh!important
 }
 .header{
-    z-index:1;
+    z-index:2;
     text-align:center;
     color:white;
     position:absolute;
