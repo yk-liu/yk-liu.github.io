@@ -47,6 +47,20 @@ This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) us
 
 Additional licensing information can be found [here](https://github.com/yk-liu/yk-liu.github.io/blob/master/LICENSE.md).
 
+# The Name
+
+I named this website "A Finger Pointing to the Moon", as in the Buddism story:
+
+> **佛告阿难。汝等尚以缘心听法。此法亦缘。非得法性。**
+>
+> **若复观指以为月体。此人岂唯亡失月轮。亦亡其指。何以故。以所标指为明月故。**
+>
+> **岂唯亡指。亦复不识明之与暗。何以故。即以指体。为月明性。明暗二性。无所了故。**
+
+Which has been beautifully put by Bruce Lee:
+
+>It's like a finger pointing away to the moon. Don't concentrate on the finger or you will all that heavenly glory.
+
 # Contact
 
 The best way to reach me is via email: $water$ @ $mail.nankai.edu.cn$
