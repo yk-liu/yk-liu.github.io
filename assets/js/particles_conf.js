@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "out_mode": "out",
         "bounce": false,
         "attract": {
-          "enable": true,
-          "rotateX": 200,
-          "rotateY": 240
+          "enable": false,
+          "rotateX": 1200,
+          "rotateY": 1240
         }
       },
     },
