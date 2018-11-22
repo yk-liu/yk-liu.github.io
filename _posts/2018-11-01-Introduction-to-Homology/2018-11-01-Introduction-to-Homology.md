@@ -250,7 +250,7 @@ The $r$-chain group of simplicial complex $K$ is denoted as $C_r(K)$. We allow $
 > i:0 \rightarrow 0 \in C_n
 > $$
 >
-> > Insisting on putting $0$ on the left side seems to me purely an aesthetic choice. The boundary group $B_n(K) = 0$ is a definition (see [`Boundaries`](#Boundaries)). This chain complex is commonly seen in k-theories.
+> > Insisting on putting $0​$ on the left side seems to me purely an aesthetic choice. The boundary group $B_n(K) = 0​$ is a definition (see [`Boundaries`](#Boundaries)). This chain complex is commonly seen in k-theories.
 
 ## Cycles
 
@@ -271,7 +271,37 @@ All $r$-boundaries of $K$ forms $r$-boundary group $B_r(K)$. $B_{\dim K}$ is def
 
 # Homology Group
 
-## Examples
+## Examples of Triangulation
+
+It's always a good idea to base discussion on some concrete examples. Here are some examples of triangulation on $2$-D manifolds for later use. We went some length to find the simplest triangulations to ensure we are comfortable in later calculations.
+
+1. Triangulation of the side of cylinder.
+
+   The most natural way of seeing the triangulation of a cylinder is to see it as "equivalent" with a triangular prism. However, since the surface of a cylinder is only $2$ dimensional, mathematicians prefer to draw them as flat as possible, so we introduce a notation of "gluing", as is shown on the right. The arrows on edge $(p_0,p_1)$ emphasize the way of gluing.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfCylinder.png" width="80%">
+
+2. Triangulation of the Mobius strip.
+
+   The famous Mobius strip is much less trivial than the cylinder. Still, we can "crush" the band and see a good way to triangulate it. The arrows on edge $(p_0,p_5)$ emphasize the way of gluing, as a Mobius strip is made by twisting a strip $180$ degree and then joining the ends of the strip.
+
+   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfMobius.png" width="80%">
+
+3. Triangulation of Torus.
+
+   A surface without boundary like a torus can also be conveniently and intuitively triangulated. Note that the simplest triangulation is not a triangular tube. By squeezing the inner upper and lower rim of the tube together, we have a $3\times3$ mesh of triangulation. 
+
+   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfTorus.png" width="80%">
+
+4. Triangulation of the Klein bottle.
+
+   This [page](https://plus.maths.org/content/imaging-maths-inside-klein-bottle) of Klein bottle with animations is an excellent reference is you are unfamiliar with the Klein bottle. In short, a Klein bottle is made by gluing the edge"s" (since there is only one edge) of a mobius strip. It pieces itself because we are viewing it in $3$ dimensional world. In $4$ dimensional world, it does not intercept with itself at all. 
+
+   It's quite hard to picture the triangulation of the Klein bottle directly. But once we know how it is made, we can build it from right to left. The $\color{green}green$ edge is where the piercing occurs. The $\color{magenta} magenta$ line is the "edge" of the Mobius strip.  
+
+   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfKlein.png" width="80%">
+
+# 1-D Example
 
 For a set of connecting points, 
 
