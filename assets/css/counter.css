@@ -24,7 +24,7 @@ div#content-container > h5 {
 
 div#content-container > h1::before {
     counter-increment: h1;
-    content: "Section " counter(h1) ". ";
+    content: counter(h1) ". ";
 }
 
 div#content-container > h2::before {
