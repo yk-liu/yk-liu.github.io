@@ -285,7 +285,7 @@ The Lorentz attractor can also be seen as a complicated manifold sprinkled with 
 
 A **one-form**, or a **covector**, **dual vector**, is an element of a **dual vector space**.
 
-A dual vector space is all linear functions that maps a vector to $\R^1$. In another word, 
+A dual vector space is all linear functions that maps a vector to $\R^1​$. In another word, 
 
 > A dual vector act on a vector gives a real number.
 >
@@ -402,11 +402,6 @@ The next steps would be
    $$
 
 
-
-
-
-
-
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -420,7 +415,6 @@ Still, the expression deserves more investigation. Leaving the context of vector
 $$
 \d f=\sum \Partial{f}{x^i}\d x^i=\d g \notag
 $$
-
 
 they will yield the same result,
 
@@ -454,10 +448,6 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
-
-
-
-
 
 
 
@@ -495,7 +485,9 @@ This definition will immediate cause a problem: it's no longer guaranteed that a
 
 This property is called exactness. Which we will investigate later.
 
-# Two-Forms and Higher Forms
+# Wedge Product
+
+A two-form is can be seen as a "product" of two one-forms.
 
 ## Wedge Product of General Vectors
 
@@ -577,9 +569,9 @@ $$
 >     > - This matrix is anti-symmetry matrix of odd dimension and thus has a zero determinant.
 >     >
 >
->     However, this result is not the area of this two vectors. $\vec u \wedge\vec v$ is a bivector, it's norm $A^2=\norm{\vec u\wedge \vec v}^2\overset{\small\text{numerically}}{=\!=\!=\!=\!=}(\vec u \times \vec v)^2$ is the area of the parallelogram.
+>     However, this result is not the area of this two vectors. $\vec u \wedge\vec v$ is a bivector, it's norm $A^2=\norm{\vec u\wedge \vec v}^2\substack{\small\text{numerically}\newline\huge {=}}(\vec u \times \vec v)^2$ is the area of the parallelogram.
 >
-> 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$,$ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u _ 1 v _ 2 w _ 3 + u _ 2 v _ 3 w _ 1 + u _ 3 v _ 1 w _ 2 - u _ 1 v _ 3 w _ 2 - u _ 2 v _ 1 w _ 3 - u _ 3 v _ 2 w _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2 \wedge \uvec{e} _ 3) $. Still the volume($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
+> 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$, $ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u _ 1 v _ 2 w _ 3 + u _ 2 v _ 3 w _ 1 + u _ 3 v _ 1 w _ 2 - u _ 1 v _ 3 w _ 2 - u _ 2 v _ 1 w _ 3 - u _ 3 v _ 2 w _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2 \wedge \uvec{e} _ 3) $. Still the volume($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
 >
 >     There is more to it. While $\vec{u} \wedge \vec{v} \wedge \vec{w}$ is a simple construction of three vectors, it is also a wedge product of vector and yet a wedge product $\vec{u} \wedge (\vec{v} \wedge \vec{w})$. The volume of the parallelepiped ($3$-dimensional area) is now the span of a vector and an parallelogram ($2$-dimensional area). Similarly, a $(n+m)$-dimensional area can be spanned by a $n$-dimensional area and $m$-dimensional area.
 >
@@ -589,6 +581,7 @@ $$
 Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X _ {\mu\nu}\d x^\mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
 
 This can be seen as a tensor product of two one-forms.
+
 $$
 \begin{align}
 (3\d x + \d y) ∧ (\e^x\d x + 2\d y) &= 3\e^x\d x ∧ \d x + 6\d x ∧ \d y + \e^x \d y ∧ \d x + 2\d y ∧ \d y\\
@@ -596,7 +589,7 @@ $$
 \end{align}
 $$
 
-## Exterior Derivative
+# Exterior Derivative
 
 Another way to see a two-form is that it's a second derivative of something. So take the "derivative" of a $1$-form (first derivative) should result in a $2$-form. This procedure is called a **exterior derivative**. This operation is denoted using again the symbol $\d$.
 
@@ -616,14 +609,13 @@ $$
 $$
 
 This coincides with the definition of **curl**.
+
 $$
 \vec{\nabla} \times \vec X = (Hy − Gz)\uvec i + (Gx − Fy)\uvec k + (Fz − Hx)\uvec j
 $$
 
-
 Thus the exterior derivative of a $p$-form is a $(p+1)$-form.
-
 
 A $2$-form is an expression built using wedge products of pairs of $1$-forms. 
 
-The real significance of $2​$-forms will come later when we do surface integrals. A $2​$-form will be an expression that can be integrated over a surface in the same way that a $1​$-form can be integrated over a curve.
+The real significance of $2$-forms will come later when we do surface integrals. A $2$-form will be an expression that can be integrated over a surface in the same way that a $1$-form can be integrated over a curve.
