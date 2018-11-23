@@ -1,6 +1,6 @@
 ---
 title: Introduction to Homology
-Edit: 2018-11-23
+Edit: 2018-11-21
 category: Blog
 tags: Homology Topology Euler-Characteristic
 keywords: simplex complex triangulation cycle boundary chain hole Euler-Poincare
