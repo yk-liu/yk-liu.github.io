@@ -96,7 +96,7 @@ Homology, however, is just a natural way of defining Euler characteristics on to
 
 ## Triangulation of Objects
 
-Triangulation is again no stranger for anyone who ever took part in [IYPT](http://iypt.org)(International Young Physicists' Tournament), [CUPT](http://adsabs.harvard.edu/abs/2013APS..MARF38013L)(China Undergraduate Physics Tournament), or any PTs, and had some experience with [COMSOL Multiphysics® software](https://www.comsol.com/comsol-multiphysics). The following is a triangulation, or a "meshing" as is called in the software, of a spring, from [Nishant Nath](https://nishantnath.wordpress.com/2012/06/21/comsol-tutorials-meshing/).
+Triangulation is again no stranger for anyone who ever took part in [IYPT](http://iypt.org)(International Young Physicists' Tournament), [CUPT](http://adsabs.harvard.edu/abs/2013APS..MARF38013L)(China Undergraduate Physics Tournament), or any PTs, and had some experience with [COMSOL Multiphysics® software](https://www.comsol.com/comsol-multiphysics). The following is a triangulation, or a "meshing" as is called in the software, of a spring (from [Nishant Nath](https://nishantnath.wordpress.com/2012/06/21/comsol-tutorials-meshing/)).
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/COMSOL(R)mesh.png" width="100%">
 
@@ -207,9 +207,9 @@ $$
 >
 > When we say "torus does not have a boundary", **We are talking about the surface.**
 >
-> This may be slightly confusing if you think of torus as the usual "doughnut" hanging in the three dimensional space. However, you should see the doughnut "as it is", that is to say, only to consider it's own intrinsic geometric structure. 
+> This may be slightly confusing if you think of torus as the usual "doughnut" hanging in three dimensional space. However, you should see the doughnut "as it is", that is to say, only to consider it's own intrinsic geometric structure. 
 >
-> These big words of "intrinsic geometric structure" is still quite hard to understand. Just think of the Planet Earth. You are living on the surface of the Earth. You know there are no boundaries on the **surface** of Earth, otherwise Christopher Columbus would have fallen into nothingness.
+> These big words of "intrinsic geometric structure" is still quite hard to understand. Just think of Planet Earth. You are living on the surface of the Earth. You know there are no boundaries on the **surface** of Earth, otherwise Christopher Columbus would have fallen into nothingness.
 >
 > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/FlatEarth.png" width="60%">
 >
@@ -322,13 +322,13 @@ All $r$-boundaries of $K$ forms $r$-boundary group $B _ r(K)$ ("B" stands for "*
 
 ## Cycles and Holes
 
-You are probably wondering why examples of cycles and boundaries are identical. In section [`Boundary Operator`](#boundary-operator) We know that it can be proven that a boundary can have no boundary. That is to say, all boundaries are cycles. 
+You are probably wondering why examples of cycles and boundaries are identical. In section [`Boundary Operator`](#boundary-operator) we know that it can be proven that a boundary can have no boundary. That is to say, all boundaries are cycles. 
 
-It's natural to ask, are all cycles are not necessarily boundaries? A trivial example is a single point. A single point have no boundaries but is not a boundary. Other than a point, you can draw as many strange shapes as you want, a torus, a two-torus, a torus with a $2$-dimensional fin, etc., but you won't find such cycles. As long as you are drawing in $\R^3$ you will always find your cycle is a boundary of something. 
+It's natural to ask, are all cycles necessarily boundaries? The answer is No. A trivial example is a single point. A single point have no boundaries but is not a boundary. However, it's hard to come up with an example other than a point. You can draw as many strange shapes as you want, a torus, a two-torus, a torus with a $2$-dimensional fin, etc. But you won't find such cycles. As a matter of fact, as long as you are drawing in $\R^3$, you will always find your cycle is a boundary of something. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndBoundary.png" width="60%">
 
-Now let's study circles on the torus. Are those cycles? Yes. But are those boundaries? One way to see if a cycle is a boundary is to expand the "territory" of the cycle and see if you can contract to a point. You will immediately see the lower two types of cycles are not boundaries of anything. 
+Now let's study circles on the torus. Are those cycles? Yes. But are those boundaries? One way to see if a cycle is a boundary is to expand the "territory" of the cycle and see if that cycle can contract to a point. You will immediately see the lower two types of cycles are not boundaries of anything. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndHole.png" width="60%">
 
@@ -348,7 +348,7 @@ $$
 
 ## Homologous Relation
 
-The group can thus be divided as equivalent classes of cycles
+The Homology group can thus be divided as equivalent classes of cycles
 $$
 H _ r(K)\dfdas\set{[z]\mid z\in Z _ r(K)},
 $$
@@ -367,14 +367,4 @@ If $z$ and $z^\prime$ belong to the same equivalent class, they are called **hom
 
 ## The Euler Characteristic Again
 
-
-
-
-
-
-
- 
-
-
-
- 
+The promise of this post is to define Euler Characteristic on a smooth manifold. Now it's high time we addressed it.
