@@ -328,32 +328,23 @@ It's natural to ask, are all cycles are not necessarily boundaries? A trivial ex
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndBoundary.png" width="60%">
 
-Now let's study this cycle on the torus. Is it a cycle? Yes. But is it a boundary? One way to see if a cycle is a boundary is to expand the "territory" of the cycle and see if you can contract to a point.
+Now let's study circles on the torus. Are those cycles? Yes. But are those boundaries? One way to see if a cycle is a boundary is to expand the "territory" of the cycle and see if you can contract to a point. You will immediately see the lower two types of cycles are not boundaries of anything. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndHole.png" width="60%">
 
-
-
-
-
-This is actually the motivation of Homology group. 
-
- Less trivial examples can be found in spaces that are not as "ambient" as $\R^3$. This loop on torus is not a boundary of 
-
-
-
-
+This is actually the motivation of Homology group. The existence of a cycle that is not a boundary indicates that there is at least one hole on the surface. More information can also be derived using the homology group.
 
 # Homology Group
 
-The chain group $C_r(K)$, cycle group $Z _ r(K)$ and boundary group $B _ r(K)$ of simplicial complex $K$ are obviously not topological invariant. We already know that all boundaries are cycles, but the reverse is not true. Those cycles that are not boundaries are 
+The chain group $C_r(K)$, cycle group $Z _ r(K)$ and boundary group $B _ r(K)$ of simplicial complex $K$ are obviously not topological invariant. We already know that all boundaries are cycles, but the reverse is not true. Those cycles that are not boundaries are represented by a "division", i.e., a quotient group. Formally, the Homology group $H _ r(K)$ is defined as 
 
-The Homology group $H _ r(K)$ is defined as 
 $$
 H _ r(K)\dfdas Z _ r(K)/B _ r(K).
 $$
 
-The notation involves quotient group and equivalent classes. If you are not familiar with those concepts, this [reference](https://math.stackexchange.com/questions/838797/quotient-spaces-and-quotient-groups-equivalence-classes-and-cosets) might help.
+ In laymen's term, Homology group $H _ r(K)$ is the cycles ($Z _ r (K)$) that are not ($ / $) boundaries ($B _ r (K)$). 
+
+> The notation involves quotient group and equivalent classes. If you are not familiar with those concepts, this [reference](https://math.stackexchange.com/questions/838797/quotient-spaces-and-quotient-groups-equivalence-classes-and-cosets) might help.
 
 The group can thus be divided as equivalent classes of cycles
 
@@ -371,7 +362,7 @@ If $z$ and $z^\prime$ belong to the same equivalent class, they are called **hom
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Homologous.png" width="60%">
 
-Why
+> Like the discussion in section [`Cycles and Holes`](#cycles-and-holes), on the right, $z-z^\prime$ is the boundary of a square and an triangle in $\R^3$, but it's not a boundary on the torus.
 
 ## 1-D Example
 
