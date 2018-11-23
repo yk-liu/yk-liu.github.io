@@ -1,9 +1,9 @@
 ---
-title: Introduction to Cohomology
+title: Introduction to De Rham Cohomology
 Edit: 2018-11-23
 category: Blog
-tags: Cohomology Topology
-keywords: s
+tags: De-Rham-Cohomology Topology
+keywords: cohomology
 description: My study notes on cohomology, as a preparation for K-theory.
 status: writing
 ---
@@ -42,4 +42,15 @@ $$
 \notag
 $$
 
+# The Name
+
+"De Rham Cohomology" is translated in Chinese as "德拉姆上同调", where "同调" stands for "same tune". I suppose this is related to the musical isomorphism between one forms and vectors. As for the meaning of "co-", here are my thoughts. You can check my previous notes on [homology](https://yk-liu.github.io/blog/Introduction-to-Homology.html).
+
+| English                  | Chinese           | Meaning                  |
+| ------------------------ | ----------------- | ------------------------ |
+| **co**sine/**co**tangent | **余**弦/**余**切 | adding up to $\pi /2$    |
+| **co**set                | **陪**集          | dual in the same space   |
+| **co**homology           | **上**同调        | dual in different spaces |
+
+# Body and Boundary
 

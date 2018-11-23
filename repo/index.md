@@ -2,9 +2,6 @@
 layout: default
 ---
 
-
-# My Repos
-
 Here is a list of planning, ongoing and finished projects.
 
 **Notice**: Now I am focused on blogging, so these codes maybe outdated.
