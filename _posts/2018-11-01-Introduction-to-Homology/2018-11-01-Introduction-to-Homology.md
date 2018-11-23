@@ -1,4 +1,5 @@
 ---
+
 title: Introduction to Homology
 Edit: 2018-11-21
 category: Blog
@@ -255,19 +256,38 @@ The $r$-chain group of simplicial complex $K$ is denoted as $C_r(K)$. We allow $
 ## Cycles
 
 An $r$-cycle is a chain with no boundary. We can also say that an $r$-cycle $c$ is the kernel of $\partial_r$:
+
 $$
 \partial_r c = 0
 $$
 
-All $r$-cycles of $K$ forms $r$-cycle group $C_r(K)$.
+All $r$-cycles of $K$ forms $r$-cycle group $C_r(K)$. For example, the edge of a triangle and the surface of a torus have no boundary.
+
+> Note: Torus does not have a boundary 
+>
+> This may be slightly confusing if you think of torus as the usual "doughnut" hanging in the three dimensional space. However, you should see the doughnut "as it is", that is to say, only to consider it's own intrinsic geometric structure. 
+>
+> These big words of "intrinsic geometric structure" is still quite hard to understand. Just think of the Planet Earth. You are living on the surface of the Earth. You know there are no boundaries on Earth, otherwise Christopher Columbus would have fallen into nothingness.
+>
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/FlatEarth.png" width="60%">
+>
+>  The same reasoning applies if the Earth were a doughnut.
+>
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/DoughnutEarth.png" width="60%">
 
 ## Boundaries
 
 An $r$-boundary is an $r$-chain such that it is the boundary of a $(r+1)$-chain. We can also say that an $r$-boundary $b$ is the image of $\partial_{r+1}$:
+
 $$
 b =\partial_{r+1} c
 $$
-All $r$-boundaries of $K$ forms $r$-boundary group $B_r(K)$. $B_{\dim K}$ is defined to be $0$. 
+
+All $r$-boundaries of $K$ forms $r$-boundary group $B _ r(K)$. $B _ {\dim K}$ is defined to be $0$. For example, coincidently, the edge of a triangle, the surface of a torus are boundaries.
+
+You are probably wondering why these examples are so special.Actually, it can be proven that a boundary can have no boundary. That is to say, all boundaries are cycles. However, more complex examples can be constructed in higher dimension, like the surface of a torus with a separate ring would have no boundary. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndBoundary.png" width="60%">
 
 # Examples of Triangulation
 
@@ -275,13 +295,13 @@ It's always a good idea to base discussion on some concrete examples. Here are s
 
  1. Triangulation of the side of cylinder.
 
-​    The most natural way of seeing the triangulation of a cylinder is to see it as "equivalent" with a triangular prism. However, since the surface of a cylinder is only $2$ dimensional, mathematicians prefer to draw them as flat as possible, so we introduce a notation of "gluing", as is shown on the right. The arrows on edge $(p_0,p_1)$ emphasize the way of gluing.
+​    The most natural way of seeing the triangulation of a cylinder is to see it as "equivalent" with a triangular prism. However, since the surface of a cylinder is only $2$ dimensional, mathematicians prefer to draw them as flat as possible, so we introduce a notation of "gluing", as is shown on the right. The arrows on edge $(p _ 0,p _ 1)$ emphasize the way of gluing.
 
    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfCylinder.png" width="80%">
 
  2. Triangulation of the Mobius strip.
 
-​    The famous Mobius strip is much less trivial than the cylinder. Still, we can "crush" the band and see a good way to triangulate it. The arrows on edge $(p_0,p_5)$ emphasize the way of gluing, as a Mobius strip is made by twisting a strip $180$ degree and then joining the ends of the strip.
+​    The famous Mobius strip is much less trivial than the cylinder. Still, we can "crush" the band and see a good way to triangulate it. The arrows on edge $(p _ 0,p _ 5)$ emphasize the way of gluing, as a Mobius strip is made by twisting a strip $180$ degree and then joining the ends of the strip.
 
    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfMobius.png" width="80%">
 
@@ -301,15 +321,31 @@ It's always a good idea to base discussion on some concrete examples. Here are s
 
 # Homology Group
 
-The chain group $C_r(K)$, cycle group $Z_r(K)$ and boundary group $B_r(K)$ of simplicial complex $K$ are obviously not topological invariant. The Homology group $H_r(K)$ is defined as 
+The chain group $C_r(K)$, cycle group $Z _ r(K)$ and boundary group $B _ r(K)$ of simplicial complex $K$ are obviously not topological invariant. The Homology group $H _ r(K)$ is defined as 
 
 $$
-H_r(K)\dfdas Z_r(K)/B_r(K)
+H _ r(K)\dfdas Z _ r(K)/B _ r(K).
 $$
 
 The notation involves quotient group and equivalent classes. If you are not familiar with those concepts, this [reference](https://math.stackexchange.com/questions/838797/quotient-spaces-and-quotient-groups-equivalence-classes-and-cosets) might help.
 
-The group 
+The group can thus be divided as equivalent classes of cycles
+
+$$
+H _ r(K)\dfdas\set{[z]\mid z\in Z _ r(K)},
+$$
+
+where 
+
+$$
+[z]=\set{z^\prime\mid z-z^\prime\in B _ r(K)}.
+$$
+
+If $z$ and $z^\prime$ belong to the same equivalent class, they are called **homologous**. The two chains on the left is homologous since $z-z^\prime$ is a boundary of a triangular prism $K$, $\dim K=3$. Those on the right are not homologous since $z-z^\prime$ is not a boundary of anything.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Homologous.png" width="60%">
+
+Why
 
 ## 1-D Example
 
