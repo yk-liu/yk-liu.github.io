@@ -308,7 +308,7 @@ $$
 \partial_r c = 0
 $$
 
-All $r$-cycles of $K$ forms $r$-cycle group $Z_r(K)$ (the name is of German origin "Zyklus"). For example, the edge of a triangle and the surface of a torus have no boundary.
+All $r$-cycles of $K$ forms $r$-cycle group $Z_r(K)$ (the name is of German origin "*Zyklus*"). For example, the edge of a triangle and the surface of a torus have no boundary.
 
 ## Boundaries
 
@@ -318,7 +318,7 @@ $$
 b =\partial_{r+1} c
 $$
 
-All $r$-boundaries of $K$ forms $r$-boundary group $B _ r(K)$ ("B" stands for "Begrenzung" in German). $B _ {\dim K}$ is defined to be $0$. For example, coincidently, the edge of a triangle, the surface of a torus are boundaries.
+All $r$-boundaries of $K$ forms $r$-boundary group $B _ r(K)$ ("B" stands for "*Begrenzung*" in German). $B _ {\dim K}$ is defined to be $0$. For example, coincidently, the edge of a triangle, the surface of a torus are boundaries.
 
 ## Cycles and Holes
 
@@ -346,8 +346,9 @@ $$
 
 > The notation involves quotient group and equivalent classes. If you are not familiar with those concepts, this [reference](https://math.stackexchange.com/questions/838797/quotient-spaces-and-quotient-groups-equivalence-classes-and-cosets) might help.
 
-The group can thus be divided as equivalent classes of cycles
+## Homologous Relation
 
+The group can thus be divided as equivalent classes of cycles
 $$
 H _ r(K)\dfdas\set{[z]\mid z\in Z _ r(K)},
 $$
@@ -364,13 +365,7 @@ If $z$ and $z^\prime$ belong to the same equivalent class, they are called **hom
 
 > Like the discussion in section [`Cycles and Holes`](#cycles-and-holes), on the right, $z-z^\prime$ is the boundary of a square and an triangle in $\R^3$, but it's not a boundary on the torus.
 
-## 1-D Example
-
-For a set of connecting points, 
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/1dHomology.png" width="40%">
-
-
+## The Euler Characteristic Again
 
 
 
