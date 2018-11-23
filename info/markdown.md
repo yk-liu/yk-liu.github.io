@@ -6,6 +6,9 @@ Edit: 2018-11-14
 mathjax: true
 ---
 
+# Careful!
+
+Don't use [] in YAML front matter.
 
 # Highlights
 
