@@ -149,8 +149,6 @@ For future reference, the dual spaces to the spaces of vector fields over Euclid
 > $$
 >
 
-
-
 # Vectors on Manifolds
 
 We all know what vector is in Euclidean space, a **vector** is formally defined as an element of a **vector space**, i.e. a set that is closed under finite vector addition and scalar multiplication.
@@ -403,7 +401,6 @@ The next steps would be
 
 
 
-
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -453,30 +450,36 @@ Now we have made out what vectors and covectors are:
 
 
 
-
-
 So far so good. 
 
 > The problem rises when you read *"A one-form is 'a thing you plug vectors into': you feed it a vector and it spits out a number which depends linearly on the input."*. You are happy to do some exercises to enhance your understanding of this new concept of covectors. You are smart enough to only use basis of aforementioned vectors and the covectors. That gives you
+> 
 > $$
 > \d x^i(\Partial{}{x^j}) =??? \notag
 > $$
+> 
 > Well, that is not clear. You thought maybe if reversing the roles of vector and covector (since they are dual to each other), the result will make more sense. You arrive at
+> 
 > $$
 > \Partial{(\d x^i)}{x^j}=??? \notag
 > $$
+> 
 > That is something you have never seen in calculus, yet it doesn't look entirely wrong. 
 >
 > Then you turned to a text book for answer, [[Sean Carroll](https://arxiv.org/pdf/gr-qc/9712019.pdf)] for example. In most (if not all) text books, the equation reads
+> 
 > $$
 > \d x^i(\Partial{}{x^j}) =\Partial{(\d x^i)}{x^j}=\delta _ j^i \notag
 > $$
+> 
 > That can't be right! You know very clear that $\Partial{x^i}{x^j}=\delta _ j^i$ and $\Partial{(\d x^i)}{x^j}\neq\Partial{x^i}{x^j}$. 
 >
 > A quick google search tells you that these operators [**are merely "notations"**](https://math.stackexchange.com/questions/1478544/basis-one-form-and-basis-vector-confusion). An [answer](https://math.stackexchange.com/a/2318102) went so far as to give the explanation that $\d f$ should be
+> 
 > $$
 > \frac{df}{d} = \frac{\partial{f}}{\partial{x}}\frac{dx}{d} + \frac{\partial{f}}{\partial{y}}\frac{dy}{d}... \notag
 > $$
+> 
 > just to cancel out the $\Partial{}{x}​$.
 
 That bugged me a long time as well. However, if I start from $\Eqn{basis-one-form}$, I know that the basis of "canonical one-form" should be $\int \d x$ rather than $\d x$. We only used $\d x$ to rule out the redundant one forms to establish a one-to-one correspondence. There should be no puzzle anymore, since in some sense, $\d x$ is indeed a notation. And the expression $\frac{d\phi}{d}$ do resemble $\int \d x$ if you think of $\d $ and $\int$ as inverse operations. These two explanations each being only half of the story. Only by combining them can one get a solid understanding of the basis of covectors. 
@@ -536,6 +539,7 @@ $$
 > ***CONNECTIONS TO GEOMETRIC ENTITIES***:
 >
 > 1. **Analogue to cross product as a test of collinearity**: The wedge product gives a simple way to test for "**coplanarity**" or linear (in)dependence of vectors: if $\vec u$ and $\vec v$ are collinear, meaning $\vec u = a \vec v$, by anti-symmetry of wedge product,  
+>    
 >     $$
 >     \vec u \wedge \vec v =\vec u \wedge a\vec u=a(\vec u \otimes \vec u - \vec u \otimes \vec u)=0 \notag
 >     $$
@@ -549,7 +553,6 @@ $$
 > 2. **Analogue to cross product as a indicator of orientation**: If $n\gt 3$, there are infinitely many directions perpendicular to the two vectors, so you can't think of the orientation as a vector (like the cross product in three dimensions). Instead, you may think of the orientation as a *circle* in the plane of the two given vectors $\vec u$ and $\vec v$, with a direction attached to it in one of the two possible ways: $\circlearrowleft$ or $\circlearrowright$.
 >
 > 3. **Analogue to cross product as a way to compute "area of parallelogram"**: For two vectors $\vec u=(a,b,c)$ and $\vec v=(d,e,f)$, We can see that the nonzero entries of wedge product are basically the same as for the cross product. 
->
 >     $$
 >     \begin{align}
 >     \vec{u} \wedge \vec{v}
@@ -576,9 +579,9 @@ $$
 >
 >     However, this result is not the area of this two vectors. $\vec u \wedge\vec v$ is a bivector, it's norm $A^2=\norm{\vec u\wedge \vec v}^2\substack{\small\text{numerically}\newline\huge {=}}(\vec u \times \vec v)^2$ is the area of the parallelogram.
 >
-> 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$, $ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u _ 1 v _ 2 w _ 3 + u _ 2 v _ 3 w _ 1 + u _ 3 v _ 1 w _ 2 - u _ 1 v _ 3 w _ 2 - u _ 2 v _ 1 w _ 3 - u _ 3 v _ 2 w _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2 \wedge \uvec{e} _ 3) $. Still the volume($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
+> 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$, $ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u _ 1 v _ 2 w _ 3 + u _ 2 v _ 3 w _ 1 + u _ 3 v _ 1 w _ 2 - u _ 1 v _ 3 w _ 2 - u _ 2 v _ 1 w _ 3 - u _ 3 v _ 2 w _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2 \wedge \uvec{e} _ 3) $. Still the volume ($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
 >
->     There is more to it. While $\vec{u} \wedge \vec{v} \wedge \vec{w}$ is a simple construction of three vectors, it is also a wedge product of vector and yet a wedge product $\vec{u} \wedge (\vec{v} \wedge \vec{w})$. The volume of the parallelepiped ($3$-dimensional area) is now the span of a vector and an parallelogram ($2$-dimensional area). Similarly, a $(n+m)$-dimensional area can be spanned by a $n$-dimensional area and $m$-dimensional area.
+>     There is more to it. While $\vec{u} \wedge \vec{v} \wedge \vec{w}​$ is a simple construction of three vectors, it is also a wedge product of vector and yet a wedge product $\vec{u} \wedge (\vec{v} \wedge \vec{w})​$. The volume of the parallelepiped ($3​$-dimensional area) is now the span of a vector and an parallelogram ($2​$-dimensional area). Similarly, a $(n+m)​$-dimensional area can be spanned by a $n​$-dimensional area and $m​$-dimensional area.
 >
 
 ## Wedge Product of One-Forms
