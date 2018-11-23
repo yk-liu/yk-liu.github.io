@@ -5,6 +5,7 @@ category: Blog
 tags: Cohomology Topology
 keywords: s
 description: My study notes on cohomology, as a preparation for K-theory.
+status: writing
 ---
 
 $$

@@ -26,6 +26,17 @@ When I started writing on this website, I wanted to share notes on what I have l
 
 I also realized that this website can be used as a billboard of my professional backgrounds. This is a great proof for what I have learned.
 
+# Posts
+
+The posts are at different status.
+
+| Status    | Meaning                                                      |
+| --------- | ------------------------------------------------------------ |
+| Archived  | This post is outdated and I probably won't update it anymore. |
+| Completed | This post is considered completed, but I might edit it when I came up with something new. |
+| Paused    | This post is considered of low priority. I will come back to this post later. |
+| Writing   | This post is being actively edited.                          |
+
 # Sources
 
 This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) uses these sources:
@@ -46,6 +57,8 @@ This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) us
 | [Encryption](https://github.com/robinmoisson/staticrypt)     | Secret Pages                                    | [MIT](http://opensource.org/licenses/MIT)                    |
 
 Additional licensing information can be found [here](https://github.com/yk-liu/yk-liu.github.io/blob/master/LICENSE.md).
+
+I mainly use [Typora](https://www.typora.io) to write my post.
 
 # The Name
 

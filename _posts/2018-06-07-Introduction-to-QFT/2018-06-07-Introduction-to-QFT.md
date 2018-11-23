@@ -5,7 +5,7 @@ category: Blog
 tags: QFT study-notes
 keywords: QFT
 description: My Study notes on QFT lesson for the final.
-status: archived
+status: Archived
 ---
 
 # 约定
