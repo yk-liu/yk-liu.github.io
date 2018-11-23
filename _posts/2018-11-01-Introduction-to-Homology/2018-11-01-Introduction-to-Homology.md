@@ -287,18 +287,20 @@ The $r$-chain group of simplicial complex $K$ is denoted as $C_r(K)$. We allow $
 > **Chain Complex**
 >
 > Using boundary operator we can build a chain complex:
-> 
+>
 > $$
 > 0\substack{i\\\hookrightarrow}C _ n\xrightarrow{\partial _ n}C _ {n-1}\xrightarrow{\partial _ {n-1}}C _ {n-2}\xrightarrow{\partial _ {n-2}} \cdots\xrightarrow{\partial _ 2}C _ {1}\xrightarrow{\partial _ 1}C_0\xrightarrow{\partial _ 0}0
 > $$
-> 
+>
 > Where $\substack{i \newline \hookrightarrow}$ denotes the inclusion map. Given a subset $B$ of a set $A$, the injection $f:B\rightarrow A$ defined by $f(b)=b$ for all $b \in B$ is called the inclusion map. That is to say:
-> 
+>
 > $$
 > i:0 \rightarrow 0 \in C_n
 > $$
 >
 > > Insisting on putting $0$ on the left side seems to me purely an aesthetic choice. The boundary group $B_n(K) = 0$ is a definition (see [`Boundaries`](#Boundaries)). This chain complex is commonly seen in k-theories.
+> >
+> > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/ChainComplex.png" width="80%">
 
 ## Cycles
 
