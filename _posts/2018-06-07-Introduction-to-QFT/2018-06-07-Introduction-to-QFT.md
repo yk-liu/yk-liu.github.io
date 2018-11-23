@@ -1,16 +1,14 @@
 ---
 layout: post
-title: 量子场论
+title: Introduction to QFT
 category: Blog
-tags: QFT
+tags: QFT study-notes
 keywords: QFT
 description: My Study notes on QFT lesson for the final.
 status: unfinished
 ---
 
-# 量子场论
-
-## 约定
+# 约定
 
 $$
 \newcommand{\d}{\mathrm{d}}
@@ -41,9 +39,9 @@ $$
 
 泛函求导用$\eth$表示
 
-## K-G方程
+# K-G方程
 
-### 哈密顿量
+## 哈密顿量
 
 要构建相对论量子力学, 哈密顿量$H$ 要满足
 
@@ -52,7 +50,8 @@ p _ \mu p^\mu=E^2-{\vec{p}}^2=m^2
 $$
 
 (由 $E^2={\vec{p}}^2c^2+m^2c^4$ 自然单位制$c=0$)
-### 运动方程
+
+## 运动方程
 
 利用
 
@@ -80,7 +79,7 @@ $$
 
 即为K-G方程
 
-### 方程的解
+## 方程的解
 
 > 一维..
 >
@@ -158,7 +157,7 @@ $$
 \phi(x)=\int \d^3 \vec{p} \left( \frac{a(\vec{p})}{\sqrt{2E _ p}}e^{i(E _ pt-\vec{p}\cdot\vec{x})} +  \frac{b(\vec{p})}{\sqrt{2E _ p}} e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right)
 $$
 
-#### 实数解
+### 实数解
 
 如果是实标量场, 有$\phi(x)=\phi^\dagger(x)$, 得到
 
@@ -181,7 +180,7 @@ $$
 \phi(x)=\int \frac{\d^3\vec{p}}{\sqrt{2E _ p}}\left( a(\vec{p})e^{i(E _ pt-\vec{p}\cdot\vec{x})} +  a^\dagger(\vec{p}) e^{-i(E _ pt-\vec{p}\cdot\vec{x})}\right)
 $$
 
-### 场的量子化
+## 场的量子化
 
 到此为止, 所有的分析都是基于量子力学的, 没有涉及场的概念
 
@@ -195,7 +194,7 @@ C-->|傅里叶变换|D[平面波形式解]
 
 这一节的内容就是二次量子化, 引入场的概念
 
-#### 傅里叶变换
+### 傅里叶变换
 
 先将$a(\vec{p})$用逆傅里叶变换写出, 方便起见, 这里有一个常数
 
@@ -258,7 +257,7 @@ $$
 \end{align*}
 $$
 
-#### 二次量子化
+### 二次量子化
 
 利用共轭动量密度和==???==的对易关系, 可以推导出$a$和$a^\dagger$ 的对易关系
 
@@ -335,7 +334,7 @@ $$
 
 和谐振子的很像
 
-### 零点能与Normal Ordering
+## 零点能与Normal Ordering
 
 一个重大问题在于, 这样的哈密顿量零点能是无穷大. 因为空间每一点都是一个谐振子, 每一个谐振子都有不为零的零点能, 导致场的零点能是无穷大. 
 
@@ -369,11 +368,11 @@ $$
 $$
 
 
-### 对称性分析
+## 对称性分析
 
-### 传播子
+## 传播子
 
-#### 传播子与格林函数
+### 传播子与格林函数
 
 计算在$y$处粒子传播到$x$处的概率幅$\left\langle y| x\right\rangle$有:
 
@@ -406,7 +405,7 @@ $$
 > 
 > 因此对于类空间隔, RHS 两项相消, 给出概率幅为$0$. 
 
-#### Feynman 传播子
+### Feynman 传播子
 
 Feynman传播子的定义为
 
@@ -500,7 +499,7 @@ D _ F(x-y)&\equiv\lim _ {\varepsilon\rightarrow0}{\int\frac{\d^4 p}{2\pi)^4} \fr
 \end{align}
 $$
 
-#### 格林函数
+### 格林函数
 
 带入K-G方程, 可以看出, Feynman传播子就是K-G方程的格林函数
 
@@ -515,7 +514,7 @@ $$
 \end{align*}
 $$
 
-## Dirac方程
+# Dirac方程
 
 没有在K-G里面讲: 负能量粒子的问题E可正可负
 
@@ -525,7 +524,7 @@ $$
 
 ==希望我有时间可以直接从:要描述spin=1/2粒子开始写方程 角度来写==
 
-### 哈密顿量
+## 哈密顿量
 
 $$
 H^2=p^2+m^2\\
@@ -534,7 +533,7 @@ $$
 
 可以看作是对哈密顿量的开方操作
 
-#### $\gamma$矩阵的性质
+### $\gamma$矩阵的性质
 
 $\gamma$矩阵的上下标的来源, 其实是因为他们是矢量. 把它们当作标量, 才导致旋量这一变换十分复杂的量. 详见[^gamma as vector]
 
@@ -542,7 +541,7 @@ $\gamma$矩阵的上下标的来源, 其实是因为他们是矢量. 把它们�
 
 ...
 
-### 运动方程
+## 运动方程
 
 $$
 i\hbar \frac{\partial}{\partial t}\psi(x)=\gamma^0(-i\vec{\gamma}\cdot \vec{\nabla}+m)\psi(x)
@@ -554,7 +553,7 @@ $$
 (i\gamma^\mu \partial _ \mu-m)\psi(x)=0
 $$
 
-### 方程的解
+## 方程的解
 
 对于平面波$\psi(x)=u(\vec p)e^{-ipx}$, $\psi(x)=v(\vec p)e^{ipx}$ 分别为方程的正频解和负频解
 
@@ -567,15 +566,15 @@ $$
 
 注意狄拉克本来想要只有正能量的解, 可是这里仍然会有负能量的解.
 
-### 场的量子化
+## 场的量子化
 
-#### Dirac场的拉格朗日量
+### Dirac场的拉格朗日量
 
 $$
 \mathcal{L}=\bar{\psi}(i\not\partial -m)\psi
 $$
 
-#### Dirac场的量子化
+### Dirac场的量子化
 
 狄拉克方程有两个解. 类似地可以写成
 
@@ -588,15 +587,15 @@ $$
 
 
 
-### 对称性分析
+## 对称性分析
 
-### 传播子
-
-
+## 传播子
 
 
 
-## 相互作用
+
+
+# 相互作用
 
 ```mermaid
 graph LR
@@ -607,7 +606,7 @@ C-->D[Feynman图]
 
 
 
-### 相互作用的形式[^langrangian1]
+## 相互作用的形式[^langrangian1]
 
 相互作用的哈密顿量的一般形式是
 
@@ -650,7 +649,7 @@ $$
 
 因此$\phi\ket{\Omega}$与$\phi\ket{0}$不同, 不再是产生一个新的粒子. 从这一角度也可以说明为何要用$\ket{\Omega}$ 标记基态.
 
-### 相互作用哈密顿量
+## 相互作用哈密顿量
 
 引入相互作用绘景
 
@@ -809,7 +808,7 @@ U(t,t _ 0)&=\idmat+\sum _ {n=1}^{\infty}\left((-i)^n\int _ {t _ 0}^{t} \d \tau _
 \end{align*}
 $$
 
-### S矩阵
+## S矩阵
 
 注意$\Eqn{defU}$中, 
 
@@ -836,13 +835,13 @@ S=\Torder{\expp{-i\int _ {-\infty}^{\infty} \d \tau \int \d^3 \vec{x} \mathcal{H
 =\Torder{\expp{-i\int _ {-\infty}^{\infty} \d^4 x \mathcal{H} _ I(x) }}
 $$
 
-### Wick 定理
+## Wick 定理
 
 $S$矩阵含有编时乘积, 但哈密顿量密度是Normal Order的. 将编时乘积转换为Normal Ordering的过程由Wick 定理给出.
 
 >  要计算$\bra{i}S\ket{f}$, 就要计算$\bra{0}H\ket{0}$, 即要计算类似$\bra{0}\Torder{\phi(x) \phi(y)}\ket{0}$的式子.
 
-#### 举例计算
+### 举例计算
 
 先考虑两个标量场的乘积:
 
@@ -927,7 +926,7 @@ $$
 \end{align*}
 $$
 
-#### 一般的Wick 定理
+### 一般的Wick 定理
 
 $$
 \begin{align*}
@@ -976,7 +975,7 @@ $$
 >
 > 
 
-### 自由真空与相互作用真空
+## 自由真空与相互作用真空
 
 之前计算的都是自由真空$\ket{0}$的期望值, 但是真正代表散射概率的$\bra{i}S\ket{f}$应该是相互作用真空$\ket{\Omega}$的期望值.
 
@@ -1031,13 +1030,13 @@ $$
 
 可见在此处解释了T的路径问题(Eqn 2.107 & 2.110) [^skriptQFT1].
 
-### Feynman图
+## Feynman图
 
 
 
 
 
-### 相互作用的传播子
+## 相互作用的传播子
 
 目的是计算
 
