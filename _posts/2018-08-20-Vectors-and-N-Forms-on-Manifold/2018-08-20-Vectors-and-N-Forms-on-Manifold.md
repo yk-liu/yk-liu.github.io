@@ -5,7 +5,7 @@ category: Blog
 tags: One-form Topology Vector
 keywords: one-form manifold Topology covector dual-space tangent-vector
 description: My interpretation on one-forms
-status: writing
+status: "writing"
 ---
 
 $$
@@ -406,6 +406,7 @@ The next steps would be
 
 
 
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -453,6 +454,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 
 

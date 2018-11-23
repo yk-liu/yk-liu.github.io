@@ -7,7 +7,6 @@ tags: Lie-algebra Lie-group
 keywords: Lie-algebra Lie-group
 description: My understanding of Lie-group and its Lie-algebra
 mermaid: true
-status: paused
 ---
 
 # 基本概念
