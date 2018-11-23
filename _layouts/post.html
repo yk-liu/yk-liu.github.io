@@ -47,15 +47,18 @@
                <div id="info">
                   <div id="date">
     					{% if page.Edit %}
-                        <p><code class="highlighter-rouge">Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
-                        <p><code class="highlighter-rouge">Edited</code>:  &nbsp; {{ page.Edit | date: '%B %d, %Y' }} </p>
+                        <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
+                        <p><code>Edited</code>:  &nbsp; {{ page.Edit | date: '%B %d, %Y' }} </p>
                         {% else %}
-                        <p><code class="highlighter-rouge">Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
+                        <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
                         {% endif %}
+						{% if page.status %}
+						<p><code>Status</code>:  &nbsp; <code >{{page.status}}</code></p>
+						{% endif %}
                   </div>
                   {% if site.tags != '' %}
                   <div id="tag-list">
-                        <p><code class="highlighter-rouge"> Tags </code>:  &nbsp; [
+                        <p><code> Tags </code>:  &nbsp; [
                         {% for tag in page.tags %}
                         {% capture tag_name %}{{ tag }}{% endcapture %}
                         <a href="/blog/tags#{{ tag_name }}" target="_blank">

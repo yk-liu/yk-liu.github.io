@@ -206,6 +206,17 @@ ol {
     margin-bottom: 0;
 }
 
+code, tt {
+    /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
+	margin: 0 2px;
+    padding: 2px 4px;
+	font-size: 0.92rem;
+	background-color: #eeeeee;
+	border-radius: 4px;
+	font-weight: bold;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
 pre.highlight > code, tt {
     /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
 	margin: 0 2px;
@@ -230,14 +241,7 @@ pre.highlight > code, tt {
 /* } */
 
 code.highlighter-rouge {
-	margin: 0 2px;
-    padding: 2px 4px;
-	font-size: 0.92rem;
-	background-color: #eeeeee;
-	border-radius: 4px;
 	color: #e96900;
-	font-weight: bold;
-	font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* code.highlighter-rouge > nobr { */

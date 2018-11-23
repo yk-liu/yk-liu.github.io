@@ -67,7 +67,7 @@ defaults:
       mermaid: false
       commentable: true
       toc: true
-      status: "finished"
+      status: "completed"
       protected: false
 
 

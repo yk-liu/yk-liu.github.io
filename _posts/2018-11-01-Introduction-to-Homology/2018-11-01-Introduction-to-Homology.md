@@ -1,12 +1,10 @@
 ---
-
 title: Introduction to Homology
-Edit: 2018-11-21
+Edit: 2018-11-23
 category: Blog
-tags: homology Topology Euler-Characteristic
-keywords: simplex complex triangulation cycle boundary chain
+tags: Homology Topology Euler-Characteristic
+keywords: simplex complex triangulation cycle boundary chain hole Euler-Poincare
 description: My study notes on homology, as a preparation for Cohomology and to K-theory.
-mathjax: true
 ---
 
 $$
@@ -300,7 +298,7 @@ The $r$-chain group of simplicial complex $K$ is denoted as $C_r(K)$. We allow $
 >
 > > Insisting on putting $0$ on the left side seems to me purely an aesthetic choice. The boundary group $B_n(K) = 0$ is a definition (see [`Boundaries`](#Boundaries)). This chain complex is commonly seen in k-theories.
 > >
-> > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/ChainComplex.png" width="80%">
+> > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/ChainComplex.png" width="50%">
 
 ## Cycles
 
@@ -338,6 +336,10 @@ This is actually the motivation of Homology group. The existence of a cycle that
 
 # Homology Group
 
+This section follows [this paper](http://math.uchicago.edu/~may/REU2013/REUPapers/Carandang.pdf).
+
+# Definition of Homology Group
+
 The chain group $C_r(K)$, cycle group $Z _ r(K)$ and boundary group $B _ r(K)$ of simplicial complex $K$ are obviously not topological invariant. We already know that all boundaries are cycles, but the reverse is not true. Those cycles that are not boundaries are represented by a "division", i.e., a quotient group. Formally, the Homology group $H _ r(K)$ is defined as 
 
 $$
@@ -369,4 +371,41 @@ If $z$ and $z^\prime$ belong to the same equivalent class, they are called **hom
 
 ## The Euler Characteristic Again
 
-The promise of this post is to define Euler Characteristic on a smooth manifold. Now it's high time we addressed it.
+At the beginning of this post we mentioned defining Euler Characteristic on a smooth manifold. Now it's high time we addressed it from the standpoint of Homology groups. However, I am going to simply list these theorems without proof.
+
+We first treat $Z _ k, \,B _ k,\, H _ k$ and $C _ k$ as vector spaces, and define four numbers as their dimensions as the following:
+
+$$
+\begin{align}
+z_k&=\dim (\ker \partial_k),\\
+b_k&=\dim (\operatorname{im} \partial_k),\\
+h_k&=z_k-b_k,\\
+c_k&=\begin{cases}z_k+b_{k-1} \quad &k\gt 0 \\ z_0 &k=0\end{cases} .
+\end{align}
+$$
+
+Note a basis for the group of $0$-chains is the set of $0$-simplexes in $K$. The dimension of $C _ 0 (K)$ is therefore the number of $0$-simplexes, or the number of vertices $V$. We have $c _ 0 = V$. Similarly, $c _ 1 = E$, $c _ 2 = F$.
+
+Thus the Euler Characteristic can be calculated via
+
+$$
+\begin{align*}
+V-E+F&=c_0-c_1+c_2\\
+&=z_0-(z_1+b_0)+(z_2+b_1)\\
+&=z_0-b_0 -(z_1-b_1)+(z_2-b_2)\\
+&=h_0-h_1+h_2
+\end{align*}
+$$
+
+There are much more about homology, but sadly now I will have to move on to Cohomology. Before I go, here are some theorems you might find interesting. There are many notes online if you want to dig deeper.
+
+> **The Euler-Poincare formula**
+>
+> For all compact, connected surfaces, the Euler Characteristic is $2-h_1$.
+
+> **Holes and Homology**
+>
+> The number of elements in the equivalence classes of $1$-chains of a surface, i.e. $h _ 1$, is the twice the genus of a surface, where the genus indicates how many holes the surface has.
+
+
+
