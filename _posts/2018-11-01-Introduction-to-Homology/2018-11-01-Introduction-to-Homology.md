@@ -309,6 +309,8 @@ $$
 
 The notation involves quotient group and equivalent classes. If you are not familiar with those concepts, this [reference](https://math.stackexchange.com/questions/838797/quotient-spaces-and-quotient-groups-equivalence-classes-and-cosets) might help.
 
+The group 
+
 ## 1-D Example
 
 For a set of connecting points, 
