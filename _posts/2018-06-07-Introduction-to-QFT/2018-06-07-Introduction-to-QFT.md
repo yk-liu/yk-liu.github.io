@@ -1,10 +1,11 @@
 ---
 layout: post
-title: QFT
+title: 量子场论
 category: Blog
 tags: QFT study-notes
 keywords: QFT
 description: My Study notes on QFT lesson for the final.
+status: archived
 ---
 
 # 约定

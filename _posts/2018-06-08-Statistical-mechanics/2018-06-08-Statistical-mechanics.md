@@ -6,6 +6,7 @@ category: Blog
 tags: Statistical-mechanics First-Principle
 keywords: Statistical-mechanics First-Principle
 description: Class project. My attempt at building Statistical Mechanics from First Principles.
+status: archived
 ---
 
 
