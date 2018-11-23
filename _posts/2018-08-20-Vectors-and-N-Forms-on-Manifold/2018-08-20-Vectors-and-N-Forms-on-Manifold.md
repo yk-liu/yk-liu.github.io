@@ -402,6 +402,7 @@ The next steps would be
    $$
 
 
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -448,6 +449,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 
 
@@ -520,6 +522,7 @@ $$
 Considering wedge products actually being $n\times n$ antisymmetric tensors can be seen as vectors, it's no wonder that this space is indeed a vector space.
 
 [[John](https://www.av8n.com/physics/area-volume.pdf)] There is a **norm** for a wedge product (seen as a bi-vector, tri-vector, or $n$-vector) defined as 
+
 $$
 \begin{align}
 \norm{A \wedge B}^2&\dfdas(A \wedge B)\cdot(B \wedge A)\notag\\

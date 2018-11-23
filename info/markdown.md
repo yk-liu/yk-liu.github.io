@@ -8,7 +8,7 @@ mathjax: true
 
 # Careful!
 
-Don't use [] in YAML front matter.
+Don't use [] in YAML front matter. Use `\newline` instead of `\\` in inline math. `\substack` is a very useful command.
 
 # Highlights
 
