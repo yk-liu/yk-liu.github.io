@@ -308,7 +308,7 @@ $$
 \partial_r c = 0
 $$
 
-All $r$-cycles of $K$ forms $r$-cycle group $C_r(K)$. For example, the edge of a triangle and the surface of a torus have no boundary.
+All $r$-cycles of $K$ forms $r$-cycle group $Z_r(K)$ (the name is of German origin "Zyklus"). For example, the edge of a triangle and the surface of a torus have no boundary.
 
 ## Boundaries
 
@@ -318,7 +318,7 @@ $$
 b =\partial_{r+1} c
 $$
 
-All $r$-boundaries of $K$ forms $r$-boundary group $B _ r(K)$. $B _ {\dim K}$ is defined to be $0$. For example, coincidently, the edge of a triangle, the surface of a torus are boundaries.
+All $r$-boundaries of $K$ forms $r$-boundary group $B _ r(K)$ ("B" stands for "Begrenzung" in German). $B _ {\dim K}$ is defined to be $0$. For example, coincidently, the edge of a triangle, the surface of a torus are boundaries.
 
 ## Cycles and Holes
 
