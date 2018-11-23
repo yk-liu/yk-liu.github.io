@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2018-06-07
 title: Introduction to QFT
 category: Blog
 tags: QFT study-notes
