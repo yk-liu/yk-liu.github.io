@@ -263,15 +263,17 @@ $$
 
 All $r$-cycles of $K$ forms $r$-cycle group $C_r(K)$. For example, the edge of a triangle and the surface of a torus have no boundary.
 
-> Note: Torus does not have a boundary 
+> Note: Torus does not have a boundary.
+>
+> **We are talking about the surface.**
 >
 > This may be slightly confusing if you think of torus as the usual "doughnut" hanging in the three dimensional space. However, you should see the doughnut "as it is", that is to say, only to consider it's own intrinsic geometric structure. 
 >
-> These big words of "intrinsic geometric structure" is still quite hard to understand. Just think of the Planet Earth. You are living on the surface of the Earth. You know there are no boundaries on Earth, otherwise Christopher Columbus would have fallen into nothingness.
+> These big words of "intrinsic geometric structure" is still quite hard to understand. Just think of the Planet Earth. You are living on the surface of the Earth. You know there are no boundaries on the **surface** of Earth, otherwise Christopher Columbus would have fallen into nothingness.
 >
 > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/FlatEarth.png" width="60%">
 >
->  The same reasoning applies if the Earth were a doughnut.
+>  The same reasoning applies if the Earth were a doughnut. You cannot find and boundary to fall from.
 >
 > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/DoughnutEarth.png" width="60%">
 
