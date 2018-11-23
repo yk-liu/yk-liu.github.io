@@ -324,7 +324,9 @@ All $r$-boundaries of $K$ forms $r$-boundary group $B _ r(K)$ ("B" stands for "B
 
 You are probably wondering why examples of cycles and boundaries are identical. In section [`Boundary Operator`](#boundary-operator) We know that it can be proven that a boundary can have no boundary. That is to say, all boundaries are cycles. 
 
-It's natural to ask, are all cycles are not necessarily boundaries? You can draw as many strange shapes as you want, a torus, a two-torus, a torus with a $2$-dimensional fin, etc. As long as you are drawing in $\R^3$ you will always find your cycle is a boundary of something. 
+It's natural to ask, are all cycles are not necessarily boundaries? A trivial example is a single point. A single point have no boundaries but is not a boundary. Other than a point, you can draw as many strange shapes as you want, a torus, a two-torus, a torus with a $2$-dimensional fin, etc., but you won't find such cycles. As long as you are drawing in $\R^3$ you will always find your cycle is a boundary of something. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndBoundary.png" width="60%">
 
 Now let's study this cycle on the torus. Is it a cycle? Yes. But is it a boundary?
 
@@ -336,7 +338,7 @@ Now let's study this cycle on the torus. Is it a cycle? Yes. But is it a boundar
 
 This is actually the motivation of Homology group. 
 
-A trivial example is a single point. A single point have no boundaries but is not a boundary. Less trivial examples can be found in spaces that are not as "ambient" as $\R^3$. This loop on torus is not a boundary of 
+ Less trivial examples can be found in spaces that are not as "ambient" as $\R^3$. This loop on torus is not a boundary of 
 
 
 
