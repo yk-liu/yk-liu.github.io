@@ -328,7 +328,7 @@ It's natural to ask, are all cycles are not necessarily boundaries? A trivial ex
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndBoundary.png" width="60%">
 
-Now let's study this cycle on the torus. Is it a cycle? Yes. But is it a boundary?
+Now let's study this cycle on the torus. Is it a cycle? Yes. But is it a boundary? One way to see if a cycle is a boundary is to expand the "territory" of the cycle and see if you can contract to a point.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndHole.png" width="60%">
 
