@@ -213,7 +213,7 @@ $$
 >
 > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/FlatEarth.png" width="60%">
 >
->  The same reasoning applies if the Earth were a doughnut. You cannot find and boundary to fall from.
+>  The same reasoning applies, even if the Earth were a doughnut, you cannot find and boundary to fall from.
 >
 > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/DoughnutEarth.png" width="60%">
 >
