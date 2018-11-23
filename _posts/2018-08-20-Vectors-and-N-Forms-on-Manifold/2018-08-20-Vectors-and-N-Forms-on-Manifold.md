@@ -1,11 +1,11 @@
 ---
 title: Vectors and N-Forms on Manifold
-Edit: 2018-11-01
+Edit: 2018-11-23
 category: Blog
 tags: One-form Topology Vector
 keywords: one-form manifold Topology covector dual-space tangent-vector
 description: My interpretation on one-forms
-status: "writing"
+status: writing
 ---
 
 $$
