@@ -4,8 +4,8 @@ title: 量子场论
 category: Blog
 tags: QFT
 keywords: QFT
-description: My interpretation on one-forms
-mathjax: true
+description: My Study notes on QFT lesson for the final.
+status: unfinished
 ---
 
 # 量子场论
