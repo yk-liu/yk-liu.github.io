@@ -1,7 +1,12 @@
 ---
-title: Generate Thank You WordCloud with Mathematica
-
+title: Thank You Word Cloud with Mathematica
+category: Blog
+tags: word-cloud Mathematica
+keywords: word-cloud Mathematica
+description: Code for generatinge thank you word cloud with Mathematica
 ---
+
+Mathematica can be used to generate many interesting graphs. I used the codes in this post to generate thank you page in my slideshows.
 
 ```mathematica
 data = Normal[
@@ -12,7 +17,7 @@ data = Transpose[ data];
 TextTranslation["Thank you", #] & /@ data [[1]]
 ```
 
-Using the above code
+The above code will return a list, with some errors due to some languages are not recognized by the translation engine. 
 
 ```mathematica
 {"謝謝", "Thank you", "धन्यवाद", "Gracias", "Спасибо", "Obrigado", \
@@ -28,6 +33,8 @@ Using the above code
  TextTranslation["Thank you", 
   Entity["Language", "PanjabiWestern"]], "Grazie", "謝謝"}
 ```
+
+Just  remove them you'll have the following lists.
 
 ```mathematica
 Speakers = {Quantity[1.10716223`2.*^9, "People"], 
@@ -49,10 +56,12 @@ Words = {"谢谢", "Thank you", "धन्यवाद", "Gracias", "Спаси�
    "ధన్యవాదాలు", "Cảm ơn bạn", "감사합니다", "நன்றி", "ขอบคุณ", "Grazie"};
 ```
 
-```mathematica
+Now we are ready to plot the word cloud.
+
+```
 WordCloud[QuantityMagnitude[Speakers] -> Words, 
  WordOrientation -> "HorizontalVertical", 
  RandomSeeding -> "yingkailiu"]
 ```
 
-![Thanks](C:\Users\water\Desktop\Thanks.png)
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Thank-You-Cloud/assets/Thanks.png" width="80%">
