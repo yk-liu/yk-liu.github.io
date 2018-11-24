@@ -52,7 +52,7 @@ The definitions of curves and functions are as follow. A curve on a manifold is 
 
 Roughly, a **vector space** is a set of entities such that is closed under linear combinations. Both "arrow heads" and linear functions satisfy this definition and thus form a vector space. Due to this remarkable fact, there exists a subset of vectors called the **basis** in the space, such that any vector in the space can be represented as a linear combination of members of the basis. 
 
-Formally the vector space is a set of four things, $(V,k,+,*) $  where $ V $ is the set of vectors, $K$ is the **field** of scalars involved in creating multiples of vectors, $+$ is the function involved in adding two vectors and $ * $ is the binary function involved in multiplying a vector by a scalar.
+A set of basis is denoted as $\uvec e^i$. A vector is then denoted as $\vec v=\sum a _ i \uvec e^i$.
 
 ## Covectors
 
@@ -61,7 +61,9 @@ Now consider the set of linear functions defined on $V$ (vectors) that have valu
 - $(f _ 1+f _ 2)(V) = f _ 1(V) + f _ 2(V)$ where the R.H.S. is addition of two scalars in the field $K$. 
 - $(kf)(V) = kf(V)$, again where the R.H.S. is multiplication of two scalars in the field $K$.
 
-The vector space $V^*$ of linear functionals over $V$ is said to be **dual** to the vector space. 
+The vector space $V^*$ of linear functionals over $V$ is said to be **dual** to the vector space.
+
+A set of basis of the dual space are dual vectors as well, which acts on a vector and give a real number. An element of a set of basis is denoted as $\d x _ i(\vec v)\in \R​$ (this suspiciously looking name is carefully chosen for later elaboration, now you can either see it as a derivative $\d​$ or simply abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
 
 ## Inner Product and Dot Product
 
@@ -81,26 +83,22 @@ The inner product look suspiciously like dot product. A natural insight is that 
 
 If  the vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension and are thus isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
 
-This isomorphism is fairly simple: just swap the basis and nothing is changed. 
+This isomorphism is fairly simple: just swap the basis and nothing is changed. This isomorphism is called the **musical isomorphism**. A discussion of origin of this funny name can be found [here](https://mathoverflow.net/questions/69074/the-origin-of-the-musical-isomorphisms).
 
 Here we construct the **covector space** of $V$ and map from vectors to covectors:
 
-1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x _ 1,\d x _ 2,\d x _ 3)$ (this suspiciously looking name is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
+1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x _ 1,\d x _ 2,\d x _ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number. Writing that down as $\d x _ i(\vec v)\in \R$.
 
-2. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number.
-
-   Writing that down as $\d x _ i(\vec v)\in \R$.
-
-3. Due to linearity of the vectors and covectors, $\d x _ i(\vec v)$ can be seen as act on basis of vector
+2. Due to linearity of the vectors and covectors, $\d x _ i(\vec v)$ can be seen as act on basis of vector
    $$
    \d x _ i(\vec v) =\d x _ i (v _ 1\uvec x _ 1+v _ 2\uvec x _ 2+v _ 3\uvec x _ 3)= v _ 1\d x _ i (\uvec x _ 1)+v _ 2\d x _ i (\uvec x _ 2)+v _ 3\d x _ i (\uvec x _ 3)\in \R
    $$
 
-4. Define $\d x _ i (\uvec x _ j)\dfdas \delta _ {i,j}$. Recall that $\d x _ i (\uvec x _ j)=\inner{\d x _ i}{\uvec x _ j}=\delta _ {ij}$.
+3. Define $\d x _ i (\uvec x _ j)\dfdas \delta _ {i,j}$. Recall that $\d x _ i (\uvec x _ j)=\inner{\d x _ i}{\uvec x _ j}=\delta _ {ij}$.
 
-5. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v^\mu\d x _ \mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v^\mu \uvec x _ \mu$ by directly interchanging $\d x _ \mu$ between $\uvec x _ \mu$.
+4. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v^\mu\d x _ \mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v^\mu \uvec x _ \mu$ by directly interchanging $\d x _ \mu$ between $\uvec x _ \mu$.
 
-6. A covector $\dual {\vec v}(\vec v)=\dual v^i \d x _ i (v^i\uvec x _ i)=\dual v^i v _ i=\vec{\dual v }\cdot\vec v\in \R$
+5. A covector $\dual {\vec v}(\vec v)=\dual v^i \d x _ i (v^i\uvec x _ i)=\dual v^i v _ i=\vec{\dual v }\cdot\vec v\in \R$
 
 So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _ i \leftrightarrow \d x _ i$
 
@@ -331,7 +329,7 @@ The next steps would be
    \nabla _ {\vec v} f =\sum _ {i=1}^{n}{\left.\D{x _ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative}
    $$
 
-   Notice the following identity
+   Notice the following identities
 
    $$
    \begin{cases}\vec v =\sum\dot x^i(t)\Partial{}{x^i},\\
@@ -449,10 +447,9 @@ Now we have made out what vectors and covectors are:
    $$
 
 
-
 So far so good. 
 
-> The problem rises when you read *"A one-form is 'a thing you plug vectors into': you feed it a vector and it spits out a number which depends linearly on the input."*. You are happy to do some exercises to enhance your understanding of this new concept of covectors. You are smart enough to only use basis of aforementioned vectors and the covectors. That gives you
+> The problem rises when you read *"A one-form is 'a thing you plug vectors into': you feed it a vector and it spits out a number which depends linearly on the input."* You are happy to do some exercises to enhance your understanding of this new concept of covectors. You are smart enough to only use basis of aforementioned vectors and covectors. That gives you
 > 
 > $$
 > \d x^i(\Partial{}{x^j}) =??? \notag
@@ -474,7 +471,7 @@ So far so good.
 > 
 > That can't be right! You know very clear that $\Partial{x^i}{x^j}=\delta _ j^i$ and $\Partial{(\d x^i)}{x^j}\neq\Partial{x^i}{x^j}$. 
 >
-> A quick google search tells you that these operators [**are merely "notations"**](https://math.stackexchange.com/questions/1478544/basis-one-form-and-basis-vector-confusion). An [answer](https://math.stackexchange.com/a/2318102) went so far as to give the explanation that $\d f$ should be
+> A quick google search tells you that these operators [**are merely "notations"**](https://math.stackexchange.com/questions/1478544/basis-one-form-and-basis-vector-confusion). Another [answer](https://math.stackexchange.com/a/2318102) went so far as to give the explanation that $\d f$ should be
 > 
 > $$
 > \frac{df}{d} = \frac{\partial{f}}{\partial{x}}\frac{dx}{d} + \frac{\partial{f}}{\partial{y}}\frac{dy}{d}... \notag
