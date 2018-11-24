@@ -413,6 +413,7 @@ The next steps would be
 
 
 
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -461,13 +462,6 @@ Now we have made out what vectors and covectors are:
    $$
 
 
-
-
-
-
-
-
-
 So far so good. 
 
 > The problem rises when you read *"A one-form is 'a thing you plug vectors into': you feed it a vector and it spits out a number which depends linearly on the input."* You are happy to do some exercises to enhance your understanding of this new concept of covectors. You are smart enough to only use basis of aforementioned vectors and covectors. That gives you
@@ -504,7 +498,7 @@ That bugged me a long time as well. However, if I start from $\Eqn{basis-one-for
 
 ## Redefined Vector and One-Forms
 
-At the end of last section, vectors were generalized as mathematical objects with the form $X=X^\mu\Partial{}{x^\mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X^\mu \d x _ \mu$. 
+At the end of last section, vectors were generalized as mathematical objects with the form $X=X _ \mu\Partial{}{x _ \mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X _ \mu \d x ^ \mu$. 
 
 This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is not a total derivative of a function.
 
@@ -545,7 +539,6 @@ $$
 Considering wedge products actually being $n\times n$ antisymmetric tensors can be seen as vectors, it's no wonder that this space is indeed a vector space.
 
 [[John](https://www.av8n.com/physics/area-volume.pdf)] There is a **norm** for a wedge product (seen as a bi-vector, tri-vector, or $n$-vector) defined as 
-
 $$
 \begin{align}
 \norm{A \wedge B}^2&\dfdas(A \wedge B)\cdot(B \wedge A)\notag\\
@@ -620,10 +613,10 @@ Another way to see a two-form is that it's a second derivative of something. So 
 
 $$
 \begin{align*}
-\d (\form X) &= \d (X^\mu \d x _ \mu)\\
-&=(\d x _ \mu )\wedge\d x _ \mu + X^\mu\d( \d x _ \mu)\\
-\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d x _ \mu )\wedge\d x _ \mu\\
-&=\Partial{X^\mu}{x _ \nu}\d x _ \nu \wedge\d x _ \mu 
+\d (\form X) &= \d (X_\mu \d x ^ \mu)\\
+&=(\d x ^ \mu )\wedge\d x ^ \nu + X_\mu\d( \d x ^ \mu)\\
+\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d x ^ \mu )\wedge\d x ^ \nu\\
+&=\Partial{X_\mu}{x ^ \nu}\d x ^ \mu \wedge\d x ^ \nu 
 \end{align*}
 $$
 
