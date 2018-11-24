@@ -52,7 +52,7 @@ The definitions of curves and functions are as follow. A curve on a manifold is 
 
 Roughly, a **vector space** is a set of entities such that is closed under linear combinations. Both "arrow heads" and linear functions satisfy this definition and thus form a vector space. Due to this remarkable fact, there exists a subset of vectors called the **basis** in the space, such that any vector in the space can be represented as a linear combination of members of the basis. 
 
-A set of basis is denoted as $\uvec e^i$. A vector is then denoted as $\vec v=\sum a _ i \uvec e^i$.
+A set of basis is denoted as $\uvec e^i$. A vector is then denoted as $\vec v=\sum a ^ i \uvec e _ i$.
 
 ## Covectors
 
@@ -63,7 +63,9 @@ Now consider the set of linear functions defined on $V$ (vectors) that have valu
 
 The vector space $V^*$ of linear functionals over $V$ is said to be **dual** to the vector space.
 
-A set of basis of the dual space are dual vectors as well, which acts on a vector and give a real number. An element of a set of basis is denoted as $\d x _ i(\vec v)\in \R​$ (this suspiciously looking name is carefully chosen for later elaboration, now you can either see it as a derivative $\d​$ or simply abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
+A set of basis of the dual space are dual vectors as well, which acts on a vector and give a real number. An element of a set of basis is denoted as $\d x _ i(\vec v)\in \R$. A covector is denoted as $\form \omega=a _ i \uvec e ^ i$.
+
+> This suspiciously looking name is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
 
 ## Inner Product and Dot Product
 
@@ -85,22 +87,30 @@ If  the vector space is finite dimensional, so is its dual space. In this case, 
 
 This isomorphism is fairly simple: just swap the basis and nothing is changed. This isomorphism is called the **musical isomorphism**. A discussion of origin of this funny name can be found [here](https://mathoverflow.net/questions/69074/the-origin-of-the-musical-isomorphisms).
 
-Here we construct the **covector space** of $V$ and map from vectors to covectors:
+> Here we construct the **covector space** of $V$ and map from vectors to covectors:
+>
+> 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x _ 1,\d x _ 2,\d x _ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number. Writing that down as $\d x _ i(\vec v)\in \R.$
+>
+> 2. Due to linearity of the vectors and covectors, $\d x _ i(\vec v)$ can be seen as act on basis of vector
+>    $$
+>    \d x _ i(\vec v) =\d x _ i (v _ 1\uvec x _ 1+v _ 2\uvec x _ 2+v _ 3\uvec x _ 3)= v _ 1\d x _ i (\uvec x _ 1)+v _ 2\d x _ i (\uvec x _ 2)+v _ 3\d x _ i (\uvec x _ 3)\in \R
+>    $$
+>
+> 3. Define $\d x _ i (\uvec x _ j)\dfdas \delta _ {i,j}$. Recall that $\d x _ i (\uvec x _ j)=\inner{\d x _ i}{\uvec x _ j}=\delta _ {ij}$.
+>
+> 4. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v^\mu\d x _ \mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v^\mu \uvec x _ \mu$ by directly interchanging $\d x _ \mu$ between $\uvec x _ \mu$.
+>
+> 5. A covector $\dual {\vec v}(\vec v)=\dual v^i \d x _ i (v^i\uvec x _ i)=\dual v^i v _ i=\vec{\dual v }\cdot\vec v\in \R$
+>
 
-1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x _ 1,\d x _ 2,\d x _ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number. Writing that down as $\d x _ i(\vec v)\in \R$.
-
-2. Due to linearity of the vectors and covectors, $\d x _ i(\vec v)$ can be seen as act on basis of vector
-   $$
-   \d x _ i(\vec v) =\d x _ i (v _ 1\uvec x _ 1+v _ 2\uvec x _ 2+v _ 3\uvec x _ 3)= v _ 1\d x _ i (\uvec x _ 1)+v _ 2\d x _ i (\uvec x _ 2)+v _ 3\d x _ i (\uvec x _ 3)\in \R
-   $$
-
-3. Define $\d x _ i (\uvec x _ j)\dfdas \delta _ {i,j}$. Recall that $\d x _ i (\uvec x _ j)=\inner{\d x _ i}{\uvec x _ j}=\delta _ {ij}$.
-
-4. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v^\mu\d x _ \mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v^\mu \uvec x _ \mu$ by directly interchanging $\d x _ \mu$ between $\uvec x _ \mu$.
-
-5. A covector $\dual {\vec v}(\vec v)=\dual v^i \d x _ i (v^i\uvec x _ i)=\dual v^i v _ i=\vec{\dual v }\cdot\vec v\in \R$
-
-So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _ i \leftrightarrow \d x _ i$
+So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _ i \leftrightarrow \d x _ i$. This isomorphism is denoted as 
+$$
+\begin{align}
+\flat : \form \alpha \rightarrow  \alpha^\sharp = \sum \alpha^i \uvec e _ i = \vec \alpha ,\\
+\sharp : \vec v \rightarrow v^\flat = \sum \alpha _ i \form {\uvec e} ^ i = \form v ,
+\end{align}
+$$
+where $\sharp$ is called "sharp", $\flat$ is called "flat". For the $\sharp$ raises the index of basis, and $\flat$ lowers the index.
 
 > ***Remark:***
 >
@@ -399,6 +409,7 @@ The next steps would be
 
 
 
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -445,6 +456,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 
 So far so good. 
