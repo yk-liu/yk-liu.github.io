@@ -357,13 +357,13 @@ The next steps would be
    \end{align*}
    $$
 
-   Following the same procedure, we try to isolate the $\vec v$. This is more complicated than the above, by first multiplying the basis of $\vec v$ to isolate it, and then introduce the basis for one form $f$, namely $\uvec e^i$ to maintain the equality. 
+   Following the same procedure, we try to isolate the $\vec v​$. This is more complicated than the above, by first multiplying the basis of $\vec v​$ to isolate it, and then introduce the basis for one form $f​$, namely $\uvec e^i​$ to maintain the equality. 
 
    $$
    \begin{align}
    f(\vec v)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
    &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\notag\\
-   &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {e}_i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
+   &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {\mathbf e}^i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
    \end{align}
    $$
 
@@ -496,7 +496,7 @@ That bugged me a long time as well. However, if I start from $\Eqn{basis-one-for
 
 At the end of last section, vectors were generalized as mathematical objects with the form $X=X ^ \mu\Partial{}{x ^ \mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X _ \mu \d x ^ \mu$. 
 
-This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y​$ is a perfect one-form by this definition, but it is not a total derivative of a function.
+This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is not a total derivative of a function.
 
 This property is called exactness. Which we will investigate later.
 
