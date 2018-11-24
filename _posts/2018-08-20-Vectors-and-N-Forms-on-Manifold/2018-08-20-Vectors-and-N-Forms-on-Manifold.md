@@ -352,7 +352,7 @@ The next steps would be
 
    $$
    \begin{align*}
-   \vec v(f) &= \sum _ {i=1}^{n}{ {\red \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}}\Partial{f}{x_i}}\\
+   \vec v(f) &= \sum _ {i=1}^{n}{ {\red \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}}\Partial{f}{x^i}}\\
    &=\left(\sum _ {i=1}^{n}{ {\red \dot{x} ^ i(t _ 0)}\Partial{}{x^i}}\right) (f)\\
    \end{align*}
    $$
@@ -361,9 +361,9 @@ The next steps would be
 
    $$
    \begin{align}
-   f(\vec v)&= \sum _ {i=1}^{n}{ \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x_i}}} \notag\\
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x_i}} \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}\notag\\
-   &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x_i}} \uvec {e}_i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
+   f(\vec v)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\notag\\
+   &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {e}_i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
    \end{align}
    $$
 
@@ -371,53 +371,48 @@ The next steps would be
 
    $$
    \begin{align*}
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x_i}} {\uvec{\bf e}}_i \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right)\\
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x_i}} {\uvec {\bf e}}_i (\vec v)\\
-   &=\left(\sum _ {i=1}^{n}{\blue\Partial{f}{x_i}} {\uvec {\bf e}}_i\right) (\vec v)
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right)\\
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i (\vec v)\\
+   &=\left(\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i\right) (\vec v)
    \end{align*}
    $$
 
    Now the one form $\form f$ is identified as 
 
    $$
-   \form f = \sum _ {i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}_i \notag
+   \form f = \sum _ {i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i \notag
    $$
 
    where $\uvec e$ is a hungry operator on vectors. Now the job is to find the exact expression of $\uvec e$. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e _ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
 
    $$
    \begin{align*}
-   f &\equiv \uvec{e}_i\Partial{}{x_i}f \\
-   &=\uvec{e}_i\Partial{f}{x_i} &
+   f &\equiv \uvec{e}^i\Partial{}{x^i}f \\
+   &=\uvec{e}^i\Partial{f}{x^i} &
    \end{align*}
    $$
 
    The answer self-evident, 
 
    $$
-   \uvec e_i =\int \d x_i, \label{basis-one-form}
+   \uvec e^i =\int \d x^i, \label{basis-one-form}
    $$
 
    so that,
 
    $$
    \begin{align*}
-   f &\equiv \uvec{e}_i\Partial{}{x_i}f \\
-   &=\int \d x_i\Partial{f}{x_i} \\
+   f &\equiv \uvec{e}^i\Partial{}{x^i}f \\
+   &=\int \d x^i\Partial{f}{x^i} \\
    &=f
    \end{align*}
    $$
 
 
-
-
-
-
-
 By the above deduction, we finally arrive at the conclusion that
 
 $$
-\form f = \sum _ {i=1}^n\Partial{f}{x_i}\int \d x_i\\
+\form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i\\
 $$
 
 Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. 
@@ -462,6 +457,7 @@ Now we have made out what vectors and covectors are:
    $$
 
 
+
 So far so good. 
 
 > The problem rises when you read *"A one-form is 'a thing you plug vectors into': you feed it a vector and it spits out a number which depends linearly on the input."* You are happy to do some exercises to enhance your understanding of this new concept of covectors. You are smart enough to only use basis of aforementioned vectors and covectors. That gives you
@@ -498,9 +494,9 @@ That bugged me a long time as well. However, if I start from $\Eqn{basis-one-for
 
 ## Redefined Vector and One-Forms
 
-At the end of last section, vectors were generalized as mathematical objects with the form $X=X _ \mu\Partial{}{x _ \mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X _ \mu \d x ^ \mu$. 
+At the end of last section, vectors were generalized as mathematical objects with the form $X=X ^ \mu\Partial{}{x ^ \mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X _ \mu \d x ^ \mu$. 
 
-This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is not a total derivative of a function.
+This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y​$ is a perfect one-form by this definition, but it is not a total derivative of a function.
 
 This property is called exactness. Which we will investigate later.
 
