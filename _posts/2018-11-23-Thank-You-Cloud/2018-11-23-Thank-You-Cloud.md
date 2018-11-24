@@ -8,7 +8,7 @@ description: Code for generatinge thank you word cloud with Mathematica
 
 Mathematica can be used to generate many interesting graphs. I used the codes in this post to generate thank you page in my slideshows.
 
-```mathematica
+```
 data = Normal[
    EntityClass["Language", "TotalSpeakers" -> GreaterThan[50000000]][
     "TotalSpeakers", "EntityAssociation"]];
@@ -19,7 +19,7 @@ TextTranslation["Thank you", #] & /@ data [[1]]
 
 The above code will return a list, with some errors due to some languages are not recognized by the translation engine. 
 
-```mathematica
+```
 {"謝謝", "Thank you", "धन्यवाद", "Gracias", "Спасибо", "Obrigado", \
 "Terima kasih", "ধন্যবাদ", "شكرا", "terima kasih", 
  TextTranslation["Thank you", 
@@ -36,7 +36,7 @@ The above code will return a list, with some errors due to some languages are no
 
 Just  remove them you'll have the following lists.
 
-```mathematica
+```
 Speakers = {Quantity[1.10716223`2.*^9, "People"], 
    Quantity[7.6`2.*^8, "People"], Quantity[4.9`2.*^8, "People"], 
    Quantity[4.17`2.*^8, "People"], Quantity[2.77`2.*^8, "People"], 
