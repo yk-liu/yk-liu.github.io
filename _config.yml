@@ -1,5 +1,5 @@
 # Site settings
-title: A Finger Pointing to the Moon
+title: Pointing to the Moon
 description: Blog of Yingkai Liu
 baseurl: "" 
 # the subpath of your site, e.g. /blog
@@ -53,8 +53,7 @@ author:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
 
-google_site_verification:
- 
+
 permalink: none
 
 defaults:
