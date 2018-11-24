@@ -89,31 +89,31 @@ This isomorphism is fairly simple: just swap the basis and nothing is changed. T
 
 > Here we construct the **covector space** of $V$ and map from vectors to covectors:
 >
-> 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x _ 1,\d x _ 2,\d x _ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number. Writing that down as $\d x _ i(\vec v)\in \R.$
+> 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x ^ 1,\d x ^ 2,\d x ^ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number. Writing that down as $\d x _ i(\vec v)\in \R$.
 >
 > 2. Due to linearity of the vectors and covectors, $\d x _ i(\vec v)$ can be seen as act on basis of vector
 >    
 >    $$
->    \d x _ i(\vec v) =\d x _ i (v _ 1\uvec x _ 1+v _ 2\uvec x _ 2+v _ 3\uvec x _ 3)= v _ 1\d x _ i (\uvec x _ 1)+v _ 2\d x _ i (\uvec x _ 2)+v _ 3\d x _ i (\uvec x _ 3)\in \R
+>    \d x _ i(\vec v) =\d x _ i (v ^ 1\uvec x _ 1+v ^ 2\uvec x _ 2+v ^ 3\uvec x _ 3)= v ^ 1\d x _ i (\uvec x _ 1)+v _ 2\d x _ i (\uvec x _  2)+v _ 3\d x _ i (\uvec x _  3)\in \R
 >    $$
 >
-> 3. Define $\d x _ i (\uvec x _ j)\dfdas \delta _ {i,j}$. Recall that $\d x _ i (\uvec x _ j)=\inner{\d x _ i}{\uvec x _ j}=\delta _ {ij}$.
+> 3. Define $\d x ^ i (\uvec x _  j)\dfdas \delta ^ i _ j$. Recall that $\d x _ i (\uvec x ^  j)=\inner{\d x ^ i}{\uvec x _  j}=\delta ^ i _ j$.
 >
-> 4. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v^\mu\d x _ \mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v^\mu \uvec x _ \mu$ by directly interchanging $\d x _ \mu$ between $\uvec x _ \mu$.
+> 4. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v_\mu\d x ^ \mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v ^ \mu \uvec x _ \mu$ by directly interchanging $\d x ^ \mu$ between $\uvec x _   \mu$.
 >
-> 5. A covector $\dual {\vec v}(\vec v)=\dual v^i \d x _ i (v^i\uvec x _ i)=\dual v^i v _ i=\vec{\dual v }\cdot\vec v\in \R$
+> 5. A covector $ \dual {\vec v}(\vec v)=\dual v _ i \d x ^ i (v^i\uvec x _  i)=\dual v _ i v ^ i=\vec{\dual v }\cdot\vec v\in \R$
 >
 
-So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _ i \leftrightarrow \d x _ i$. This isomorphism is denoted as 
+So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _  i \leftrightarrow \d x _ i$. This isomorphism is denoted as 
 
 $$
 \begin{align}
-\flat : \form \alpha \rightarrow  \alpha^\sharp = \sum \alpha^i \uvec e _ i = \vec \alpha ,\\
-\sharp : \vec v \rightarrow v^\flat = \sum \alpha _ i \form {\uvec e} ^ i = \form v ,
+\sharp : \form \alpha \rightarrow  \alpha^\sharp = \sum \alpha^i \uvec e _ i = \vec \alpha ,\\
+\flat : \vec v \rightarrow v^\flat = \sum v _ i \form {\uvec e} ^ i = \form v ,
 \end{align}
 $$
 
-where $\sharp​$ reads "sharp", and $\flat​$ reads "flat". For $\sharp​$ raises the index of basis, and $\flat​$ lowers the index.
+where $\sharp$ reads "sharp", and $\flat$ reads "flat". For $\sharp$ raises the index of basis, and $\flat$ lowers the index.
 
 > ***Remark:***
 >
@@ -139,9 +139,9 @@ For future reference, the dual spaces to the spaces of vector fields over Euclid
 >
 > $$
 > \begin{align}
-> \d\, f &= \Partial{f}{x^\mu} \,\d x^\mu\notag\\
+> \d\, f &= \Partial{f}{x ^ \mu} \,\d x ^ \mu\notag\\
 > \updownarrow\phantom{f}&\phantom{\,} \text{ dual }\phantom{\,=}\updownarrow \label{df-nablaf}\\
-> \vec\nabla f &=\Partial{f}{x^\mu}\,\uvec x^\mu\notag
+> \vec\nabla f &=\Partial{f}{x _ \mu}\,\uvec x _ \mu\notag
 > \end{align}
 > $$
 >
@@ -149,11 +149,11 @@ For future reference, the dual spaces to the spaces of vector fields over Euclid
 > 
 > $$
 > \begin{align}
-> \d f(\vec v)&=\Partial{f}{x^\mu}\d x^\mu(\vec v)\notag\\
-> &=\Partial{f}{x^\mu}\d x^\mu(v^\nu \uvec x _ \nu)\notag\\
-> &=\Partial{f}{x^\mu}v^\nu \d x^\mu(\uvec x _ \nu)\notag\\
-> &=\Partial{f}{x^\mu}v^\nu \delta^\mu _ \nu\label{df-nablaf-vec-1}\\
-> &=\Partial{f}{x^\mu}v^\mu \notag\\
+> \d f(\vec v)&=\Partial{f}{x _ \mu}\d x _ \mu(\vec v)\notag\\
+> &=\Partial{f}{x _ \mu}\d x _ \mu(v_\nu \uvec x ^ \nu)\notag\\
+> &=\Partial{f}{x _ \mu}v^\nu \d x _ \mu(\uvec x ^ \nu)\notag\\
+> &=\Partial{f}{x _ \mu}v_\nu \delta_\mu ^ \nu\label{df-nablaf-vec-1}\\
+> &=\Partial{f}{x _ \mu}v_\mu \notag\\
 > &=\vec \nabla f\cdot \vec v \label{df-nablaf-vec-2}\\
 > &\dfdas\nabla _ {\vec v}f=\lim _ {h\rightarrow0}\frac{f(\vec x + h\vec v)-f(\vec x)}{h}\in\R \label{directionalderivative}
 > \end{align}
@@ -245,8 +245,8 @@ Reverse the above order, we will find the way to assign an operator to a vector.
 > \begin{align*}
 > \op v (f) &=\left.\D{}{t}f(\Gamma(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 > &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
-> &=\sum _ {i=1}^{n}{\dot{x _ i}(t _ 0)\Partial{f}{x^i}}\\
-> \text{notice that } &\vec v =(\dot x^1(t),\cdots,\dot x^n(t)),\vec \nabla f =(\Partial{f}{x^1},\cdots,\Partial{f}{x^n}) \\
+> &=\sum _ {i=1}^{n}{\dot{x }^i(t _ 0)\Partial{f}{x_i}}\\
+> \text{notice that } &\vec v =(\dot x^1(t),\cdots,\dot x^n(t)),\vec \nabla f =(\Partial{f}{x_1},\cdots,\Partial{f}{x_n}) \\
 > &=\vec \nabla f \cdot \vec v\\
 > &=\nabla _ {\vec v} f
 > \end{align*}
@@ -262,10 +262,10 @@ Here it goes from [Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometr
 > To be more mathematical, we introduce an equivalence class of curves in $\mani M$. If two curves $c _ 1(t)$ and $c _ 2(t)$ satisfy
 >
 > 1. $c _ 1(0) = c _ 2(0) = p$
-> 2. $ \left. \frac{\d x^\mu(c _ 1(t))}{\d t} \right\rvert _ {t=0} =\left.\frac{\d x^\mu(c _ 2(t))}{\d t}\right\rvert _ {t=0}$
+> 2. $ \left. \frac{\d x _ \mu(c _ 1(t))}{\d t} \right\rvert _ {t=0} =\left.\frac{\d x _ \mu(c _ 2(t))}{\d t}\right\rvert _ {t=0}$
 >
 > then $c _ 1(t)​$ and $c _ 2(t)​$ yield the same differential operator $X​$ at $p​$, in which case we deﬁne $c _ 1(t) \sim c _ 2(t)​$. Clearly $ \sim ​$ is an equivalence relation and deﬁnes the equivalence classes. We identify the tangent vector $X​$ with the equivalence class of curves
-> $[c(t)] = \left\lbrace \tilde{c}(t) \mid \tilde{c}(0)=c(0) \text{ and } \left.\frac{\d x^\mu (\tilde{c}(t))}{\d t} \right\vert _ {t=0} = \left.\frac{\d x^\mu (c(t))}{\d t} \right\vert _ {t=0} \right\rbrace ​$
+> $[c(t)] = \left\lbrace \tilde{c}(t) \mid \tilde{c}(0)=c(0) \text{ and } \left.\frac{\d x _ \mu (\tilde{c}(t))}{\d t} \right\vert _ {t=0} = \left.\frac{\d x _ \mu (c(t))}{\d t} \right\vert _ {t=0} \right\rbrace ​$
 >
 > rather than a curve itself.
 
@@ -321,7 +321,7 @@ The next steps would be
 1. To prove the $f$ in the above definition form a vector space, i.e., they themselves are vectors. 
 
    This can be verified as following:
-   
+
    $$
    \begin{align*}
    (a f+b g)(\vec v)&=a f(\vec v)+b g(\vec v)\\
@@ -337,23 +337,23 @@ The next steps would be
    Using the identity,
 
    $$
-   \nabla _ {\vec v} f =\sum _ {i=1}^{n}{\left.\D{x _ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative}
+   \nabla _ {\vec v} f =\sum _ {i=1}^{n}{\left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x_i}} \label{directional-derivative}
    $$
 
    Notice the following identities
 
    $$
-   \begin{cases}\vec v =\sum\dot x^i(t)\Partial{}{x^i},\\
-   d f = \sum \Partial{f}{x^i}dx^i\\
-   \vec \nabla f =(\Partial{f}{x^1},\cdots,\Partial{f}{x^n})\end{cases} \notag
+   \begin{cases}\vec v =\sum\dot x^i(t)\Partial{}{x_i},\\
+   d f = \sum \Partial{f}{x_i}dx_i\\
+   \vec \nabla f =(\Partial{f}{x_1},\cdots,\Partial{f}{x_n})\end{cases} \notag
    $$
 
    Now let's pretend we don't know the expression of $\vec v$, instead, we are going to try to make up the components of $\vec v$ from the expression by isolating the expression of $f$. The red texts are the components.
 
    $$
    \begin{align*}
-   \vec v(f) &= \sum _ {i=1}^{n}{ {\red \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}}\Partial{f}{x^i}}\\
-   &=\left(\sum _ {i=1}^{n}{ {\red \dot{x _ i}(t _ 0)}\Partial{}{x^i}}\right) (f)\\
+   \vec v(f) &= \sum _ {i=1}^{n}{ {\red \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}}\Partial{f}{x_i}}\\
+   &=\left(\sum _ {i=1}^{n}{ {\red \dot{x} ^ i(t _ 0)}\Partial{}{x^i}}\right) (f)\\
    \end{align*}
    $$
 
@@ -408,10 +408,15 @@ The next steps would be
    \end{align*}
    $$
 
+
+
+
+
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
- \form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i\\
+\form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i\\
 $$
 
 Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. 
@@ -424,20 +429,20 @@ $$
 
 they will yield the same result,
 
- $$
+$$
 \begin{align*}
 \nabla _ {\vec v} f -\nabla _ {\vec v} g &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+t\vec v)-f(\vec x _ 0)}{t}}-\lim _ {t\rightarrow 0}{\frac{g(\vec x _ 0+t\vec v)-g(\vec x _ 0)}{t}}\\
 &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}-\left.\D{}{t}g(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 &=\D{(f-g)}{t}\\
 &=0
 \end{align*}
- $$
+$$
 
 In other words, $\form f$ is actually an equivalent class of functions $f$, such that a set of functions $\set{f\mid \d f=\d f _ 0}$, can now be represented as
 
- $$
+$$
 \d f = \sum _ {i=1}^n\Partial{f}{x^i} \d x^i
- $$
+$$
 
 ## The Puzzle of $\frac{\partial (dx^\mu )}{\partial x^\nu}$
 
@@ -458,36 +463,41 @@ Now we have made out what vectors and covectors are:
 
 
 
+
+
+
+
+
 So far so good. 
 
 > The problem rises when you read *"A one-form is 'a thing you plug vectors into': you feed it a vector and it spits out a number which depends linearly on the input."* You are happy to do some exercises to enhance your understanding of this new concept of covectors. You are smart enough to only use basis of aforementioned vectors and covectors. That gives you
-> 
+>
 > $$
 > \d x^i(\Partial{}{x^j}) =??? \notag
 > $$
-> 
+>
 > Well, that is not clear. You thought maybe if reversing the roles of vector and covector (since they are dual to each other), the result will make more sense. You arrive at
-> 
+>
 > $$
 > \Partial{(\d x^i)}{x^j}=??? \notag
 > $$
-> 
+>
 > That is something you have never seen in calculus, yet it doesn't look entirely wrong. 
 >
 > Then you turned to a text book for answer, [[Sean Carroll](https://arxiv.org/pdf/gr-qc/9712019.pdf)] for example. In most (if not all) text books, the equation reads
-> 
+>
 > $$
 > \d x^i(\Partial{}{x^j}) =\Partial{(\d x^i)}{x^j}=\delta _ j^i \notag
 > $$
-> 
+>
 > That can't be right! You know very clear that $\Partial{x^i}{x^j}=\delta _ j^i$ and $\Partial{(\d x^i)}{x^j}\neq\Partial{x^i}{x^j}$. 
 >
 > A quick google search tells you that these operators [**are merely "notations"**](https://math.stackexchange.com/questions/1478544/basis-one-form-and-basis-vector-confusion). Another [answer](https://math.stackexchange.com/a/2318102) went so far as to give the explanation that $\d f$ should be
-> 
+>
 > $$
 > \frac{df}{d} = \frac{\partial{f}}{\partial{x}}\frac{dx}{d} + \frac{\partial{f}}{\partial{y}}\frac{dy}{d}... \notag
 > $$
-> 
+>
 > just to cancel out the $\Partial{}{x}​$.
 
 That bugged me a long time as well. However, if I start from $\Eqn{basis-one-form}$, I know that the basis of "canonical one-form" should be $\int \d x$ rather than $\d x$. We only used $\d x$ to rule out the redundant one forms to establish a one-to-one correspondence. There should be no puzzle anymore, since in some sense, $\d x$ is indeed a notation. And the expression $\frac{d\phi}{d}$ do resemble $\int \d x$ if you think of $\d $ and $\int$ as inverse operations. These two explanations each being only half of the story. Only by combining them can one get a solid understanding of the basis of covectors. 
@@ -510,38 +520,38 @@ The cross product of vectors $\vec u \times \vec v$ is a very useful operation i
 
 The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product. 
 
- $$
+$$
 \vec x^{\mu _ 1} \wedge \vec x^{\mu _ 2} \wedge. . .\wedge \vec x^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) \vec x^{\mu _ {P(1)}} \otimes\vec x^{\mu _ {P(2)}}\otimes \cdots\otimes \vec x^{\mu  _ {P(r)}} \label{wedgeDef}
- $$
+$$
 
 For example, 
 
- $$
+$$
 \begin{align}
 \vec u \wedge \vec v &= \vec u \otimes \vec v - \vec v \otimes \vec u\\
 \vec u \wedge \vec v  \wedge \vec w &= \vec u \otimes \vec v  \otimes \vec w + \vec w \otimes \vec u \otimes \vec v  + \vec v  \otimes \vec w \otimes \vec u \label{wedgeExample} \\
 &- \vec u \otimes \vec w \otimes \vec v  - \vec w \otimes \vec v  \otimes \vec u - \vec v \otimes \vec u \otimes \vec w \notag
 \end{align}
- $$
+$$
 
 Given a vector space $V$, a space of wedge product can be constructed as
 
- $$
+$$
 \wedge ^2 V = \set{ \vec u\wedge\vec v  {\mid}  \vec u,\vec v \in V  }\\
 \wedge ^3 V = \set{ \vec u\wedge\vec v \wedge \vec w {\mid} \vec u,\vec v,\vec w \in V  }\\
 \wedge ^n V = \set{ \vec u _ 1\wedge\vec u _ 2 \wedge\cdots\wedge \vec u _ n {\mid} \vec u _ i\in V ,i=1,2,\cdots,n }
- $$
+$$
 
 Considering wedge products actually being $n\times n$ antisymmetric tensors can be seen as vectors, it's no wonder that this space is indeed a vector space.
 
 [[John](https://www.av8n.com/physics/area-volume.pdf)] There is a **norm** for a wedge product (seen as a bi-vector, tri-vector, or $n$-vector) defined as 
 
- $$
+$$
 \begin{align}
 \norm{A \wedge B}^2&\dfdas(A \wedge B)\cdot(B \wedge A)\notag\\
 &=-(A \wedge B)^2
 \end{align}
- $$
+$$
 
 > ***CONNECTIONS TO GEOMETRIC ENTITIES***:
 >
@@ -593,35 +603,35 @@ Considering wedge products actually being $n\times n$ antisymmetric tensors can 
 
 ## Wedge Product of One-Forms
 
-Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X _ {\mu\nu}\d x^\mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
+Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X _ {\mu\nu}\d x _ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
 
 This can be seen as a tensor product of two one-forms.
 
- $$
+$$
 \begin{align}
 (3\d x + \d y) ∧ (\e^x\d x + 2\d y) &= 3\e^x\d x ∧ \d x + 6\d x ∧ \d y + \e^x \d y ∧ \d x + 2\d y ∧ \d y\\
 &= (6 − \e^x)\d x ∧ \d y
 \end{align}
- $$
+$$
 
 # Exterior Derivative
 
 Another way to see a two-form is that it's a second derivative of something. So take the "derivative" of a $1$-form (first derivative) should result in a $2$-form. This procedure is called a **exterior derivative**. This operation is denoted using again the symbol $\d$.
 
- $$
+$$
 \begin{align*}
 \d (\form X) &= \d (X^\mu \d x _ \mu)\\
-&=(\d X^\mu )\wedge\d x _ \mu + X^\mu\d( \d x _ \mu)\\
-\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d X^\mu )\wedge\d x _ \mu\\
+&=(\d x _ \mu )\wedge\d x _ \mu + X^\mu\d( \d x _ \mu)\\
+\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d x _ \mu )\wedge\d x _ \mu\\
 &=\Partial{X^\mu}{x _ \nu}\d x _ \nu \wedge\d x _ \mu 
 \end{align*}
- $$
+$$
 
 For example, 
 
- $$
+$$
 \d(F \d x+G\d y +H\d z) = (\Partial{G}{x} −\Partial{F}{y})\d x\wedge \d y + (\Partial{H}{y} −\Partial{G}{z})\d y \wedge \d z + (\Partial{F}{z} − \Partial{H}{x})\d z \wedge \d x
- $$
+$$
 
 This coincides with the definition of **curl**.
 
