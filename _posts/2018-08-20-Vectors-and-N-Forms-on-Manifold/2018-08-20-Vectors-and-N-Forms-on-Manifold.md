@@ -337,15 +337,15 @@ The next steps would be
    Using the identity,
 
    $$
-   \nabla _ {\vec v} f =\sum _ {i=1}^{n}{\left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x_i}} \label{directional-derivative}
+   \nabla _ {\vec v} f =\sum _ {i=1}^{n}{\left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative}
    $$
 
    Notice the following identities
 
    $$
-   \begin{cases}\vec v =\sum\dot x^i(t)\Partial{}{x_i},\\
-   d f = \sum \Partial{f}{x_i}dx_i\\
-   \vec \nabla f =(\Partial{f}{x_1},\cdots,\Partial{f}{x_n})\end{cases} \notag
+   \begin{cases}\vec v =\sum\dot x^i(t)\Partial{}{x^i},\\
+   d f = \sum \Partial{f}{x^i}\d x ^ i\\
+   \vec \nabla f =(\Partial{f}{x^1},\cdots,\Partial{f}{x^n})\end{cases} \notag
    $$
 
    Now let's pretend we don't know the expression of $\vec v$, instead, we are going to try to make up the components of $\vec v$ from the expression by isolating the expression of $f$. The red texts are the components.
@@ -361,9 +361,9 @@ The next steps would be
 
    $$
    \begin{align}
-   f(\vec v)&= \sum _ {i=1}^{n}{ \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}\notag\\
-   &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {e}^i \right)\cdot \left(\dot{x _ i}(t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
+   f(\vec v)&= \sum _ {i=1}^{n}{ \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x_i}}} \notag\\
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x_i}} \left.\D{x _ i}{t}\right\vert _ {t=t _ 0}\notag\\
+   &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x_i}} \uvec {e}_i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
    \end{align}
    $$
 
@@ -371,39 +371,39 @@ The next steps would be
 
    $$
    \begin{align*}
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot{x _ i}(t _ 0)\Partial{}{x^i}\right)\\
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i (\vec v)\\
-   &=\left(\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i\right) (\vec v)
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x_i}} {\uvec{\bf e}}_i \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right)\\
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x_i}} {\uvec {\bf e}}_i (\vec v)\\
+   &=\left(\sum _ {i=1}^{n}{\blue\Partial{f}{x_i}} {\uvec {\bf e}}_i\right) (\vec v)
    \end{align*}
    $$
 
    Now the one form $\form f$ is identified as 
 
    $$
-   \form f = \sum _ {i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i \notag
+   \form f = \sum _ {i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}_i \notag
    $$
 
    where $\uvec e$ is a hungry operator on vectors. Now the job is to find the exact expression of $\uvec e$. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e _ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
 
    $$
    \begin{align*}
-   f &\equiv \uvec{e}^i\Partial{}{x^i}f \\
-   &=\uvec{e}^i\Partial{f}{x^i} &
+   f &\equiv \uvec{e}_i\Partial{}{x_i}f \\
+   &=\uvec{e}_i\Partial{f}{x_i} &
    \end{align*}
    $$
 
    The answer self-evident, 
 
    $$
-   \uvec{e^i}=\int \d x^i, \label{basis-one-form}
+   \uvec e_i =\int \d x_i, \label{basis-one-form}
    $$
 
    so that,
 
    $$
    \begin{align*}
-   f &\equiv \uvec{e}^i\Partial{}{x^i}f \\
-   &=\int \d x^i\Partial{f}{x^i} \\
+   f &\equiv \uvec{e}_i\Partial{}{x_i}f \\
+   &=\int \d x_i\Partial{f}{x_i} \\
    &=f
    \end{align*}
    $$
@@ -416,7 +416,7 @@ The next steps would be
 By the above deduction, we finally arrive at the conclusion that
 
 $$
-\form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i\\
+\form f = \sum _ {i=1}^n\Partial{f}{x_i}\int \d x_i\\
 $$
 
 Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. 
