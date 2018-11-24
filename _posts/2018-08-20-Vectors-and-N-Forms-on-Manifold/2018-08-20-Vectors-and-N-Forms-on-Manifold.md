@@ -149,13 +149,13 @@ For future reference, the dual spaces to the spaces of vector fields over Euclid
 > 
 > $$
 > \begin{align}
-> \d f(\vec v)&=\Partial{f}{x _ \mu}\d x _ \mu(\vec v)\notag\\
-> &=\Partial{f}{x _ \mu}\d x _ \mu(v_\nu \uvec x ^ \nu)\notag\\
-> &=\Partial{f}{x _ \mu}v^\nu \d x _ \mu(\uvec x ^ \nu)\notag\\
-> &=\Partial{f}{x _ \mu}v_\nu \delta_\mu ^ \nu\label{df-nablaf-vec-1}\\
-> &=\Partial{f}{x _ \mu}v_\mu \notag\\
+> \d f(\vec v)&=\Partial{f}{x ^ \mu}\d x ^ \mu(\vec v)\notag\\
+> &=\Partial{f}{x ^ \mu}\d x ^ \mu(v^\nu \uvec x _ \nu)\notag\\
+> &=\Partial{f}{x ^ \mu}v^\nu \d x ^ \mu(\uvec x _ \nu)\notag\\
+> &=\Partial{f}{x ^ \mu}v^\nu \delta ^ \mu _ \nu\label{df-nablaf-vec-1}\\
+> &=\Partial{f}{x ^ \mu}v^\mu \notag\\
 > &=\vec \nabla f\cdot \vec v \label{df-nablaf-vec-2}\\
-> &\dfdas\nabla _ {\vec v}f=\lim _ {h\rightarrow0}\frac{f(\vec x + h\vec v)-f(\vec x)}{h}\in\R \label{directionalderivative}
+> &\dfdas\nabla ^ {\vec v}f=\lim ^ {h\rightarrow0}\frac{f(\vec x + h\vec v)-f(\vec x)}{h}\in\R \label{directionalderivative}
 > \end{align}
 > $$
 >
