@@ -92,6 +92,7 @@ This isomorphism is fairly simple: just swap the basis and nothing is changed. T
 > 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x _ 1,\d x _ 2,\d x _ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number. Writing that down as $\d x _ i(\vec v)\in \R.$
 >
 > 2. Due to linearity of the vectors and covectors, $\d x _ i(\vec v)$ can be seen as act on basis of vector
+>    
 >    $$
 >    \d x _ i(\vec v) =\d x _ i (v _ 1\uvec x _ 1+v _ 2\uvec x _ 2+v _ 3\uvec x _ 3)= v _ 1\d x _ i (\uvec x _ 1)+v _ 2\d x _ i (\uvec x _ 2)+v _ 3\d x _ i (\uvec x _ 3)\in \R
 >    $$
@@ -104,13 +105,15 @@ This isomorphism is fairly simple: just swap the basis and nothing is changed. T
 >
 
 So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _ i \leftrightarrow \d x _ i$. This isomorphism is denoted as 
+
 $$
 \begin{align}
 \flat : \form \alpha \rightarrow  \alpha^\sharp = \sum \alpha^i \uvec e _ i = \vec \alpha ,\\
 \sharp : \vec v \rightarrow v^\flat = \sum \alpha _ i \form {\uvec e} ^ i = \form v ,
 \end{align}
 $$
-where $\sharp$ is called "sharp", $\flat$ is called "flat". For the $\sharp$ raises the index of basis, and $\flat$ lowers the index.
+
+where $\sharp​$ reads "sharp", and $\flat​$ reads "flat". For $\sharp​$ raises the index of basis, and $\flat​$ lowers the index.
 
 > ***Remark:***
 >
@@ -204,7 +207,6 @@ Still, the problem is that vectors do not live on the manifold. This forbids def
 >  
 >  The expression is now of the form $a \Partial{\vec r}{u}+b \Partial{\vec r}{v}​$, with $\Partial{\vec r}{u}​$ being an actual **vector**(as an arrow).
 >
->
 >  Next we will see that the term $\Partial{\vec r}{u}$ is indeed a basis vector independent of choice of curves. If we take the curve $\Gamma$ as $\cases{ u =u(t)\\ v =2 }$ in the left figure (or $w=3$ in the right), $\Eqn{vectorToOperator}​$ becomes
 >
 >  $$
@@ -215,7 +217,6 @@ Still, the problem is that vectors do not live on the manifold. This forbids def
 >  \label{operator _ basis}
 >  \end{align}
 >  $$
->
 >
 >  notice for example,  $ \Gamma: \cases{ u=k\cdot t\\ v=2} , \vec X =k\left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\ v=v _ 0}} $ or $ \Gamma^\prime\cases{u=\tan t\\ v=2} , \vec X =\left.\tan(t _ 0)\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\ v=v _ 0}} $  This means if we take a parametrized curve along $v=2$, the tangent vector at point $p$ will always be some number times $ \left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0 \\ v=v _ 0}} $ .
 
@@ -407,9 +408,6 @@ The next steps would be
    \end{align*}
    $$
 
-
-
-
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -426,20 +424,20 @@ $$
 
 they will yield the same result,
 
-$$
+ $$
 \begin{align*}
 \nabla _ {\vec v} f -\nabla _ {\vec v} g &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+t\vec v)-f(\vec x _ 0)}{t}}-\lim _ {t\rightarrow 0}{\frac{g(\vec x _ 0+t\vec v)-g(\vec x _ 0)}{t}}\\
 &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}-\left.\D{}{t}g(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 &=\D{(f-g)}{t}\\
 &=0
 \end{align*}
-$$
+ $$
 
 In other words, $\form f$ is actually an equivalent class of functions $f$, such that a set of functions $\set{f\mid \d f=\d f _ 0}$, can now be represented as
 
-$$
+ $$
 \d f = \sum _ {i=1}^n\Partial{f}{x^i} \d x^i
-$$
+ $$
 
 ## The Puzzle of $\frac{\partial (dx^\mu )}{\partial x^\nu}$
 
@@ -456,6 +454,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 
 
@@ -511,38 +510,38 @@ The cross product of vectors $\vec u \times \vec v$ is a very useful operation i
 
 The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product. 
 
-$$
+ $$
 \vec x^{\mu _ 1} \wedge \vec x^{\mu _ 2} \wedge. . .\wedge \vec x^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) \vec x^{\mu _ {P(1)}} \otimes\vec x^{\mu _ {P(2)}}\otimes \cdots\otimes \vec x^{\mu  _ {P(r)}} \label{wedgeDef}
-$$
+ $$
 
 For example, 
 
-$$
+ $$
 \begin{align}
 \vec u \wedge \vec v &= \vec u \otimes \vec v - \vec v \otimes \vec u\\
 \vec u \wedge \vec v  \wedge \vec w &= \vec u \otimes \vec v  \otimes \vec w + \vec w \otimes \vec u \otimes \vec v  + \vec v  \otimes \vec w \otimes \vec u \label{wedgeExample} \\
 &- \vec u \otimes \vec w \otimes \vec v  - \vec w \otimes \vec v  \otimes \vec u - \vec v \otimes \vec u \otimes \vec w \notag
 \end{align}
-$$
+ $$
 
 Given a vector space $V$, a space of wedge product can be constructed as
 
-$$
+ $$
 \wedge ^2 V = \set{ \vec u\wedge\vec v  {\mid}  \vec u,\vec v \in V  }\\
 \wedge ^3 V = \set{ \vec u\wedge\vec v \wedge \vec w {\mid} \vec u,\vec v,\vec w \in V  }\\
 \wedge ^n V = \set{ \vec u _ 1\wedge\vec u _ 2 \wedge\cdots\wedge \vec u _ n {\mid} \vec u _ i\in V ,i=1,2,\cdots,n }
-$$
+ $$
 
 Considering wedge products actually being $n\times n$ antisymmetric tensors can be seen as vectors, it's no wonder that this space is indeed a vector space.
 
 [[John](https://www.av8n.com/physics/area-volume.pdf)] There is a **norm** for a wedge product (seen as a bi-vector, tri-vector, or $n$-vector) defined as 
-$$
+
+ $$
 \begin{align}
 \norm{A \wedge B}^2&\dfdas(A \wedge B)\cdot(B \wedge A)\notag\\
 &=-(A \wedge B)^2
 \end{align}
-$$
-
+ $$
 
 > ***CONNECTIONS TO GEOMETRIC ENTITIES***:
 >
@@ -598,31 +597,31 @@ Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-f
 
 This can be seen as a tensor product of two one-forms.
 
-$$
+ $$
 \begin{align}
 (3\d x + \d y) ∧ (\e^x\d x + 2\d y) &= 3\e^x\d x ∧ \d x + 6\d x ∧ \d y + \e^x \d y ∧ \d x + 2\d y ∧ \d y\\
 &= (6 − \e^x)\d x ∧ \d y
 \end{align}
-$$
+ $$
 
 # Exterior Derivative
 
 Another way to see a two-form is that it's a second derivative of something. So take the "derivative" of a $1$-form (first derivative) should result in a $2$-form. This procedure is called a **exterior derivative**. This operation is denoted using again the symbol $\d$.
 
-$$
+ $$
 \begin{align*}
 \d (\form X) &= \d (X^\mu \d x _ \mu)\\
 &=(\d X^\mu )\wedge\d x _ \mu + X^\mu\d( \d x _ \mu)\\
 \xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d X^\mu )\wedge\d x _ \mu\\
 &=\Partial{X^\mu}{x _ \nu}\d x _ \nu \wedge\d x _ \mu 
 \end{align*}
-$$
+ $$
 
 For example, 
 
-$$
+ $$
 \d(F \d x+G\d y +H\d z) = (\Partial{G}{x} −\Partial{F}{y})\d x\wedge \d y + (\Partial{H}{y} −\Partial{G}{z})\d y \wedge \d z + (\Partial{F}{z} − \Partial{H}{x})\d z \wedge \d x
-$$
+ $$
 
 This coincides with the definition of **curl**.
 
