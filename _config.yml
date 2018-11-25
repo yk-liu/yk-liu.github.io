@@ -73,3 +73,5 @@ defaults:
 exclude:
  - LICENSE.md
  - README.md
+ - "*.cdf"
+ - "*.nb"
