@@ -95,9 +95,6 @@ The basis' action on vector is denoted as $\d x^i (V)$.
 
 
 
-
-
-
 ## Musical Isomorphism
 
 If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
@@ -369,8 +366,9 @@ The next steps would be
    \end{align*}
    $$
 
-   Following the same procedure, we try to isolate the $V$. This is a little more complicated. In the second equation, first multiplying the basis to have an explicit expression of $V$ so we can isolate $V$ later. Then we insert the basis for one-form $\form f$, namely $\uvec e^i$ to maintain the equality. 
+   Following the same procedure, we try to isolate the $V$. This is a little more complicated. 
 
+   In the second equation, first we need an explicit expression of $V$ so we can isolate $V$ later. Then we need to insert $\uvec e^i$ to maintain the equality.
    $$
    \begin{align}
    \form f(V)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
@@ -379,8 +377,11 @@ The next steps would be
    \end{align}
    $$
 
+   $\uvec e ^ i$ can also be interpreted as the basis of one-form $\form f$. Recall the musical isomorphism, we have
+   $$
+   \omega(V)=\omega _ i \d x ^ i (V^j\uvec x _  j)=\left((\omega _ i\delta^{ik})\uvec x_k \right)\cdot\left(V ^ i\uvec x_i\right)=W\cdot V.
+   $$
    The basis of one form $\form f$ is itself a one form and thus can take $V$ as an input, written as
-
    $$
    \begin{align*}
    &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right)\\
@@ -395,12 +396,14 @@ The next steps would be
    \form f = \sum _ {i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i \notag
    $$
 
-   where $\uvec e^ i $ is a hungry operator on vectors. Now the job is to find the exact expression of $\uvec e$. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e _ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
+   where $\uvec e^ i $ is a hungry operator on vectors. 
 
+   Now the job is to find the exact expression of $\uvec e^ i $. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e ^ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
    $$
    \begin{align*}
-   f &\equiv \uvec{e}^i\Partial{}{x^i}f \\
-   &=\uvec{e}^i\Partial{f}{x^i} &
+   \left(\uvec{e}^i\Partial{}{x^i}\right) &\equiv 1\\
+   \left(\uvec{e}^i\Partial{}{x^i}\right) f&\equiv f\\
+   \uvec{e}^i\Partial{f}{x^i} &= f
    \end{align*}
    $$
 
@@ -422,25 +425,13 @@ The next steps would be
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 By the above deduction, we finally arrive at the conclusion that
 
 $$
+\begin{align*}
 \form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i\\
+\form f(V) = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i V\\
+\end{align*}
 $$
 
 Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. 
@@ -483,23 +474,6 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 So far so good. 
