@@ -54,7 +54,7 @@ Roughly, a **vector space** is a set of entities such that is closed under linea
 
 Due to this remarkable fact, there exists a subset of vectors called the **basis** in the space, such that any vector in the space can be represented as a linear combination of members of the basis. 
 
-A set of basis is denoted as $\uvec e^i$. A vector is then denoted as $\vec v=\sum a ^ i \uvec e _ i$.
+A set of basis is denoted as $\uvec e^i$. A vector is then denoted as $V=\sum V ^ i \uvec e _ i$.
 
 ## Covectors
 
@@ -65,23 +65,39 @@ Now consider the set of linear functions defined on $V$ (vectors) that have valu
 
 The vector space $V^*$ of linear functionals over $V$ is said to be **dual** to the vector space.
 
-A set of basis of the dual space are dual vectors as well, which acts on a vector and give a real number. An element of a set of basis is denoted as $\d x ^ i(\vec v)\in \R$. A covector is denoted as $\form \omega=a _ i \uvec e ^ i$.
+A set of basis of the dual space are dual vectors as well, which acts on a vector and give a real number. An element of a set of basis is denoted as $\d x ^ i \in \R$. A covector is denoted as $\form \omega=\omega _ i \d x ^ i$. 
 
 > This suspiciously looking name of the co-basis is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply an abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
+
+The basis' action on vector is denoted as $\d x^i (V)$. Here we construct the **covector space** of $V$ and a map from vectors to covectors: 
+
+> 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\omega$ is denoted as $(\d x ^ 1,\d x ^ 2,\d x ^ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number, i.e., $\d x ^ i(V)\in \R$.
+>
+> 2. Since covectors are linear functionals, $\d x ^ i(V)$ can be seen as act on bases of vector $V$.
+>    $$
+>    \d x ^ i(V) =\d x ^ i (V ^ 1\uvec x _ 1+V ^ 2\uvec x _ 2+V ^ 3\uvec x _ 3)= V ^ 1\d x ^ i (\uvec x _ 1)+V ^ 2\d x ^ i (\uvec x _  2)+V ^ 3\d x ^ i (\uvec x _  3)\in \R
+>    $$
+>
+> 3. Define $\d x ^ i (\uvec x _  j)\dfdas \delta ^ i _ j$. Recall that $\d x ^ i (\uvec x _  j)=\inner{\d x ^ i}{\uvec x _  j}=\delta ^ i _ j$.
+>
+> 4. **[map between bases of vectors and covectors]** A covector $\gamma$  dual to vector $V$ can be written in components $\gamma=(V^\mu \delta _ {\mu\nu})\d x ^ \mu$. A vector $W$ dual to a covector $\omega$, is $W=(\omega _ \mu \delta ^{\mu\nu})\uvec x _ \nu$. The mapping is just interchanging $\d x ^ \mu$ between $\uvec x _   \mu$ and adjust the index position.
 
 ## Inner Product and Dot Product
 
 The **inner product** $\inner{\;}{\;}$ is defined as
 
 $$
-\inner{\dual a}{\vec b}=\dual{\vec a}(\vec b)\in\R \label{innerproduct}
+\inner{\omega}{V}=\omega(V)\in\R \label{innerproduct},
 $$
 
-Remember that covector is a linear functional, and the term $\dual{\vec a}(\vec b)$ is indeed a number.
+Note that the inner product is defined between a vector and a dual vector, not between two vectors. 
 
-Note that the inner product is defined between a vector and a dual vector and not between two vectors. 
+However, inner product looks suspiciously like dot product. A natural insight is that the **dot product** of two vectors is a real number, and thus one can "identify" a covector as a vector, inner product as dot product. 
 
-The inner product look suspiciously like dot product. A natural insight is that the **dot product** of two vectors is a real number, and thus one can "identify" a covector as a vector, inner product as dot product. 
+$$
+\omega(V)=\omega _ i \d x ^ i (V^j\uvec x _  j)=\omega _ i V ^ i=W\cdot V\in \R
+$$
+
 
 ##  Musical Isomorphism
 
@@ -89,29 +105,12 @@ If a vector space is finite dimensional, so is its dual space. In this case, the
 
 This isomorphism is fairly simple: just swap the basis and nothing is changed. This isomorphism is called the **musical isomorphism**. A discussion of origin of this funny name can be found [here](https://mathoverflow.net/questions/69074/the-origin-of-the-musical-isomorphisms).
 
-> Here we construct the **covector space** of $V$ and a map from vectors to covectors:
->
-> 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x ^ 1,\d x ^ 2,\d x ^ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number, i.e., \d x ^ i(\vec v)\in \R.
->
-> 2. Since covectors are linear functionals, $\d x ^ i(\vec v)$ can be seen as act on bases of vector $\vec v$.
->    
->    $$
->    \d x ^ i(\vec v) =\d x ^ i (v ^ 1\uvec x _ 1+v ^ 2\uvec x _ 2+v ^ 3\uvec x _ 3)= v ^ 1\d x ^ i (\uvec x _ 1)+v ^ 2\d x ^ i (\uvec x _  2)+v ^ 3\d x ^ i (\uvec x _  3)\in \R
->    $$
->
-> 3. Define $\d x ^ i (\uvec x _  j)\dfdas \delta ^ i _ j$. Recall that $\d x ^ i (\uvec x _  j)=\inner{\d x ^ i}{\uvec x _  j}=\delta ^ i _ j$.
->
-> 4. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v_\mu\d x ^ \mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v ^ \mu \uvec x _ \mu$ by directly interchanging $\d x ^ \mu$ between $\uvec x _   \mu$.
->
-> 5. A covector $ \dual {\vec v}(\vec v)=\dual v _ i \d x ^ i (v^i\uvec x _  i)=\dual v _ i v ^ i=\vec{\dual v }\cdot\vec v\in \R$
->
-
 So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _  i \leftrightarrow \d x ^ i$. This isomorphism is denoted as 
 
 $$
 \begin{align}
 \sharp : \form \alpha \rightarrow  \alpha^\sharp = \sum \alpha^i \uvec e _ i = \vec \alpha ,\\
-\flat : \vec v \rightarrow v^\flat = \sum v _ i \form {\uvec e} ^ i = \form v ,
+\flat : V \rightarrow v^\flat = \sum v _ i \form {\uvec e} ^ i = \form v ,
 \end{align}
 $$
 
@@ -124,11 +123,11 @@ where $\sharp$ reads "sharp", and $\flat$ reads "flat". For $\sharp$ raises the 
 > - The aforementioned isomorphism can be written as a definition of map 
 >
 > $$
-> {\red\form v} \leftrightarrow \vec v : \vec v \cdot \vec x =\inner{ { \red\form v} }{\vec x} \in \R
+> {\red\form v} \leftrightarrow V : V \cdot \vec x =\inner{ { \red\form v} }{\vec x} \in \R
 > \label{1formvec}
 > $$
 >
- - A Euclidean vector space comes with a dot product $(x, y) → x·y$, which can be used to describe one-forms in terms of vector fields (or equivalently, to identify cotangent vectors and tangent vectors):  Specifically, for every one-form $\form \omega$ there is a unique vector field ${\scr F }: \R^n\rightarrow V$  such that $\form ω _ x(\vec v) \dfdas \vec{F}(x) · \vec{v}$ for all $x\in \R^n, v \in V$. [[Tao](http://www.math.ucla.edu/~tao/preprints/forms.pdf)] 
+ - A Euclidean vector space comes with a dot product $(x, y) → x·y$, which can be used to describe one-forms in terms of vector fields (or equivalently, to identify cotangent vectors and tangent vectors):  Specifically, for every one-form $\form \omega$ there is a unique vector field ${\scr F }: \R^n\rightarrow V$  such that $\form ω _ x(V) \dfdas \vec{F}(x) · \vec{v}$ for all $x\in \R^n, v \in V$. [[Tao](http://www.math.ucla.edu/~tao/preprints/forms.pdf)] 
 >
 
 ## Gradient and Total Derivative as Duals
@@ -153,13 +152,13 @@ Moreover, the action of $\d f$ on a vector (i.e. *a gradient of some function*) 
 
 $$
 \begin{align}
- \d f(\vec v)&=\Partial{f}{x ^ \mu}\d x ^ \mu(\vec v)\notag\\
+ \d f(V)&=\Partial{f}{x ^ \mu}\d x ^ \mu(V)\notag\\
  &=\Partial{f}{x ^ \mu}\d x ^ \mu(v^\nu \uvec x _ \nu)\notag\\
  &=\Partial{f}{x ^ \mu}v^\nu \d x ^ \mu(\uvec x _ \nu)\notag\\
  &=\Partial{f}{x ^ \mu}v^\nu \delta ^ \mu _ \nu\label{df-nablaf-vec-1}\\
  &=\Partial{f}{x ^ \mu}v^\mu \notag\\
- &=\vec v\cdot \vec \nabla f \label{df-nablaf-vec-2}\\
- &\dfdas\nabla _ {\vec v}f=\lim ^ {h\rightarrow0}\frac{f(\vec x + h\vec v)-f(\vec x)}{h}\in\R \label{directionalderivative}
+ &=V\cdot \vec \nabla f \label{df-nablaf-vec-2}\\
+ &\dfdas\nabla _ {V}f=\lim _ {h\rightarrow0}\frac{f(\vec x + hV)-f(\vec x)}{h}\in\R \label{directionalderivative}
  \end{align}
 $$
 
@@ -190,9 +189,9 @@ But this requires embedding the manifold in some higher dimensional space, which
 
 *After I have finished writing this section, I stumbled on* [[A. Mishchenko and A. Fomenko's book](https://archive.org/details/MishchenkoFomenkoACourseOfDifferentialGeometryAndTopology)] *and they really excelled at introducing the vectors in a natural way. You should check it out.*
 
-The word "tangent" cries for taking derivatives. Besides, the naïve vector-as-arrow picture lacks necessary algebraic tools to perform calculations with.
+**The word "tangent" cries for taking derivatives**. Besides, the naïve vector-as-arrow picture lacks necessary algebraic tools to perform calculations with.
 
-Still, the problem is that vectors do not live on the manifold. This forbids defining "what is vector" using vocabularies from manifold, only allowing us to tell "what is in one-to-one correspondence with vector". So what can we identify with vector? The answer is a (differential) operator. 
+Still, the problem is that vectors do not live on the manifold. This forbids us defining "what is vector" using vocabularies from manifold, only allowing us to tell "what is in one-to-one correspondence with vector". So what can we identify with vector? The answer is a (differential) operator. 
 
 >  Let's start with a concrete example. Here is a curved surface being the manifold in focus embed in $\R^3$. Although this is not always possible for any manifold, we are going to use this as a tool to gain some intuition. 
 >
@@ -236,9 +235,9 @@ Reverse the above order, we will find the way to assign an operator to a vector.
 >
 > $$
 > \begin{align}
-> \op{v}(f)&\dfdas\nabla _ {\vec v}f(t)\notag\\
+> \op{v}(f)&\dfdas\nabla _ {V}f(t)\notag\\
 > &=\lim _ {t\rightarrow 0}{\frac{f(\gamma(t))-f(\gamma(0))}{t}}\notag\\
-> &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+t\vec v)-f(\vec x _ 0)}{t}}\notag\\
+> &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+tV)-f(\vec x _ 0)}{t}}\notag\\
 > \label{vector-as-directional-derivative}
 > \end{align}
 > $$
@@ -250,9 +249,9 @@ Reverse the above order, we will find the way to assign an operator to a vector.
 > \op v (f) &=\left.\D{}{t}f(\Gamma(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 > &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 > &=\sum _ {i=1}^{n}{\dot{x }^i(t _ 0)\Partial{f}{x_i}}\\
-> \text{notice that } &\vec v =(\dot x^1(t),\cdots,\dot x^n(t)),\vec \nabla f =(\Partial{f}{x_1},\cdots,\Partial{f}{x_n}) \\
-> &=\vec \nabla f \cdot \vec v\\
-> &=\nabla _ {\vec v} f
+> \text{notice that } &V =(\dot x^1(t),\cdots,\dot x^n(t)),\vec \nabla f =(\Partial{f}{x_1},\cdots,\Partial{f}{x_n}) \\
+> &=\vec \nabla f \cdot V\\
+> &=\nabla _ {V} f
 > \end{align*}
 > $$
 >
@@ -276,7 +275,7 @@ Here it goes from [Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometr
 
 ## Vector field
 
-We can assign a vector, say $\vec v$, to each point in the space $X$. This is equivalent to functions of the form $f:X\rightarrow V=(V,\R,+,*)$; i.e., functions which map every point of the space $X$ into the vector space $V$. A vector field can be seen as arrows sprinkled on a manifold as shown in the left. Or it defines a map from a point to a curve on manifold as shown in the right. 
+We can assign a vector, say $V$, to each point in the space $X$. This is equivalent to functions of the form $f:X\rightarrow V=(V,\R,+,*)$; i.e., functions which map every point of the space $X$ into the vector space $V$. A vector field can be seen as arrows sprinkled on a manifold as shown in the left. Or it defines a map from a point to a curve on manifold as shown in the right. 
 
 >  A point follows the direction of vector field moves at a "velocity" of the magnitude of the vector, tracing out a curve on the manifold.
 
@@ -309,15 +308,15 @@ Having defined vectors on manifold, now we are ready to see what is forms the du
 Notice that the tangent vector act on a function gives the "directional derivative" of that function along the direction of the vector, rewriting $\Eqn{vector-as-directional-derivative}$ with special attention paid to the LHS:
 
 $$
-\op{v}(f)\equiv \nabla _ {\vec v}f(t)\in \R.
+\op{v}(f)\equiv \nabla _ {V}f(t)\in \R.
 $$
 
-Remember, vectors and covectors are dual to each other. If one seek the covector of $\vec v$, he can be equally satisfied asking the question: if the vector $\vec v$ is treated as a *covector*, what would be the corresponding *vector*? The LHS is the definition of inner product of a one form and a vector in $\Eqn{innerproduct}$. 
+Remember, vectors and covectors are dual to each other. If one seek the covector of $V$, he can be equally satisfied asking the question: if the vector $V$ is treated as a *covector*, what would be the corresponding *vector*? The LHS is the definition of inner product of a one form and a vector in $\Eqn{innerproduct}$. 
 
 Simply by playing with definitions, we obtain a natural **definition of covectors** on manifold. This is written as
 
 $$
-\form f(\vec v)\dfdas\hat v(f) = \nabla _ \vec v f(t)\in \R.
+\form f(V)\dfdas\hat v(f) = \nabla _ V f(t)\in \R.
 $$
 
 The next steps would be 
@@ -328,9 +327,9 @@ The next steps would be
 
    $$
    \begin{align*}
-   (a f+b g)(\vec v)&=a f(\vec v)+b g(\vec v)\\
-   &=a\nabla _ \vec vf+b\nabla _ \vec v g\\
-   &=\nabla _ \vec v(a f+b g)
+   (a f+b g)(V)&=a f(V)+b g(V)\\
+   &=a\nabla _ Vf+b\nabla _ V g\\
+   &=\nabla _ V(a f+b g)
    \end{align*}
    $$
 
@@ -341,43 +340,43 @@ The next steps would be
    Using the identity,
 
    $$
-   \nabla _ {\vec v} f =\sum _ {i=1}^{n}{\left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative}
+   \nabla _ {V} f =\sum _ {i=1}^{n}{\left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative}
    $$
 
    Notice the following identities
 
    $$
-   \begin{cases}\vec v =\sum\dot x^i(t)\Partial{}{x^i},\\
+   \begin{cases}V =\sum\dot x^i(t)\Partial{}{x^i},\\
    d f = \sum \Partial{f}{x^i}\d x ^ i\\
    \vec \nabla f =(\Partial{f}{x^1},\cdots,\Partial{f}{x^n})\end{cases} \notag
    $$
 
-   Now let's pretend we don't know the expression of $\vec v$, instead, we are going to try to make up the components of $\vec v$ from the expression by isolating the expression of $f$. The red texts are the components.
+   Now let's pretend we don't know the expression of $V$, instead, we are going to try to make up the components of $V$ from the expression by isolating the expression of $f$. The red texts are the components.
 
    $$
    \begin{align*}
-   \vec v(f) &= \sum _ {i=1}^{n}{ {\red \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}}\Partial{f}{x^i}}\\
+   V(f) &= \sum _ {i=1}^{n}{ {\red \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}}\Partial{f}{x^i}}\\
    &=\left(\sum _ {i=1}^{n}{ {\red \dot{x} ^ i(t _ 0)}\Partial{}{x^i}}\right) (f)\\
    \end{align*}
    $$
 
-   Following the same procedure, we try to isolate the $\vec v​$. This is more complicated than the above, by first multiplying the basis of $\vec v​$ to isolate it, and then introduce the basis for one form $f​$, namely $\uvec e^i​$ to maintain the equality. 
+   Following the same procedure, we try to isolate the $V​$. This is more complicated than the above, by first multiplying the basis of $V​$ to isolate it, and then introduce the basis for one form $f​$, namely $\uvec e^i​$ to maintain the equality. 
 
    $$
    \begin{align}
-   f(\vec v)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
+   f(V)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
    &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\notag\\
    &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {\mathbf e}^i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
    \end{align}
    $$
 
-   The basis of one form $\form f$ is itself a one form and thus can take $\vec v$ as an input, written as
+   The basis of one form $\form f$ is itself a one form and thus can take $V$ as an input, written as
 
    $$
    \begin{align*}
    &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right)\\
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i (\vec v)\\
-   &=\left(\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i\right) (\vec v)
+   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i (V)\\
+   &=\left(\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i\right) (V)
    \end{align*}
    $$
 
@@ -417,6 +416,8 @@ The next steps would be
 
 
 
+
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -435,7 +436,7 @@ they will yield the same result,
 
 $$
 \begin{align*}
-\nabla _ {\vec v} f -\nabla _ {\vec v} g &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+t\vec v)-f(\vec x _ 0)}{t}}-\lim _ {t\rightarrow 0}{\frac{g(\vec x _ 0+t\vec v)-g(\vec x _ 0)}{t}}\\
+\nabla _ {V} f -\nabla _ {V} g &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+tV)-f(\vec x _ 0)}{t}}-\lim _ {t\rightarrow 0}{\frac{g(\vec x _ 0+tV)-g(\vec x _ 0)}{t}}\\
 &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}-\left.\D{}{t}g(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 &=\D{(f-g)}{t}\\
 &=0
@@ -455,7 +456,7 @@ Now we have made out what vectors and covectors are:
  - Vectors are (differential) operators. They are entities of the form 
 
    $$
-   \vec v =\sum a^i\Partial{}{x^i}
+   V =\sum a^i\Partial{}{x^i}
    $$
 
  - Similarly, covectors are entities of the form
@@ -463,6 +464,8 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
+
 
 
 
@@ -518,7 +521,7 @@ A two-form is can be seen as a "product" of two one-forms.
 
 ## Wedge Product of General Vectors
 
-The cross product of vectors $\vec u \times \vec v$ is a very useful operation in $3$ dimensional geometry. It determines the area of the **parallelogram** containing these vectors and the plane containing it. A **wedge product** is the analogue used to determine a high dimensional parallelograms.
+The cross product of vectors $\vec u \times V$ is a very useful operation in $3$ dimensional geometry. It determines the area of the **parallelogram** containing these vectors and the plane containing it. A **wedge product** is the analogue used to determine a high dimensional parallelograms.
 
 The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product. 
 
@@ -530,17 +533,17 @@ For example,
 
 $$
 \begin{align}
-\vec u \wedge \vec v &= \vec u \otimes \vec v - \vec v \otimes \vec u\\
-\vec u \wedge \vec v  \wedge \vec w &= \vec u \otimes \vec v  \otimes \vec w + \vec w \otimes \vec u \otimes \vec v  + \vec v  \otimes \vec w \otimes \vec u \label{wedgeExample} \\
-&- \vec u \otimes \vec w \otimes \vec v  - \vec w \otimes \vec v  \otimes \vec u - \vec v \otimes \vec u \otimes \vec w \notag
+\vec u \wedge V &= \vec u \otimes V - V \otimes \vec u\\
+\vec u \wedge V  \wedge \vec w &= \vec u \otimes V  \otimes \vec w + \vec w \otimes \vec u \otimes V  + V  \otimes \vec w \otimes \vec u \label{wedgeExample} \\
+&- \vec u \otimes \vec w \otimes V  - \vec w \otimes V  \otimes \vec u - V \otimes \vec u \otimes \vec w \notag
 \end{align}
 $$
 
 Given a vector space $V$, a space of wedge product can be constructed as
 
 $$
-\wedge ^2 V = \set{ \vec u\wedge\vec v  {\mid}  \vec u,\vec v \in V  }\\
-\wedge ^3 V = \set{ \vec u\wedge\vec v \wedge \vec w {\mid} \vec u,\vec v,\vec w \in V  }\\
+\wedge ^2 V = \set{ \vec u\wedgeV  {\mid}  \vec u,V \in V  }\\
+\wedge ^3 V = \set{ \vec u\wedgeV \wedge \vec w {\mid} \vec u,V,\vec w \in V  }\\
 \wedge ^n V = \set{ \vec u _ 1\wedge\vec u _ 2 \wedge\cdots\wedge \vec u _ n {\mid} \vec u _ i\in V ,i=1,2,\cdots,n }
 $$
 
@@ -556,21 +559,21 @@ $$
 
 > ***CONNECTIONS TO GEOMETRIC ENTITIES***:
 >
-> 1. **Analogue to cross product as a test of collinearity**: The wedge product gives a simple way to test for "**coplanarity**" or linear (in)dependence of vectors: if $\vec u$ and $\vec v$ are collinear, meaning $\vec u = a \vec v$, by anti-symmetry of wedge product,  
+> 1. **Analogue to cross product as a test of collinearity**: The wedge product gives a simple way to test for "**coplanarity**" or linear (in)dependence of vectors: if $\vec u$ and $V$ are collinear, meaning $\vec u = a V$, by anti-symmetry of wedge product,  
 >    
 >     $$
->     \vec u \wedge \vec v =\vec u \wedge a\vec u=a(\vec u \otimes \vec u - \vec u \otimes \vec u)=0 \notag
+>     \vec u \wedge V =\vec u \wedge a\vec u=a(\vec u \otimes \vec u - \vec u \otimes \vec u)=0 \notag
 >     $$
 >
->     If $\vec w$ is coplanar with $\vec u$ and $\vec v$, meaning $\vec w = a \vec u + b \vec v$, (“collapsed box”, not maximally linear independent), then
+>     If $\vec w$ is coplanar with $\vec u$ and $V$, meaning $\vec w = a \vec u + b V$, (“collapsed box”, not maximally linear independent), then
 >
 >     $$
->     \vec w \wedge \vec u \wedge \vec v = a\vec u  \wedge \vec u \wedge \vec v+b\vec v\wedge \vec u \wedge \vec v = 0 \notag
+>     \vec w \wedge \vec u \wedge V = a\vec u  \wedge \vec u \wedge V+bV\wedge \vec u \wedge V = 0 \notag
 >     $$
 >
-> 2. **Analogue to cross product as a indicator of orientation**: If $n\gt 3$, there are infinitely many directions perpendicular to the two vectors, so you can't think of the orientation as a vector (like the cross product in three dimensions). Instead, you may think of the orientation as a *circle* in the plane of the two given vectors $\vec u$ and $\vec v$, with a direction attached to it in one of the two possible ways: $\circlearrowleft$ or $\circlearrowright$.
+> 2. **Analogue to cross product as a indicator of orientation**: If $n\gt 3$, there are infinitely many directions perpendicular to the two vectors, so you can't think of the orientation as a vector (like the cross product in three dimensions). Instead, you may think of the orientation as a *circle* in the plane of the two given vectors $\vec u$ and $V$, with a direction attached to it in one of the two possible ways: $\circlearrowleft$ or $\circlearrowright$.
 >
-> 3. **Analogue to cross product as a way to compute "area of parallelogram"**: For two vectors $\vec u=(a,b,c)$ and $\vec v=(d,e,f)$, We can see that the nonzero entries of wedge product are basically the same as for the cross product. 
+> 3. **Analogue to cross product as a way to compute "area of parallelogram"**: For two vectors $\vec u=(a,b,c)$ and $V=(d,e,f)$, We can see that the nonzero entries of wedge product are basically the same as for the cross product. 
 >     $$
 >     \begin{align}
 >     \vec{u} \wedge \vec{v}
@@ -595,7 +598,7 @@ $$
 >     > - This matrix is anti-symmetry matrix of odd dimension and thus has a zero determinant.
 >     >
 >
->     However, this result is not the area of this two vectors. $\vec u \wedge\vec v$ is a bivector, it's norm $A^2=\norm{\vec u\wedge \vec v}^2\substack{\small\text{numerically}\newline\huge {=}}(\vec u \times \vec v)^2$ is the area of the parallelogram.
+>     However, this result is not the area of this two vectors. $\vec u \wedgeV$ is a bivector, it's norm $A^2=\norm{\vec u\wedge V}^2\substack{\small\text{numerically}\newline\huge {=}}(\vec u \times V)^2$ is the area of the parallelogram.
 >
 > 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$, $ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u _ 1 v _ 2 w _ 3 + u _ 2 v _ 3 w _ 1 + u _ 3 v _ 1 w _ 2 - u _ 1 v _ 3 w _ 2 - u _ 2 v _ 1 w _ 3 - u _ 3 v _ 2 w _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2 \wedge \uvec{e} _ 3) $. Still the volume ($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
 >
