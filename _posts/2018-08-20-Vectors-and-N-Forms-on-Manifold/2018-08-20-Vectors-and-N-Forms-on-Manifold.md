@@ -133,7 +133,7 @@ where $\sharp$ reads "sharp", and $\flat$ reads "flat". For $\sharp$ raises the 
 
 ## Gradient and Total Derivative as Duals
 
- The gradient and total derivative are dual vectors to each other. You can check that they fit in the above definition.
+The gradient of a function is a vector. The total derivative can be seen as its dual vector. You can check that they fit in the above definition.
 
 $$
  \begin{align}
@@ -143,7 +143,7 @@ $$
  \end{align}
 $$
 
- Moreover, the action of $\d f$ on a vector (*any vector can be seen as a gradient of some function*) gives the derivative along the direction of that vector, which is indeed a real number.
+ Moreover, the action of $\d f$ on a vector (i.e. *a gradient of some function*) gives the derivative along the direction of that vector, which is indeed a real number.
 
 $$
 \begin{align}
@@ -152,7 +152,7 @@ $$
  &=\Partial{f}{x ^ \mu}v^\nu \d x ^ \mu(\uvec x _ \nu)\notag\\
  &=\Partial{f}{x ^ \mu}v^\nu \delta ^ \mu _ \nu\label{df-nablaf-vec-1}\\
  &=\Partial{f}{x ^ \mu}v^\mu \notag\\
- &=\vec \nabla f\cdot \vec v \label{df-nablaf-vec-2}\\
+ &=\vec v\cdot \vec \nabla f \label{df-nablaf-vec-2}\\
  &\dfdas\nabla _ {\vec v}f=\lim ^ {h\rightarrow0}\frac{f(\vec x + h\vec v)-f(\vec x)}{h}\in\R \label{directionalderivative}
  \end{align}
 $$

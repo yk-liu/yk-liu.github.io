@@ -2,8 +2,7 @@
 title: Pointing to the Moon
 description: Blog of Yingkai Liu
 baseurl: "" 
-# the subpath of your site, e.g. /blog
-# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "https://yk-liu.github.io" 
 
 
 # User settings
@@ -45,13 +44,10 @@ author:
   picture:        
   email:          yingkai.liu@outlook.com
   description:    This is a blog for a Physics undergrad with a broad interest. I proudly share my study notes here. 
-  # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook:
   github:         https://github.com/yk-liu
   linkedin:
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:
 
 
 permalink: none
@@ -62,10 +58,10 @@ defaults:
       path: ""
       type: "posts"
     values:
+      toc: true
       mathjax: true
       mermaid: false
       commentable: true
-      toc: true
       status: Completed
       protected: false
 
