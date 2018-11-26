@@ -205,11 +205,11 @@ But this requires embedding the manifold in some higher dimensional space, which
 
 Still, the problem is that vectors do not live on the manifold. This forbids us defining "what is vector" using vocabularies from manifold, only allowing us to tell "what is in one-to-one correspondence with vector". So what can we identify with vector? The answer is a (differential) operator. 
 
->  Let's start with a concrete example: a curved surface being the manifold in focus embed in $\R^3$. We are going to use this manifold in the context of $3$-d geometry as a tool to gain some intuition. 
+>  Let's start with a concrete example: a curved surface $\vec r(x,y,z) = Const$ embedded in $\R^3$. We are going to use this manifold in the context of $3$-d geometry as a tool to gain some intuition. 
 >
 >  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing-tangent-vector-as-operator.png" width="90%">
 >
->  First we are going to see the surface in $ \R^3 $ as $\vec r(x,y,z) = Const.$ On this surface we can have different local coordinates $(u,v)$ (left) or $(w,s)$ (right). For a curve $\Gamma$ on the surface, we can have its coordinates in $xyz$ as $\vec r(t)=(x(t),y(t),z(t))$, or local coordinates as $\vec r(t) = (u(t),v(t))$ or $\vec r(t) = (w(t),s(t))$. 
+>  On this surface we can have different local coordinates $(u,v)$ (left) or $(w,s)$ (right). For a curve $\Gamma$ on the surface, we can have its coordinates in $xyz$ as $\vec r(t)=(x(t),y(t),z(t))$, or local coordinates as $\vec r(t) = (u(t),v(t))$ or $\vec r(t) = (w(t),s(t))$. 
 >
 >  The tangent vector $X$ at $p=\vec r(t _ 0)=(u _ 0,v _ 0)=(w _ 0,s _ 0)$ has a very simple definition in $\R^3 $ as $\vec X = \D{\vec r(t)}{t}$. Using the chain rule, 
 >  $$
@@ -294,7 +294,7 @@ We can assign a vector, say $V$, to each point in the space $X$. This is equival
 
 
 
-The Lorentz attractor can also be seen as a complicated manifold sprinkled with "velocity vectors." (image from [Wikipedia](https://en.wikipedia.org/wiki/File:A _ Trajectory _ Through _ Phase _ Space _ in _ a _ Lorenz _ Attractor.gif).)
+The Lorentz attractor can also be seen as a complicated manifold sprinkled with "velocity vectors." (from [Wikipedia](https://en.wikipedia.org/wiki/File:A _ Trajectory _ Through _ Phase _ Space _ in _ a _ Lorenz _ Attractor.gif)).
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif">
 
@@ -304,9 +304,9 @@ The Lorentz attractor can also be seen as a complicated manifold sprinkled with 
 
 ## Covector Revisited
 
-A **one-form**, or a **covector**, **dual vector**, is an element of a **dual vector space**.
+A **covector**, **dual vector**, is an element of a **dual vector space**. On a manifold, it's also called **one-form**.
 
-A dual vector space is all linear functions that maps a vector to $\R^1​$. In another word, 
+A dual vector space is all linear functions that maps a vector to $\R^1$. In another word, 
 
 > A dual vector act on a vector gives a real number.
 >
@@ -314,17 +314,17 @@ A dual vector space is all linear functions that maps a vector to $\R^1​$. In 
 
 ## Covectors on Manifold
 
-Having defined vectors on manifold, now we are ready to see what is forms the dual of vectors. and eventually, we are going to see that these covectors are nothing but one-forms.
+Having defined vectors on manifold, now we are ready to define the dual of vectors.
 
-Notice that the tangent vector act on a function gives the "directional derivative" of that function along the direction of the vector, rewriting $\Eqn{vector-as-directional-derivative}$ with special attention paid to the LHS:
+If one seek the covector of $V$, he can be equally satisfied asking the question: if the vector $V$ is treated as a *covector*, what would be the corresponding *vector*? 
+
+Notice that **a tangent vector acts on a function** gives the directional derivative of that function along the direction of the vector, rewriting $\Eqn{vector-as-directional-derivative}$ with special attention paid to the LHS:
 
 $$
-\op{v}(f)\equiv \nabla _ {V}f(t)\in \R.
+\op{v}(f)\dfdas \nabla _ {V}f(t)\in \R.
 $$
 
-Remember, vectors and covectors are dual to each other. If one seek the covector of $V$, he can be equally satisfied asking the question: if the vector $V$ is treated as a *covector*, what would be the corresponding *vector*? The LHS is the definition of inner product of a one form and a vector in $\Eqn{innerproduct}$. 
-
-Simply by playing with definitions, we obtain a natural **definition of covectors** on manifold. This is written as
+We can also say that **a function can somehow act on a vector** and gives the directional derivative of the function. Simply by playing with definitions, we obtain a natural **definition of covectors** on manifold. To emphasis our definition of covector, we denote such functions as $\form f$. This is written as
 
 $$
 \form f(V)\dfdas\hat v(f) = \nabla _ V f(t)\in \R.
@@ -332,13 +332,13 @@ $$
 
 The next steps would be 
 
-1. To prove the $f$ in the above definition form a vector space, i.e., they themselves are vectors. 
+1. To prove the $\form f$ in the above definition form a vector space, i.e., they themselves are vectors. 
 
    This can be verified as following:
 
    $$
    \begin{align*}
-   (a f+b g)(V)&=a f(V)+b g(V)\\
+   (a \form f+b \form g)(V)&=a \form f(V)+b \form  g(V)\\
    &=a\nabla _ Vf+b\nabla _ V g\\
    &=\nabla _ V(a f+b g)
    \end{align*}
@@ -346,20 +346,18 @@ The next steps would be
 
 2. To find the basis of this vector space. 
 
-   This has been already done in [`Connect Covectors and Vectors with Isomorphism`](#connect-covectors-and-vectors-with-isomorphism). 
-
-   Using the identity,
+   First we are going to write down the definition of directional derivative,
 
    $$
-   \nabla _ {V} f =\sum _ {i=1}^{n}{\left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative}
+   \nabla _ {V} f =\sum _ {i=1}^{n}{\left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative},
    $$
 
-   Notice the following identities
+   with the following identities,
 
    $$
-   \begin{cases}V =\sum\dot x^i(t)\Partial{}{x^i},\\
+   \begin{cases}V =\sum\dot x^i(t)\Partial{}{x^i}\\
    d f = \sum \Partial{f}{x^i}\d x ^ i\\
-   \vec \nabla f =(\Partial{f}{x^1},\cdots,\Partial{f}{x^n})\end{cases} \notag
+   \vec \nabla f =(\Partial{f}{x^1},\cdots,\Partial{f}{x^n})\end{cases}, \notag
    $$
 
    Now let's pretend we don't know the expression of $V$, instead, we are going to try to make up the components of $V$ from the expression by isolating the expression of $f$. The red texts are the components.
@@ -371,11 +369,11 @@ The next steps would be
    \end{align*}
    $$
 
-   Following the same procedure, we try to isolate the $V​$. This is more complicated than the above, by first multiplying the basis of $V​$ to isolate it, and then introduce the basis for one form $f​$, namely $\uvec e^i​$ to maintain the equality. 
+   Following the same procedure, we try to isolate the $V$. This is a little more complicated. In the second equation, first multiplying the basis to have an explicit expression of $V$ so we can isolate $V$ later. Then we insert the basis for one-form $\form f$, namely $\uvec e^i$ to maintain the equality. 
 
    $$
    \begin{align}
-   f(V)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
+   \form f(V)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
    &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\notag\\
    &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {\mathbf e}^i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
    \end{align}
@@ -397,7 +395,7 @@ The next steps would be
    \form f = \sum _ {i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i \notag
    $$
 
-   where $\uvec e$ is a hungry operator on vectors. Now the job is to find the exact expression of $\uvec e$. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e _ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
+   where $\uvec e^ i $ is a hungry operator on vectors. Now the job is to find the exact expression of $\uvec e$. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e _ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
 
    $$
    \begin{align*}
