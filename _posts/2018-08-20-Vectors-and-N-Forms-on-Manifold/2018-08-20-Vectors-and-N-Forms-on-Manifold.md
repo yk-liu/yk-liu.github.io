@@ -46,26 +46,28 @@ The definitions of curves and functions are as follow. A curve on a manifold is 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/curve-function.png" width="80%" />
 
-# General Vectors and Covectors
+# Vectors and Covectors in Euclidean Space
 
 ## Vectors
 
-Roughly, a **vector space** is a set of entities such that is closed under linear combinations. Both "arrow heads" and linear functions satisfy this definition and thus form a vector space. Due to this remarkable fact, there exists a subset of vectors called the **basis** in the space, such that any vector in the space can be represented as a linear combination of members of the basis. 
+Roughly, a **vector space** is a set of entities such that is closed under linear combinations. Both "arrows" and linear functions satisfy this definition and thus form a vector space. 
+
+Due to this remarkable fact, there exists a subset of vectors called the **basis** in the space, such that any vector in the space can be represented as a linear combination of members of the basis. 
 
 A set of basis is denoted as $\uvec e^i$. A vector is then denoted as $\vec v=\sum a ^ i \uvec e _ i$.
 
 ## Covectors
 
-Now consider the set of linear functions defined on $V$ (vectors) that have values in $K$ (numbers), i.e. $f:V\rightarrow K$. Such linear functions on vector spaces are called **linear functionals**. They are also called **covectors**. They apparently form a vector space $V^*$, since: 
+Now consider the set of linear functions defined on $V$ (vectors) that have values in field $K$ (numbers), i.e. $f:V\rightarrow K$. Such linear functions on vector spaces are called **covectors**. They are also called **linear functionals**. They apparently form a vector space $V^*$, since: 
 
 - $(f _ 1+f _ 2)(V) = f _ 1(V) + f _ 2(V)$ where the R.H.S. is addition of two scalars in the field $K$. 
 - $(kf)(V) = kf(V)$, again where the R.H.S. is multiplication of two scalars in the field $K$.
 
 The vector space $V^*$ of linear functionals over $V$ is said to be **dual** to the vector space.
 
-A set of basis of the dual space are dual vectors as well, which acts on a vector and give a real number. An element of a set of basis is denoted as $\d x _ i(\vec v)\in \R$. A covector is denoted as $\form \omega=a _ i \uvec e ^ i$.
+A set of basis of the dual space are dual vectors as well, which acts on a vector and give a real number. An element of a set of basis is denoted as $\d x ^ i(\vec v)\in \R$. A covector is denoted as $\form \omega=a _ i \uvec e ^ i$.
 
-> This suspiciously looking name is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
+> This suspiciously looking name of the co-basis is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply an abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
 
 ## Inner Product and Dot Product
 
@@ -77,34 +79,34 @@ $$
 
 Remember that covector is a linear functional, and the term $\dual{\vec a}(\vec b)$ is indeed a number.
 
-Note that the inner product is defined between a vector and a dual vector and not between two vectors (like dot product). 
+Note that the inner product is defined between a vector and a dual vector and not between two vectors. 
 
-The inner product look suspiciously like dot product. A natural insight is that the **dot product** of two vectors is a real number, and thus one can "identify" a covector as a vector, inner product as dot product. This identification is just an isomorphism in the next section.
+The inner product look suspiciously like dot product. A natural insight is that the **dot product** of two vectors is a real number, and thus one can "identify" a covector as a vector, inner product as dot product. 
 
-## Connect Covectors and Vectors with Isomorphism
+##  Musical Isomorphism
 
-If  the vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension and are thus isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
+If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
 
 This isomorphism is fairly simple: just swap the basis and nothing is changed. This isomorphism is called the **musical isomorphism**. A discussion of origin of this funny name can be found [here](https://mathoverflow.net/questions/69074/the-origin-of-the-musical-isomorphisms).
 
-> Here we construct the **covector space** of $V$ and map from vectors to covectors:
+> Here we construct the **covector space** of $V$ and a map from vectors to covectors:
 >
-> 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x ^ 1,\d x ^ 2,\d x ^ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number. Writing that down as $\d x _ i(\vec v)\in \R$.
+> 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\dual V$ is denoted as $(\d x ^ 1,\d x ^ 2,\d x ^ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number, i.e., \d x ^ i(\vec v)\in \R.
 >
-> 2. Due to linearity of the vectors and covectors, $\d x _ i(\vec v)$ can be seen as act on basis of vector
+> 2. Since covectors are linear functionals, $\d x ^ i(\vec v)$ can be seen as act on bases of vector $\vec v$.
 >    
 >    $$
->    \d x _ i(\vec v) =\d x _ i (v ^ 1\uvec x _ 1+v ^ 2\uvec x _ 2+v ^ 3\uvec x _ 3)= v ^ 1\d x _ i (\uvec x _ 1)+v _ 2\d x _ i (\uvec x _  2)+v _ 3\d x _ i (\uvec x _  3)\in \R
+>    \d x ^ i(\vec v) =\d x ^ i (v ^ 1\uvec x _ 1+v ^ 2\uvec x _ 2+v ^ 3\uvec x _ 3)= v ^ 1\d x ^ i (\uvec x _ 1)+v ^ 2\d x ^ i (\uvec x _  2)+v ^ 3\d x ^ i (\uvec x _  3)\in \R
 >    $$
 >
-> 3. Define $\d x ^ i (\uvec x _  j)\dfdas \delta ^ i _ j$. Recall that $\d x _ i (\uvec x ^  j)=\inner{\d x ^ i}{\uvec x _  j}=\delta ^ i _ j$.
+> 3. Define $\d x ^ i (\uvec x _  j)\dfdas \delta ^ i _ j$. Recall that $\d x ^ i (\uvec x _  j)=\inner{\d x ^ i}{\uvec x _  j}=\delta ^ i _ j$.
 >
 > 4. **[map between bases of vectors and covectors]** A covector $\dual {\vec v}$  of vector $\vec v$ can be written in components $\dual{\vec v}=\dual v_\mu\d x ^ \mu$, conversely, a vector $\vec{\dual v}$ of a covector $\form v$, $\vec{\dual v}=\dual v ^ \mu \uvec x _ \mu$ by directly interchanging $\d x ^ \mu$ between $\uvec x _   \mu$.
 >
 > 5. A covector $ \dual {\vec v}(\vec v)=\dual v _ i \d x ^ i (v^i\uvec x _  i)=\dual v _ i v ^ i=\vec{\dual v }\cdot\vec v\in \R$
 >
 
-So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _  i \leftrightarrow \d x _ i$. This isomorphism is denoted as 
+So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _  i \leftrightarrow \d x ^ i$. This isomorphism is denoted as 
 
 $$
 \begin{align}
@@ -126,39 +128,35 @@ where $\sharp$ reads "sharp", and $\flat$ reads "flat". For $\sharp$ raises the 
 > \label{1formvec}
 > $$
 >
-> - A Euclidean vector space comes with a dot product $(x, y) → x·y$, which can be used to describe one-forms in terms of vector fields (or equivalently, to identify cotangent vectors and tangent vectors):  Specifically, for every one-form $\form \omega$ there is a unique vector field ${\scr F }: \R^n\rightarrow V$  such that $\form ω _ x(\vec v) \dfdas \vec{F}(x) · \vec{v}$ for all $x\in \R^n, v \in V$. [[Tao](http://www.math.ucla.edu/~tao/preprints/forms.pdf)] 
+ - A Euclidean vector space comes with a dot product $(x, y) → x·y$, which can be used to describe one-forms in terms of vector fields (or equivalently, to identify cotangent vectors and tangent vectors):  Specifically, for every one-form $\form \omega$ there is a unique vector field ${\scr F }: \R^n\rightarrow V$  such that $\form ω _ x(\vec v) \dfdas \vec{F}(x) · \vec{v}$ for all $x\in \R^n, v \in V$. [[Tao](http://www.math.ucla.edu/~tao/preprints/forms.pdf)] 
 >
 
-## Example of Covectors
+## Gradient and Total Derivative as Duals
 
-For future reference, the dual spaces to the spaces of vector fields over Euclidean space is called **differential forms**. For now we will stick to the name covector space. At each point in the space $X$ there is a vector, say $\vec v$. This is equivalent to functions of the form $f:X\rightarrow V=(V,\R,+,*)$; i.e., functions which map every point of the space $X$ into the vector space $V$.
+ The gradient and total derivative are dual vectors to each other. You can check that they fit in the above definition.
 
-> ***IMPORTANT EXAMPLE:***
->
-> The gradient and total derivative are dual vectors to each other. That's why above I made such a weird choice of name for covector basis. You can check that they fit in the above 
->
-> $$
-> \begin{align}
-> \d\, f &= \Partial{f}{x ^ \mu} \,\d x ^ \mu\notag\\
-> \updownarrow\phantom{f}&\phantom{\,} \text{ dual }\phantom{\,=}\updownarrow \label{df-nablaf}\\
-> \vec\nabla f &=\Partial{f}{x _ \mu}\,\uvec x _ \mu\notag
-> \end{align}
-> $$
->
-> Moreover, the action of $\d f$ on a vector (*any vector can be seen as the gradient of a function*) gives the derivative along the direction of that vector, which is indeed a real number.
-> 
-> $$
-> \begin{align}
-> \d f(\vec v)&=\Partial{f}{x ^ \mu}\d x ^ \mu(\vec v)\notag\\
-> &=\Partial{f}{x ^ \mu}\d x ^ \mu(v^\nu \uvec x _ \nu)\notag\\
-> &=\Partial{f}{x ^ \mu}v^\nu \d x ^ \mu(\uvec x _ \nu)\notag\\
-> &=\Partial{f}{x ^ \mu}v^\nu \delta ^ \mu _ \nu\label{df-nablaf-vec-1}\\
-> &=\Partial{f}{x ^ \mu}v^\mu \notag\\
-> &=\vec \nabla f\cdot \vec v \label{df-nablaf-vec-2}\\
-> &\dfdas\nabla ^ {\vec v}f=\lim ^ {h\rightarrow0}\frac{f(\vec x + h\vec v)-f(\vec x)}{h}\in\R \label{directionalderivative}
-> \end{align}
-> $$
->
+$$
+ \begin{align}
+ \d\, f &= \Partial{f}{x ^ \mu} \,\d x ^ \mu\notag\\
+ \updownarrow\phantom{f}&\phantom{\,} \text{ dual }\phantom{\,=}\updownarrow \label{df-nablaf}\\
+ \vec\nabla f &=\Partial{f}{x _ \mu}\,\uvec x _ \mu\notag
+ \end{align}
+$$
+
+ Moreover, the action of $\d f$ on a vector (*any vector can be seen as a gradient of some function*) gives the derivative along the direction of that vector, which is indeed a real number.
+
+$$
+\begin{align}
+ \d f(\vec v)&=\Partial{f}{x ^ \mu}\d x ^ \mu(\vec v)\notag\\
+ &=\Partial{f}{x ^ \mu}\d x ^ \mu(v^\nu \uvec x _ \nu)\notag\\
+ &=\Partial{f}{x ^ \mu}v^\nu \d x ^ \mu(\uvec x _ \nu)\notag\\
+ &=\Partial{f}{x ^ \mu}v^\nu \delta ^ \mu _ \nu\label{df-nablaf-vec-1}\\
+ &=\Partial{f}{x ^ \mu}v^\mu \notag\\
+ &=\vec \nabla f\cdot \vec v \label{df-nablaf-vec-2}\\
+ &\dfdas\nabla _ {\vec v}f=\lim ^ {h\rightarrow0}\frac{f(\vec x + h\vec v)-f(\vec x)}{h}\in\R \label{directionalderivative}
+ \end{align}
+$$
+
 
 # Vectors on Manifolds
 
@@ -178,7 +176,7 @@ When I think about vector on a manifold, I have the picture of some arrow tangen
 
 Since in general there is no way to define a "straight arrow" connecting two points. Vectors can only be "tangent vectors". In other words, vectors cannot live on the manifold itself, but the collection of tangent spaces over the entire manifold, called the **tangent bundle**. That way, the vector is a kept at a geometrical view. This is a generalization of the notion of a bound vector in a Euclidean space. But this requires embedding the manifold in some higher dimensional space, which is not very convenient, since Differential Geometry aims at investigating the space (or maybe space-time) without jumping out of it.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing-tangent-vector.JPG" width="90%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing-tangent-vector.JPG" width="80%">
 
 Obviously, once the vector is in an ambient space, it can be represented by a tuple of numbers. How to represent a vector although "it can be represented by a tuple of numbers"? There will be different basis on each point of a manifold and
 
@@ -262,17 +260,17 @@ Here it goes from [Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometr
 > To be more mathematical, we introduce an equivalence class of curves in $\mani M$. If two curves $c _ 1(t)$ and $c _ 2(t)$ satisfy
 >
 > 1. $c _ 1(0) = c _ 2(0) = p$
-> 2. $ \left. \frac{\d x _ \mu(c _ 1(t))}{\d t} \right\rvert _ {t=0} =\left.\frac{\d x _ \mu(c _ 2(t))}{\d t}\right\rvert _ {t=0}$
+> 2. $ \left. \frac{\d x ^ \mu(c _ 1(t))}{\d t} \right\rvert _ {t=0} =\left.\frac{\d x ^ \mu(c _ 2(t))}{\d t}\right\rvert _ {t=0}$
 >
 > then $c _ 1(t)​$ and $c _ 2(t)​$ yield the same differential operator $X​$ at $p​$, in which case we deﬁne $c _ 1(t) \sim c _ 2(t)​$. Clearly $ \sim ​$ is an equivalence relation and deﬁnes the equivalence classes. We identify the tangent vector $X​$ with the equivalence class of curves
-> $[c(t)] = \left\lbrace \tilde{c}(t) \mid \tilde{c}(0)=c(0) \text{ and } \left.\frac{\d x _ \mu (\tilde{c}(t))}{\d t} \right\vert _ {t=0} = \left.\frac{\d x _ \mu (c(t))}{\d t} \right\vert _ {t=0} \right\rbrace ​$
+> $[c(t)] = \left\lbrace \tilde{c}(t) \mid \tilde{c}(0)=c(0) \text{ and } \left.\frac{\d x ^ \mu (\tilde{c}(t))}{\d t} \right\vert _ {t=0} = \left.\frac{\d x ^ \mu (c(t))}{\d t} \right\vert _ {t=0} \right\rbrace ​$
 >
 > rather than a curve itself.
 
 
 ## Vector field
 
-A vector field can be seen as arrows sprinkled on a manifold as shown in the left. Or it defines a map from a point to a curve on manifold as shown in the right. 
+We can assign a vector, say $\vec v$, to each point in the space $X$. This is equivalent to functions of the form $f:X\rightarrow V=(V,\R,+,*)$; i.e., functions which map every point of the space $X$ into the vector space $V$. A vector field can be seen as arrows sprinkled on a manifold as shown in the left. Or it defines a map from a point to a curve on manifold as shown in the right. 
 
 >  A point follows the direction of vector field moves at a "velocity" of the magnitude of the vector, tracing out a curve on the manifold.
 
@@ -409,6 +407,9 @@ The next steps would be
    $$
 
 
+
+
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -455,6 +456,9 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
+
+
 
 
 
@@ -592,7 +596,7 @@ $$
 
 ## Wedge Product of One-Forms
 
-Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X _ {\mu\nu}\d x _ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
+Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
 
 This can be seen as a tensor product of two one-forms.
 

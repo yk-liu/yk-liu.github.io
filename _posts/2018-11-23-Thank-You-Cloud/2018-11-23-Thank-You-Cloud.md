@@ -65,3 +65,5 @@ WordCloud[QuantityMagnitude[Speakers] -> Words,
 ```
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Thank-You-Cloud/assets/Thanks.png" width="80%">
+
+The [cdf file](https://www.wolfram.com/cdf-player/) can be found [here](https://github.com/yk-liu/yk-liu.github.io/tree/master/_posts/2018-11-23-Thank-You-Cloud/assets).
