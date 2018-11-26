@@ -77,6 +77,7 @@ The basis' action on vector is denoted as $\d x^i (V)$.
  1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\omega$ is denoted as $(\d x ^ 1,\d x ^ 2,\d x ^ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number, i.e., $\d x ^ i(V)\in \R$.
 
  2. Since covectors are linear functionals, $\d x ^ i(V)$ can be seen as act on bases of vector $V$.
+    
     $$
     \d x ^ i(V) =\d x ^ i (V ^ 1\uvec x _ 1+V ^ 2\uvec x _ 2+V ^ 3\uvec x _ 3)= V ^ 1\d x ^ i (\uvec x _ 1)+V ^ 2\d x ^ i (\uvec x _  2)+V ^ 3\d x ^ i (\uvec x _  3)\in \R
     $$
@@ -92,9 +93,6 @@ The basis' action on vector is denoted as $\d x^i (V)$.
     $$
     \omega (V) =\omega_i \d x ^ i (V) = \omega _i V ^ i 
     $$
-
-
-
 
 
 ## Musical Isomorphism
@@ -145,6 +143,7 @@ It's high time we addressed the weird choice of the name $\d x^i$. We first need
 > **Proof**: Take $f=\sum V^ix^i$. This function belongs to the set $\set{f \mid \nabla f = V}$.
 
 Therefore the gradient of a function $f$ is a vector, denoted as $\vec\nabla f$. Its dual vector is no other than the total derivative of the function $\d f$. The only transition you need is to admit that $\d x^\mu$ can act on a basis vector, 
+
 $$
 \d x^\mu (\uvec x_\nu) = \delta_\nu^\mu. \notag
 $$
@@ -211,6 +210,7 @@ Still, the problem is that vectors do not live on the manifold. This forbids us 
 >  On this surface we can have different local coordinates $(u,v)$ (left) or $(w,s)$ (right). For a curve $\Gamma$ on the surface, we can have its coordinates in $xyz$ as $\vec r(t)=(x(t),y(t),z(t))$, or local coordinates as $\vec r(t) = (u(t),v(t))$ or $\vec r(t) = (w(t),s(t))$. 
 >
 >  The tangent vector $X$ at $p=\vec r(t _ 0)=(u _ 0,v _ 0)=(w _ 0,s _ 0)$ has a very simple definition in $\R^3 $ as $\vec X = \D{\vec r(t)}{t}$. Using the chain rule, 
+>  
 >  $$
 >  \begin{align}
 >  \vec X &= \D{\vec r(t)}{t} \notag \\
@@ -242,6 +242,7 @@ By far, $\Eqn{vectorToOperator}$ means any operator has a component form using d
 What the above example provides us is a way to assign a differential operator for each vector, which is simply a map: $V\rightarrow \op{v} =V\cdot\nabla$.
 
 > **Theorem:** The directional derivative of a function defined on the manifold $f(t)$ along the vector $V$ (i.e. tangent vector at $t _ 0$ along the curve $\Gamma(t)$) is the differential operator $\op{v}$ acting on $f$.
+>
 > $$
 > \begin{align}
 > \op{v}(f)&\dfdas\nabla _ {V}f(t)\notag\\
@@ -277,9 +278,11 @@ Here it goes from [Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometr
 > 2. $ \left. \frac{\d x ^ \mu(c _ 1(t))}{\d t} \right\rvert _ {t=0} =\left.\frac{\d x ^ \mu(c _ 2(t))}{\d t}\right\rvert _ {t=0}$
 >
 > then $c _ 1(t)$ and $c _ 2(t)$ yield the same differential operator $X$ at $p$, in which case we deﬁne $c _ 1(t) \sim c _ 2(t)$. Clearly $ \sim $ is an equivalence relation and deﬁnes the equivalence classes. We identify the tangent vector $X$ with the equivalence class of curves
+> 
 > $$
 >  [c(t)] = \left\lbrace \tilde{c}(t) \mid \tilde{c}(0)=c(0) \text{ and } \left.\frac{\d x ^ \mu (\tilde{c}(t))}{\d t} \right\vert _ {t=0} = \left.\frac{\d x ^ \mu (c(t))}{\d t} \right\vert _ {t=0} \right\rbrace
 > $$
+> 
 > rather than a curve itself.
 
 
@@ -371,6 +374,7 @@ The next steps would be
    Following the same procedure, we try to isolate the $V$. This is a little more complicated. 
 
    In the second equation, first we need an explicit expression of $V$ so we can isolate $V$ later. Then we need to insert $\uvec e^i$ to maintain the equality.
+
    $$
    \begin{align}
    \form f(V)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
@@ -380,10 +384,13 @@ The next steps would be
    $$
 
    $\uvec e ^ i$ can also be interpreted as the basis of one-form $\form f$. Recall the musical isomorphism, we have
+
    $$
    \omega(V)=\omega _ i \d x ^ i (V^j\uvec x _  j)=\left((\omega _ i\delta^{ik})\uvec x_k \right)\cdot\left(V ^ i\uvec x_i\right)=W\cdot V.
    $$
+
    The basis of one form $\form f$ is itself a one form and thus can take $V$ as an input, written as
+
    $$
    \begin{align*}
    &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right)\\
@@ -401,6 +408,7 @@ The next steps would be
    where $\uvec e^ i $ is a hungry operator on vectors. 
 
    Now the job is to find the exact expression of $\uvec e^ i $. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e ^ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
+
    $$
    \begin{align*}
    \left(\uvec{e}^i\Partial{}{x^i}\right) &\equiv 1\\
@@ -426,42 +434,39 @@ The next steps would be
    $$
 
 
-
-
-
 By the above deduction, we finally arrive at the conclusion that
 
-$$
+ $$
 \begin{align*}
 \form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i\\
 \form f(V) = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i V\\
 \end{align*}
-$$
+ $$
 
 Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. 
 
 Still, the expression deserves more investigation. Leaving the context of vectors and covectors aside, the expression $\Eqn{directional-derivative}$ as function's derivative show that if two functions $f$ and $g$ have the same differential at $t=t _ 0$, 
 
-$$
+ $$
 \d f=\sum \Partial{f}{x^i}\d x^i=\d g \notag
-$$
+ $$
 
 they will yield the same result,
 
-$$
+ $$
 \begin{align*}
 \nabla _ {V} f -\nabla _ {V} g &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+tV)-f(\vec x _ 0)}{t}}-\lim _ {t\rightarrow 0}{\frac{g(\vec x _ 0+tV)-g(\vec x _ 0)}{t}}\\
 &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}-\left.\D{}{t}g(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 &=\D{(f-g)}{t}\\
 &=0
 \end{align*}
-$$
+ $$
 
 In other words, $\form f$ is actually an equivalent class of functions $f$, such that a set of functions $\set{f\mid \d f=\d f _ 0}$, can now be represented as
 
-$$
+ $$
 \d f = \sum _ {i=1}^n\Partial{f}{x^i} \d x^i
-$$
+ $$
 
 ## The Puzzle of $\frac{\partial (dx^\mu )}{\partial x^\nu}$
 
@@ -478,8 +483,6 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
-
-
 
 
 So far so good. 
