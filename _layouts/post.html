@@ -61,15 +61,13 @@
                         <p><code> Tags </code>:  &nbsp; [
                         {% for tag in page.tags %}
                         {% capture tag_name %}{{ tag }}{% endcapture %}
-                        <a href="/blog/tags#{{ tag_name }}" target="_blank">
-                           <code class="highlighter-rouge">{{ tag_name }}</code>
-						</a> <a> </a>
-                        {% endfor %}]</p>
+                        <code><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
+						{% endfor %}]</p>
                   </div>
                   {% endif %}	
                </div>
                <div id="info" >
-                  <p><code class="highlighter-rouge">Fonts</code>: &nbsp; {% include fontAdj.html %}</p>
+                  <p><code>Fonts</code>: &nbsp; {% include fontAdj.html %}</p>
                </div>
             </div>
             <hr>
