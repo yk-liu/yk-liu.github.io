@@ -70,3 +70,4 @@ exclude:
  - README.md
  - "*.cdf"
  - "*.nb"
+ - "*.bk"
