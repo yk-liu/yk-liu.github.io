@@ -94,6 +94,10 @@ The basis' action on vector is denoted as $\d x^i (V)$.
     $$
 
 
+
+
+
+
 ## Musical Isomorphism
 
 If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
@@ -135,9 +139,13 @@ $$
 
 ## Gradient and Total Derivative as Duals
 
-It's high time we addressed the weird choice of the name $\d x^i$. 
+It's high time we addressed the weird choice of the name $\d x^i$. We first need a theorem
 
-We already know that the gradient of a function $f$ is a vector, denoted as $\vec\nabla f$. Its dual vector is no other than the total derivative of the function $\d f$. The only transition you need is to admit that $\d x^\mu$ can act on a basis vector, 
+> In Euclidean space, for any vector $V$ there is a non-empty set of functions such that $\set{f \mid \nabla f = V}$.
+>
+> **Proof**: Take $f=\sum V^ix^i$. This function belongs to the set $\set{f \mid \nabla f = V}$.
+
+Therefore the gradient of a function $f$ is a vector, denoted as $\vec\nabla f$. Its dual vector is no other than the total derivative of the function $\d f$. The only transition you need is to admit that $\d x^\mu$ can act on a basis vector, 
 $$
 \d x^\mu (\uvec x_\nu) = \delta_\nu^\mu. \notag
 $$
@@ -152,7 +160,7 @@ $$
  \end{align}
 $$
 
-Moreover, the action of $\d f$ on a vector (i.e. *a gradient of some function*, since in Euclidean space, for any vector $V$ there is a set of functions such that $\set{f \mid \nabla f = V}$) gives the derivative along the direction of that vector, which is a real number.
+Moreover, the action of $\d f$ on a vector $V$ gives the derivative along the direction of that vector, which is a real number.
 
 $$
 \begin{align}
@@ -175,7 +183,7 @@ Though on a manifold, things are a little different. There are three equivalent 
 
 1. Vector can be represented by an arrow and can be seen as a tuple of numbers;
 2. Vector is a (derivation) operator;
-3. Vector is an equivalent class of curves.
+3. Vector is an equivalent class of curves (functions).
 
 These definitions are equivalent to each other ([proof](https://maths-people.anu.edu.au/~andrews/DG/DG _ chap4.pdf)). So after this chapter we will make no distinction over these three definitions.
 
@@ -197,12 +205,13 @@ But this requires embedding the manifold in some higher dimensional space, which
 
 Still, the problem is that vectors do not live on the manifold. This forbids us defining "what is vector" using vocabularies from manifold, only allowing us to tell "what is in one-to-one correspondence with vector". So what can we identify with vector? The answer is a (differential) operator. 
 
->  Let's start with a concrete example. Here is a curved surface being the manifold in focus embed in $\R^3$. Although this is not always possible for any manifold, we are going to use this as a tool to gain some intuition. 
+>  Let's start with a concrete example: a curved surface being the manifold in focus embed in $\R^3$. We are going to use this manifold in the context of $3$-d geometry as a tool to gain some intuition. 
 >
 >  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing-tangent-vector-as-operator.png" width="90%">
 >
->  First we are going to see the surface in $ \R^3 $ as $\vec r(x,y,z) = Const.$ On this surface we can have different local coordinates $(u,v)$ (left) or $(w,s)$ (right). With a curve $\Sigma$ on the surface we can have both a using embedded coordinates as $\vec r(t)=(x(t),y(t),z(t))$, or local coordinates as $\vec r(t) = (u(t),v(t))$ or $\vec r(t) = (w(t),s(t))$. The tangent vector $X$ at $p=\vec r(t _ 0)=(u _ 0,v _ 0)=(w _ 0,s _ 0)$ has a very simple definition in $\R^3 $ as $\vec X = \D{\vec r(t)}{t}$. Using the chain rule, 
->  
+>  First we are going to see the surface in $ \R^3 $ as $\vec r(x,y,z) = Const.$ On this surface we can have different local coordinates $(u,v)$ (left) or $(w,s)$ (right). For a curve $\Gamma$ on the surface, we can have its coordinates in $xyz$ as $\vec r(t)=(x(t),y(t),z(t))$, or local coordinates as $\vec r(t) = (u(t),v(t))$ or $\vec r(t) = (w(t),s(t))$. 
+>
+>  The tangent vector $X$ at $p=\vec r(t _ 0)=(u _ 0,v _ 0)=(w _ 0,s _ 0)$ has a very simple definition in $\R^3 $ as $\vec X = \D{\vec r(t)}{t}$. Using the chain rule, 
 >  $$
 >  \begin{align}
 >  \vec X &= \D{\vec r(t)}{t} \notag \\
@@ -211,10 +220,10 @@ Still, the problem is that vectors do not live on the manifold. This forbids us 
 >  \label{vectorToOperator}
 >  \end{align}
 >  $$
->  
->  The expression is now of the form $a \Partial{\vec r}{u}+b \Partial{\vec r}{v}​$, with $\Partial{\vec r}{u}​$ being an actual **vector**(as an arrow).
 >
->  Next we will see that the term $\Partial{\vec r}{u}$ is indeed a basis vector independent of choice of curves. If we take the curve $\Gamma$ as $\cases{ u =u(t)\\ v =2 }$ in the left figure (or $w=3$ in the right), $\Eqn{vectorToOperator}​$ becomes
+>  The expression is now of the form $a \Partial{\vec r}{u}+b \Partial{\vec r}{v}$, with $\Partial{\vec r}{u}$ being an actual $3$-vector.
+>
+>  Next we will see that the term $\Partial{\vec r}{u}$ is independent of choice of curves. If we take the curve $\Gamma$ as $\cases{ u =u(t)\\ v =2 }$ in the left figure (or $w=3$ in the right), $\Eqn{vectorToOperator}$ becomes
 >
 >  $$
 >  \begin{align}
@@ -225,18 +234,15 @@ Still, the problem is that vectors do not live on the manifold. This forbids us 
 >  \end{align}
 >  $$
 >
->  notice for example,  $ \Gamma: \cases{ u=k\cdot t\\ v=2} , \vec X =k\left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\ v=v _ 0}} $ or $ \Gamma^\prime\cases{u=\tan t\\ v=2} , \vec X =\left.\tan(t _ 0)\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\ v=v _ 0}} $  This means if we take a parametrized curve along $v=2$, the tangent vector at point $p$ will always be some number times $ \left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0 \\ v=v _ 0}} $ .
-
-By far, $\Eqn{vectorToOperator}$ means any operator have a "component" form using differential operators. $\Eqn{operator _ basis}$ means the partial differential operators act like unit vectors or bases of the space of operators. There is nothing we don't already know about differential operators. But the above example provide us a good we to identify a vector with a differential operator.
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing-find-operator-for-vector.png" width="90%" >
-
-Reverse the above order, we will find the way to assign an operator to a vector. Starting from a vector $\vec X$, we can choose a basis $\set{\uvec e _ 1, \uvec e _ 2}$, where $\vec X = a\uvec e _ 1+b \uvec e _ 2$. According to the basis, we can find a local coordinate $(x _  1,x  _ 2)$. Now combine the differential operators $\set{\Partial{}{x _ 1},\Partial{}{x _ 2}}$ like the basis vector, we have the differential operator $a\Partial{}{x _ 1}+b\Partial{}{x _ 2}\dfdas X$. We can go further to find some curve (indicated by black lines) $\Gamma : \cases{ u=u(t)\\ v= v(t)}$ such that $ \left( \dot u(t _ 0) ,\dot v(t _ 0)\right)=(a,b) $ .
-
-> Side Note:
+>  notice for example,  $ \Gamma: \cases{ u=k\cdot t\\ v=2} , \vec X =k\left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\ v=v _ 0}} $ or $ \Gamma^\prime: \cases{u=\tan t\\ v=2} , \vec X =\left.\tan(t _ 0)\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0\\ v=v _ 0}}$. 
 >
-> **Theorem:** The directional derivative of a function defined on the manifold $f(t)$ along the vector $v$ (which is the tangent vector at $t _ 0$ along the curve $\Gamma(t)$) is the differential operator $\op{v}$ acting on $f$.
->
+>  This means if we take a parametrized curve along $v=2$, the tangent vector at point $p$ will always be some number times $ \left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0 \\ v=v _ 0}} $ . Thus $\Partial{\vec r}{u}$ is indeed a basis vector independent of curves.
+
+By far, $\Eqn{vectorToOperator}$ means any operator has a component form using differential operators. $\Eqn{operator _ basis}$ means the partial differential operators act like unit vectors or bases of the space of operators. There is nothing we don't already know about differential operators. 
+
+What the above example provides us is a way to assign a differential operator for each vector, which is simply a map: $V\rightarrow \op{v} =V\cdot\nabla$.
+
+> **Theorem:** The directional derivative of a function defined on the manifold $f(t)$ along the vector $V$ (i.e. tangent vector at $t _ 0$ along the curve $\Gamma(t)$) is the differential operator $\op{v}$ acting on $f$.
 > $$
 > \begin{align}
 > \op{v}(f)&\dfdas\nabla _ {V}f(t)\notag\\
@@ -262,7 +268,7 @@ Reverse the above order, we will find the way to assign an operator to a vector.
 
 ## Vector is an equivalent class of curves
 
-From above we already know that one can find different curves such that the differential operator have the right coefficient correspond to the vector. If we make a collection of all the curves correspond to the same vector, we would have establish the same "one-to-one" correspondence. 
+From above we already know that one can find more than one curve to obtain the same the differential operator. If we make a collection of all the curves correspond to the same vector, we can identify a vector with an equivalent class if curves. 
 
 Here it goes from [Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometry _ topology _ and _ physics _ 2nd _ ed..pdf):
 
@@ -271,9 +277,10 @@ Here it goes from [Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometr
 > 1. $c _ 1(0) = c _ 2(0) = p$
 > 2. $ \left. \frac{\d x ^ \mu(c _ 1(t))}{\d t} \right\rvert _ {t=0} =\left.\frac{\d x ^ \mu(c _ 2(t))}{\d t}\right\rvert _ {t=0}$
 >
-> then $c _ 1(t)​$ and $c _ 2(t)​$ yield the same differential operator $X​$ at $p​$, in which case we deﬁne $c _ 1(t) \sim c _ 2(t)​$. Clearly $ \sim ​$ is an equivalence relation and deﬁnes the equivalence classes. We identify the tangent vector $X​$ with the equivalence class of curves
-> $[c(t)] = \left\lbrace \tilde{c}(t) \mid \tilde{c}(0)=c(0) \text{ and } \left.\frac{\d x ^ \mu (\tilde{c}(t))}{\d t} \right\vert _ {t=0} = \left.\frac{\d x ^ \mu (c(t))}{\d t} \right\vert _ {t=0} \right\rbrace ​$
->
+> then $c _ 1(t)$ and $c _ 2(t)$ yield the same differential operator $X$ at $p$, in which case we deﬁne $c _ 1(t) \sim c _ 2(t)$. Clearly $ \sim $ is an equivalence relation and deﬁnes the equivalence classes. We identify the tangent vector $X$ with the equivalence class of curves
+> $$
+>  [c(t)] = \left\lbrace \tilde{c}(t) \mid \tilde{c}(0)=c(0) \text{ and } \left.\frac{\d x ^ \mu (\tilde{c}(t))}{\d t} \right\vert _ {t=0} = \left.\frac{\d x ^ \mu (c(t))}{\d t} \right\vert _ {t=0} \right\rbrace
+> $$
 > rather than a curve itself.
 
 
@@ -428,6 +435,10 @@ The next steps would be
 
 
 
+
+
+
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -474,6 +485,10 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
+
+
+
 
 
 
