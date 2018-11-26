@@ -5,6 +5,7 @@ footer {
 .footer{
 	left:0;
 	right:0;
+	bottom:0;
 	width:100%;
     background:#1a222c;
     padding:10px 0;
