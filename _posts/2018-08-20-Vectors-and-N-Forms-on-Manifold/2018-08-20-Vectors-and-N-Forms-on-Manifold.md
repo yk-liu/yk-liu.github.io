@@ -133,7 +133,13 @@ where $\sharp$ reads "sharp", and $\flat$ reads "flat". For $\sharp$ raises the 
 
 ## Gradient and Total Derivative as Duals
 
-The gradient of a function is a vector. The total derivative can be seen as its dual vector. You can check that they fit in the above definition.
+The gradient of a function is a vector. The total derivative can be seen as its dual vector. The only transition you need is to admit that $\d x^\mu$ can act on a basis vector, 
+
+$$
+\d x^\mu (\uvec x_\nu) = \delta_\nu^\mu. \notag
+$$
+
+You can check that they fit in the above definition.
 
 $$
  \begin{align}
@@ -143,7 +149,7 @@ $$
  \end{align}
 $$
 
- Moreover, the action of $\d f$ on a vector (i.e. *a gradient of some function*) gives the derivative along the direction of that vector, which is indeed a real number.
+Moreover, the action of $\d f$ on a vector (i.e. *a gradient of some function*) gives the derivative along the direction of that vector, which is indeed a real number.
 
 $$
 \begin{align}
@@ -164,21 +170,21 @@ We all know what vector is in Euclidean space, a **vector** is formally defined 
 
 Though on a manifold, things are a little different. There are three equivalent ways of defining vectors. To put them vaguely,
 
-1. Vector is (like in high school) an arrow and can be seen as a tuple of numbers;
-2. Vector is an equivalent class of curves;
-3. Vector is a (derivation) operator.
+1. Vector can be represented by an arrow and can be seen as a tuple of numbers;
+2. Vector is a (derivation) operator;
+3. Vector is an equivalent class of curves.
 
-These definitions are equivalent to each other [(proof)](https://maths-people.anu.edu.au/~andrews/DG/DG _ chap4.pdf). So after this chapter we will make no distinction over these three definitions.
+These definitions are equivalent to each other ([proof](https://maths-people.anu.edu.au/~andrews/DG/DG _ chap4.pdf)). So after this chapter we will make no distinction over these three definitions.
 
 ## Vector is an arrow
 
 When I think about vector on a manifold, I have the picture of some arrow tangent to the "surface" of manifold. 
 
-Since in general there is no way to define a "straight arrow" connecting two points. Vectors can only be "tangent vectors". In other words, vectors cannot live on the manifold itself, but the collection of tangent spaces over the entire manifold, called the **tangent bundle**. That way, the vector is a kept at a geometrical view. This is a generalization of the notion of a bound vector in a Euclidean space. But this requires embedding the manifold in some higher dimensional space, which is not very convenient, since Differential Geometry aims at investigating the space (or maybe space-time) without jumping out of it.
+Since in general there is no way to define a "straight arrow" connecting two points. Vectors can only be "tangent vectors". In other words, vectors cannot live on the manifold itself, but the collection of tangent spaces over the entire manifold, called the **tangent bundle**. That way, the vector is a kept at a geometrical view. This is a generalization of the notion of a bound vector in a Euclidean space. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-N-Forms-on-Manifold/assets/drawing-tangent-vector.JPG" width="80%">
 
-Obviously, once the vector is in an ambient space, it can be represented by a tuple of numbers. How to represent a vector although "it can be represented by a tuple of numbers"? There will be different basis on each point of a manifold and
+But this requires embedding the manifold in some higher dimensional space, which is not very convenient, since Differential Geometry aims at investigating the space (or maybe space-time) without jumping out of it. Obviously, once the vector is in an ambient space, it can be represented by a tuple of numbers. This naïve picture is fairly intuitive and is mainly brought up as an heuristic way to introduce the next concept.
 
 ## Vector is a (differential) operator
 
@@ -410,6 +416,7 @@ The next steps would be
 
 
 
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -456,6 +463,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 
 
