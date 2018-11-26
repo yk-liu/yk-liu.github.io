@@ -135,8 +135,9 @@ $$
 
 ## Gradient and Total Derivative as Duals
 
-The gradient of a function is a vector. The total derivative can be seen as its dual vector. The only transition you need is to admit that $\d x^\mu$ can act on a basis vector, 
+It's high time we addressed the weird choice of the name $\d x^i$. 
 
+We already know that the gradient of a function $f$ is a vector, denoted as $\vec\nabla f$. Its dual vector is no other than the total derivative of the function $\d f$. The only transition you need is to admit that $\d x^\mu$ can act on a basis vector, 
 $$
 \d x^\mu (\uvec x_\nu) = \delta_\nu^\mu. \notag
 $$
@@ -151,15 +152,15 @@ $$
  \end{align}
 $$
 
-Moreover, the action of $\d f$ on a vector (i.e. *a gradient of some function*) gives the derivative along the direction of that vector, which is indeed a real number.
+Moreover, the action of $\d f$ on a vector (i.e. *a gradient of some function*, since in Euclidean space, for any vector $V$ there is a set of functions such that $\set{f \mid \nabla f = V}$) gives the derivative along the direction of that vector, which is a real number.
 
 $$
 \begin{align}
  \d f(V)&=\Partial{f}{x ^ \mu}\d x ^ \mu(V)\notag\\
- &=\Partial{f}{x ^ \mu}\d x ^ \mu(v^\nu \uvec x _ \nu)\notag\\
- &=\Partial{f}{x ^ \mu}v^\nu \d x ^ \mu(\uvec x _ \nu)\notag\\
- &=\Partial{f}{x ^ \mu}v^\nu \delta ^ \mu _ \nu\label{df-nablaf-vec-1}\\
- &=\Partial{f}{x ^ \mu}v^\mu \notag\\
+ &=\Partial{f}{x ^ \mu}\d x ^ \mu(V^\nu \uvec x _ \nu)\notag\\
+ &=\Partial{f}{x ^ \mu}V^\nu \d x ^ \mu(\uvec x _ \nu)\notag\\
+ &=\Partial{f}{x ^ \mu}V^\nu \delta ^ \mu _ \nu\label{df-nablaf-vec-1}\\
+ &=\Partial{f}{x ^ \mu}V^\mu \notag\\
  &=V\cdot \vec \nabla f \label{df-nablaf-vec-2}\\
  &\dfdas\nabla _ {V}f=\lim _ {h\rightarrow0}\frac{f(\vec x + hV)-f(\vec x)}{h}\in\R \label{directionalderivative}
  \end{align}
