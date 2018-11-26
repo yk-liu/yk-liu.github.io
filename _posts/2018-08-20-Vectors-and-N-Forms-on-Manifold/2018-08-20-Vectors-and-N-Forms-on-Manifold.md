@@ -67,27 +67,62 @@ The vector space $V^*$ of linear functionals over $V$ is said to be **dual** to 
 
 A set of basis of the dual space are dual vectors as well, which acts on a vector and give a real number. An element of a set of basis is denoted as $\d x ^ i \in \R$. A covector is denoted as $\form \omega=\omega _ i \d x ^ i$. 
 
-> This suspiciously looking name of the co-basis is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply an abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)). 
+> This suspiciously looking name of the co-basis is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply an abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)).
+>
 
-The basis' action on vector is denoted as $\d x^i (V)$. Here we construct the **covector space** of $V$ and a map from vectors to covectors: 
+The basis' action on vector is denoted as $\d x^i (V)$. 
 
-> 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\omega$ is denoted as $(\d x ^ 1,\d x ^ 2,\d x ^ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number, i.e., $\d x ^ i(V)\in \R$.
+## Action of Covectors on Vectors
+
+ 1. Suppose the basis for the vector space $V$ is denoted as $(\uvec x _ 1,\uvec x _ 2, \uvec x _ 3)$, where $\uvec x _ i$ is a unit vector in the positive $x _ i$ direction. Suppose a basis for the dual space $\omega$ is denoted as $(\d x ^ 1,\d x ^ 2,\d x ^ 3)$. From the definition, a basis of a dual space is itself a dual vector, which acts on a vector, gives a real number, i.e., $\d x ^ i(V)\in \R$.
+
+ 2. Since covectors are linear functionals, $\d x ^ i(V)$ can be seen as act on bases of vector $V$.
+    $$
+    \d x ^ i(V) =\d x ^ i (V ^ 1\uvec x _ 1+V ^ 2\uvec x _ 2+V ^ 3\uvec x _ 3)= V ^ 1\d x ^ i (\uvec x _ 1)+V ^ 2\d x ^ i (\uvec x _  2)+V ^ 3\d x ^ i (\uvec x _  3)\in \R
+    $$
+
+ 3. Define $\d x ^ i (\uvec x _  j)\dfdas \delta ^ i _ j$. We have 
+
+    $$
+    \d x ^ i(V) =V ^ j\d x ^ i (\uvec x _ j) = V ^ j \delta ^ i _j = V^i
+    $$
+
+ 4. The entire action of $\omega=\omega _ i\d x^i $ on vector $V=V^i \uvec x _ i$ is then
+
+    $$
+    \omega (V) =\omega_i \d x ^ i (V) = \omega _i V ^ i 
+    $$
+
+
+## Musical Isomorphism
+
+If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
+
+This isomorphism is fairly simple: just swap the basis and nothing is changed, $V\leftrightarrow V^*,\, \uvec x _  i \leftrightarrow \d x ^ i$. This isomorphism is called the **musical isomorphism**. A discussion of origin of this name can be found [here](https://mathoverflow.net/questions/69074/the-origin-of-the-musical-isomorphisms).
+
+This isomorphism is denoted as 
+
+$$
+\begin{align}
+\sharp : \form \omega \rightarrow  \omega^\sharp =  W&=\sum(\omega _ \mu \delta ^{\mu\nu})\uvec x _ \nu ,\\
+\flat : V \rightarrow V^\flat = \gamma &= \sum(V^\mu \delta _ {\mu\nu})\d x ^ \mu ,
+\end{align}
+$$
+
+where $\sharp$ is pronounced "sharp", and $\flat$ "flat". For $\sharp$ raises the index of components, and $\flat$ lowers the index.
+
+> ***Remark:***
 >
-> 2. Since covectors are linear functionals, $\d x ^ i(V)$ can be seen as act on bases of vector $V$.
->    $$
->    \d x ^ i(V) =\d x ^ i (V ^ 1\uvec x _ 1+V ^ 2\uvec x _ 2+V ^ 3\uvec x _ 3)= V ^ 1\d x ^ i (\uvec x _ 1)+V ^ 2\d x ^ i (\uvec x _  2)+V ^ 3\d x ^ i (\uvec x _  3)\in \R
->    $$
+> - For vector spaces with finite bases the dual spaces are not very exotic; they are essentially the same as the original spaces. **There are some infinite dimensional vector spaces that have dual spaces that are different in nature from the original space**.
+> - For example, Dirac-bras $ \bra{v} $ and -kets $ \ket{v} $ are dual vectors, the contravariant vector $x^\mu$ and covariant vectors $x _ \mu$ are dual to each other. The isomorphisms are both just transpose.
 >
-> 3. Define $\d x ^ i (\uvec x _  j)\dfdas \delta ^ i _ j$. Recall that $\d x ^ i (\uvec x _  j)=\inner{\d x ^ i}{\uvec x _  j}=\delta ^ i _ j$.
->
-> 4. **[map between bases of vectors and covectors]** A covector $\gamma$  dual to vector $V$ can be written in components $\gamma=(V^\mu \delta _ {\mu\nu})\d x ^ \mu$. A vector $W$ dual to a covector $\omega$, is $W=(\omega _ \mu \delta ^{\mu\nu})\uvec x _ \nu$. The mapping is just interchanging $\d x ^ \mu$ between $\uvec x _   \mu$ and adjust the index position.
 
 ## Inner Product and Dot Product
 
 The **inner product** $\inner{\;}{\;}$ is defined as
 
 $$
-\inner{\omega}{V}=\omega(V)\in\R \label{innerproduct},
+\inner{\omega}{V}=\omega(V) = \omega_i V^i \in\R \label{innerproduct},
 $$
 
 Note that the inner product is defined between a vector and a dual vector, not between two vectors. 
@@ -97,38 +132,6 @@ However, inner product looks suspiciously like dot product. A natural insight is
 $$
 \omega(V)=\omega _ i \d x ^ i (V^j\uvec x _  j)=\omega _ i V ^ i=W\cdot V\in \R
 $$
-
-
-##  Musical Isomorphism
-
-If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
-
-This isomorphism is fairly simple: just swap the basis and nothing is changed. This isomorphism is called the **musical isomorphism**. A discussion of origin of this funny name can be found [here](https://mathoverflow.net/questions/69074/the-origin-of-the-musical-isomorphisms).
-
-So the isomorphism can be just $V\leftrightarrow V^*,\quad \uvec x _  i \leftrightarrow \d x ^ i$. This isomorphism is denoted as 
-
-$$
-\begin{align}
-\sharp : \form \alpha \rightarrow  \alpha^\sharp = \sum \alpha^i \uvec e _ i = \vec \alpha ,\\
-\flat : V \rightarrow v^\flat = \sum v _ i \form {\uvec e} ^ i = \form v ,
-\end{align}
-$$
-
-where $\sharp$ reads "sharp", and $\flat$ reads "flat". For $\sharp$ raises the index of basis, and $\flat$ lowers the index.
-
-> ***Remark:***
->
-> - For vector spaces with finite bases the dual spaces are not very exotic; they are essentially the same as the original spaces. **There are some infinite dimensional vector spaces that have dual spaces that are different in nature from the original space**.
-> - If the original space is finite dimensional, vectors can be sent to covectors through a isomorphism. For example, Dirac-bras $ \bra{v} $ and -kets $ \ket{v} $ are dual vectors, the contravariant vector $x^\mu$ and covariant vectors $x _ \mu$ are dual to each other. The isomorphisms are both just transpose.
-> - The aforementioned isomorphism can be written as a definition of map 
->
-> $$
-> {\red\form v} \leftrightarrow V : V \cdot \vec x =\inner{ { \red\form v} }{\vec x} \in \R
-> \label{1formvec}
-> $$
->
- - A Euclidean vector space comes with a dot product $(x, y) → x·y$, which can be used to describe one-forms in terms of vector fields (or equivalently, to identify cotangent vectors and tangent vectors):  Specifically, for every one-form $\form \omega$ there is a unique vector field ${\scr F }: \R^n\rightarrow V$  such that $\form ω _ x(V) \dfdas \vec{F}(x) · \vec{v}$ for all $x\in \R^n, v \in V$. [[Tao](http://www.math.ucla.edu/~tao/preprints/forms.pdf)] 
->
 
 ## Gradient and Total Derivative as Duals
 
@@ -418,6 +421,12 @@ The next steps would be
 
 
 
+
+
+
+
+
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -464,6 +473,12 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
+
+
+
+
+
 
 
 
