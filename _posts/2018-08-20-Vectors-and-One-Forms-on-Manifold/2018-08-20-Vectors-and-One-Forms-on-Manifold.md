@@ -95,6 +95,7 @@ The basis' action on vector is denoted as $\d x^i (V)$.
     $$
 
 
+
 ## Musical Isomorphism
 
 If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
@@ -434,39 +435,40 @@ The next steps would be
    $$
 
 
+
 By the above deduction, we finally arrive at the conclusion that
 
- $$
+$$
 \begin{align*}
 \form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i\\
 \form f(V) = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i V\\
 \end{align*}
- $$
+$$
 
 Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. 
 
 Still, the expression deserves more investigation. Leaving the context of vectors and covectors aside, the expression $\Eqn{directional-derivative}$ as function's derivative show that if two functions $f$ and $g$ have the same differential at $t=t _ 0$, 
 
- $$
+$$
 \d f=\sum \Partial{f}{x^i}\d x^i=\d g \notag
- $$
+$$
 
 they will yield the same result,
 
- $$
+$$
 \begin{align*}
 \nabla _ {V} f -\nabla _ {V} g &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+tV)-f(\vec x _ 0)}{t}}-\lim _ {t\rightarrow 0}{\frac{g(\vec x _ 0+tV)-g(\vec x _ 0)}{t}}\\
 &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}-\left.\D{}{t}g(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 &=\D{(f-g)}{t}\\
 &=0
 \end{align*}
- $$
+$$
 
 In other words, $\form f$ is actually an equivalent class of functions $f$, such that a set of functions $\set{f\mid \d f=\d f _ 0}$, can now be represented as
 
- $$
+$$
 \d f = \sum _ {i=1}^n\Partial{f}{x^i} \d x^i
- $$
+$$
 
 ## The Puzzle of $\frac{\partial (dx^\mu )}{\partial x^\nu}$
 
@@ -483,6 +485,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 
 So far so good. 
@@ -521,8 +524,8 @@ That bugged me a long time as well. However, if I start from $\Eqn{basis-one-for
 
 ## Redefined Vector and One-Forms
 
-At the end of last section, vectors were generalized as mathematical objects with the form $X=X ^ \mu\Partial{}{x ^ \mu}$. Similarly, the corresponding one-form can be generalized as $\form X= X _ \mu \d x ^ \mu$. 
+At the end of last section, vectors were generalized as mathematical objects with the form $X=X ^ \mu\Partial{}{x ^ \mu}$. Similarly, the corresponding one-form can be generalized as $\omega =  \omega _ \mu \d x ^ \mu$. 
 
-This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is not a total derivative of a function.
+This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y​$ is a perfect one-form by this definition, but it is not a total derivative of a function.
 
 This property is called exactness. Which we will investigate later.

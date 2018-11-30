@@ -57,16 +57,16 @@ For example,
 $$
 \begin{align}
 \vec u \wedge V &= \vec u \otimes V - V \otimes \vec u\\
-\vec u \wedge V  \wedge \vec w &= \vec u \otimes V  \otimes \vec w + \vec w \otimes \vec u \otimes V  + V  \otimes \vec w \otimes \vec u \label{wedgeExample} \\
-&- \vec u \otimes \vec w \otimes V  - \vec w \otimes V  \otimes \vec u - V \otimes \vec u \otimes \vec w \notag
+\vec u \wedge V  \wedge \vec w &= \vec u \otimes V  \otimes \vec w + \vec w \otimes \vec u \otimes V  + V  \otimes \vec w \otimes \vec u \notag \\
+&- \vec u \otimes \vec w \otimes V  - \vec w \otimes V  \otimes \vec u - V \otimes \vec u \otimes \vec w \label{wedgeExample}
 \end{align}
 $$
 
 Given a vector space $V$, a space of wedge product can be constructed as
 
 $$
-\wedge ^2 V = \set{ \vec u\wedgeV  {\mid}  \vec u,V \in V  }\\
-\wedge ^3 V = \set{ \vec u\wedgeV \wedge \vec w {\mid} \vec u,V,\vec w \in V  }\\
+\wedge ^2 V = \set{ \vec u\wedge \vec v  {\mid}  \vec u,\vec v \in V  }\\
+\wedge ^3 V = \set{ \vec u\wedge \vec v \wedge \vec w {\mid} \vec u,\vec v,\vec w \in V  }\\
 \wedge ^n V = \set{ \vec u _ 1\wedge\vec u _ 2 \wedge\cdots\wedge \vec u _ n {\mid} \vec u _ i\in V ,i=1,2,\cdots,n }
 $$
 
@@ -142,10 +142,10 @@ Another way to see a two-form is that it's a second derivative of something. So 
 
 $$
 \begin{align*}
-\d (\form X) &= \d (X_\mu \d x ^ \mu)\\
-&=(\d x ^ \mu )\wedge\d x ^ \nu + X_\mu\d( \d x ^ \mu)\\
-\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d x ^ \mu )\wedge\d x ^ \nu\\
-&=\Partial{X_\mu}{x ^ \nu}\d x ^ \mu \wedge\d x ^ \nu 
+\d (\omega) &= \d (\omega_\mu \d x ^ \mu)\\
+&=(\d \omega _ \mu )\wedge\d x ^ \mu + \omega_\mu\d( \d x ^ \mu)\\
+\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d \omega _ \mu )\wedge\d x ^ \mu\\
+&=\Partial{\omega_\mu}{x ^ \nu}\d x ^ \nu \wedge\d x ^ \mu 
 \end{align*}
 $$
 
