@@ -95,6 +95,8 @@ The basis' action on vector is denoted as $\d x^i (V)$.
 
 
 
+
+
 ## Musical Isomorphism
 
 If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
@@ -435,6 +437,8 @@ The next steps would be
 
 
 
+
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -484,6 +488,8 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
+
 
 
 
