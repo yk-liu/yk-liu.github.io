@@ -1,40 +1,39 @@
    
 <hr>
 
-   {% if page.commentable == true %}
-     {% if page.comments %}
-       {% assign sorted_comments = (page.comments | sort: 'date') %}
-     {% endif %}
-     {% for c in sorted_comments %}
-       <div class="media">
-         <div class="media-left">
-           <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
-         </div>
-         <div class="media-body">
-           <p class="text-muted">
-             <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
-             on {{ c.date | date_to_string }}
-           </p>
-           <p>{{ c.content | newline_to_br | markdownify }}</p>
-         </div>
-       </div>
-     {% else %}
-       <h6> Be the first one to comment on this page!</h6>
-     {% endfor %}
-   {% else %}
-     {% if page.protected == true %}
-     {% else %}
-	 <h6>&#128517; Comments on this post is disabled.</h6>
-	 {% endif %}
-   {% endif %}
+{% if page.commentable == true %}
+	{% if page.comments %}
+		{% assign sorted_comments = (page.comments | sort: 'date') %}
+	{% endif %}
+	{% for c in sorted_comments %}
+		<div class="media">
+			<div class="media-left">
+				<img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
+			</div>
+			<div class="media-body">
+				<p class="text-muted">
+				 <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
+				 on {{ c.date | date_to_string }}
+				</p>
+				<p>{{ c.content | newline_to_br | markdownify }}</p>
+			</div>
+		</div>
+	{% else %}
+		{% if page.protected == true %}
+			<h6 style="color:#34495e" >&#128517; Comments on this page are now protected.</h6>
+		{% else %}
+			<h6 style="color:#34495e"> Be the first one to comment on this page!</h6>
+		{% endif %}
+	{% endfor %}
+{% else %}
+		<h6 style="color:#34495e">&#128517; Commenting is disabled on this post.</h6>
+{% endif %}
 
 {% if page.protected == true %}
-    <h6>&#128517; The comments on this page is now protected.</h6>
-{% else %}
-    <hr>
     <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
+		<div > You can use <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">GitHub flavored markdown</a> in your comment. <a href="{{ site.baseurl }}/info/postguide">Commenting FAQs & Guidelines </a></div> 
     <div id="commentit"></div>
-	<div> You can use <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">Github flavored markdown</a> in your comment. <a href="{{ site.baseurl }}/info/postguide">Commenting FAQs & Guidelines </a></div> 
+		
 
 	<script type="text/javascript">
 	  /** CONFIGURATION VARIABLES **/
