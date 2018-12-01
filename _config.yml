@@ -63,6 +63,7 @@ defaults:
       commentable: true
       status: Completed
       protected: false
+      rss: true
 
 
 exclude:

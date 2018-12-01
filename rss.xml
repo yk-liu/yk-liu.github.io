@@ -1,0 +1,31 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+
+ <title>{{site.title}}</title>
+ <description>This is RSS feed for my website</description>
+ <link>{{site.url}}</link>
+ <lastBuildDate>{{page.date}}</lastBuildDate>
+ <pubDate>{{page.date}</pubDate>
+   <author>
+    <name>{{site.author.name}}</name>
+		<email>{{site.author.email}}</email>
+  </author>
+ <ttl>1800</ttl>
+
+ {% for post in site.posts %}
+	 {% if post.rss %}
+	 <item>
+		<title>{{ post.title }}</title>
+		<description>{{ post.description }}</description>
+		<link href="{{ post.url }}" />
+		<updated>{{ post.edit }}</updated>
+		<rights> © 2005 John Doe </rights>
+	 </item>
+	 {% endif %}
+ {% endfor %}
+
+</feed>
