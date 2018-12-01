@@ -18,13 +18,13 @@ layout: null
 
  {% for post in site.posts %}
 	 {% if post.rss %}
-	 <item>
+	 <entry>
 		<title>{{ post.title }}</title>
 		<description>{{ post.description }}</description>
 		<link href="{{ post.url }}" />
 		<updated>{{ post.edit }}</updated>
-		<rights> © 2005 John Doe </rights>
-	 </item>
+		<rights type="html"> &amp;copy; 2005 John Doe </rights>
+	 </entry>
 	 {% endif %}
  {% endfor %}
 
