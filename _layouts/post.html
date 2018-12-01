@@ -71,12 +71,15 @@
                </div>
             </div>
             <hr>
-			<div id="content-container" style="text-align:justify">
-            {{ content }}
+				<div id="content-container" style="text-align:justify">
+					{{ content }}			
+				</div>
+				<div id="comment-session">
+					 {% include commentit.html %}
+				</div>
+       </div>
 			</div>
-         </div>
-         {% include commentit.html %}
-      </div>
+      
    </body>
    {% include footer.html %} 
 </html>
