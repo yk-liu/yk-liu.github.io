@@ -3,7 +3,7 @@ title: Thank You Word Cloud with Mathematica
 categories: Code-Snippets
 tags: word-cloud Mathematica
 keywords: word-cloud Mathematica
-description: Code for generating thank you word cloud with Mathematica
+description: Code for generating thank you word cloud with Mathematica.
 toc: false
 ---
 
