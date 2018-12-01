@@ -57,11 +57,21 @@
                   </div>
                   {% if site.tags != '' %}
                   <div id="tag-list">
-                     <p><code> Tags </code>:  &nbsp; [
+                     <p><code> Tags </code>:  &nbsp; 
                         {% for tag in page.tags %}
                         {% capture tag_name %}{{ tag }}{% endcapture %}
                         <code><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
-                        {% endfor %}]
+                        {% endfor %}
+                     </p>
+                  </div>
+                  {% endif %}	
+									{% if site.categories != '' %}
+                  <div id="category-list">
+                     <p><code> Categories </code>:  &nbsp;
+                        {% for category in page.categories %}
+                        {% capture category_name %}{{ category }}{% endcapture %}
+                        <code><a href="/blog/categories#{{ category_name }}" target="_blank">{{ category_name }}</a></code>
+                        {% endfor %}
                      </p>
                   </div>
                   {% endif %}	
