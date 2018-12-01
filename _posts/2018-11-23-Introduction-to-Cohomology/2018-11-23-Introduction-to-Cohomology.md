@@ -1,6 +1,6 @@
 ---
 title: Introduction to De Rham Cohomology
-Edit: 2018-11-23
+edit: 2018-11-23
 categories: Topology
 tags: De-Rham-Cohomology Topology
 keywords: cohomology
