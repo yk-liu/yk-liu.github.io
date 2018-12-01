@@ -15,18 +15,11 @@
     .newsletter-form {
         text-align: center;
     }
-    .newsletter-title {
-        font-size: 1.5em;
-        margin: 0;
+		
+    .newsletter-text {
         color: #fff;
         font-family:'Source Sans Pro', sans-serif;
 				font-weight: bold;
-        text-transform: uppercase;
-    }
-    .newsletter-text {
-        font-family:'Source Sans Pro', sans-serif;
-        font-weight: 600;
-        color: #ddd;
         text-align: center;
     }
     .newsletter-email,
@@ -37,7 +30,6 @@
         align-self: center;
     }
     .newsletter-email {
-        /* font-family: $serif-primary; */
         text-align: center;
         font-size: .9em;
     }
@@ -46,7 +38,7 @@
         margin-left: 1em;
         padding: 0.5em;
         border: none;
-        background: #1a222c;
+        background: #fff;
         text-transform: uppercase;
         font-weight: 600;
     }
