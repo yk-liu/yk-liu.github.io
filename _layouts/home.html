@@ -2,42 +2,38 @@
 <html lang="en">
    {% include head.html %}
    <!-- main style sheet -->  
-   <link rel="stylesheet" href="/assets/css/home.css"> 
+   <link rel="stylesheet" href="/assets/css/home.css">
    <!-- font awesome --> 
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
    <!-- google font-->
    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
    <!-- -->  
    <body>
-      
       <div id="particles-js">
-	  <div class="background-image" style="right: 0;top: 4.5%;width: auto;position: absolute;margin-right: 6%;background: transparent;">
-		    <img src="/about/Moon.png" style="width: 300px;/* size: auto; */">
-	  </div>
+         <div class="background-image" style="right: 0;top: 4.5%;width: auto;position: absolute;margin-right: 6%;background: transparent;">
+            <img src="/about/Moon.png" style="width: 300px;/* size: auto; */">
+         </div>
          <div class="header">
             <h1>
                <span class="site-title">{{site.title}}</span>
                <span class="site-description">{{site.description}}</span>
             </h1>
             <div class="header-links">
-			   <a class="link" href="/blog">Posts</a>
+               <a class="link" href="/blog">Posts</a>
                <a class="link" href="/repo" >Codes</a>
-			   <a class="link" href="/about" >About</a>
+               <a class="link" href="/about" >About</a>
             </div>
          </div>
          <a class="down" href="#about" data-scroll><i class="icon fas fa-chevron-down fa-lg" aria-hidden="true" style="z-index: 2;"></i></a>
       </div>
       <section id="about">
          <!-- <div class="user-details"> -->
-
          <!-- </div> -->
-				 <div class="lower"> 
-         <div class="user-details">
-            <h2> Me and this website </h2>
-            
-						 <p style="text-align: justify;"> &nbsp;&nbsp;&nbsp;&nbsp;I am a physics undergraduate at Nankai University. I use this open source website ( source code is <a href="https://github.com/yk-liu/yk-liu.github.io">here</a> ) to share my understanding of many theories I learned. The most recent notes are often in progress, for I like to keep a few projects running at the same time. You are always welcomed to comment on my posts for suggestion or discussion. Some of the old notes were written in Chinese. You can learn more at <a href="/about"> about page</a>. </p>
-            
-         </div>
+         <div class="lower">
+            <div class="user-details">
+               <h2> Me and this website </h2>
+               <p style="text-align: justify;"> &nbsp;&nbsp;&nbsp;&nbsp;I am a physics undergraduate at Nankai University. I use this open source website ( source code is <a href="https://github.com/yk-liu/yk-liu.github.io">here</a> ) to share my understanding of many theories I learned. The most recent notes are often in progress, for I like to keep a few projects running at the same time. You are always welcomed to comment on my posts for suggestion or discussion. Some of the old notes were written in Chinese. You can learn more at <a href="/about"> about page</a>. </p>
+            </div>
             <div class="permlinks">
                <h2>Recent Posts</h2>
                <ul>
@@ -53,16 +49,14 @@
                </ul>
                <h2>Upcoming Posts</h2>
                <ul>
-               <li>K-theory Study Notes</li>
+                  <li>K-theory Study Notes</li>
                </ul>
             </div >
          </div >
-         
       </section>
       <script src= "/assets/js/sweet-scroll.min.js"></script>
       <script src="/assets/js/particles_conf.js"></script>
       <script src="/assets/js/particles.min.js"></script>
    </body>
-   
    {% include footer.html %} 
-   </html>
+</html>
