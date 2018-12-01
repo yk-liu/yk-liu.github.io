@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 量子场论
-category: Blog
+categories: Physics-study-notes
 tags: QFT study-notes
 keywords: QFT
 description: My Study notes on QFT lesson for the final.

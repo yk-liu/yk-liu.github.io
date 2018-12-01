@@ -2,7 +2,7 @@
 layout: post
 title: 第一性原理热统
 mathjax: true
-category: Blog
+categories: Physics-study-notes
 tags: Statistical-mechanics First-Principle
 keywords: Statistical-mechanics First-Principle
 description: Class project. My attempt at building Statistical Mechanics from First Principles.

@@ -4,7 +4,7 @@ title: You Should Try Fortran
 description: I found Fortran incredibly fast compared to Python. Fortran's reputation for hard to maintain is true only if you read the code without understanding of the Physics. You should give it a try.
 tags: Fortran Coding Thoughts Python
 keywords: Python Fortran Optimization
-category: Coding
+categories: Fortran
 ---
 
 # My impression with Python

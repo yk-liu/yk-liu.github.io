@@ -2,7 +2,7 @@
 layout: post
 title: 李群和李群的李代数
 mathjax: true
-category: Blog
+categories: Topology Lie-group
 tags: Lie-algebra Lie-group
 keywords: Lie-algebra Lie-group
 description: My understanding of Lie-group and its Lie-algebra

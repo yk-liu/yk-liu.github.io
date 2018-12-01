@@ -1,7 +1,7 @@
 ---
 title: N-Forms and Tensors on Manifold
 Edit: 2018-11-26
-category: Blog
+categories: Topology
 tags: One-form N-Forms Tensor Topology 
 keywords: one-form wedge-product dual-space tensor-product
 description: My interpretation on N-forms and tensors

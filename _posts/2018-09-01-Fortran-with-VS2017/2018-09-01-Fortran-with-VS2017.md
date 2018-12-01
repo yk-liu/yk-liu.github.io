@@ -1,6 +1,6 @@
 ---
 title : Fortran with VS2017
-category: Blog
+category: Fortran
 tags: Fortran Coding
 keywords: Fortran Visual-Studio
 description: Instructions on using Fortran with VS2017

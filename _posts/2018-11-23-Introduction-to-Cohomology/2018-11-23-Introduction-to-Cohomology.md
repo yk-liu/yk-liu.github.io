@@ -1,7 +1,7 @@
 ---
 title: Introduction to De Rham Cohomology
 Edit: 2018-11-23
-category: Blog
+categories: Topology
 tags: De-Rham-Cohomology Topology
 keywords: cohomology
 description: My study notes on cohomology, as a preparation for K-theory.

@@ -1,6 +1,6 @@
 ---
 title: Thank You Word Cloud with Mathematica
-category: Blog
+categories: codes
 tags: word-cloud Mathematica
 keywords: word-cloud Mathematica
 description: Code for generatinge thank you word cloud with Mathematica
