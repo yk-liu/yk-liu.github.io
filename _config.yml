@@ -4,13 +4,26 @@ description: Blog of Yingkai Liu
 baseurl: "" 
 url: "https://yk-liu.github.io" 
 
-# User settings
+# GitHub User settings
 username: Yingkai Liu
 github_username: yk-liu
 user_description: A Physics undergrad with a broad interest
 user_title: Physics Undergraduate
 email: yingkai.liu@outlook.com
 
+# Blog Author settings
+author:
+  name:           Yingkai Liu
+  picture:        
+  email:          yingkai.liu@outlook.com
+  description:    I'm a Physics undergrad with a broad interest.
+  twitter:
+  facebook:
+  github:         https://github.com/yk-liu
+  linkedin:
+
+
+# markdown
 markdown: kramdown
   
 kramdown:
@@ -23,31 +36,11 @@ kramdown:
   css_class: 'highlight'
  
 highlighter: rouge
-
-# links:
-  # - title: Home
-    # url: /
-    # external: false
-    # icon: home
-  # - title: Repos
-    # url: /repo
-  # - title: Blogs
-    # url: /blog
     
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   
-author:
-  name:           Yingkai Liu
-  picture:        
-  email:          yingkai.liu@outlook.com
-  description:    This is a blog for a Physics undergrad with a broad interest. I proudly share my study notes here. 
-  twitter:
-  facebook:
-  github:         https://github.com/yk-liu
-  linkedin:
-
 
 permalink: none
 

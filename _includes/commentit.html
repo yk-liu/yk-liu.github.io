@@ -20,18 +20,18 @@
 		</div>
 	{% else %}
 		{% if page.protected == true %}
-			<h6 style="color:#34495e" >&#128517; Comments on this page are now protected.</h6>
+			<h6 style="color:#34495e;margin-bottom: auto;" >&#128517; Comments on this page are now protected.</h6>
 		{% else %}
-			<h6 style="color:#34495e"> Be the first one to comment on this page!</h6>
+			<h6 style="color:#34495e;margin-bottom: auto;"> Be the first one to comment on this page!</h6>
 		{% endif %}
 	{% endfor %}
 {% else %}
-		<h6 style="color:#34495e">&#128517; Commenting is disabled on this post.</h6>
+		<h6 style="color:#34495e;margin-bottom: auto;">&#128517; Commenting is disabled on this post.</h6>
 {% endif %}
 
 {% if page.protected == false %}
     <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
-		<div > You can use <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">GitHub flavored markdown</a> in your comment. <a href="{{ site.baseurl }}/info/postguide">Commenting FAQs & Guidelines </a></div> 
+		<div style="font-size: smaller;">You can use <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">GitHub flavored markdown</a> in your comment. <a href="{{ site.baseurl }}/info/postguide">Commenting FAQs & Guidelines </a></div> 
     <div id="commentit"></div>
 		
 
