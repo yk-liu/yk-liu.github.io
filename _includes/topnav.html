@@ -1,6 +1,7 @@
 <div class="topnav" id="topnav">
       <a href="/" {% if include.active == "home" %}  class="active"  {% endif %} >Home</a>
       <a href="/blog" target="_blank" {% if include.active == "post" %}  class="active"  {% endif %} >Posts</a>
+			<a href="/blog/categories" target="_blank" {% if include.active == "categories" %}  class="active"  {% endif %} >Categories</a>
 	  <a href="/blog/tags" target="_blank" {% if include.active == "tags" %}  class="active"  {% endif %} >Tags</a>
 	  <a href="/about" {% if include.active == "about" %}  class="active"  {% endif %} >About</a>
       {% if site.github_username %}
