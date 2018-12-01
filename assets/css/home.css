@@ -359,12 +359,12 @@ sub,sup{
 .user-details{
     text-align:center;
     margin:5px auto;
-		width:30%;
+		width:40%;
 }
 .permlinks{
     margin:10px;
 		border-left:10%;
-    width:60%;
+    width:50%;
     text-align:left
 }
 .lower{
