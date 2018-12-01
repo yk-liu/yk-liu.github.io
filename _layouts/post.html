@@ -5,8 +5,8 @@
       {% include head.html %}  
       {% include mathjax.html %}
       {% include theme-vue.html%}
-	  <!-- jquery for mermaid and font adj-->
-	  <script src=" //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+      <!-- jquery for mermaid and font adj-->
+      <script src=" //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
       <!-- font awesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
       <!-- change font -->
@@ -15,10 +15,10 @@
       <link rel="stylesheet" href="/assets/css/sidebar.css">
       <!-- link to TOCbtn.css -->
       <link rel="stylesheet" href="/assets/css/TOCbtn.css">
-	  <!-- link to counter.css -->
+      <!-- link to counter.css -->
       <link rel="stylesheet" href="/assets/css/counter.css">
       <!--  -->
-	  {% include mermaid.html %}
+      {% include mermaid.html %}
    </head>
    <body>
       {% include topnav.html active="home"%}
@@ -46,23 +46,24 @@
                </div>
                <div id="info">
                   <div id="date">
-    					{% if page.edit %}
-                        <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
-                        <p><code>Edited</code>:  &nbsp; {{ page.Edit | date: '%B %d, %Y' }} </p>
-                        {% else %}
-                        <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
-                        {% endif %}
-						{% if page.status %}
-						<p><code>Status</code>:  &nbsp; <code >{{page.status}}</code></p>
-						{% endif %}
+                     {% if page.edit %}
+                     <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
+                     <p><code>Edited</code>:  &nbsp; {{ page.Edit | date: '%B %d, %Y' }} </p>
+                     {% else %}
+                     <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
+                     {% endif %}
+                     {% if page.status %}
+                     <p><code>Status</code>:  &nbsp; <code >{{page.status}}</code></p>
+                     {% endif %}
                   </div>
                   {% if site.tags != '' %}
                   <div id="tag-list">
-                        <p><code> Tags </code>:  &nbsp; [
+                     <p><code> Tags </code>:  &nbsp; [
                         {% for tag in page.tags %}
                         {% capture tag_name %}{{ tag }}{% endcapture %}
                         <code><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
-						{% endfor %}]</p>
+                        {% endfor %}]
+                     </p>
                   </div>
                   {% endif %}	
                </div>
@@ -71,15 +72,27 @@
                </div>
             </div>
             <hr>
-				<div id="content-container" style="text-align:justify">
-					{{ content }}			
-				</div>
-				<div id="comment-session">
-					 {% include commentit.html %}
-				</div>
-       </div>
-			</div>
-      
+            <div id="content-container" style="text-align:justify">
+               {{ content }}			
+            </div>
+            <div id="comment-session">
+               {% include commentit.html %}
+            </div>
+            <div class="newsletter-container">
+               <h4 class="newsletter-title">Subscribe</h4>
+               <form style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=ykliu', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+                  <p class="newsletter-text">Get new posts to your inbox</p>
+                  <p><input type="text" style="width:140px" name="email"/></p>
+                  <input type="hidden" value="ykliu" name="uri"/>
+                  <input type="hidden" name="loc" value="en_US"/>
+                  <input type="text" name="email" placeholder="name@example.com" />
+                  <input type="submit" value="Subscribe" />
+                  <p>Delivered by <a href="https://feedburner.google.com" target="_blank">FeedBurner</a></p>
+               </form>
+               </form>
+            </div>
+         </div>
+      </div>
    </body>
    {% include footer.html %} 
 </html>
