@@ -93,10 +93,6 @@ The basis' action on vector is denoted as $\d x^i (V)$.
     \omega (V) =\omega_i \d x ^ i (V) = \omega _i V ^ i 
     $$
 
-
-
-
-
 ## Musical Isomorphism
 
 If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
@@ -302,8 +298,6 @@ The Lorentz attractor can also be seen as a complicated manifold sprinkled with 
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif">
 
-
-
 #  One-forms
 
 ## Covector Revisited
@@ -435,10 +429,6 @@ The next steps would be
    \end{align*}
    $$
 
-
-
-
-
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -488,10 +478,6 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
-
-
-
-
 
 So far so good. 
 
