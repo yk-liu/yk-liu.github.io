@@ -356,10 +356,15 @@ sub,sup{
         width:80%
     }
 }
+.user-details{
+    text-align:center;
+    margin:5px auto;
+		width:30%;
+}
 .permlinks{
     margin:10px;
 		border-left:10%;
-    width:40%;
+    width:60%;
     text-align:left
 }
 .lower{
@@ -379,11 +384,6 @@ sub,sup{
         font-size:75px
     }
 }
-.user-details{
-    text-align:center;
-    margin:5px auto
-}
-
 @media only screen and (min-width:550px){
     .contents{
         margin-left:0;
