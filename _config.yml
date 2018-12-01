@@ -24,15 +24,15 @@ kramdown:
  
 highlighter: rouge
 
-links:
-  - title: Home
-    url: /
-    external: false
-    icon: home
-  - title: Repos
-    url: /repo
-  - title: Blogs
-    url: /blog
+# links:
+  # - title: Home
+    # url: /
+    # external: false
+    # icon: home
+  # - title: Repos
+    # url: /repo
+  # - title: Blogs
+    # url: /blog
     
 plugins:
   - jekyll-seo-tag
