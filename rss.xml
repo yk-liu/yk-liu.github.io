@@ -8,8 +8,8 @@ layout: null
  <title>{{site.title}}</title>
  <description>This is RSS feed for my website</description>
  <link href="{{site.url}}"/>
- <lastBuildDate>{{page.date | date_to_xmlschema }}</lastBuildDate>
- <pubDate>{{page.date | date_to_xmlschema }}</pubDate>
+ <lastBuildDate>{{site.time | date_to_xmlschema }}</lastBuildDate>
+ <pubDate>{{site.time | date_to_xmlschema }}</pubDate>
    <author>
     <name>{{site.author.name}}</name>
 		<email>{{site.author.email}}</email>
@@ -22,7 +22,7 @@ layout: null
 		<title>{{ post.title }}</title>
 		<description>{{ post.description }}</description>
 		<link href="{{site.url}}{{ post.url }}" />
-		<updated>{{ post.edit | date_to_xmlschema }}}}</updated>
+		<updated>{{ post.edit | date_to_xmlschema }}</updated>
 		<rights type="html"> &amp;copy; {{site.author.name}} </rights>
 	 </entry>
 	 {% endif %}
