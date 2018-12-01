@@ -9,7 +9,7 @@ layout: null
  <description>This is RSS feed for my website</description>
  <link>{{site.url}}</link>
  <lastBuildDate>{{page.date}}</lastBuildDate>
- <pubDate>{{page.date}</pubDate>
+ <pubDate>{{page.date}}</pubDate>
    <author>
     <name>{{site.author.name}}</name>
 		<email>{{site.author.email}}</email>
