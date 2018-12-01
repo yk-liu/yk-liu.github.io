@@ -5,7 +5,7 @@ categories: Topology
 tags: De-Rham-Cohomology Topology
 keywords: cohomology
 description: My study notes on cohomology, as a preparation for K-theory.
-status: writing
+status: Writing
 ---
 
 $$

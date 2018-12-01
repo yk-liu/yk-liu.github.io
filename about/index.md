@@ -22,7 +22,7 @@ Here is my [CV](https://yk-liu.github.io/about/CV-of-Liu-Yingkai.pdf) (last upda
 
 # This Site
 
-When I started writing on this website, I wanted to share notes on what I have learnt. I benefited a lot from many insightful blogs and now I have something to give back. Watching my notes published on websites also gives me motivation and a strange consolation. 
+When I started writing on this website, I wanted to share notes on what I have learned. I benefited a lot from many insightful blogs and now I have something to give back. Watching my notes published on websites also gives me motivation and a strange consolation. 
 
 I also realized that this website can be used as a billboard of my professional backgrounds. This is a great proof for what I have learned.
 
@@ -32,10 +32,13 @@ The posts are at different status.
 
 | Status    | Meaning                                                      |
 | --------- | ------------------------------------------------------------ |
-| Archived  | This post is outdated and I probably won't update it anymore. |
 | Completed | This post is considered completed, but I might edit it when I came up with something new. |
-| Paused    | This post is considered of low priority. I will come back to this post later. |
 | Writing   | This post is being actively edited.                          |
+| Paused    | This post is considered of low priority. I will come back to this post later. |
+| Archived  | This post is outdated and I probably won't update it anymore. |
+
+
+
 
 # Sources
 
@@ -62,7 +65,7 @@ I mainly use [Typora](https://www.typora.io) to write my post.
 
 # The Name
 
-I named this website "A Finger Pointing to the Moon", as in the Buddism story:
+I named this website "A Finger Pointing to the Moon", as in the Buddhism story:
 
 > **佛告阿难。汝等尚以缘心听法。此法亦缘。非得法性。**
 >

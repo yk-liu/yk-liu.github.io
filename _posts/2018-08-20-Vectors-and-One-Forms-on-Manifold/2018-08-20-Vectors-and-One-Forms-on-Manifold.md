@@ -5,7 +5,6 @@ categories: Topology
 tags: One-form Topology Vector
 keywords: one-form manifold Topology covector dual-space tangent-vector
 description: My interpretation on one-forms
-status: Writing
 ---
 
 $$
