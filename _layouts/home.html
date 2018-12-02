@@ -34,14 +34,19 @@
                <h2> Me and this website </h2>
                <p style="text-align: justify;"> &nbsp;&nbsp;&nbsp;&nbsp;I am a physics undergraduate at Nankai University. I use this open source website ( source code is <a href="https://github.com/yk-liu/yk-liu.github.io">here</a> ) to share my understanding of many theories I learned. The most recent notes are often in progress, for I like to keep a few projects running at the same time. You are always welcomed to comment on my posts for suggestion or discussion. Some of the old notes were written in Chinese. You can learn more at <a href="/about"> about page</a>. </p>
             </div>
+						<div class="analytics" >
+							{% include worldmap.html %}
+						</div>
+						
+						
             <div class="permlinks">
                <h2>Recent Posts</h2>
                <ul>
                   {% for post in site.posts limit:3 %}
                   <li>
-                     <a href="{{ post.url }}">{{ post.title }}</a> <i class="fas fa-angle-double-right"></i>&nbsp;{{ post.date | date_to_string }} <br>
+                     <a href="{{ post.url }}">{{ post.title }}</a> <i class="fas fa-angle-double-right" aria-hidden="true"></i>&nbsp;{{ post.date | date_to_string }} <br>
                      {% if post.description %}
-                     <dd style="text-align: justify"><i class="fas fa-caret-right"></i>&nbsp;{{ post.description }}
+                     <dd style="text-align: justify"><i class="fas fa-caret-right" aria-hidden="true"></i>&nbsp;{{ post.description }}
                      </dd>
                      {% endif %}
                   </li>
@@ -49,10 +54,10 @@
                </ul>
                <h2>Upcoming Posts</h2>
                <ul>
-							    <li>Majorana Braiding</li>
+                  <li>Majorana Braiding</li>
                   <li>Connections on fiber bundles</li>
-									<li>Berry phase case study</li>
-									<li>K-theory Study Notes</li>
+                  <li>Berry phase case study</li>
+                  <li>K-theory Study Notes</li>
                </ul>
             </div >
          </div >
