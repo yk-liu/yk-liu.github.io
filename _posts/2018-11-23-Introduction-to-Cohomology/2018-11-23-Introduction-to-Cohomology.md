@@ -56,11 +56,16 @@ You can check my previous notes on [homology](https://yk-liu.github.io/blog/Intr
 
 # Body and Boundary
 
-Given a vector space $V$, a space of wedge product can be constructed as
+The cohomology is a relationship defined on
 
+# Chains
+
+Given a vector space $V$, a space of wedge product can be constructed as
 $$
 \wedge ^2 V = \set{ \vec u\wedge \vec v  {\mid}  \vec u,\vec v \in V  }\\
 \wedge ^3 V = \set{ \vec u\wedge \vec v \wedge \vec w {\mid} \vec u,\vec v,\vec w \in V  }\\
 \wedge ^n V = \set{ \vec u _ 1\wedge\vec u _ 2 \wedge\cdots\wedge \vec u _ n {\mid} \vec u _ i\in V ,i=1,2,\cdots,n }
 $$
+
+This is the Chain.
 
