@@ -15,18 +15,7 @@ h1{
     font-size:2em;
     margin:.67em 0
 }
-figure{
-    margin:1em 40px
-}
-hr{
-    box-sizing:content-box;
-    height:0;
-    overflow:visible
-}
-kbd,samp{
-    font-family:monospace;
-    font-size:1em
-}
+
 a{
     background-color:transparent;
     -webkit-text-decoration-skip:objects
@@ -38,53 +27,17 @@ div.lower a{
     padding: 0px 2px;
 }
 
-
-abbr[title]{
-    border-bottom:none;
-    text-decoration:underline dotted
-}
 b,strong{
     font-weight:bolder
 }
 dfn{
     font-style:italic
 }
-mark{
-    background-color:#ff0;
-    color:#000
-}
+
 small{
     font-size:80%
 }
-sub,sup{
-    font-size:75%;
-    line-height:0;
-    position:relative;
-    vertical-align:baseline
-}
-sub{
-    bottom:-.25em
-}
-sup{
-    top:-.5em
-}
-audio,canvas,video{
-    display:inline-block
-}
 
-canvas {
-	position: absolute;
-    top: 0;
-    z-index: 0;
-}
-
-audio:not([controls]){
-    display:none;
-    height:0
-}
-img{
-    border-style:none
-}
 svg:not(:root){
     overflow:hidden
 }
@@ -94,61 +47,13 @@ button,input,optgroup,select,textarea{
     line-height:1.15;
     margin:0
 }
-button,input{
-    overflow:visible
-}
-button,select{
-    text-transform:none
-}
-[type=reset],[type=submit],button,html [type=button]{
-    -webkit-appearance:button
-}
-[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{
-    border-style:none;
-    padding:0
-}
-[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{
-    outline:1px dotted ButtonText
-}
+
 fieldset{
     padding:.35em .75em .625em
 }
-legend{
-    color:inherit;
-    display:table;
-    max-width:100%;
-    white-space:normal
-}
-progress{
-    display:inline-block;
-    vertical-align:baseline
-}
+
 textarea{
     overflow:auto
-}
-[type=checkbox],[type=radio],legend{
-    box-sizing:border-box;
-    padding:0
-}
-[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{
-    height:auto
-}
-[type=search]{
-    -webkit-appearance:textfield;
-    outline-offset:-2px
-}
-[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{
-    -webkit-appearance:none
-}
-::-webkit-file-upload-button{
-    -webkit-appearance:button;
-    font:inherit
-}
-summary{
-    display:list-item
-}
-[hidden],template{
-    display:none
 }
 
 body{
@@ -380,56 +285,18 @@ sub,sup{
 		font-size: 1.2rem;
     font-weight: 600;
 }
-@media only screen and (min-width:550px){
-    .lower{
-        flex-wrap:nowrap;
-        font-size:75px
-    }
+
+@media screen and (max-width: 800px) {
+  .user-details, .permlinks {
+    width: 100%; 
+  }
+	.lower{
+		flex-wrap:nowrap;
+		font-size:75px
 }
-@media only screen and (min-width:550px){
-    .contents{
-        margin-left:0;
-        width:48%
-    }
-    .contents-right{
-        margin-top:-5%
-    }
-    .contents-right,.images-right{
-        float:right;
-        width:48%
-    }
-    .images-right img{
-        float:right
-    }
-    .images-left{
-        float:left;
-        width:48%
-    }
-    .images-left img{
-        float:left
-    }
 }
-.project-link{
-    display:block;
-    width:100px;
-    margin:10px 0;
-    padding:5px;
-    color:#1a222c;
-    background-color:transparent;
-    border:1px solid #1a222c;
-    border-radius:10px;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    cursor:pointer;
-    transition:color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out
-}
-.project-link:active,.project-link:hover{
-    background-color:#54516a;
-    border-color:#54516a;
-    color:white;
-    transition:color .3s ease-in,background-color .3s ease-in,border-color .3s ease-in
-}
+
+
 .footer{
     background:#1a222c;
     padding:10px 0;
