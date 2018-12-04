@@ -22,6 +22,10 @@
     font-size: 17px;
 }
 
+.topnav .icon {
+  display: none;
+}
+
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #ddd;
