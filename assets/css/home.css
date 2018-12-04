@@ -291,7 +291,6 @@ sub,sup{
     width: 100%; 
   }
 	.lower{
-		flex-wrap:nowrap;
 		font-size:75px
 }
 }
