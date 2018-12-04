@@ -286,7 +286,7 @@ sub,sup{
     font-weight: 600;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .user-details, .permlinks {
     width: 100%; 
   }
