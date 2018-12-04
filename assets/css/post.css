@@ -3,4 +3,12 @@
     width: 95%; 
 		font-size:50%;
   }
+	.container {
+		
 }
+}
+.container {
+	margin-right: 3%;
+	padding: 50px
+}
+
