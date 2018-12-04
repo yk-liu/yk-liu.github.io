@@ -23,7 +23,8 @@
 		margin-right:1%;
 	}
 	#frontmatter{
-	line-height: 1.2rem
+	line-height: 1.1rem;
+	page-break-inside: avoid;
 	}
 	body{
 		width: 100%;
