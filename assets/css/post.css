@@ -4,6 +4,10 @@
 	padding: 50px
 }
 
+#frontmatter{
+	line-height: 0.8
+	}
+
 @media screen and (max-width: 500px) {
   .content-container, .comment-session{
     width: 95%; 
@@ -17,6 +21,9 @@
 		padding: 0px;
 		margin-left: 1%;
 		margin-right:1%;
+	}
+	#frontmatter{
+	line-height: 1.2rem
 	}
 	body{
 	 line-height: 1.2rem;
