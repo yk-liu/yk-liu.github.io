@@ -3,7 +3,7 @@
   position: fixed;
   top: 60px;
   right: 30px;
-  z-index: 3;
+  z-index: 2;
   font-size: 18px;
   border: none;
   outline: none;
@@ -24,7 +24,7 @@
   position: fixed;
   top: 60px;
   right: 0;
-  z-index: 3;
+  z-index: 2;
   font-size: 12px;
   border: none;
   outline: none;
