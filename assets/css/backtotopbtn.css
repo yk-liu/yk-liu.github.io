@@ -18,6 +18,9 @@
   background-color: #1a222c;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 300px) {
+	#BackToTop {
 	font-size: 12px;
+	padding: 5px;
+	}
 	}

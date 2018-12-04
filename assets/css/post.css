@@ -8,7 +8,7 @@
 	line-height: 0.8
 	}
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 300px) {
   .content-container, .comment-session{
     width: 95%; 
 		font-size:50%;

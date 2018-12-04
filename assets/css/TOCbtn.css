@@ -26,12 +26,6 @@
   right: 0;
   z-index: 2;
   font-size: 12px;
-  border: none;
-  outline: none;
-  background-color: #42b983;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+  padding: 5px;
 }
 }
