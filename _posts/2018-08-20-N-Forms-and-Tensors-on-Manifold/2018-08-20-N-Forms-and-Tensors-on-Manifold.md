@@ -165,4 +165,10 @@ The real significance of $2$-forms will come later when we do surface integrals.
 
 ## Exterior derivative
 
-The exterior derivative can be applied to vectors as well.
+The exterior derivative can be applied to vectors as well. The formula reads
+$$
+ \begin{align*}
+ \d(V)&=\d( V^\mu \Partial{}{x^\mu})\\
+ &=
+ \end{align*}
+$$
