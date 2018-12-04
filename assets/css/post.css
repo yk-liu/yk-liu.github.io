@@ -7,8 +7,13 @@
 	margin-right: 3%;
 	padding: 10px
 }
-  .main{
-		padding: 0px
+  #main{
+		padding: 0px;
+		margin-left: 1%;
+		margin-right:1%;
+	}
+	body{
+	 line-height: 1.2rem;
 	}
 }
 .container {
