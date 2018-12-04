@@ -39,15 +39,17 @@ $$
 \notag
 $$
 
-# Wedge Product
+# N-Forms
+
+## Wedge Product
 
 A two-form is can be seen as a "product" of two one-forms.
 
-## Wedge Product of General Vectors
+### Wedge Product of General Vectors
 
 The cross product of vectors $U \times V$ is a very useful operation in $3$ dimensional geometry. It determines the area of the **parallelogram** containing these vectors and the plane containing it. A **wedge product** is the analogue used to determine a high dimensional parallelograms.
 
-The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product. 
+The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product (although we have't defined it). 
 
 $$
 V^{\mu _ 1} \wedge V^{\mu _ 2} \wedge. . .\wedge V^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) V^{\mu _ {P(1)}} \otimes V^{\mu _ {P(2)}}\otimes \cdots\otimes V^{\mu  _ {P(r)}} \label{wedgeDef}
@@ -115,7 +117,7 @@ $$
 >
 >    There is more to it. While $\vec{u} \wedge \vec{v} \wedge \vec{w}$ is a simple construction of three vectors, it is also a wedge product of vector and yet a wedge product $\vec{u} \wedge (\vec{v} \wedge \vec{w})$. The volume of the parallelepiped ($3$-dimensional area) is now the span of a vector and an parallelogram ($2$-dimensional area). Similarly, a $(n+m)$-dimensional area can be spanned by a $n$-dimensional area and $m​$-dimensional area.
 
-## Wedge Product of One-Forms
+### Wedge Product of One-Forms
 
 Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
 
@@ -128,7 +130,7 @@ $$
 \end{align}
 $$
 
-# Exterior Derivative
+## Exterior Derivative
 
 Another way to see a two-form is that it's a second derivative of something. So take the "derivative" of a $1$-form (first derivative) should result in a $2$-form. This procedure is called a **exterior derivative**. This operation is denoted using again the symbol $\d$.
 
@@ -158,3 +160,9 @@ Thus the exterior derivative of a $p$-form is a $(p+1)$-form.
 A $2$-form is an expression built using wedge products of pairs of $1$-forms. 
 
 The real significance of $2$-forms will come later when we do surface integrals. A $2$-form will be an expression that can be integrated over a surface in the same way that a $1$-form can be integrated over a curve.
+
+# Tensors
+
+## Exterior derivative
+
+The exterior derivative can be applied to vectors as well.
