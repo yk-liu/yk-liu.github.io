@@ -42,6 +42,11 @@
 			z-index: 1;
 		}
     .sidenav a {font-size: 18px;}
+		#main {
+    padding: 1px;
+    margin-left : 1%;
+    margin-right : 1%;
+}
 }
 
 
