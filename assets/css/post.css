@@ -1,3 +1,9 @@
+
+.container {
+	margin-right: 3%;
+	padding: 50px
+}
+
 @media screen and (max-width: 500px) {
   .content-container, .comment-session{
     width: 95%; 
@@ -16,8 +22,5 @@
 	 line-height: 1.2rem;
 	}
 }
-.container {
-	margin-right: 3%;
-	padding: 50px
-}
+
 
