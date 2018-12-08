@@ -21,7 +21,6 @@
       {% include mermaid.html %}
    </head>
    <body>
-      {% include topnav.html active="home"%}
 
 			<button onclick="ToggleTOC()" id="TOCBtn" title="Toggle ToC">&#9776; TOC </button>
 			 {% include backtotop.html %}
@@ -31,7 +30,7 @@
 				<span class="sidenav-switch" id="toc-toggle" tabindex="0">TOC</span>
 				<span class="sidenav-switch" id="nav-toggle" tabindex="1">NAV</span>
 			
-				{% include sidenav.html html=content %}
+				{% include sidenav.html %}
 				
 				{% if page.toc %}
 				<div class='toc-container'>
