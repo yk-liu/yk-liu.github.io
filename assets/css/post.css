@@ -280,28 +280,32 @@ a.sidebar-nav-item:focus {
   display: none;
 }
 
-#toc-toggle:focus~.sidebar-nav {
+.toc {
+  display: block;
+}
+
+.sidebar-nav {
   display: none;
 } 
-#toc-toggle:focus~.toc {
-  display: block;
-}
 
-.toc{
-	display: block
-}
-
-#toc-toggle:focus~.sidebar-nav {
+#toc-toggle:active~.sidebar-nav {
   display: none;
 } 
-#toc-toggle:focus~.toc {
+#toc-toggle:active~.toc {
   display: block;
 }
 
-#nav-toggle:focus~.sidebar-nav {
+#toc-toggle:active~.sidebar-nav {
+  display: none;
+} 
+#toc-toggle:active~.toc {
+  display: block;
+}
+
+#nav-toggle:active~.sidebar-nav {
   display: block;
 } 
-#nav-toggle:focus~.toc {
+#nav-toggle:active~.toc {
   display: none;
 }
 
