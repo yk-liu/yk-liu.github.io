@@ -168,18 +168,6 @@ a.sidebar-nav-item:focus {
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 
-@media (min-width: 30.1rem) {
-  .sidebar-toggle {
-    position: fixed;
-    width: 2.25rem;
-  }
-  .sidebar-toggle:before {
-    padding-bottom: .15rem;
-    border-top-width: .45rem;
-    border-bottom-width: .15rem;
-  }
-}
-
 
 /* Slide effect
  *
@@ -195,7 +183,8 @@ a.sidebar-nav-item:focus {
  */
 
 .wrap,
-.sidebar{
+.sidebar
+.sidebar-checkbox{
   -webkit-backface-visibility: hidden;
       -ms-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -203,6 +192,12 @@ a.sidebar-nav-item:focus {
 .wrap{
   -webkit-transition: -webkit-transform .3s ease-in-out;
           transition: transform .3s ease-in-out;
+}
+
+#sidebar-checkbox:focus{
+	-webkit-transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
 }
 
 #sidebar-checkbox:focus + .sidebar {
