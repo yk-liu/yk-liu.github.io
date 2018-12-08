@@ -44,7 +44,6 @@ body {
  */
  .container {
 	margin-right: 3%;
-	padding: 50px
 }
 
 #frontmatter{
@@ -56,18 +55,19 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
+
 @media (min-width: 38rem) {
   .container {
     max-width: 32rem;
-			margin-left:auto;
-	margin-right:auto;
+		margin-left:auto;
+		margin-right:auto;
   }
 }
 @media (min-width: 56rem) {
   .container {
     max-width: 38rem;
-			margin-left:auto;
-	margin-right:auto;
+		margin-left:auto;
+		margin-right:auto;
   }
 }
 
@@ -181,17 +181,23 @@ a.sidebar-nav-item:focus {
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
-  position: absolute;
+  position: fixed;
   top:  1rem;
   left: 1rem;
   display: block;
   width: 2.2rem;
   padding: .5rem .65rem;
-  color: #505050;
-  background-color: #fff;
+  color: #1a222c;
+  background-color: white;
   border-radius: 4px;
   cursor: pointer;
+	z-index: 2;
 }
+
+.sidebar-toggle:hover {
+  background-color: #42b983;
+}
+
 .sidebar-toggle:before {
   display: block;
   content: "";
