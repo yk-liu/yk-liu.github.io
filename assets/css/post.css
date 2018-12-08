@@ -44,19 +44,25 @@ body {
  * Center the page content.
  */
 
-/* .container { */
-  /* max-width: 28rem; */
-/* } */
-/* @media (min-width: 38rem) { */
-  /* .container { */
-    /* max-width: 32rem; */
-  /* } */
-/* } */
-/* @media (min-width: 56rem) { */
-  /* .container { */
-    /* max-width: 38rem; */
-  /* } */
-/* } */
+.container {
+  width: 90%;
+	margin-left:auto;
+	margin-right:auto;
+}
+@media (min-width: 38rem) {
+  .container {
+    max-width: 32rem;
+			margin-left:auto;
+	margin-right:auto;
+  }
+}
+@media (min-width: 56rem) {
+  .container {
+    max-width: 38rem;
+			margin-left:auto;
+	margin-right:auto;
+  }
+}
 
 
 /*
