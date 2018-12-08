@@ -261,13 +261,17 @@ a.sidebar-nav-item:focus {
           transform: translateX(14rem);
 }
 
+/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+.sidebar-checkbox {
+  display: none;
+}
+
 #toc-toggle:focus~.sidebar-nav {
   display: none;
 } 
 #toc-toggle:focus~.toc {
   display: block;
 }
-
 
 .toc{
 	display: block
