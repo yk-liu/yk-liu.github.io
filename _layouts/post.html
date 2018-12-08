@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <base >
       {% include head.html %}  
       {% include mathjax.html %}
       {% include theme-vue.html%}
@@ -23,70 +22,37 @@
    </head>
    <body>
       {% include topnav.html active="home"%}
-      {% if page.toc %}
+
 			<button onclick="ToggleTOC()" id="TOCBtn" title="Toggle ToC">&#9776; TOC </button>
 			 {% include backtotop.html %}
 			<!-- this is side bar -->
-      <div id="mySidenav" class="sidenav" style="display: none;">
-         <div class='toc-container'>
-            {% include toc.html html=content %}
-            <p style="line-height: 1500%;">
-               <br> <!-- walk around to make bottom toc visible -->
-            </p>
-         </div>
-      </div>
-      {% endif %}
+			<div class="sidebar" id="sidebar">
+
+				<span class="sidenav-switch" id="toc-toggle" tabindex="0">TOC</span>
+				<span class="sidenav-switch" id="nav-toggle" tabindex="1">NAV</span>
+			
+				{% include sidenav.html html=content %}
+				
+				{% if page.toc %}
+				<div class='toc-container'>
+					{% include toc.html html=content %}
+				</div>
+				{% endif %}
+		</div>
+
       <!-- Add all page content inside this div if you want the side nav to push page content to the right
          (not used if you only want the sidenav to sit on top of the page -->
-      <div id="main">
-         <div class="container">
-            <div id="front-matter" >
-               <div id="title">
-                  <h1>
-                     {{page.title}}
-                  </h1>
-               </div>
-               <div id="info">
-                  <div id="date">
-                     {% if page.edit %}
-                     <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
-                     <p><code>Edited</code>:  &nbsp; {{ page.edit | date: '%B %d, %Y' }} </p>
-                     {% else %}
-                     <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
-                     {% endif %}
-                     {% if page.status %}
-                     <p><code>Status</code>:  &nbsp; <code >{{page.status}}</code></p>
-                     {% endif %}
-                  </div>
-                  {% if site.tags != '' %}
-                  <div id="tag-list">
-                     <p><code> Tags </code>:  &nbsp; 
-                        {% for tag in page.tags %}
-                        {% capture tag_name %}{{ tag }}{% endcapture %}
-                        <code><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
-                        {% endfor %}
-                     </p>
-                  </div>
-                  {% endif %}	
-									{% if site.categories != '' %}
-                  <div id="category-list">
-                     <p><code> Categories </code>:  &nbsp;
-                        {% for category in page.categories %}
-                        {% capture category_name %}{{ category }}{% endcapture %}
-                        <code><a href="/blog/categories#{{ category_name }}" target="_blank">{{ category_name }}</a></code>
-                        {% endfor %}
-                     </p>
-                  </div>
-                  {% endif %}	
-               </div>
-               <div id="info" >
-                  <p><code>Fonts</code>: &nbsp; {% include fontAdj.html %}</p>
-               </div>
-            </div>
+				     <div class="wrap">
+<div class="container content">
+        <div class="page">
+						{% include frontmatter.html %}
+						
             <hr>
+						
             <div id="content-container" style="text-align:justify">
                {{ content }}			
             </div>
+						
             <div id="comment-session">
                {% include commentit.html %}
             </div>
@@ -94,6 +60,7 @@
          </div>
       </div>
    </body>
+	     </div>
 
    {% include footer.html %} 
 </html>
