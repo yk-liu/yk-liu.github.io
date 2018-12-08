@@ -43,6 +43,14 @@ body {
  *
  * Center the page content.
  */
+ .container {
+	margin-right: 3%;
+	padding: 50px
+}
+
+#frontmatter{
+	line-height: 0.8
+	}
 
 .container {
   width: 90%;
