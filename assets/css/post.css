@@ -229,6 +229,15 @@ a.sidebar-nav-item:focus {
   }
 }
 
+.sidenav-switch {
+	background-color: #4CAF50;
+	display: inline block;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+	font-size: 1.2 rem;
+}
+
 /* Slide effect
  *
  * Handle the sliding effects of the sidebar and content in one spot, seperate
