@@ -291,10 +291,6 @@ a.sidebar-nav-item:focus {
 	display: block
 }
 
-.sidebar-nav{
-	display: none
-}
-
 #toc-toggle:focus~.sidebar-nav {
   display: none;
 } 
