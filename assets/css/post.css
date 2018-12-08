@@ -166,11 +166,6 @@ a.sidebar-nav-item:focus {
   }
 }
 
-/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
-.sidebar-checkbox {
-  display: none;
-}
-
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 /* .sidebar-toggle { */
   /* position: absolute; */
