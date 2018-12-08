@@ -29,12 +29,14 @@
 
 				<span class="sidenav-switch" id="toc-toggle" tabindex="0">TOC</span>
 				<span class="sidenav-switch" id="nav-toggle" tabindex="1">NAV</span>
-			
+			<nav class="sidebar-nav">
 				{% include sidenav.html %}
-				
+			</nav>	
 				{% if page.toc %}
-				<div class='toc-container'>
-					{% include toc.html html=content %}
+				<div class="sidebar-nav" id="toc">
+					<div class='toc-container'>
+						{% include toc.html html=content %}
+					</div>
 				</div>
 				{% endif %}
 		</div>
