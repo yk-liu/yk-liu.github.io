@@ -389,10 +389,10 @@ hr {
 }
 
 @media screen and (min-width: 914px) {
-    /*body {
+    body {
         width: 854px;
         margin: 0 auto;
-    }*/
+    }
 }
 
 @media print {
@@ -420,7 +420,7 @@ hr {
     color: inherit;
 }
 
-#main img {
+.wrap img {
     display: block;
     margin-left: auto;
     margin-right: auto;
