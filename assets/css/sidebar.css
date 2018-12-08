@@ -27,6 +27,22 @@
     color: #f1f1f1;
 }
 
+/* side bar counter */
+ol {
+  counter-reset: section;                /* Creates a new instance of the
+                                            section counter with each ol
+                                            element */
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: section;            /* Increments only this instance
+                                            of the section counter */
+  content: counters(section, ".") " ";   /* Combines the values of all instances
+                                            of the section counter, separated
+                                            by a period */
+}
+
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
