@@ -210,6 +210,14 @@ a.sidebar-nav-item:focus {
           transform: translateX(14rem);
 }
 
+.toc{
+	display: block
+}
+
+.sidebar-nav{
+	display: none
+}
+
 #toc-toggle:focus~.sidebar-nav {
   display: none;
 } 
@@ -217,7 +225,12 @@ a.sidebar-nav-item:focus {
   display: block;
 }
 
-
+#nav-toggle:focus~.sidebar-nav {
+  display: block;
+} 
+#nav-toggle:focus~.toc {
+  display: none;
+}
 
 /*
  * Posts and pages
