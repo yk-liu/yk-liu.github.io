@@ -132,10 +132,6 @@ body {
 }
 
 /* Sidebar content */
-/* .sidebar a { */
-  /* font-weight: normal; */
-  /* color: #fff; */
-/* } */
 .sidebar-item {
   padding: 1rem;
 }
@@ -176,37 +172,36 @@ a.sidebar-nav-item:focus {
 }
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
-.sidebar-toggle {
-  position: absolute;
-  top:  1rem;
-  left: 1rem;
-  display: block;
-  width: 2.2rem;
-  padding: .5rem .65rem;
-  color: #505050;
-  background-color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.sidebar-toggle:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-bottom: .125rem;
-  border-top: .375rem double;
-  border-bottom: .125rem solid;
+/* .sidebar-toggle { */
+  /* position: absolute; */
+  /* top:  1rem; */
+  /* left: 1rem; */
+  /* display: block; */
+  /* width: 2.2rem; */
+  /* padding: .5rem .65rem; */
+  /* color: #505050; */
+  /* background-color: #fff; */
+  /* border-radius: 4px; */
+  /* cursor: pointer; */
+/* } */
+/* .sidebar-toggle:before { */
+  /* display: block; */
+  /* content: ""; */
+  /* width: 100%; */
+  /* padding-bottom: .125rem; */
+  /* border-top: .375rem double; */
+  /* border-bottom: .125rem solid; */
 
-  /* Make the border inside the box */
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
+  /* -webkit-box-sizing: border-box; */
+     /* -moz-box-sizing: border-box; */
+          /* box-sizing: border-box; */
+/* } */
 
-.sidebar-toggle:active,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: #fff;
-  background-color: #505050;
-}
+/* .sidebar-toggle:active, */
+/* #sidebar-checkbox:checked ~ .sidebar-toggle { */
+  /* color: #fff; */
+  /* background-color: #505050; */
+/* } */
 
 @media (min-width: 30.1rem) {
   .sidebar-toggle {
@@ -235,24 +230,21 @@ a.sidebar-nav-item:focus {
  */
 
 .wrap,
-.sidebar,
-.sidebar-toggle {
+.sidebar{
   -webkit-backface-visibility: hidden;
       -ms-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-.wrap,
-.sidebar-toggle {
+.wrap{
   -webkit-transition: -webkit-transform .3s ease-in-out;
           transition: transform .3s ease-in-out;
 }
 
-#sidebar-checkbox:checked + .sidebar {
+#sidebar-checkbox:focus + .sidebar {
   visibility: visible;
 }
-#sidebar-checkbox:checked ~ .sidebar,
-#sidebar-checkbox:checked ~ .wrap,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
+#sidebar-checkbox:focus ~ .sidebar,
+#sidebar-checkbox:focus ~ .wrap {
   -webkit-transform: translateX(14rem);
       -ms-transform: translateX(14rem);
           transform: translateX(14rem);
