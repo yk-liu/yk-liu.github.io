@@ -25,12 +25,12 @@
 			<!-- <button onclick="ToggleTOC()" id="TOCBtn" title="Toggle ToC">&#9776; TOC </button> -->
 			 <!-- {% include backtotop.html %} -->
 			 
-			 <span class="sidebar-checkbox" id="sidebar-checkbox"><i class="fas fa-bars"></i></span>
+			 <span class="sidebar-checkbox" id="sidebar-checkbox" tabindex="1"><i class="fas fa-bars"></i></span>
 			<!-- this is side bar -->
 			<div class="sidebar" id="sidebar">
 
-				<span class="sidenav-switch" id="toc-toggle" tabindex="0">TOC</span>
-				<span class="sidenav-switch" id="nav-toggle" tabindex="1">NAV</span>
+				<span class="sidenav-switch" id="toc-toggle" tabindex="2">TOC</span>
+				<span class="sidenav-switch" id="nav-toggle" tabindex="3">NAV</span>
 			<nav class="sidebar-nav">
 				{% include sidenav.html %}
 			</nav>	
