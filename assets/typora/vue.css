@@ -388,13 +388,6 @@ hr {
     box-sizing: content-box;
 }
 
-@media screen and (min-width: 914px) {
-    body {
-        width: 854px;
-        margin: 0 auto;
-    }
-}
-
 @media print {
     html {
         font-size: 13px;
