@@ -66,7 +66,6 @@ U \wedge V  \wedge W &= U \otimes V  \otimes W + W \otimes U \otimes V  + V  \ot
 $$
 
 [[John](https://www.av8n.com/physics/area-volume.pdf)] There is a **norm** for a wedge product (seen as a bi-vector, tri-vector, or $n$-vector) defined as 
-
 $$
 \begin{align}
 \norm{A \wedge B}^2&\dfdas(A \wedge B)\cdot(B \wedge A)\notag\\
