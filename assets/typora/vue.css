@@ -12,8 +12,7 @@ html {
 }
 
 body {
-	font-family: 'Source Sans Pro', sans-serif;
-    /* font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important; */
+		font-family: 'Source Sans Pro', sans-serif !important;
     color: #34495e;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6rem;
@@ -374,10 +373,6 @@ table tr td:last-child {
     margin-bottom: 0;
 }
 
-.md-task-list-item>input {
-    margin-left: -1.3em;
-}
-
 hr {
     height: 2px;
     padding: 0;
@@ -399,18 +394,6 @@ hr {
     pre {
         word-wrap: break-word;
     }
-}
-
-.md-fences {
-    background-color: #f8f8f8;
-}
-
-.mathjax-block>.code-tooltip {
-    bottom: .375rem;
-}
-
-.md-tag {
-    color: inherit;
 }
 
 .wrap img {
