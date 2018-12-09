@@ -55,4 +55,4 @@ ssserver -c /etc/shadowsocks.json -d start
 ssserver -c /etc/shadowsocks.json -d stop
 ```
 
-(referal link](https://m.do.co/c/f9c641f35d87): Everyone uses this link gets $100 in credit over 60 days. 
+[referal link](https://m.do.co/c/f9c641f35d87): Everyone uses this link gets $100 in credit over 60 days. 
