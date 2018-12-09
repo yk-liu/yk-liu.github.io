@@ -133,7 +133,8 @@ body {
   visibility: hidden;
   overflow-y: auto;
   font-size: .875rem; /* 15px */
-  background-color: #202020;
+  background-color: #1a222c;
+	color:white;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
@@ -198,7 +199,6 @@ a.sidebar-nav-item:focus {
 }
 
 .sidebar-toggle:before {
-	position: fixed;
   display: block;
   content: "";
   width: 100%;
@@ -229,6 +229,28 @@ a.sidebar-nav-item:focus {
     border-bottom-width: .15rem;
   }
 }
+
+/* side bar counter */
+ol {
+  counter-reset: section;                /* Creates a new instance of the
+                                            section counter with each ol
+                                            element */
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: section;            /* Increments only this instance
+                                            of the section counter */
+  content: counters(section, ".") " ";   /* Combines the values of all instances
+                                            of the section counter, separated
+                                            by a period */
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
 
 /* Slide effect
  *
