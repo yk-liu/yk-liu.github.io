@@ -94,6 +94,15 @@ The basis' action on vector is denoted as $\d x^i (V)$.
     $$
 
 
+
+
+
+
+
+
+
+
+
 ## Musical Isomorphism
 
 If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
@@ -198,11 +207,17 @@ But this requires embedding the manifold in some higher dimensional space, which
 
 *After I have finished writing this section, I stumbled on* [[A. Mishchenko and A. Fomenko's book](https://archive.org/details/MishchenkoFomenkoACourseOfDifferentialGeometryAndTopology)] *and they really excelled at introducing the vectors in a natural way. You should check it out.*
 
-**The word "tangent" cries for taking derivatives**. Besides, the naïve vector-as-arrow picture lacks necessary algebraic tools to perform calculations with.
+### The Short Answer
 
-Still, the problem is that vectors do not live on the manifold. This forbids us defining "what is vector" using vocabularies from manifold, only allowing us to tell "what is in one-to-one correspondence with vector". So what can we identify with vector? The answer is a (differential) operator. 
+Most of the textbooks just tell you to assign to each vector $V=V^\mu\uvec e_\mu$ an operator $\op V=V^\mu \Partial{}{x^\mu}$ . This makes writers happier for there is no further explanation needed - it's just a definition.
 
->  Let's start with a concrete example: a curved surface $\vec r(x,y,z) = Const$ embedded in $\R^3$. We are going to use this manifold in the context of $3$-d geometry as a tool to gain some intuition. 
+### How they came up with it?
+
+Of all the things on a manifold, why did mathematicians chose differential operators?
+
+**Because the word "tangent" cries for taking derivatives**.
+
+>  Let's start with a concrete example: a curved surface $\Sigma :\vec r(x,y,z) = Const$ embedded in $\R^3$. We are going to use this manifold in the context of spacial geometry as a tool to gain some intuition. 
 >
 >  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-One-Forms-on-Manifold/assets/drawing-tangent-vector-as-operator.png" width="90%">
 >
@@ -238,13 +253,12 @@ Still, the problem is that vectors do not live on the manifold. This forbids us 
 
 By far, $\Eqn{vectorToOperator}$ means any operator has a component form using differential operators. $\Eqn{operator _ basis}$ means the partial differential operators act like unit vectors or bases of the space of operators. There is nothing we don't already know about differential operators. 
 
-What the above example provides us is a way to assign a differential operator for each vector, which is simply a map: $V\rightarrow \op{v} =V\cdot\nabla$.
+What is interesting is how differential operators resemble vectors. They have everything a vector has, namely closedness under linear combinations. From the above example we can justify that a simple map: $V\rightarrow \op{V} =V\cdot\vec\nabla$ will keep all the properties a vector has, with additional necessary algebraic tools to perform calculations with. 
 
-> **Theorem:** The directional derivative of a function defined on the manifold $f(t)$ along the vector $V$ (i.e. tangent vector at $t _ 0$ along the curve $\Gamma(t)$) is the differential operator $\op{v}$ acting on $f$.
->
+> **Theorem:** The directional derivative of a function defined on the manifold $f(t)$ along the vector $V$ (i.e. tangent vector at $t _ 0$ along the curve $\Gamma(t)$) is the differential operator $\op{V}$ acting on $f$.
 > $$
 > \begin{align}
-> \op{v}(f)&\dfdas\nabla _ {V}f(t)\notag\\
+> \op{V}(f)&\dfdas\nabla _ {V}f(t)\notag\\
 > &=\lim _ {t\rightarrow 0}{\frac{f(\gamma(t))-f(\gamma(0))}{t}}\notag\\
 > &=\lim _ {t\rightarrow 0}{\frac{f(\vec x _ 0+tV)-f(\vec x _ 0)}{t}}\notag\\
 > \label{vector-as-directional-derivative}
@@ -255,7 +269,7 @@ What the above example provides us is a way to assign a differential operator fo
 >
 > $$
 > \begin{align*}
-> \op v (f) &=\left.\D{}{t}f(\Gamma(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
+> \op V (f) &=\left.\D{}{t}f(\Gamma(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 > &=\left.\D{}{t}f(x^1(t),\cdots,x^n(t))\right\vert _ {\substack{t=t _ 0,\\\text{along }\vec{v}}}\\
 > &=\sum _ {i=1}^{n}{\dot{x }^i(t _ 0)\Partial{f}{x_i}}\\
 > \text{notice that } &V =(\dot x^1(t),\cdots,\dot x^n(t)),\vec \nabla f =(\Partial{f}{x_1},\cdots,\Partial{f}{x_n}) \\
@@ -323,115 +337,125 @@ $$
 \op{v}(f)\dfdas \nabla _ {V}f(t)\in \R.
 $$
 
-We can also say that **a function can somehow act on a vector** and gives the directional derivative of the function. Simply by playing with definitions, we obtain a natural **definition of covectors** on manifold. To emphasis our definition of covector, we denote such functions as $\form f$. This is written as
+We can also say that **a function can somehow act on a vector** and gives the directional derivative of the function. 
 
+Simply by playing with definitions, we obtain a natural **definition of covectors** on manifold. To emphasis that, we denote such functions as $\form f$. This is written as
 $$
 \form f(V)\dfdas\hat v(f) = \nabla _ V f(t)\in \R.
 $$
 
-The next steps would be 
+Here are the steps to find the expression for one form $\form f$.
 
-1. To prove the $\form f$ in the above definition form a vector space, i.e., they themselves are vectors. 
+> 1. To prove the $\form f$ in the above definition form a vector space, i.e., they themselves are vectors. 
+>
+>    This can be verified as following:
+>
+>    $$
+>    \begin{align*}
+>    (a \form f+b \form g)(V)&=a \form f(V)+b \form  g(V)\\
+>    &=a\nabla _ Vf+b\nabla _ V g\\
+>    &=\nabla _ V(a f+b g)
+>    \end{align*}
+>    $$
+>
+> 2. To find the basis of this vector space. 
+>
+>    1. First we are going to write down the definition of directional derivative,
+>
+>       $$
+>       \nabla _ {V} f =\sum _ {i=1}^{n}{\left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative},
+>       $$
+>
+>       with the following identities,
+>
+>       $$
+>       \begin{cases}V =\sum\dot x^i(t)\Partial{}{x^i}\\
+>       d f = \sum \Partial{f}{x^i}\d x ^ i\\
+>       \vec \nabla f =(\Partial{f}{x^1},\cdots,\Partial{f}{x^n})\end{cases}, \notag
+>       $$
+>
+>    2. Now let's pretend we don't know the expression of $V$, instead, we are going to try to make up the components of $V$ from the expression by isolating the expression of $f$. The red texts are the components.
+>
+>       $$
+>       \begin{align*}
+>       V(f) &= \sum _ {i=1}^{n}{ {\red \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}}\Partial{f}{x^i}}\\
+>       &=\left(\sum _ {i=1}^{n}{ {\red \dot{x} ^ i(t _ 0)}\Partial{}{x^i}}\right) (f)\\
+>       \end{align*}
+>       $$
+>
+>    3. Following the same procedure, we'll try to keep the RHS in the form of $(\cdots)(V)$. To do that, first we need an explicit expression of $V$ so we can isolate $V$ later. And we need to insert something else (we call that $\uvec e^i$ for the moment) to maintain the equality.
+>
+>       $$
+>       \begin{align}
+>       \form f(V)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
+>       &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\notag\\
+>       &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {\mathbf e}^i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
+>       \end{align}
+>       $$
+>
+>    4. Look at the RHS, we have the form $(X_iY^i)(V)$. Now it's clear to see that $\uvec e ^ i$ is nothing but the basis of one-form $\form f$, which is also a one form and thus can take $V$ as an input, written as
+>
+>       $$
+>       \begin{align*}
+>       \sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {\mathbf e}^i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) 
+>       &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right)
+>       \end{align*}
+>       $$
+>
+>       Recall the musical isomorphism
+>
+>       $$
+>       \omega(V)=\omega _ i \d x ^ i (V^j\uvec x _  j)=\left((\omega _ i\delta^{ik})\uvec x_k \right)\cdot\left(V ^ i\uvec x_i\right)=W\cdot V.
+>       $$
+>
+>       we have
+>
+>       $$
+>       \begin{align*}
+>       \sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right)
+>       &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i (V)\\
+>       &=\left(\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i\right) (V)
+>       \end{align*}
+>       $$
+>
+>       Where one form $\form f$ is identified as 
+>
+>       $$
+>       \form f = \sum _ {i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i \notag
+>       $$
+>
+>       where $\uvec e^ i $ is a hungry operator on vectors. 
+>
+>    6. Now the job is to find the exact expression of $\uvec e^ i $. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e ^ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
+>
+>       $$
+>       \begin{align*}
+>       \left(\uvec{e}^i\Partial{}{x^i}\right) &\equiv 1\\
+>       \left(\uvec{e}^i\Partial{}{x^i}\right) f&\equiv f\\
+>       \uvec{e}^i\Partial{f}{x^i} &= f
+>       \end{align*}
+>       $$
+>
+>    6. The answer self-evident, 
+>
+>       $$
+>       \uvec e^i =\int \d x^i, \label{basis-one-form}
+>       $$
+>
+>       so that,
+>
+>       $$
+>       \begin{align*}
+>       f &\equiv \uvec{e}^i\Partial{}{x^i}f \\
+>       &=\int \d x^i\Partial{f}{x^i} \\
+>       &=f
+>       \end{align*}
+>       $$
+>
+>
+>
 
-   This can be verified as following:
-
-   $$
-   \begin{align*}
-   (a \form f+b \form g)(V)&=a \form f(V)+b \form  g(V)\\
-   &=a\nabla _ Vf+b\nabla _ V g\\
-   &=\nabla _ V(a f+b g)
-   \end{align*}
-   $$
-
-2. To find the basis of this vector space. 
-
-   First we are going to write down the definition of directional derivative,
-
-   $$
-   \nabla _ {V} f =\sum _ {i=1}^{n}{\left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\Partial{f}{x^i}} \label{directional-derivative},
-   $$
-
-   with the following identities,
-
-   $$
-   \begin{cases}V =\sum\dot x^i(t)\Partial{}{x^i}\\
-   d f = \sum \Partial{f}{x^i}\d x ^ i\\
-   \vec \nabla f =(\Partial{f}{x^1},\cdots,\Partial{f}{x^n})\end{cases}, \notag
-   $$
-
-   Now let's pretend we don't know the expression of $V$, instead, we are going to try to make up the components of $V$ from the expression by isolating the expression of $f$. The red texts are the components.
-
-   $$
-   \begin{align*}
-   V(f) &= \sum _ {i=1}^{n}{ {\red \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}}\Partial{f}{x^i}}\\
-   &=\left(\sum _ {i=1}^{n}{ {\red \dot{x} ^ i(t _ 0)}\Partial{}{x^i}}\right) (f)\\
-   \end{align*}
-   $$
-
-   Following the same procedure, we try to isolate the $V$. This is a little more complicated. 
-
-   In the second equation, first we need an explicit expression of $V$ so we can isolate $V$ later. Then we need to insert $\uvec e^i$ to maintain the equality.
-
-   $$
-   \begin{align}
-   \form f(V)&= \sum _ {i=1}^{n}{ \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}{\blue\Partial{f}{x^i}}} \notag\\
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} \left.\D{x ^ i}{t}\right\vert _ {t=t _ 0}\notag\\
-   &=\sum _ {i=1}^{n}\left({\blue\Partial{f}{x^i}} \uvec {\mathbf e}^i \right)\cdot \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right) \label{basis-of-oneform}
-   \end{align}
-   $$
-
-   $\uvec e ^ i$ can also be interpreted as the basis of one-form $\form f$. Recall the musical isomorphism, we have
-
-   $$
-   \omega(V)=\omega _ i \d x ^ i (V^j\uvec x _  j)=\left((\omega _ i\delta^{ik})\uvec x_k \right)\cdot\left(V ^ i\uvec x_i\right)=W\cdot V.
-   $$
-
-   The basis of one form $\form f$ is itself a one form and thus can take $V$ as an input, written as
-
-   $$
-   \begin{align*}
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec{\bf e}}^i \left(\dot x ^ i (t _ 0)\Partial{}{x^i}\right)\\
-   &=\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i (V)\\
-   &=\left(\sum _ {i=1}^{n}{\blue\Partial{f}{x^i}} {\uvec {\bf e}}^i\right) (V)
-   \end{align*}
-   $$
-
-   Now the one form $\form f$ is identified as 
-
-   $$
-   \form f = \sum _ {i=1}^n\Partial{f}{x^i} {\uvec {\bf e}}^i \notag
-   $$
-
-   where $\uvec e^ i $ is a hungry operator on vectors. 
-
-   Now the job is to find the exact expression of $\uvec e^ i $. In $\Eqn{basis-of-oneform}$, the basis of one-form was introduced to cancel out the effect of operator $\Partial{}{x^i}$. **Putting the context of vectors and covectors aside from now on**, just to balance the equation appeared in $\Eqn{basis-of-oneform}$ the product of operator $\uvec e ^ i$ and operator $\Partial{}{x^i}$ in the most conventional sense should be the identity operator. That is to say,
-
-   $$
-   \begin{align*}
-   \left(\uvec{e}^i\Partial{}{x^i}\right) &\equiv 1\\
-   \left(\uvec{e}^i\Partial{}{x^i}\right) f&\equiv f\\
-   \uvec{e}^i\Partial{f}{x^i} &= f
-   \end{align*}
-   $$
-
-   The answer self-evident, 
-
-   $$
-   \uvec e^i =\int \d x^i, \label{basis-one-form}
-   $$
-
-   so that,
-
-   $$
-   \begin{align*}
-   f &\equiv \uvec{e}^i\Partial{}{x^i}f \\
-   &=\int \d x^i\Partial{f}{x^i} \\
-   &=f
-   \end{align*}
-   $$
-
-
-By the above deduction, we finally arrive at the conclusion that
+We finally arrive at the conclusion that
 
 $$
 \begin{align*}
@@ -440,9 +464,9 @@ $$
 \end{align*}
 $$
 
-Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. 
+Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. It actually makes great sense if you think of covectors (integration) as counter-parts of vectors (differentiation). 
 
-Still, the expression deserves more investigation. Leaving the context of vectors and covectors aside, the expression $\Eqn{directional-derivative}$ as function's derivative show that if two functions $f$ and $g$ have the same differential at $t=t _ 0$, 
+Still, the expression deserves more investigation. Ignoring the context of vectors and covectors, the expression $\Eqn{directional-derivative}$ as function's derivative show that if two functions $f$ and $g$ have the same differential at $t=t _ 0$, 
 
 $$
 \d f=\sum \Partial{f}{x^i}\d x^i=\d g \notag
@@ -465,6 +489,8 @@ $$
 \d f = \sum _ {i=1}^n\Partial{f}{x^i} \d x^i
 $$
 
+From now on, we will denote one forms as above, instead of $\form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i$
+
 ## The Puzzle of $\frac{\partial (dx^\mu )}{\partial x^\nu}$
 
 Now we have made out what vectors and covectors are:
@@ -480,6 +506,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 
 So far so good. 
@@ -520,6 +547,6 @@ That bugged me a long time as well. However, if I start from $\Eqn{basis-one-for
 
 At the end of last section, vectors were generalized as mathematical objects with the form $X=X ^ \mu\Partial{}{x ^ \mu}$. Similarly, the corresponding one-form can be generalized as $\omega =  \omega _ \mu \d x ^ \mu$. 
 
-This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y​$ is a perfect one-form by this definition, but it is not a total derivative of a function.
+This definition will immediate cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is not a total derivative of a function.
 
-This property is called exactness. Which we will investigate later.
+This gives rise to exactness and closedness of one-form or $N$-forms.
