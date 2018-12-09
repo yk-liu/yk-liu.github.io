@@ -93,6 +93,7 @@ The basis' action on vector is denoted as $\d x^i (V)$.
     \omega (V) =\omega_i \d x ^ i (V) = \omega _i V ^ i 
     $$
 
+
 ## Musical Isomorphism
 
 If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
@@ -189,7 +190,7 @@ When I think about vector on a manifold, I have the picture of some arrow tangen
 
 Since in general there is no way to define a "straight arrow" connecting two points. Vectors can only be "tangent vectors". In other words, vectors cannot live on the manifold itself, but the collection of tangent spaces over the entire manifold, called the **tangent bundle**. That way, the vector is a kept at a geometrical view. This is a generalization of the notion of a bound vector in a Euclidean space. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-One-Forms-on-Manifold/assets/drawing-tangent-vector.JPG" width="80%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-One-Forms-on-Manifold/assets/drawing-tangent-vector.png" width="80%">
 
 But this requires embedding the manifold in some higher dimensional space, which is not very convenient, since Differential Geometry aims at investigating the space (or maybe space-time) without jumping out of it. Obviously, once the vector is in an ambient space, it can be represented by a tuple of numbers. This naïve picture is fairly intuitive and is mainly brought up as an heuristic way to introduce the next concept.
 
@@ -429,6 +430,7 @@ The next steps would be
    \end{align*}
    $$
 
+
 By the above deduction, we finally arrive at the conclusion that
 
 $$
@@ -478,6 +480,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 So far so good. 
 
