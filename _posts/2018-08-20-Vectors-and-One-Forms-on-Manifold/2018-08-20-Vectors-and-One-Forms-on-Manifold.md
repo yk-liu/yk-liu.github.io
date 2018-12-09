@@ -4,7 +4,7 @@ edit: 2018-11-26
 categories: Topology
 tags: One-form Topology Vector
 keywords: one-form manifold Topology covector dual-space tangent-vector
-description: My interpretation on one-forms
+description: My interpretation on one-forms.
 ---
 
 $$
@@ -92,6 +92,7 @@ The basis' action on vector is denoted as $\d x^i (V)$.
     $$
     \omega (V) =\omega_i \d x ^ i (V) = \omega _i V ^ i 
     $$
+
 
 ## Musical Isomorphism
 
@@ -440,6 +441,7 @@ Here are the steps to find the expression for one form $\form f$.
 >       \end{align*}
 >       $$
 >
+>
 
 We finally arrive at the conclusion that
 
@@ -492,6 +494,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 So far so good. 
 

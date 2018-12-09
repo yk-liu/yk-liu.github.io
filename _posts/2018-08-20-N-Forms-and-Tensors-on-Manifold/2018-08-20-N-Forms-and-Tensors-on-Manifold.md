@@ -118,7 +118,7 @@ $$
 
 ### Wedge Product of One-Forms
 
-Naturally, like in [[Redefined Vector and one-forms](#Redefined-Vector-and-one-forms)] a 2-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
+Naturally, a 2-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu​$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z​$. One-forms can be viewed as vectors, so wedge product can apply.
 
 This can be seen as a tensor product of two one-forms.
 
