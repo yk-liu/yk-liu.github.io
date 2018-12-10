@@ -5,24 +5,22 @@
 			<button role="button" id="resettext">  <i class="fas fa-redo"></i>  </button>
 			<button role="button" id="increasetext"> <i class="fas fa-search-plus"></i> </button>
 
-
-
-   <script>
+<script>
    	// Increase/descrease font size
 	$('#increasetext').click(function() {
-		curSize = parseInt($('html').css('font-size')) + 2;
+		curSize = parseInt($('wrap').css('font-size')) + 2;
 		if (curSize <= 32)
 			$('html').css('font-size', curSize);
 	});
 
 	$('#resettext').click(function() {
-		if (curSize != 18)
-			$('html').css('font-size', 18);
+		if (curSize != 20)
+			$('html').css('font-size', 20);
 	});
 
 	$('#decreasetext').click(function() {
-		curSize = parseInt($('html').css('font-size')) - 2;
-		if (curSize >= 14)
+		curSize = parseInt($('wrap').css('font-size')) - 2;
+		if (curSize >= 12)
 			$('html').css('font-size', curSize);
 	});
-   </script>
+</script>

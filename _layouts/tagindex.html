@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
-   {% include head.html %}
-   <!-- link to tagpage.css-->
-   <link rel="stylesheet" href="/assets/css/tagpage.css">
-   <!-- google PT sans for tags -->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-   <!-- font awesome --> 
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-   <!-- -->
-   {% include topnav.html active="tags"%}
+    <head>
+      {% include head.html %}  
+      {% include mathjax.html %}
+      {% include theme-vue.html%}
+      <!-- jquery for mermaid and font adj-->
+      <script src=" //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+      <!-- font awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <!-- change font -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
+      <!-- link to counter.css -->
+      <link rel="stylesheet" href="/assets/css/counter.css">
+			<!-- link to responsive post.css -->
+      <link rel="stylesheet" href="/assets/css/post.css">
+      {% include mermaid.html %}
+   </head>
+	 
    <body>
+	 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+	<!-- this is side bar -->
+	<div class="sidebar" id="sidebar">
+		<nav class="sidebar-nav">
+			{% include sidenav.html %}
+		</nav>	
+	</div>
+
+	<!-- Add all page content inside this div if you want the side nav to push page content to the right
+		 (not used if you only want the sidenav to sit on top of the page -->
+	<div class="wrap">
    <div style = "margin-right: 3%;padding: 50px" class="container">
       {% include tagCloud.html %}  
       <hr>
@@ -33,11 +52,11 @@
           </ul>
       {% endfor %}
    </div>
-   	  <br>
-	  <br>
+	 {% include footer.html %} 
+	 
+   </div>
+   
 
    </body>
-   
-   {% include footer.html %} 
-      <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}" async></script>
+
 </html> 

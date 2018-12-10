@@ -1,0 +1,15 @@
+<div class="topnav" id="topnav">
+      <a href="/" {% if include.active == "home" %}  class="active"  {% endif %} >Home</a>
+      <a href="/blog" target="_blank" {% if include.active == "post" %}  class="active"  {% endif %} >Posts</a>
+			<a href="/blog/categories" target="_blank" {% if include.active == "categories" %}  class="active"  {% endif %} >Categories</a>
+			<a href="/blog/tags" target="_blank" {% if include.active == "tags" %}  class="active"  {% endif %} >Tags</a>
+			<a href="/about" {% if include.active == "about" %}  class="active"  {% endif %} >About</a>
+      {% if site.github_username %}
+			 <a href="https://github.com/{{site.github_username}}" class='icon' target="_blank" style="text-decoration:none;float: right;">
+			 <i class="fab fa-github fa-lg" ></i>
+			 </a>
+      {% endif %}
+		 <a href="javascript:void(0);" class="icon" onclick="responsiveTopnav()">
+				<i class="fa fa-bars"></i>
+			</a>
+</div>
