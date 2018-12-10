@@ -66,9 +66,11 @@ Such tensors are called of type $(q,r)$. $T_{(1,1)},\, T_{(2,0)},\,T_{(0,2)}$ ca
 
 # Wedge Product
 
-One way to generalize one-forms to differential forms (or $N$-forms) is to take products of one-forms. A two-form is can be seen as a "product" of two one-forms. A $N$-form is then a series of product of one-forms. This product is called a wedge product. We will first see how wedge product works in the context of vectors.
+One way to generalize one-forms to differential forms (or $N$-forms) is to take products of one-forms. A two-form is can be seen as a "product" of two one-forms. A $N$-form is then a series of product of one-forms. This product is called a wedge product. 
 
 ## Wedge Product of General Vectors
+
+We will first see how wedge product works in the context of vectors.
 
 The cross product of vectors $U \times V$ is a very useful operation in $3$ dimensional geometry. It determines the area of the **parallelogram** containing these vectors and the plane containing it. A **wedge product** is the analogue used to determine a high dimensional parallelograms.
 
@@ -88,7 +90,7 @@ U \wedge V  \wedge W &= U \otimes V  \otimes W + W \otimes U \otimes V  + V  \ot
 \end{align}
 $$
 
-[[John](https://www.av8n.com/physics/area-volume.pdf)] There is a **norm** for a wedge product (seen as a bi-vector, tri-vector, or $n$-vector) defined as 
+[[John](https://www.av8n.com/physics/area-volume.pdf)] There is a **norm** for a wedge product (seen as a bi-vector) defined as 
 
 $$
 \begin{align}
@@ -99,13 +101,13 @@ $$
 
 > ***CONNECTIONS TO GEOMETRIC ENTITIES***:
 >
-> 1. **Analogue to cross product as a test of collinearity**: The wedge product gives a simple way to test for "**coplanarity**" or linear (in)dependence of vectors: if $U$ and $V$ are collinear, meaning $U = a V$, by anti-symmetry of wedge product,  
->
+> 1. **Analogue to cross product as a test of collinearity**: The wedge product gives a simple way to test for "**coplanarity**" or linear (in)dependence of vectors: if $U$ and $V$ are collinear, $U\wedge V=0$.
+>    
 >    $$
 >    U \wedge V =U \wedge aU=a(U \otimes U - U \otimes U)=0 \notag
 >    $$
 >
->    If $W$ is coplanar with $U$ and $V$, meaning $W = a U + b V$, (“collapsed box”, not maximally linear independent), then
+>    If $W$ is coplanar with $U$ and $V$, $W = a U + b V$, i.e., $U,\, V,\, W$ are not maximally linear independent, then
 >
 >    $$
 >    W \wedge U \wedge V = aU  \wedge U \wedge V+bV\wedge U \wedge V = 0 \notag
@@ -138,9 +140,16 @@ $$
 >    > - The wedge product is a tensor, **not a matrix**. The wedge product of two dimension $3$ vectors has a dimension of $3$, not $9$ $\Eqn{wedgetensorvector}$. 
 >    > - This matrix is anti-symmetry matrix of odd dimension and thus has a zero determinant.
 >
->    However, this result is not the area of this two vectors. $U \wedge V$ is a bivector, it's norm $A^2=\norm{U\wedge V}^2\substack{\small\text{numerically}\newline\huge {=}}(U \times V)^2$ is the area of the parallelogram.
+>    However, this result is not the area of this two vectors. $U \wedge V$ is a bivector, it's norm 
+>
+>    $$
+>    A^2=\norm{U\wedge V}^2\substack{\small\text{numerically}\newline\huge {=}}(U \times V)^2 
+>    $$
+>    
+>    is the area of the parallelogram.
 >
 > 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$, 
+>    
 >     $$
 >     \vec{u} \wedge \vec{v} \wedge \vec{w} = (u _ 1 v _ 2 w _ 3 + u _ 2 v _ 3 w _ 1 + u _ 3 v _ 1 w _ 2 - u _ 1 v _ 3 w _ 2 - u _ 2 v _ 1 w _ 3 - u _ 3 v _ 2 w _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2 \wedge \uvec{e} _ 3) 
 >     $$
@@ -152,7 +161,7 @@ $$
 
 ## Wedge Product of One-Forms
 
-Naturally, a 2-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
+Naturally, a 2-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$.  
 
 This can be seen as a tensor product of several one-forms.
 
@@ -171,14 +180,51 @@ $$
 
 # Exterior Derivative
 
-## Exterior Derivative in Vector Analysis
+All the vector calculus, div, grad, curl, the divergence theorem and Stokes’ theorem, etc. are well defined in three dimensional spaces. But it would be hard to generalize the notion of curl in higher dimensions.
 
+$$
+\nabla \times X = \left( \frac{\partial X_3}{\partial x^2} - \frac{\partial X_2}{\partial x^3}, \frac{\partial X_1}{\partial x^3} - \frac{\partial X_3}{\partial x^1}, \frac{\partial X_2}{\partial x^1} - \frac{\partial X_1}{\partial x^2} \right),
+$$
 
+Exterior derivatives provides an easy way to perform vector calculus in greater-than-three dimensional spaces, with a sweet side effect that those divs, grads, curls, will be represented by two simple formulae.
 
-## Exterior Derivative of One-Forms
+## General Properties of Exterior Derivative
 
-Another way to see a two-form is that it's a second derivative of something. Take the "derivative" of a $1$-form (first derivative) should result in a $2$-form. This operation is called a **exterior derivative** $\d$.
+The exterior derivative is a generalization of the gradient of a function. We define it as a map
 
+Anyway, it is still a derivation, so it should be linear,
+$$
+\d (\alpha + \omega) = \d \alpha + \d \omega
+$$
+
+It should also satisfy Leibniz rule, but the algebra of p-forms is not a commutative algebra but a graded commutator algebra, i.e., involves a factor of (−1)pq for exchanges. So we need
+d(α ∧ β) = dα ∧ β + (−1)pqdβ ∧ α , (14.2)
+or alternatively,
+d(α ∧ β) = dα ∧ β + (−1)pα ∧ dβ . (14.3)
+This will be the Leibniz rule for wedge products. Note that it gives
+the correct result when one or both of α, β are 0-forms, i.e., functions.
+The two formulas are identical by virtue of the fact that dβ is a
+(q + 1)-form, so that
+α ∧ dβ = (−1)p(q+1)dβ ∧ α . (14.4)
+We will try to define the exterior derivative in a way such that it has
+these properties.
+
+## Exterior Derivative of Functions
+
+We will start from a function $f:\R^n\rightarrow \R$. We will perform an exterior derivative $\d$ on the function. We have the definition 
+$$
+\d f \dfdas \Partial {f}{x^1} \d x^1 + \cdots + \Partial {f}{x^n} \d x^n.
+$$
+
+That is a good old one-form! Or we could write it as
+$$
+\nabla f = (\d f)^\sharp
+$$
+to emphasize the relationship of divs and exterior derivatives.
+
+## Exterior Derivative of One-forms
+
+Take the "derivative" of a $1​$-form (first derivative) should result in a $2​$-form. 
 $$
 \begin{align*}
 \d (\omega) &= \d (\omega_\mu \d x ^ \mu)\\
