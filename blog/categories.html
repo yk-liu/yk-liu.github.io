@@ -6,6 +6,8 @@ title: Posts Index
 <base target="_blank">
 </head>
 
+<h1>{{ page.title }}</h1>
+
 <div style = "margin-right: 3%;padding: 50px" class="container">
   {% for category in site.categories %}
   <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
@@ -18,9 +20,9 @@ title: Posts Index
     <dd style="text-align: justify"><i class="fas fa-caret-right"></i>&nbsp;{{ post.description }}
     </dd>
 		{% endif %}
-    {% endfor %}
+		{% endfor %}
   </dl>
+	{% endfor %}
 
 </div>
-	 
-	       <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}" async></script>
+<script src="/assets/js/sweet-scroll.min.js" async></script>
