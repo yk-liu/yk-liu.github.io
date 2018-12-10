@@ -159,18 +159,19 @@ $$
 >     There is more to it. While $\vec{u} \wedge \vec{v} \wedge \vec{w}$ is a simple construction of three vectors, it is also a wedge product of vector and yet a wedge product $\vec{u} \wedge (\vec{v} \wedge \vec{w}).$ The volume of the parallelepiped ($3$-dimensional area) is now the span of a vector and an parallelogram ($2$-dimensional area). Similarly, a $(n+m)$-dimensional area can be spanned by a $n$-dimensional area and $m$-dimensional area.
 >
 
-## Wedge Product of One-Forms
+## $p$-Forms from Wedge Product
 
-Naturally, a 2-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$.  
+Naturally, a $2$-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$.  
 
 This can be seen as a tensor product of several one-forms.
 
 $$
-\omega^{\mu _ 1} \wedge \omega^{\mu _ 2} \wedge\cdots\wedge \omega^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) \omega^{\mu _ {P(1)}} \otimes \omega^{\mu _ {P(2)}}\otimes \cdots\otimes \omega^{\mu  _ {P(r)}}
+\d x^{\mu _ 1} \wedge \d x^{\mu _ 2} \wedge\cdots\wedge \d x^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) \d x ^{\mu _ {P(1)}} \otimes \d x^{\mu _ {P(2)}}\otimes \cdots\otimes \d x^{\mu  _ {P(r)}}
 $$
 
-for example,
+## Wedge Product of $p$-Forms
 
+For example,
 $$
 \begin{align}
 (3\d x + \d y) ∧ (\e^x\d x + 2\d y) &= 3\e^x\d x ∧ \d x + 6\d x ∧ \d y + \e^x \d y ∧ \d x + 2\d y ∧ \d y\\
