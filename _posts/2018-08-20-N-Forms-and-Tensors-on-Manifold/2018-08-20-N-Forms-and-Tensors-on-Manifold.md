@@ -211,41 +211,76 @@ to emphasize the relationship of divs and exterior derivatives.
 ## Exterior Derivative of One-forms
 
 The exterior derivative of a function is a one-form. We will go and find out the "second derivative" of $f$.
-$$
-\begin{align*}
-\d (\d f) &= \d (\Partial {f}{x^1} \d x^1 + \cdots + \Partial {f}{x^n} \d x^n)\\
-&=\d (\omega)\\
-&=\d(\omega_i\d x^i)
-\end{align*}
-$$
 
 For our definition to make sense, we require that
 
 1. The "derivative" of a $1$-form (first derivative) should result in a $2$-form. 
 2. The "second exterior derivative" of a function should some how relate to the second derivative of $f$.
 
-For simplicity, we write down the second derivative of $f:\R^3\rightarrow\R$, we have
+> I couldn't find any way to heuristically introduce the definition from deductions, so I decided to give the definition and explain it later.
+
+In general, the exterior derivative of a $p$-from $\omega=ω_{i_1\cdots i_p} \d x^{i_1} \wedge\cdots\wedge \d x^{i_p}$ is defined by
+
 $$
 \begin{align*}
-\d^2 f &=\d (\Partial {f}{x^1} \d x^1 +\Partial {f}{x^2} \d x^2 + \Partial {f}{x^3} \d x^3)\\
-
-&
-\begin{array}{ccc}
-=& \Partial {^2 f}{x^1\partial x^1} \d x^1\d x^1 +&\Partial {^2 f}{x^1\partial x^2} \d x^1\d x^2+ &\Partial {^2 f}{x^1\partial x^3} \d x^1\d x^3\\
-&\Partial {^2 f}{x^2\partial x^1} \d x^2\d x^1 +&\Partial {^2 f}{x^2\partial x^2} \d x^2\d x^2+ &\Partial {^2 f}{x^2\partial x^3} \d x^2\d x^3\\
-&\Partial {^2 f}{x^3\partial x^1} \d x^3\d x^1 +&\Partial {^2 f}{x^3\partial x^2} \d x^3\d x^2+ &\Partial {^2 f}{x^3\partial x^3} \d x^3\d x^3
-\end{array}\\
+\d\omega &=
+\d (f\, dx_{i_1} \wedge \cdots\wedge  dx_{i_n} ) \\
+&= \d f \wedge dx_{i_1} \wedge\cdots \wedge dx_{i_n},
+\quad\text{where } \d f = \Partial {f}{x^1} \d x^1 + \cdots + \Partial {f}{x^n} \d x^n\\
+&=\frac{1}{p!}\Partial{ω_{i_1\cdots i_p}}{x^i} \d x^{i_1} \wedge\cdots\wedge \d x^{i_p}
 \end{align*}
 $$
 
+where
 
-Notice that exterior derivative should be linear, and obey Leibniz's rule. Each term $\Partial {f}{x^i} \d x^i ​$ can really be thought of a wedge product between a 0-form $\Partial {f}{x^i} ​$ and the corresponding basis $1​$-form $\d x ^ i​$. 
+$$
+
+$$
+
+From this definition, we have
+
+1. For $\omega=f$, it agrees with the differential of $f$
+
+2. Exterior derivative have a Leibniz's Rule
+   
+   $$
+   \begin{align*}
+   \d(\omega\wedge\eta)&=(\d\omega)\wedge\eta+(-1)^p\omega\wedge(\d\eta),\quad \text{$\omega$ is $p$-form}\\
+   \end{align*}
+   $$
+
+3. $\d^2=0$
+
+Proof for $\d^2=0$:
+$$
+\d(\d\omega) = 1
+p!
+d
+
+∂iωi1···ip dxi ∧ dxi1 ∧ · · · d
+$$
+
+
+
+
+For example,
+
 $$
 \begin{align*}
+\d (\d f) &= \d (\Partial {f}{x^1} \d x^1 + \cdots + \Partial {f}{x^n} \d x^n)\\
 &=(\d \Partial {f}{x^i} )\wedge\d x ^ i + \d( \d x ^ i)\wedge\Partial {f}{x^i}\\
-\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d \Partial {f}{x^i} )\wedge\d x ^ i \\
-&=\Partial{\omega_\mu}{x ^ \nu}\d x ^ \nu \wedge\d x ^ \mu 
+\xrightarrow{\d( \d x ^ i)=0}&=(\d \Partial {f}{x^i} )\wedge\d x ^ i \\
+&=\Partial{^2f }{x^i\partial x ^ j}\d x ^ j \wedge\d x ^ i
 \end{align*}
+$$
+
+
+
+
+
+Notice that exterior derivative should be linear, and obey Leibniz's rule. Each term $\Partial {f}{x^i} \d x^i $ can really be thought of a wedge product between a 0-form $\Partial {f}{x^i} $ and the corresponding basis $1$-form $\d x ^ i$. 
+$$
+
 $$
 
 
