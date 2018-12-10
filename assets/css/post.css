@@ -143,7 +143,10 @@ body {
 @media (min-width: 30rem) {
   .sidebar {
     font-size: .75rem; /* 14px */
+		left: -14rem;
+		width: 14rem;
   }
+	
 }
 
 /* Sidebar content */
@@ -298,7 +301,16 @@ li::before {
       -ms-transform: translateX(17rem);
           transform: translateX(17rem);
 }
-
+@media (min-width: 30rem) {
+#sidebar-checkbox:checked ~ .sidebar,
+#sidebar-checkbox:checked ~ .wrap,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  -webkit-transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
+}
+	
+}
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
   display: none;
