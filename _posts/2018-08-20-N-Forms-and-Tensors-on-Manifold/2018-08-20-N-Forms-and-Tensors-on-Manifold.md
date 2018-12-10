@@ -4,7 +4,7 @@ edit: 2018-11-26
 categories: Topology
 tags: One-form N-Forms Tensor Topology 
 keywords: one-form wedge-product dual-space tensor-product
-description: My interpretation on N-forms and tensors
+description: We are going to generalize the concept of vectors and one-forms to tensors and differential forms.
 status: Writing
 rss: false
 ---
@@ -39,17 +39,36 @@ $$
 \notag
 $$
 
-# N-Forms
+In this post Einstein summation rule is used. We are going to generalize the concept of vectors and one-forms to tensors and differential forms (or $N$-forms).
 
-## Wedge Product
+# Tensors
 
-A two-form is can be seen as a "product" of two one-forms.
+Tensor is direct generalization to the concept of vector and one-form. A vector takes in a one-from and spits out a number. A one-form takes in a vector and spits out a number. A tensor takes in several vectors and one-forms and spits out a number. A tensor is written as 
+$$
+T=T^{\mu_1\cdots\mu_q}_{\phantom{\mu_1\cdots\mu_q}\nu_1\cdots\nu_r} \Partial{}{x^{\mu_1}}\cdots \Partial{}{x^{\mu_q}} \d x^{\nu_1} \cdots \d x^{\nu_r},
+$$
+where there are $q$ slots for one-forms and $r$ slots for vectors, such that
+$$
+\begin{align*}
+T(\omega_1,\cdots,\omega_q; V_1,\cdots,V_r) 
+& = T^{\mu_1\cdots\mu_q}_{\phantom{\mu_1\cdots\mu_q}\nu_1\cdots\nu_r} \left(\Partial{}{x^{\mu_1}}\cdots \Partial{}{x^{\mu_q}} \, \d x^{\nu_1} \cdots \d x^{\nu_r}\right)(\omega_1,\cdots,\omega_q; V_1,\cdots,V_r)\\
+&=T^{\mu_1\cdots\mu_q}_{\phantom{\mu_1\cdots\mu_q}\nu_1\cdots\nu_r}  \Partial{\omega_1}{x^{\mu_1}} \cdots \Partial{\omega_q}{x^{\mu_q}} \, \d x^{\nu_1}(V_1) \cdots \d x^{\nu_r}(V_r)\\
+& = T^{\mu_1\cdots\mu_q}_{\phantom{\mu_1\cdots\mu_q}\nu_1\cdots\nu_r} \lbrace\omega_1\rbrace_{\mu_1} \cdots \lbrace\omega_q\rbrace_{\mu_q} \lbrace V_1\rbrace^{\nu_1} \cdots \lbrace V_1\rbrace^{\nu_r}.
+\end{align*}
+$$
+Such tensors are called of type $(q,r)$. $T_{(1,1)},\, T_{(2,0)},\,T_{(0,2)}$ can be written as matrices, while it takes a third dimension to write tensors like $T_{(3,0)}$ in the similar fashion. Below is a diagram from [Wikipeida](https://en.wikipedia.org/wiki/OLAP_cube), showing an example of some kind of $3$-d matrix.
 
-### Wedge Product of General Vectors
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/OLAP_drill_up%26down.png" width=80%>
+
+# Wedge Product
+
+One way to generalize one-forms to differential forms (or $N$-forms) is to take products of one-forms. A two-form is can be seen as a "product" of two one-forms. A $N$-form is then a series of product of one-forms. This product is called a wedge product. We will first see how wedge product works in the context of vectors.
+
+## Wedge Product of General Vectors
 
 The cross product of vectors $U \times V$ is a very useful operation in $3$ dimensional geometry. It determines the area of the **parallelogram** containing these vectors and the plane containing it. A **wedge product** is the analogue used to determine a high dimensional parallelograms.
 
-The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product (although we have't defined it). 
+The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product. 
 
 $$
 V^{\mu _ 1} \wedge V^{\mu _ 2} \wedge. . .\wedge V^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) V^{\mu _ {P(1)}} \otimes V^{\mu _ {P(2)}}\otimes \cdots\otimes V^{\mu  _ {P(r)}} \label{wedgeDef}
@@ -92,7 +111,7 @@ $$
 >    \vec{u} \wedge \vec{v}
 >    &=(u _ 1,u _ 2,u _ 3)\wedge(v _ 1,v _ 2,v _ 3)\notag\\
 >    &=(u _ 1,u _ 2,u _ 3)\otimes(v _ 1,v _ 2,v _ 3)-(u _ 1,u _ 2,u _ 3)\otimes(v _ 1,v _ 2,v _ 3) \notag\\
->    &= \begin{pmatrix}
+>    &\substack{\text{the basis is different}\newline\neq} \begin{pmatrix}
 >     0        & \red u _ 1v _ 2 − u _ 2v _ 1  & \red u _ 1v _ 3 − u _ 3v _ 1\\
 >     \blue −u _ 1v _ 2 + u _ 2v _ 1 & 0        & \red u _ 2v _ 3 − u _ 3v _ 2\\
 >     \blue −u _ 1v _ 3 + u _ 3v _ 1 & \blue −u _ 2v _ 3 + u _ 3v _ 2 & 0        
@@ -107,18 +126,18 @@ $$
 >
 >    > **Note:**
 >    >
->    > - The wedge product is a tensor, not just a matrix. It's better to flatten the matrix as a (column or row) vector with 9 bases with 3 redundant bases and 3 null bases as shown in $\Eqn{wedgetensorvector}$.
+>    > - The wedge product is a tensor, **not a matrix**. The wedge product of two dimension $3$ vectors has a dimension of $3$, not $9$ $\Eqn{wedgetensorvector}$. 
 >    > - This matrix is anti-symmetry matrix of odd dimension and thus has a zero determinant.
 >
->    However, this result is not the area of this two vectors. $U \wedgeV$ is a bivector, it's norm $A^2=\norm{U\wedge V}^2\substack{\small\text{numerically}\newline\huge {=}}(U \times V)^2$ is the area of the parallelogram.
+>    However, this result is not the area of this two vectors. $U \wedge V$ is a bivector, it's norm $A^2=\norm{U\wedge V}^2\substack{\small\text{numerically}\newline\huge {=}}(U \times V)^2$ is the area of the parallelogram.
 >
 > 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$, $ \vec{u} \wedge \vec{v} \wedge \vec{w} = (u _ 1 v _ 2 w _ 3 + u _ 2 v _ 3 w _ 1 + u _ 3 v _ 1 w _ 2 - u _ 1 v _ 3 w _ 2 - u _ 2 v _ 1 w _ 3 - u _ 3 v _ 2 w _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2 \wedge \uvec{e} _ 3) $. Still the volume ($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$.
 >
 >    There is more to it. While $\vec{u} \wedge \vec{v} \wedge \vec{w}$ is a simple construction of three vectors, it is also a wedge product of vector and yet a wedge product $\vec{u} \wedge (\vec{v} \wedge \vec{w})$. The volume of the parallelepiped ($3$-dimensional area) is now the span of a vector and an parallelogram ($2$-dimensional area). Similarly, a $(n+m)$-dimensional area can be spanned by a $n$-dimensional area and $m​$-dimensional area.
 
-### Wedge Product of One-Forms
+## Wedge Product of One-Forms
 
-Naturally, a 2-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu​$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z​$. One-forms can be viewed as vectors, so wedge product can apply.
+Naturally, a 2-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$. One-forms can be viewed as vectors, so wedge product can apply.
 
 This can be seen as a tensor product of two one-forms.
 
@@ -129,9 +148,11 @@ $$
 \end{align}
 $$
 
-## Exterior Derivative
 
-Another way to see a two-form is that it's a second derivative of something. So take the "derivative" of a $1$-form (first derivative) should result in a $2$-form. This procedure is called a **exterior derivative**. This operation is denoted using again the symbol $\d$.
+
+# Exterior Derivative
+
+Another way to see a two-form is that it's a second derivative of something. Take the "derivative" of a $1$-form (first derivative) should result in a $2$-form. This operation is called a **exterior derivative** $\d$.
 
 $$
 \begin{align*}
