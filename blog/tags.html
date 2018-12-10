@@ -9,27 +9,21 @@ title: Posts Index
 
 
 <div style = "margin-right: 3%;padding: 50px" class="container">
-      {% include tagCloud.html %}  
-      <hr>
-      {% for tag in site.tags %}
-          <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
-          <ul class="tags-expo-posts">
-             {% for post in tag[1] %}
-             <li>
-                <a class="post-title" href="{{ site.baseurl }}{{ post.url }}" target="_blank">
-                {{ post.title }}
-                </a>
-                <i class="fas fa-angle-double-right"></i>
-                {{ post.date | date_to_string }}
-                <br>
-                <small class="post-description">
-                <i class="fas fa-caret-right"></i>
-                {{ post.description }}
-                </small>
-             </li>
-             {% endfor %}
-          </ul>
-      {% endfor %}
-   </div>
+  {% include tagCloud.html %}  
+  <hr>
+  {% for tag in site.tags %}
+  <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+  <dl class="tags-expo-posts">
+    {% for post in tag[1] %}
+    <dt>
+      <code>{{ post.date | date_to_string }}<code> <i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">{{ post.title }}</a> 
+    </dt>
+    {% if post.description %}
+    <dd style="text-align: justify"><i class="fas fa-caret-right"></i>&nbsp;{{ post.description }}
+    </dd>
+    {% endfor %}
+  </dl>
+  {% endfor %}
+</div>
 	 
 	  <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}" async></script>
