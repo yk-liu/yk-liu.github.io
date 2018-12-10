@@ -1,6 +1,6 @@
 ---
 layout: displayindex
-title: Posts Index
+title: Tag Index
 ---
 
 <head>
@@ -9,7 +9,7 @@ title: Posts Index
 
 <h1>{{ page.title }}</h1>
 
-<div style = "margin-right: 3%;padding: 50px" class="container">
+<div class="container">
   {% include tagCloud.html %}  
   <hr>
   {% for tag in site.tags %}

@@ -1,6 +1,6 @@
 ---
 layout: displayindex
-title: Posts Index
+title: Category Index
 ---
 <head>
 <base target="_blank">
@@ -8,7 +8,7 @@ title: Posts Index
 
 <h1>{{ page.title }}</h1>
 
-<div style = "margin-right: 3%;padding: 50px" class="container">
+<div class="container">
   {% for category in site.categories %}
   <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
   <dl class="tags-expo-posts">
