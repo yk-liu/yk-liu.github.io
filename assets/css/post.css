@@ -34,7 +34,9 @@ body {
 
 .wrap {
   position: relative;
-  width: 100%;
+  width: 90%;
+	margin-left:auto;
+	margin-right: auto;
 }
 
 /*
@@ -128,8 +130,8 @@ body {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -14rem;
-  width: 14rem;
+  left: -17rem;
+  width: 17rem;
   visibility: hidden;
   overflow-y: auto;
   font-size: .875rem; /* 15px */
