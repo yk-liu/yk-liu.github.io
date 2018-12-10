@@ -2,40 +2,56 @@
 <html lang="en">
    <head>
       {% include head.html %}  
-      {% include mathjax.html %}  
+      {% include mathjax.html %}
       {% include theme-vue.html%}
+      <!-- jquery for mermaid and font adj-->
+      <script src=" //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
       <!-- font awesome -->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-	  <!-- change font -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet" async>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
       <!-- change font -->
-      <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-      <!--  -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
+      <!-- link to counter.css -->
+      <link rel="stylesheet" href="/assets/css/counter.css">
+			<!-- link to responsive post.css -->
+      <link rel="stylesheet" href="/assets/css/post.css">
+      {% include mermaid.html %}
    </head>
-   
-  
-
-  <body>
-	 <div style = "margin-right: 3%;padding: 50px" class="container">
-	    <div id="front-matter">
-		   <div id="title">
-                  <h1>
-                     {{page.title}}
-                  </h1>
-           </div>
-		   <div id="info">
-			  <div id="date" style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;">
-				{% if page.Edit %}
-				   <p><code class="highlighter-rouge">Edited</code>:  &nbsp; {{ page.Edit | date: '%B %d, %Y' }} </p>
-				{% endif %}
-			  </div>
-		   </div>
-		</div>
-		{{ content }}
-		<br>
-		<br>
-	 </div>
 	 
-  </body>
-  {% include footer.html %} 
+<body>
+	<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+	<!-- this is side bar -->
+	<div class="sidebar" id="sidebar">
+		<nav class="sidebar-nav">
+			{% include sidenav.html %}
+		</nav>	
+		{% if page.toc %}
+			<div class="toc">
+				<div class='toc-container'>
+					{% include toc.html html=content %}
+				</div>
+			</div>
+		{% endif %}
+	</div>
+
+	<!-- Add all page content inside this div if you want the side nav to push page content to the right
+		 (not used if you only want the sidenav to sit on top of the page -->
+	<div class="wrap">
+		<div class="container content">
+			<div class="page">
+				{% include frontmatter.html %}
+				<hr>
+				<div id="content-container" style="text-align:justify">
+					 {{ content }}			
+				</div>
+
+			 </div>
+		</div>
+		
+		{% include footer.html %} 
+	</div>
+	
+	<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+	
+</body>
+
 </html>
