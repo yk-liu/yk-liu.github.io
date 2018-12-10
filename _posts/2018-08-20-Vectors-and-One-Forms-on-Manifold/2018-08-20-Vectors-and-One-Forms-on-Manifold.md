@@ -1,6 +1,6 @@
 ---
 title: Vectors and One-Forms on Manifold
-edit: 2018-11-26
+edit: 2018-12-06
 categories: Topology
 tags: One-form Topology Vector
 keywords: one-form manifold Topology covector dual-space tangent-vector
