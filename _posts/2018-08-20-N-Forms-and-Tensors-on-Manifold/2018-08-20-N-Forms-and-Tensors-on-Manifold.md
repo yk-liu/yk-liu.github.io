@@ -187,31 +187,17 @@ $$
 $$
 
 Exterior derivatives provides an easy way to perform vector calculus in greater-than-three dimensional spaces, with a sweet side effect that those divs, grads, curls, will be represented by two simple formulae.
-
-## General Properties of Exterior Derivative
-
-The exterior derivative is a generalization of the gradient of a function. We define it as a map
-
-Anyway, it is still a derivation, so it should be linear,
 $$
-\d (\alpha + \omega) = \d \alpha + \d \omega
+\begin{array}{ccccccc}
+&\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}\\
+&\downarrow &&\downarrow&&\downarrow&&\downarrow   \\
+&\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}
+\end{array}
 $$
-
-It should also satisfy Leibniz rule, but the algebra of p-forms is not a commutative algebra but a graded commutator algebra, i.e., involves a factor of (−1)pq for exchanges. So we need
-d(α ∧ β) = dα ∧ β + (−1)pqdβ ∧ α , (14.2)
-or alternatively,
-d(α ∧ β) = dα ∧ β + (−1)pα ∧ dβ . (14.3)
-This will be the Leibniz rule for wedge products. Note that it gives
-the correct result when one or both of α, β are 0-forms, i.e., functions.
-The two formulas are identical by virtue of the fact that dβ is a
-(q + 1)-form, so that
-α ∧ dβ = (−1)p(q+1)dβ ∧ α . (14.4)
-We will try to define the exterior derivative in a way such that it has
-these properties.
 
 ## Exterior Derivative of Functions
 
-We will start from a function $f:\R^n\rightarrow \R$. We will perform an exterior derivative $\d$ on the function. We have the definition 
+We will start from a function $f:\R^n\rightarrow \R$. We will perform an exterior derivative $\d$ on the function. Our new definition of exterior derivative should comply with normal derivatives on functions, i.e.,  
 $$
 \d f \dfdas \Partial {f}{x^1} \d x^1 + \cdots + \Partial {f}{x^n} \d x^n.
 $$
@@ -224,18 +210,48 @@ to emphasize the relationship of divs and exterior derivatives.
 
 ## Exterior Derivative of One-forms
 
-Take the "derivative" of a $1​$-form (first derivative) should result in a $2​$-form. 
+The exterior derivative of a function is a one-form. We will go and find out the "second derivative" of $f$.
 $$
 \begin{align*}
-\d (\omega) &= \d (\omega_\mu \d x ^ \mu)\\
-&=(\d \omega _ \mu )\wedge\d x ^ \mu + \omega_\mu\d( \d x ^ \mu)\\
-\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d \omega _ \mu )\wedge\d x ^ \mu\\
+\d (\d f) &= \d (\Partial {f}{x^1} \d x^1 + \cdots + \Partial {f}{x^n} \d x^n)\\
+&=\d (\omega)\\
+&=\d(\omega_i\d x^i)
+\end{align*}
+$$
+
+For our definition to make sense, we require that
+
+1. The "derivative" of a $1$-form (first derivative) should result in a $2$-form. 
+2. The "second exterior derivative" of a function should some how relate to the second derivative of $f$.
+
+For simplicity, we write down the second derivative of $f:\R^3\rightarrow\R$, we have
+$$
+\begin{align*}
+\d^2 f &=\d (\Partial {f}{x^1} \d x^1 +\Partial {f}{x^2} \d x^2 + \Partial {f}{x^3} \d x^3)\\
+
+&
+\begin{array}{ccc}
+=& \Partial {^2 f}{x^1\partial x^1} \d x^1\d x^1 +&\Partial {^2 f}{x^1\partial x^2} \d x^1\d x^2+ &\Partial {^2 f}{x^1\partial x^3} \d x^1\d x^3\\
+&\Partial {^2 f}{x^2\partial x^1} \d x^2\d x^1 +&\Partial {^2 f}{x^2\partial x^2} \d x^2\d x^2+ &\Partial {^2 f}{x^2\partial x^3} \d x^2\d x^3\\
+&\Partial {^2 f}{x^3\partial x^1} \d x^3\d x^1 +&\Partial {^2 f}{x^3\partial x^2} \d x^3\d x^2+ &\Partial {^2 f}{x^3\partial x^3} \d x^3\d x^3
+\end{array}\\
+\end{align*}
+$$
+
+
+Notice that exterior derivative should be linear, and obey Leibniz's rule. Each term $\Partial {f}{x^i} \d x^i ​$ can really be thought of a wedge product between a 0-form $\Partial {f}{x^i} ​$ and the corresponding basis $1​$-form $\d x ^ i​$. 
+$$
+\begin{align*}
+&=(\d \Partial {f}{x^i} )\wedge\d x ^ i + \d( \d x ^ i)\wedge\Partial {f}{x^i}\\
+\xrightarrow[\d( \d x _ \mu)=0]{\text{by def.}}&=(\d \Partial {f}{x^i} )\wedge\d x ^ i \\
 &=\Partial{\omega_\mu}{x ^ \nu}\d x ^ \nu \wedge\d x ^ \mu 
 \end{align*}
 $$
 
-For example, 
 
+
+
+For example, 
 $$
 \d(F \d x+G\d y +H\d z) = (\Partial{G}{x} −\Partial{F}{y})\d x\wedge \d y + (\Partial{H}{y} −\Partial{G}{z})\d y \wedge \d z + (\Partial{F}{z} − \Partial{H}{x})\d z \wedge \d x
 $$
