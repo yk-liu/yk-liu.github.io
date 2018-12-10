@@ -161,13 +161,20 @@ $$
 
 ## $p$-Forms from Wedge Product
 
-Naturally, a $2$-form is of the form $X=X _ {\mu\nu}\d x ^ \mu\d x^\nu$, e.g., $\e^x\d x\d y+2x^2\d y \d z+ (y-x)\d x\d z$.  
+After having gained some familiarity with wedge products, we are now ready to construct $p$-forms.
 
-This can be seen as a tensor product of several one-forms.
+Still, wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product. The rule for wedge product of basis is as follow:
 
 $$
-\d x^{\mu _ 1} \wedge \d x^{\mu _ 2} \wedge\cdots\wedge \d x^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) \d x ^{\mu _ {P(1)}} \otimes \d x^{\mu _ {P(2)}}\otimes \cdots\otimes \d x^{\mu  _ {P(r)}}
+\d x^{\mu _ 1} \wedge \d x^{\mu _ 2} \wedge\cdots\wedge \d x^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) \d x ^{\mu _ {P(1)}} \otimes \d x^{\mu _ {P(2)}}\otimes \cdots\otimes \d x^{\mu  _ {P(r)}} \label{r-form-basis}
 $$
+
+$\Eqn{r-form-basis}$ gives us the basis for $r$-forms. The space of $r$-forms spanned by these basis is denoted as $\Omega^r$. A general $r$-form is then
+$$
+\omega=\frac{1}{r!}\omega_{\mu_1\mu_2\cdots\mu_r}\d x^{\mu _ 1} \wedge \d x^{\mu _ 2} \wedge\cdots\wedge \d x^{\mu _ r}
+$$
+
+There are only $\binom{m}{r}=\frac{m!}{(m-r)!r!}$ choices of $\set{\d x^{\mu_i}}$ to form a non-zero basis, so is the dimension of space $\Omega^r$.
 
 ## Wedge Product of $p$-Forms
 
@@ -232,12 +239,6 @@ $$
 \end{align*}
 $$
 
-where
-
-$$
-
-$$
-
 From this definition, we have
 
 1. For $\omega=f$, it agrees with the differential of $f$
@@ -253,15 +254,13 @@ From this definition, we have
 3. $\d^2=0$
 
 Proof for $\d^2=0$:
+
 $$
-\d(\d\omega) = 1
-p!
-d
-
-∂iωi1···ip dxi ∧ dxi1 ∧ · · · d
+\begin{align*}
+\d(\d\omega) &= \d (\frac{1}{p!}\Partial{ω_{i_1\cdots i_p}}{x^i} \d x^{i_1} \wedge\cdots\wedge \d x^{i_p})\\
+&=
+\end{align*}
 $$
-
-
 
 
 For example,
@@ -271,13 +270,10 @@ $$
 \d (\d f) &= \d (\Partial {f}{x^1} \d x^1 + \cdots + \Partial {f}{x^n} \d x^n)\\
 &=(\d \Partial {f}{x^i} )\wedge\d x ^ i + \d( \d x ^ i)\wedge\Partial {f}{x^i}\\
 \xrightarrow{\d( \d x ^ i)=0}&=(\d \Partial {f}{x^i} )\wedge\d x ^ i \\
-&=\Partial{^2f }{x^i\partial x ^ j}\d x ^ j \wedge\d x ^ i
+&=\Partial{^2f }{x^i\partial x ^ j}\d x ^ j \wedge\d x ^ i\\
+&\equiv 0
 \end{align*}
 $$
-
-
-
-
 
 Notice that exterior derivative should be linear, and obey Leibniz's rule. Each term $\Partial {f}{x^i} \d x^i $ can really be thought of a wedge product between a 0-form $\Partial {f}{x^i} $ and the corresponding basis $1$-form $\d x ^ i$. 
 $$
@@ -298,7 +294,7 @@ $$
 \vec{\nabla} \times V = (Hy − Gz)\uvec i + (Gx − Fy)\uvec k + (Fz − Hx)\uvec j
 $$
 
-Thus the exterior derivative of a $p$-form is a $(p+1)$-form.
+Thus the exterior derivative of a $p​$-form is a $(p+1)​$-form.
 
 A $2$-form is an expression built using wedge products of pairs of $1$-forms. 
 
