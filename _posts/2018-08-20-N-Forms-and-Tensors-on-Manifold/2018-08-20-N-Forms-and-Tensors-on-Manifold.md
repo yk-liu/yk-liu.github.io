@@ -195,28 +195,24 @@ $$
 $$
 
 Exterior derivatives provides an easy way to perform vector calculus in greater-than-three dimensional spaces, with a sweet side effect that those divs, grads, curls, will be represented by two simple formulae.
-$$
-\begin{array}{ccccccc}
-&\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}\\
-&\downarrow &&\downarrow&&\downarrow&&\downarrow   \\
-&\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}
-\end{array}
-$$
 
 ## Exterior Derivative of Functions
 
 We will start from a function $f:\R^n\rightarrow \R$. We will perform an exterior derivative $\d$ on the function. Our new definition of exterior derivative should comply with normal derivatives on functions, i.e.,  
+
 $$
 \d f \dfdas \Partial {f}{x^1} \d x^1 + \cdots + \Partial {f}{x^n} \d x^n.
 $$
 
 That is a good old one-form! Or we could write it as
+
 $$
 \nabla f = (\d f)^\sharp
 $$
+
 to emphasize the relationship of divs and exterior derivatives.
 
-## Exterior Derivative of One-forms
+## General Definition of Exterior Derivative
 
 The exterior derivative of a function is a one-form. We will go and find out the "second derivative" of $f$.
 
@@ -235,35 +231,38 @@ $$
 \d (f\, dx_{i_1} \wedge \cdots\wedge  dx_{i_n} ) \\
 &= \d f \wedge dx_{i_1} \wedge\cdots \wedge dx_{i_n},
 \quad\text{where } \d f = \Partial {f}{x^1} \d x^1 + \cdots + \Partial {f}{x^n} \d x^n\\
-&=\frac{1}{p!}\Partial{ω_{i_1\cdots i_p}}{x^i} \d x^{i_1} \wedge\cdots\wedge \d x^{i_p}
+&=\frac{1}{p!}\Partial{ω_{i_1\cdots i_p}}{x^i} \d x^i \wedge \d x^{i_1} \wedge\cdots\wedge \d x^{i_p}
 \end{align*}
 $$
 
 From this definition, we have
 
-1. For $\omega=f$, it agrees with the differential of $f$
+> 1. For $\omega=f$, it agrees with the differential of $f$
+>
+> 2. Exterior derivative have a Leibniz's Rule
+>    
+>    $$
+>    \begin{align*}
+>    \d(\omega\wedge\eta)&=(\d\omega)\wedge\eta+(-1)^p\omega\wedge(\d\eta),\quad \text{$\omega$ is $p$-form}\\
+>    \end{align*}
+>    $$
+>
+> 3. $\d^2=0$.
+>
+>      Proof for $\d^2=0 $:
+>      
+>      $$
+>      \begin{align*}
+>      \d(\d\omega) &= \d (\frac{1}{p!}\Partial{ω_{i_1\cdots i_p}}{x^i}\d x^i \wedge  \d x^{i_1} \wedge\cdots\wedge \d x^{i_p})\\
+>      &=\frac{1}{p!}\d (\Partial{ω_{i_1\cdots i_p}}{x^i}\d x^i )\wedge \d x^{i_1} \wedge\cdots\wedge \d x^{i_p} \\
+>      &=\frac{1}{p!} \Partial{^2ω_{i_1\cdots i_p}}{x^i\partial x^j}\d x^i \wedge \d x^j \wedge \d x^{i_1} \wedge\cdots\wedge \d x^{i_p} 
+>      \end{align*}
+>      $$
+>
+>      Since $\Partial{^2ω_{i_1\cdots i_p}}{x^i\partial x^j}$ is symmetric with respect to $x^i$ and $x^j$, and $\d x^i \wedge \d x^j$ is antisymmetric, the RHS is zero.
+>
 
-2. Exterior derivative have a Leibniz's Rule
-   
-   $$
-   \begin{align*}
-   \d(\omega\wedge\eta)&=(\d\omega)\wedge\eta+(-1)^p\omega\wedge(\d\eta),\quad \text{$\omega$ is $p$-form}\\
-   \end{align*}
-   $$
-
-3. $\d^2=0$
-
-Proof for $\d^2=0$:
-
-$$
-\begin{align*}
-\d(\d\omega) &= \d (\frac{1}{p!}\Partial{ω_{i_1\cdots i_p}}{x^i} \d x^{i_1} \wedge\cdots\wedge \d x^{i_p})\\
-&=
-\end{align*}
-$$
-
-
-For example,
+For example, 
 
 $$
 \begin{align*}
@@ -275,10 +274,41 @@ $$
 \end{align*}
 $$
 
-Notice that exterior derivative should be linear, and obey Leibniz's rule. Each term $\Partial {f}{x^i} \d x^i $ can really be thought of a wedge product between a 0-form $\Partial {f}{x^i} $ and the corresponding basis $1$-form $\d x ^ i$. 
-$$
+> Notice that even if $\d^2 = 0$,   $\d \omega$ is not necessarily zero. 
+>
+> If $\d \omega = 0$, $\omega$ is called an closed from. If $\d \eta=\omega$ , $\omega$ is called a exact form. All exact forms are closed, since $\d\omega=\d^2\eta=0$, but not all closed forms are exact
+
+## Exterior Derivative and Vector Calculus
+
+In the beginning of this section, I promised that divs, grads, curls, will be represented by two simple formulae in terms of exterior derivative. By the end of this subsection, we will have a diagram looks like this :
 
 $$
+\begin{array}{ccccccc}
+&\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}\\
+&\downarrow &&\downarrow&&\downarrow&&\downarrow   \\
+&\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}
+\end{array}
+$$
+
+> . For example, 
+> $$
+> \begin{align*}
+> \omega = y\d x\\
+> \d\omega = \d y \wedge\d x
+> \end{align*}
+> $$
+>
+
+We already have
+$$
+\nabla f = (\d f)^\sharp
+$$
+
+Now we will see how exterior derivative act on one-forms.
+
+
+
+
 
 
 
