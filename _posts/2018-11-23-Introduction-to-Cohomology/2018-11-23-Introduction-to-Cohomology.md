@@ -56,7 +56,7 @@ You can check my previous notes on [homology](https://yk-liu.github.io/blog/Intr
 
 # Body and Boundary
 
-The cohomology is a relationship defined on forms
+The cohomology is a relationship defined on forms. We will find how to define  chains, boundaries and cycles on differential forms.
 
 ## The celebrated $\d$
 
@@ -65,8 +65,7 @@ $$
 \omega = -\dfrac{y}{x^2 + y^2}dx + \dfrac{x}{x^2 +y^2}dy, \quad x,y\in\R-\lbrace0,0\rbrace
 $$
 
-
-# Chains
+## Chains
 
 Given a vector space $V$, a space of wedge product can be constructed as
 $$

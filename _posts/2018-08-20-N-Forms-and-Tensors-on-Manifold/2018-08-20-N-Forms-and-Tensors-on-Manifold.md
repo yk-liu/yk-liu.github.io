@@ -274,11 +274,13 @@ $$
 \end{align*}
 $$
 
-> Notice that even if $\d^2 = 0$, $\d \omega$ is not necessarily zero. 
->
-> If $\d \omega = 0$, $\omega$ is called an closed from. If $\d \eta=\omega$ , $\omega$ is called a exact form. 
->
-> All exact forms are closed, since $\d\omega=\d^2\eta=0​$, but not all closed forms are exact.
+## A Glimpse of Closed Form and Exact Form
+
+If $\d \omega = 0$, $\omega$ is called an closed from. If $\d \eta=\omega$ , $\omega$ is called a exact form. These names have something to do with cohomology, which you will find in my later posts.
+
+$\d^2 = 0$ means that **all exact forms are closed**, since $\d\omega=\d^2\eta=0$. But the reserve is not always true, i.e., not all closed forms are exact. 
+
+Before I start listing examples, let's find out what it takes for a form to be exact. The most straightforward way to proof a differential form to be exact is to find a $\eta$ such that $\d\eta=\omega​$. This problem is equivalent of solving a differential equation, which is not very easy to tackle. We'll leave the discussion on Cohomology. 
 
 ## Exterior Derivative and Vector Calculus
 
