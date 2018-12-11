@@ -8,6 +8,16 @@ html{
 body{
     margin:0
 }
+.background-image img{
+	width: 10vw
+}
+@media only screen and (max-width:450px){
+.background-image img{
+	width: 10rem
+}
+}
+
+
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
     display:block
 }
