@@ -5,7 +5,6 @@ categories: Topology
 tags: One-form N-Forms Tensor Topology 
 keywords: one-form wedge-product dual-space tensor-product
 description: We are going to generalize the concept of vectors and one-forms to tensors and differential forms.
-status: Writing
 rss: false
 ---
 
@@ -280,7 +279,7 @@ If $\d \omega = 0$, $\omega$ is called an closed from. If $\d \eta=\omega$ , $\o
 
 $\d^2 = 0$ means that **all exact forms are closed**, since $\d\omega=\d^2\eta=0$. But the reserve is not always true, i.e., not all closed forms are exact. 
 
-Before I start listing examples, let's find out what it takes for a form to be exact. The most straightforward way to proof a differential form to be exact is to find a $\eta$ such that $\d\eta=\omega​$. This problem is equivalent of solving a differential equation, which is not very easy to tackle. We'll leave the discussion on Cohomology. 
+Before I start listing examples, let's find out what it takes for a form to be exact. The most straightforward way to proof a differential form to be exact is to find a $\eta$ such that $\d\eta=\omega$. This problem is equivalent of solving a differential equation, which need the definition of integral. We'll leave the discussion to Cohomology. 
 
 ## Exterior Derivative and Vector Calculus
 
@@ -319,11 +318,9 @@ $$
 \vec{\nabla} \times V = (Hy − Gz)\uvec i + (Gx − Fy)\uvec k + (Fz − Hx)\uvec j
 $$
 
-Thus the exterior derivative of a $p​$-form is a $(p+1)​$-form.
+Thus the exterior derivative of a $p$-form is a $(p+1)$-form.
 
-A $2$-form is an expression built using wedge products of pairs of $1$-forms. 
 
-The real significance of $2$-forms will come later when we do surface integrals. A $2$-form will be an expression that can be integrated over a surface in the same way that a $1$-form can be integrated over a curve.
 
 
 
