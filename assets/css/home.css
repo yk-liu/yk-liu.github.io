@@ -9,7 +9,7 @@ body{
     margin:0
 }
 .background-image img{
-	width: 10vw
+	width: 20vw
 }
 @media only screen and (max-width:450px){
 .background-image img{
