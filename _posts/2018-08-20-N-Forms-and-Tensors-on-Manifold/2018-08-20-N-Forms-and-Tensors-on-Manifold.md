@@ -274,9 +274,11 @@ $$
 \end{align*}
 $$
 
-> Notice that even if $\d^2 = 0$,   $\d \omega$ is not necessarily zero. 
+> Notice that even if $\d^2 = 0$, $\d \omega$ is not necessarily zero. 
 >
-> If $\d \omega = 0$, $\omega$ is called an closed from. If $\d \eta=\omega$ , $\omega$ is called a exact form. All exact forms are closed, since $\d\omega=\d^2\eta=0$, but not all closed forms are exact
+> If $\d \omega = 0$, $\omega$ is called an closed from. If $\d \eta=\omega$ , $\omega$ is called a exact form. 
+>
+> All exact forms are closed, since $\d\omega=\d^2\eta=0​$, but not all closed forms are exact.
 
 ## Exterior Derivative and Vector Calculus
 
@@ -289,15 +291,6 @@ $$
 &\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}
 \end{array}
 $$
-
-> . For example, 
-> $$
-> \begin{align*}
-> \omega = y\d x\\
-> \d\omega = \d y \wedge\d x
-> \end{align*}
-> $$
->
 
 We already have
 $$

@@ -56,7 +56,15 @@ You can check my previous notes on [homology](https://yk-liu.github.io/blog/Intr
 
 # Body and Boundary
 
-The cohomology is a relationship defined on
+The cohomology is a relationship defined on forms
+
+## The celebrated $\d$
+
+There is Poincaré's lemma stating that on a contractible manifold, all closed forms are exact. (Again this is related to cohomology.) For other manifold, however, these theorems of sufficient conditions are hard to find. We will now turn to find necessary conditions for a form to be exact.
+$$
+\omega = -\dfrac{y}{x^2 + y^2}dx + \dfrac{x}{x^2 +y^2}dy, \quad x,y\in\R-\lbrace0,0\rbrace
+$$
+
 
 # Chains
 
