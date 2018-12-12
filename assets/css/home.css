@@ -16,8 +16,6 @@ body{
 	width: 10rem
 }
 }
-
-
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
     display:block
 }
@@ -68,6 +66,15 @@ fieldset{
 
 textarea{
     overflow:auto
+}
+code, tt {
+    /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
+	margin: 0 2px;
+    padding: 2px 4px;
+	font-size: 0.92rem;
+	background-color: #eeeeee;
+	border-radius: 4px;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 body{
