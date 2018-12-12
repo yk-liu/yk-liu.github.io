@@ -60,19 +60,18 @@ The cohomology is a relationship defined on forms. We will find how to define  c
 
 ## The celebrated $\d$
 
-There is Poincaré's lemma stating that on a contractible manifold, all closed forms are exact. (Again this is related to cohomology.) For other manifold, however, these theorems of sufficient conditions are hard to find. We will now turn to find necessary conditions for a form to be exact.
-$$
-\omega = -\dfrac{y}{x^2 + y^2}dx + \dfrac{x}{x^2 +y^2}dy, \quad x,y\in\R-\lbrace0,0\rbrace
-$$
+Remember the homology relations? 
 
-## Chains
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/FormsComplex.png" width=50%>
 
-Given a vector space $V$, a space of wedge product can be constructed as
-$$
-\wedge ^2 V = \set{ \vec u\wedge \vec v  {\mid}  \vec u,\vec v \in V  }\\
-\wedge ^3 V = \set{ \vec u\wedge \vec v \wedge \vec w {\mid} \vec u,\vec v,\vec w \in V  }\\
-\wedge ^n V = \set{ \vec u _ 1\wedge\vec u _ 2 \wedge\cdots\wedge \vec u _ n {\mid} \vec u _ i\in V ,i=1,2,\cdots,n }
-$$
+Well, the same symbols will apply here. 
 
-This is the Chain.
+|                 | Homology                | Cohomology            | Notes                          |
+| --------------- | ----------------------- | --------------------- | ------------------------------ |
+| $\d$            | meant "take boundaries" | "exterior derivative" |                                |
+|                 | chains                  | differential forms    |                                |
+| $\d \omega = 0$ | boundary                | closed form           | "closed" stuff has no boundary |
+| $\omega=\d\eta$ | cycle                   | exact form            |                                |
+
+From differential forms, we can tell if the space has a whole like we did in homology groups. Still, we need to define the reverse map of $\d$, namely integration, in order to find the $\operatorname{img} 0$.
 
