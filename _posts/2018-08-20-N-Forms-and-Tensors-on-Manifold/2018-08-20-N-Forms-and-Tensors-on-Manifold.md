@@ -168,6 +168,7 @@ $$
 $$
 
 $\Eqn{r-form-basis}$ gives us the basis for $r$-forms. The space of $r$-forms spanned by these basis is denoted as $\Omega^r$. A general $r$-form is then
+
 $$
 \omega=\frac{1}{r!}\omega_{\mu_1\mu_2\cdots\mu_r}\d x^{\mu _ 1} \wedge \d x^{\mu _ 2} \wedge\cdots\wedge \d x^{\mu _ r}
 $$
@@ -177,6 +178,7 @@ There are only $\binom{m}{r}=\frac{m!}{(m-r)!r!}$ choices of $\set{\d x^{\mu_i}}
 ## Wedge Product of $p$-Forms
 
 For example,
+
 $$
 \begin{align}
 (3\d x + \d y) ∧ (\e^x\d x + 2\d y) &= 3\e^x\d x ∧ \d x + 6\d x ∧ \d y + \e^x \d y ∧ \d x + 2\d y ∧ \d y\\
@@ -302,6 +304,7 @@ $$
 ### Curl
 
 Now we will see how exterior derivative act on one-forms. For example, 
+
 $$
 \d(F \d x+G\d y +H\d z) = (\Partial{G}{x} −\Partial{F}{y})\d x\wedge \d y +(\Partial{H}{y} −\Partial{G}{z})  \d y \wedge \d z + (\Partial{F}{z} − \Partial{H}{x})\d z \wedge \d x \notag
 $$
@@ -333,14 +336,17 @@ $$
 $$
 
 Finally we have the rule
+
 $$
 \nabla \times V = \Big(\star\big( \d(V^\flat)\big)\Big)^\sharp.
 $$
+
 What this complicated rule says is the following. To take the curl of a vector, first convert it to a one-from $V^\flat$, then  take the exterior derivative of the one-from and get $\d V^\flat$, and finally convert the two form back to a vector through $\star \left(\phantom{a}\right)^\sharp$.
 
 ### Gradient
 
 Now we take the exterior derivative of a two-from,
+
 $$
 \begin{align*}
 &\d (F \d y \wedge \d z + G\d z \wedge \d x + H\d x \wedge \d y)\\
@@ -349,14 +355,19 @@ $$
 &= (\Partial{F}{x} + \Partial{G}{y}  + \Partial{H}{z} )dx ∧ dy ∧ dz\quad,
 \end{align*}
 $$
+
 which looks like the gradient. The rule is again
+
 $$
 \vec\nabla\cdot V = \Partial{F}{x} + \Partial{G}{y}  + \Partial{H}{z}.
 $$
+
 Write that rule as Hodge dual, we have
+
 $$
 \vec\nabla\cdot V=\star\Big(\d \big(\star (V ^\flat) \big)\Big),
 $$
+
 which means the following. Covert a vector field to a one-form, then take the Hodge dual of it to get a two-form, and then take the exterior derivative to get the right coefficient, and finally convert the result back to a number.
 
 ### Summary
