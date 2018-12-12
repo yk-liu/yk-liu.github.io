@@ -75,3 +75,21 @@ Well, the same symbols will apply here.
 
 From differential forms, we can tell if the space has a whole like we did in homology groups. Still, we need to define the reverse map of $\d$, namely integration, in order to find the $\operatorname{img} 0$.
 
+The integration of a differential form over what? A simplex!
+
+Recall that a simplex of dimension $r$ is defined in $\R^r$ as 
+$$
+\sigma _ r=\set{x\in\R^N \mid x=\sum _ {i=0}^n c _ ip _ i, c _ i\ge0, \sum _ {i=0}^n c _ i=1},
+$$
+and an $r$-from is now
+$$
+\omega=w(x)\, \d x^1 \wedge \d x^2\wedge\cdots\wedge\d x^r
+$$
+
+
+this
+$$
+\int_{\sigma_r}\omega=\int
+$$
+
+

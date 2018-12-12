@@ -84,7 +84,7 @@ Why is a cube with a hole different with other polyhedrons and how can we charac
 
 One way to see it is that it has a hole in it. But a hole is a concept from daily life, which a typical mathematician might ask unhumorously for clarification. One way to see it is that there exist some loops, as is shown below, that will not cut the **surface** of this polyhedron in to halves. This partly explain the motivation of defining chains and boundaries later.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CutCubeWithHole.png" width="80%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CutCubeWithHole.png" width="60%">
 
 
 
@@ -96,7 +96,7 @@ Homology, however, is just a natural way of defining Euler characteristics on to
 
 Triangulation is again no stranger for anyone who ever took part in [IYPT](http://iypt.org)(International Young Physicists' Tournament), [CUPT](http://adsabs.harvard.edu/abs/2013APS..MARF38013L)(China Undergraduate Physics Tournament), or any PTs, and had some experience with [COMSOL Multiphysics® software](https://www.comsol.com/comsol-multiphysics). The following is a triangulation, or a "meshing" as is called in the software, of a spring (from [Nishant Nath](https://nishantnath.wordpress.com/2012/06/21/comsol-tutorials-meshing/)).
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/COMSOL(R)mesh.png" width="100%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/COMSOL(R)mesh.png" width="80%">
 
 It's also very commonly seen at 3D modeling and Art (image from [freepik](https://www.freepik.com/blog/10-free-low-poly-animal-vector-images/)), see also [here](https://poly.google.com/view/46bXrRt8pFF).
 
@@ -106,14 +106,14 @@ It's self-evident that this technique is very useful as it converts a smooth obj
 
 Indeed, similar techniques can be adopted to topology spaces. We can use "triangles" to mesh out any oddly shaped topological space, turning it into a "polyhedron". From this polyhedron, we can calculate the Euler characteristic of the space, telling us how many "holes" are in this topological space. This gives us a way to classify topology spaces according to its "holes". This is an important aspect of a topological space as in the famous example of topology - a cup and a doughnut is topological equivalent. (image from [Wikipedia](https://en.wikipedia.org/wiki/Topology))
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif" width="20%">
 
 ## Simplexes
 
-Simplexes are the generalization of triangles and tetrahedrons to lower or higher dimensions. A $0$-simplex, denoted as $\spl{p _ 0}$ is a point, a $1$-simplex $\spl{p _ 0p _ 1}$ is a line, a $3$-simplex $\spl{p _ 0p _ 1p _ 2}$ is a triangle with its interior, a $4$-simplex a solid tetrahedron. A $n$-simplex $\sigma _ n$ is denoted as $\sigma _ n=\spl{ p _ 0,p _ 1,\cdots,p _ n}$, with $\set{p _ i}$ is a set of $n$ geometrically independent points,
+Simplexes are the generalization of triangles and tetrahedrons to lower or higher dimensions. A $0​$-simplex, denoted as $\spl{p _ 0}​$ is a point, a $1​$-simplex $\spl{p _ 0p _ 1}​$ is a line, a $3​$-simplex $\spl{p _ 0p _ 1p _ 2}​$ is a triangle with its interior, a $4​$-simplex a solid tetrahedron. A $n​$-simplex $\sigma _ n​$ is denoted as $\sigma _ n=\spl{ p _ 0,p _ 1,\cdots,p _ n}​$, with $\set{p _ i}​$ is a set of $n​$ geometrically independent points,
 
 $$
-\sigma _ r=\set{x\in\R^N \mid x=\sum _ {i=0}^n c _ ip _ i, c _ i\ge0, \sum _ {i=0}^n c _ i=0},\quad N\gt n.
+\sigma _ r=\set{x\in\R^N \mid x=\sum _ {i=0}^n c _ ip _ i, c _ i\ge0, \sum _ {i=0}^n c _ i=1},\quad N\gt n.
 $$
 
 Informally, a $n$-simplex is the solid polyhedron constructed by $n+1$ points that of the highest dimension. 
@@ -209,11 +209,11 @@ $$
 >
 > These big words of "intrinsic geometric structure" is still quite hard to understand. Just think of Planet Earth. You are living on the surface of the Earth. You know there are no boundaries on the **surface** of Earth, otherwise Christopher Columbus would have fallen into nothingness.
 >
-> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/FlatEarth.png" width="60%">
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/FlatEarth.png" width="50%">
 >
 >  The same reasoning applies, even if the Earth were a doughnut, you cannot find and boundary to fall from.
 >
-> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/DoughnutEarth.png" width="60%">
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/DoughnutEarth.png" width="50%">
 >
 > Jokes aside, you can think of a sheet of paper as have boundaries, i.e., four edges. Gluing two of them we have a tube, leaving only two edges. Further gluing these two edges together we end up with a torus with no boundaries.
 
