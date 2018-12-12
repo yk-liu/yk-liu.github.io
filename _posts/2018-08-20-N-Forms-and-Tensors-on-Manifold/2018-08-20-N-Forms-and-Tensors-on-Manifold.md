@@ -2,10 +2,9 @@
 title: N-Forms and Tensors on Manifold
 edit: 2018-11-26
 categories: Topology
-tags: One-form N-Forms Tensor Topology 
-keywords: one-form wedge-product dual-space tensor-product
-description: We are going to generalize the concept of vectors and one-forms to tensors and differential forms.
-rss: false
+tags: One-form Differential-Forms Tensor Topology 
+keywords: one-form wedge-product dual-space tensor-product exterior-derivative curl divergent div 
+description: We are going to generalize the concept of vectors and one-forms to tensors and differential forms. In the mean time, wedge product and exterior derivative were introduced.
 ---
 
 $$
@@ -289,38 +288,87 @@ $$
 \begin{array}{ccccccc}
 &\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}\\
 &\downarrow &&\downarrow&&\downarrow&&\downarrow   \\
-&\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}
+&\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}\\
+& function && divergence && curl && gradient
 \end{array}
 $$
 
 We already have
+
 $$
 \nabla f = (\d f)^\sharp
 $$
 
-Now we will see how exterior derivative act on one-forms.
+### Curl
 
-
-
-
-
-
-
-
-For example, 
+Now we will see how exterior derivative act on one-forms. For example, 
 $$
-\d(F \d x+G\d y +H\d z) = (\Partial{G}{x} −\Partial{F}{y})\d x\wedge \d y + (\Partial{H}{y} −\Partial{G}{z})\d y \wedge \d z + (\Partial{F}{z} − \Partial{H}{x})\d z \wedge \d x
+\d(F \d x+G\d y +H\d z) = (\Partial{G}{x} −\Partial{F}{y})\d x\wedge \d y +(\Partial{H}{y} −\Partial{G}{z})  \d y \wedge \d z + (\Partial{F}{z} − \Partial{H}{x})\d z \wedge \d x \notag
 $$
 
-This coincides with the definition of **curl**.
+If we convert this two form to a vector using the rule 
 
 $$
-\vec{\nabla} \times V = (Hy − Gz)\uvec i + (Gx − Fy)\uvec k + (Fz − Hx)\uvec j
+\begin{cases}
+\d x \wedge \d y \rightarrow \uvec z\\
+\d y \wedge \d z \rightarrow \uvec x\\
+\d z \wedge \d x \rightarrow \uvec y
+ \end{cases},
 $$
 
-Thus the exterior derivative of a $p$-form is a $(p+1)$-form.
+it coincides with the definition of **curl**.
 
+$$
+\vec{\nabla} \times V = (\Partial{H}{y} − \Partial{G}{z})\uvec x + (\Partial{F}{z} − \Partial{H}{x})\uvec y + (\Partial{G}{x} − \Partial{F}{y})\uvec z
+$$
 
+The conversion is called a **Hodge star dual**, denoted as $\star$. In $d$ dimensions the “$\star$” map takes a $p$-form to a $(d − p)$-form. In our case, 
 
+$$
+\begin{align*}
+&\Bigg(\star\left((\Partial{G}{x} −\Partial{F}{y})\d x\wedge \d y + (\Partial{H}{y} −\Partial{G}{z})\d y \wedge \d z + (\Partial{F}{z} − \Partial{H}{x})\d z \wedge \d x\right)\Bigg)^\sharp\\
+ &=\left((\Partial{H}{y} − \Partial{G}{z})\d x + (\Partial{F}{z} − \Partial{H}{x})\d y + (\Partial{G}{x} − \Partial{F}{y})\d z\right)^\sharp\\
+ &=(\Partial{H}{y} − \Partial{G}{z})\uvec x + (\Partial{F}{z} − \Partial{H}{x})\uvec y + (\Partial{G}{x} − \Partial{F}{y})\uvec z.
+ \end{align*}
+$$
 
+Finally we have the rule
+$$
+\nabla \times V = \Big(\star\big( \d(V^\flat)\big)\Big)^\sharp.
+$$
+What this complicated rule says is the following. To take the curl of a vector, first convert it to a one-from $V^\flat$, then  take the exterior derivative of the one-from and get $\d V^\flat$, and finally convert the two form back to a vector through $\star \left(\phantom{a}\right)^\sharp$.
+
+### Gradient
+
+Now we take the exterior derivative of a two-from,
+$$
+\begin{align*}
+&\d (F \d y \wedge \d z + G\d z \wedge \d x + H\d x \wedge \d y)\\
+& = (\Partial{F}{x}\d x + \Partial{F}{y}\d y + \Partial{F}{z}\d z) \wedge \d y \wedge \d z +(\Partial{G}{x}\d x + \Partial{G}{y}\d y + \Partial{G}{z}\d z) \wedge \d z \wedge \d x+\\
+& \phantom{==}(\Partial{H}{x}\d x + \Partial{H}{y}\d y + \Partial{H}{z}\d z) \wedge \d x \wedge \d y\\
+&= (\Partial{F}{x} + \Partial{G}{y}  + \Partial{H}{z} )dx ∧ dy ∧ dz\quad,
+\end{align*}
+$$
+which looks like the gradient. The rule is again
+$$
+\vec\nabla\cdot V = \Partial{F}{x} + \Partial{G}{y}  + \Partial{H}{z}.
+$$
+Write that rule as Hodge dual, we have
+$$
+\vec\nabla\cdot V=\star\Big(\d \big(\star (V ^\flat) \big)\Big),
+$$
+which means the following. Covert a vector field to a one-form, then take the Hodge dual of it to get a two-form, and then take the exterior derivative to get the right coefficient, and finally convert the result back to a number.
+
+### Summary
+
+$$
+\begin{array}{cccccccc}
+&\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}&\xrightarrow{\d}{}& 0\\
+&\downarrow &&\downarrow&&\downarrow&&\downarrow   \\
+&\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}\\
+& function && divergence && curl && gradient
+\end{array}
+$$
+
+We have went through all items in the diagram above and verified that our definition of exterior derivative united our common definition of differential operators in vector calculus into one simple symbol $\d$. 
 
