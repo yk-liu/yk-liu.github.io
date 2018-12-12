@@ -34,6 +34,11 @@ kramdown:
  syntax_highlighter_opts:
   # Use existing pygments syntax highlighting css
   css_class: 'highlight'
+ span:
+  line_numbers: false
+ block:
+  line_numbers: true
+  start_line: 1
  
 highlighter: rouge
     
