@@ -48,14 +48,14 @@ In the json file, first press `i`, and input
 {
     "server":"your_droplet_ip",
     "port_password": {
-        "8000": "psw",
-        "8001": "psw",
-        "8002": "psw",
-				"8003": "psw",
-        "4000": "psw",
-				"4001": "psw",
-				"4002": "psw",
-				"4003": "psw"
+      "8000": "psw",
+      "8001": "psw",
+      "8002": "psw",
+      "8003": "psw",
+      "4000": "psw",
+      "4001": "psw",
+      "4002": "psw",
+      "4003": "psw"
     },
     "local_address": "127.0.0.1",
     "local_port":1080,
