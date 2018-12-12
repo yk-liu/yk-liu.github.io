@@ -65,7 +65,7 @@ In the json file, first press `i`, and input
 }
 ```
 
-Press `esc` and then `:wq` to qui
+Press `esc` and then `:wq` to [quit vi](https://twitter.com/iamdevloper/status/435555976687923200).
 
 ```bash
 ssserver -c /etc/shadowsocks.json -d start
