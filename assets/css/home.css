@@ -37,6 +37,10 @@ div.lower a{
     padding: 0px 2px;
 }
 
+div.lower ul,ol,dl{
+    font-size:large
+}
+
 b,strong{
     font-weight:bolder
 }
