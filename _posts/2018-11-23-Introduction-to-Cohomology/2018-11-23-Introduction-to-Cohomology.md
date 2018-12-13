@@ -60,25 +60,27 @@ The cohomology is a relationship defined on forms. We will find how to define  c
 ## The celebrated $\d$
 
 Remember the homology relations? It's very similar to the diagram we found in differential forms and tensors.
+
 $$
 \begin{array}{ccccccc}
 &\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}\\
 &\downarrow &&\downarrow&&\downarrow&&\downarrow   \\
 &\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}\\
-& function && divergence && curl && gradient
+& function & & divergence & & curl & & gradient
 \end{array}
 $$
+
 Hence we have the following diagram.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/FormsComplex.png" width=80%>
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/FormsComplex.png" width="80%">
 
 The differences exists but the symbol $\d$ still stands for "take the edge". 
 
-|                 | Homology                | Cohomology            | Notes                                                        |
-| --------------- | ----------------------- | --------------------- | ------------------------------------------------------------ |
-| $\d$            | meant "take boundaries" | "exterior derivative" |                                                              |
-|                 | chains                  | differential forms    |                                                              |
-| $\d \omega = 0$ | cycle                   | closed form           | "Closed" forms has no boundary.                              |
+|                 | Homology                | Cohomology            | Notes                                                               |
+| --------------- | ----------------------- | --------------------- | ------------------------------------------------------------------- |
+| $\d$            | meant "take boundaries" | "exterior derivative" |                                                                     |
+|                 | chains                  | differential forms    |                                                                     |
+| $\d \omega = 0$ | cycle                   | closed form           | "Closed" forms has no boundary.                                     |
 | $\omega=\d\eta$ | boundary                | exact form            | Exact forms are "exactly" the exterior derivative of a higher form. |
 
 From differential forms, we can tell if the space has a whole like we did in homology groups. Still, we need to define the reverse map of $\d$, namely integration, in order to find the $\operatorname{img} 0$.
@@ -88,14 +90,19 @@ From differential forms, we can tell if the space has a whole like we did in hom
 The integration of a differential form over what? A simplex!
 
 Recall that a simplex of dimension $r$ is defined in $\R^r$ as 
+
 $$
 \sigma _ r=\set{x\in\R^N \mid x=\sum _ {i=0}^n c _ ip _ i, c _ i\ge0, \sum _ {i=0}^n c _ i=1},
 $$
+
 and an $r$-from is now written as
+
 $$
 \omega=w(\vec x)\, \d x^1 \wedge \d x^2\wedge\cdots\wedge\d x^r
 $$
+
 Integration of a form over a simplex is defined as
+
 $$
 \begin{align}
 \int_{\sigma_r}\omega &=\int _{\sigma_r} w(\vec x)\d x^1 \wedge \d x^2\wedge\cdots\wedge\d x^r\\
@@ -106,9 +113,11 @@ $$
 ## Stokes' Theorem and Cohomology
 
 The cohomology group is the dual vector space of homology space. This dual relationship is best represented by the Stokes' theorem as
+
 $$
 \int _{\sigma_r} \d \omega = \int_{\partial\sigma _r} \omega
 $$
+
 This dual is now $\partial \leftrightarrow \d$.
 
 ## Exactness

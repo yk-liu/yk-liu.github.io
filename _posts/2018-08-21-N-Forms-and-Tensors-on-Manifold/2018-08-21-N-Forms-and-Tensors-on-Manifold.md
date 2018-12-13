@@ -60,7 +60,7 @@ $$
 
 Such tensors are called of type $(q,r)$. $T_{(1,1)},\, T_{(2,0)},\,T_{(0,2)}$ can be written as matrices, while it takes a third dimension to write tensors like $T_{(3,0)}$ in the similar fashion. Below is a diagram from [Wikipeida](https://en.wikipedia.org/wiki/OLAP_cube), showing an example of some kind of $3$-d matrix.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/OLAP_drill_up%26down.png" width=80%>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/OLAP_drill_up%26down.png" width="80%">
 
 # Wedge Product
 
