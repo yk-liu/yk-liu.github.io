@@ -28,7 +28,7 @@ $$
 Some more text
 ```
 
-do not use `{{` anywhere in your math. use `{ {` instead. Jekyll will parse that as liquid tags
+do not use `\{{` anywhere in your math. use `{ {` instead. Jekyll will parse that as liquid tags
 
 do not use `x_1` in inline math, write that as `x _ 1`. Jekyll will parse that as italic.
 
