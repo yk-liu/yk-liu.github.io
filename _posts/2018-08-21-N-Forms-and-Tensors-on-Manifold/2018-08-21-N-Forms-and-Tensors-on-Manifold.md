@@ -373,11 +373,11 @@ which means the following. Covert a vector field to a one-form, then take the Ho
 ### Summary
 
 $$
-\begin{array}{cccccccc}
-&\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}&\xrightarrow{\d}{}& 0\\
+\begin{array}{ccccccc}
+&\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}\\
 &\downarrow &&\downarrow&&\downarrow&&\downarrow   \\
-&\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}\\
-& function && divergence && curl && gradient
+&\text{ {functions} } &\xrightarrow{\nabla}{} &\text{ {vector fields} } &\xrightarrow{\nabla\times}{} &\text{ {vector fields} } &\xrightarrow{\nabla\cdot}{} &\text{ {functions} }\\
+& function & & divergence & & curl & & gradient
 \end{array}
 $$
 
