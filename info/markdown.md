@@ -8,7 +8,27 @@ mathjax: true
 
 # Careful!
 
-Don't use [] in YAML front matter. Use `\newline` instead of `\\` in inline math. `\substack` is a very useful command.
+Don't use [] in YAML front matter. 
+
+Use `\newline` instead of `\\` in inline math. 
+
+`\substack` is a very useful command.
+
+`<img src="" width=80%>` will be rendered by typora but Jekyll only renders `<img src="" width="80%">`
+
+Display math must have extra black lines above and below like this.
+
+```markdown
+some normal text
+
+$$
+E=mc^2
+$$
+
+Some more text
+```
+
+
 
 # Highlights
 
