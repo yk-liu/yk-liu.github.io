@@ -60,11 +60,20 @@ The cohomology is a relationship defined on forms. We will find how to define  c
 
 ## The celebrated $\d$
 
-Remember the homology relations? 
+Remember the homology relations? It's very similar to the diagram we found in differential forms and tensors,
+$$
+\begin{array}{ccccccc}
+&\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}\\
+&\downarrow &&\downarrow&&\downarrow&&\downarrow   \\
+&\text{{functions}} &\xrightarrow{\nabla}{} &\text{{vector fields}} &\xrightarrow{\nabla\times}{} &\text{{vector fields}} &\xrightarrow{\nabla\cdot}{} &\text{{functions}}\\
+& function && divergence && curl && gradient
+\end{array}
+$$
+Hence we have the following diagram.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/FormsComplex.png" width=50%>
 
-Well, the same symbols will apply here. 
+The differences exists but the symbol $\d​$ still stands for "take the edge". 
 
 |                 | Homology                | Cohomology            | Notes                          |
 | --------------- | ----------------------- | --------------------- | ------------------------------ |
@@ -85,11 +94,12 @@ and an $r$-from is now
 $$
 \omega=w(x)\, \d x^1 \wedge \d x^2\wedge\cdots\wedge\d x^r
 $$
-
-
 this
 $$
-\int_{\sigma_r}\omega=\int
+\begin{align}
+\int_{\sigma_r}\omega &\dfdas \int w(x)\d x^1 \wedge \d x^2\wedge\cdots\wedge\d x^r\\
+&=
+\end{align}
 $$
 
 

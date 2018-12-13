@@ -1,6 +1,6 @@
 ---
 title: N-Forms and Tensors on Manifold
-edit: 2018-11-26
+edit: 2018-12-11
 categories: Topology
 tags: One-form Differential-Forms Tensor Topology 
 keywords: one-form wedge-product dual-space tensor-product exterior-derivative curl divergent div 
