@@ -37,7 +37,7 @@ $$
 \notag
 $$
 
-One form is a concept useful in integration, the integrand is a one-form. To perform integration on Manifold, one-form is critical.
+One form is a concept useful in integration, the integrand is a one-form. To perform integration on Manifold, one-form is critical. This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf).
 
 # Curves and Functions
 
@@ -92,6 +92,7 @@ The basis' action on vector is denoted as $\d x^i (V)$.
     $$
     \omega (V) =\omega_i \d x ^ i (V) = \omega _i V ^ i 
     $$
+
 
 
 ## Musical Isomorphism
@@ -442,6 +443,7 @@ Here are the steps to find the expression for one form $\form f$.
 >       $$
 >
 >
+>
 
 We finally arrive at the conclusion that
 
@@ -494,6 +496,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 
 So far so good. 

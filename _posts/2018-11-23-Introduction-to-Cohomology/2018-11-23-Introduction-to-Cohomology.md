@@ -43,6 +43,8 @@ $$
 \notag
 $$
 
+This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf).
+
 # The Name
 
 "De Rham Cohomology" is translated in Chinese as "德拉姆上同调", where "同调" stands for "same tune". I suppose this is related to the musical isomorphism between one forms and vectors. As for the meaning of "co-", here are my thoughts. 
@@ -57,7 +59,7 @@ $$
 
 The cohomology is a relationship defined on forms. We will find how to define  chains, boundaries and cycles on differential forms.
 
-## The celebrated $\d$
+## The celebrated $\operatorname{d}$
 
 Remember the homology relations? It's very similar to the diagram we found in differential forms and tensors.
 
@@ -117,6 +119,14 @@ The cohomology group is the dual vector space of homology space. This dual relat
 $$
 \int _{\sigma_r} \d \omega = \int_{\partial\sigma _r} \omega
 $$
+
+If we take $\omega = a \d x + b \d y + c \d z$, and $w=(a,b,c)$, we have
+$$
+\int_S \vec\nabla\times w \cdot \d \vec S =\oint_C\vec w\cdot\d \vec S
+$$
+If we take $\psi=\frac{1}{2}\psi_{}$
+
+
 
 This dual is now $\partial \leftrightarrow \d$.
 

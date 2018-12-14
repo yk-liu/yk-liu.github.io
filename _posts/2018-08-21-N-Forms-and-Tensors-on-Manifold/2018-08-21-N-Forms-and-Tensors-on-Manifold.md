@@ -37,7 +37,7 @@ $$
 \notag
 $$
 
-In this post Einstein summation rule is used. We are going to generalize the concept of vectors and one-forms to tensors and differential forms (or $N$-forms).
+In this post Einstein summation rule is used. We are going to generalize the concept of vectors and one-forms to tensors and differential forms (or $N$-forms). This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf).
 
 # Tensors
 
