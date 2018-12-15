@@ -51,3 +51,19 @@ div#content-container > h6::before {
     counter-increment: h6;
     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " " ;
 }
+
+/* side bar counter */
+ol {
+  counter-reset: section;                /* Creates a new instance of the
+                                            section counter with each ol
+                                            element */
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: section;            /* Increments only this instance
+                                            of the section counter */
+  content: counters(section, ".") " ";   /* Combines the values of all instances
+                                            of the section counter, separated
+                                            by a period */
+}
