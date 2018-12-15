@@ -2,9 +2,9 @@
 title: Vectors and One-Forms on Manifold
 edit: 2018-12-06
 categories: Topology
-tags: One-form Topology Vector
+tags: One-form Topology Vector Tangent-space
 keywords: one-form manifold Topology covector dual-space tangent-vector
-description: My interpretation on one-forms.
+description: Since in general there is no way to define a "straight arrow" connecting two points, Vectors can only be "tangent vectors" on manifolds. In this post, tangent vectors are introduced heuristically, with emphasis on **how and why** should we define vectors as operators. Co-vectors, also called one-froms, are introduced as the **dual**. The reason for defining one-forms as differentials are introduced heuristically. This post also addresses the problem of inconsistency when the basis of vector act on that of a one form. 
 ---
 
 $$
@@ -171,7 +171,6 @@ $$
  &\dfdas\nabla _ {V}f=\lim _ {h\rightarrow0}\frac{f(\vec x + hV)-f(\vec x)}{h}\in\R \label{directionalderivative}
  \end{align}
 $$
-
 
 # Vectors on Manifolds
 
@@ -496,7 +495,6 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
-
 
 
 So far so good. 
