@@ -51,7 +51,7 @@ This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) us
 | [Homepage and color scheme](https://github.com/nrandecker/particle) | Layout @ homepage, color scheme @ all pages     | [MIT](http://opensource.org/licenses/MIT)                    |
 | [List of recent post](https://github.com/mdo/jekyll-snippets/blob/master/posts-list.html) | Homepage, Post index                            | [MIT](http://opensource.org/licenses/MIT)                    |
 | [Search](https://github.com/christian-fei/Simple-Jekyll-Search) | Post index, Tags index                          | [MIT](http://opensource.org/licenses/MIT)                    |
-| [Top navigation, back to top button, Toc button](https://www.w3schools.com/) | Post, all pages with these elements             | [TOS](https://www.w3schools.com/about/about_copyright.asp)   |
+| [Side bar](https://github.com/poole/lanyon)                  | Post, all pages with these elements             | [MIT](https://github.com/poole/lanyon/blob/master/LICENSE.md) |
 | [Table of content](https://github.com/allejo/jekyll-toc)     | Post                                            | [BSD-3](https://opensource.org/licenses/BSD-3-Clause) or [MIT](http://opensource.org/licenses/MIT) |
 | [Markdown vue theme and color scheme](https://github.com/blinkfox/typora-vue-theme) | Markdown theme @ Post, color scheme @ all pages | [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)     |
 | [Tags, Tag cloud, Tag page](https://hyunyoung2.github.io/2016/12/17/Tag_Cloud/) | Post, Post index, Tags index                    | [MIT](http://opensource.org/licenses/MIT), repo [here](https://github.com/hyunyoung2/hyunyoung2.github.io). Tag page inspired by [haixing-hu](https://haixing-hu.github.io/tags.html) |

@@ -13,7 +13,7 @@
 				 <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
 				 {% endif %}
 				 {% if page.status %}
-				 <p><code>Status</code>:  &nbsp; <code >{% include status-indicator.html status=page.status%}</code></p>
+				 <p><code>Status</code>:  &nbsp; {% include status-indicator.html status=page.status%} </p>
 				 {% endif %}
 			</div>
 			{% if site.tags != '' %}
