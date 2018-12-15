@@ -3,9 +3,8 @@ title: Introduction to de Rham Cohomology
 edit: 2018-11-23
 categories: Topology
 tags: de-Rham-Cohomology Topology Stokes'-Theorem
-keywords: cohomology exact
-description: Cohomology is viewed as a natural dual space of homology in this post. The bilinear map (i.e., the inner product) between these two spaces are just integration. At the end of this post, a few 
-status: Writing
+keywords: cohomology exact dual
+description: Cohomology is viewed as a natural dual space of homology in this post. The bilinear map (i.e., the inner product) between these two spaces are just integration. At the end of this post, cohomology group as an indicator of "holes" in space is discussed.
 ---
 
 $$
@@ -173,11 +172,9 @@ $$
 H^r(M)\dfdas Z^r(M)/B^r(M)
 $$
 
-Like in the case of homology group, the cohomology group is just those closed $r$-forms that are not exact.
+Like in the case of homology group, the cohomology group is just those closed $r​$-forms that are not exact.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/FormsComplex.png" width="80%">
-
-
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/ChainComplex.png" width="50%">
 
 # Exactness
 
@@ -196,7 +193,70 @@ So far we have defined the cohomology group, and pointed out the relationships b
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/ChainComplex.png" width="50%">
 
+In short, we are looking for closed $r$-forms that are not exact. For simplicity, we will be looking at one-forms in $2$-dimensional spaces, $\omega = F\d x+G\d y$. 
 
+> If we take $F$ and $G$ both as polynomials, from $\omega$ is closed, 
+> 
+> $$
+> \begin{align*}
+> \d \omega &= \d (F\d x) + \d(G\d y)\\
+> &=\d F\wedge \d x + \d G \wedge \d y\\
+> &=\left(\Partial{F}{x}\d x + \Partial{F}{y}\d y \right)\wedge \d x+\left(\Partial{G}{x}\d x + \Partial{G}{y}\d y \right)\wedge \d y\\
+> &=\left(\Partial{F}{y}-\Partial{G}{x}\right)(\d x \wedge \d y)\\
+> &=0,
+> \end{align*}
+> $$
+> 
+> we have
+> 
+> $$
+> \Partial{F}{y}=\Partial{G}{x}.
+> $$
+> 
+> This guarantees the equation 
+> 
+> $$
+> \begin{cases}
+> \Partial{f}{x}=F\\
+> \Partial{f}{y}=G
+> \end{cases}
+> $$
+> 
+> has a solution. Which means
+> 
+> $$
+> \d f = \omega
+> $$
+> 
+> always hold. 
+> 
 
+This is interesting. Remember that for $r$-cycles, as long as it is in $\R^3$, it is a boundary. In another word, **as long as the space has no "holes", closed forms are always exact.** One way to make a hole in the space is to put polynomials in the denominator, for example,
 
+$$
+\omega=\frac{-y}{x^2+y^2}\d x +\frac{x}{x^2+y^2}\d y
+$$
 
+is closed. However, the space now has a hole at $(0,0)$, it is not exact anymore.
+
+> **Proof that $\omega$ is not exact**: 
+>
+> (From [[math stackexchange](https://math.stackexchange.com/questions/786837/show-that-the-form-w-is-closed-but-not-exact)]) transform $\omega$ in polar coordinates, using 
+> $$
+> x = r\cos \theta\notag\\
+> y = r\sin \theta\notag
+> $$
+>
+> we have 
+>
+> $$
+> \omega = \d\theta
+> $$
+>
+> Namely, we can define a "function" $f(x,y)=\arctan(y/x)$ such that $\omega=\d f$, and
+> $$
+> \int_c w = \int_0^{2\pi} dt = 2\pi. \tag{12}
+> $$
+> According to section [`Exactness`](#exactness), this form is not exact. That "function" $f$ is not even single value on the entire plane $\R^2/0$.
+
+Now we have applied cohomology theories on trivial spaces and $\R^2/0$, and showed that cohomology can distinguish these two types of spaces. In this sense, cohomology groups serves the same purpose as homology groups: classify spaces in terms of "holes" in it.
