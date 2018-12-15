@@ -58,6 +58,7 @@ defaults:
       toc: true
       mathjax: true
       mermaid: false
+      numbering: true
       commentable: true
       status: Completed
       protected: false
