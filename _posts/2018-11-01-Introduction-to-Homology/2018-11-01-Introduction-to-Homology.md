@@ -5,6 +5,7 @@ categories: Topology
 tags: Homology Topology Euler-Characteristic
 keywords: simplex complex triangulation cycle boundary chain hole Euler-Poincare
 description: Euler characteristics is a topological invariant, and can be interpreted as a "hole"-indicator. Homology is just a natural way of defining Euler characteristics on topological spaces. With triangulation of manifold, we can define cycles and boundaries and combine them to homology groups. We see that the group is trivial for trivial spaces, and is able to distinguish manifolds in terms "holes" in them.
+
 ---
 
 $$
