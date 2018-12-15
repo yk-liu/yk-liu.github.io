@@ -4,7 +4,7 @@ edit: 2018-11-21
 categories: Topology
 tags: Homology Topology Euler-Characteristic
 keywords: simplex complex triangulation cycle boundary chain hole Euler-Poincare
-description: My study notes on homology, as a preparation for Cohomology and to K-theory.
+description: Euler characteristics is a topological invariant, and can be interpreted as a "hole"-indicator. Homology is just a natural way of defining Euler characteristics on topological spaces. With triangulation of manifold, we can define cycles and boundaries and combine them to homology groups. We see that the group is trivial for trivial spaces, and is able to distinguish manifolds in terms "holes" in them.
 ---
 
 $$
@@ -85,8 +85,6 @@ Why is a cube with a hole different with other polyhedrons and how can we charac
 One way to see it is that it has a hole in it. But a hole is a concept from daily life, which a typical mathematician might ask unhumorously for clarification. One way to see it is that there exist some loops, as is shown below, that will not cut the **surface** of this polyhedron in to halves. This partly explain the motivation of defining chains and boundaries later.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CutCubeWithHole.png" width="60%">
-
-
 
 # Triangulation
 
