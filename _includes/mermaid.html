@@ -14,42 +14,29 @@
     end
 </code> -->
 
-<!-- Change above to below -->
-
-<!--
-<div class="mermaid">
-  graph LR
-      A --- B
-      B-- >C[fa:fa-ban forbidden]
-      B-- >D(fa:fa-spinner);
-  </div>
--->
-
-<script> 
-$(".language-mermaid").each(function() {
-    
-  $(this).replaceWith($('<div class=\"mermaid\" >' + this.innerHTML + '</div>'));
- 
-});
-</script>
-
 <!-- call mermaid -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.2/mermaid.min.js"></script>
-
 <script>
-
-var config = {
-    startOnReady:true,
-    theme: 'forest',
-    flowchart:{
-            useMaxWidth:false,
-            htmlLabels:true
-        }
-};
-
-mermaid.initialize(config);
-
+  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
+    mermaid.initialize({
+      startOnLoad: true
+    });
+    mermaid.init(undefined, '.language-mermaid');
+  });
 </script>
+<!-- <script> -->
+
+<!-- var config = { -->
+    <!-- startOnReady:true, -->
+    <!-- theme: 'forest', -->
+    <!-- flowchart:{ -->
+            <!-- useMaxWidth:false, -->
+            <!-- htmlLabels:true -->
+        <!-- } -->
+<!-- }; -->
+
+<!-- mermaid.initialize(config); -->
+
+<!-- </script> -->
 
 {% endif %}
