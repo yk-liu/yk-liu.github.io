@@ -4,7 +4,7 @@ edit: 2018-12-11
 categories: Topology
 tags: One-form Differential-Forms Tensor Topology 
 keywords: one-form wedge-product dual-space tensor-product exterior-derivative curl divergent div 
-description: We are going to generalize the concept of vectors and one-forms to tensors and differential forms. In the mean time, wedge product and exterior derivative were introduced.
+description: We are going to generalize the concept of vectors and one-forms to tensors and differential forms. In the mean time, wedge product and exterior derivative were introduced. Exterior derivative lies the foundation for cohomology.
 ---
 
 $$

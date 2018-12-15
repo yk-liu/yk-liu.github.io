@@ -5,7 +5,7 @@ mathjax: true
 categories: Topology Lie-group
 tags: Lie-algebra Lie-group
 keywords: Lie-algebra Lie-group
-description: My understanding of Lie-group and its Lie-algebra
+description: My understanding of Lie-group and its Lie-algebra. The statement "Lie-algebra is approximation of Lie-group" is inaccurate since they essentially live in different spaces. This post is not finished. 
 mermaid: true
 status: Paused
 ---

@@ -3,7 +3,7 @@ title: Shadowsocks + Digital Ocean = VPN of 1TB/month
 categories: Code-Snippets
 tags: VPN
 keywords: VPN shadowsocks digital-ocean
-description: Code for using digital ocean service for VPN
+description: Code for using digital ocean service for VPN. It is cheap for .edu-e-mail owners (free 50\$ on GitHub Student Pack). 
 toc: false
 mathjax: false
 ---

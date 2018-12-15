@@ -3,11 +3,11 @@ title: Thank You Word Cloud with Mathematica
 categories: Code-Snippets
 tags: word-cloud Mathematica
 keywords: word-cloud Mathematica
-description: Code for generating thank you word cloud with Mathematica.
+description: Code for generating thank you word cloud with Mathematica. It's great for thank-you page of your slide-shows.
 toc: false
 ---
 
-Mathematica can be used to generate many interesting graphs. I used the codes in this post to generate thank you page in my slideshows. Size of the font is proportional to the number of speakers of that language.
+Mathematica can be used to generate many interesting graphs. I used the codes in this post to generate thank you page in my slide-shows. Size of the font is proportional to the number of speakers of that language.
 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Thank-You-Cloud/assets/Thanks.png" width="50%">

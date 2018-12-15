@@ -4,7 +4,7 @@ title: 量子场论
 categories: Physics-study-notes
 tags: QFT study-notes
 keywords: QFT
-description: My Study notes on QFT lesson for the final.
+description: My Study notes on QFT lesson for the final. Each step of deduction is present in this post. This post covers K-G equations and Dirac equations. 
 status: Archived
 ---
 
