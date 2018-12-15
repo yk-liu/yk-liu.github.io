@@ -1,6 +1,6 @@
 ---
 title: Introduction to de Rham Cohomology
-edit: 2018-11-23
+edit: 2018-12-15
 categories: Topology
 tags: de-Rham-Cohomology Topology Stokes'-Theorem
 keywords: cohomology exact dual
