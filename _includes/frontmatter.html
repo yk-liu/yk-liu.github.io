@@ -1,45 +1,45 @@
 <div id="front-matter" >
-               <div id="title">
-                  <h1>
-                     {{page.title}}
-                  </h1>
-               </div>
-               <div id="info">
-                  <div id="date">
-                     {% if page.edit %}
-                     <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
-                     <p><code>Edited</code>:  &nbsp; {{ page.edit | date: '%B %d, %Y' }} </p>
-                     {% else %}
-                     <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
-                     {% endif %}
-                     {% if page.status %}
-                     <p><code>Status</code>:  &nbsp; <code >{{page.status}}</code></p>
-                     {% endif %}
-                  </div>
-                  {% if site.tags != '' %}
-                  <div id="tag-list">
-                     <p><code> Tags </code>:  &nbsp; 
-                        {% for tag in page.tags %}
-                        {% capture tag_name %}{{ tag }}{% endcapture %}
-                        <code><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
-                        {% endfor %}
-                     </p>
-                  </div>
-                  {% endif %}	
-									{% if site.categories != '' %}
-                  <div id="category-list">
-                     <p><code> Categories </code>:  &nbsp;
-                        {% for category in page.categories %}
-                        {% capture category_name %}{{ category }}{% endcapture %}
-                        <code><a href="/blog/categories#{{ category_name }}" target="_blank">{{ category_name }}</a></code>
-                        {% endfor %}
-                     </p>
-                  </div>
-                  {% endif %}	
-               </div>
-							 {% comment %}
-               <div id="info" >
-                  <p><code>Fonts</code>: &nbsp; {% include fontAdj.html %}</p>
-               </div>
-							 {% endcomment %}
-            </div>
+	 <div id="title">
+			<h1>
+				 {{page.title}}
+			</h1>
+	 </div>
+	 <div id="info">
+			<div id="date">
+				 {% if page.edit %}
+				 <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
+				 <p><code>Edited</code>:  &nbsp; {{ page.edit | date: '%B %d, %Y' }} </p>
+				 {% else %}
+				 <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
+				 {% endif %}
+				 {% if page.status %}
+				 <p><code>Status</code>:  &nbsp; <code >{% include status-indicator.html status=page.status%}</code></p>
+				 {% endif %}
+			</div>
+			{% if site.tags != '' %}
+			<div id="tag-list">
+				 <p><code> Tags </code>:  &nbsp; 
+						{% for tag in page.tags %}
+						{% capture tag_name %}{{ tag }}{% endcapture %}
+						<code><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
+						{% endfor %}
+				 </p>
+			</div>
+			{% endif %}	
+			{% if site.categories != '' %}
+			<div id="category-list">
+				 <p><code> Categories </code>:  &nbsp;
+						{% for category in page.categories %}
+						{% capture category_name %}{{ category }}{% endcapture %}
+						<code><a href="/blog/categories#{{ category_name }}" target="_blank">{{ category_name }}</a></code>
+						{% endfor %}
+				 </p>
+			</div>
+			{% endif %}	
+	 </div>
+	 {% comment %}
+	 <div id="info" >
+			<p><code>Fonts</code>: &nbsp; {% include fontAdj.html %}</p>
+	 </div>
+	 {% endcomment %}
+</div>
