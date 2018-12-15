@@ -1,9 +1,9 @@
 ---
-title: Introduction to De Rham Cohomology
+title: Introduction to de Rham Cohomology
 edit: 2018-11-23
 categories: Topology
-tags: De-Rham-Cohomology Topology
-keywords: cohomology
+tags: de-Rham-Cohomology Topology Stokes'-Theorem
+keywords: cohomology exact
 description: My study notes on cohomology, as a preparation for K-theory.
 status: Writing
 ---
@@ -47,7 +47,7 @@ This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_to
 
 # The Name
 
-"De Rham Cohomology" is translated in Chinese as "德拉姆上同调", where "同调" stands for "same tune". I suppose this is related to the musical isomorphism between one forms and vectors. As for the meaning of "co-", here are my thoughts. 
+"de Rham Cohomology" is translated in Chinese as "德拉姆上同调", where "同调" stands for "same tune". I suppose this is related to the musical isomorphism between one forms and vectors. As for the meaning of "co-", here are my thoughts. 
 
 | English                  | Chinese           | Meaning                  |
 | ------------------------ | ----------------- | ------------------------ |
@@ -57,7 +57,7 @@ This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_to
 
 # Body and Boundary
 
-The cohomology is a relationship defined on forms. We will find how to define  chains, boundaries and cycles on differential forms.
+The cohomology is a relationship defined on forms. We will find how to define chains, boundaries and cycles on differential forms. 
 
 ## The celebrated $\operatorname{d}$
 
@@ -78,16 +78,17 @@ Hence we have the following diagram.
 
 The differences exists but the symbol $\d$ still stands for "take the edge". 
 
-|                 | Homology                | Cohomology            | Notes                                                               |
-| --------------- | ----------------------- | --------------------- | ------------------------------------------------------------------- |
-| $\d$            | meant "take boundaries" | "exterior derivative" |                                                                     |
-|                 | chains                  | differential forms    |                                                                     |
-| $\d \omega = 0$ | cycle                   | closed form           | "Closed" forms has no boundary.                                     |
-| $\omega=\d\eta$ | boundary                | exact form            | Exact forms are "exactly" the exterior derivative of a higher form. |
+|                                          | Homology                            | Cohomology                            | Notes                                                        |
+| ---------------------------------------- | ----------------------------------- | ------------------------------------- | ------------------------------------------------------------ |
+| boundary operator                        | $\partial $ means "take boundaries" | $\d$ stands for "exterior derivative" |                                                              |
+|                                          | chains                              | differential forms                    |                                                              |
+| $\d \omega = 0$                          | cycle                               | closed form                           | "Closed" forms has no boundary, hence the name.              |
+| $\omega=\d\eta$                          | boundary                            | exact form                            | Exact forms are "exactly" the exterior derivative of a higher form. |
+| $\substack{\d^2=0\newline \partial^2=0}$ | boundaries have no boundary         | boundaries have no boundary           |                                                              |
 
 From differential forms, we can tell if the space has a whole like we did in homology groups. Still, we need to define the reverse map of $\d$, namely integration, in order to find the $\operatorname{img} 0$.
 
-## Integration 
+## Definition of Integration
 
 The integration of a differential form over what? A simplex!
 
@@ -112,7 +113,22 @@ $$
 \end{align}
 $$
 
-## Stokes' Theorem and Cohomology
+# Definition of the de Rham Cohomology Group
+
+Now with necessary mathematical machineries defined, finally we will give a definition of cohomology group.
+
+The set of closed $r$-forms on manifold $M$ are called the **co-cycle group**, denoted $Z^r(M)$, not to be confused with cycle group $Z _ r(M)$. The set of exact $r$-forms on manifold $M$ are called the **co-boundary group**, denoted $B^r(M)$.
+
+The $r​$th **de Rham cohomology group** is defined as 
+
+$$
+H^r(M)\dfdas Z^r(M)/B^r(M)
+$$
+
+
+# Stokes' Theorem and Cohomology
+
+## Stokes' Theorem
 
 The cohomology group is the dual vector space of homology space. This dual relationship is best represented by the Stokes' theorem as
 
@@ -121,15 +137,24 @@ $$
 $$
 
 If we take $\omega = a \d x + b \d y + c \d z$, and $w=(a,b,c)$, we have
+
 $$
-\int_S \vec\nabla\times w \cdot \d \vec S =\oint_C\vec w\cdot\d \vec S
+\int_S \vec\nabla\times w \cdot \d \vec S =\oint_C\vec w\cdot\d \vec l
 $$
-If we take $\psi=\frac{1}{2}\psi_{}$
 
+If we take $\psi=\frac{1}{2}\psi _ {\mu\nu}\d x^\mu \wedge\d x^\nu$, and $F^\mu=\varepsilon^{\lambda \mu\nu } \psi_ {\mu\nu}$, we have
 
+$$
+\int_V \vec\nabla\cdot \vec F   \d V =\oint_S\vec F\cdot\d \vec S
+$$
 
-This dual is now $\partial \leftrightarrow \d$.
+## Duality of Homology and Cohomology
+
+As in the beginning of this post, "co-" means dual, and cohomology group is a dual space of homology group.
 
 ## Exactness
 
 Now the exactness is well defined. 
+
+# Make Homology out of Cohomology
+
