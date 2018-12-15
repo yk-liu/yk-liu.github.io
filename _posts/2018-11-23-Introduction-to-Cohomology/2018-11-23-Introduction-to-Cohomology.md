@@ -64,8 +64,8 @@ The cohomology is a relationship defined on forms. We will find how to define ch
 Remember the homology relations? It's very similar to the diagram we found in differential forms and tensors.
 
 $$
-\begin{array}{ccccccc}
-&\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}\\
+\begin{array}{cccccccc}
+&\text{0-forms} & \xrightarrow{\d}{} &\text{$1$-forms} & \xrightarrow{\d}{} & \text{$2$-forms} & \xrightarrow{\d}{}& \text{$3$-forms}&\xrightarrow{\d}{}& 0 \\
 &\downarrow &&\downarrow&&\downarrow&&\downarrow   \\
 &\text{ {functions} } &\xrightarrow{\nabla}{} &\text{ {vector fields} } &\xrightarrow{\nabla\times}{} &\text{ {vector fields} } &\xrightarrow{\nabla\cdot}{} &\text{ {functions} }\\
 & function & & divergence & & curl & & gradient
@@ -88,9 +88,19 @@ The differences exists but the symbol $\d$ still stands for "take the edge".
 
 From differential forms, we can tell if the space has a whole like we did in homology groups. Still, we need to define the reverse map of $\d$, namely integration, in order to find the $\operatorname{img} 0$.
 
-## Definition of Integration
+## "Co-" in Cohomology
 
-The integration of a differential form over what? A simplex!
+As in the beginning of this post, "co-" means dual, and cohomology group is a dual space of homology group. This dual relationship is obvious in the Stokes' theorem, as $\partial\leftrightarrow\d$. But that's not the definition of dual vector space. Like a covector maps a vector to a number, we are looking for this map (i.e., inner product), such that a $r$-chain $c$ and a $r$-from are mapped to a number.
+
+$$
+c,\omega \mapsto (c,\omega)\in\R
+$$
+
+This map is none other than **integration** of a differential form over a simplex!.
+
+$$
+(c,\omega)\dfdas\int_c\omega
+$$
 
 Recall that a simplex of dimension $r$ is defined in $\R^r$ as 
 
@@ -113,6 +123,44 @@ $$
 \end{align}
 $$
 
+The map is clearly bilinear, 
+
+$$
+(c_1+c_2,\omega)=\int_{c_1+c_2}\omega=\int_{c_1}\omega+\int_{c_1}\omega \\
+(c,\omega_1+\omega_2)=\int_{c}(\omega_1+\omega_2)=\int_{c}\omega_1+\int_{c}\omega_2
+$$
+
+## Stokes' Theorem - Duality of $\partial$ and $\operatorname{d}$
+
+We now give Stokes' theorem without proof in the context of exterior derivative.
+
+$$
+\int _{\sigma_r} \d \omega = \int_{\partial\sigma _r} \omega
+$$
+
+> **Example in $3$-dimensional space**:
+>
+> If we take $\omega = a \d x + b \d y + c \d z$, and $w=(a,b,c)$, we have
+>
+> $$
+> \int_S \vec\nabla\times w \cdot \d \vec S =\oint_C\vec w\cdot\d \vec l
+> $$
+> 
+> If we take $\psi=\frac{1}{2}\psi _ {\mu\nu}\d x^\mu \wedge\d x^\nu$, and $F^\mu=\varepsilon^{\lambda \mu\nu } \psi_ {\mu\nu}$, we have
+> 
+> $$
+> \int_V \vec\nabla\cdot \vec F   \d V =\oint_S\vec F\cdot\d \vec S
+> $$
+>
+
+It can be written using the bi-linear map as
+
+$$
+(c,\d \omega)=(\partial c, \omega )
+$$
+
+This duality is in a sense "induces" the homology group and cohomology group 
+
 # Definition of the de Rham Cohomology Group
 
 Now with necessary mathematical machineries defined, finally we will give a definition of cohomology group.
@@ -125,36 +173,20 @@ $$
 H^r(M)\dfdas Z^r(M)/B^r(M)
 $$
 
+Like in the case of homology group, the cohomology group is just those closed $r$-forms that are not exact.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/FormsComplex.png" width="80%">
+
+
+
 
 # Stokes' Theorem and Cohomology
-
-## Stokes' Theorem
-
-The cohomology group is the dual vector space of homology space. This dual relationship is best represented by the Stokes' theorem as
-
-$$
-\int _{\sigma_r} \d \omega = \int_{\partial\sigma _r} \omega
-$$
-
-If we take $\omega = a \d x + b \d y + c \d z$, and $w=(a,b,c)$, we have
-
-$$
-\int_S \vec\nabla\times w \cdot \d \vec S =\oint_C\vec w\cdot\d \vec l
-$$
-
-If we take $\psi=\frac{1}{2}\psi _ {\mu\nu}\d x^\mu \wedge\d x^\nu$, and $F^\mu=\varepsilon^{\lambda \mu\nu } \psi_ {\mu\nu}$, we have
-
-$$
-\int_V \vec\nabla\cdot \vec F   \d V =\oint_S\vec F\cdot\d \vec S
-$$
-
-## Duality of Homology and Cohomology
-
-As in the beginning of this post, "co-" means dual, and cohomology group is a dual space of homology group.
 
 ## Exactness
 
 Now the exactness is well defined. 
 
 # Make Homology out of Cohomology
+
+
 
