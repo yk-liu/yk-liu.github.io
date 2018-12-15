@@ -4,7 +4,7 @@ edit: 2018-11-23
 categories: Topology
 tags: de-Rham-Cohomology Topology Stokes'-Theorem
 keywords: cohomology exact
-description: My study notes on cohomology, as a preparation for K-theory.
+description: Cohomology is viewed as a natural dual space of homology in this post. The bilinear map (i.e., the inner product) between these two spaces are just integration. At the end of this post, a few 
 status: Writing
 ---
 
@@ -179,14 +179,24 @@ Like in the case of homology group, the cohomology group is just those closed $r
 
 
 
+# Exactness
 
-# Stokes' Theorem and Cohomology
+The sufficient and necessary conditions of exactness in last post about homology are still unanswered. 
 
-## Exactness
-
-Now the exactness is well defined. 
+> For a set of cycles $\set{c _ 1, \cdots, c _ k}$ such that $c _ i\not\sim c _ j$, $k=\dim{H_r(M)}$ is the **Betti number**. A close $r$-from $\omega$ is exact **if and only if** for all $i=1,2,\cdots,k$
+>
+> $$
+> \int_{c_i}\omega=0.
+> $$
+>
 
 # Make Homology out of Cohomology
+
+So far we have defined the cohomology group, and pointed out the relationships between it and homology group. Now it's time to find some examples.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/ChainComplex.png" width="50%">
+
+
 
 
 
