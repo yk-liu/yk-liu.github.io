@@ -114,8 +114,7 @@ figure,ol,p,ul{
 }
 dd{ 
     margin:10px;
-    color:grey;
-    font-size:medium
+    font-size:1 rem
 }
 a img{
     border:none
