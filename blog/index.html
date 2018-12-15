@@ -6,10 +6,10 @@ title: Posts Index
 	<dl class="posts">
 	 {% for post in site.posts %}
 		<dt>
-			       <code>{{ post.date | date_to_string }}</code> <i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">{{ post.title }}</a> <code>{{ post.status}}</code> 
+			       <code>{{ post.date | date_to_string }}</code> <i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;{% include status-indicator.html status=post.status%}
     </dt>
     {% if post.description %}
-    <dd style="text-align: justify"><i class="fas fa-caret-right"></i>&nbsp;{{ post.description | markdownify }}
+ <dd style="text-align: justify">{{ post.description | prepend "<i class="fas fa-caret-right"></i>&nbsp;" | markdownify }}
     </dd>
 			 {% endif %}
 		
