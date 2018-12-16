@@ -30,13 +30,9 @@ Examples of fiber bundles are
 
 - Hilbert space in Quantum Mechanics. 
 
-   In Quantum Mechanics, 
+- Calabi-Yau space. See [here](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture from *B.Greene, The Elegant Universe, Vintage, 2000.*
 
-   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Hilbert-space.png' width="60%">
-
-- [Calabi-Yau space](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture adopted from [code](https://mathematica.stackexchange.com/questions/61590/problem-with-old-code-for-a-calabi-yau-manifold/61595).
-
-  <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/calabi-yau.png' width="60%">
+  <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/calabi-yau.png' width="50%">
 
 - 
 
