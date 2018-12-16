@@ -60,20 +60,24 @@ Formally, a (differentiable) fiber bundle is a quintuple $(E,\pi,M,F,G)$ consist
 1. A differentiable manifold $M$ called the **base space**.
 1. A differentiable manifold $E$ called the **fiber** (or **typical fiber**).
 1. A surjection $\pi : E\rightarrow M$ called the **projection**. The inverse image of a point $p\in M$, $\pi^{-1}(p)$ is called the fiber $F_p\simeq F$ at point $p$.
-1. A 
+1. A **structure group** $G$ which is a Lie group acts on $F$ on the left.
+1. A set of open coverings $\set{U _ i}$ of $M$ called the **local trivialization**
+1. A **transition function** 
 
 
 Examples of fiber bundles are 
 
 - Hilbert space in Quantum Mechanics. 
 
-   In Quantum Mechanics, phase are ignored in solutions to the Schrödinger equation. In other words, the Hilbert space is the state vectors $\ket{\psi}$ is really an equivalent classes of $\set{\ket{\psi} \mid \ket{\psi}=\e^{\i \varphi} \ket{\psi _ 0} }$. 
+   In Quantum Mechanics, phase are ignored in solutions to the Schrödinger equation. In other words, the state vectors $\ket{\psi}$ are really an equivalent classes $\set{\ket{\psi} \mid \ket{\psi}=\e^{\i \varphi} \ket{\psi _ 0} }$. 
 
-   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Hilbert-space.png' width="60%">
+   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Hilbert-space.png' width="30%">
 
 - [Calabi-Yau space](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture adopted from [code](https://mathematica.stackexchange.com/questions/61590/problem-with-old-code-for-a-calabi-yau-manifold/61595).
 
   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/calabi-yau.png' width="60%">
 
-- 
+- A cylinder and a Mobius band can both be considered as fiber bundles.
+
+   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Mobius-strip.png' width="60%">
 
