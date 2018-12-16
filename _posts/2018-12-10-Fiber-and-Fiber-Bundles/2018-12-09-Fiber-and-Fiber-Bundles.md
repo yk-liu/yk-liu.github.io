@@ -4,7 +4,7 @@ categories: Topology
 edit: 2018-12-15
 status: Writing
 tags: Fiber Fiber-bundles 
-keywords: Fiber Fiber-bundles 
+keywords: 
 description: My study notes on Fiber bundles for Berry Phase. 
 ---
 
