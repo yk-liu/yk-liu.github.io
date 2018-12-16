@@ -53,17 +53,17 @@ div#content-container > h6::before {
 }
 
 /* side bar counter */
-ol {
+div.toc ol {
   counter-reset: section;                /* Creates a new instance of the
                                             section counter with each ol
                                             element */
   list-style-type: none;
 }
 
-li::before {
+div.toc li::before {
   counter-increment: section;            /* Increments only this instance
                                             of the section counter */
-  content: counters(section, ".") " ";   /* Combines the values of all instances
+  content: counters(section, ".") " .";   /* Combines the values of all instances
                                             of the section counter, separated
                                             by a period */
 }
