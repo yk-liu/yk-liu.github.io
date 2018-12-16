@@ -8,7 +8,7 @@ keywords:
 description: My study notes on Fiber bundles for Berry Phase. 
 ---
 
-# Intuition on Fiber and Fiber bundles
+# Intuition on Fiber and Fiber Bundles
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/pasta.png' width="20%">
 
@@ -28,9 +28,11 @@ Formally, a (differentiable) fiber bundle is a quintuple $(E,\pi,M,F,G)$ consist
 
 Examples of fiber bundles are 
 
+- Hilbert space in Quantum Mechanics. 
+
 - Calabi-Yau space. See [here](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture from *B.Greene, The Elegant Universe, Vintage, 2000.*
 
   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/calabi-yau.png' width="50%">
 
-- Hilbert space. 
+- 
 
