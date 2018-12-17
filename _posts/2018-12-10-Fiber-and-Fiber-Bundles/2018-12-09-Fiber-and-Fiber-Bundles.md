@@ -56,7 +56,27 @@ The Hamiltonian is written as
 $$
 H(t)=\mu\vec B(t)\cdot \vec\sigma
 $$
-
+Use Pauli matrices, Hamiltonian is expressed as
+$$
+H(t)=\mu B_0
+     \begin{pmatrix}
+     \cos\varphi               &  \e^{-\i\theta}\sin\varphi \\
+     \e^{\i\theta}\sin\varphi  &  \cos\varphi
+     \end{pmatrix}.
+$$
+Its eigenvalues and eigenvectors are
+$$
+\lambda=\pm\mu B_0\\
+\ket{n_+(t)}=
+\begin{pmatrix}\cos\frac{\varphi}{2}\\ \e^{\i\theta}\sin\frac{\varphi}{2}\end{pmatrix}\\
+\ket{n_-(t)}=
+\begin{pmatrix}-\sin\frac{\varphi}{2}\\ \e^{\i\theta}\cos\frac{\varphi}{2}\end{pmatrix}
+$$
+The time-dependent Schrödinger equation gives
+$$
+H(t)\ket{\psi(t)}=\i\Partial{}{t}\ket{\psi(t)}
+$$
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="30%">
 
 # Intuition on Fiber and Fiber Bundles
 
@@ -85,7 +105,7 @@ Examples of fiber bundles are
 
    In Quantum Mechanics, phase are ignored in solutions to the Schrödinger equation. In other words, the state vectors $\ket{\psi}$ are really an equivalent classes $\set{\ket{\psi} \mid \ket{\psi}=\e^{\i \varphi} \ket{\psi _ 0} }$. 
 
-   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Hilbert-space.png' width="30%">
+   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="30%">
 
 - [Calabi-Yau space](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture adopted from [code](https://mathematica.stackexchange.com/questions/61590/problem-with-old-code-for-a-calabi-yau-manifold/61595).
 
