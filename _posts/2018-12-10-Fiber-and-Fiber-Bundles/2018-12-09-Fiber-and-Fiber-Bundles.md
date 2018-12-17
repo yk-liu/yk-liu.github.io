@@ -1,4 +1,5 @@
 ---
+
 title: Fiber and Fiber Bundles
 categories: Topology
 edit: 2018-12-15
@@ -42,21 +43,24 @@ $$
 \notag
 $$
 
-
-
 # Berry's Phase
 
 Berry's phase is the main reason why I am studying connections, curvatures, etc. First I am going to review a simple example where Berry's phase can be easily computed, and I am going to point out how the concept of connections and curvatures arise from this physical system.
 
 The system is a spin $\frac 12$ in a adiabatically rotating magnetic field,
+
 $$
 \vec B(t) = B_0 (\sin\varphi\cos\theta,\sin \varphi \sin \theta,\cos\varphi).
 $$
+
 The Hamiltonian is written as
+
 $$
 H(t)=\mu\vec B(t)\cdot \vec\sigma
 $$
+
 Use Pauli matrices, Hamiltonian is expressed as
+
 $$
 H(t)=\mu B_0
      \begin{pmatrix}
@@ -64,7 +68,9 @@ H(t)=\mu B_0
      \e^{\i\theta}\sin\varphi  &  \cos\varphi
      \end{pmatrix}.
 $$
+
 Its eigenvalues and eigenvectors are
+
 $$
 \lambda=\pm\mu B_0\\
 \ket{n_+(t)}=
@@ -72,11 +78,14 @@ $$
 \ket{n_-(t)}=
 \begin{pmatrix}-\sin\frac{\varphi}{2}\\ \e^{\i\theta}\cos\frac{\varphi}{2}\end{pmatrix}
 $$
+
 The time-dependent Schrödinger equation gives
+
 $$
 H(t)\ket{\psi(t)}=\i\Partial{}{t}\ket{\psi(t)}
 $$
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="30%">
+
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="50%">
 
 # Intuition on Fiber and Fiber Bundles
 
