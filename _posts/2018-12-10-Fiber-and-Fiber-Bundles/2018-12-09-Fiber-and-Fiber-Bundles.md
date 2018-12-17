@@ -44,6 +44,20 @@ $$
 
 
 
+# Berry's Phase
+
+Berry's phase is the main reason why I am studying connections, curvatures, etc. First I am going to review a simple example where Berry's phase can be easily computed, and I am going to point out how the concept of connections and curvatures arise from this physical system.
+
+The system is a spin $\frac 12$ in a adiabatically rotating magnetic field,
+$$
+\vec B(t) = B_0 (\sin\varphi\cos\theta,\sin \varphi \sin \theta,\cos\varphi).
+$$
+The Hamiltonian is written as
+$$
+H(t)=\mu\vec B(t)\cdot \vec\sigma
+$$
+
+
 # Intuition on Fiber and Fiber Bundles
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/pasta.png' width="20%">
