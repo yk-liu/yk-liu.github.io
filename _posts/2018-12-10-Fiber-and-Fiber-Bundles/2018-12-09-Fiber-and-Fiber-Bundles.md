@@ -164,18 +164,16 @@ This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783
 
 ## Intuition of Fiber Bundles
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/pasta.png' width="20%">
+Generally speaking, a fiber bundle is a topological space where there are extra structures. This structure is summarized as the topological space locally looks like the direct product of two subspaces - a typical fiber and a base space. 
 
-A fiber bundle is just like a bunch of pasta. Each pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle. Usually, a fiber bundle is locally trivial. That is to say, at each point, it looks like direct product of a base space and a fiber. This means two things. 
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/pasta.png' width="20%" alt="a bunch of pasta">
+
+A fiber bundle is just like a bunch of pasta. Each piece of pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle or a total space. Those pasta can be twisted and bent, but each piece of  pasta is distinguishable and looks alike. And at each point of the total space (the entire bunch of pasta), it looks like direct product of a base space and a fiber. This means two things. 
 
 1. This higher dimensional total space can be reduced to lower dimensional spaces. AN extra structure can always help us understand the total space better.
 2. We can construct higher dimensional non-trivial spaces from simple lower dimensional spaces. Putting our problems in a higher dimensional space can sometimes give us simpler expression.
 
-## Mathematical Definition
-
-Generally speaking, a fiber bundle is a topological space where there are extra structures. This structure is summarized as the topological space locally looks like the direct product of two subspaces - a typical fiber and a base space.
-
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/fiber-bundle.png' width="30%">
+## Basic Definition
 
 Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of the following elements:
 
@@ -184,22 +182,26 @@ Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of th
 1. A differentiable manifold $F$ called the **fiber** (or **typical fiber**).
 1. A surjection $\pi : E\rightarrow M$ called the **projection**. The inverse image of a point $p\in M$, $\pi^{-1}(p)$ is called the fiber $F_p\simeq F$ at point $p$.
 
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/fiber-bundle.png' width="30%">
+
 > In many textbooks a fiber bundle is defined as a quintuple $(E,\pi,M,G,F)$. I think it's better to start defining as little as possible, so I chose to define it as a triple and add $G$ and transition functions later.
 
+> Examples of fiber bundles includes
+>
+> - Hilbert space in Quantum Mechanics. 
+>
+>   In Quantum Mechanics, phase are ignored in solutions to the Schrödinger equation. In other words, the state vectors $\ket{\psi}$ are really an equivalent classes $\set{\ket{\psi} \mid \ket{\psi}=\e^{\i \varphi} \ket{\psi _ 0} }$. 
+>
+>   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="50%" alt="a phase lift from Hilbert space">
+>
+> - [Calabi-Yau space](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture adopted from [code](https://mathematica.stackexchange.com/questions/61590/problem-with-old-code-for-a-calabi-yau-manifold/61595).
+>
+>   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/calabi-yau.png' width="60%" alt='Calabi-Yau space looks like assign to each point a complex structure'>
+>
+> - A cylinder and a Mobius band can both be considered as fiber bundles.
+>
+>   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Mobius-strip.png' width="60%" alt="cylinder and a Mobius band">
 
-Examples of fiber bundles are 
+## Transition Functions
 
-- Hilbert space in Quantum Mechanics. 
-
-   In Quantum Mechanics, phase are ignored in solutions to the Schrödinger equation. In other words, the state vectors $\ket{\psi}$ are really an equivalent classes $\set{\ket{\psi} \mid \ket{\psi}=\e^{\i \varphi} \ket{\psi _ 0} }$. 
-
-   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="30%">
-
-- [Calabi-Yau space](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture adopted from [code](https://mathematica.stackexchange.com/questions/61590/problem-with-old-code-for-a-calabi-yau-manifold/61595).
-
-  <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/calabi-yau.png' width="60%">
-
-- A cylinder and a Mobius band can both be considered as fiber bundles.
-
-   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Mobius-strip.png' width="60%">
-
+Recall that for a manifold
