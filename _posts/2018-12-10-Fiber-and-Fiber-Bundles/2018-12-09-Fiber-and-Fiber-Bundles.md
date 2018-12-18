@@ -204,4 +204,11 @@ Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of th
 
 ## Transition Functions
 
-Recall that for a manifold
+Recall that the topological aspect of a manifold is represented as how the charts are glued together. The topological aspect of a fiber bundle is best represented by the transition functions.
+
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Transition-function.png' width="60%" alt="Transition function indicates how the fibers are glued">
+
+The Transition function is denoted as $G_{\alpha,\beta}$
+$$
+G_{\alpha,\beta}(x)\dfdas\Phi_\alpha\circ\Phi_\beta^{-1}(x): F_\alpha\rightarrow F_\beta,\quad \forall x \in U_\alpha \cap U_\beta
+$$
