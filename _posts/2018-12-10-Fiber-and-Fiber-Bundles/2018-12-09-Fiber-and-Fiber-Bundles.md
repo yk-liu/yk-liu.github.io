@@ -1,6 +1,4 @@
 ---
-
-
 title: Fiber and Fiber Bundles
 categories: Topology
 edit: 2018-12-15
@@ -160,25 +158,33 @@ $$
 $$
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="50%">
 
-# Intuition on Fiber and Fiber Bundles
+# Fiber Bundles
+
+This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)] and [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)].
+
+## Intuition of Fiber Bundles
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/pasta.png' width="20%">
 
-A fiber bundle is just like a bunch of pasta. Each pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle. 
+A fiber bundle is just like a bunch of pasta. Each pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle. Usually, a fiber bundle is locally trivial. That is to say, at each point, it looks like direct product of a base space and a fiber. This means two things. 
+
+1. This higher dimensional total space can be reduced to lower dimensional spaces. AN extra structure can always help us understand the total space better.
+2. We can construct higher dimensional non-trivial spaces from simple lower dimensional spaces. Putting our problems in a higher dimensional space can sometimes give us simpler expression.
+
+## Mathematical Definition
 
 Generally speaking, a fiber bundle is a topological space where there are extra structures. This structure is summarized as the topological space locally looks like the direct product of two subspaces - a typical fiber and a base space.
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/fiber-bundle.png' width="30%">
 
-Formally, a (differentiable) fiber bundle is a quintuple $(E,\pi,M,F,G)$ consists of the following elements:
+Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of the following elements:
 
 1. A differentiable manifold $E$ called the **total space.**
 1. A differentiable manifold $M$ called the **base space**.
-1. A differentiable manifold $E$ called the **fiber** (or **typical fiber**).
+1. A differentiable manifold $F$ called the **fiber** (or **typical fiber**).
 1. A surjection $\pi : E\rightarrow M$ called the **projection**. The inverse image of a point $p\in M$, $\pi^{-1}(p)$ is called the fiber $F_p\simeq F$ at point $p$.
-1. A **structure group** $G$ which is a Lie group acts on $F$ on the left.
-1. A set of open coverings $\set{U _ i}$ of $M$ called the **local trivialization**
-1. A **transition function** 
+
+> In many textbooks a fiber bundle is defined as a quintuple $(E,\pi,M,G,F)$. I think it's better to start defining as little as possible, so I chose to define it as a triple and add $G$ and transition functions later.
 
 
 Examples of fiber bundles are 
