@@ -214,6 +214,4 @@ G_{\alpha,\beta}(x)\dfdas\Phi_\alpha\circ\Phi_\beta^{-1}(x): F_\alpha\rightarrow
 $$
 Since the fibers
 
-
-
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Galphabetamap.png' width="60%" alt="G_alpha,beta map">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Galphabetamap.png' width="40%" alt="G_alpha,beta map">
