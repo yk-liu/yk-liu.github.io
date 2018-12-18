@@ -158,11 +158,6 @@ $$
 &=i\pi(1\mp\cos\varphi)
 \end{align*}
 $$
-
-
-
-
-
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="50%">
 
 # Intuition on Fiber and Fiber Bundles
