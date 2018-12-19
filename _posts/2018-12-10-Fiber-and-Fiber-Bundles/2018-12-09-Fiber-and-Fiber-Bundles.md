@@ -222,14 +222,14 @@ Since the fibers $F_\alpha$ and $F_\beta$ are diffeomorphic to typical fiber $F$
 The transition function actually forms a group under composition
 $$
 \begin{align*}
-\id &=G_{\alpha,\alpha} & \text{identity}\\
-G_{\alpha,\beta}^{-1}&=G_{\beta,\alpha} & \text{inverse}\\
-G_{\alpha,\beta}\circ G_{\beta,\gamma}&=G_{\alpha,\beta} & \text{closedness}\\
-(G_{\alpha,\beta}\circ G_{\beta,\gamma})\circ G_{\gamma,\delta}&=G_{\alpha,\beta}\circ (G_{\beta,\gamma}\circ G_{\gamma,\delta}) & \text{composition}
+\id &=G_{\alpha,\alpha} & \text{Identity}\\
+G_{\alpha,\beta}^{-1}&=G_{\beta,\alpha} & \text{Inverse}\\
+G_{\alpha,\beta}\circ G_{\beta,\gamma}&=G_{\alpha,\beta} & \text{Closure}\\
+(G_{\alpha,\beta}\circ G_{\beta,\gamma})\circ G_{\gamma,\delta}&=G_{\alpha,\beta}\circ (G_{\beta,\gamma}\circ G_{\gamma,\delta}) & \text{Associativity}
 \end{align*}
 $$
 
-This group is called the structure group $G$ of the bundle $F$. We call the action $G_{\alpha,\beta}(x)F_\alpha=F_\beta$  as "$G$ act on the left". 
+This group is called the structure group $G$ of the bundle $F$. We call the action $G_{\alpha,\beta}(x)F_\alpha=F_\beta$  as "$G$ act on $F$ on the left". 
 
 
 
