@@ -3,7 +3,7 @@ title: Fiber and Fiber Bundles
 categories: Topology
 edit: 2018-12-15
 status: Writing
-tags: Fiber Fiber-bundles 
+tags: Fiber Fiber-bundles Topology Berry's-Phase
 keywords: 
 description: My study notes on Fiber bundles for Berry Phase. 
 ---
@@ -126,22 +126,28 @@ $$
 $$
 
 which satisfies the equation
+
 $$
 \dot \gamma (t)=\dot\phi(t)-E(t)
 $$
+
 Substitute into the $\Eqn{totalphase}$ that gives
+
 $$
 \i \D{\gamma(t)}{t}\ket{n(t)}=-\Partial{}{t}\ket{n(t)}
 $$
 
 notice that the $\D{\gamma(t)}{t}$ is a number, thus we can multiply $\bra{n(t)}$ on both side
+
 $$
 \begin{align*}
 \bra{n(t)}\i\D{\gamma(t)}{t}\ket{n(t)}&=-\braket{n}{\dot{n}}\\
 \D{\gamma(t)}{t}&=-i\braket{n}{\dot{n}}
 \end{align*}
 $$
+
 From that we have the solution of $\gamma(T)$, using
+
 $$
 \begin{align*}
 \gamma(T)&=\int_0^T\D{}{t}\gamma(t) \d t \\
@@ -149,7 +155,9 @@ $$
 &=\int_{R(0)}^{R(T)}-i\bra{n}\nabla_{\vec R}\ket{n}\d \vec R\\
 \end{align*}
 $$
+
 Put the expression of $\ket{n}$ and $R(t)=(B_0,\omega t,\varphi)$, we have
+
 $$
 \begin{align*}
 \gamma(C)&=\oint \bra{n_\pm}\nabla_R\ket{n_\pm} B_0 \sin\varphi (\d \theta\, \uvec \theta)\\
@@ -157,6 +165,7 @@ $$
 &=i\pi(1\mp\cos\varphi)
 \end{align*}
 $$
+
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="50%">
 
 # Fiber Bundles
