@@ -33,6 +33,7 @@ $$
 \newcommand{\vare}{\mathfrak{e}}
 \newcommand{\e}{\mathrm{e}}
 \newcommand{\i}{\mathrm{i}}
+\newcommand{\id}{\mathrm{I}}
 \newcommand{\blue}{\color{blue}}
 \newcommand{\red}{\color{red}}
 \newcommand{\norm}[1]{\left\|{#1}\right\|}
@@ -209,9 +210,27 @@ Recall that the topological aspect of a manifold is represented as how the chart
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Transition-function.png' width="70%" alt="Transition function indicates how the fibers are glued">
 
 The transition function is denoted as $G_{\alpha,\beta}$
+
 $$
 G_{\alpha,\beta}(x)\dfdas\Phi_\alpha\circ\Phi_\beta^{-1}(x): F_\alpha\rightarrow F_\beta,\quad \forall x \in U_\alpha \cap U_\beta
 $$
+
 Since the fibers $F_\alpha$ and $F_\beta$ are diffeomorphic to typical fiber $F$, $G_{\alpha,\beta}$ is a map from $F$ to $F $ itself.
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Galphabetamap.png' width="40%" alt="G_alpha,beta map">
+
+The transition function actually forms a group under composition
+$$
+\begin{align*}
+\id &=G_{\alpha,\alpha} & \text{identity}\\
+G_{\alpha,\beta}^{-1}&=G_{\beta,\alpha} & \text{inverse}\\
+G_{\alpha,\beta}\circ G_{\beta,\gamma}&=G_{\alpha,\beta} & \text{closedness}\\
+(G_{\alpha,\beta}\circ G_{\beta,\gamma})\circ G_{\gamma,\delta}&=G_{\alpha,\beta}\circ (G_{\beta,\gamma}\circ G_{\gamma,\delta}) & \text{composition}
+\end{align*}
+$$
+
+This group is called the structure group $G$ of the bundle $F$. We call the action $G_{\alpha,\beta}(x)F_\alpha=F_\beta$  as "$G$ act on the left". 
+
+
+
+
