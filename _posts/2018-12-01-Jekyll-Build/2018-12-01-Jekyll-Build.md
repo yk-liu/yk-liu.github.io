@@ -3,6 +3,7 @@ title: Build Your Blog with GitHub Pages
 tags: Jekyll
 edit: 2018-12-19
 categories: Jekyll
+status: Paused
 mathjax: false
 description: Build Your Blog with GitHub Pages. This is a sketch of how to use my theme `PointingToTheMoon` to write your blog. This theme is great for academic use, for it features simple post page with mathjax support and a side bar with toc. The main page on the other hand is somewhat fancy.
 ---
