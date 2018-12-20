@@ -43,7 +43,27 @@ $$
 \notag
 $$
 
-# Berry's Phase
+# Physics Motivations
+
+## Dirac Monopole 
+
+The magnetic field $\vec B$ of a magnetic monopole at the origin in $\R^3$, given by
+$$
+\vec B(\vec x) = \frac{\vec x}{4\pi r^3}
+$$
+where $r=\abs{\vec x}$. This satisfies the condition $\nabla \cdot \vec B=0$ and this expression is valid in $\R^3/\{0\}$. This vector field can also be represented by a two form 
+$$
+F=\frac{1}{2\pi r} (x_1 \d x_2 \wedge \d  x_3 + \text{cyclic})=\frac{1}{4 \pi}\sin\theta \d \theta \wedge \d \varphi
+$$
+$F$ is not only closed, but exact as well. A choice of $F=\d A$ is 
+$$
+A=-\frac{1}{4 \pi} \cos \theta \d \varphi=\frac{x_3}{4\pi r} \frac{x_2\d x_1-x_1\d x_2}{x_1^2+x_2^2}
+$$
+where the singularity lies at $x _ 1 = x _ 2 = 0$. 
+
+ 
+
+## Berry's Phase
 
 Berry's phase is the main reason why I am studying connections, curvatures, etc. First I am going to review a simple example where Berry's phase can be easily computed, and I am going to point out how the concept of connections and curvatures arise from this physical system.
 
@@ -212,7 +232,7 @@ Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of th
 >
 >   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Mobius-strip.png' width="40%" alt="cylinder and a Mobius band">
 
-## Transition Functions
+## Transition Function and Structure Group
 
 Recall that the topological aspect of a manifold is represented as how the charts are glued together. The topological aspect of a fiber bundle is best represented by the transition functions. In the following diagram, the red dots on the left are "glued" together, the red lines on the right are "glued" together.
 
@@ -238,8 +258,22 @@ G_{\alpha,\beta}\circ G_{\beta,\gamma}&=G_{\alpha,\beta} & \text{Closure}\\
 \end{align*}
 $$
 
-This group is called the structure group $G$ of the bundle $F$. We call the action $G_{\alpha,\beta}(x)F_\alpha=F_\beta$  as "$G$ act on $F​$ on the left". 
+This group is called the structure group $G$ of the bundle $F$. We call the action $G_{\alpha,\beta}(x)F_\alpha=F_\beta$  as "$G$ act on $F$ on the left". 
 
+# Principle Fiber Bundle
 
+There is a special kind of bundle called the principle bundle, where all the fibers are isomorphic to the structure group $G$. 
 
+A fiber is essentially a topological space, and you can add a group structure to the space such that group properties (identity, inverse, closure and associativity) are endowed. If the group structure are the same as structure group, we will call this fiber bundle a principle fiber bundle.
 
+>  Is it possible to make every fiber bundle a principle fiber bundle? If not, how can we be sure that it is not possible?
+
+# Connections on Fiber Bundle
+
+This section follows [Peter Szekeres](https://www.cambridge.org/core/books/course-in-modern-mathematical-physics/E899DB30C574E2F4D7C861B3097F9813).
+
+## Linear Connections
+
+There is no natural way of comparing tangent vectors $V_p$ and $V_q$ at $p$ and $q$, for if they had identical components in one coordinate system this will not generally be true in a different coordinate chart covering the two points.
+
+Consider the coordinate transformation:
