@@ -1,7 +1,7 @@
 ---
 title: Fiber and Fiber Bundles
 categories: Topology
-edit: 2018-12-15
+edit: 2018-12-20
 status: Writing
 tags: Fiber Fiber-bundles Topology Berry's-Phase
 keywords: 

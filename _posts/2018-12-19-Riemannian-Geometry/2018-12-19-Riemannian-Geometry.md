@@ -1,11 +1,11 @@
 ---
-title: Connections on Fiber Bundles
+title: Riemannian Geometry
 categories: Topology
-edit: 2018-12-15
+edit: 2018-12-20
 status: Writing
-tags: Fiber Fiber-bundles Connections
+tags: Riemannian-Geometry connections
 keywords: 
-description: My study notes on connections on Fiber bundles for Berry Phase. 
+description: My study notes on connections on Riemannian Geometry
 ---
 
 $$
@@ -42,13 +42,5 @@ $$
 \newcommand{\Z}{\mathbb{Z}}
 \notag
 $$
-
-This post follows [Peter Szekeres](https://www.cambridge.org/core/books/course-in-modern-mathematical-physics/E899DB30C574E2F4D7C861B3097F9813).
-
-# Linear Connections
-
-There is no natural way of comparing tangent vectors $V_p$ and $V_q$ at $p$ and $q$, for if they had identical components in one coordinate system this will not generally be true in a different coordinate chart covering the two points.
-
-Consider the coordinate transformation:
 
  
