@@ -43,4 +43,26 @@ $$
 \notag
 $$
 
- 
+# Metric Tensors
+
+In elementary geometry, the space is flat, and the inner product (through musical isomorphism) of two vectors is defined by
+$$
+\inner{U^\flat}{V}=U \cdot V = \sum_{i=1}^n U_iV_i
+$$
+A metric maps two vectors into a number, i.e.,
+$$
+g(U,V)
+$$
+
+$$
+(U^\flat)_\mu=g_{\mu\nu}U^\nu, \quad U^\mu=g^{\mu\nu}(U^\flat)_\nu
+$$
+ changing the inner product to
+$$
+\inner{U^\flat}{V}=U \cdot V =g_{\mu\nu}U^\nu V^\mu
+$$
+
+# Parallel Transport
+
+
+

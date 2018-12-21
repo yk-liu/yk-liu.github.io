@@ -253,10 +253,12 @@ is closed. However, the space now has a hole at $(0,0)$, it is not exact anymore
 > \omega = \d\theta
 > $$
 >
-> Namely, we can define a "function" $f(x,y)=\arctan(y/x)$ such that $\omega=\d f$, and
+> Namely, we can define a "function" $f(x,y)=\arctan(y/x)​$ such that $\omega=\d f​$, and
+> 
 > $$
 > \int_c w = \int_0^{2\pi} dt = 2\pi. \tag{12}
 > $$
+> 
 > According to section [`Exactness`](#exactness), this form is not exact. That "function" $f$ is not even single value on the entire plane $\R^2/0$.
 
 Now we have applied cohomology theories on trivial spaces and $\R^2/0$, and showed that cohomology can distinguish these two types of spaces. In this sense, cohomology groups serves the same purpose as homology groups: classify spaces in terms of "holes" in it.
