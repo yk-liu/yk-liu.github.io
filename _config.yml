@@ -71,4 +71,4 @@ exclude:
  - "*.cdf"
  - "*.nb"
  - "*.bk"
- - "*.draft"
+ - "*.draft.md"
