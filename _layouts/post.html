@@ -56,5 +56,8 @@
 </body>
 	
 	{% include mermaid.html %}
+	{% if page.highlight == true %}
+		{% include highlight.html %}
+	{% endif %}
 
 </html>

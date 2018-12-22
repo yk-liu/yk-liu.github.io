@@ -62,6 +62,7 @@ defaults:
       commentable: true
       status: Completed
       protected: false
+      highlight: false
       rss: true
 
 

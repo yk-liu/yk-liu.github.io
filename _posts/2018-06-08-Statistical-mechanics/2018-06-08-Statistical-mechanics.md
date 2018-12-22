@@ -7,6 +7,7 @@ tags: Statistical-mechanics First-Principle
 keywords: Statistical-mechanics First-Principle
 description: Class project. My attempt at building Statistical Mechanics from First Principles. I think Statistical Mechanics can be applied to distinguishable particles such as millions of footballs. This post tries to develop such Statistical Mechanics, especially on the entropy. This post is not finished.
 status: Archived
+highlight: true
 ---
 
 
