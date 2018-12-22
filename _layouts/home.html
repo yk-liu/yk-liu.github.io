@@ -3,7 +3,7 @@
 <head>
    {% include head.html %}
    <!-- main style sheet -->  
-   <link rel="stylesheet" href="/assets/css/home.css">
+   <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/home.css">
    <!-- font awesome --> 
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
    <!-- google font-->
@@ -35,9 +35,9 @@
             
          </div >
       </section>
-      <script src= "/assets/js/sweet-scroll.min.js"></script>
-      <script src="/assets/js/particles_conf.js"></script>
-      <script src="/assets/js/particles.min.js"></script>
+      <script src= "{{site.url}}{{site.baseurl}}/assets/js/sweet-scroll.min.js"></script>
+      <script src="{{site.url}}{{site.baseurl}}/assets/js/particles_conf.js"></script>
+      <script src="{{site.url}}{{site.baseurl}}/assets/js/particles.min.js"></script>
    </body>
    {% include footer.html analytics=false %} 
 </html>

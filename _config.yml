@@ -58,11 +58,11 @@ defaults:
       toc: true
       mathjax: true
       mermaid: false
+      highlight: false
       numbering: true
-      commentable: true
       status: Completed
       protected: false
-      highlight: false
+      commentable: true
       rss: true
 
 
