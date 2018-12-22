@@ -21,7 +21,7 @@
 				 <p><code> Tags </code>:  &nbsp; 
 						{% for tag in page.tags %}
 						{% capture tag_name %}{{ tag }}{% endcapture %}
-						<code><a href="/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
+						<code><a href="{{site.url}}{{site.baseurl}}/blog/tags#{{ tag_name }}" target="_blank">{{ tag_name }}</a></code>
 						{% endfor %}
 				 </p>
 			</div>
@@ -31,7 +31,7 @@
 				 <p><code> Categories </code>:  &nbsp;
 						{% for category in page.categories %}
 						{% capture category_name %}{{ category }}{% endcapture %}
-						<code><a href="/blog/categories#{{ category_name }}" target="_blank">{{ category_name }}</a></code>
+						<code><a href="{{site.url}}{{site.baseurl}}/blog/categories#{{ category_name }}" target="_blank">{{ category_name }}</a></code>
 						{% endfor %}
 				 </p>
 			</div>
