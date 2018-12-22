@@ -15,10 +15,11 @@ There are many theme out there, yet none of them suits my need.
 1. I want my post page's width to be at least 80% so the reader can simply read the post. I don't want persistent sidebars with a big picture of the blog owner
 2. I want my post to be extra readable. The font need to be clear and large enough. Not Consolas fonts or Comic Sans. 
 3. I need mathjax. Other themes seems rarely supporting it.
-4. I don't want to build my blog locally and push the entire website to GitHub. After I have done styling, I wrote in markdown (using typora) and push it, that should be **all** it needed. 
-5. I want my assets in the same folder as post. I use the work-around as direct link it to the `raw.github` page, like this `<img src="https://raw.githubusercontent.com/yk-liu/PointingToTheMoon/master/_posts/2018-12-11-Jekyll-Build/assets/GitHub-desktop.png" width="80%">`.
-6. I want cool things, such as visitor map, tag clouds and category clouds, commenting. I want Chinese reader to be able to comment as well. Disqus is blocked, and other sources are poorly maintained. So I chose commentit. ALl you need is a GitHub account or Facebook or Twitter.
-7. I have ZERO experience with front end stuff. The JavaScript is exhausting, so I avoided using JS as much as possible. Turns out a hidden side bar can be down in pure CSS.
+4. [mermaid diagram](https://mermaidjs.github.io/) is always a good thing to have. 
+5. I don't want to build my blog locally and push the entire website to GitHub. After I have done styling, I wrote in markdown (using typora) and push it, that should be **all** it needed. 
+6. I want my assets in the same folder as post. I use the work-around as direct link it to the `raw.github` page, like this `<img src="https://raw.githubusercontent.com/yk-liu/PointingToTheMoon/master/_posts/2018-12-11-Jekyll-Build/assets/GitHub-desktop.png" width="80%">`.
+7. I want cool things, such as visitor map, tag clouds and category clouds, commenting. I want Chinese reader to be able to comment as well. Disqus is blocked, and other sources are poorly maintained. So I chose commentit. ALl you need is a GitHub account or Facebook or Twitter.
+8. I have ZERO experience with front end stuff. The JavaScript is exhausting, so I avoided using JS as much as possible. Turns out a hidden side bar can be down in pure CSS.
 
 Now I ended up with this theme. I know it's not perfect, but I will settle it for now. I will consider any suggestions you guys make, just comment it in this page.
 
