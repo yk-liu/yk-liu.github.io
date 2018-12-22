@@ -10,6 +10,8 @@ description: Build Your Blog with GitHub Pages. This is a sketch of how to use m
 
 # What Do I Have to Offer
 
+The demo is [here](https://yk-liu.github.io/PointingToTheMoon/) with a [sample post](https://yk-liu.github.io/PointingToTheMoon/sample/post/2018/12/12/sample-post.html).
+
 There are many theme out there, yet none of them suits my need. 
 
 1. I want my post page's width to be at least 80% so the reader can simply read the post. I don't want persistent sidebars with a big picture of the blog owner
