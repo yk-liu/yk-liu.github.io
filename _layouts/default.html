@@ -6,8 +6,6 @@
 				{% include markdown-enhancements/mathjax.html %}
 			{% endif %} 
       {% include theme-vue.html%}
-      <!-- font awesome -->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
       <!-- change font -->
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet" async>
       <!--  -->
@@ -16,23 +14,18 @@
 
    <body>
    <div id="main"> 
-	 <div style = "margin-right: 3%;padding: 50px" class="container">
-	 <div id="front-matter">
-		   <div id="title">
-                  <h1>
-                     {{page.title}}
-                  </h1>
-           </div>
-		   <div id="info">
-			  <div id="date" style="padding-bottom: .4rem;font-size: 1rem;line-height: 1;">
-				{% if page.Edit %}
-				   <p><code class="highlighter-rouge">Edited</code>:  &nbsp; {{ page.Edit | date: '%B %d, %Y' }} </p>
-				{% endif %}
-			  </div>
-		   </div>
-		</div>
-		{{ content }}
-	 </div>
+	 <div class="page">
+				{% include frontmatter.html %}
+				<hr>
+				<div id="content-container" style="text-align:justify">
+					 {{ content }}			
+				</div>
+				
+				<div id="comment-session">
+					 {% include commentit.html %}
+				</div>
+				
+			 </div>
    </div>
 	    {% include footer.html %} 
    </body>
