@@ -2,7 +2,9 @@
 <html lang="en">
    <head>
       {% include head.html %}  
-      {% include mathjax.html %}  
+			{% if page.mathjax %}			
+				{% include markdown-enhancements/mathjax.html %}
+			{% endif %} 
       {% include theme-vue.html%}
       <!-- font awesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
@@ -32,6 +34,14 @@
 		{{ content }}
 	 </div>
    </div>
+	    {% include footer.html %} 
    </body>
-   {% include footer.html %} 
+	{% if page.mermaid == true %}
+	{% include markdown-enhancements/mermaid.html %}
+	{% endif %}
+
+	{% if page.highlight == true %}
+		{% include markdown-enhancements/highlight.html %}
+	{% endif %}
+
 </html>
