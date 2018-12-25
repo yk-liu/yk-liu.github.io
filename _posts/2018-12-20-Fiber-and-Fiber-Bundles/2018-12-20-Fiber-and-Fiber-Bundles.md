@@ -48,17 +48,23 @@ $$
 ## Dirac Monopole 
 
 The magnetic field $\vec B$ of a magnetic monopole at the origin in $\R^3$, given by
+
 $$
 \vec B(\vec x) = \frac{\vec x}{4\pi r^3}
 $$
+
 where $r=\abs{\vec x}$. This satisfies the condition $\nabla \cdot \vec B=0$ and this expression is valid in $\R^3/\{0\}$. This vector field can also be represented by a two form 
+
 $$
 F=\frac{1}{2\pi r} (x_1 \d x_2 \wedge \d  x_3 + \text{cyclic})=\frac{1}{4 \pi}\sin\theta \d \theta \wedge \d \varphi
 $$
+
 $F$ is not only closed, but exact as well. A choice of $F=\d A$ is 
+
 $$
 A=-\frac{1}{4 \pi} \cos \theta \d \varphi=\frac{x_3}{4\pi r} \frac{x_2\d x_1-x_1\d x_2}{x_1^2+x_2^2}
 $$
+
 where the singularity lies at $x _ 1 = x _ 2 = 0$. 
 
  
@@ -249,6 +255,7 @@ Since the fibers $F_\alpha$ and $F_\beta$ are diffeomorphic to typical fiber $F$
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-20-Fiber-and-Fiber-Bundles/assets/Galphabetamap.png' width="40%" alt="G_alpha,beta map">
 
 The transition function actually forms a group under composition
+
 $$
 \begin{align*}
 \id &=G_{\alpha,\alpha} & \text{Identity}\\
