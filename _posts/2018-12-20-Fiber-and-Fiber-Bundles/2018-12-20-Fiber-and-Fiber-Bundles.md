@@ -186,7 +186,7 @@ $$
 \end{align*}
 $$
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="50%">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-20-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="50%">
 
 # Fiber Bundles
 
@@ -196,7 +196,7 @@ This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783
 
 Generally speaking, a fiber bundle is a topological space where there are extra structures. This structure is summarized as the topological space locally looks like the direct product of two subspaces - a typical fiber and a base space. 
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/pasta.png' width="20%" alt="a bunch of pasta">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-20-Fiber-and-Fiber-Bundles/assets/pasta.png' width="20%" alt="a bunch of pasta">
 
 A fiber bundle is just like a bunch of pasta. Each piece of pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle or a total space. Those pasta can be twisted and bent, but each piece of  pasta is distinguishable and looks alike. And at each point of the total space (the entire bunch of pasta), it looks like direct product of a base space and a fiber. This means two things. 
 
@@ -212,7 +212,7 @@ Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of th
 1. A differentiable manifold $F$ called the **fiber** (or **typical fiber**).
 1. A surjection $\pi : E\rightarrow M$ called the **projection**. The inverse image of a point $p\in M$, $\pi^{-1}(p)$ is called the fiber $F_p\simeq F$ at point $p$.
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/fiber-bundle.png' width="30%">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-20-Fiber-and-Fiber-Bundles/assets/fiber-bundle.png' width="30%">
 
 > In many textbooks a fiber bundle is defined as a quintuple $(E,\pi,M,G,F)$. I think it's better to start defining as little as possible, so I chose to define it as a triple and add $G$ and transition functions later.
 
@@ -222,21 +222,21 @@ Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of th
 >
 >   In Quantum Mechanics, phase are ignored in solutions to the Schrödinger equation. In other words, the state vectors $\ket{\psi}$ are really an equivalent classes $\set{\ket{\psi} \mid \ket{\psi}=\e^{\i \varphi} \ket{\psi _ 0} }$. 
 >
->   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="40%" alt="a phase lift from Hilbert space">
+>   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-20-Fiber-and-Fiber-Bundles/assets/Phase-lift.png' width="40%" alt="a phase lift from Hilbert space">
 >
 > - [Calabi-Yau space](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture adopted from [code](https://mathematica.stackexchange.com/questions/61590/problem-with-old-code-for-a-calabi-yau-manifold/61595).
 >
->   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/calabi-yau.png' width="40%" alt='Calabi-Yau space looks like assign to each point a complex structure'>
+>   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-20-Fiber-and-Fiber-Bundles/assets/calabi-yau.png' width="40%" alt='Calabi-Yau space looks like assign to each point a complex structure'>
 >
 > - A cylinder and a Mobius band can both be considered as fiber bundles.
 >
->   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Mobius-strip.png' width="40%" alt="cylinder and a Mobius band">
+>   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-20-Fiber-and-Fiber-Bundles/assets/Mobius-strip.png' width="40%" alt="cylinder and a Mobius band">
 
 ## Transition Function and Structure Group
 
 Recall that the topological aspect of a manifold is represented as how the charts are glued together. The topological aspect of a fiber bundle is best represented by the transition functions. In the following diagram, the red dots on the left are "glued" together, the red lines on the right are "glued" together.
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Transition-function.png' width="75%" alt="Transition function indicates how the fibers are glued">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-20-Fiber-and-Fiber-Bundles/assets/Transition-function.png' width="75%" alt="Transition function indicates how the fibers are glued">
 
 The transition function is denoted as $G_{\alpha,\beta}$
 
@@ -246,7 +246,7 @@ $$
 
 Since the fibers $F_\alpha$ and $F_\beta$ are diffeomorphic to typical fiber $F$, $G_{\alpha,\beta}$ is a map from $F$ to $F $ itself.
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-10-Fiber-and-Fiber-Bundles/assets/Galphabetamap.png' width="40%" alt="G_alpha,beta map">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-12-20-Fiber-and-Fiber-Bundles/assets/Galphabetamap.png' width="40%" alt="G_alpha,beta map">
 
 The transition function actually forms a group under composition
 $$
