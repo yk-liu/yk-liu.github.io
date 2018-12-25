@@ -206,7 +206,6 @@ ol {
 }
 
 code, tt {
-    /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
 	margin: 0 2px;
   padding: 2px 4px;
 	font-size: 0.92rem;
@@ -294,6 +293,7 @@ div.highlight {
 
 code.highlighter-rouge {
 	color: #e96900;
+	font-family: 'Ubuntu Mono', monospace;
 }
 
 span.highlight {
