@@ -2,7 +2,9 @@
 <html lang="en">
    <head>
       {% include head.html %}  
-      {% include mathjax.html %}
+			{% if page.mathjax %}			
+				{% include markdown-enhancements/mathjax.html %}
+			{% endif %}
       {% include theme-vue.html%}
       <!-- font awesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
@@ -12,7 +14,6 @@
       <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/counter.css">
 			<!-- link to responsive post.css -->
       <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/post.css">
-      {% include mermaid.html %}
    </head>
 	 
 <body>
@@ -51,5 +52,12 @@
 	<label for="sidebar-checkbox" class="sidebar-toggle"></label>
 			{% include footer.html %} 
 </body>
+{% if page.mermaid == true %}
+	{% include markdown-enhancements/mermaid.html %}
+	{% endif %}
+
+	{% if page.highlight == true %}
+		{% include markdown-enhancements/highlight.html %}
+	{% endif %}
 
 </html>
