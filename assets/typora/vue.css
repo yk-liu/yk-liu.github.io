@@ -208,7 +208,7 @@ ol {
 code, tt {
     /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
 	margin: 0 2px;
-    padding: 2px 4px;
+  padding: 2px 4px;
 	font-size: 0.92rem;
 	background-color: #eeeeee;
 	border-radius: 4px;
@@ -216,46 +216,19 @@ code, tt {
 }
 
 pre.highlight > code, tt {
-    /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
 	margin: 0 2px;
-    padding: 2px 4px;
-    border-radius: 4px;
-    font-family: 'Ubuntu Mono', monospace;
+	padding: 2px 4px;
 	display: block;
-    page-break-inside: avoid;
-    text-align: left;
+	page-break-inside: avoid;
+	text-align: left;
 	overflow-x: scroll;
-}
-
-/* p > code.highlighter-rouge { */
-	/* margin: 0 2px; */
-    /* padding: 2px 4px; */
-	/* font-size: 0.92rem; */
-	/* background-color: #eeeeee; */
-	/* border-radius: 4px; */
-	/* color: #e96900; */
-	/* font-weight: bold; */
-	/* font-family: 'Source Sans Pro', sans-serif; */
-/* } */
-
-code.highlighter-rouge {
-	color: #e96900;
-}
-
-span.highlight {
-    background-color: #9FFF9F;
-    border-radius: 2px;
-    padding: 2px 4px;
-    margin: 0 2px;
-    color: #222;
-    font-weight: 500;
 }
 
 /* code fence */
 div.highlight {
  	background-color: #eeeeee;
 	border-radius: 4px;
-    font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Ubuntu Mono', monospace;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
@@ -319,6 +292,18 @@ div.highlight {
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
 
+code.highlighter-rouge {
+	color: #e96900;
+}
+
+span.highlight {
+    background-color: #9FFF9F;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
 
 blockquote {
     border-left: 4px solid #42b983;
@@ -395,4 +380,9 @@ table tr td:last-child {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+code.languange-mermaid {
+	margin-left:auto;
+	margin-right:auto;
 }
