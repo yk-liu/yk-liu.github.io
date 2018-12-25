@@ -134,6 +134,7 @@ body {
   width: 17rem;
   visibility: hidden;
   overflow-y: auto;
+	overflow-x: auto;
   font-size: .875rem; /* 15px */
   background-color: #1a222c;
 	color:white;

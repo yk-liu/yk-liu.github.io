@@ -242,9 +242,14 @@ code.highlighter-rouge {
 	color: #e96900;
 }
 
-/* code.highlighter-rouge > nobr { */
-    /* color: #e96900; */
-/* } */
+span.highlight {
+    background-color: #9FFF9F;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
 
 /* code fence */
 div.highlight {
@@ -371,16 +376,6 @@ table tr td:first-child {
 table tr th:last-child,
 table tr td:last-child {
     margin-bottom: 0;
-}
-
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
 }
 
 @media print {
