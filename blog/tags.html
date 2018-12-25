@@ -7,23 +7,26 @@ title: Tag Index
 
 <div class="container">
   <h1>Tag Cloud</h1>
-{% assign tags = site.tags | sort %}
-{% for tag in tags %}
-	<span class="site-tag">
-		<a href="{{site.url}}{{site.baseurl}}/blog/tags#{{ tag[0] | slugify }}" style="text-decoration: none;" >
-		   <code class="highligher-rouge" style="font-size: {{ tag | last | size  |  times: 2 | plus: 80  }}%">
-			  <nobr>{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</nobr>
-		   </code>
-		</a> &nbsp;
-	</span>
-{% endfor %}
-  <hr>
+	{% assign tags = site.tags | sort %}
+	{% for tag in tags %}
+		<span class="site-tag">
+			<a href="{{site.url}}{{site.baseurl}}/blog/tags#{{ tag[0] | slugify }}" style="text-decoration: none;" >
+				 <code class="highligher-rouge" style="font-size: {{ tag | last | size  |  times: 2 | plus: 80  }}%">
+					<nobr>{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</nobr>
+				 </code>
+			</a> &nbsp;
+		</span>
+	{% endfor %}
+	<hr>
   {% for tag in site.tags %}
   <h2 id="{{ tag[0] | slugify }}">{{ tag[0] | replace:'-', ' ' }}</h2>
   <dl class="tags-expo-posts">
     {% for post in tag[1] %}
     <dt>
-      <code>{{ post.date | date_to_string }}</code> <i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;{% include status-indicator.html status=post.status%}
+      <code>{{ post.date | date_to_string }}</code> 
+				<i class="fas fa-angle-double-right"></i>
+					<a href="{{ post.url }}">{{ post.title }}</a>
+						&nbsp;{% include status-indicator.html status=post.status%}
     </dt>
     {% if post.description %}
  <dd style="text-align: justify">{{ post.description  | markdownify }}
