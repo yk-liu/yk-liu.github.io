@@ -75,7 +75,7 @@ code.highlighter-rouge {
 code, tt {
     /* font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important; */
 	margin: 0 2px;
-    padding: 2px 4px;
+  padding: 2px 4px;
 	font-size: 0.92rem;
 	background-color: #eeeeee;
 	border-radius: 4px;
