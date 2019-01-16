@@ -72,3 +72,33 @@ $$
 $$
 
 where $y^k \circ \varphi$ is just the coordinate functions of the map $\varphi$.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Push Forward and Pull Back
+
+First you need a map to push or pull with.
+
+Then, **pulling back is just plugging in the formula for your map.** If the map is f: u = x2 , then f* (u2 ) = x4 , or f*(du) = d(x2 ) = 2x dx. Here we took a function or form on the "u" space and turned it into a function or form on the "x" space by pluggin in u=x2 (pulled it back from u space to x space).
+
+**Push-forward is just applying the derivative of your map** on a point by point basis. You compute the jacobian like you would in vector calc, and multiply jacobian and tangent vector at a point. There is not much distinction between the derivative and the push-forward in this context. But, if your map is a diffeormorphism then you can push forward whole vector fields (point by point) and you get the dual relationship between pull-back and push-forward.

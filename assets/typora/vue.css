@@ -13,7 +13,7 @@ html {
 
 body {
 		font-family: 'Source Sans Pro', sans-serif !important;
-    color: #34495e;
+    /* color: #34495e; */
     -webkit-font-smoothing: antialiased;
     line-height: 1.6rem;
     letter-spacing: 0;
@@ -221,14 +221,10 @@ pre.highlight > code, tt {
 	page-break-inside: avoid;
 	text-align: left;
 	overflow-x: scroll;
+	font-family: 'Ubuntu Mono', monospace !important;
 }
 
 /* code fence */
-div.highlight {
- 	background-color: #eeeeee;
-	border-radius: 4px;
-  font-family: 'Ubuntu Mono', monospace;
-}
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */

@@ -95,6 +95,7 @@ The basis' action on vector is denoted as $\d x^i (V)$.
 
 
 
+
 ## Musical Isomorphism
 
 If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
@@ -202,9 +203,9 @@ But this requires embedding the manifold in some higher dimensional space, which
 
 Most of the textbooks just tell you to assign to each vector $V=V^\mu\uvec e_\mu$ an operator $\op V=V^\mu \Partial{}{x^\mu}$ . This makes writers happier for there is no further explanation needed - it's just a definition.
 
-### How they came up with it?
+### How did they come up with it?
 
-Of all the things on a manifold, why did mathematicians chose differential operators?
+Of all the things on a manifold, why did mathematicians choose differential operators?
 
 **Because the word "tangent" cries for taking derivatives**.
 
@@ -443,6 +444,7 @@ Here are the steps to find the expression for one form $\form f$.
 >
 >
 >
+>
 
 We finally arrive at the conclusion that
 
@@ -495,6 +497,7 @@ Now we have made out what vectors and covectors are:
    $$
    \form \omega =\sum a _ i\d x^i
    $$
+
 
 
 So far so good. 
