@@ -41,6 +41,8 @@ $$
 \notag
 $$
 
+This post follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)] and [[Frederic Schuller's Lectures on Geometrical Anatomy of Theoretical Physics](https://www.youtube.com/playlist?list=PLPH7f_7ZlzxTi6kS4vCmv4ZKm9u8g5yic)].
+
 # Terminologies
 
 ## General Algebra
@@ -85,7 +87,33 @@ are differentiable.
 
 ## Pullback and Pushforward
 
+This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
+### Vectors Are Pushed Forward
+
+Left $M_1$ and $M_2$ be smooth manifolds, $p\in M_1$ and $\varphi: M_1\rightarrow M_2$ be a smooth function. Then $\varphi$ induces a *linear* map 
+$$
+\varphi _ * : T_p M_1 \rightarrow T_{\varphi(p)}M_2
+$$
+celled the **pushforward** or the **differential map**. This map is described by considering an arbitrary tangent vector $v_p\in T_p M$ to a curve $C_1:[0,1]\rightarrow M_1$, i.e., $v_p = \Big.\D{C_1}{t}\Big\vert_{t=0}$. The image of $C_1$ is a smooth curve in $M_2$ under $\varphi$:
+$$
+C_2\dfdas\varphi\circ C_1: [0,1]\rightarrow M_2
+$$
+The push forward of vector is then
+$$
+\varphi_* (v_p)=v_{*p} \dfdas \Big.\D{C_2}{t}\Big\vert_{t=0}
+$$
+
+### Differential Forms Are Pulled Back
+
+Left $M_1$ and $M_2$ be smooth manifolds, $p\in M_1$ and $\varphi: M_1\rightarrow M_2$ be a smooth function. Then $\varphi$ induces a *linear* map 
+$$
+\varphi ^ * : T_p^* M_1 \leftarrow T_{\varphi(p)}^*M_2
+$$
+celled the **pullback map**. This map is described by considering an arbitrary cotangent vector $\omega_{\varphi(p)}$ at $T_{\varphi(p)}^*M$. The pullback is defined as its action on an arbitrary on an arbitrary element $u_p$ of $T_pM$. We have
+$$
+\big[\varphi^*(\omega_{\varphi(p)})\big](v_p)=\omega^*_{\varphi(p)}(u_p)\dfdas \omega_{\varphi(p)}(v_{*p})
+$$
 
 # Lie Algebra of a Lie Group
 
@@ -123,6 +151,17 @@ l_g^* (X_h) = X_{gh}
 $$
 This abstract left invariant vector field satisfies the requirements of a Lie algebra.
 
+or, $\forall g \in G, \forall f \in C^\infty(G)$
+$$
+\begin{align*}
+(l_g^*X_h)f &= X_{gh} f\\
+(def. of push forward )X_h (f\circ l_g)&= (Xf )(gh)\\
+[X(f\circ l_g)] (h)&=[(Xf)\circ l_g ] (h)\\
+X(f\circ l_g)&=(Xf)\circ l_g \\
+\end{align*}
+$$
+Def. The set of all left-invariant vector fields on a Lie group $G$ be denoted $\L (G)\sub \Gamma(TG)$.
+
 ### Lie bracket of vector fields
 
 If we have two vector fields $V=V^i(x)\Partial{}{x^i}$ and $W=W^j(x)\Partial{}{x^j}$, we first define the composite of vectors $V \circ W$ as their actions on function $f(x)$ , notice that
@@ -148,38 +187,35 @@ notice that
 $$
 \Partial{\Partial{f}{x^j}}{x^i} = \Partial{^2}{x^i\partial{x^j}} f
 $$
-==proof?==
+==need proof here==
 
 Write that in operator form, we have
 $$
-V\circ W  =V^i(x) \cdot \left(\Partial{W^j(x_p)}{x^i}\cdot\Partial{}{x^j}\right) +V^i(x) \cdot \left(W^j(x_p)\cdot \Partial{\Partial{}{x^j}}{x^i}\right)
+V\circ W  =V^i(x) \cdot \left(\Partial{W^j(x_p)}{x^i}\cdot\Partial{}{x^j}\right) +V^i(x) \cdot \left(W^j(x_p)\cdot \Partial{^2}{x^i\partial x^j}\right)
 $$
 
 
 Now we can define the **commutator**:
 $$
 \begin{align*}
-[V,W] (f) &=V \circ W -
+[V,W] &=V \circ W - W\circ V\\
+&=V^i(x) \cdot \left(\Partial{W^j(x_p)}{x^i}\cdot\Partial{}{x^j}\right) +V^i(x) \cdot \left(W^j(x_p)\cdot \Partial{^2}{x^i\partial x^j}\right) - \\ 
+&\qquad W^j(x) \cdot \left(\Partial{V^i(x_p)}{x^j}\cdot\Partial{}{x^i}\right) +W^i(x) \cdot \left(V^j(x_p)\cdot \Partial{^2}{x^j\partial x^i}\right)\\
+& = V^i(x) \cdot \left(\Partial{W^j(x_p)}{x^i}\cdot\Partial{}{x^j}\right)- W^j(x) \cdot \left(\Partial{V^i(x_p)}{x^j}\cdot\Partial{}{x^i}\right)
 \end{align*}
 $$
 
-
-
-
-or, $\forall g \in G, \forall f \in C^\infty(G)$
+notice that the indices $i, j $ are summed over, so it's okay to change the latter dummy indices in both terms so we can collect them.
 $$
 \begin{align*}
-(l_g^*X_h)f &= X_{gh} f\\
-(def. of push forward )X_h (f\circ l_g)&= (Xf )(gh)\\
-[X(f\circ l_g)] (h)&=[(Xf)\circ l_g ] (h)\\
-X(f\circ l_g)&=(Xf)\circ l_g \\
+[V,W]  & = V^i(x) \cdot \left(\Partial{W^k(x_p)}{x^i}\cdot\Partial{}{x^k}\right)- W^j(x) \cdot \left(\Partial{V^k(x_p)}{x^j}\cdot\Partial{}{x^k}\right)\\
+&= \underbrace{\left(V^i(x) \cdot \Partial{W^k(x_p)}{x^i}- W^j(x) \cdot \Partial{V^k(x_p)}{x^j}\right)}_{U_{i,j}^{\phantom{i,j}k}}\cdot\Partial{}{x^k}\\
 \end{align*}
 $$
-Def. The set of all left-invariant vector fields on a Lie group $G$ be denoted $\L (G)\sub \Gamma(TG)$.
 
-Notice that this is a $\R$-vector space. this is finite dimensional.  
+### Left Invariant Vector Fields' commutator
 
-> Theorem : $[\slot,\slot]$ maps $\L(G)\times \L(G)\rightarrow \L(G)$ is a Lie algebra. (proof the [x,y] is left invar.)
+> Theorem : $[\slot,\slot]: \L(G)\times \L(G)\rightarrow \L(G)$ is a Lie algebra. (i.e., $[x,y]$ is left invar.)
 >
 > Proof: 
 > $$
