@@ -109,5 +109,3 @@
     },
     "retina_detect": false /* don't detect retina display in mac products. If enabled, the "linked" style will consume huge resources */
   });
-
-}, false);
