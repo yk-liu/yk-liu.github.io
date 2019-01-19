@@ -33,13 +33,18 @@
          </div >
       </section>
       <script src= "https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
-			<script>/* sweetScroll load */
+      <script src="{{site.url}}{{site.baseurl}}/assets/js/particles_conf.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/particles.js@2/particles.js"></script>
+			<script>
+			/* sweetScroll load */
 				document.addEventListener('DOMContentLoaded', () => {
 					const scroller = new SweetScroll({/* some options */});
 				}, false);
+			/* particle js load*/
+				particlesJS.load('particles-js', '{{site.url}}{{site.baseurl}}/assets/js/particles_conf.json', function() {
+					console.log('callback - particles.js config loaded');
+				});
 			</script>
-      <script src="{{site.url}}{{site.baseurl}}/assets/js/particles_conf.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/particles.js@2/particles.js"></script>
    </body>
    {% include footer.html analytics=false %} 
 </html>

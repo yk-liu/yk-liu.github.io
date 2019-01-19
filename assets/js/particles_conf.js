@@ -1,7 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function () {
-
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS('particles-js', {
+'particles-js', {
     "particles": {
       "number": {
         "value": 60,
@@ -111,8 +108,6 @@
     },
     "retina_detect": false 
 		/* don't detect retina display in mac products. If enabled, the "linked" style will consume huge resources */
-  });
-
-// }, false);
+  }
 
  
