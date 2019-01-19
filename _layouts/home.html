@@ -38,11 +38,9 @@
 			/* sweetScroll load */
 				document.addEventListener('DOMContentLoaded', () => {
 					const scroller = new SweetScroll({/* some options */});
+					/* particle js load*/
+				particlesJS('particles-js', '{{site.url}}{{site.baseurl}}/assets/js/particles_conf.json');
 				}, false);
-			/* particle js load*/
-				particlesJS.load('particles-js', '{{site.url}}{{site.baseurl}}/assets/js/particles_conf.json', function() {
-					console.log('callback - particles.js config loaded');
-				});
 			</script>
    </body>
    {% include footer.html analytics=false %} 
