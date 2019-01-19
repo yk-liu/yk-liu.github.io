@@ -1,5 +1,4 @@
-/* sweetScroll load */
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
   particlesJS('particles-js', {
@@ -114,6 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		/* don't detect retina display in mac products. If enabled, the "linked" style will consume huge resources */
   });
 
-}, false);
+// }, false);
 
  
