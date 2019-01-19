@@ -155,7 +155,7 @@ or, $\forall g \in G, \forall f \in C^\infty(G)$
 $$
 \begin{align*}
 (l_g^*X_h)f &= X_{gh} f\\
-(def. of push forward )X_h (f\circ l_g)&= (Xf )(gh)\\
+X_h (f\circ l_g)&= (Xf )(gh)\\
 [X(f\circ l_g)] (h)&=[(Xf)\circ l_g ] (h)\\
 X(f\circ l_g)&=(Xf)\circ l_g \\
 \end{align*}
@@ -209,7 +209,7 @@ notice that the indices $i, j $ are summed over, so it's okay to change the latt
 $$
 \begin{align*}
 [V,W]  & = V^i(x) \cdot \left(\Partial{W^k(x_p)}{x^i}\cdot\Partial{}{x^k}\right)- W^j(x) \cdot \left(\Partial{V^k(x_p)}{x^j}\cdot\Partial{}{x^k}\right)\\
-&= \underbrace{\left(V^i(x) \cdot \Partial{W^k(x_p)}{x^i}- W^j(x) \cdot \Partial{V^k(x_p)}{x^j}\right)}_{U_{i,j}^{\phantom{i,j}k}}\cdot\Partial{}{x^k}\\
+&= \underbrace{\left(V^i(x) \cdot \Partial{W^k(x_p)}{x^i}- W^j(x) \cdot \Partial{V^k(x_p)}{x^j}\right)}_{U^k}\cdot\Partial{}{x^k}\\
 \end{align*}
 $$
 
