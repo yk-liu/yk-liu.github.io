@@ -40,7 +40,7 @@
 			"random": true,
 			"anim": {
 				"enable": false,
-				"speed": 10,
+				"speed": 1,
 				"size_min": 0.5,
 				"sync": false
 			}
