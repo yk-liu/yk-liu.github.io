@@ -1,4 +1,7 @@
- /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+/* sweetScroll load */
+document.addEventListener("DOMContentLoaded", function () {
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
   particlesJS('particles-js', {
     "particles": {
       "number": {
@@ -107,5 +110,10 @@
         }
       }
     },
-    "retina_detect": false /* don't detect retina display in mac products. If enabled, the "linked" style will consume huge resources */
+    "retina_detect": false 
+		/* don't detect retina display in mac products. If enabled, the "linked" style will consume huge resources */
   });
+
+}, false);
+
+ 
