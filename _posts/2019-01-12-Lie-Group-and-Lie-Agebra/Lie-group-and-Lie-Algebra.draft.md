@@ -1,8 +1,8 @@
 ---
 title: Lie-Group-and-Lie-Algebra
 categories: Topology
-tags:
-keywords:
+tags: Pullback Pushforward Lie-group Lie-algebra
+keywords: Pull-back Push-forward algebra left-invariant-vector-field
 Description: Many operations such as rotations and translations can be regarded as elements of a Lie group. With such operations certain symmetries can be extracted, and generators can be defined. Investigating the Lie group and further Lie algebras gives us solid ground about Poisson brackets.
 status: Writing
 ---
@@ -41,32 +41,15 @@ $$
 \notag
 $$
 
-# Lie Group
+# Terminologies
 
-Roughly speaking, a Lie group is a continuous group. The elements in this group are continuous and the group operations are continuous.
-
-A Lie group $(G,\cdot)$ is a differentiable manifold with a group structure such that the operations
-
-1. $\cdot : G\times G \rightarrow G,\, (g_1,g_2)\mapsto g_1\cdot g_2$
-2. $^{-1}: G\rightarrow G,\, g\mapsto g^{-1}$.
-
-are differentiable.
-
-## Lie Group Examples and Representation
-
-
-
-# Lie Algebra
-
-## Terminologies
-
-### General Algebra
+## General Algebra
 
 An algebra is defined as a vector space equipped with a bilinear map $\lb{\slot}{\slot} : V\times V \rightarrow V$. Such vector space is called an **algebra**. This bilinear map can be interpreted as a product, but for future reference, it is written in the form similar to QM brackets.
 
 Vectors in $\R^3$ with cross product is an algebra.
 
-### General Derivation
+## General Derivation
 
 A **derivation** $D$ is a linear map from an algebra to itself: $D: A\rightarrow A$ that satisfies the Leibnitz Rule:
 $$
@@ -89,44 +72,100 @@ An general Lie algebra is defined as a $K$-vector space $(K, + ,\cdot )$ equippe
 2. antisymmetric: $\lb{x}{y}= - \lb{y}{x}$
 3. Jacobian identity: $\lb{x}{\lb{y}{z}}+\lb{y}{\lb{z}{x}}+\lb{z}{\lb{x}{y}}=0$
 
+## Lie Group
+
+Roughly speaking, a Lie group is a continuous group. The elements in this group are continuous and the group operations are continuous.
+
+A Lie group $(G,\cdot)$ is a differentiable manifold with a group structure such that the operations
+
+1. $\cdot : G\times G \rightarrow G,\, (g_1,g_2)\mapsto g_1\cdot g_2$
+2. $^{-1}: G\rightarrow G,\, g\mapsto g^{-1}$.
+
+are differentiable.
+
+## Pullback and Pushforward
+
+
+
+# Lie Algebra of a Lie Group
+
+Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M$ at point $p\in M$ to a neighboring point $p^\prime \in M$. In this way, one may think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}$) on manifold $M$.
+
 > example: $L\dfdas \Gamma(TM)$ is a $\R$-vector space.
 >
 > $\lb{\slot}{\slot}\dfdas[\slot,\slot]$ (bracket of vector fields)
 >
 > Thus $\Gamma(TM)$ is a infinite dimensional Lie algebra
 
-## Lie Algebra
+## Lie Algebra are Left Invariant Vector Fields
 
-Let $(G,\cdot )$ be a Lie group. A **left translation** $l_g$ is defined as
+Let $(G,\cdot )$ be a Lie group. A **left translation** $L_g$ is defined as
 $$
-l_g:G\rightarrow G\\
-h\mapsto l_g(h)\dfdas g\cdot h
+L_g:G\rightarrow G\\
+h\mapsto L_g(h)\dfdas g\cdot h
 $$
-Each $l_g$ is an isomorphism.  
+Each $R _ g$ is an isomorphism and a diffeomorphism on $G$. 
 
-> injective: $l_g h=l_g h^\prime \rightarrow h=h^\prime$
->
-> surjective: $l_g(g^{-1} \cdot h ) = g \cdot g^{-1}\cdot h = h$
+Since this $L _ g$ is a diffeomorphism (namely bijective and smooth), we can push forward the vector field $X$ on $G$ to another vector field ${L _ g}^* X$:
 
-Certainly $l_g$ is a diffeomorphism on $G$. 
+$$
+({L _ g}^* X) _ {gh}\dfdas {L _ g}^* (X _ h)
+$$
+The **left invariant vector fields** are of interest.
 
-Remark: Recall that we could extend the pull back (which is defined for covectors at a point) to covector field. By proofing that this $l_g$ is a diffeomorphism (namely bijective + smooth), we can push forward the vector field.
+Let $(G \cdot)$ be a Lie group, and $X$ a vector field on $G$ then $X$ is called left invariant if for any $g\in G$,
+$$
+{L_g}^* X = X.
+$$
+Alternatively, one can write this as a point wise vector equation:
+$$
+l_g^* (X_h) = X_{gh}
+$$
+This abstract left invariant vector field satisfies the requirements of a Lie algebra.
 
-Upshot: we can push forward any vector field $X$ on $G$ to another vector field $l_g ^* X$:
-$$
-(l_g* X)_{gh} (vector field at point gh) \dfdas l_g^* (X_h)
-$$
-The **invariant vector fields** are of interest.
+### Lie bracket of vector fields
 
-Let $(G \cdot)$ be a Lie group, and $X$ a vector field on $G$ then X is called left invariant if for any $g\in G$,
+If we have two vector fields $V=V^i(x)\Partial{}{x^i}$ and $W=W^j(x)\Partial{}{x^j}$, we first define the composite of vectors $V \circ W$ as their actions on function $f(x)$ , notice that
 $$
-l_g^* X = X.
-(vector field eqn.)
+W_p(f) =W^j(x_p)\Partial{f}{x^j} \in \R
 $$
-Alternatively, one can write this as
+can be seen as a function $W(f): M\rightarrow \R,  p \mapsto W^j(x_p)\Partial{f}{x^j}$. Thus we can apply another vector filed to this function as:
 $$
-l_g^* (X_h) = X_{gh} (vector eqn.)
+\begin{align*}
+\Big[V\circ W \Big](f) &= V\Big(W(f)\Big)\\
+&=V^i(x) \cdot \Partial{}{x^i}\bigg(W^j(x_p)\Partial{f}{x^j}\bigg)\\
+\end{align*}
 $$
+
+Notice that both $W^j(x_p)$ and $\Partial{f(x)}{x^j}$ are merely functions $M\rightarrow \R$, thus the Leibnitz rule applies,
+$$
+\begin{align*}
+\Big[V\circ W \Big](f) &=V^i(x) \cdot \Partial{}{x^i}\bigg(W^j(x_p)\Partial{f}{x^j}\bigg)\\
+&=V^i(x) \cdot \left(\Partial{W^j(x_p)}{x^i}\cdot\Partial{f}{x^j}\right) +V^i(x) \cdot \left(W^j(x_p)\cdot \Partial{\Partial{f}{x^j}}{x^i}\right)
+\end{align*}
+$$
+notice that 
+$$
+\Partial{\Partial{f}{x^j}}{x^i} = \Partial{^2}{x^i\partial{x^j}} f
+$$
+==proof?==
+
+Write that in operator form, we have
+$$
+V\circ W  =V^i(x) \cdot \left(\Partial{W^j(x_p)}{x^i}\cdot\Partial{}{x^j}\right) +V^i(x) \cdot \left(W^j(x_p)\cdot \Partial{\Partial{}{x^j}}{x^i}\right)
+$$
+
+
+Now we can define the **commutator**:
+$$
+\begin{align*}
+[V,W] (f) &=V \circ W -
+\end{align*}
+$$
+
+
+
+
 or, $\forall g \in G, \forall f \in C^\infty(G)$
 $$
 \begin{align*}
