@@ -134,7 +134,7 @@ h\mapsto L_g(h)\dfdas g\cdot h
 $$
 Each $R _ g$ is an isomorphism and a diffeomorphism on $G$. 
 
-Since this $L _ g$ is a diffeomorphism (namely bijective and smooth), we can push forward the vector field $X$ on $G$ to another vector field ${L _ g}^* X$:
+Since this $L _ g$ is a diffeomorphism (namely bijective and smooth), we can push forward the vector field $X$ on $G$ to another vector field ${L _ g}^* X​$:
 
 $$
 ({L _ g}^* X) _ {gh}\dfdas {L _ g}^* (X _ h)
@@ -185,7 +185,7 @@ $$
 $$
 notice that 
 $$
-\Partial{\Partial{f}{x^j}}{x^i} = \Partial{^2}{x^i\partial{x^j}} f
+\Partial{}{x^i}(\Partial{f}{x^j}) = \Partial{^2}{x^i\partial{x^j}} f
 $$
 ==need proof here==
 
