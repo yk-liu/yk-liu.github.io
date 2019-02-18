@@ -29,6 +29,7 @@ you will be prompted to input again your root password and to change you root pa
  apt-get install git
 # if you upgraded pip, use pip2 if "pip install shadowsocks" gives error
  pip install shadowsocks
+# in some other cases, you need to update setuptools using cmd "pip install --upgrade setuptools"
 
 # install chacha enryption
 apt-get install build-essential
