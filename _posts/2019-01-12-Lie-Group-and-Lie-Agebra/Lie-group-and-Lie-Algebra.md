@@ -5,6 +5,7 @@ tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
 description: Many operations such as rotations and translations can be regarded as elements of a Lie group. With such operations certain symmetries can be extracted, and generators can be defined. Investigating the Lie group and further Lie algebras gives us solid ground about Poisson brackets.
 status: Writing
+highlight: true
 ---
 
 $$
@@ -130,17 +131,11 @@ $$
 
 # Lie Algebra of a Lie Group
 
-Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M$ at point $p\in M$ to a neighboring point $p^\prime \in M$. In this way, one may think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}$) on manifold $M$.
-
-> example: $L\dfdas \Gamma(TM)$ is a $\R$-vector space.
->
-> $\lb{\slot}{\slot}\dfdas[\slot,\slot]$ (bracket of vector fields)
->
-> Thus $\Gamma(TM)$ is a infinite dimensional Lie algebra
+Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M$ at point $p\in M$ to a neighboring point $p^\prime \in M$. ***Only*** in this sense, can one think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}$) on manifold $M$.
 
 ## Lie Algebra are Left Invariant Vector Fields
 
-Let $(G,\cdot )$ be a Lie group. A **left translation** $L_g$ is defined as
+Let $(G,\cdot )$ be a Lie group. A **left translation** $L_g​$ is defined as
 
 $$
 L_g:G\rightarrow G\\
@@ -185,6 +180,8 @@ $$
 Def. The set of all left-invariant vector fields on a Lie group $G$ be denoted $\L (G)\subset \Gamma(TG)$.
 
 ### Lie bracket of vector fields
+
+This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
 If we have two vector fields $V=V^i(x)\Partial{}{x^i}$ and $W=W^j(x)\Partial{}{x^j}$, we first define the composite of vectors $V \circ W$ as their actions on function $f(x)$ , notice that
 
