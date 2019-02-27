@@ -45,7 +45,7 @@ $$
 
 This post follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)] and [[Frederic Schuller's Lectures on Geometrical Anatomy of Theoretical Physics](https://www.youtube.com/playlist?list=PLPH7f_7ZlzxTi6kS4vCmv4ZKm9u8g5yic)].
 
-# Terminologies
+# Lie Algebra
 
 ## General Algebra
 
@@ -75,22 +75,11 @@ $$
 
 ## General Lie Algebra
 
-An general Lie algebra is defined as a $K$-vector space $(K, + ,\cdot )$ equipped with an Lie bracket $\lb{\slot}{\slot } $ with the following properties:
+An general Lie algebra is defined as a $K$-vector space $(K, + ,\cdot )$ equipped with an Lie bracket $\lb{\slot}{\slot } ​$ with the following properties:
 
 1. bilinearlity: $\lb{\slot}{\slot}: L\times L \rightarrow L$
 2. antisymmetty: $\lb{x}{y}= - \lb{y}{x}$
 3. Jacobian identity: $\lb{x}{\lb{y}{z}}+\lb{y}{\lb{z}{x}}+\lb{z}{\lb{x}{y}}=0$
-
-## Lie Group
-
-Roughly speaking, a Lie group is a continuous group. Elements in a Lie group as well as group operations are continuous.
-
-A Lie group $(G,\cdot)​$ is a differentiable manifold with a group structure such that the operations
-
-1. $\cdot : G\times G \rightarrow G,\, (g_1,g_2)\mapsto g_1\cdot g_2$
-2. $^{-1}: G\rightarrow G,\, g\mapsto g^{-1}$.
-
-are differentiable.
 
 ## Pullback and Pushforward
 
@@ -258,7 +247,24 @@ $$
 > $$
 >
 
-> Theorem: $\L(G) \simeq_\text{iso as vector space} T_e G​$
+## Lie Algebra of a Lie Group
+
+Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M$ at point $p\in M$ to a neighboring point $p^\prime \in M$. ***Only*** in this sense, can one think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}$) on manifold $M$.
+
+## Lie Group
+
+Roughly speaking, a Lie group is a continuous group. Elements in a Lie group as well as group operations are continuous.
+
+A Lie group $(G,\cdot)$ is a differentiable manifold with a group structure such that the operations
+
+1. $\cdot : G\times G \rightarrow G,\, (g_1,g_2)\mapsto g_1\cdot g_2$
+2. $^{-1}: G\rightarrow G,\, g\mapsto g^{-1}$.
+
+are differentiable.
+
+## Tangent Space and Lie Algebra
+
+> Theorem: $\L(G) \simeq_\text{iso as vector space} T_e G$
 >
 > proof:
 > 
@@ -273,6 +279,12 @@ $$
 > $$
 >
 
-## Lie Algebra of a Lie Group
+## Exponetial Map
 
-Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M$ at point $p\in M$ to a neighboring point $p^\prime \in M$. ***Only*** in this sense, can one think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}$) on manifold $M​$.
+# Generators as "Infinitesimal Elements"
+
+## Lie's first and second theorems
+
+## Infinitesimal elements
+
+# Lie Algebra in Physics
