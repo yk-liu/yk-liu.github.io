@@ -3,8 +3,9 @@ title: Lie-Group-and-Lie-Algebra
 categories: Topology
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
-description: Many operations such as rotations and translations can be regarded as elements of a Lie group. With such operations certain symmetries can be extracted, and generators can be defined. Investigating the Lie group and further Lie algebras gives us solid ground about Poisson brackets.
+description: Many operations such as rotations and translations can be regarded as elements of a Lie group. With such operations certain symmetries can be extracted, and generators can be defined. Investigating the Lie group and further Lie algebras gives us solid ground about Poisson brackets. I wrote this post because I am dissatisfied with the "infinitesimal operators" in textbooks with physicists as primary readers. I am trying to understand the rigorous definition of this "infinitesimal operator" and get some intuition about the concept, as well as why this concept is widely used.
 status: Writing
+edit: 2019-02-27
 highlight: true
 ---
 
@@ -48,13 +49,13 @@ This post follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540
 
 ## General Algebra
 
-An algebra is defined as a vector space equipped with a bilinear map $\lb{\slot}{\slot} : V\times V \rightarrow V​$. Such vector space is called an **algebra**. This bilinear map can be interpreted as a product, but for future reference, it is written in the form similar to QM brackets.
+An algebra is defined as a vector space equipped with a bilinear map $\lb{\slot}{\slot} : V\times V \rightarrow V$. Such vector space is called an **algebra**. This bilinear map can be interpreted as a product $u\star v\mapsto w$, but for future reference, it is written in the form similar to QM brackets as $\lb{u}{v}\mapsto w$.
 
-Vectors in $\R^3$ with cross product is an algebra.
+> Vectors in $\R^3$ with cross product is an algebra.
 
 ## General Derivation
 
-A **derivation** $D$ is a linear map from an algebra to itself: $D: A\rightarrow A$ that satisfies the Leibnitz Rule:
+A **derivation** $D​$ is a linear map from an algebra to itself: $D: A\rightarrow A​$ that satisfies the Leibnitz Rule:
 
 $$
 D(\lb{f}{g})=\lb{Df}{g}+\lb{f}{Dg}
@@ -74,17 +75,17 @@ $$
 
 ## General Lie Algebra
 
-An general Lie algebra is defined as a $K$-vector space $(K, + ,\cdot )$ equipped with an Lie bracket $\lb{\slot}{\slot } $ such that
+An general Lie algebra is defined as a $K$-vector space $(K, + ,\cdot )$ equipped with an Lie bracket $\lb{\slot}{\slot } $ with the following properties:
 
-1. bilinear: $\lb{\slot}{\slot}: L\times L \rightarrow L$
-2. antisymmetric: $\lb{x}{y}= - \lb{y}{x}$
+1. bilinearlity: $\lb{\slot}{\slot}: L\times L \rightarrow L$
+2. antisymmetty: $\lb{x}{y}= - \lb{y}{x}$
 3. Jacobian identity: $\lb{x}{\lb{y}{z}}+\lb{y}{\lb{z}{x}}+\lb{z}{\lb{x}{y}}=0$
 
 ## Lie Group
 
-Roughly speaking, a Lie group is a continuous group. The elements in this group are continuous and the group operations are continuous.
+Roughly speaking, a Lie group is a continuous group. Elements in a Lie group as well as group operations are continuous.
 
-A Lie group $(G,\cdot)$ is a differentiable manifold with a group structure such that the operations
+A Lie group $(G,\cdot)​$ is a differentiable manifold with a group structure such that the operations
 
 1. $\cdot : G\times G \rightarrow G,\, (g_1,g_2)\mapsto g_1\cdot g_2$
 2. $^{-1}: G\rightarrow G,\, g\mapsto g^{-1}$.
@@ -117,7 +118,7 @@ $$
 
 ### Differential Forms Are Pulled Back
 
-Left $M_1$ and $M_2$ be smooth manifolds, $p\in M_1$ and $\varphi: M_1\rightarrow M_2$ be a smooth function. Then $\varphi$ induces a *linear* map 
+Left $M_1$ and $M_2$ be smooth manifolds, $p\in M_1$ and $\varphi: M_1\rightarrow M_2$ be a smooth function. Then $\varphi$ induces a *linear* map between cotangent spaces,
 
 $$
 \varphi ^ * : T_p^* M_1 \leftarrow T_{\varphi(p)}^*M_2
@@ -129,7 +130,9 @@ $$
 \big[\varphi^*(\omega_{\varphi(p)})\big](v_p)=\omega^*_{\varphi(p)}(u_p)\dfdas \omega_{\varphi(p)}(v_{*p})
 $$
 
-# Lie Algebra of a Lie Group
+where the RHS only contains quantities we have defined.
+
+## Lie Algebra of a Lie Group
 
 Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M$ at point $p\in M$ to a neighboring point $p^\prime \in M$. ***Only*** in this sense, can one think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}$) on manifold $M$.
 
@@ -247,13 +250,14 @@ $$
 > Theorem : $[\slot,\slot]: \L(G)\times \L(G)\rightarrow \L(G)$ is a Lie algebra. (i.e., $[x,y]$ is left invar.)
 >
 > Proof: 
-> 
+>
 > $$
 > \begin{align*}
 > [X,Y](f\circ l_g)&= X(Y(f\circ l_g))-Y(X(f\circ l_g))\\
 > &=X((Yf)\circ l_g)-Y((Xf)\circ l_g)\\
 > &=X(Yf)\circ l_g-Y(Xf)\circ l_g\\
-> &=([X,Y]f)\circ l_g thus it is left invar.
+> &=([X,Y]f)\circ l_g \\
+> \text{thus it is left invar.}
 > \end{align*}
 > $$
 >
