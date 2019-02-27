@@ -279,7 +279,7 @@ are differentiable.
 > $$
 >
 
-## Exponetial Map
+## Exponential Map
 
 # Generators as "Infinitesimal Elements"
 
