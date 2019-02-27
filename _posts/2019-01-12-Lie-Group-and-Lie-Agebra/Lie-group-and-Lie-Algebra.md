@@ -3,10 +3,10 @@ title: Lie-Algebra-of-Lie-Group-and-Infinitesimal-Elements
 categories: Topology
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
-description: Many operations such as rotations and translations can be regarded as elements of a Lie group. With such operations certain symmetries can be extracted, and generators can be defined. Investigating the Lie group and further Lie algebras gives us solid ground about Poisson brackets. I wrote this post because I am dissatisfied with the "infinitesimal operators" in textbooks with physicists as primary readers. I am trying to understand the rigorous definition of this "infinitesimal operator" and get some intuition about the concept, as well as why this concept is widely used.
 status: Writing
 edit: 2019-02-27
 highlight: true
+description: Many operations such as rotations and translations can be regarded as elements of a Lie group. With such operations certain symmetries can be extracted, and generators can be defined. Investigating the Lie group and further Lie algebras gives us solid ground about Poisson brackets. I wrote this post because I am dissatisfied with the "infinitesimal operators" in textbooks with physicists as primary readers. I am trying to understand the rigorous definition of this "infinitesimal operator" and get some intuition about the concept, as well as why this concept is widely used.
 ---
 
 $$
@@ -249,7 +249,7 @@ $$
 
 ## Lie Algebra of a Lie Group
 
-Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M$ at point $p\in M$ to a neighboring point $p^\prime \in M$. ***Only*** in this sense, can one think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}$) on manifold $M$.
+Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M​$ at point $p\in M​$ to a neighboring point $p^\prime \in M​$. ***Only*** in this sense, can one think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}​$) on manifold $M​$.
 
 ## Lie Group
 
@@ -264,7 +264,7 @@ are differentiable.
 
 ## Tangent Space and Lie Algebra
 
-> Theorem: $\L(G) \simeq_\text{iso as vector space} T_e G$
+> Theorem: $\L(G) \simeq_\text{iso as vector space} T_e G​$
 >
 > proof:
 > 
