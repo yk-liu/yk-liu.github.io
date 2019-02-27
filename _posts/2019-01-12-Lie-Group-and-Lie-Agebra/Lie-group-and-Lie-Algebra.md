@@ -1,5 +1,5 @@
 ---
-title: Lie-Group-and-Lie-Algebra
+title: Lie-Algebra-of-Lie-Group-and-Infinitesimal-Elements
 categories: Topology
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
@@ -132,10 +132,6 @@ $$
 
 where the RHS only contains quantities we have defined.
 
-## Lie Algebra of a Lie Group
-
-Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M$ at point $p\in M$ to a neighboring point $p^\prime \in M$. ***Only*** in this sense, can one think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}$) on manifold $M$.
-
 ## Lie Algebra are Left Invariant Vector Fields
 
 Let $(G,\cdot )$ be a Lie group. A **left translation** $L_g​$ is defined as
@@ -262,7 +258,7 @@ $$
 > $$
 >
 
-> Theorem: $\L(G) \simeq_\text{iso as vector space} T_e G$
+> Theorem: $\L(G) \simeq_\text{iso as vector space} T_e G​$
 >
 > proof:
 > 
@@ -277,4 +273,6 @@ $$
 > $$
 >
 
+## Lie Algebra of a Lie Group
 
+Recall that in the chapter on tangent vectors, we mentioned that in general there is no way to define a vector using vocabularies of manifold itself. Lie algebra can be seen as a way to connect a tangent vector $V_p\in T_p M$ at point $p\in M$ to a neighboring point $p^\prime \in M$. ***Only*** in this sense, can one think the tangent vector as an infinitesimal little arrows (namely $\vec {pp^\prime}$) on manifold $M​$.
