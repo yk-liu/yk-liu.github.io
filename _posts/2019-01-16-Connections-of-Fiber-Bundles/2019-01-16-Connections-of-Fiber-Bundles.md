@@ -53,7 +53,7 @@ Generally speaking, a fiber bundle is a topological space where there are extra 
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Connections-of-Fiber-Bundles/assets/pasta.png' width="20%" alt="a bunch of pasta">
 
-A fiber bundle is just like a bunch of pasta. Each piece of pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle or a total space. Those pasta can be twisted and bent, but each piece of  pasta is distinguishable and looks alike. And at each point of the total space (the entire bunch of pasta), it looks like direct product of a base space and a fiber. This means two things. 
+A fiber bundle is just like a bunch of pasta. Each piece of pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle or a total space. That pasta can be twisted and bent, but each piece of pasta is distinguishable and looks alike. And at each point of the total space (the entire bunch of pasta), it looks like a direct product of a base space and a fiber. This means two things. 
 
 1. This higher dimensional total space can be reduced to lower dimensional spaces. AN extra structure can always help us understand the total space better.
 2. We can construct higher dimensional non-trivial spaces from simple lower dimensional spaces. Putting our problems in a higher dimensional space can sometimes give us simpler expression.
@@ -116,13 +116,13 @@ $$
 
 This group is called the structure group $G$ of the bundle $F$. We call the action $G_{\alpha,\beta}(x)F_\alpha=F_\beta$  as "$G$ act on $F$ on the left". 
 
-# Principle Fiber Bundle
+# Principal Fiber Bundle
 
-There is a special kind of bundle called the principle bundle, where all the fibers are isomorphic to the structure group $G$. 
+There is a special kind of bundle called the principal bundle, where all the fibers are isomorphic to the structure group $G$. 
 
-A fiber is essentially a topological space, and you can add a group structure to the space such that group properties (identity, inverse, closure and associativity) are endowed. If the group structure are the same as structure group, we will call this fiber bundle a principle fiber bundle.
+A piece of fiber is essentially a topological space, and you can add a group structure to the space such that group properties (identity, inverse, closure, and associativity) are endowed. If the group structure is the same as structure group, we will call this fiber bundle a principal fiber bundle.
 
->  Is it possible to make every fiber bundle a principle fiber bundle? If not, how can we be sure that it is not possible?
+>  Is it possible to make every fiber bundle a principal fiber bundle? If not, how can we be sure that it is not possible?
 
 # Connections on Fiber Bundle
 
