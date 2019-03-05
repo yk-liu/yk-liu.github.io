@@ -75,7 +75,7 @@ A group is interpreted in an introductory level, a collection of actions that pr
 
 When the cyclic group was introduced, so was the left or right translation, defined as taking one element out and multiply it with every element of the group. This operation when viewed (and called) as a translation. Considering that cyclic groups often represent "rotations", the translation is often depicted as follow. The fact that an element (which is a rotation) acting on the group "rotates" the group, is often neglected, or considered as a trivial coincidence. Since there is no "action on a group" defined. So far so good.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/translation.png" width="30em">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/LieTranslation.png" width="45%">
 
 Then a more mathematical way of defining a group is introduced. Multiplication with a bunch of properties (namely closure, associativity, identity and invertibility) is defined on a set, making it a group. There is really not much to say about what is in this set. For all one knows, it's like a point set, with each point representing "something" like an action. This point of view is validified when one learned that $\set{ \e^{\i 2\pi j/ N} \mid j=1,2,3,\cdots, N}$ is a perfect cyclic group under multiplication of numbers. So far so good.
 
@@ -83,30 +83,37 @@ By taking the mathematical highroad, the external "rigid body" is removed. Previ
 
 Thing got out of hand when I encountered Lie group. Similar to discrete groups, I first learned that continuous operations such a translation and rotations are represented by Lie groups. So a Lie group is made of continuous operations (often considered acting on a sphere). Then I learned formally, a Lie group is defined as a smooth manifold equipped with smooth group operations, which clearly means that a Lie group is made of points! Then there is the concept of left and right translations, depicted as magical translations along the one-parameter subgroups. $g(s)\circ g(t)$ is understood as $g(s)$ as a action acting on the point $g(t)$, moving it to a new point $g(s+t)=g(s)\circ g(t)​$. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/LieTranslation.png" width="20em">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/LieTranslation.png" width="45%">
 
 The confusing property that a group element can act on the group itself is caused by lack of proper definition of "action" of a group element. This chapter is often organized at the end of Lie group, but I think that early exposure to this concept helps to reduce the aforementioned confusion.
 
 ### Lie Groups' Actions on Manifold
 
 A **left $G$-action** of a Lie group $(G,\cdot)$ on a manifold $\mfd M$ is a binary operation $(\slot,\slot)$ sometimes denoted as $\triangleright$.
+
 $$
 G\times \mfd M \rightarrow \mfd M: (g,p)\mapsto g\lact p
 $$
+
 such that
+
 $$
 \begin{align*}
 e\lact p &= p,\\
 g_1 \lact \left(g_2 \lact p\right) &= \left(g_2\cdot g_1\right)\lact p.
 \end{align*}
 $$
+
 Sometimes a dot "$\,\cdot\,​$" is abused to denote this left action.
 
 In a similar fashion, a **right $G$-action** $\ract$ is defined as
+
 $$
 \mfd M \times G \rightarrow \mfd M : (p,g)\mapsto p\ract g
 $$
+
 such that 
+
 $$
 \begin{align*}
 p\ract e &= p,\\
@@ -117,15 +124,17 @@ $$
 ### Lie Group's Actions on Itself
 
 Notice that Lie group itself is a manifold, on which Lie group can thus "act". The **left action** or **left translation**: $L_g: G\rightarrow G​$ is defined by $L_g(h)=g\cdot h​$. Written in the form of **left $G​$-action** on itself, it reads:
+
 $$
 \begin{align*}
 &G \times G \rightarrow G:
 &L_g(h) \mapsto g \lact h \dfdas g\cdot h \in G
 \end{align*}
 $$
+
 This is the aforementioned "magical translation". 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/LieTranslation.png" width="20em">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/LieTranslation.png" width="45%">
 
 Similarly, **Right action** or **right translation** $R_g : G\rightarrow G$ is defined by $R_g(h) = h\cdot g$. 
 
@@ -136,14 +145,19 @@ Similarly, **Right action** or **right translation** $R_g : G\rightarrow G$ is d
 This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
 Left $M_1​$ and $M_2​$ be smooth manifolds, $p\in M_1​$ and $\varphi: M_1\rightarrow M_2​$ be a smooth function. Then $\varphi​$ induces a *linear* map 
+
 $$
 \varphi _ * : T_p M_1 \rightarrow T_{\varphi(p)}M_2
 $$
+
 celled the **pushforward** or the **differential map**. This map is described by considering an arbitrary tangent vector $v_p\in T_p M$ to a curve $C_1:[0,1]\rightarrow M_1$, i.e., $v_p = \Big.\D{C_1}{t}\Big\vert_{t=0}$. The image of $C_1$ is a smooth curve in $M_2$ under $\varphi$:
+
 $$
 C_2\dfdas\varphi\circ C_1: [0,1]\rightarrow M_2
 $$
+
 The push forward of vector is then
+
 $$
 \varphi_* (v_p)=v_{*p} \dfdas \Big.\D{C_2}{t}\Big\vert_{t=0}
 $$
@@ -153,24 +167,30 @@ $$
 This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
 Left $M_1​$ and $M_2​$ be smooth manifolds, $p\in M_1​$ and $\varphi: M_1\rightarrow M_2​$ be a smooth function. Then $\varphi​$ induces a *linear* map between cotangent spaces,
+
 $$
 \varphi ^ * : T_p^* M_1 \leftarrow T_{\varphi(p)}^*M_2
 $$
+
 celled the **pullback map**. This map is described by considering an arbitrary cotangent vector $\omega_{\varphi(p)}​$ at $T_{\varphi(p)}^*M​$. The pullback is defined as its action on an arbitrary element $u_p​$ of $T_pM​$. We have
+
 $$
 \big[\varphi^*(\omega_{\varphi(p)})\big](v_p)=\omega^*_{\varphi(p)}(u_p)\dfdas \omega_{\varphi(p)}(v_{*p})
 $$
+
 where the RHS only contains quantities we have defined.
 
 #### Push Forward of Left and Right Actions
 
 each of these actions also defines the action of $G$ on vector fields as well as differential forms on $G$ (as a manifold). For a tangent vector $v ∈ T_hG$ at $h\in G$, the push forward of left action $(L_g)_∗$ will move the vector to $T_{g\cdot h} G$. This map is denoted as
+
 $$
 (L_g)_*: T_gG\ni v\mapsto (L_g)_* v\in T_{g\cdot m}.
 $$
+
 Sometimes the notion of dot "$\,\cdot\,$" is again abused to denoted such action as $g\cdot v = (L_g)_*v$.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/LieActionPushForward.png" width="20em">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/LieActionPushForward.png" width="35%">
 
 In short, **the left action $L_g$ carries everything defined on $h$ to $g\cdot h$ like a simple translation**.
 
