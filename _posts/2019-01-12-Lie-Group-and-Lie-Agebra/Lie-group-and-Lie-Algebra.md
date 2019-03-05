@@ -90,23 +90,30 @@ The confusing property that a group element can act on the group itself is cause
 ### Lie Groups' Actions on Manifold
 
 A **left $G$-action** of a Lie group $(G,\cdot)$ on a manifold $\mfd M$ is a binary operation $(\slot,\slot)$ sometimes denoted as $\triangleright$.
+
 $$
 G\times \mfd M \rightarrow \mfd M: (g,p)\mapsto g\lact p
 $$
+
 such that
+
 $$
 \begin{align*}
 e\lact p &= p,\\
 g_1 \lact \left(g_2 \lact p\right) &= \left(g_2\cdot g_1\right)\lact p.
 \end{align*}
 $$
+
 Sometimes a dot "$\,\cdot\,​$" is abused to denote this left action.
 
 In a similar fashion, a **right $G$-action** $\ract$ is defined as
+
 $$
 \mfd M \times G \rightarrow \mfd M : (p,g)\mapsto p\ract g
 $$
+
 such that 
+
 $$
 \begin{align*}
 p\ract e &= p,\\
@@ -117,12 +124,14 @@ $$
 ### Lie Group's Actions on Itself
 
 Notice that Lie group itself is a manifold, on which Lie group can thus "act". The **left action** or **left translation**: $L_g: G\rightarrow G​$ is defined by $L_g(h)=g\cdot h​$. Written in the form of **left $G​$-action** on itself, it reads:
+
 $$
 \begin{align*}
 &G \times G \rightarrow G:
 &L_g(h) \mapsto g \lact h \dfdas g\cdot h \in G
 \end{align*}
 $$
+
 This is the aforementioned "magical translation". 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/LieTranslation.png" width="45%">
@@ -136,14 +145,19 @@ Similarly, **Right action** or **right translation** $R_g : G\rightarrow G$ is d
 This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
 Left $M_1​$ and $M_2​$ be smooth manifolds, $p\in M_1​$ and $\varphi: M_1\rightarrow M_2​$ be a smooth function. Then $\varphi​$ induces a *linear* map 
+
 $$
 \varphi _ * : T_p M_1 \rightarrow T_{\varphi(p)}M_2
 $$
+
 celled the **pushforward** or the **differential map**. This map is described by considering an arbitrary tangent vector $v_p\in T_p M$ to a curve $C_1:[0,1]\rightarrow M_1$, i.e., $v_p = \Big.\D{C_1}{t}\Big\vert_{t=0}$. The image of $C_1$ is a smooth curve in $M_2$ under $\varphi$:
+
 $$
 C_2\dfdas\varphi\circ C_1: [0,1]\rightarrow M_2
 $$
+
 The push forward of vector is then
+
 $$
 \varphi_* (v_p)=v_{*p} \dfdas \Big.\D{C_2}{t}\Big\vert_{t=0}
 $$
@@ -153,21 +167,27 @@ $$
 This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
 Left $M_1​$ and $M_2​$ be smooth manifolds, $p\in M_1​$ and $\varphi: M_1\rightarrow M_2​$ be a smooth function. Then $\varphi​$ induces a *linear* map between cotangent spaces,
+
 $$
 \varphi ^ * : T_p^* M_1 \leftarrow T_{\varphi(p)}^*M_2
 $$
+
 celled the **pullback map**. This map is described by considering an arbitrary cotangent vector $\omega_{\varphi(p)}​$ at $T_{\varphi(p)}^*M​$. The pullback is defined as its action on an arbitrary element $u_p​$ of $T_pM​$. We have
+
 $$
 \big[\varphi^*(\omega_{\varphi(p)})\big](v_p)=\omega^*_{\varphi(p)}(u_p)\dfdas \omega_{\varphi(p)}(v_{*p})
 $$
+
 where the RHS only contains quantities we have defined.
 
 #### Push Forward of Left and Right Actions
 
 each of these actions also defines the action of $G$ on vector fields as well as differential forms on $G$ (as a manifold). For a tangent vector $v ∈ T_hG$ at $h\in G$, the push forward of left action $(L_g)_∗$ will move the vector to $T_{g\cdot h} G$. This map is denoted as
+
 $$
 (L_g)_*: T_gG\ni v\mapsto (L_g)_* v\in T_{g\cdot m}.
 $$
+
 Sometimes the notion of dot "$\,\cdot\,$" is again abused to denoted such action as $g\cdot v = (L_g)_*v$.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-12-Lie-Group-and-Lie-Agebra/assets/LieActionPushForward.png" width="35%">
