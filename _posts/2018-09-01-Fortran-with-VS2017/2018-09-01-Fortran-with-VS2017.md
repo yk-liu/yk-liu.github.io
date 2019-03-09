@@ -1,5 +1,5 @@
 ---
-title : Fortran with VS2017
+title: Fortran with VS2017
 category: Fortran
 tags: Fortran Coding
 toc: false
@@ -17,7 +17,7 @@ description: Instructions on using Fortran with VS2017
 
 5. Make a new file (.f90 in my case) in it.
 
-6. Go to `Project`-`<ProjectName>Properties`-`Configuration Properties`-`Fortran`-`Libraries` and in the drop down menu of **Use Intel Math Kernel Library**, select anything other than "No", (Parallel /Qmkl:parallel in my case).
+6. Go to `Project`-`<ProjectName>Properties`-`Configuration Properties`-`Fortran`-`Libraries` and in the drop-down menu of **Use Intel Math Kernel Library**, select anything other than "No", (Parallel /Qmkl:parallel in my case).
 
 7. Compile and go.
 

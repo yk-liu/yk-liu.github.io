@@ -4,7 +4,7 @@ edit: 2018-12-15
 categories: Topology
 tags: de-Rham-Cohomology Topology Stokes'-Theorem
 keywords: cohomology exact dual
-description: Cohomology is viewed as a natural dual space of homology in this post. The bilinear map (i.e., the inner product) between these two spaces are just integration. At the end of this post, cohomology group as an indicator of "holes" in space is discussed.
+description: Cohomology is viewed as a natural dual space of homology in this post. The bilinear map (i.e., the inner product) between these two spaces is just integration. At the end of this post, the cohomology group as an indicator of "holes" in space is discussed.
 ---
 
 $$
@@ -46,7 +46,7 @@ This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_to
 
 # The Name
 
-"de Rham Cohomology" is translated in Chinese as "德拉姆上同调", where "同调" stands for "same tune". I suppose this is related to the musical isomorphism between one forms and vectors. As for the meaning of "co-", here are my thoughts. 
+"de Rham Cohomology" is translated in Chinese as "德拉姆上同调", where "同调" stands for "the same tune". I suppose this is related to the musical isomorphism between one forms and vectors. As for the meaning of "co-", here are my thoughts. 
 
 | English                  | Chinese           | Meaning                  |
 | ------------------------ | ----------------- | ------------------------ |
@@ -56,11 +56,11 @@ This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_to
 
 # Body and Boundary
 
-The cohomology is a relationship defined on forms. We will find how to define chains, boundaries and cycles on differential forms. 
+The cohomology is a relationship defined on forms. We will find how to define chains, boundaries, and cycles on differential forms. 
 
 ## The celebrated $\operatorname{d}$
 
-Remember the homology relations? It's very similar to the diagram we found in differential forms and tensors.
+Remember homology relations? It's very similar to the diagram we found in differential forms and tensors.
 
 $$
 \begin{array}{cccccccc}
@@ -75,7 +75,7 @@ Hence we have the following diagram.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/FormsComplex.png" width="80%">
 
-The differences exists but the symbol $\d$ still stands for "take the edge". 
+The differences exist but the symbol $\d$ still stands for "take the edge". 
 
 |                                          | Homology                            | Cohomology                            | Notes                                                        |
 | ---------------------------------------- | ----------------------------------- | ------------------------------------- | ------------------------------------------------------------ |
@@ -85,11 +85,11 @@ The differences exists but the symbol $\d$ still stands for "take the edge".
 | $\omega=\d\eta$                          | boundary                            | exact form                            | Exact forms are "exactly" the exterior derivative of a higher form. |
 | $\substack{\d^2=0\newline \partial^2=0}$ | boundaries have no boundary         | boundaries have no boundary           |                                                              |
 
-From differential forms, we can tell if the space has a whole like we did in homology groups. Still, we need to define the reverse map of $\d$, namely integration, in order to find the $\operatorname{img} 0$.
+From differential forms, we can tell if a manifold has a whole as we did in homology groups. Still, we need to define the reverse map of $\d$, namely integration, in order to find the $\operatorname{img} 0$.
 
 ## "Co-" in Cohomology
 
-As in the beginning of this post, "co-" means dual, and cohomology group is a dual space of homology group. This dual relationship is obvious in the Stokes' theorem, as $\partial\leftrightarrow\d$. But that's not the definition of dual vector space. Like a covector maps a vector to a number, we are looking for this map (i.e., inner product), such that a $r$-chain $c$ and a $r$-from are mapped to a number.
+As at the beginning of this post, "co-" means dual, and cohomology group is a dual space of the homology group. This dual relationship is obvious in the Stokes' theorem, as $\partial\leftrightarrow\d$. But that's not the definition of dual vector space. Like a covector maps a vector to a number, we are looking for this map (i.e., inner product), such that an $r$-chain $c$ and an $r$-from are mapped to a number.
 
 $$
 c,\omega \mapsto (c,\omega)\in\R
@@ -162,7 +162,7 @@ This duality is in a sense "induces" the homology group and cohomology group
 
 # Definition of the de Rham Cohomology Group
 
-Now with necessary mathematical machineries defined, finally we will give a definition of cohomology group.
+Now with necessary mathematical machinery defined, finally, we will give a definition of cohomology group.
 
 The set of closed $r$-forms on manifold $M$ are called the **co-cycle group**, denoted $Z^r(M)$, not to be confused with cycle group $Z _ r(M)$. The set of exact $r$-forms on manifold $M$ are called the **co-boundary group**, denoted $B^r(M)$.
 
@@ -178,7 +178,7 @@ Like in the case of homology group, the cohomology group is just those closed $r
 
 # Exactness
 
-The sufficient and necessary conditions of exactness in last post about homology are still unanswered. 
+The sufficient and necessary conditions of exactness in the last post about homology are still unanswered. 
 
 > For a set of cycles $\set{c _ 1, \cdots, c _ k}$ such that $c _ i\not\sim c _ j$, $k=\dim{H_r(M)}$ is the **Betti number**. A close $r$-from $\omega$ is exact **if and only if** for all $i=1,2,\cdots,k$
 >
@@ -189,7 +189,7 @@ The sufficient and necessary conditions of exactness in last post about homology
 
 # Make Homology out of Cohomology
 
-So far we have defined the cohomology group, and pointed out the relationships between it and homology group. Now it's time to find some examples.
+So far we have defined the cohomology group and pointed out the relationships between it and the homology group. Now it's time to find some examples.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/ChainComplex.png" width="50%">
 
@@ -231,13 +231,13 @@ In short, we are looking for closed $r$-forms that are not exact. For simplicity
 > always hold. 
 > 
 
-This is interesting. Remember that for $r$-cycles, as long as it is in $\R^3$, it is a boundary. In another word, **as long as the space has no "holes", closed forms are always exact.** One way to make a hole in the space is to put polynomials in the denominator, for example,
+This is interesting. Remember that for $r$-cycles, as long as it is in $\R^3$, it is a boundary. In other words, **as long as the manifold has no "holes", closed forms are always exact.** One way to make a hole in the space is to put polynomials in the denominator, for example,
 
 $$
 \omega=\frac{-y}{x^2+y^2}\d x +\frac{x}{x^2+y^2}\d y
 $$
 
-is closed. However, the space now has a hole at $(0,0)$, it is not exact anymore.
+is closed. However, the manifold now has a hole at $(0,0)$, it is not exact anymore.
 
 > **Proof that $\omega$ is not exact**: 
 >
@@ -261,4 +261,4 @@ is closed. However, the space now has a hole at $(0,0)$, it is not exact anymore
 > 
 > According to section [`Exactness`](#exactness), this form is not exact. That "function" $f$ is not even single value on the entire plane $\R^2/0$.
 
-Now we have applied cohomology theories on trivial spaces and $\R^2/0$, and showed that cohomology can distinguish these two types of spaces. In this sense, cohomology groups serves the same purpose as homology groups: classify spaces in terms of "holes" in it.
+Now we have applied cohomology theories on trivial spaces and $\R^2/0$, and showed that cohomology can distinguish these two types of spaces. In this sense, cohomology groups serve the same purpose as homology groups: classify spaces in terms of "holes" in it.
