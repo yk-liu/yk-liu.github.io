@@ -15,7 +15,7 @@ body {
 		font-family: 'Source Sans Pro', sans-serif !important;
     /* color: #34495e; */
     -webkit-font-smoothing: antialiased;
-    line-height: 1.6rem;
+    line-height: 1.5rem;
     letter-spacing: 0;
     margin: 0;
     overflow-x: hidden;
@@ -378,7 +378,9 @@ table tr td:last-child {
     margin-right: auto;
 }
 
-code.languange-mermaid {
+code.language-mermaid {
 	margin-left:auto;
 	margin-right:auto;
+	background-color: initial;
+	margin: initial;
 }
