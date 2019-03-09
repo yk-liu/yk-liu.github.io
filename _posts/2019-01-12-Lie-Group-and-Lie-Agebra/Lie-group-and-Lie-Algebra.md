@@ -1,10 +1,10 @@
 ---
-title: Lie-Algebra-of-Lie-Group-and-Infinitesimal-Elements
+title: Lie Algebra of Lie Group and Infinitesimal Elements
 categories: Topology
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
 status: Writing
-edit: 2019-02-27
+edit: 2019-03-09
 mermaid: true
 description: I wrote this post because I am dissatisfied with the "infinitesimal operators" and the abuse of "generators" without proper explanations in some textbooks with physicists as target readers. I am trying to understand the rigorous definition of this "infinitesimal operator" and get some intuition about the concept of "generators".
 ---
@@ -366,4 +366,4 @@ $$
 
 where $X^0$ is defined to be the identity $\id$. This series converges for all $M _ n(\C)$. The symbol $M _ n(\K)$ stands for all $n\times n$ matrices whose entries are in $\K=\C \text{ or } \R$. 
 
-The function $\exp(tX)$ define a smooth curve in $M _ n(\C)​$.
+The function $\exp(tX)$ define a smooth curve in $M _ n(\C)$.
