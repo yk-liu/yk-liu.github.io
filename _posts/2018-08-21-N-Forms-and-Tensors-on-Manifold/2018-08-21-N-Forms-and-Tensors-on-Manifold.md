@@ -4,7 +4,7 @@ edit: 2018-12-11
 categories: Topology
 tags: One-form Differential-Forms Tensor Topology 
 keywords: one-form wedge-product dual-space tensor-product exterior-derivative curl divergent div 
-description: We are going to generalize the concept of vectors and one-forms to tensors and differential forms. In the mean time, wedge product and exterior derivative were introduced. Exterior derivative lies the foundation for cohomology.
+description: We are going to generalize the concept of vectors and one-forms to tensors and differential forms. In the meantime, the wedge product and exterior derivative were introduced. Exterior derivative lies the foundation for cohomology.
 ---
 
 $$
@@ -37,11 +37,11 @@ $$
 \notag
 $$
 
-In this post Einstein summation rule is used. We are going to generalize the concept of vectors and one-forms to tensors and differential forms (or $N$-forms). This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf).
+In this post, Einstein summation rule is used. We are going to generalize the concept of vectors and one-forms to tensors and differential forms (or $N$-forms). This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf).
 
 # Tensors
 
-Tensor is direct generalization to the concept of vector and one-form. A vector takes in a one-from and spits out a number. A one-form takes in a vector and spits out a number. A tensor takes in several vectors and one-forms and spits out a number. A tensor is written as 
+Tensor is a direct generalization to the concept of vector and one-form. A vector takes in a one-form and spits out a number. A one-form takes in a vector and spits out a number. A tensor takes in several vectors and one-forms and spits out a number. A tensor is written as 
 
 $$
 T=T^{\mu_1\cdots\mu_q}_{\phantom{\mu_1\cdots\mu_q}\nu_1\cdots\nu_r} \Partial{}{x^{\mu_1}}\cdots \Partial{}{x^{\mu_q}} \d x^{\nu_1} \cdots \d x^{\nu_r},
@@ -64,13 +64,13 @@ Such tensors are called of type $(q,r)$. $T_{(1,1)},\, T_{(2,0)},\,T_{(0,2)}$ ca
 
 # Wedge Product
 
-One way to generalize one-forms to differential forms (or $N$-forms) is to take products of one-forms. A two-form is can be seen as a "product" of two one-forms. A $N$-form is then a series of product of one-forms. This product is called a wedge product. 
+One way to generalize one-forms to differential forms (or $N$-forms) is to take products of one-forms. A two-form is can be seen as a "product" of two one-forms. An $N$-form is then a series of a product of one-forms. This product is called a wedge product. 
 
 ## Wedge Product of General Vectors
 
-We will first see how wedge product works in the context of vectors.
+We will first see how wedge products work in the context of vectors.
 
-The cross product of vectors $U \times V$ is a very useful operation in $3$ dimensional geometry. It determines the area of the **parallelogram** containing these vectors and the plane containing it. A **wedge product** is the analogue used to determine a high dimensional parallelograms.
+The cross product of vectors $U \times V$ is a very useful operation in $3$ dimensional geometry. It determines the area of the **parallelogram** containing these vectors and the plane containing it. A **wedge product** is the analog used to determine a high dimensional parallelogram.
 
 The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product. 
 
@@ -167,7 +167,7 @@ $$
 \d x^{\mu _ 1} \wedge \d x^{\mu _ 2} \wedge\cdots\wedge \d x^{\mu _ r} = \sum _ {P\in \mathbb S _ r} \operatorname{sgn}(P) \d x ^{\mu _ {P(1)}} \otimes \d x^{\mu _ {P(2)}}\otimes \cdots\otimes \d x^{\mu  _ {P(r)}} \label{r-form-basis}
 $$
 
-$\Eqn{r-form-basis}$ gives us the basis for $r$-forms. The space of $r$-forms spanned by these basis is denoted as $\Omega^r$. A general $r$-form is then
+$\Eqn{r-form-basis}$ gives us the basis for $r$-forms. The space of $r$-forms spanned by these bases is denoted as $\Omega^r$. A general $r$-form is then
 
 $$
 \omega=\frac{1}{r!}\omega_{\mu_1\mu_2\cdots\mu_r}\d x^{\mu _ 1} \wedge \d x^{\mu _ 2} \wedge\cdots\wedge \d x^{\mu _ r}
@@ -188,13 +188,13 @@ $$
 
 # Exterior Derivative
 
-All the vector calculus, div, grad, curl, the divergence theorem and Stokes’ theorem, etc. are well defined in three dimensional spaces. But it would be hard to generalize the notion of curl in higher dimensions.
+All the vector calculus, div, grad, curl, the divergence theorem and Stokes’ theorem, etc. are well defined in three-dimensional spaces. But it would be hard to generalize the notion of curl in higher dimensions.
 
 $$
 \nabla \times X = \left( \frac{\partial X_3}{\partial x^2} - \frac{\partial X_2}{\partial x^3}, \frac{\partial X_1}{\partial x^3} - \frac{\partial X_3}{\partial x^1}, \frac{\partial X_2}{\partial x^1} - \frac{\partial X_1}{\partial x^2} \right),
 $$
 
-Exterior derivatives provides an easy way to perform vector calculus in greater-than-three dimensional spaces, with a sweet side effect that those divs, grads, curls, will be represented by two simple formulae.
+Exterior derivatives provide an easy way to perform vector calculus in greater-than-three dimensional spaces, with a sweet side effect that those divs, grads, curls, will be represented by two simple formulae.
 
 ## Exterior Derivative of Functions
 
@@ -210,7 +210,7 @@ $$
 \nabla f = (\d f)^\sharp
 $$
 
-to emphasize the relationship of divs and exterior derivatives.
+to emphasize the relationship between divs and exterior derivatives.
 
 ## General Definition of Exterior Derivative
 
@@ -219,7 +219,7 @@ The exterior derivative of a function is a one-form. We will go and find out the
 For our definition to make sense, we require that
 
 1. The "derivative" of a $1$-form (first derivative) should result in a $2$-form. 
-2. The "second exterior derivative" of a function should some how relate to the second derivative of $f$.
+2. The "second exterior derivative" of a function should somehow relate to the second derivative of $f$.
 
 > I couldn't find any way to heuristically introduce the definition from deductions, so I decided to give the definition and explain it later.
 
@@ -280,7 +280,7 @@ If $\d \omega = 0$, $\omega$ is called an closed from. If $\d \eta=\omega$ , $\o
 
 $\d^2 = 0$ means that **all exact forms are closed**, since $\d\omega=\d^2\eta=0$. But the reserve is not always true, i.e., not all closed forms are exact. 
 
-Before I start listing examples, let's find out what it takes for a form to be exact. The most straightforward way to proof a differential form to be exact is to find a $\eta$ such that $\d\eta=\omega$. This problem is equivalent of solving a differential equation, which need the definition of integral. We'll leave the discussion to Cohomology. 
+Before I start listing examples, let's find out what it takes for a form to be exact. The most straightforward way to proof a differential form to be exact is to find a $\eta$ such that $\d\eta=\omega$. This problem is the equivalent to solving a differential equation, which needs the definition of integral. We'll leave the discussion to Cohomology. 
 
 ## Exterior Derivative and Vector Calculus
 
@@ -309,7 +309,7 @@ $$
 \d(F \d x+G\d y +H\d z) = (\Partial{G}{x} −\Partial{F}{y})\d x\wedge \d y +(\Partial{H}{y} −\Partial{G}{z})  \d y \wedge \d z + (\Partial{F}{z} − \Partial{H}{x})\d z \wedge \d x \notag
 $$
 
-If we convert this two form to a vector using the rule 
+If we convert these two form to a vector using the rule 
 
 $$
 \begin{cases}
@@ -335,13 +335,13 @@ $$
  \end{align*}
 $$
 
-Finally we have the rule
+Finally, we have the rule
 
 $$
 \nabla \times V = \Big(\star\big( \d(V^\flat)\big)\Big)^\sharp.
 $$
 
-What this complicated rule says is the following. To take the curl of a vector, first convert it to a one-from $V^\flat$, then  take the exterior derivative of the one-from and get $\d V^\flat$, and finally convert the two form back to a vector through $\star \left(\phantom{a}\right)^\sharp$.
+What this complicated rule says is the following. To take the curl of a vector, first convert it to a one-from $V^\flat$, then take the exterior derivative of the one-from and get $\d V^\flat$, and finally convert the two form back to a vector through $\star \left(\phantom{a}\right)^\sharp$.
 
 ### Gradient
 
@@ -381,5 +381,5 @@ $$
 \end{array}
 $$
 
-We have went through all items in the diagram above and verified that our definition of exterior derivative united our common definition of differential operators in vector calculus into one simple symbol $\d$. 
+We have gone through all items in the diagram above and verified that our definition of exterior derivative united our common definition of differential operators in vector calculus into one simple symbol $\d$. 
 

@@ -308,7 +308,6 @@ sub,sup{
 .user-details p{
     font-size:16px;
 		font-size: 1.2rem;
-    font-weight: 600;
 }
 
 @media screen and (max-width: 500px) {
