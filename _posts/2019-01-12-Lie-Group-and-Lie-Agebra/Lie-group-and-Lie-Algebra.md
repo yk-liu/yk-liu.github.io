@@ -214,7 +214,7 @@ A -->|belongs to|E[TeG]
 
 E -->|uses|D
 
-D -->F[Small region near <i>e</i>]
+D -->|generates|F[Small region near <i>e</i>]
 end
 
 ```
