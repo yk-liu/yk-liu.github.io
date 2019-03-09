@@ -5,7 +5,7 @@ tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
 status: Writing
 edit: 2019-02-27
-highlight: true
+mermaid: true
 description: I wrote this post because I am dissatisfied with the "infinitesimal operators" and the abuse of "generators" without proper explanations in some textbooks with physicists as target readers. I am trying to understand the rigorous definition of this "infinitesimal operator" and get some intuition about the concept of "generators".
 ---
 
