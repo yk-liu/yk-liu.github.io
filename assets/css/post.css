@@ -130,8 +130,8 @@ body {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -17rem;
-  width: 17rem;
+  left: -24rem;
+  width: 24rem;
   visibility: hidden;
   overflow-y: auto;
 	overflow-x: auto;
@@ -144,8 +144,8 @@ body {
 @media only screen and (max-width: 450px) {
   .sidebar {
     font-size: .75rem; /* 14px */
-		left: -14rem;
-		width: 14rem;
+		left: -15rem;
+		width: 15rem;
   }
 }
 
@@ -281,17 +281,17 @@ a.sidebar-nav-item:focus {
 #sidebar-checkbox:checked ~ .sidebar,
 #sidebar-checkbox:checked ~ .wrap,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  -webkit-transform: translateX(17rem);
-      -ms-transform: translateX(17rem);
-          transform: translateX(17rem);
+  -webkit-transform: translateX(24rem);
+      -ms-transform: translateX(24rem);
+          transform: translateX(24rem);
 }
 @media only screen and (max-width: 450px) {
 #sidebar-checkbox:checked ~ .sidebar,
 #sidebar-checkbox:checked ~ .wrap,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  -webkit-transform: translateX(14rem);
-      -ms-transform: translateX(14rem);
-          transform: translateX(14rem);
+  -webkit-transform: translateX(15rem);
+      -ms-transform: translateX(15rem);
+          transform: translateX(15rem);
 }
 	
 }
