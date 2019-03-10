@@ -271,6 +271,7 @@ $\Eqn{pointwise-left-invar.}​$ tells us that for any two points on the manifol
 For future reference, some of properties of left invariant vector fields are listed here with some explanations: $\forall g \in G$, $\forall f \in C^\infty(G)$:
 $$
 \small\begin{align}
+
 &\text{$f(t)$'s direc. deriv. along ${L _ g}_*X _ h$ }& ({L _ g}_*X _ h)f &= X _ {gh} f & \text{$f(t)$'s direc. deriv. along $X _ {gh}$ }
 \\
 &\text{$f(L_g(t))=f(g\cdot t)$'s direc. deriv. along $X_h$} & X _ h (f\circ L _ g)&= (Xf )_{gh} & \small\text{$f(t)$'s tangent VF at $g\cdot h$}
