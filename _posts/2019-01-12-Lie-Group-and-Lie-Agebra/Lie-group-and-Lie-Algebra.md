@@ -385,7 +385,7 @@ $$
 
 ## Left Invariant Vector Fields and Integral Curves
 
-
+If for a curve $\Gamma: \R\rightarrow G, \,t\mapsto\gamma(t)$, and a vector field $X$, $\forall t\in \R, \D{\gamma(t)}{t}=X_{\gamma(t)}$, then $\Gamma$ is said to be a integral curve of vector field $X$. 
 
 ## Left Invariant Vector Fields and One-parameter Subgroups
 
