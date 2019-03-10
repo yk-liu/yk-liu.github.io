@@ -284,13 +284,13 @@ $$
 
 This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
-If we have two vector fields $V=V^i(x)\Partial{}{x^i}​$ and $W=W^j(x)\Partial{}{x^j}​$, we first define the composite of vectors $V \circ W​$ as their actions on function $f(x)​$ , notice that
+If we have two vector fields $V=V^i(x)\Partial{}{x^i}$ and $W=W^j(x)\Partial{}{x^j}$, we first define the composite of vectors $V \circ W$ as their actions on function $f(x)​$ , notice that
 
 $$
 W _ p(f) =W^j(x _ p)\Partial{f}{x^j} \in \R
 $$
 
-can be seen as a function $W(f): M\rightarrow \R,  p \mapsto W^j(x _ p)\Partial{f}{x^j}​$. Thus we can apply another vector filed to this function as:
+can be seen as a function $W(f): M\rightarrow \R,  p \mapsto W^j(x _ p)\Partial{f}{x^j}$. Thus we can apply another vector filed to this function as:
 
 $$
 \begin{align*}
@@ -384,6 +384,8 @@ $$
    
 
 ## Left Invariant Vector Fields and Integral Curves
+
+
 
 ## Left Invariant Vector Fields and One-parameter Subgroups
 
