@@ -268,14 +268,14 @@ $$
 $$
 $\Eqn{pointwise-left-invar.}​$ tells us that for any two points on the manifold $h​$ and $gh​$, the vectors are related by a simple "translation". Which means if the manifold is chosen to be Euclidean space, the left invariant vector field would be constant.
 
-For future reference, some of properties of left invariant vector fields are listed here with some explanations: $\forall g \in G$, $\forall f \in C^\infty(G)$:
+For future reference, some of properties of left invariant vector fields are listed here with some explanations: $\forall g \in G​$, $\forall f \in C^\infty(G)​$:
 $$
 \small\begin{align}
 &\text{$f(t)$'s direc. deriv. along ${L _ g}_*X _ h$ }& ({L _ g}_*X _ h)f &= X _ {gh} f & \text{$f(t)$'s direc. deriv. along $X _ {gh}$ }
 \\
-&\text{$f(L_g(t))=f(g\cdot t)$'s direc. deriv. along $X_h$} & X _ h (f\circ L _ g)&= (Xf )_{gh} & \small\text{$f(t)$'s tangent VF at $g\cdot h$}
+&\text{$f(L_g(t))=f(g\cdot t)$'s direc. deriv. along $X_h$} & X _ h (f\circ L _ g)&= (Xf )_{gh} & \small\text{$f(t)$'s tangent V.F. at $g\cdot h$}
 \\
-&\text{$f(g\cdot t)$'s tangent V.F.} &X(f\circ L _ g)&={L_g}_*(Xf) & \small\text{$f(t)$'s tangent VF, left translated} \label{left-invar.-property3}\\
+&\text{$f(g\cdot t)$'s tangent V.F.} &X(f\circ L _ g)&={L_g}_*(Xf) & \small\text{$f(t)$'s tangent V.F., left translated} \label{left-invar.-property3}\\
 &\text{$f(t)$'s tangent vector field at $gh$} & [Xf](gh) & \!\stackrel{\tiny\text{by def.}}{=}([Xf]\circ L_g) h & \text{function $[Xf]\!\circ\! L_g$ eval. at $h$} \label{left-invar.-property4}
 \end{align}
 $$
@@ -343,6 +343,7 @@ $$
 ### Properties of Brackets
 
 1. Closedness: (see Nakahara (5.112))
+   
    $$
    \begin{align}
    (L_g)_*([X,Y])_a& = [(L_g)_*X,(L_g)_*Y] = [X,Y]_{ag}
@@ -351,6 +352,7 @@ $$
    $$
 
 2. Bilinearity:
+   
    $$
    \begin{align}
    			[X, c_1 Y_1 + c_2 Y_2 ] & = X^{\mu} \frac{ \partial}{ \partial x^{\mu} } ( c_1 Y_1 + c_2 Y_2)^{\nu} - ( c_1 Y_1 + c_2 Y_2)^{\mu}  \frac{ \partial X^{\nu} }{ \partial x^{\mu} } = \\ \notag
@@ -362,13 +364,15 @@ $$
    $$
 
 3. Anti-symmetry:
+   
    $$
    [Y,X] = Y^{\mu} \frac{ \partial X^{\nu}}{ \partial x^{\mu} } - X^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu }} = - \left( X^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial X^{\nu}}{ \partial x^{\mu }} \right) = - [ X,Y] \label{bracketantisymmertry}
    $$
 
 4. Jacobi Identity:
+   
    $$
-   \begin{align}
+   \small\begin{align}
    [[X,Y],Z] 
    & = [X,Y]^{\mu} \frac{ \partial Z^{\nu}}{ \partial x^{\mu }} - Z^{\mu} \frac{ \partial}{ \partial x^{\mu}} [X,Y]^{\nu} \\ \notag
    &= (X^a \partial_a Y^{\mu} - Y^a \partial_a X^{\mu} ) \partial_{\mu}Z^{\nu} - Z^{\mu} ( \partial_{\mu}X^a \partial_a Y^{\nu} + X^a \partial^2_{\mu a} Y^{\nu} - \partial_{\mu} Y^a\partial_a X^{\nu} - Y^a \partial^2_{\mu a} X^{\nu} ) \\ \notag
@@ -385,7 +389,7 @@ $$
 
 ## Left Invariant Vector Fields and Integral Curves
 
-If for a curve $\Gamma: \R\rightarrow G, \,t\mapsto\gamma(t)$, and a vector field $X$, $\forall t\in \R, \D{\gamma(t)}{t}=X_{\gamma(t)}$, then $\Gamma$ is said to be a integral curve of vector field $X$. 
+If for a curve $\Gamma: \R\rightarrow G, \,t\mapsto\gamma(t)$, and a vector field $X$, $\forall t\in \R, \D{\gamma(t)}{t}=X_{\gamma(t)}$, then $\Gamma$ is said to be a integral curve of vector field $X​$. 
 
 ## Left Invariant Vector Fields and One-parameter Subgroups
 
