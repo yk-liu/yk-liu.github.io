@@ -54,6 +54,36 @@ $$
 > For self-studying, I recommend [[**Bohm** et al.](https://www.springer.com/us/book/9783540000310)], [[Sudarshan et al.](https://www.worldscientific.com/worldscibooks/10.1142/9751)] and a YouTube open course [[Frederic Schuller's Lectures on Geometrical Anatomy of Theoretical Physics](https://www.youtube.com/playlist?list=PLPH7f _ 7ZlzxTi6kS4vCmv4ZKm9u8g5yic)] for Physics students, and for those who want more mathematical insights, I recommend [[Michael L. Geis](http://scholar.rose-hulman.edu/rhumj/vol15/iss2/5/)] (for undergrads), [[Brian C Hall](https://www.springer.com/us/book/9783319134666)] and [[Alexander Kirillov, Jr](https://www.cambridge.org/core/books/an-introduction-to-lie-groups-and-lie-algebras/98E68056F3EE57686421863E2B0B5DF4)] (this book requires some understanding of topology). 
 >
 > This post is based on sources listed above. Some of the proofs also come from [[Solutions for Nakahara](https://github.com/ernestyalumni/mathphysics/blob/master/LaTeX _ and _ pdfs/Nakahara _ GTP-solutions.tex)].
+>
+> Here is the structure of this post:
+>
+> ```mermaid
+> graph TB
+> subgraph Lie Group as Differential Manifold
+> A[Xe] -->|left action|B[Left invar. <br>vector field X]
+> 
+> B -->|start from <i>g</i>| C[curve Γ]
+> 
+> C -->|proven to be|D[Exponential map]
+> end
+> 
+> subgraph Lie Algebra as Generator
+> 
+> A -->|belongs to|E[TeG]
+> 
+> E -->|uses|D
+> 
+> D -->|generates|F[Small region near <i>e</i>]
+> end
+> 
+> subgraph Lie group as Actions
+> 
+> G[element as <br/> action] -->|push forward|H[Lg*]
+> B---H
+> 
+> end
+> 
+> ```
 
 # Lie Groups and Its "Actions"
 
@@ -193,33 +223,23 @@ Sometimes the notion of dot "$\,\cdot\,$" is again abused to denoted such action
 
 In short, **the left action $L _ g$ carries everything defined on $h$ to $g\cdot h$ like a simple translation**.
 
+The vector field $X$ on $G$ can be thus pushed forward to another vector field ${L _ g}^* X$:
+
+$$
+({L _ g}^* X) _ {gh}\dfdas {L _ g}^* (X _ h)
+$$
+
 ## Lie Group's Matrix Representations
 
 The idea of relating a Lie group to a set of action is closely related to the notion of representation. When we choose to make Lie group act on a Euclidean space, the transformation can be described by a matrix. In other words, a one-to-one correspondence can be established between a Lie group and a set of matrices.
 
 # Lie Group as A Differential Manifold
 
-```mermaid
-graph TB
-subgraph Lie Group as Differential Manifold
-A[Xe] -->|left action|B[Left invar. <br>vector field X]
+A nice thing about a manifold is that it can be treated as a usual Euclidean space locally. Most importantly, calculus structures can be introduced on a manifold, and all the related theorems will hold. Lie groups are named after Norwegian mathematician Sophus Lie, who wanted to have an elegant solution to ODEs. 
 
-B -->|start from <i>g</i>| C[curve Γ]
+> Galois inspired Lie. If the discrete invariance group of an algebraic equation could be exploited to generate algorithms to solve the algebraic equation “by radicals,” might it be possible that the continuous invariance group of a differential equation could be exploited to solve the differential equation “by quadratures”? ... But what is the group that leaves the solutions of a differential equation invariant — or maps solutions into solutions? It turns out to be none other than the trivial constant that can be added to any indefinite integral. The additive constant is an element in a translation group. **(from Robert Gilmore)**
 
-C -->|proven to be|D[Exponential map]
-end
-subgraph Lie Algebra as Generator
-
-A -->|belongs to|E[TeG]
-
-E -->|uses|D
-
-D -->|generates|F[Small region near <i>e</i>]
-end
-
-```
-
-A nice thing about a manifold is that it can be treated as a usual Euclidean space locally. Most importantly, calculus structures can be introduced on a manifold, and all the related theorems will hold.
+In this section, the ***Fundamental Theorem of Ordinary Differential Equations***  is used extensively. The theorem basically states that for any vector field over a smooth manifold, there **exists** a **unique** curve on a neighborhood of each point.
 
 ## From Lie Groups to Coordinates
 
@@ -235,58 +255,42 @@ Inside this neighborhood $N _ 0$,  we can always find a subset $N^\prime$ that p
 
 ## Left Invariant Vector Fields
 
-Let $(G,\cdot )$ be a Lie group. A **left translation** $L _ g$ is defined as
+Remember that vectors, as well as vector fields, can be pushed forward. In analogy with **constant vector fields**, **left (or right)-invariant vector fields** are introduced. A left invariant vector field $X​$ is called left invariant if for any $g\in G​$,
 
 $$
-L _ g:G\rightarrow G\\
-h\mapsto L _ g(h)\dfdas g\cdot h
-$$
-
-Each $L _ g$ is an isomorphism and a diffeomorphism on $G​$. 
-
-Since this $L _ g​$ is a diffeomorphism (namely bijective and smooth), we can push forward the vector field $X​$ on $G​$ to another vector field ${L _ g}^* X​$:
-
-$$
-({L _ g}^* X) _ {gh}\dfdas {L _ g}^* (X _ h)
-$$
-
-Let $(G \cdot)​$ be a Lie group, and $X​$ a vector field on $G​$ then $X​$ is called left invariant if for any $g\in G​$,
-
-$$
-{L _ g}^* X = X.
+{L _ g}_* X = X.
 $$
 
 Alternatively, one can write this as a point wise vector equation:
 
 $$
-l _ g^* (X _ h) = X _ {gh}
+{L _ g}_* (X _ h)\stackrel{\text{by def.}}{=}({L _ g}^* X) _ {gh}= X _ {gh} \label{pointwise-left-invar.}
 $$
-This abstract left invariant vector field satisfies the requirements of a Lie algebra.
+$\Eqn{pointwise-left-invar.}​$ tells us that for any two points on the manifold $h​$ and $gh​$, the vectors are related by a simple "translation". Which means if the manifold is chosen to be Euclidean space, the left invariant vector field would be constant.
 
-or, $\forall g \in G, \forall f \in C^\infty(G)$
-
+For future reference, some of properties of left invariant vector fields are listed here with some explanations: $\forall g \in G$, $\forall f \in C^\infty(G)$:
 $$
-\begin{align*}
-(l _ g^*X _ h)f &= X _ {gh} f\\
-X _ h (f\circ l _ g)&= (Xf )(gh)\\
-[X(f\circ l _ g)] (h)&=[(Xf)\circ l _ g ] (h)\\
-X(f\circ l _ g)&=(Xf)\circ l _ g \\
-\end{align*}
+\small\begin{align}
+&\text{$f(t)$'s directional derivative along ${L _ g}_*X _ h$ }& ({L _ g}_*X _ h)f &= X _ {gh} f & \text{$f(t)$'s directional derivative along $X _ {gh}$ }
+\\
+&\text{$f(L_g(t))=f(g\cdot t)$'s directional derivative along $X_h$} & X _ h (f\circ L _ g)&= (Xf )_{gh} & \small\text{$f(t)$'s tangent vector field at $g\cdot h$}
+\\
+&\text{$f(g\cdot t)$'s tangent vector field} &X(f\circ L _ g)&={L_g}_*(Xf) & \small\text{$f(t)$'s tangent vector field, left translated} \label{left-invar.-property3}\\
+&\text{$f(t)$'s tangent vector field at $gh$} & [Xf](gh) & \!\stackrel{\tiny\text{by def.}}{=}([Xf]\circ L_g) h & \text{function $[Xf]\circ L_g$ evaluated at $h$} \label{left-invar.-property4}
+\end{align}
 $$
 
-Def. The set of all left-invariant vector fields on a Lie group $G$ be denoted $\L (G)\subset \Gamma(TG)$.
-
-###  bracket of vector fields
+###  Bracket of Left-Invariant Vector Fields
 
 This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
-If we have two vector fields $V=V^i(x)\Partial{}{x^i}$ and $W=W^j(x)\Partial{}{x^j}$, we first define the composite of vectors $V \circ W$ as their actions on function $f(x)$ , notice that
+If we have two vector fields $V=V^i(x)\Partial{}{x^i}​$ and $W=W^j(x)\Partial{}{x^j}​$, we first define the composite of vectors $V \circ W​$ as their actions on function $f(x)​$ , notice that
 
 $$
 W _ p(f) =W^j(x _ p)\Partial{f}{x^j} \in \R
 $$
 
-can be seen as a function $W(f): M\rightarrow \R,  p \mapsto W^j(x _ p)\Partial{f}{x^j}$. Thus we can apply another vector filed to this function as:
+can be seen as a function $W(f): M\rightarrow \R,  p \mapsto W^j(x _ p)\Partial{f}{x^j}​$. Thus we can apply another vector filed to this function as:
 
 $$
 \begin{align*}
@@ -295,7 +299,7 @@ $$
 \end{align*}
 $$
 
-Notice that both $W^j(x _ p)$ and $\Partial{f(x)}{x^j}$ are merely functions $M\rightarrow \R$, thus the Leibnitz rule applies,
+Notice that both $W^j(x _ p)​$ and $\Partial{f(x)}{x^j}​$ are merely functions $M\rightarrow \R​$, thus the Leibnitz rule applies,
 
 $$
 \begin{align*}
@@ -327,7 +331,7 @@ $$
 \end{align*}
 $$
 
-notice that the indices $i, j $ are summed over, so it's okay to change the latter dummy indices in both terms so we can collect them.
+notice that the indices $i, j ​$ are summed over, so it's okay to change the latter dummy indices in both terms so we can collect them.
 
 $$
 \begin{align*}
@@ -336,23 +340,60 @@ $$
 \end{align*}
 $$
 
-### Left Invariant Vector Fields' commutator
+### Properties of Brackets
 
-> Theorem : $[\slot,\slot]: \L(G)\times \L(G)\rightarrow \L(G)$ is a Lie algebra. (i.e., $[x,y]$ is left invar.)
->
-> Proof: 
-> 
-> $$
-> \begin{align*}
-> [X,Y](f\circ l _ g)&= X(Y(f\circ l _ g))-Y(X(f\circ l _ g))\\
-> &=X((Yf)\circ l _ g)-Y((Xf)\circ l _ g)\\
-> &=X(Yf)\circ l _ g-Y(Xf)\circ l _ g\\
-> &=([X,Y]f)\circ l _ g \\
-> \text{thus it is left invar.}
-> \end{align*}
-> $$
+1. Closedness: (see Nakahara (5.112))
+   $$
+   \begin{align}
+   (L_g)_*([X,Y])_a& = [(L_g)_*X,(L_g)_*Y] = [X,Y]_{ag}
+    \label{bracketclosedness}
+    \end{align}
+   $$
 
-## Lie Algebra of a Lie Group
+2. Bilinearity:
+   $$
+   \begin{align}
+   			[X, c_1 Y_1 + c_2 Y_2 ] & = X^{\mu} \frac{ \partial}{ \partial x^{\mu} } ( c_1 Y_1 + c_2 Y_2)^{\nu} - ( c_1 Y_1 + c_2 Y_2)^{\mu}  \frac{ \partial X^{\nu} }{ \partial x^{\mu} } = \\ \notag
+   			& = c_1 \left( X^{\mu} \frac{ \partial Y_1^{\nu} }{ \partial x^{\mu}  } - Y_1^{\mu} \frac{ \partial X^{\nu }}{ \partial x^{\mu }} \right) + c_2 \left( X^{\mu} \frac{ \partial Y_2^{\nu} }{  \partial x^{\mu} } - Y_2^{\mu} \frac{ \partial X^{\nu }}{ \partial x^{\mu} } \right) = c_1 [ X,Y_1] + c_2[ X,Y_2]  \\ \notag
+   			[c_1 X_1 + c_2 X_2, Y ] & = (c_1 X_1 + c_2 X_2)^{\mu} \frac{ \partial Y^{\nu}}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial }{ \partial x^{\mu} }( c_1 X_1 + c_2 X_2)^{\nu} = \\ \notag
+   			& = c_1 \left( X_1^{\mu} \frac{ \partial Y^{\nu}}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial X_1^{\nu}}{ \partial x^{\mu }} \right) + c_2 \left( X_2^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu }} - Y^{\mu} \frac{ \partial X_2^{\nu }}{ \partial x^{\mu}} \right) = c_1 [X_1, Y] + c_2 [ X_2, Y ] 
+               \label{bracketbilinearity}
+   			\end{align}
+   $$
+
+3. Anti-symmetry:
+   $$
+   [Y,X] = Y^{\mu} \frac{ \partial X^{\nu}}{ \partial x^{\mu} } - X^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu }} = - \left( X^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial X^{\nu}}{ \partial x^{\mu }} \right) = - [ X,Y] \label{bracketantisymmertry}
+   $$
+
+4. Jacobi Identity:
+   $$
+   \begin{align}
+   [[X,Y],Z] 
+   & = [X,Y]^{\mu} \frac{ \partial Z^{\nu}}{ \partial x^{\mu }} - Z^{\mu} \frac{ \partial}{ \partial x^{\mu}} [X,Y]^{\nu} \\ \notag
+   &= (X^a \partial_a Y^{\mu} - Y^a \partial_a X^{\mu} ) \partial_{\mu}Z^{\nu} - Z^{\mu} ( \partial_{\mu}X^a \partial_a Y^{\nu} + X^a \partial^2_{\mu a} Y^{\nu} - \partial_{\mu} Y^a\partial_a X^{\nu} - Y^a \partial^2_{\mu a} X^{\nu} ) \\ \notag
+   &= X^a \partial_a Y^{\mu} \partial_{\mu} Z^{\nu} - Y^a \partial_a X^{\mu} \partial_{\mu} Z^{\nu} - Z^{\mu} \partial_{\mu} X^a \partial_a Y^{\nu} -Z^{\mu}X^a \partial^2_{\mu a} Y^{\nu} + Z^{\mu} \partial_{\mu} Y^a \partial_a X^{\nu} + Z^{\mu} Y^a \partial^2_{\mu a} X^{\nu} 
+   \\ \notag
+   &\text{Likewise,} \\ \notag
+   [[Z,X],Y]^{\nu} &= Z^a \partial_a X^{\mu} \partial_{\mu} Y^{\nu} - X^a \partial_a Z^{\mu} \partial_{\mu} Y^{\nu} - Y^{\mu} \partial_{\mu} Z^a \partial_a X^{\nu} - Y^{\mu} Z^a \partial^2_{\mu a} X^{\nu} + Y^{\mu} \partial_{\mu} X^a \partial_a Z^{\nu} + Y^{\mu} X^a \partial^2_{\mu a} Z^{\nu} \\ \notag
+   [[Y,Z],X]^{\nu} &= Y^a \partial_a Z^{\mu} \partial_{\mu} X^{\nu} - Z^a \partial_a Y^{\mu} \partial_{\mu} X^{\nu} - X^{\mu} \partial_{\mu} Y^a \partial_a Z^{\nu} - X^{\mu} Y^a \partial^2_{\mu a} Z^{\nu} + X^{\mu} \partial_{\mu} Z^a \partial_a Y^{\nu} + X^{\mu} Z^a \partial^2_{\mu a} Y^{\nu}\\
+   &\text{All the $18$ terms cancel.} \notag
+   \label{bracketjacobi}
+   \end{align}
+   $$
+   
+
+## Left Invariant Vector Fields and Integral Curves
+
+## Left Invariant Vector Fields and One-parameter Subgroups
+
+
+
+
+
+# Lie Algebra of a Lie Group
+
+
 
 ## Matrix Exponentials
 
