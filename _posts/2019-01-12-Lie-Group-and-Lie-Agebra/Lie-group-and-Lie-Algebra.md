@@ -271,12 +271,12 @@ $\Eqn{pointwise-left-invar.}​$ tells us that for any two points on the manifol
 For future reference, some of properties of left invariant vector fields are listed here with some explanations: $\forall g \in G$, $\forall f \in C^\infty(G)$:
 $$
 \small\begin{align}
-&\text{$f(t)$'s directional derivative along ${L _ g}_*X _ h$ }& ({L _ g}_*X _ h)f &= X _ {gh} f & \text{$f(t)$'s directional derivative along $X _ {gh}$ }
+&\text{$f(t)$'s direc. deriv. along ${L _ g}_*X _ h$ }& ({L _ g}_*X _ h)f &= X _ {gh} f & \text{$f(t)$'s direc. deriv. along $X _ {gh}$ }
 \\
-&\text{$f(L_g(t))=f(g\cdot t)$'s directional derivative along $X_h$} & X _ h (f\circ L _ g)&= (Xf )_{gh} & \small\text{$f(t)$'s tangent vector field at $g\cdot h$}
+&\text{$f(L_g(t))=f(g\cdot t)$'s direc. deriv. along $X_h$} & X _ h (f\circ L _ g)&= (Xf )_{gh} & \small\text{$f(t)$'s tangent VF at $g\cdot h$}
 \\
-&\text{$f(g\cdot t)$'s tangent vector field} &X(f\circ L _ g)&={L_g}_*(Xf) & \small\text{$f(t)$'s tangent vector field, left translated} \label{left-invar.-property3}\\
-&\text{$f(t)$'s tangent vector field at $gh$} & [Xf](gh) & \!\stackrel{\tiny\text{by def.}}{=}([Xf]\circ L_g) h & \text{function $[Xf]\circ L_g$ evaluated at $h$} \label{left-invar.-property4}
+&\text{$f(g\cdot t)$'s tangent V.F.} &X(f\circ L _ g)&={L_g}_*(Xf) & \small\text{$f(t)$'s tangent VF, left translated} \label{left-invar.-property3}\\
+&\text{$f(t)$'s tangent vector field at $gh$} & [Xf](gh) & \!\stackrel{\tiny\text{by def.}}{=}([Xf]\circ L_g) h & \text{function $[Xf]\!\circ\! L_g$ eval. at $h$} \label{left-invar.-property4}
 \end{align}
 $$
 
