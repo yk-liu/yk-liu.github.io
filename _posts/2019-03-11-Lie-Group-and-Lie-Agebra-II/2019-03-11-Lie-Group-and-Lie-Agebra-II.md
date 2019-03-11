@@ -1,5 +1,6 @@
 ---
-title: Lie Group and Lie Algebra II: Differential Manifold
+title: >
+   Lie Group and Lie Algebra II: Differential Manifold
 categories: Lie-Group
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
