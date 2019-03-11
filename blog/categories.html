@@ -5,7 +5,6 @@ title: Category Index
 <h1>{{ page.title }}</h1>
 
 <div class="container">
-	{% comment %}
   <h1>Category Cloud</h1>
 	{% assign categories = site.categories | sort %}
 	{% for category in categories %}
@@ -17,7 +16,6 @@ title: Category Index
 			</a> &nbsp;
 		</span>
 	{% endfor %}
-	{% endcomment %}
 	
 	<hr>
   {% for category in site.categories %}
