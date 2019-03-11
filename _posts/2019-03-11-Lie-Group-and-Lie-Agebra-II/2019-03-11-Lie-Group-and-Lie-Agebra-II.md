@@ -1,7 +1,7 @@
 ---
 title: >
    Lie Group and Lie Algebra II: Differential Manifold
-categories: Lie-Group
+categories: Lie-group
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
 status: Writing
@@ -63,6 +63,7 @@ Inside this neighborhood $N _ 0$,  we can always find a subset $N^\prime$ that p
 Remember that vectors, as well as vector fields, can be pushed forward. In analogy with **constant vector fields**, **left (or right)-invariant vector fields** are introduced. Later this left-invariant vector field will be mapped to $T_e G$ and will be shown to be a Lie algebra.
 
 A left invariant vector field $X$ is called left invariant if for any $g\in G$,
+
 $$
 {L _ g}_* X = X.
 $$
@@ -72,12 +73,13 @@ Alternatively, one can write this as a point wise vector equation:
 $$
 {L _ g}_* (X _ h)\stackrel{\text{by def.}}{=}({L _ g}^* X) _ {gh}= X _ {gh} \label{pointwise-left-invar.}
 $$
+
 $\Eqn{pointwise-left-invar.}​$ tells us that for any two points on the manifold $h​$ and $gh​$, the vectors are related by a simple "translation". Which means if the manifold is chosen to be Euclidean space, the left invariant vector field would be constant.
 
 For future reference, some of properties of left invariant vector fields are listed here with some explanations: $\forall g \in G​$, $\forall f \in C^\infty(G)​$:
+
 $$
 \small\begin{align}
-
 &\text{$f(t)$'s direc. deriv. along ${L _ g}_*X _ h$ }& ({L _ g}_*X _ h)f &= X _ {gh} f & \text{$f(t)$'s direc. deriv. along $X _ {gh}$ }
 \\
 &\text{$f(L_g(t))=f(g\cdot t)$'s direc. deriv. along $X_h$} & X _ h (f\circ L _ g)&= (Xf )_{gh} & \small\text{$f(t)$'s tangent V.F. at $g\cdot h$}
