@@ -1,19 +1,16 @@
 ---
-title: Lie Algebra of Lie Group and Infinitesimal Elements
-categories: Topology
+title: Lie Group and Lie Algebra I: Lie Groups and "Actions"
+categories: Lie-Group
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
-status: Writing
-edit: 2019-03-09
+edit: 2019-03-11
 mermaid: true
-description: I wrote this post because I am dissatisfied with the "infinitesimal operators" and the abuse of "generators" without proper explanations in some textbooks with physicists as target readers. I am trying to understand the rigorous definition of this "infinitesimal operator" and get some intuition about the concept of "generators".
+description: In this post Lie groups and it's actions are introduced. This is the first of a series posts start from Lie group and Lie algebra, where I try to understand "infinitesimal operators" and "generators" used by physicists from a mathematical standpoint. Hopefully this series end with a good explanation of what "generators" are in Classical Mechanics as well as Quantum Mechanics.
 ---
 
 $$
 \newcommand{\inner}[2]{\left\langle{#1,#2}\right\rangle}
 \newcommand{\form}{\tilde}
-\newcommand{\mfd}{\mathcal}
-%\renewcommand{\vec}{\mathbf}
 \newcommand{\bra}[1]{\left\langle{#1}\right\vert }
 \newcommand{\ket}[1]{\left\vert {#1}\right\rangle}
 \newcommand{\braket}[2]{\left\langle {#1} \, \middle\vert \,{#2} \right\rangle }
@@ -85,9 +82,7 @@ $$
 > 
 > ```
 
-# Lie Groups and Its "Actions"
-
-## Lie Group
+# Lie Group
 
 Roughly speaking, a Lie group is a continuous group. The elements in this group are continuous and the group operations are continuous.
 
@@ -98,9 +93,9 @@ Formally, a Lie group $(G,\cdot)​$ is a differentiable manifold with a group s
 
 are differentiable.
 
-## Lie Groups' Actions
+# Lie Groups' Actions
 
-### Back Story
+## Back Story
 
 > After writing down this subsection, I realized that I could have summarized the entirety of it as "A group element's action needs to be properly defined to avoid such confusions as '*A group element can act on other elements in the group, but an element should be an action on external entities*' like I had for a long time."
 
@@ -120,12 +115,12 @@ Thing got out of hand when I encountered Lie group. Similar to discrete groups, 
 
 The confusing property that a group element can act on the group itself is caused by lack of proper definition of "action" of a group element. This chapter is often organized at the end of Lie group, but I think that early exposure to this concept helps to reduce the aforementioned confusion.
 
-### Lie Groups' Actions on Manifold
+## Lie Groups' Actions on Manifold
 
-A **left $G$-action** of a Lie group $(G,\cdot)$ on a manifold $\mfd M$ is a binary operation $(\slot,\slot)$ sometimes denoted as $\triangleright$.
+A **left $G​$-action** of a Lie group $(G,\cdot)​$ on a manifold $ M​$ is a binary operation $(\slot,\slot)​$ sometimes denoted as $\triangleright​$.
 
 $$
-G\times \mfd M \rightarrow \mfd M: (g,p)\mapsto g\lact p
+G\times  M \rightarrow  M: (g,p)\mapsto g\lact p
 $$
 
 such that
@@ -142,7 +137,7 @@ Sometimes a dot "$\,\cdot\,$" is abused to denote this left action as $g\cdot p$
 In a similar fashion, a **right $G$-action** $\ract$ is defined as
 
 $$
-\mfd M \times G \rightarrow \mfd M : (p,g)\mapsto p\ract g
+ M \times G \rightarrow  M : (p,g)\mapsto p\ract g
 $$
 
 such that 
@@ -154,7 +149,7 @@ p\ract e &= p,\\
 \end{align*}
 $$
 
-### Lie Group's Actions on Itself
+## Lie Group's Actions on Itself
 
 Notice that Lie group itself is a manifold, on which Lie group can thus "act". The **left action** or **left translation**: $L _ g: G\rightarrow G​$ is defined by $L _ g(h)=g\cdot h​$. Written in the form of **left $G​$-action** on itself, it reads:
 
@@ -167,9 +162,9 @@ $$
 
 Similarly, **Right action** or **right translation** $R _ g : G\rightarrow G$ is defined by $R _ g(h) = h\cdot g$. 
 
-### Lie Group's Actions: Pushed Forward
+## Lie Group's Actions: Pushed Forward
 
-#### Vectors Are Pushed Forward
+### Vectors Are Pushed Forward
 
 This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
@@ -191,7 +186,7 @@ $$
 \varphi _ * (v _ p)=v _ {*p} \dfdas \Big.\D{C _ 2}{t}\Big\vert _ {t=0}
 $$
 
-#### \*Differential Forms Are Pulled Back
+### \*Differential Forms Are Pulled Back
 
 This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
 
@@ -209,7 +204,7 @@ $$
 
 where the RHS only contains quantities we have defined.
 
-#### Push Forward of Left and Right Actions
+### Push Forward of Left and Right Actions
 
 each of these actions also defines the action of $G$ on vector fields as well as differential forms on $G$ (as a manifold). For a tangent vector $v ∈ T _ hG$ at $h\in G$, the push forward of left action $(L _ g) _ ∗$ will move the vector to $T _ {g\cdot h} G$. This map is denoted as
 
@@ -232,181 +227,3 @@ $$
 ## Lie Group's Matrix Representations
 
 The idea of relating a Lie group to a set of action is closely related to the notion of representation. When we choose to make Lie group act on a Euclidean space, the transformation can be described by a matrix. In other words, a one-to-one correspondence can be established between a Lie group and a set of matrices.
-
-# Lie Group as A Differential Manifold
-
-A nice thing about a manifold is that it can be treated as a usual Euclidean space locally. Most importantly, calculus structures can be introduced on a manifold, and all the related theorems will hold. Lie groups are named after Norwegian mathematician Sophus Lie, who wanted to have an elegant solution to ODEs. 
-
-> Galois inspired Lie. If the discrete invariance group of an algebraic equation could be exploited to generate algorithms to solve the algebraic equation “by radicals,” might it be possible that the continuous invariance group of a differential equation could be exploited to solve the differential equation “by quadratures”? ... But what is the group that leaves the solutions of a differential equation invariant — or maps solutions into solutions? It turns out to be none other than the trivial constant that can be added to any indefinite integral. The additive constant is an element in a translation group. **(from Robert Gilmore)**
-
-In this section, the ***Fundamental Theorem of Ordinary Differential Equations***  is used extensively. The theorem basically states that for any vector field over a smooth manifold, there **exists** a **unique** curve on a neighborhood of each point.
-
-## From Lie Groups to Coordinates
-
-Consider a Lie group $G$ with coordinates introduced in some neighborhood $N _ 0$ of the identity $e$. Thus any element $g\in N _ 0$ has a coordinate in $\R^n$ such that:
-
-$$
-g\rightarrow \left( g^1,g^2,\cdots, g^n\right).
-$$
-
-For convenience, the coordinate of identity $e$ is set to be the origin $(0,0,\cdots,0)$ without loss of generality. 
-
-Inside this neighborhood $N _ 0$,  we can always find a subset $N^\prime$ that preserves the structure of Lie group. 
-
-## Left Invariant Vector Fields
-
-Remember that vectors, as well as vector fields, can be pushed forward. In analogy with **constant vector fields**, **left (or right)-invariant vector fields** are introduced. A left invariant vector field $X​$ is called left invariant if for any $g\in G​$,
-
-$$
-{L _ g}_* X = X.
-$$
-
-Alternatively, one can write this as a point wise vector equation:
-
-$$
-{L _ g}_* (X _ h)\stackrel{\text{by def.}}{=}({L _ g}^* X) _ {gh}= X _ {gh} \label{pointwise-left-invar.}
-$$
-$\Eqn{pointwise-left-invar.}​$ tells us that for any two points on the manifold $h​$ and $gh​$, the vectors are related by a simple "translation". Which means if the manifold is chosen to be Euclidean space, the left invariant vector field would be constant.
-
-For future reference, some of properties of left invariant vector fields are listed here with some explanations: $\forall g \in G$, $\forall f \in C^\infty(G)$:
-$$
-\small\begin{align}
-&\text{$f(t)$'s direc. deriv. along ${L _ g}_*X _ h$ }& ({L _ g}_*X _ h)f &= X _ {gh} f & \text{$f(t)$'s direc. deriv. along $X _ {gh}$ }
-\\
-&\text{$f(L_g(t))=f(g\cdot t)$'s direc. deriv. along $X_h$} & X _ h (f\circ L _ g)&= (Xf )_{gh} & \small\text{$f(t)$'s tangent VF at $g\cdot h$}
-\\
-&\text{$f(g\cdot t)$'s tangent V.F.} &X(f\circ L _ g)&={L_g}_*(Xf) & \small\text{$f(t)$'s tangent VF, left translated} \label{left-invar.-property3}\\
-&\text{$f(t)$'s tangent vector field at $gh$} & [Xf](gh) & \!\stackrel{\tiny\text{by def.}}{=}([Xf]\circ L_g) h & \text{function $[Xf]\!\circ\! L_g$ eval. at $h$} \label{left-invar.-property4}
-\end{align}
-$$
-
-###  Bracket of Left-Invariant Vector Fields
-
-This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783540000310)].
-
-If we have two vector fields $V=V^i(x)\Partial{}{x^i}$ and $W=W^j(x)\Partial{}{x^j}$, we first define the composite of vectors $V \circ W$ as their actions on function $f(x)​$ , notice that
-
-$$
-W _ p(f) =W^j(x _ p)\Partial{f}{x^j} \in \R
-$$
-
-can be seen as a function $W(f): M\rightarrow \R,  p \mapsto W^j(x _ p)\Partial{f}{x^j}$. Thus we can apply another vector filed to this function as:
-
-$$
-\begin{align*}
-\Big[V\circ W \Big](f) &= V\Big(W(f)\Big)\\
-&=V^i(x) \cdot \Partial{}{x^i}\bigg(W^j(x _ p)\Partial{f}{x^j}\bigg)\\
-\end{align*}
-$$
-
-Notice that both $W^j(x _ p)​$ and $\Partial{f(x)}{x^j}​$ are merely functions $M\rightarrow \R​$, thus the Leibnitz rule applies,
-
-$$
-\begin{align*}
-\Big[V\circ W \Big](f) &=V^i(x) \cdot \Partial{}{x^i}\bigg(W^j(x _ p)\Partial{f}{x^j}\bigg)\\
-&=V^i(x) \cdot \left(\Partial{W^j(x _ p)}{x^i}\cdot\Partial{f}{x^j}\right) +V^i(x) \cdot \left(W^j(x _ p)\cdot \Partial{\Partial{f}{x^j}}{x^i}\right)
-\end{align*}
-$$
-
-notice from basic calculus
-
-$$
-\Partial{}{x^i}(\Partial{f}{x^j}) = \Partial{^2}{x^i\partial{x^j}} f = \Partial{}{x^j}(\Partial{f}{x^i})
-$$
-
-Write that in operator form, we have
-
-$$
-V\circ W  =V^i(x) \cdot \left(\Partial{W^j(x _ p)}{x^i}\cdot\Partial{}{x^j}\right) +V^i(x) \cdot \left(W^j(x _ p)\cdot \Partial{^2}{x^i\partial x^j}\right)
-$$
-
-Now we can define the **commutator**:
-
-$$
-\begin{align*}
-[V,W] &=V \circ W - W\circ V\\
-&=V^i(x) \cdot \left(\Partial{W^j(x _ p)}{x^i}\cdot\Partial{}{x^j}\right) +V^i(x) \cdot \left(W^j(x _ p)\cdot \Partial{^2}{x^i\partial x^j}\right) - \\ 
-&\qquad W^j(x) \cdot \left(\Partial{V^i(x _ p)}{x^j}\cdot\Partial{}{x^i}\right) +W^i(x) \cdot \left(V^j(x _ p)\cdot \Partial{^2}{x^j\partial x^i}\right)\\
-& = V^i(x) \cdot \left(\Partial{W^j(x _ p)}{x^i}\cdot\Partial{}{x^j}\right)- W^j(x) \cdot \left(\Partial{V^i(x _ p)}{x^j}\cdot\Partial{}{x^i}\right)
-\end{align*}
-$$
-
-notice that the indices $i, j ​$ are summed over, so it's okay to change the latter dummy indices in both terms so we can collect them.
-
-$$
-\begin{align*}
-[V,W]  & = V^i(x) \cdot \left(\Partial{W^k(x _ p)}{x^i}\cdot\Partial{}{x^k}\right)- W^j(x) \cdot \left(\Partial{V^k(x _ p)}{x^j}\cdot\Partial{}{x^k}\right)\\
-&= \underbrace{\left(V^i(x) \cdot \Partial{W^k(x _ p)}{x^i}- W^j(x) \cdot \Partial{V^k(x _ p)}{x^j}\right)} _ {U^k}\cdot\Partial{}{x^k}\\
-\end{align*}
-$$
-
-### Properties of Brackets
-
-1. Closedness: (see Nakahara (5.112))
-   $$
-   \begin{align}
-   (L_g)_*([X,Y])_a& = [(L_g)_*X,(L_g)_*Y] = [X,Y]_{ag}
-    \label{bracketclosedness}
-    \end{align}
-   $$
-
-2. Bilinearity:
-   $$
-   \begin{align}
-   			[X, c_1 Y_1 + c_2 Y_2 ] & = X^{\mu} \frac{ \partial}{ \partial x^{\mu} } ( c_1 Y_1 + c_2 Y_2)^{\nu} - ( c_1 Y_1 + c_2 Y_2)^{\mu}  \frac{ \partial X^{\nu} }{ \partial x^{\mu} } = \\ \notag
-   			& = c_1 \left( X^{\mu} \frac{ \partial Y_1^{\nu} }{ \partial x^{\mu}  } - Y_1^{\mu} \frac{ \partial X^{\nu }}{ \partial x^{\mu }} \right) + c_2 \left( X^{\mu} \frac{ \partial Y_2^{\nu} }{  \partial x^{\mu} } - Y_2^{\mu} \frac{ \partial X^{\nu }}{ \partial x^{\mu} } \right) = c_1 [ X,Y_1] + c_2[ X,Y_2]  \\ \notag
-   			[c_1 X_1 + c_2 X_2, Y ] & = (c_1 X_1 + c_2 X_2)^{\mu} \frac{ \partial Y^{\nu}}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial }{ \partial x^{\mu} }( c_1 X_1 + c_2 X_2)^{\nu} = \\ \notag
-   			& = c_1 \left( X_1^{\mu} \frac{ \partial Y^{\nu}}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial X_1^{\nu}}{ \partial x^{\mu }} \right) + c_2 \left( X_2^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu }} - Y^{\mu} \frac{ \partial X_2^{\nu }}{ \partial x^{\mu}} \right) = c_1 [X_1, Y] + c_2 [ X_2, Y ] 
-               \label{bracketbilinearity}
-   			\end{align}
-   $$
-
-3. Anti-symmetry:
-   $$
-   [Y,X] = Y^{\mu} \frac{ \partial X^{\nu}}{ \partial x^{\mu} } - X^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu }} = - \left( X^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial X^{\nu}}{ \partial x^{\mu }} \right) = - [ X,Y] \label{bracketantisymmertry}
-   $$
-
-4. Jacobi Identity:
-   $$
-   \begin{align}
-   [[X,Y],Z] 
-   & = [X,Y]^{\mu} \frac{ \partial Z^{\nu}}{ \partial x^{\mu }} - Z^{\mu} \frac{ \partial}{ \partial x^{\mu}} [X,Y]^{\nu} \\ \notag
-   &= (X^a \partial_a Y^{\mu} - Y^a \partial_a X^{\mu} ) \partial_{\mu}Z^{\nu} - Z^{\mu} ( \partial_{\mu}X^a \partial_a Y^{\nu} + X^a \partial^2_{\mu a} Y^{\nu} - \partial_{\mu} Y^a\partial_a X^{\nu} - Y^a \partial^2_{\mu a} X^{\nu} ) \\ \notag
-   &= X^a \partial_a Y^{\mu} \partial_{\mu} Z^{\nu} - Y^a \partial_a X^{\mu} \partial_{\mu} Z^{\nu} - Z^{\mu} \partial_{\mu} X^a \partial_a Y^{\nu} -Z^{\mu}X^a \partial^2_{\mu a} Y^{\nu} + Z^{\mu} \partial_{\mu} Y^a \partial_a X^{\nu} + Z^{\mu} Y^a \partial^2_{\mu a} X^{\nu} 
-   \\ \notag
-   &\text{Likewise,} \\ \notag
-   [[Z,X],Y]^{\nu} &= Z^a \partial_a X^{\mu} \partial_{\mu} Y^{\nu} - X^a \partial_a Z^{\mu} \partial_{\mu} Y^{\nu} - Y^{\mu} \partial_{\mu} Z^a \partial_a X^{\nu} - Y^{\mu} Z^a \partial^2_{\mu a} X^{\nu} + Y^{\mu} \partial_{\mu} X^a \partial_a Z^{\nu} + Y^{\mu} X^a \partial^2_{\mu a} Z^{\nu} \\ \notag
-   [[Y,Z],X]^{\nu} &= Y^a \partial_a Z^{\mu} \partial_{\mu} X^{\nu} - Z^a \partial_a Y^{\mu} \partial_{\mu} X^{\nu} - X^{\mu} \partial_{\mu} Y^a \partial_a Z^{\nu} - X^{\mu} Y^a \partial^2_{\mu a} Z^{\nu} + X^{\mu} \partial_{\mu} Z^a \partial_a Y^{\nu} + X^{\mu} Z^a \partial^2_{\mu a} Y^{\nu}\\
-   &\text{All the $18$ terms cancel.} \notag
-   \label{bracketjacobi}
-   \end{align}
-   $$
-   
-
-## Left Invariant Vector Fields and Integral Curves
-
-
-
-## Left Invariant Vector Fields and One-parameter Subgroups
-
-
-
-
-
-# Lie Algebra of a Lie Group
-
-
-
-## Matrix Exponentials
-
-A good place to start learning Lie groups is matrix lie groups. In matrix Lie groups, one important notion is matrix exponential. In this section, proofs are omitted and can be found on books listed in the beginning.
-
-To avoid confusion with identity element $e$, the exponential is denoted as $\exp(X)​$, defined by the usual power series
-
-$$
-\exp (X) = \sum _ {n=0}^{\infty}\frac{X^n}{n!},
-$$
-
-where $X^0$ is defined to be the identity $\id$. This series converges for all $M _ n(\C)$. The symbol $M _ n(\K)$ stands for all $n\times n$ matrices whose entries are in $\K=\C \text{ or } \R$. 
-
-The function $\exp(tX)$ define a smooth curve in $M _ n(\C)$.
