@@ -8,18 +8,18 @@ toc: false
 mathjax: false
 ---
 
-Digital Ocean is a cheap-for-someone-has-a-.edu-mail (free 50\$ on GitHub Student Pack) service for online calculations. It can also be used as a VPN providing encryption for your data, for it comes with a 1 TB outbound data transfer. Here are my setups. I chose the cheapest option of my droplet (5\$/month). If you have trouble accessing Digital Ocean, take a look at [psiphone](https://www.psiphon3.com/en/index.html), or [Tunnel Bear](https://www.tunnelbear.com/) has a free 500MB monthly data.
+Digital Ocean is a cheap-for-someone-has-a-.edu-mail (free 50\$ on GitHub Student Pack) service for online calculations. It can also be used as a VPN providing encryption for your data, for it comes with a 1 TB outbound data transfer. Here are my setups. I chose the cheapest option for my droplet (5\$/month). If you have trouble accessing Digital Ocean, take a look at [psiphone](https://www.psiphon3.com/en/index.html), or [Tunnel Bear](https://www.tunnelbear.com/) has a free 500MB monthly data.
 
 (BTW, [referal link](https://m.do.co/c/f9c641f35d87): Everyone uses this link gets $100 in credit over 60 days. )
 
-After you have created your droplet, you will receive an email, telling you your root password. ssh to your droplet (for example, in WSL). 
+After you have created your droplet, you will receive an email, telling you your root password. Ssh to your droplet (for example, in WSL). 
 
 ```bash
 ssh root@your_droplet_ip
 # input your password
 ```
 
-you will be prompted to input again your root password and to change you root password. It's not recommended to directly use your root user, but it's easier this way, so I did not create any other users. The following command were executed in root.
+and you will be prompted to input again your root password and to change your root password. It's not recommended to use your root user directly, but it's easier this way, so I did not create any other users. The following command was executed in root.
 
 ```bash
 # 1. install Shadowsocks
@@ -27,9 +27,9 @@ you will be prompted to input again your root password and to change you root pa
  apt-get install python-pip
 # do not upgrade pip
  apt-get install git
-# if you upgraded pip, use pip2 if "pip install shadowsocks" gives error
+# if you upgraded pip, use pip2 if "pip install shadowsocks" gives an error
  pip install shadowsocks
-# in some other cases, you need to update setuptools using cmd "pip install --upgrade setuptools"
+# in some other cases, you need to update setuptools using cmd "pip install --upgrade setuptools".
 
 # install chacha enryption
 apt-get install build-essential
@@ -43,7 +43,7 @@ ldconfig
 vi /etc/shadowsocks.json
 ```
 
-In the json file, first press `i`, and input
+In the JSON file, first press `i`, and input
 
 ```json
 {

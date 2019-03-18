@@ -89,7 +89,7 @@ From differential forms, we can tell if a manifold has a whole as we did in homo
 
 ## "Co-" in Cohomology
 
-As at the beginning of this post, "co-" means dual, and cohomology group is a dual space of the homology group. This dual relationship is obvious in the Stokes' theorem, as $\partial\leftrightarrow\d$. But that's not the definition of dual vector space. Like a covector maps a vector to a number, we are looking for this map (i.e., inner product), such that an $r$-chain $c$ and an $r$-from are mapped to a number.
+As at the beginning of this post, "co-" means dual, and cohomology group is a dual space of the homology group. This dual relationship is evident in the Stokes' theorem, as $\partial\leftrightarrow\d$. However, that is not the definition of dual vector space. Like a covector maps a vector to a number, we are looking for this map (i.e., inner product), such that an $r$-chain $c$ and an $r$-from are mapped to a number.
 
 $$
 c,\omega \mapsto (c,\omega)\in\R
@@ -158,11 +158,11 @@ $$
 (c,\d \omega)=(\partial c, \omega )
 $$
 
-This duality is in a sense "induces" the homology group and cohomology group 
+This duality is in a sense "induces" the homology group and cohomology group. 
 
 # Definition of the de Rham Cohomology Group
 
-Now with necessary mathematical machinery defined, finally, we will give a definition of cohomology group.
+Now with necessary mathematical machinery defined, finally, we will define the cohomology group.
 
 The set of closed $r$-forms on manifold $M$ are called the **co-cycle group**, denoted $Z^r(M)$, not to be confused with cycle group $Z _ r(M)$. The set of exact $r$-forms on manifold $M$ are called the **co-boundary group**, denoted $B^r(M)$.
 
@@ -189,7 +189,7 @@ The sufficient and necessary conditions of exactness in the last post about homo
 
 # Make Homology out of Cohomology
 
-So far we have defined the cohomology group and pointed out the relationships between it and the homology group. Now it's time to find some examples.
+So far we have defined the cohomology group and pointed out the relationships between it and the homology group. Now it is time to find some examples.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/ChainComplex.png" width="50%">
 
@@ -237,7 +237,7 @@ $$
 \omega=\frac{-y}{x^2+y^2}\d x +\frac{x}{x^2+y^2}\d y
 $$
 
-is closed. However, the manifold now has a hole at $(0,0)$, it is not exact anymore.
+is closed. However, the manifold now has a hole at $(0,0)$, and it is not exact anymore.
 
 > **Proof that $\omega$ is not exact**: 
 >
