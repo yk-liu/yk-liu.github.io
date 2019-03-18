@@ -37,7 +37,7 @@ $$
 \notag
 $$
 
-One form is a concept useful in integration, the integrand is a one-form. To perform integration on Manifold, one-form is critical. This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf).
+One form is a concept useful in integration, and the integrand is a one-form. One-form is critical perform integration on Manifold. This post follows [Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf).
 
 # Curves and Functions
 
@@ -49,7 +49,7 @@ The definitions of curves and functions are as follow. A curve on a manifold is 
 
 ## Vectors
 
-Roughly, a **vector space** is a set of entities such that is closed under linear combinations. Both "arrows" and linear functions satisfy this definition and thus form a vector space. 
+Roughly, a **vector space** is a set of entities that is closed under linear combinations. Both "arrows" and linear functions satisfy this definition and thus form a vector space. 
 
 Due to this remarkable fact, there exists a subset of vectors called the **basis** in the space, such that any vector in the space can be represented as a linear combination of members of the basis. 
 
@@ -66,7 +66,7 @@ The vector space $V^*$ of linear functionals over $V$ is said to be **dual** to 
 
 A set of a basis of the dual space is dual vectors as well, which acts on a vector and give a real number. An element of a set of basis is denoted as $\d x ^ i \in \R$. A covector is denoted as $\form \omega=\omega _ i \d x ^ i$. 
 
-> This suspiciously looking name of the co-basis is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or simply an abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)).
+> This suspiciously looking name of the co-basis is carefully chosen for later elaboration, now you can either see it as a derivative $\d$ or merely an abbreviation of "dual", the real reason for doing this is in section [`Covectors on Manifold`](#covectors-on-manifold)).
 >
 
 The basis' action on a vector is denoted as $\d x^i (V)$. 
@@ -98,9 +98,9 @@ The basis' action on a vector is denoted as $\d x^i (V)$.
 
 ## Musical Isomorphism
 
-If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. And two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
+If a vector space is finite dimensional, so is its dual space. In this case, these two linear spaces have the same dimension. Moreover, two linear space of the same dimension are isomorphic (see [here](https://en.wikipedia.org/wiki/Vector _ space#Linear _ maps _ and _ matrices)).
 
-This isomorphism is fairly simple: just swap the basis and nothing is changed, $V\leftrightarrow V^*,\, \uvec x _  i \leftrightarrow \d x ^ i$. This isomorphism is called the **musical isomorphism**. A discussion of the origin of this name can be found [here](https://mathoverflow.net/questions/69074/the-origin-of-the-musical-isomorphisms).
+This isomorphism is relatively simple: swap the basis and nothing changes, $V\leftrightarrow V^*,\, \uvec x _  i \leftrightarrow \d x ^ i$. This isomorphism is called the **musical isomorphism**. A discussion of the origin of this name can be found [here](https://mathoverflow.net/questions/69074/the-origin-of-the-musical-isomorphisms).
 
 This isomorphism is denoted as 
 
@@ -115,8 +115,8 @@ where $\sharp$ is pronounced "sharp", and $\flat$ "flat". For $\sharp$ raises th
 
 > ***Remark:***
 >
-> - For vector spaces with finite bases the dual spaces are not very exotic; they are essentially the same as the original spaces. **There are some infinite dimensional vector spaces that have dual spaces that are different in nature from the original space**.
-> - For example, Dirac-bras $ \bra{v} $ and -kets $ \ket{v} $ are dual vectors, the contravariant vector $x^\mu$ and covariant vectors $x _ \mu$ are dual to each other. The isomorphisms are both just transpose.
+> - For vector spaces with finite bases the dual spaces are not very exotic; they are essentially the same as the original spaces. **There exist some infinite dimensional vector spaces that have dual spaces that are different from the original space**.
+> - For example, Dirac-bras $ \bra{v} $ and -kets $ \ket{v} $ are dual vectors, the contravariant vector $x^\mu$ and covariant vectors $x _ \mu$ are dual to each other. The isomorphisms are both transpose.
 >
 
 ## Inner Product and Dot Product
@@ -137,7 +137,7 @@ $$
 
 ## Gradient and Total Derivative as Duals
 
-It's high time we addressed the weird choice of the name $\d x^i$. We first need a theorem
+It is high time we addressed the weird choice of the name $\d x^i$. We first need a theorem
 
 > In Euclidean space, for any vector $V$ there is a non-empty set of functions such that $\set{f \mid \nabla f = V}$.
 >
@@ -175,7 +175,7 @@ $$
 
 # Vectors on Manifolds
 
-We all know what vector is in Euclidean space, a **vector** is formally defined as an element of a **vector space**, i.e. a set that is closed under finite vector addition and scalar multiplication.
+We all know what vector is in Euclidean space; a **vector** is formally defined as an element of a **vector space**, i.e., a set that is closed under finite vector addition and scalar multiplication.
 
 Though on a manifold, things are a little different. There are three equivalent ways of defining vectors. To put them vaguely,
 
@@ -189,11 +189,11 @@ These definitions are equivalent to each other ([proof](https://maths-people.anu
 
 When I think about vector on a manifold, I have the picture of some arrow tangent to the "surface" of a manifold. 
 
-Since in general there is no way to define a "straight arrow" connecting two points. Vectors can only be "tangent vectors". In other words, vectors cannot live on the manifold itself, but the collection of tangent spaces over the entire manifold called the **tangent bundle**. That way, the vector is kept at a geometrical view. This is a generalization of the notion of a bound vector in a Euclidean space. 
+Since in general there is no way to define a "straight arrow" connecting two points. Vectors can only be "tangent vectors". In other words, vectors cannot live on the manifold itself, but the collection of tangent spaces over the entire manifold called the **tangent bundle**. That way, the vector is kept at a geometrical view. Thus a tangent vector is a generalization of the notion of a bound vector in a Euclidean space. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-One-Forms-on-Manifold/assets/drawing-tangent-vector.png" width="80%">
 
-But this requires embedding the manifold in some higher dimensional space, which is not very convenient since Differential Geometry aims at investigating the space (or maybe space-time) without jumping out of it. Obviously, once the vector is in an ambient space, it can be represented by a tuple of numbers. This naïve picture is fairly intuitive and is mainly brought up as a heuristic way to introduce the next concept.
+However, this requires embedding the manifold in some higher dimensional space, which is not very convenient since Differential Geometry aims at investigating the space (or maybe space-time) without jumping out of it. Once the vector is in an ambient space, it can be represented by a tuple of numbers. This naïve picture is reasonably intuitive and is mainly brought up as a heuristic way to introduce the next concept.
 
 ## Vector is a (differential) operator
 
@@ -201,7 +201,7 @@ But this requires embedding the manifold in some higher dimensional space, which
 
 ### The Short Answer
 
-Most of the textbooks just tell you to assign to each vector $V=V^\mu\uvec e_\mu$ an operator $\op V=V^\mu \Partial{}{x^\mu}$. This makes writers happier for there is no further explanation needed - it's just a definition.
+Most of the textbooks only tell you to assign to each vector $V=V^\mu\uvec e_\mu$ an operator $\op V=V^\mu \Partial{}{x^\mu}$. This makes writers happier for there is no further explanation needed - it is just a definition.
 
 ### How did they come up with it?
 
@@ -243,7 +243,7 @@ Of all the things on a manifold, why did mathematicians choose differential oper
 >
 >  This means if we take a parametrized curve along $v=2$, the tangent vector at point $p$ will always be some number times $ \left.\Partial{\vec r(u,v)}{u}\right\vert _ {\substack{u=u _ 0 \\ v=v _ 0}} $ . Thus $\Partial{\vec r}{u}$ is indeed a basis vector independent of curves.
 
-By far, $\Eqn{vectorToOperator}$ means any operator has a component form using differential operators. $\Eqn{operator _ basis}$ means the partial differential operators act like unit vectors or bases of the space of operators. There is nothing we don't already know about differential operators. 
+By far, $\Eqn{vectorToOperator}$ means any operator has a component form using differential operators. $\Eqn{operator _ basis}$ means the partial differential operators act like unit vectors or bases of the space of operators. There is nothing we do not already know about differential operators. 
 
 What is interesting is how differential operators resemble vectors. They have everything a vector has, namely closedness under linear combinations. From the above example, we can justify that a simple map: $V\rightarrow \op{V} =V\cdot\vec\nabla$ will keep all the properties a vector has, with additional necessary algebraic tools to perform calculations with. 
 
@@ -293,7 +293,7 @@ Here it goes from [Nakahara](http://stringworld.ru/files/Nakahara _ M. _ Geometr
 
 ## Vector field
 
-We can assign a vector, say $V$, to each point in the space $X$. This is equivalent to functions of the form $f:X\rightarrow V=(V,\R,+,*)$; i.e., functions which map every point of the space $X$ into the vector space $V$. A vector field can be seen as arrows sprinkled on a manifold as shown in the left. Or it defines a map from a point to a curve on the manifold as shown in the right. 
+We can assign a vector, say $V$, to each point in the space $X$. This is equivalent to functions of the form $f:X\rightarrow V=(V,\R,+,*)$; i.e., functions which map every point of the space $X$ into the vector space $V$. A vector field can be seen as arrows sprinkled on a manifold as shown in the left. Alternatively, it defines a map from a point to a curve on the manifold as shown in the right. 
 
 >  A point follows the direction of vector field moves at a "velocity" of the magnitude of the vector, tracing out a curve on the manifold.
 
@@ -307,7 +307,7 @@ The Lorentz attractor can also be seen as a complicated manifold sprinkled with 
 
 ## Covector Revisited
 
-A **covector**, **dual vector**, is an element of a **dual vector space**. On a manifold, it's also called **one-form**.
+A **covector**, **dual vector**, is an element of a **dual vector space**. On a manifold, it is also called **one-form**.
 
 A dual vector space is all linear functions that map a vector to $\R^1$. In other words, 
 
@@ -451,11 +451,11 @@ We finally arrive at the conclusion that
 $$
 \begin{align*}
 \form f = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i\\
-\form f(V) = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i V\\
+\form f(V) = \sum _ {i=1}^n\Partial{f}{x^i}\int \d x^i V.
 \end{align*}
 $$
 
-Well, that is one boring result. Turns out that this "one form" can be completely written in the form of integration. It actually makes great sense if you think of covectors (integration) as counter-parts of vectors (differentiation). 
+Well, that is one boring result. It turns out that this "one form" can be written entirely in the form of integration. It makes great sense if you think of covectors (integration) as counter-parts of vectors (differentiation). 
 
 Still, the expression deserves more investigation. Ignoring the context of vectors and covectors, the expression $\Eqn{directional-derivative}$ as function's derivative show that if two functions $f$ and $g$ have the same differential at $t=t _ 0$, 
 
@@ -538,6 +538,6 @@ That bugged me a long time as well. However, if I start from $\Eqn{basis-one-for
 
 At the end of the last section, vectors were generalized as mathematical objects with the form $X=X ^ \mu\Partial{}{x ^ \mu}$. Similarly, the corresponding one-form can be generalized as $\omega =  \omega _ \mu \d x ^ \mu$. 
 
-This definition will immediately cause a problem: it's no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is not a total derivative of a function.
+This definition will immediately cause a problem: it is no longer guaranteed that a one-form is a total derivative of some function. $x\d y$ is a perfect one-form by this definition, but it is not a total derivative of a function.
 
 This gives rise to exactness and closedness of one-form or $N$-forms.

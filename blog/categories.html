@@ -5,8 +5,21 @@ title: Category Index
 <h1>{{ page.title }}</h1>
 
 <div class="container">
+  <h1>Category Cloud</h1>
+	{% assign categories = site.categories | sort %}
+	{% for category in categories %}
+		<span class="site-tag">
+			<a href="{{site.url}}{{site.baseurl}}/blog/categories#{{ category [0] | slugify }}" style="text-decoration: none;" >
+				 <code class="highligher-rouge" style="font-size: {{ category | last | size  |  times: 2 | plus: 80  }}%">
+					<nobr>{{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})</nobr>
+				 </code>
+			</a> &nbsp;
+		</span>
+	{% endfor %}
+	
+	<hr>
   {% for category in site.categories %}
-  <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
+  <h2 id="{{ category[0] | slugify }}">{{ category[0] | replace:'-', ' ' }}</h2>
   <dl class="tags-expo-posts">
     {% for post in category[1] %}
     <dt>

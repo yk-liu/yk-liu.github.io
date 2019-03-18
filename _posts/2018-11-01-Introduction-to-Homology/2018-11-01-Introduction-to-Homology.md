@@ -4,7 +4,7 @@ edit: 2018-11-21
 categories: Topology
 tags: Homology Topology Euler-Characteristic
 keywords: simplex complex triangulation cycle boundary chain hole Euler-Poincare
-description: Euler characteristics is a topological invariant, and can be interpreted as a "hole"-indicator. Homology is just a natural way of defining Euler characteristics in topological spaces. With triangulation of a manifold, we can define cycles and boundaries and combine them to homology groups. We see that the group is trivial for trivial spaces, and is able to distinguish manifolds in terms "holes" in them.
+description: Euler characteristics is a topological invariant, and can be interpreted as a "hole"-indicator. Homology is just a natural way of defining Euler characteristics in topological spaces. With triangulation of a manifold, we can define cycles and boundaries and combine them to homology groups. We see that the group is trivial for trivial spaces, and can distinguish manifolds in terms "holes" in them.
 
 ---
 
@@ -46,7 +46,7 @@ $$
 
 # Funny Name
 
-I struggled a little for all the terms in Topology meaning "equivalence" (with their even messier Chinese translations:  homomorphism (同态), homeomorphism (同胚), isomorphism (同构), homology (同调), homotopy (同伦), isotopy (同痕). Zexian Cao wrote an [article](http://www.wuli.ac.cn/fileup/PDF/2014-43-08-010.pdf) in Chinese discussing these strange names, and here's an explanation of homology from [Wiktionary](https://en.wiktionary.org/wiki/homology). They are not satisfactory as far as I am concerned. I might write an article as soon as I have understood these concepts. 
+I struggled a little for all the terms in Topology meaning "equivalence" (with their even messier Chinese translations:  homomorphism (同态), homeomorphism (同胚), isomorphism (同构), homology (同调), homotopy (同伦), isotopy (同痕). Zexian Cao wrote an [article](http://www.wuli.ac.cn/fileup/PDF/2014-43-08-010.pdf) in Chinese discussing these strange names, and here is an explanation of homology from [Wiktionary](https://en.wiktionary.org/wiki/homology). They are not satisfactory as far as I am concerned. I might write an article as soon as I have understood these concepts. 
 
 # Euler Characteristic
 
@@ -54,16 +54,16 @@ This section follows [[Armstrong](https://www.springer.com/gb/book/9780387908397
 
 ## The Counterexample
 
-Euler characteristic is actually a topological invariant. Many of Chinese students encounter this concept around primary school or middle school, as an interesting exercise to develop a sense of space. Nevertheless, it's probably the most famous topological invariant. The law is sometimes stated as Euler's rule,
+Euler characteristic is, in fact, a topological invariant. Many of Chinese students encounter this concept around primary school or middle school, as an interesting exercise to develop a sense of space. Nevertheless, it is probably the most famous topological invariant. The law is sometimes stated as Euler's rule,
 
->Let $V, E, F$ denote respectively the numbers of vertices (corners), edges and faces of a polyhedron, then
+>Let $V, E, F$ denote the numbers of vertices (corners), edges and faces of a polyhedron respectively, then
 >
 >$$
 >V-E+F=2
 >$$
 >
 
-Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count these numbers can get the number $2$ and call it a day. But that is only part of the story. If you really try to break the rules, you can come up with at least two more types of "polyhedrons" to prove your teacher wrong.
+Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count these numbers can get the number $2$ and call it a day. However, that is only part of the story. If you try really hard to break the rules, you can come up with at least two more types of "polyhedrons" to prove your teacher wrong.
 
 |            Name            |                            Image                             | Vertices $V$ | Edges $E$ | Faces $F$ | Euler characteristic: $V-E+F$ |
 | :------------------------: | :----------------------------------------------------------: | ------------ | --------- | --------- | ----------------------------- |
@@ -75,7 +75,7 @@ Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count
 
 Notice that a polyhedron's faces must be simple connected (any two vertices must be connected by an edge), so the correct cube with a hole needs a few extra lines.
 
-You can see that by continuously deforming a cube, to a tetrahedron, [Octahedron](https://en.wikipedia.org/wiki/Octahedron), [Dodecahedron](https://en.wikipedia.org/wiki/Dodecahedron), [Icosahedron](https://en.wikipedia.org/wiki/Icosahedron), you end up with the same number. Once you poke a hole on the polyhedron, the number changes immediately. You can keep deforming continuously until the next hole, the number will remain unchanged. This is the very definition of a **topological invariant**.
+You can see that by continuously deforming a cube, to a tetrahedron, [Octahedron](https://en.wikipedia.org/wiki/Octahedron), [Dodecahedron](https://en.wikipedia.org/wiki/Dodecahedron), [Icosahedron](https://en.wikipedia.org/wiki/Icosahedron), you end up with the same number. Once you poke a hole on the polyhedron, the number changes immediately. You can keep deforming continuously until the next hole. The number will remain unchanged. This is the very definition of a **topological invariant**.
 
 Any quantity We say that this number characterizes the space, hence the name.
 
@@ -83,13 +83,13 @@ Any quantity We say that this number characterizes the space, hence the name.
 
 Why is a cube with a hole different from other polyhedrons and how can we characterize it without using Euler Characteristic? 
 
-One way to see it is that it has a hole in it. But a hole is a concept from daily life, which a typical mathematician might ask unhumorously for clarification. One way to see it is that there exist some loops, as is shown below, that will not cut the **surface** of this polyhedron into halves. This partly explains the motivation of defining chains and boundaries later.
+One way to see it is that it has a hole in it. However, a hole is a concept from daily life, which a typical mathematician might ask unhumorously for clarification. One way to see it is that there exist some loops, as is shown below, that will not cut the **surface** of this polyhedron into halves. This partly explains the motivation of defining chains and boundaries later.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CutCubeWithHole.png" width="60%">
 
 # Triangulation
 
-Homology, however, is just a natural way of defining Euler characteristics in topological spaces. On a side note, it's not the only topological invariant as a "hole-indicator". The fundamental group and higher homotopy groups will also help to define "holes" on a manifold. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)].
+Homology, however, is just a natural way of defining Euler characteristics in topological spaces. On a side note, it is not the only topological invariant as a "hole-indicator". The fundamental group and higher homotopy groups will also help to define "holes" on a manifold. This section follows closely [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)].
 
 ## Triangulation of Objects
 
@@ -97,11 +97,11 @@ Triangulation is again no stranger for anyone who ever took part in [IYPT](http:
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/COMSOL(R)mesh.png" width="80%">
 
-It's also very commonly seen at 3D modeling and Art (image from [freepik](https://www.freepik.com/blog/10-free-low-poly-animal-vector-images/)), see also [here](https://poly.google.com/view/46bXrRt8pFF).
+It is also very commonly seen at 3D modeling and Art (image from [freepik](https://www.freepik.com/blog/10-free-low-poly-animal-vector-images/)), see also [here](https://poly.google.com/view/46bXrRt8pFF).
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/LowPolyBear.png" width="30%">
 
-It's self-evident that this technique is very useful as it converts a smooth object to a "discrete" one while maintaining its most important traits so that you can still recognize it's a bear. Acute readers might have known where we are heading: we are going to calculate the Euler Characteristic of smooth objects (topological spaces) by triangulating. 
+It is self-evident that this technique is very helpful as it converts a smooth object to a "discrete" one while maintaining its most essential traits so that you can still recognize it is a bear. Acute readers might have known where we are heading: we are going to calculate the Euler Characteristic of smooth objects (topological spaces) by triangulating. 
 
 Indeed, similar techniques can be adapted to topology spaces. We can use "triangles" to mesh out any oddly shaped topological space, turning it into a "polyhedron". From this polyhedron, we can calculate the Euler characteristic of the space, telling us how many "holes" are in this topological space. This gives us a way to classify topology spaces according to its "holes". This is an important aspect of a topological space as in the famous example of topology - a cup and a doughnut is topological equivalent. (image from [Wikipedia](https://en.wikipedia.org/wiki/Topology))
 
@@ -130,7 +130,7 @@ A simplicial complex $K$ is a set of simplexes glued together, such that
 1. Any face of a simplex of $K$ is part of $K$. 
 2. Any non-empty intersection of two simplexes belongs to $K$.
 
-This definition is quite intuitive. By requirement 1., a simplicial complex has a well-defined boundary (surface). All bodies must be covered by a surface. For example, the interior of a cube is not a simplicial complex. By requirement 2., simplexes in a simplicial complex are not allowed to freely pass through each other. By "not passing through", we mean all the points generated by the intersection must be included. For example, the left is not a simplicial complex for the intersection is not counted. While the right is a lawful simplicial complex. 
+This definition is quite intuitive. By requirement 1., a simplicial complex has a well-defined boundary (surface). All bodies must be covered by a surface. For example, the interior of a cube is not a simplicial complex. By requirement 2., simplexes in a simplicial complex are not allowed to pass through each other freely. By "not passing through", we mean all the points generated by the intersection must be included. For example, the left is not a simplicial complex for the intersection is not counted while the right is a lawful simplicial complex. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersectionExample.png" width="30%">
 
@@ -157,15 +157,15 @@ If there is a homeomorphism $f:\abs{K}\rightarrow X$, topological space is said 
 
 # Homology Group - Elements
 
-From polyhedrons, we are going to construct three groups. By combining these groups we will be able to find a topological invariant called homology group. This section follows [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)] and  [[Armstrong](https://www.springer.com/gb/book/9780387908397)].
+From polyhedrons, we are going to construct three groups. By combining these groups, we will be able to find a topological invariant called homology group. This section follows [[Nakahara](http://stringworld.ru/files/Nakahara_M._Geometry_topology_and_physics_2nd_ed..pdf)] and  [[Armstrong](https://www.springer.com/gb/book/9780387908397)].
 
 ## Oriented Simplexes
 
-The notation of a simplex as $\spl{p _ 1,p _ 2,\cdots,p _ n}$ is actually insufficient.
+The notation of a simplex as $\spl{p _ 1,p _ 2,\cdots,p _ n}$ is in fact insufficient.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="50%">
 
-These two triangles cannot be brought to overlap without flipping, neither can these two tetrahedrons without mirroring. Thus for every simplex, we need to define an "orientation", characterized by the arrangement of the points.  It also helps in to define the boundary of simplexes.
+These two triangles cannot be brought to overlap without flipping; neither can these two tetrahedrons without mirroring. Thus for every simplex, we need to define an "orientation", characterized by the arrangement of the points.  It also helps in to define the boundary of simplexes.
 
 $$
 (p _ {i _ 0},p _ {i _ 1},\cdots,p _ {i _ n})=\sgn (P)(p _ 0,p _ 1,\cdots,p _ n)
@@ -182,11 +182,11 @@ $$
 
 ## Boundary Operator
 
-The boundary of a complex is of particular interest to us. If we want to somehow calculate the Euler Characteristic, the notions of faces, edges and points are very helpful. They are conveniently the boundaries of bodies, faces, and edges respectively.
+The boundary of a complex is of particular interest to us. If we want to calculate the Euler Characteristic somehow, the notions of faces, edges and points are very helpful. They are conveniently the boundaries of bodies, faces, and edges respectively.
 
-The boundary operator $\partial _ r$ acts on an $r$-simplex gives its boundary. The $0$-simplex is defined as has no boundary, denoted as $\partial _ 0p _ 0=0$. 
+The boundary operator $\partial _ r$ acts on an $r$-simplex, and gives its boundary. The $0$-simplex is defined as has no boundary, denoted as $\partial _ 0p _ 0=0$. 
 
-Utilizing the orientated simplexes, higher dimensional simplexes can have well-defined boundaries.
+Utilizing the orientated simplexes, higher dimensional simplexes can then have well-defined boundaries.
 
 $$
 \begin{align*}
@@ -204,9 +204,9 @@ $$
 >
 > When we say "torus does not have a boundary", **We are talking about the surface.**
 >
-> This may be slightly confusing if you think of torus as the usual "doughnut" hanging in three-dimensional space. However, you should see the doughnut "as it is", that is to say, only to consider it's own intrinsic geometric structure. 
+> This may be slightly confusing if you think of torus as the usual "doughnut" hanging in three-dimensional space. However, you should see the doughnut "as it is", that is to say, only to consider it is own intrinsic geometric structure. 
 >
-> These big words of "intrinsic geometric structure" is still quite hard to understand. Just think of Planet Earth. You are living on the surface of the Earth. You know there are no boundaries on the **surface** of Earth, otherwise, Christopher Columbus would have fallen into nothingness.
+> These big words of "intrinsic geometric structure" is still quite hard to understand. Just think of Planet Earth. You are living on the surface of the Earth. You know there are no boundaries on the **surface** of Earth. Otherwise, Christopher Columbus would have fallen into nothingness.
 >
 > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/FlatEarth.png" width="50%">
 >
@@ -265,7 +265,7 @@ It's always a good idea to base a discussion on some concrete examples. Here are
 
 ​    This [page](https://plus.maths.org/content/imaging-maths-inside-klein-bottle) of Klein bottle with animations is an excellent reference if you are unfamiliar with the Klein bottle. In short, a Klein bottle is made by gluing the edge"s" (since there is only one edge) of a Mobius strip. It pieces itself because we are viewing it in $3$ dimensional world. In a $4$-dimensional world, it does not intercept with itself at all. 
 
-​    It's quite hard to picture the triangulation of the Klein bottle directly. But once we know how it is made, we can build it from right to left. The $\color{green}green$ edge is where the piercing occurs. The $\color{magenta} magenta$ line is the "edge" of the Mobius strip.  
+​    It is quite hard to picture the triangulation of the Klein bottle directly. However, once we know how it is made, we can build it from right to left. The $\color{green}green$ edge is where the piercing occurs. The $\color{magenta} magenta$ line is the "edge" of the Mobius strip.  
 
    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfKlein.png" width="80%">
 
@@ -321,9 +321,9 @@ All $r$-boundaries of $K$ forms $r$-boundary group $B _ r(K)$ ("B" stands for "*
 
 ## Cycles and Holes
 
-You are probably wondering why examples of cycles and boundaries are identical. In section [`Boundary Operator`](#boundary-operator) we know that it can be proven that a boundary can have no boundary. That is to say, all boundaries are cycles. 
+You are probably wondering why examples of cycles and boundaries are identical. In section [`Boundary Operator`](#boundary-operator) we know that it can be proven that a boundary can have no boundary. That is to say all boundaries are cycles. 
 
-It's natural to ask, are all cycles necessarily boundaries? The answer is No. A trivial example is a single point. A single point has no boundaries but is not a boundary. However, it's hard to come up with an example other than a point. You can draw as many strange shapes as you want, a torus, a two-torus, a torus with a $2$-dimensional fin, etc. But you won't find such cycles. As a matter of fact, as long as you are drawing in $\R^3$, you will always find your cycle is a boundary of something. 
+It is natural to ask, are all cycles necessarily boundaries? The answer is No. A trivial example is a single point. A single point has no boundaries but is not a boundary. However, it is hard to come up with an example other than a point. You can draw as many strange shapes as you want, a torus, a two-torus, a torus with a $2$-dimensional fin, etc. However, you will not find such cycles. As a matter of fact, as long as you are drawing in $\R^3$, you will always find your cycle is a boundary of something. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndBoundary.png" width="60%">
 
@@ -331,7 +331,7 @@ Now let's study circles on the torus. Are those cycles? Yes. But are those bound
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndHole.png" width="60%">
 
-This is actually the motivation of Homology group. The existence of a cycle that is not a boundary indicates that there is at least one hole on the surface. More information can also be derived using the homology group.
+This is the motivation of Homology group. The existence of a cycle that is not a boundary indicates that there is at least one hole on the surface. More information can also be derived using the homology group.
 
 # Homology Group
 
@@ -370,7 +370,7 @@ If $z$ and $z^\prime$ belong to the same equivalent class, they are called **hom
 
 ## The Euler Characteristic Again
 
-At the beginning of this post, we mentioned defining Euler Characteristic on a smooth manifold. Now it's high time we addressed it from the standpoint of Homology groups. However, I am going to simply list these theorems without proof.
+At the beginning of this post, we mentioned defining Euler Characteristic on a smooth manifold. Now it is high time we addressed it from the standpoint of Homology groups. However, I am going to list these theorems without proof simply.
 
 We first treat $Z _ k, \,B _ k,\, H _ k$ and $C _ k$ as vector spaces, and define four numbers as their dimensions as the following:
 
@@ -404,7 +404,7 @@ There are much more about homology, but sadly now I will have to move on to Coho
 
 > **Holes and Homology**
 >
-> The number of elements in the equivalence classes of $1$-chains of a surface, i.e. $h _ 1$, is the twice the genus of a surface, where the genus indicates how many holes the surface has.
+> The number of elements in the equivalence classes of $1$-chains of a surface, i.e., $h _ 1$, is the twice the genus of a surface, where the genus indicates how many holes the surface has.
 
 
 
