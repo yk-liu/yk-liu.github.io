@@ -1,6 +1,6 @@
 ---
 title: >
-   Lie Group and Lie Algebra I: Lie Groups and "Actions"
+   Lie Groups and "Actions"
 categories: Lie-group Topology
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
