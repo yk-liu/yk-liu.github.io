@@ -2,10 +2,9 @@
 title: >
    Lie Group as Differential Manifold
 categories: Lie-group Topology
-tags: Pullback Pushforward Lie-group Lie-algebra
+tags: Lie-group Lie-algebra Exponential-map
 keywords: Pull-back Push-forward algebra left-invariant-vector-field flow bracket integral-curve
-status: Writing
-edit: 2019-03-11
+edit: 2019-03-19
 description: In this post Lie groups are regarded as a differential manifold, and one-parameter subgroups are introduced. This is the second of a series of posts that start from Lie group and Lie algebra, where I try to understand "infinitesimal operators" and "generators" used by physicists from a mathematical standpoint.
 ---
 
@@ -57,6 +56,12 @@ $$
 For convenience, the coordinate of identity $e$ is set to be the origin $(0,0,\cdots,0)$ without loss of generality. 
 
 Inside this neighborhood $N _ 0$,  we can always find a subset $N^\prime$ that preserves the structure of Lie group. 
+
+> Side note (from [[USTC](http://staff.ustc.edu.cn/~wangzuoq/Courses/16F-Manifolds/Notes/Lec12.pdf)]):
+>
+> Not every smooth manifold admits a Lie group structure. For example, the only spheres that admit a Lie group structure are $S_0$, $S_1$ and $S_3$; among all the compact $2$-dimensional surfaces the only one admits a Lie group structure is a torus $T_2 = S_1\times S_1​$. **So whenever you see I draw a sphere as a Lie group, just image there is a tiny hole on it where you cannot see. A sphere is must easier to draw than a torus.**
+>
+> There are many constraints for a manifold to be a Lie group. For example, a Lie group must be analytic manifold, and the tangent bundle of a Lie group is always trivial: $TG \simeq G \times \R^n​$. 
 
 # Left-Invariant Vector Fields and Brackets
 
@@ -237,7 +242,7 @@ First, any left-invariant vector fields on a Lie group are complete.
 >       \end{align*}
 >       $$
 >       
->       ​         by the uniqueness of solutions to ODEs, $\alpha(t) \equiv \beta(t)$. Namely, $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)$.
+>       ​         by the uniqueness of solutions to ODEs, $\alpha(t) \equiv \beta(t)​$. Namely, $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)​$.
 >
 >    3. Now it's evident we can extend arbitrarily far away from $0$. For a curve $\gamma_e(t)$ defined in some interval $(-\varepsilon,\varepsilon)$, we can extend it to $(-\tfrac{1}{2}\varepsilon,\tfrac{3}{2}\varepsilon)$ by choosing $\eta(t)\dfdas \gamma(\tfrac{\varepsilon}{2})\cdot\gamma(t-\tfrac{\varepsilon}{2}),\text{for } t\in (-\tfrac{\varepsilon}{2},\tfrac{3\varepsilon}{2})$. This can go on and on and cover the entire real axis $\R$. Like [Tony Feng](http://web.stanford.edu/~tonyfeng/222.pdf) said in his notes: "The idea is simple: if the integral curve is incomplete, then it “runs out of steam” at some finite point. But since G is a Lie group and X is left-invariant, we can always translate it to keep it going a little longer."
 >
@@ -265,11 +270,25 @@ First, any left-invariant vector fields on a Lie group are complete.
 
 ## Exponential Map
 
+From above we know that given a left-invariant vector field, an integral curve can be defined on the Lie group manifold. This integral curve is parameterized by a single parameter $t​$. This integral curve is closed under group multiplication, since $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)​$. And it is Abelian regardless of the Abelian-ness of the Lie group. 
+
+Think about this equation $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)$ . On the right is a multiplication, while on the left is an addition. Guess what map has the same property? An exponential map! $e^{(x+y)} = e^x\cdot e^y$, if $x, y$ are numbers.
+
+Therefore, the one-parameter subgroup $\gamma$ is called the **exponential map**, using the notation $\exp$ to avoid confusion with the identity element $e​$.
 
 
-## Flow
 
+## * Flow
 
+As a side note, the flow of a vector field is introduced in this section.
+
+A flow is a map $\Phi: \R\times M \rightarrow M, (t,p)\mapsto \phi_t(p)$. This looks like a strange and complicated map, but it is, in fact, a very intuitive map. 
+
+Imagine at $t=0$, every point $p$ on the manifold starts moving with the speed of $X_p$, in the "direction" of $X_p$. In the next interval of time $t=\d t$, every point is moved to a new point $p^\prime$ and changes its velocity according to $X_{p^\prime}$. The process goes on and on, and soon the manifold is going to be covering with such trajectories. If the manifold is taken to be $S_2​$, it will look like either one of below (image credit: NASA).
+
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-11-Lie-Group-as-Differential-Manifold/assets/Flows.png' width='50%'>
+
+So a flow $\Phi_1$ maps each point, at each time, to another point on the manifold. In other words, $\Phi_1$ assigns a history and a future to where every single point on the manifold have been and will be. By the same rationale, $\Phi_2​$ can assign a different history and a future. To put it more intuitively, a flow is like a "cloud forecast" on earth. Each "cloud" is assigned to a certain position on the planet. Over time that assignment becomes a "flow", hence the name. Since there is freedom to make up different versions of such forecasts (below are two versions of flow, from [[giphy](https://giphy.com)]), different flows can be defined. 
 
 <div style='text-align: center'>
 <div style="display:inline-block;">
@@ -279,13 +298,3 @@ First, any left-invariant vector fields on a Lie group are complete.
 <iframe src="https://giphy.com/embed/hE7qzzcOwXh5u" width="50%" height="50%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 </div>
-
-
-
-
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-11-Lie-Group-as-Differential-Manifold/assets/Flows.png' width='50%'>
-
-
-
-
-
