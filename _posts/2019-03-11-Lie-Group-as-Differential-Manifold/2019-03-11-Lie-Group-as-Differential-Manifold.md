@@ -5,7 +5,7 @@ categories: Lie-group Topology
 tags: Lie-group Lie-algebra Exponential-map
 keywords: Pull-back Push-forward algebra left-invariant-vector-field flow bracket integral-curve
 edit: 2019-03-19
-description: In this post Lie groups are regarded as a differential manifold, and one-parameter subgroups are introduced. This is the second of a series of posts that start from Lie group and Lie algebra, where I try to understand "infinitesimal operators" and "generators" used by physicists from a mathematical standpoint.
+description: In this post Lie groups are regarded as a differential manifold, and one-parameter subgroups are introduced. This is the second of a series of posts that start from Lie group and Lie algebra.
 ---
 
 $$

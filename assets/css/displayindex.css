@@ -6,9 +6,6 @@
  * Sidebar
  * Slide effect
  * Posts and pages
- * Pagination
- * Reverse layout
- * Themes
  */
 
 
@@ -275,5 +272,9 @@ a.sidebar-nav-item:focus {
 .page,
 .post {
   margin-bottom: 4em;
+}
+
+.tags-expo-posts{
+    line-height: 1.2;
 }
 
