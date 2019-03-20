@@ -59,7 +59,7 @@ Inside this neighborhood $N _ 0$,  we can always find a subset $N^\prime$ that p
 
 > Side note (from [[USTC](http://staff.ustc.edu.cn/~wangzuoq/Courses/16F-Manifolds/Notes/Lec12.pdf)]):
 >
-> Not every smooth manifold admits a Lie group structure. For example, the only spheres that admit a Lie group structure are $S_0$, $S_1$ and $S_3$; among all the compact $2$-dimensional surfaces the only one admits a Lie group structure is a torus $T_2 = S_1\times S_1​$. **So whenever you see I draw a sphere as a Lie group, just image there is a tiny hole on it where you cannot see. A sphere is must easier to draw than a torus.**
+> Not every smooth manifold admits a Lie group structure. For example, the only spheres that admit a Lie group structure are $S_0$, $S_1$ and $S_3$; among all the compact $2$-dimensional surfaces the only one admits a Lie group structure is a torus $T_2 = S_1\times S_1$. **So whenever you see I draw a sphere as a Lie group, just imagine there is a tiny hole on it where you cannot see. A sphere is must easier to draw than a torus.**
 >
 > There are many constraints for a manifold to be a Lie group. For example, a Lie group must be analytic manifold, and the tangent bundle of a Lie group is always trivial: $TG \simeq G \times \R^n​$. 
 
@@ -79,7 +79,7 @@ $$
 {L _ g}_* (X _ h)\stackrel{\text{by def.}}{=}({L _ g}^* X) _ {gh}= X _ {gh} \label{pointwise-left-invar.}
 $$
 
-$\Eqn{pointwise-left-invar.}​$ tells us that for any two points on the manifold $h​$ and $gh​$, the vectors are related by a simple "translation". Which means if the manifold is chosen to be Euclidean space, the left-invariant vector field would be constant.
+$\Eqn{pointwise-left-invar.}$ tells us that for any two points on the manifold $h$ and $gh$, the vectors are related by a simple "translation". Which means if the manifold is chosen to be Euclidean space, the left-invariant vector field would be constant.
 
 For future reference, some of properties of left invariant vector fields are listed here with some explanations: $\forall g \in G​$, $\forall f \in C^\infty(G)​$:
 
@@ -209,7 +209,7 @@ If for a curve $\Gamma: \R\rightarrow G, \,t\mapsto\gamma(t)$, and a vector fiel
 
 Note that the existence of a vector field's integral curve defined for a short interval, at a single point is a somewhat weak (if not trivial) requirement. If for a vector field, an integral curve defined on $\R$ can be found on any point in $G$, such vector field is called **complete**.
 
-First, any left-invariant vector fields on a Lie group are complete. 
+Any left-invariant vector fields on a Lie group are complete.
 
 > Proof (from [[1](https://scholar.rose-hulman.edu/rhumj/vol15/iss2/5)] [[2](https://faculty.math.illinois.edu/~lerman/519/s12/427notes.pdf)] [[3](http://web.stanford.edu/~tonyfeng/222.pdf)]):
 >
@@ -244,7 +244,7 @@ First, any left-invariant vector fields on a Lie group are complete.
 >       
 >       ​         by the uniqueness of solutions to ODEs, $\alpha(t) \equiv \beta(t)​$. Namely, $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)​$.
 >
->    3. Now it's evident we can extend arbitrarily far away from $0$. For a curve $\gamma_e(t)$ defined in some interval $(-\varepsilon,\varepsilon)$, we can extend it to $(-\tfrac{1}{2}\varepsilon,\tfrac{3}{2}\varepsilon)$ by choosing $\eta(t)\dfdas \gamma(\tfrac{\varepsilon}{2})\cdot\gamma(t-\tfrac{\varepsilon}{2}),\text{for } t\in (-\tfrac{\varepsilon}{2},\tfrac{3\varepsilon}{2})$. This can go on and on and cover the entire real axis $\R$. Like [Tony Feng](http://web.stanford.edu/~tonyfeng/222.pdf) said in his notes: "The idea is simple: if the integral curve is incomplete, then it “runs out of steam” at some finite point. But since G is a Lie group and X is left-invariant, we can always translate it to keep it going a little longer."
+>    3. Now it's evident we can extend arbitrarily far away from $0​$. For a curve $\gamma_e(t)​$ defined in some interval $(-\varepsilon,\varepsilon)​$, we can extend it to $(-\tfrac{1}{2}\varepsilon,\tfrac{3}{2}\varepsilon)​$ by choosing $\eta(t)\dfdas \gamma(\tfrac{\varepsilon}{2})\cdot\gamma(t-\tfrac{\varepsilon}{2}),\text{for } t\in (-\tfrac{\varepsilon}{2},\tfrac{3\varepsilon}{2})​$. This can go on and on and cover the entire real axis $\R​$. Like [Tony Feng](http://web.stanford.edu/~tonyfeng/222.pdf) said in his notes: "The idea is simple: if the integral curve is incomplete, then it “runs out of steam” at some finite point. But since G is a Lie group and X is left-invariant, we can always translate it to keep it going a little longer."
 >
 > 2. **This *maximal* integral curve can be translated such that for every point on $G$ such integral curve exists.** 
 >
@@ -264,19 +264,28 @@ First, any left-invariant vector fields on a Lie group are complete.
 >       \end{align*}
 >       $$
 >    
->       ​      Therefore, we have $\gamma_s(t)=s\cdot \gamma_e(t)$ is the maximal integral curve defined at an arbitrary point $s$, and is defined over $\R$.
+>       ​      Therefore, we have $\gamma_s(t)=s\cdot \gamma_e(t)​$ is the maximal integral curve defined at an arbitrary point $s​$, and is defined over $\R​$.
 >
 > 3. From point 1 and 2, we know that any left-invariant vector fields on a Lie group has an maximal integral curve defined on all points, and is thus complete.
 
+## Properties of One-Parameter Subgroup
+
+From above we know that given a left-invariant vector field, an integral curve can be defined on the Lie group manifold. This integral curve has two good properties:
+
+1.  It is parameterized by a single parameter $t$. This integral curve is closed under group multiplication, since $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)$. And it is Abelian regardless of the Abelian-ness of the Lie group. 
+2. This one-parameter subgroup can be viewed as a path whose speed is constant, because the left-invariant vector filed is in some sense "**constant**", as it is produced my translating **one** vector over the entire manifold. Therefore, a one-parameter subgroup sole depends on the initial "velocity".
+
+We will denote a one-parameter subgroup with initial velocity $X\in T_e G$ (for notes on tangent space, see [this post]({{ site.baseurl }}{% post_url 2018-08-20-Vectors-and-One-Forms-on-Manifold %}) of my) as $\gamma_X(t)$. Namely, there is a one-to-one correspondence between $X\in T_eG$ and one-parameter subgroups.
+
 ## Exponential Map
 
-From above we know that given a left-invariant vector field, an integral curve can be defined on the Lie group manifold. This integral curve is parameterized by a single parameter $t​$. This integral curve is closed under group multiplication, since $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)​$. And it is Abelian regardless of the Abelian-ness of the Lie group. 
+This correspondence is formally denoted as the exponential map, 
+$$
+\exp: T_eG \rightarrow G,\  X \mapsto \gamma_X(1).
+$$
+Thus, the one-parameter subgroup $\gamma$ is called the **exponential map**, using the notation $\exp$ to avoid confusion with the identity element $e$.
 
-Think about this equation $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)$ . On the right is a multiplication, while on the left is an addition. Guess what map has the same property? An exponential map! $e^{(x+y)} = e^x\cdot e^y$, if $x, y$ are numbers.
-
-Therefore, the one-parameter subgroup $\gamma$ is called the **exponential map**, using the notation $\exp$ to avoid confusion with the identity element $e​$.
-
-
+This name comes from the equation $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)$ . On the right is a multiplication, while on the left is an addition. Guess what map has the same property? An exponential map! $e^{(x+y)} = e^x\cdot e^y$, if $x, y$ are numbers.
 
 ## * Flow
 
@@ -288,13 +297,14 @@ Imagine at $t=0$, every point $p$ on the manifold starts moving with the speed o
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-11-Lie-Group-as-Differential-Manifold/assets/Flows.png' width='50%'>
 
-So a flow $\Phi_1$ maps each point, at each time, to another point on the manifold. In other words, $\Phi_1$ assigns a history and a future to where every single point on the manifold have been and will be. By the same rationale, $\Phi_2​$ can assign a different history and a future. To put it more intuitively, a flow is like a "cloud forecast" on earth. Each "cloud" is assigned to a certain position on the planet. Over time that assignment becomes a "flow", hence the name. Since there is freedom to make up different versions of such forecasts (below are two versions of flow, from [[giphy](https://giphy.com)]), different flows can be defined. 
+So a flow $\Phi_1​$ maps each point, at each time, to another point on the manifold. In other words, $\Phi_1​$ assigns a history and a future to where every single point on the manifold have been and will be. By the same rationale, $\Phi_2​$ can assign a different history and a future. To put it more intuitively, a flow is like a "cloud forecast" on earth. Each "cloud" is assigned to a certain position on the planet. Over time that assignment becomes a "flow", hence the name. Since there is freedom to make up different versions of such forecasts (below are two versions of flow, from [[giphy](https://giphy.com)]), different flows can be defined. 
 
 <div style='text-align: center'>
 <div style="display:inline-block;">
-    <iframe src="https://giphy.com/embed/lFK0MKE3t7SwM" width="50%" height="50%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> 
+    <iframe src="https://giphy.com/embed/lFK0MKE3t7SwM" width="70%" height="280px" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> 
 </div>
 <div style="display:inline-block;">
-<iframe src="https://giphy.com/embed/hE7qzzcOwXh5u" width="50%" height="50%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<iframe src="https://giphy.com/embed/hE7qzzcOwXh5u" width="70%" height="280px" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 </div>
+
