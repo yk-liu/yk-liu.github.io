@@ -59,24 +59,24 @@ Inside this neighborhood $N _ 0$,  we can always find a subset $N^\prime$ that p
 
 > Side note (from [[USTC](http://staff.ustc.edu.cn/~wangzuoq/Courses/16F-Manifolds/Notes/Lec12.pdf)]):
 >
-> Not every smooth manifold admits a Lie group structure. For example, the only spheres that admit a Lie group structure are $S_0$, $S_1$ and $S_3$; among all the compact $2$-dimensional surfaces the only one admits a Lie group structure is a torus $T_2 = S_1\times S_1$. **So whenever you see I draw a sphere as a Lie group, just imagine there is a tiny hole on it where you cannot see. A sphere is must easier to draw than a torus.**
+> Not every smooth manifold admits a Lie group structure. For example, the only spheres that admit a Lie group structure are $S _ 0$, $S _ 1$ and $S _ 3$; among all the compact $2$-dimensional surfaces the only one admits a Lie group structure is a torus $T _ 2 = S _ 1\times S _ 1$. **So whenever you see I draw a sphere as a Lie group, just imagine there is a tiny hole on it where you cannot see. A sphere is must easier to draw than a torus.**
 >
 > There are many constraints for a manifold to be a Lie group. For example, a Lie group must be analytic manifold, and the tangent bundle of a Lie group is always trivial: $TG \simeq G \times \R^n​$. 
 
 # Left-Invariant Vector Fields and Brackets
 
-Remember that vectors, as well as vector fields, can be pushed forward. In analogy with **constant vector fields**, **left (or right)-invariant vector fields** are introduced. Later this left-invariant vector field will be mapped to $T_e G$ and will be shown to be a Lie algebra.
+Remember that vectors, as well as vector fields, can be pushed forward. In analogy with **constant vector fields**, **left (or right)-invariant vector fields** are introduced. Later this left-invariant vector field will be mapped to $T _ e G$ and will be shown to be a Lie algebra.
 
 A left invariant vector field $X$ is called left invariant if for any $g\in G$,
 
 $$
-{L _ g}_* X = X.
+{L _ g} _ * X = X.
 $$
 
 Alternatively, one can write this as a point wise vector equation:
 
 $$
-{L _ g}_* (X _ h)\stackrel{\text{by def.}}{=}({L _ g}^* X) _ {gh}= X _ {gh} \label{pointwise-left-invar.}
+{L _ g} _ * (X _ h)\stackrel{\text{by def.}}{=}({L _ g}^* X) _ {gh}= X _ {gh} \label{pointwise-left-invar.}
 $$
 
 $\Eqn{pointwise-left-invar.}$ tells us that for any two points on the manifold $h$ and $gh$, the vectors are related by a simple "translation". Which means if the manifold is chosen to be Euclidean space, the left-invariant vector field would be constant.
@@ -85,12 +85,12 @@ For future reference, some of properties of left invariant vector fields are lis
 
 $$
 \small\begin{align}
-&\text{$f(t)$'s direc. deriv. along ${L _ g}_*X _ h$ }& ({L _ g}_*X _ h)f &= X _ {gh} f & \text{$f(t)$'s direc. deriv. along $X _ {gh}$ }
+&\text{$f(t)$'s direc. deriv. along ${L _ g} _ *X _ h$ }& ({L _ g} _ *X _ h)f &= X _ {gh} f & \text{$f(t)$'s direc. deriv. along $X _ {gh}$ }
 \\
-&\text{$f(L_g(t))=f(g\cdot t)$'s direc. deriv. along $X_h$} & X _ h (f\circ L _ g)&= (Xf )_{gh} & \small\text{$f(t)$'s tangent V.F. at $g\cdot h$}
+&\text{$f(L _ g(t))=f(g\cdot t)$'s direc. deriv. along $X _ h$} & X _ h (f\circ L _ g)&= (Xf ) _ {gh} & \small\text{$f(t)$'s tangent V.F. at $g\cdot h$}
 \\
-&\text{$f(g\cdot t)$'s tangent V.F.} &X(f\circ L _ g)&={L_g}_*(Xf) & \small\text{$f(t)$'s tangent V.F., left translated} \label{left-invar.-property3}\\
-&\text{$f(t)$'s tangent vector field at $gh$} & [Xf](gh) & \!\stackrel{\tiny\text{by def.}}{=}([Xf]\circ L_g) h & \text{function $[Xf]\!\circ\! L_g$ eval. at $h$} \label{left-invar.-property4}
+&\text{$f(g\cdot t)$'s tangent V.F.} &X(f\circ L _ g)&={L _ g} _ *(Xf) & \small\text{$f(t)$'s tangent V.F., left translated} \label{left-invar.-property3}\\
+&\text{$f(t)$'s tangent vector field at $gh$} & [Xf](gh) & \!\stackrel{\tiny\text{by def.}}{=}([Xf]\circ L _ g) h & \text{function $[Xf]\!\circ\! L _ g$ eval. at $h$} \label{left-invar.-property4}
 \end{align}
 $$
 
@@ -160,7 +160,7 @@ $$
    
    $$
    \begin{align}
-   (L_g)_*([X,Y])_a& = [(L_g)_*X,(L_g)_*Y] = [X,Y]_{ag}
+   (L _ g) _ *([X,Y]) _ a& = [(L _ g) _ *X,(L _ g) _ *Y] = [X,Y] _ {ag}
     \label{bracketclosedness}
     \end{align}
    $$
@@ -169,10 +169,10 @@ $$
    
    $$
    \begin{align}
-               [X, c_1 Y_1 + c_2 Y_2 ] & = X^{\mu} \frac{ \partial}{ \partial x^{\mu} } ( c_1 Y_1 + c_2 Y_2)^{\nu} - ( c_1 Y_1 + c_2 Y_2)^{\mu}  \frac{ \partial X^{\nu} }{ \partial x^{\mu} } = \\ \notag
-               & = c_1 \left( X^{\mu} \frac{ \partial Y_1^{\nu} }{ \partial x^{\mu}  } - Y_1^{\mu} \frac{ \partial X^{\nu }}{ \partial x^{\mu }} \right) + c_2 \left( X^{\mu} \frac{ \partial Y_2^{\nu} }{  \partial x^{\mu} } - Y_2^{\mu} \frac{ \partial X^{\nu }}{ \partial x^{\mu} } \right) = c_1 [ X,Y_1] + c_2[ X,Y_2]  \\ \notag
-               [c_1 X_1 + c_2 X_2, Y ] & = (c_1 X_1 + c_2 X_2)^{\mu} \frac{ \partial Y^{\nu}}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial }{ \partial x^{\mu} }( c_1 X_1 + c_2 X_2)^{\nu} = \\ \notag
-               & = c_1 \left( X_1^{\mu} \frac{ \partial Y^{\nu}}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial X_1^{\nu}}{ \partial x^{\mu }} \right) + c_2 \left( X_2^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu }} - Y^{\mu} \frac{ \partial X_2^{\nu }}{ \partial x^{\mu}} \right) = c_1 [X_1, Y] + c_2 [ X_2, Y ] 
+               [X, c _ 1 Y _ 1 + c _ 2 Y _ 2 ] & = X^{\mu} \frac{ \partial}{ \partial x^{\mu} } ( c _ 1 Y _ 1 + c _ 2 Y _ 2)^{\nu} - ( c _ 1 Y _ 1 + c _ 2 Y _ 2)^{\mu}  \frac{ \partial X^{\nu} }{ \partial x^{\mu} } = \\ \notag
+               & = c _ 1 \left( X^{\mu} \frac{ \partial Y _ 1^{\nu} }{ \partial x^{\mu}  } - Y _ 1^{\mu} \frac{ \partial X^{\nu }}{ \partial x^{\mu }} \right) + c _ 2 \left( X^{\mu} \frac{ \partial Y _ 2^{\nu} }{  \partial x^{\mu} } - Y _ 2^{\mu} \frac{ \partial X^{\nu }}{ \partial x^{\mu} } \right) = c _ 1 [ X,Y _ 1] + c _ 2[ X,Y _ 2]  \\ \notag
+               [c _ 1 X _ 1 + c _ 2 X _ 2, Y ] & = (c _ 1 X _ 1 + c _ 2 X _ 2)^{\mu} \frac{ \partial Y^{\nu}}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial }{ \partial x^{\mu} }( c _ 1 X _ 1 + c _ 2 X _ 2)^{\nu} = \\ \notag
+               & = c _ 1 \left( X _ 1^{\mu} \frac{ \partial Y^{\nu}}{ \partial x^{\mu} } - Y^{\mu} \frac{ \partial X _ 1^{\nu}}{ \partial x^{\mu }} \right) + c _ 2 \left( X _ 2^{\mu} \frac{ \partial Y^{\nu }}{ \partial x^{\mu }} - Y^{\mu} \frac{ \partial X _ 2^{\nu }}{ \partial x^{\mu}} \right) = c _ 1 [X _ 1, Y] + c _ 2 [ X _ 2, Y ] 
                \label{bracketbilinearity}
                \end{align}
    $$
@@ -189,12 +189,12 @@ $$
    \small\begin{align}
    [[X,Y],Z] 
    & = [X,Y]^{\mu} \frac{ \partial Z^{\nu}}{ \partial x^{\mu }} - Z^{\mu} \frac{ \partial}{ \partial x^{\mu}} [X,Y]^{\nu} \\ \notag
-   &= (X^a \partial_a Y^{\mu} - Y^a \partial_a X^{\mu} ) \partial_{\mu}Z^{\nu} - Z^{\mu} ( \partial_{\mu}X^a \partial_a Y^{\nu} + X^a \partial^2_{\mu a} Y^{\nu} - \partial_{\mu} Y^a\partial_a X^{\nu} - Y^a \partial^2_{\mu a} X^{\nu} ) \\ \notag
-   &= X^a \partial_a Y^{\mu} \partial_{\mu} Z^{\nu} - Y^a \partial_a X^{\mu} \partial_{\mu} Z^{\nu} - Z^{\mu} \partial_{\mu} X^a \partial_a Y^{\nu} -Z^{\mu}X^a \partial^2_{\mu a} Y^{\nu} + Z^{\mu} \partial_{\mu} Y^a \partial_a X^{\nu} + Z^{\mu} Y^a \partial^2_{\mu a} X^{\nu} 
+   &= (X^a \partial _ a Y^{\mu} - Y^a \partial _ a X^{\mu} ) \partial _ {\mu}Z^{\nu} - Z^{\mu} ( \partial _ {\mu}X^a \partial _ a Y^{\nu} + X^a \partial^2 _ {\mu a} Y^{\nu} - \partial _ {\mu} Y^a\partial _ a X^{\nu} - Y^a \partial^2 _ {\mu a} X^{\nu} ) \\ \notag
+   &= X^a \partial _ a Y^{\mu} \partial _ {\mu} Z^{\nu} - Y^a \partial _ a X^{\mu} \partial _ {\mu} Z^{\nu} - Z^{\mu} \partial _ {\mu} X^a \partial _ a Y^{\nu} -Z^{\mu}X^a \partial^2 _ {\mu a} Y^{\nu} + Z^{\mu} \partial _ {\mu} Y^a \partial _ a X^{\nu} + Z^{\mu} Y^a \partial^2 _ {\mu a} X^{\nu} 
    \\ \notag
    &\text{Likewise,} \\ \notag
-   [[Z,X],Y]^{\nu} &= Z^a \partial_a X^{\mu} \partial_{\mu} Y^{\nu} - X^a \partial_a Z^{\mu} \partial_{\mu} Y^{\nu} - Y^{\mu} \partial_{\mu} Z^a \partial_a X^{\nu} - Y^{\mu} Z^a \partial^2_{\mu a} X^{\nu} + Y^{\mu} \partial_{\mu} X^a \partial_a Z^{\nu} + Y^{\mu} X^a \partial^2_{\mu a} Z^{\nu} \\ \notag
-   [[Y,Z],X]^{\nu} &= Y^a \partial_a Z^{\mu} \partial_{\mu} X^{\nu} - Z^a \partial_a Y^{\mu} \partial_{\mu} X^{\nu} - X^{\mu} \partial_{\mu} Y^a \partial_a Z^{\nu} - X^{\mu} Y^a \partial^2_{\mu a} Z^{\nu} + X^{\mu} \partial_{\mu} Z^a \partial_a Y^{\nu} + X^{\mu} Z^a \partial^2_{\mu a} Y^{\nu}\\
+   [[Z,X],Y]^{\nu} &= Z^a \partial _ a X^{\mu} \partial _ {\mu} Y^{\nu} - X^a \partial _ a Z^{\mu} \partial _ {\mu} Y^{\nu} - Y^{\mu} \partial _ {\mu} Z^a \partial _ a X^{\nu} - Y^{\mu} Z^a \partial^2 _ {\mu a} X^{\nu} + Y^{\mu} \partial _ {\mu} X^a \partial _ a Z^{\nu} + Y^{\mu} X^a \partial^2 _ {\mu a} Z^{\nu} \\ \notag
+   [[Y,Z],X]^{\nu} &= Y^a \partial _ a Z^{\mu} \partial _ {\mu} X^{\nu} - Z^a \partial _ a Y^{\mu} \partial _ {\mu} X^{\nu} - X^{\mu} \partial _ {\mu} Y^a \partial _ a Z^{\nu} - X^{\mu} Y^a \partial^2 _ {\mu a} Z^{\nu} + X^{\mu} \partial _ {\mu} Z^a \partial _ a Y^{\nu} + X^{\mu} Z^a \partial^2 _ {\mu a} Y^{\nu}\\
    &\text{All the $18$ terms cancel.} \notag
    \label{bracketjacobi}
    \end{align}
@@ -203,7 +203,7 @@ $$
 
 # Left-Invariant Vector Fields and Integral Curves
 
-If for a curve $\Gamma: \R\rightarrow G, \,t\mapsto\gamma(t)$, and a vector field $X$, $\forall t\in \R, \D{\gamma(t)}{t}=X_{\gamma(t)}$, then $\Gamma$ is said to be a integral curve of vector field $X$. **Later this curve will be shown to be isomorphic to $(\R ,+)​$, and exponential map will be defined using this property.**
+If for a curve $\Gamma: \R\rightarrow G, \,t\mapsto\gamma(t)$, and a vector field $X$, $\forall t\in \R, \D{\gamma(t)}{t}=X _ {\gamma(t)}$, then $\Gamma$ is said to be a integral curve of vector field $X$. **Later this curve will be shown to be isomorphic to $(\R ,+)​$, and exponential map will be defined using this property.**
 
 ## Completeness: Existence of Integral Curves Everywhere
 
@@ -213,16 +213,16 @@ Any left-invariant vector fields on a Lie group are complete.
 
 > Proof (from [[1](https://scholar.rose-hulman.edu/rhumj/vol15/iss2/5)] [[2](https://faculty.math.illinois.edu/~lerman/519/s12/427notes.pdf)] [[3](http://web.stanford.edu/~tonyfeng/222.pdf)]):
 >
-> 1. **There exists a *maximal* integral curve $\gamma_e:\R\rightarrow G$**. 
+> 1. **There exists a *maximal* integral curve $\gamma _ e:\R\rightarrow G$**. 
 >
->    1. From the Fundamental Theorem of ODEs, there exists a integral curve $\gamma_e​$ passing through identity $e​$. This curve is defined at least for some interval $(-\varepsilon,\varepsilon), \, \varepsilon>0​$. We need to extend the interval to $\R​$.
+>    1. From the Fundamental Theorem of ODEs, there exists a integral curve $\gamma _ e​$ passing through identity $e​$. This curve is defined at least for some interval $(-\varepsilon,\varepsilon), \, \varepsilon>0​$. We need to extend the interval to $\R​$.
 >
 >    2. Now consider the product of the maps. $\forall s, t \in (-\varepsilon,\varepsilon)$, we define
 >    
 >       $$
 >       \begin{cases}
->       \alpha(t) = \gamma_e(t+s)\\
->       \beta(t) = \gamma_e(s) \cdot \gamma_e(t)
+>       \alpha(t) = \gamma _ e(t+s)\\
+>       \beta(t) = \gamma _ e(s) \cdot \gamma _ e(t)
 >       \end{cases},
 >       $$
 >       
@@ -231,40 +231,40 @@ Any left-invariant vector fields on a Lie group are complete.
 >       $$
 >       \begin{align*}
 >       \text{Initial condition: }&\begin{cases}
->       \alpha(0) = \gamma_e(s)\\
->       \beta(0) = \gamma_e(s)\cdot e = \gamma_e(s)
+>       \alpha(0) = \gamma _ e(s)\\
+>       \beta(0) = \gamma _ e(s)\cdot e = \gamma _ e(s)
 >       \end{cases}
 >       \\
 >       \text{Differenial equation: }&\begin{cases}
->       \alpha^\prime(t) = X_{\alpha(t)}\\
->       \beta^\prime(t) = X_{\beta(t)}
+>       \alpha^\prime(t) = X _ {\alpha(t)}\\
+>       \beta^\prime(t) = X _ {\beta(t)}
 >       \end{cases} .
 >       \end{align*}
 >       $$
 >       
->       ​         by the uniqueness of solutions to ODEs, $\alpha(t) \equiv \beta(t)​$. Namely, $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)​$.
+>       ​         by the uniqueness of solutions to ODEs, $\alpha(t) \equiv \beta(t)​$. Namely, $\gamma _ e(t+s)=\gamma _ e(t)\cdot\gamma _ e(s)​$.
 >
->    3. Now it's evident we can extend arbitrarily far away from $0​$. For a curve $\gamma_e(t)​$ defined in some interval $(-\varepsilon,\varepsilon)​$, we can extend it to $(-\tfrac{1}{2}\varepsilon,\tfrac{3}{2}\varepsilon)​$ by choosing $\eta(t)\dfdas \gamma(\tfrac{\varepsilon}{2})\cdot\gamma(t-\tfrac{\varepsilon}{2}),\text{for } t\in (-\tfrac{\varepsilon}{2},\tfrac{3\varepsilon}{2})​$. This can go on and on and cover the entire real axis $\R​$. Like [Tony Feng](http://web.stanford.edu/~tonyfeng/222.pdf) said in his notes: "The idea is simple: if the integral curve is incomplete, then it “runs out of steam” at some finite point. But since G is a Lie group and X is left-invariant, we can always translate it to keep it going a little longer."
+>    3. Now it's evident we can extend arbitrarily far away from $0​$. For a curve $\gamma _ e(t)​$ defined in some interval $(-\varepsilon,\varepsilon)​$, we can extend it to $(-\tfrac{1}{2}\varepsilon,\tfrac{3}{2}\varepsilon)​$ by choosing $\eta(t)\dfdas \gamma(\tfrac{\varepsilon}{2})\cdot\gamma(t-\tfrac{\varepsilon}{2}),\text{for } t\in (-\tfrac{\varepsilon}{2},\tfrac{3\varepsilon}{2})​$. This can go on and on and cover the entire real axis $\R​$. Like [Tony Feng](http://web.stanford.edu/~tonyfeng/222.pdf) said in his notes: "The idea is simple: if the integral curve is incomplete, then it “runs out of steam” at some finite point. But since G is a Lie group and X is left-invariant, we can always translate it to keep it going a little longer."
 >
 > 2. **This *maximal* integral curve can be translated such that for every point on $G$ such integral curve exists.** 
 >
->       ​      $\forall s \in G$,  on the one hand,
+>              $\forall s \in G$,  on the one hand,
 >    
 >       $$
->       X_{\gamma_s(t)} = \gamma^\prime_s(t)
+>       X _ {\gamma _ s(t)} = \gamma^\prime _ s(t)
 >       $$
 >    
->       ​      on the other hand, 
+>       ​       on the other hand, 
 >    
 >       $$
 >       \begin{align*}
->       \gamma_s^\prime(t)&=(L_s)_*(\gamma_e^\prime (t)) \quad \text{push forward of translation: $L_s: e \rightarrow s$}\\
->       &=(L_s)_*X_{\gamma_e(t)} \quad \text{definition of tangent vector field's evaluation}\\
->       & =X_{s\cdot\gamma_e(t)} \quad \text{defition of left-invariant vector field}
+>       \gamma _ s^\prime(t)&=(L _ s) _ *(\gamma _ e^\prime (t)) \quad \text{push forward of translation: $L _ s: e \rightarrow s$}\\
+>       &=(L _ s) _ *X _ {\gamma _ e(t)} \quad \text{definition of tangent vector field's evaluation}\\
+>       & =X _ {s\cdot\gamma _ e(t)} \quad \text{defition of left-invariant vector field}
 >       \end{align*}
 >       $$
 >    
->       ​      Therefore, we have $\gamma_s(t)=s\cdot \gamma_e(t)​$ is the maximal integral curve defined at an arbitrary point $s​$, and is defined over $\R​$.
+>       ​       Therefore, we have $\gamma _ s(t)=s\cdot \gamma _ e(t)​$ is the maximal integral curve defined at an arbitrary point $s​$, and is defined over $\R​$.
 >
 > 3. From point 1 and 2, we know that any left-invariant vector fields on a Lie group has an maximal integral curve defined on all points, and is thus complete.
 
@@ -272,32 +272,34 @@ Any left-invariant vector fields on a Lie group are complete.
 
 From above we know that given a left-invariant vector field, an integral curve can be defined on the Lie group manifold. This integral curve has two good properties:
 
-1.  It is parameterized by a single parameter $t$. This integral curve is closed under group multiplication, since $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)$. And it is Abelian regardless of the Abelian-ness of the Lie group. 
+1.  It is parameterized by a single parameter $t$. This integral curve is closed under group multiplication, since $\gamma _ e(t+s)=\gamma _ e(t)\cdot\gamma _ e(s)$. And it is Abelian regardless of the Abelian-ness of the Lie group. 
 2. This one-parameter subgroup can be viewed as a path whose speed is constant, because the left-invariant vector filed is in some sense "**constant**", as it is produced my translating **one** vector over the entire manifold. Therefore, a one-parameter subgroup sole depends on the initial "velocity".
 
-We will denote a one-parameter subgroup with initial velocity $X\in T_e G$ (for notes on tangent space, see [this post]({{ site.baseurl }}{% post_url 2018-08-20-Vectors-and-One-Forms-on-Manifold %}) of my) as $\gamma_X(t)$. Namely, there is a one-to-one correspondence between $X\in T_eG$ and one-parameter subgroups.
+We will denote a one-parameter subgroup with initial velocity $X\in T _ e G$ (for notes on tangent space, see [this post]({{ site.baseurl }}{% post _ url 2018-08-20-Vectors-and-One-Forms-on-Manifold %}) of my) as $\gamma _ X(t)$. Namely, there is a one-to-one correspondence between $X\in T _ eG$ and one-parameter subgroups.
 
 ## Exponential Map
 
 This correspondence is formally denoted as the exponential map, 
+
 $$
-\exp: T_eG \rightarrow G,\  X \mapsto \gamma_X(1).
+\exp: T _ eG \rightarrow G,\  X \mapsto \gamma _ X(1).
 $$
+
 Thus, the one-parameter subgroup $\gamma$ is called the **exponential map**, using the notation $\exp$ to avoid confusion with the identity element $e$.
 
-This name comes from the equation $\gamma_e(t+s)=\gamma_e(t)\cdot\gamma_e(s)$ . On the right is a multiplication, while on the left is an addition. Guess what map has the same property? An exponential map! $e^{(x+y)} = e^x\cdot e^y$, if $x, y$ are numbers.
+This name comes from the equation $\gamma _ e(t+s)=\gamma _ e(t)\cdot\gamma _ e(s)$ . On the right is a multiplication, while on the left is an addition. Guess what map has the same property? An exponential map! $e^{(x+y)} = e^x\cdot e^y$, if $x, y$ are numbers.
 
 ## * Flow
 
 As a side note, the flow of a vector field is introduced in this section.
 
-A flow is a map $\Phi: \R\times M \rightarrow M, (t,p)\mapsto \phi_t(p)$. This looks like a strange and complicated map, but it is, in fact, a very intuitive map. 
+A flow is a map $\Phi: \R\times M \rightarrow M, (t,p)\mapsto \phi _ t(p)$. This looks like a strange and complicated map, but it is, in fact, a very intuitive map. 
 
-Imagine at $t=0$, every point $p$ on the manifold starts moving with the speed of $X_p$, in the "direction" of $X_p$. In the next interval of time $t=\d t$, every point is moved to a new point $p^\prime$ and changes its velocity according to $X_{p^\prime}$. The process goes on and on, and soon the manifold is going to be covering with such trajectories. If the manifold is taken to be $S_2​$, it will look like either one of below (image credit: NASA).
+Imagine at $t=0$, every point $p$ on the manifold starts moving with the speed of $X _ p$, in the "direction" of $X _ p$. In the next interval of time $t=\d t$, every point is moved to a new point $p^\prime$ and changes its velocity according to $X _ {p^\prime}$. The process goes on and on, and soon the manifold is going to be covering with such trajectories. If the manifold is taken to be $S _ 2​$, it will look like either one of below (image credit: NASA).
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-11-Lie-Group-as-Differential-Manifold/assets/Flows.png' width='50%'>
 
-So a flow $\Phi_1​$ maps each point, at each time, to another point on the manifold. In other words, $\Phi_1​$ assigns a history and a future to where every single point on the manifold have been and will be. By the same rationale, $\Phi_2​$ can assign a different history and a future. To put it more intuitively, a flow is like a "cloud forecast" on earth. Each "cloud" is assigned to a certain position on the planet. Over time that assignment becomes a "flow", hence the name. Since there is freedom to make up different versions of such forecasts (below are two versions of flow, from [[giphy](https://giphy.com)]), different flows can be defined. 
+So a flow $\Phi _ 1​$ maps each point, at each time, to another point on the manifold. In other words, $\Phi _ 1​$ assigns a history and a future to where every single point on the manifold have been and will be. By the same rationale, $\Phi _ 2​$ can assign a different history and a future. To put it more intuitively, a flow is like a "cloud forecast" on earth. Each "cloud" is assigned to a certain position on the planet. Over time that assignment becomes a "flow", hence the name. Since there is freedom to make up different versions of such forecasts (below are two versions of flow, from [[giphy](https://giphy.com)]), different flows can be defined. 
 
 <div style='text-align: center'>
 <div style="display:inline-block;">
