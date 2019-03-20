@@ -275,7 +275,7 @@ From above we know that given a left-invariant vector field, an integral curve c
 1.  It is parameterized by a single parameter $t$. This integral curve is closed under group multiplication, since $\gamma _ e(t+s)=\gamma _ e(t)\cdot\gamma _ e(s)$. And it is Abelian regardless of the Abelian-ness of the Lie group. 
 2. This one-parameter subgroup can be viewed as a path whose speed is constant, because the left-invariant vector filed is in some sense "**constant**", as it is produced my translating **one** vector over the entire manifold. Therefore, a one-parameter subgroup sole depends on the initial "velocity".
 
-We will denote a one-parameter subgroup with initial velocity $X\in T _ e G$ (for notes on tangent space, see [this post]({{ site.baseurl }}{% post _ url 2018-08-20-Vectors-and-One-Forms-on-Manifold %}) of my) as $\gamma _ X(t)$. Namely, there is a one-to-one correspondence between $X\in T _ eG$ and one-parameter subgroups.
+We will denote a one-parameter subgroup with initial velocity $X\in T _ e G$ (for notes on tangent space, see [this post]({{ site.baseurl }}{% post_url 2018-08-20-Vectors-and-One-Forms-on-Manifold %}) of my) as $\gamma _ X(t)$. Namely, there is a one-to-one correspondence between $X\in T _ eG$ and one-parameter subgroups.
 
 ## Exponential Map
 
