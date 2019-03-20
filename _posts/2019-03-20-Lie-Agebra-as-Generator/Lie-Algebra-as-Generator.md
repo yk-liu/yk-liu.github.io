@@ -2,11 +2,11 @@
 title: >
    Lie Algebra as Generator
 categories: Lie-group Topology
-tags: Pullback Pushforward Lie-group Lie-algebra
-keywords: Pull-back Push-forward algebra left-invariant-vector-field
+tags: Lie-group Lie-algebra
+keywords: algebra exponential-map
 status: Writing
 edit: 2019-03-19
-description: In this post Lie groups are regarded as a differential manifold, and one-parameter subgroups are introduced. This is the second of a series of posts that start from Lie group and Lie algebra, where I try to understand "infinitesimal operators" and "generators" used by physicists from a mathematical standpoint.
+description: In this post generator of Lie groups as well as subgroup are considered. This short post is a preparation for application of Mathematical theory into QM and CM. This is the third of a series of posts that start from Lie group and Lie algebra.
 ---
 
 $$
