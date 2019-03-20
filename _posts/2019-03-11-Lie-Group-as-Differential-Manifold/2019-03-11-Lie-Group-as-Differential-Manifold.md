@@ -218,53 +218,52 @@ Any left-invariant vector fields on a Lie group are complete.
 >    1. From the Fundamental Theorem of ODEs, there exists a integral curve $\gamma _ e​$ passing through identity $e​$. This curve is defined at least for some interval $(-\varepsilon,\varepsilon), \, \varepsilon>0​$. We need to extend the interval to $\R​$.
 >
 >    2. Now consider the product of the maps. $\forall s, t \in (-\varepsilon,\varepsilon)$, we define
+>
+>    $$
+>    \begin{cases}
+>    \alpha(t) = \gamma _ e(t+s)\\
+>    \beta(t) = \gamma _ e(s) \cdot \gamma _ e(t)
+>    \end{cases},
+>    $$
 >    
->       $$
->       \begin{cases}
->       \alpha(t) = \gamma _ e(t+s)\\
->       \beta(t) = \gamma _ e(s) \cdot \gamma _ e(t)
->       \end{cases},
->       $$
->       
->       ​         then we have the following observation,
->       
->       $$
->       \begin{align*}
->       \text{Initial condition: }&\begin{cases}
->       \alpha(0) = \gamma _ e(s)\\
->       \beta(0) = \gamma _ e(s)\cdot e = \gamma _ e(s)
->       \end{cases}
->       \\
->       \text{Differenial equation: }&\begin{cases}
->       \alpha^\prime(t) = X _ {\alpha(t)}\\
->       \beta^\prime(t) = X _ {\beta(t)}
->       \end{cases} .
->       \end{align*}
->       $$
->       
->       ​         by the uniqueness of solutions to ODEs, $\alpha(t) \equiv \beta(t)​$. Namely, $\gamma _ e(t+s)=\gamma _ e(t)\cdot\gamma _ e(s)​$.
+>    ​         then we have the following observation,
+>    
+>    $$
+>    \begin{align*}
+>    \text{Initial condition: }&\begin{cases}
+>    \alpha(0) = \gamma _ e(s)\\
+>    \beta(0) = \gamma _ e(s)\cdot e = \gamma _ e(s)
+>    \end{cases}
+>    \\
+>    \text{Differenial equation: }&\begin{cases}
+>    \alpha^\prime(t) = X _ {\alpha(t)}\\
+>    \beta^\prime(t) = X _ {\beta(t)}
+>    \end{cases} .
+>    \end{align*}
+>    $$
+>    
+>    ​         by the uniqueness of solutions to ODEs, $\alpha(t) \equiv \beta(t)​$. Namely, $\gamma _ e(t+s)=\gamma _ e(t)\cdot\gamma _ e(s)​$.
 >
 >    3. Now it's evident we can extend arbitrarily far away from $0​$. For a curve $\gamma _ e(t)​$ defined in some interval $(-\varepsilon,\varepsilon)​$, we can extend it to $(-\tfrac{1}{2}\varepsilon,\tfrac{3}{2}\varepsilon)​$ by choosing $\eta(t)\dfdas \gamma(\tfrac{\varepsilon}{2})\cdot\gamma(t-\tfrac{\varepsilon}{2}),\text{for } t\in (-\tfrac{\varepsilon}{2},\tfrac{3\varepsilon}{2})​$. This can go on and on and cover the entire real axis $\R​$. Like [Tony Feng](http://web.stanford.edu/~tonyfeng/222.pdf) said in his notes: "The idea is simple: if the integral curve is incomplete, then it “runs out of steam” at some finite point. But since G is a Lie group and X is left-invariant, we can always translate it to keep it going a little longer."
 >
 > 2. **This *maximal* integral curve can be translated such that for every point on $G$ such integral curve exists.** 
 >
->              $\forall s \in G$,  on the one hand,
->    
->       $$
->       X _ {\gamma _ s(t)} = \gamma^\prime _ s(t)
->       $$
->    
->       ​       on the other hand, 
->    
->       $$
->       \begin{align*}
->       \gamma _ s^\prime(t)&=(L _ s) _ *(\gamma _ e^\prime (t)) \quad \text{push forward of translation: $L _ s: e \rightarrow s$}\\
->       &=(L _ s) _ *X _ {\gamma _ e(t)} \quad \text{definition of tangent vector field's evaluation}\\
->       & =X _ {s\cdot\gamma _ e(t)} \quad \text{defition of left-invariant vector field}
->       \end{align*}
->       $$
->    
->       ​       Therefore, we have $\gamma _ s(t)=s\cdot \gamma _ e(t)​$ is the maximal integral curve defined at an arbitrary point $s​$, and is defined over $\R​$.
+>    ​       $\forall s \in G$,  on the one hand,
+>    $$
+>    X _ {\gamma _ s(t)} = \gamma^\prime _ s(t)
+>    $$
+>
+>    ​       on the other hand, 
+>
+>    $$
+>    \begin{align*}
+>    \gamma _ s^\prime(t)&=(L _ s) _ *(\gamma _ e^\prime (t)) \quad \text{push forward of translation: $L _ s: e \rightarrow s$}\\
+>    &=(L _ s) _ *X _ {\gamma _ e(t)} \quad \text{definition of tangent vector field's evaluation}\\
+>    & =X _ {s\cdot\gamma _ e(t)} \quad \text{defition of left-invariant vector field}
+>    \end{align*}
+>    $$
+>
+>    ​       Therefore, we have $\gamma _ s(t)=s\cdot \gamma _ e(t)$ is the maximal integral curve defined at an arbitrary point $s$, and is defined over $\R$.
 >
 > 3. From point 1 and 2, we know that any left-invariant vector fields on a Lie group has an maximal integral curve defined on all points, and is thus complete.
 
