@@ -43,7 +43,7 @@ A nice thing about a manifold is that it can be treated as a usual Euclidean spa
 
 > Galois inspired Lie. If the discrete invariance group of an algebraic equation could be exploited to generate algorithms to solve the algebraic equation “by radicals,” might it be possible that the continuous invariance group of a differential equation could be exploited to solve the differential equation “by quadratures”? ... But what is the group that leaves the solutions of a differential equation invariant — or maps solutions into solutions? It turns out to be none other than the trivial constant that can be added to any indefinite integral. The additive constant is an element in a translation group. **(from Robert Gilmore)** [[Chatper 16](http://www.physics.drexel.edu/~bob/LieGroups.html)].
 
-In this section, the ***Fundamental Theorem of Ordinary Differential Equations*** is used extensively. The theorem states that for any vector field over a smooth manifold, there **exists** a **unique** curve on a neighborhood of each point.
+In this section, the ***Fundamental Theorem of Ordinary Differential Equations*** is central since Lie group originates from ODEs. The existence and uniqueness of various mathematical objects are guaranteed by this theorem, which states that for any vector field over a smooth manifold, there **exists** a **unique** curve on a neighborhood of each point.
 
 # From Lie Groups to Coordinates
 
