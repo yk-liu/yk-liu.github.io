@@ -3,7 +3,7 @@ title: Thank You Word Cloud with Mathematica
 categories: Code-Snippets
 tags: word-cloud Mathematica
 keywords: word-cloud Mathematica
-description: Code for generating thank you word cloud with Mathematica. It's great for thank-you page of your slide-shows.
+description: Code for generating thank-you word cloud with Mathematica. It's perfect for thank-you page of your slide-shows.
 toc: false
 ---
 
@@ -21,7 +21,7 @@ data = Transpose[ data];
 TextTranslation["Thank you", #] & /@ data [[1]]
 ```
 
-The above code will return a list, with some errors due to some languages are not recognized by the translation engine. 
+The above code returns a list, with some errors due to some languages are not recognized by the translation engine. 
 
 ```
 {"謝謝", "Thank you", "धन्यवाद", "Gracias", "Спасибо", "Obrigado", \
@@ -38,7 +38,7 @@ The above code will return a list, with some errors due to some languages are no
   Entity["Language", "PanjabiWestern"]], "Grazie", "謝謝"}
 ```
 
-Just  remove them you'll have the following lists.
+Just remove them you'll have the following lists.
 
 ```
 Speakers = {Quantity[1.10716223`2.*^9, "People"], 

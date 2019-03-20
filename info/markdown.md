@@ -10,6 +10,15 @@ mathjax: true
 
 Don't use [] in YAML front matter. 
 
+don't use : in YAML front matter. If you have to, use pipe line:
+
+```
+title: >
+   The Matrix II: Reload
+```
+
+
+
 Use `\newline` instead of `\\` in inline math. 
 
 `\substack` is a very useful command.

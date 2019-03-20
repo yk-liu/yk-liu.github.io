@@ -82,13 +82,20 @@ code, tt {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+
+#particles-js{
+		font-family:'Montserrat',sans-serif;
+}
+
 body{
     padding:0;
     font-size:100%;
     line-height:1.5;
     color:#555;
-    font-family:'Montserrat',sans-serif
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif
 }
+
+
 article,aside,figcaption,figure,footer,header,nav,section{
     display:block
 }

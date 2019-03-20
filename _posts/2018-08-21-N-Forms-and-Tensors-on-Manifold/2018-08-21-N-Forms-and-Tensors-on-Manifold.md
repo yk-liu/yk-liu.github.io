@@ -64,13 +64,13 @@ Such tensors are called of type $(q,r)$. $T_{(1,1)},\, T_{(2,0)},\,T_{(0,2)}$ ca
 
 # Wedge Product
 
-One way to generalize one-forms to differential forms (or $N$-forms) is to take products of one-forms. A two-form is can be seen as a "product" of two one-forms. An $N$-form is then a series of a product of one-forms. This product is called a wedge product. 
+One way to generalize one-forms to differential forms (or $N$-forms) is to take products of one-forms. A two-form can be seen as a "product" of two one-forms. An $N$-form is then a series of a product of one-forms. This product is called a wedge product. 
 
 ## Wedge Product of General Vectors
 
 We will first see how wedge products work in the context of vectors.
 
-The cross product of vectors $U \times V$ is a very useful operation in $3$ dimensional geometry. It determines the area of the **parallelogram** containing these vectors and the plane containing it. A **wedge product** is the analog used to determine a high dimensional parallelogram.
+The cross product of vectors $U \times V$ is a handy operation in $3$ dimensional geometry. It determines the area of the **parallelogram** containing these vectors and the plane containing it. A **wedge product** is the analog used to identify a high dimensional parallelogram.
 
 The wedge (楔) product (楔积) $\wedge$ is a special kind of tensor product. 
 
@@ -221,7 +221,7 @@ For our definition to make sense, we require that
 1. The "derivative" of a $1$-form (first derivative) should result in a $2$-form. 
 2. The "second exterior derivative" of a function should somehow relate to the second derivative of $f$.
 
-> I couldn't find any way to heuristically introduce the definition from deductions, so I decided to give the definition and explain it later.
+> I couldn't find any way to introduce the definition from deductions heuristically, so I decided to give the definition firs and explain it later.
 
 In general, the exterior derivative of a $p$-from $\omega=ω_{i_1\cdots i_p} \d x^{i_1} \wedge\cdots\wedge \d x^{i_p}$ is defined by
 
@@ -341,7 +341,7 @@ $$
 \nabla \times V = \Big(\star\big( \d(V^\flat)\big)\Big)^\sharp.
 $$
 
-What this complicated rule says is the following. To take the curl of a vector, first convert it to a one-from $V^\flat$, then take the exterior derivative of the one-from and get $\d V^\flat$, and finally convert the two form back to a vector through $\star \left(\phantom{a}\right)^\sharp$.
+What this complicated rule says is the following. To take the curl of a vector, first convert it to a one-from $V^\flat$, then take the exterior derivative of the one-from and get $\d V^\flat$, and finally turn the two form back to a vector through $\star \left(\phantom{a}\right)^\sharp$.
 
 ### Gradient
 
@@ -381,5 +381,5 @@ $$
 \end{array}
 $$
 
-We have gone through all items in the diagram above and verified that our definition of exterior derivative united our common definition of differential operators in vector calculus into one simple symbol $\d$. 
+We have gone through all items in the diagram above and verified that our definition of exterior derivative united our standard definition of differential operators in vector calculus into one simple symbol $\d$. 
 
