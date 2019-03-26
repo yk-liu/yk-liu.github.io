@@ -60,7 +60,7 @@ defaults:
       mermaid: false
       highlight: false
       numbering: true
-      status: Completed
+      status: Ongoing
       protected: false
       commentable: true
       rss: true
