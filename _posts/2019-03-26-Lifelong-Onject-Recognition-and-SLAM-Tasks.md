@@ -13,6 +13,12 @@
 - Traditional metrics for SLAM (e.g. ATE, RPE) only measure the accuracy of pose tracking, but for lifelong SLAM the tracking failure rate and re-localization success rate are also important. New metrics shall be designed along with the lifelong learning datasets for SLAM tasks.
 
 # Important Dates
-
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
 
 
