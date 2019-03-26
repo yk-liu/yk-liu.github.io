@@ -16,7 +16,10 @@
 ```mermaid
   graph LR;
     
-  A[Hello!] --> B{This}
-  B --> C(is a)
-  C --> D((Flowchart!))
+  A[Dataset -June,2019. The teams could choose the sensors and processing platforms. It is a virtual competition (software-level).] --> B[First Round-Sept, 2019. Register for the competition first. Download datasets, software tools, and upload the results before the deadline. Highest-scored teams will be invited to the final competition.
+]
+  B --> C[Final Round-Nov, 2019 A new dataset will be used for the final competition. The algorithms from each team shall be run onsite. 
+Results will be visualized in real time for the audience.]
 ```
+
+
