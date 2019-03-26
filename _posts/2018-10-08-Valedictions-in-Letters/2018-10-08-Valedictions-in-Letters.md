@@ -34,6 +34,19 @@ comments:
       willing to accept. Congratulations! But if not, as a friend, I might want
       to recommend trying so and see what happens. 
     date: 2019-03-26T07:24:17.422Z
+  - author:
+      type: github
+      displayName: yk-liu
+      url: 'https://github.com/yk-liu'
+      picture: 'https://avatars1.githubusercontent.com/u/31454695?v=4&s=73'
+    content: >-
+      Thanks! Glad you like my blog! I think I would rather take a gap year in
+      theory and see what happens. TBH, I would not dare to take the risk of
+      joining a group and then find out that there is no/not enough
+      &quot;theory&quot; that I hope there would be.
+
+      Anyway, thanks for your advice!
+    date: 2019-03-26T14:15:53.213Z
 
 ---
 
