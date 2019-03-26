@@ -4,6 +4,8 @@ I am a physics undergraduate at Nankai University. I use this website to share m
 
 # About this website
 
+Please read [this link](https://yk-liu.github.io/jekyll/Jekyll-Build.html#what-should-i-modify). Remove files/ descriptions about `yk-liu` so I don't have to pester you to clean up.
+
 This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) uses these sources:
 
 | Module                                                       | Mainly used in                                  | License/ TOS                                                 |
