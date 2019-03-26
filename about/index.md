@@ -10,7 +10,7 @@ mathjax: true
 
 # Me
 
-My name is Yingkai Liu. I am currently a senior undergraduate in Nankai University, China. I major in Physics. 
+My name is Yingkai Liu. I am currently a senior undergraduate at Nankai University, China. I major in Physics. 
 
 With more understanding of physics, I found the theory used to describe a phenomenon is more and more elegant but in the same time complicated. I was happy about the differential equations, impressed by linear algebra, struck by group theory and now mesmerized by topology and differential geometry. **I am aware that physics requires much more than *just* mathematics. In the same time I believe that with more mathematics there will be deeper physics.** 
 
