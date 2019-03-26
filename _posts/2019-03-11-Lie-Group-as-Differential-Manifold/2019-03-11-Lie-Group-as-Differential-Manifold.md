@@ -5,7 +5,7 @@ categories: Lie-group Topology
 tags: Lie-group Lie-algebra Exponential-map
 keywords: Pull-back Push-forward algebra left-invariant-vector-field flow bracket integral-curve
 edit: 2019-03-19
-description: In this post Lie groups are regarded as a differential manifold, and one-parameter subgroups are introduced. This is the second of a series of posts that start from Lie group and Lie algebra.
+description: In this post Lie groups are regarded as a differential manifold, and one-parameter subgroups are introduced. This post is the second of a series of posts that start from Lie group and Lie algebra.
 ---
 
 $$
@@ -59,7 +59,7 @@ Inside this neighborhood $N _ 0$,  we can always find a subset $N^\prime$ that p
 
 > Side note (from [[USTC](http://staff.ustc.edu.cn/~wangzuoq/Courses/16F-Manifolds/Notes/Lec12.pdf)]):
 >
-> Not every smooth manifold admits a Lie group structure. For example, the only spheres that admit a Lie group structure are $S _ 0$, $S _ 1$ and $S _ 3$; among all the compact $2$-dimensional surfaces the only one admits a Lie group structure is a torus $T _ 2 = S _ 1\times S _ 1$. **So whenever you see I draw a sphere as a Lie group, just imagine there is a tiny hole on it where you cannot see. A sphere is must easier to draw than a torus.**
+> Not every smooth manifold admits a Lie group structure. For example, the only spheres that admit a Lie group structure are $S _ 0$, $S _ 1$ and $S _ 3$; among all the compact $2$-dimensional surfaces the only one admits a Lie group structure is a torus $T _ 2 = S _ 1\times S _ 1$. **So whenever you see I draw a sphere as a Lie group, please imagine there is a tiny hole on it where you cannot see. A sphere is must easier to draw than a torus.**
 >
 > There are many constraints for a manifold to be a Lie group. For example, a Lie group must be analytic manifold, and the tangent bundle of a Lie group is always trivial: $TG \simeq G \times \R^n​$. 
 
@@ -207,7 +207,7 @@ If for a curve $\Gamma: \R\rightarrow G, \,t\mapsto\gamma(t)$, and a vector fiel
 
 ## Completeness: Existence of Integral Curves Everywhere
 
-Note that the existence of a vector field's integral curve defined for a short interval, at a single point is a somewhat weak (if not trivial) requirement. If for a vector field, an integral curve defined on $\R$ can be found on any point in $G$, such vector field is called **complete**.
+Note that the existence of a vector field's integral curve defined for a short interval, at a single point is a somewhat weak (if not trivial) requirement. If for a vector field, an integral curve defined on $\R$ can be found on any point in $G$, such a vector field is **complete**.
 
 Any left-invariant vector fields on a Lie group are complete.
 
@@ -284,9 +284,11 @@ $$
 \exp: T _ eG \rightarrow G,\  X \mapsto \gamma _ X(1).
 $$
 
-Thus, the one-parameter subgroup $\gamma$ is called the **exponential map**, using the notation $\exp$ to avoid confusion with the identity element $e$.
+Thus, the one-parameter subgroup $\gamma$ is called the **exponential map**, using the notation $\exp$ to avoid confusion with the identity element $e$. The exponential map can be written as $\exp(tX) = \gamma_X(t)$.
 
-This name comes from the equation $\gamma _ e(t+s)=\gamma _ e(t)\cdot\gamma _ e(s)$ . On the right is a multiplication, while on the left is an addition. Guess what map has the same property? An exponential map! $e^{(x+y)} = e^x\cdot e^y$, if $x, y$ are numbers.
+This name comes from the equation $\gamma _ e(t+s)=\gamma _ e(t)\cdot\gamma _ e(s)$ . On the right is a multiplication, while on the left is an addition. Guess what map has the same property? An exponential map $e^{(x+y)} = e^x\cdot e^y$, if $x, y$ are numbers.
+
+Such $X$ is sometimes called the **infinitesimal generator** of the one-parameter group $t \rightarrow \exp(tX)$
 
 ## * Flow
 
