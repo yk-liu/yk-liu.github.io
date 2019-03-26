@@ -225,6 +225,6 @@ $$
 ({L _ g}^* X) _ {gh}\dfdas {L _ g}^* (X _ h)
 $$
 
-## Lie Group's Matrix Representations
+# Lie Group's (Matrix) Representations
 
 The idea of relating a Lie group to a set of action is closely related to the notion of representation. When we choose to make Lie group act on a Euclidean space, the transformation can be described by a matrix. In other words, a one-to-one correspondence can be established between a Lie group and a set of matrices.
