@@ -4,7 +4,7 @@ title: >
 categories: Lie-group Topology
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
-edit: 2019-03-11
+edit: 2019-03-26
 mermaid: true
 description: In this post Lie groups and it's actions are introduced. This is the first of a series posts start from Lie group and Lie algebra, where I try to understand "infinitesimal operators" and "generators" used by physicists from a mathematical standpoint. Hopefully, this series ends with a good explanation of what "generators" are in Classical Mechanics as well as Quantum Mechanics.
 ---

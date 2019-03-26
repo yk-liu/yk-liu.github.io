@@ -1,7 +1,7 @@
 ---
 title: Build Your Blog with GitHub Pages
 tags: Jekyll
-edit: 2018-12-19
+edit: 2019-03-26
 categories: Jekyll
 status: Paused
 mathjax: true
