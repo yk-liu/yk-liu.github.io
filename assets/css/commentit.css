@@ -1,0 +1,26 @@
+#comment-session .media, #comment-session .media-body {
+    zoom: 1;
+    overflow: hidden;
+    
+}
+
+#comment-session .media-left, #comment-session .media-body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+#comment-session .media-body {
+   width: 100vw;
+   margin-top: none
+}
+
+#comment-session .media-left {
+    padding-right: 10px;
+    margin-top: 15px;
+}
+
+#comment-session .text-muted {
+     margin-top: 0px;
+     width: 40%;
+     border-bottom: 2px solid #e7e7e7;
+}
