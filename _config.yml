@@ -1,25 +1,25 @@
 # Site settings
-title: Pointing to the Moon
-description: Blog of Yingkai Liu
+title: Lifelong Robotic Vision
+description: IROS2019 Competition
 baseurl: "" 
-url: "https://yk-liu.github.io" 
+url: "https://lifelong-robotic-vision.github.io" 
 
 # GitHub User settings
-username: Yingkai Liu
-github_username: yk-liu
-user_description: A Physics undergrad with a broad interest
-user_title: Physics Undergraduate
-email: yingkai.liu@outlook.com
+username: Qi She
+github_username: sheqi
+user_description: 
+user_title: 
+email: sheqi1991@gmail.com
 
 # Blog Author settings
 author:
-  name:           Yingkai Liu
+  name:           Qi She
   picture:        
-  email:          yingkai.liu@outlook.com
-  description:    I'm a Physics undergrad with a broad interest.
+  email:          sheqi1991@gmail.com
+  description:    
   twitter:
   facebook:
-  github:         https://github.com/yk-liu
+  github:         https://github.com/lifelong-robotic-vision
   linkedin:
 
 
