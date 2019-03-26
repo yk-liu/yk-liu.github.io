@@ -1,32 +1,26 @@
 ---
 title: About
 layout: info
-Edit: 2018-11-14
+Edit: 2019-03-26
 toc: false
 commentable: false
 protected: true
 mathjax: true
 ---
 
-# Me
+# Why We Focus on Lifelong Robotic Vision
 
-My name is Yingkai Liu. I am currently a senior undergraduate in Nankai University, China. I major in Physics. 
+Humans have the remarkable ability to **learn continuously** from the external environment and the inner experience. One of the grand goals of robots is also building an artificial **"lifelong learning"** agent that can shape a cultivated understanding of the world from the current scene and their previous knowledge via an **autonomous lifelong development.**
 
-With more understanding of physics, I found the theory used to describe a phenomenon is more and more elegant but in the same time complicated. I was happy about the differential equations, impressed by linear algebra, struck by group theory and now mesmerized by topology and differential geometry. **I am aware that physics requires much more than *just* mathematics. In the same time I believe that with more mathematics there will be deeper physics.** 
+Recent advances in computer vision and deep learning techniques have been very impressive due to large-scale datasets, such as ImageNet, COCO, etc. The breakthroughs in object/person recognition, detection, and segmentation have heavily relied on the availability of these large representative datasets for training. **However, robotic vision poses new challenges for applying visual algorithms developed from computer vision datasets due to their implicit assumption over non-varying distributions for a fixed set of categories and tasks.** It is obvious that the semantic concepts of the real environment are dynamically changing over time. Specifically, in real scenarios, the robot operates continuously under open-set and sometimes detrimental conditions, which has the requirements for the lifelong learning capability with reliable uncertainty estimates and robust algorithm designs. 
 
-As for my current interest, on my CV I wrote:
+> Providing a robotic vision dataset collected from the real time-varying environments can accelerate both research and applications of visual models for robotics!
+ 
+We will utilize the unique characteristics of robotics for enhancing robotic vision research by using additional high-resolution sensors (e.g. depth and point clouds), controlling the camera directions & numbers, and even shrinking the intense labeling effort with self-supervision. For accelerating the lifelong robotic vision research, we will provide **robot sensor data (RGB-D, IMU, etc.) in several kinds of typical scenarios, like homes, offices, malls, and warehouses, with multiple objects, persons, scenes, and ground-truth trajectory acquired from auxiliary measurements with high-resolution sensors.** Not only the sensor information, scenarios, task types are highly diverse, but also our datasets embrace slow and fast dynamics, which is to our knowledge the only real-world dataset under the lifelong learning setting.
 
-> I am interested in the Topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am also interested in how particles subject to relatively simple laws can exhibit novel collective properties. I also like coding and enjoy sharing my thoughts.
+# Vision and Expectation
 
-Here is my [CV](https://yk-liu.github.io/about/CV-of-Liu-Yingkai.pdf) (last update: 2018-11-17).
-
-# This Site
-
-When I started writing on this website, I wanted to share notes on what I have learned. I benefited a lot from many insightful blogs and now I have something to give back. Watching my notes published on websites also gives me motivation and a strange consolation. 
-
-I also realized that this website can be used as a billboard of my professional backgrounds. This is a great proof for what I have learned.
-
-# Posts
+<!--# Posts
 
 The posts are at different status.
 
@@ -35,10 +29,7 @@ The posts are at different status.
 | Completed | This post is considered completed, but I might edit it when I came up with something new. |
 | Writing   | This post is being actively edited.                          |
 | Paused    | This post is considered of low priority. I will come back to this post later. |
-| Archived  | This post is outdated and I probably won't update it anymore. |
-
-
-
+| Archived  | This post is outdated and I probably won't update it anymore. |>
 
 # Sources
 
@@ -62,22 +53,9 @@ This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) us
 
 Additional licensing information can be found [here](https://github.com/yk-liu/yk-liu.github.io/blob/master/LICENSE.md).
 
-I mainly use [Typora](https://www.typora.io) to write my post.
-
-# The Name
-
-I named this website "A Finger Pointing to the Moon", as in the Buddhism story:
-
-> **佛告阿难。汝等尚以缘心听法。此法亦缘。非得法性。**
->
-> **若复观指以为月体。此人岂唯亡失月轮。亦亡其指。何以故。以所标指为明月故。**
->
-> **岂唯亡指。亦复不识明之与暗。何以故。即以指体。为月明性。明暗二性。无所了故。**
-
-Which has been beautifully put by Bruce Lee:
-
->It's like a finger pointing away to the moon. Don't concentrate on the finger or you will all that heavenly glory.
+I mainly use [Typora](https://www.typora.io) to write my post.-->
 
 # Contact
 
-The best way to reach me is via email: $water$ @ $mail.nankai.edu.cn$
+The best way to reach us is via email: $qi.she$ @ $intel.com$
+
