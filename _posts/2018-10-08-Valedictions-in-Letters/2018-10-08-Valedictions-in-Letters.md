@@ -3,8 +3,38 @@ title: 中英文邮件祝辞
 categories: Miscellaneous
 keywords: Chinese Valedictions
 language: Chinese
-description: 之前写邮件看见同学最后致意里面写了顺祝工作商祺, 后来我就在邮件里面一直用"顺祝工作商祺", 或者是"顺祝夏安". 最近我导师提醒我说"工作商祺"不适合用在同学或者老师的信件中, 我才查了一下, 总结在下面.
+description: >-
+  之前写邮件看见同学最后致意里面写了顺祝工作商祺, 后来我就在邮件里面一直用"顺祝工作商祺", 或者是"顺祝夏安".
+  最近我导师提醒我说"工作商祺"不适合用在同学或者老师的信件中, 我才查了一下, 总结在下面.
 toc: false
+comments:
+  - author:
+      type: github
+      displayName: dsmagiya
+      url: 'https://github.com/dsmagiya'
+      picture: 'https://avatars1.githubusercontent.com/u/32017884?v=4&s=73'
+    content: >-
+      &#x987A;&#x9882; &#x6625;/&#x590F;/&#x79CB;/&#x51AC;/
+      &#x797A;&#xFF0C;&#x7528;&#x4E86;&#x56DB;&#x5E74;
+    date: 2019-03-26T07:15:45.078Z
+  - author:
+      type: github
+      displayName: dsmagiya
+      url: 'https://github.com/dsmagiya'
+      picture: 'https://avatars1.githubusercontent.com/u/32017884?v=4&s=73'
+    content: >-
+      You blog is so impressive Brother Water haha! I do follow your updates now
+      and then to learn stuff. 
+
+
+      It has been more or less harder and harder to get in graduate schools for
+      theory. A better approach is to apply to experiments, and then switch to
+      whatever you want. Once you get in, no one remembers what you write in
+      applications.  It is good if you have already received offers you are
+      willing to accept. Congratulations! But if not, as a friend, I might want
+      to recommend trying so and see what happens. 
+    date: 2019-03-26T07:24:17.422Z
+
 ---
 
 之前写邮件看见同学最后致意里面写了顺祝工作商祺, 后来我就在邮件里面一直用"顺祝商祺", 或者是"顺祝夏安". 最近我的班导师提醒我说"顺祝商祺"不适合用在同学或者老师的信件中, 我才查了一下, 总结在下面:
