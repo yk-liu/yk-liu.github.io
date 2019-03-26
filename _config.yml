@@ -57,7 +57,7 @@ defaults:
     values:
       toc: true
       mathjax: true
-      mermaid: false
+      mermaid: true
       highlight: false
       numbering: true
       status: Ongoing
