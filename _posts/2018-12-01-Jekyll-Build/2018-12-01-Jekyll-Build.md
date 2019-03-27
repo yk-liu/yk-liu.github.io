@@ -12,8 +12,6 @@ description: Build Your Blog with GitHub Pages. This is a sketch of how to use m
 
 # What Do I Have to Offer
 
-The demo is [here](https://yk-liu.github.io/PointingToTheMoon/) with a [sample post](https://yk-liu.github.io/PointingToTheMoon/sample/post/2018/12/12/sample-post.html).
-
 There are many themes out there, yet none of them suits my need. 
 
 1. I want my post page's width to be at least 80% so the reader can simply read the post. I don't want persistent sidebars with a big picture of the blog owner
@@ -28,6 +26,8 @@ There are many themes out there, yet none of them suits my need.
 7. I have ZERO experience with front end stuff. The JavaScript is exhausting, so I avoided using JS as much as possible. It turns out a hidden sidebar can be down in pure CSS.
 
 Now I ended up with this theme. I know it's not perfect, but I will settle it for now. I will consider any suggestions you guys make, you can comment it in this page.
+
+About the extended markdown syntaxes, you can see it [here]().
 
 # Why GitHub Pages?
 
@@ -58,7 +58,7 @@ I am going to assume that you know the basic operations of git. If not, download
 
 # Clone The Repo
 
-Clone the [repo](https://github.com/yk-liu/PointingToTheMoon) and publish it!
+Clone the [repo](https://github.com/yk-liu/PointingToTheMoon) and publish it! I would appreciate if you don't fork my repo.
 
 # What Should I Modify
 
