@@ -39,7 +39,7 @@ $$
 \notag
 $$
 
-# Generator in Mathematical View
+# Generators in Mathematics
 
 From the last post, a one-to-one correspondence between three entities has been established, namely
 
@@ -103,9 +103,9 @@ The exponential map $\exp : T_e G \rightarrow G$ is smooth, and it is a local di
 >     This means that the map $\d \exp$ at $t=0$ is just identity map, which clearly has inverse. By the Inverse function theorem, $\exp$ is a local diffeomorphism.
 >
 
-## Tangent Space Encodes the Lie Group
+## Tangent Space Encodes (Generates) the Lie Group
 
-From the last two sections, the tangent space at $e$ is diffeomorphic to an open set $U_e​$ of identity, which generates the entire Lie group. In this sense, the tangent space does generate the entire Lie group (that is compact and connected). 
+From the last two sections, the tangent space at $e$ is diffeomorphic to an open set $U_e$ of identity, which generates the entire Lie group. In this sense, the tangent space does generate the entire Lie group (that is compact and connected). 
 
 I like to think it as tangent vectors dictates different one-parameter subgroups which in turn "covers" the entire Lie group. Since the tangent space is in general uncountable, such is "cover" on a higher dimensional "surface" (or "volume") using a lower dimensional "line".
 
@@ -142,35 +142,13 @@ such that
 
 ## Associated Lie Algebra
 
-In the [last post]({{ site.baseurl }}{% post_url 2019-03-11-Lie-Group-as-Differential-Manifold %}#four-properties-of-brackets), the bracket of left invariant vector fields are defined. 
+In the [last post]({{ site.baseurl }}{% post_url 2019-03-11-Lie-Group-as-Differential-Manifold %}#four-properties-of-brackets), the bracket of left invariant vector fields are defined. The brackets satisfies all the requirements of a Lie algebra. Hence, **All left-invariant vector fields form a Lie algebra**.
+
+ 
 
 
 
 # Sources
-
-probably the best
-
-```
-Proposition 0.1 If G is a topological group which is connected then any open set containing the identity element
-generates G as a group, i.e. every element of G is a finite product of elements of the open set.
-Lemma 0.2 If G is a topological group and g ∈ G then Lg(h) = gh = m(g, h) defines a continuous map G → G.
-In fact Lg is a homeomorphism.
-```
-
-https://warwick.ac.uk/fac/sci/masdoc/people/studentpages/students2013/egginton/lg_lecture_notes.pdf
-
-```
-As early as 1871, the idea of an infinitesimal generator of a one-parameter group of transformations had already appeared in his work;5 the set of infinitesimal generators
-of one-parameter subgroups of a continuous gro
-```
-
-```
-good on generator 
-```
-
-file:///C:/Users/water/Desktop/Groups-and-Symmetries-From-Finite-Groups-to-Lie-Groups.pdf/ 
-
-moved to dropbox
 
 
 
