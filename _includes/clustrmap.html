@@ -1,0 +1,9 @@
+{% if include.style == "js" %}  
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=34495e&w=300&t=tt&d={{ site.author.clustrmap }}&co=f2f2f2&ct=808080&cmo=42b983&cmn=61f3b1" async></script>
+{% elsif include.style == "hiddenpng" %}  
+<div hidden class="analytics" aria-hidden="true">
+	 <img src="//www.clustrmaps.com/map_v2.png?d={{ site.author.clustrmap }}&cl=ffffff" />
+</div>
+{% else %}
+	 <img src="//www.clustrmaps.com/map_v2.png?d={{ site.author.clustrmap }}&cl=ffffff" />
+{% endif %}
