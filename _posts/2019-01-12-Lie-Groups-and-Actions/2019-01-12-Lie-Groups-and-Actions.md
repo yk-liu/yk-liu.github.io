@@ -4,7 +4,7 @@ title: >
 categories: Lie-group Topology
 tags: Pullback Pushforward Lie-group Lie-algebra
 keywords: Pull-back Push-forward algebra left-invariant-vector-field
-edit: 2019-03-11
+edit: 2019-03-26
 mermaid: true
 description: In this post Lie groups and it's actions are introduced. This is the first of a series posts start from Lie group and Lie algebra, where I try to understand "infinitesimal operators" and "generators" used by physicists from a mathematical standpoint. Hopefully, this series ends with a good explanation of what "generators" are in Classical Mechanics as well as Quantum Mechanics.
 ---
@@ -225,6 +225,6 @@ $$
 ({L _ g}^* X) _ {gh}\dfdas {L _ g}^* (X _ h)
 $$
 
-## Lie Group's Matrix Representations
+# Lie Group's (Matrix) Representations
 
 The idea of relating a Lie group to a set of action is closely related to the notion of representation. When we choose to make Lie group act on a Euclidean space, the transformation can be described by a matrix. In other words, a one-to-one correspondence can be established between a Lie group and a set of matrices.

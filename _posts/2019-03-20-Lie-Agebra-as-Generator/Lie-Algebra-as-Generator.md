@@ -6,7 +6,7 @@ tags: Lie-group Lie-algebra Generator
 keywords: algebra exponential-map 
 status: Writing
 mermaid: true
-edit: 2019-03-21
+edit: 2019-03-26
 description: In this post generator of Lie groups as well as its subgroup are considered. This short post is preparation for the application of Mathematical theory into QM and CM. This post is the third of a series of posts that start from Lie group and Lie algebra.
 ---
 
