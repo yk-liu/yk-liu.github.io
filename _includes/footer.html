@@ -1,6 +1,6 @@
 <footer>
    <p style="margin-left: auto; margin-right: auto;"> 
-      &copy; {% for post in site.posts limit:1 %} {{ post.date | date: '%Y' }} {% endfor %}-{{ site.time | date: '%Y' }}, {{ site.author.name }}. This site is open source. <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/edit/master/{{ page.path }}" target="_blank">Improve this page</a>. <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/blob/master/LICENSE.md" target="_blank">License</a>. <a href="{{site.url}}{{site.baseurl}}/info/disclaimer" target="_blank">Disclaimer</a>. 
+      &copy; {% for post in site.posts limit:1 reversed %} {{ post.date | date: '%Y' }} {% endfor %}-{{ site.time | date: '%Y' }}, {{ site.author.name }}. This site is open source. <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/edit/master/{{ page.path }}" target="_blank">Improve this page</a>. <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/blob/master/LICENSE.md" target="_blank">License</a>. <a href="{{site.url}}{{site.baseurl}}/info/disclaimer" target="_blank">Disclaimer</a>. 
    </p>
 	 {% if include.analytics == false %}
 	 {% else %}
