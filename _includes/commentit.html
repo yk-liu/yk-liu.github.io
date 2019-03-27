@@ -31,11 +31,11 @@
 
 {% if page.protected == false %}
     <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
-		<div style="font-size: smaller;">You can use <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">GitHub flavored markdown</a> in your comment. <a href="{{site.url}}{{site.baseurl}}/info/postguide">Commenting FAQs & Guidelines </a></div> 
+		<div style="font-size: smaller;">You can use <a href="{{site.url}}{{site.baseurl}}/info/markdown-syntax">extended GitHub flavored markdown</a> in your comment. <a href="{{site.url}}{{site.baseurl}}/info/commenting-guidelines">Commenting FAQs & Guidelines </a></div> 
     <div id="commentit"></div>
 		
 
-	<script type="text/javascript">
+	<script type="text/javascript" async>
 	  /** CONFIGURATION VARIABLES **/
 	  var commentitUsername = '{{site.github_username}}';
 	  var commentitRepo = '{{site.github_username}}/{{site.github_username}}.github.io';
