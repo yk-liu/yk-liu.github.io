@@ -4,9 +4,7 @@
    </p>
 	 {% if include.analytics == false %}
 	 {% else %}
-	 <div hidden class="analytics" aria-hidden="true">
-	 <img src="//www.clustrmaps.com/map_v2.png?d={{ site.author.clustrmap }}&cl=ffffff" />
-	 </div>
+   {% include clustrmap.html style="hiddenpng"%}
 	 {% endif %}
 </footer>
 
