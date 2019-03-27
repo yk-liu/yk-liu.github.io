@@ -150,7 +150,54 @@ In the [last post]({{ site.baseurl }}{% post_url 2019-03-11-Lie-Group-as-Differe
 
 # Sources
 
+```
+Proposition 1.4. For any X, Y ∈ g, there is a smooth map Z : (−ε, ε) → g so that for all
+t ∈ (−ε, ε),
+exp(tX) exp(tY ) = exp(t(X + Y ) + t
+2Z(t)).
+Proof. Since exp is a diffeomorphism near 0 ∈ g, there is an ε > 0 so that the map
+ϕ : (−ε, ε) → g, t 7→ ϕ(t) = exp−1
+(exp(tX) exp(tY ))
+is smooth. Note that we can write ϕ as the composition
+R
+γX
+e ×γ
+Y
+e −→ G × G
+µ
+−→ G
+exp−1
+−→ R.
+According to lemma 1.2 in lecture 12, dµe,e(X, Y ) = X + Y . It follows
+ϕ
+0
+(0) = (d exp0
+)
+−1
+( ˙γ
+X
+e
+(0) + ˙γ
+Y
+e
+(0)) = X + Y.
+Since ϕ(0) = 0, by Taylor’s theorem,
+ϕ(t) = t(X + Y ) + t
+2Z(t)
+for some smooth function Z.
+Remark. The mysterious function Z is explicitly given by the Baker-Campbell-Hausdorff formula:
+Z(t) = 1
+2
+[X, Y ] + t
+12
+([X, [X, Y ]] − [Y, [X, Y ]]) + t
+2
+24
+[X, [Y, [X, Y ]]] + · · ·
 
+```
+
+<http://staff.ustc.edu.cn/~wangzuoq/Courses/16F-Manifolds/Notes/Lec13.pdf>
 
 **defnition of infintestmal operators**
 
