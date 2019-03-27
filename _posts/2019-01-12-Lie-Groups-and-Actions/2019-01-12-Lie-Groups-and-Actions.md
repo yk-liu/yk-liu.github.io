@@ -2,8 +2,8 @@
 title: >
    Lie Groups and "Actions"
 categories: Lie-group Topology
-tags: Pullback Pushforward Lie-group Lie-algebra
-keywords: Pull-back Push-forward algebra left-invariant-vector-field
+tags: Pullback Pushforward Lie-group Lie-algebra representation
+keywords: Pull-back Push-forward algebra left-invariant-vector-field adjoint-representation
 edit: 2019-03-26
 mermaid: true
 description: In this post Lie groups and it's actions are introduced. This is the first of a series posts start from Lie group and Lie algebra, where I try to understand "infinitesimal operators" and "generators" used by physicists from a mathematical standpoint. Hopefully, this series ends with a good explanation of what "generators" are in Classical Mechanics as well as Quantum Mechanics.
@@ -232,6 +232,7 @@ The idea of relating a Lie group to a set of action is closely related to the no
 ## Representation of Lie Groups
 
 A Lie group $G$ can act on a Manifold $M$, denoted as the "action" map:
+
 $$
 \begin{array}{cccccccc}
 G & \times & M & \rightarrow & M \\
@@ -243,10 +244,11 @@ G & \times & M & \rightarrow & M \\
 \substack{\text{A map $\rho$}\newline \text{depend on $g$}} & \text{acts on} & \substack{\text{a point in}\newline \text{manifold}} & \text{gets} & \substack{\text{another point in}\newline \text{manifold}} \\
 \end{array}
 $$
+
 The same "action" map can be replaced my a map $\rho$ that is chosen to be the same at every point on $M$. Such replacement is called the **representation on the representation space $M$**, or a **representation** in short. That is to say, the action of a Lie group on a manifold is nothing but a map. This map is represented by another map $\rho$.
+
 $$
 \begin{array}{cccccccc}
-
 g &&&  & m'\dfdas(gm)\\
 \substack{\text{An element in}\newline \text{Lie group}}&& \Huge\circlearrowleft&  & \substack{\text{another point in}\newline \text{manifold}} \\
 \downarrow \scriptsize\text{maps to} & & \text{circles around} & & \uparrow \\
@@ -254,11 +256,14 @@ g &&&  & m'\dfdas(gm)\\
 \substack{\text{A map $\rho$}\newline \text{depend on $g$}} & \text{acts on} & \substack{\text{a point in}\newline \text{manifold}} & \text{gets} & \substack{\text{another point in}\newline \text{manifold}} \\
 \end{array}
 $$
+
 Notice that the map $\rho​$ need to satisfy the following conditions:
+
 $$
 \rho(g) m_0 = g\cdot m_0, \quad\text{for all }  g\in G\\
 \rho(g_0) m = g_0 \cdot m, \quad\text{for all }  m\in M\\
 $$
+
 hence such map $\rho$ does reflect the properties of Lie group, which is why representation theories are so important in group theory.
 
 ## Matrix Representations
@@ -267,9 +272,10 @@ Recall that a manifold always have local coordinates. Therefore, any manifold ca
 
 ## Adjoint Representations
 
-For an arbitrary Lie group, to give its representation (or more precisely, representation on the representation space $M$), a manifold $M$ must be chosen. This can be quite troublesome. Say I chose $M=\set{0}$, then the representation of any Lie group is identity map $\rho(g)=\id,\, \forall g\in G$. Such representation is too trivial to reveal anything insightful about the Lie group. Even if I choose a more complicated manifold, it's still hard for me to make sure that $M​$ not any bigger, not any smaller, that such choice is **just right**. 
+For an arbitrary Lie group, to give its representation (or more precisely, representation on the representation space $M$), a manifold $M$ must be chosen. This can be quite troublesome. Say I chose $M=\set{0}$, then the representation of any Lie group is identity map $\rho(g)=\id,\, \forall g\in G$. Such representation is too trivial to reveal anything insightful about the Lie group. Even if I choose a more complicated manifold, it's still hard for me to make sure that $M​$ not any bigger, not any smaller, that such choice is **"just right"**. 
 
 Remember that Lie group itself is a manifold and can thus acted on. What choice is better than $G$ itself? Such representation is $M$-independent, and can provide information on $G$ "just right".
+
 $$
 \begin{array}{cccccccc}
 G & \times & G & \rightarrow & G \\
@@ -281,5 +287,3 @@ G & \times & G & \rightarrow & G \\
 \substack{\text{A map $\rho$}\newline \text{depend on $g_1$}} & \text{acts on} & \substack{\text{another element in Lie group}\newline \text{seen as a point in a manifold}} & \text{gets} & \substack{\text{yet another element in Lie group}\newline \text{seen as a point in a manifold}}
 \end{array}
 $$
-
-
