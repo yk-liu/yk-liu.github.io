@@ -2,10 +2,6 @@
 
 Please read [this link](https://yk-liu.github.io/jekyll/Jekyll-Build.html#what-should-i-modify). Remove files/ descriptions about `yk-liu` so I don't have to pester you to clean up. Also I would appreciate if you don't fork my repo, but clone it and upload to your own, so there is no network between you and me. If you really want to fork it, please fork from the branch `theme-for-fork` where I have organized stuff for you.
 
-# About me
-
-I am a physics undergraduate at Nankai University. I use this website to share my understanding of many theories I learned. The most recent notes are often in progress, for I like to keep a few projects running at the same time. You are always welcomed to comment on my posts for suggestion or discussion. Some of the old notes were written in Chinese. You can learn more about me [here](https://yk-liu.github.io/about).
-
 # About this website
 
 This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) uses these sources:
