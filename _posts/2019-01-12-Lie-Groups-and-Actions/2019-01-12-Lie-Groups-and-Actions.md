@@ -53,7 +53,7 @@ $$
 >
 > This post is based on sources listed above. Some of the proofs also come from [[Solutions for Nakahara](https://github.com/ernestyalumni/mathphysics/blob/master/LaTeX _ and _ pdfs/Nakahara _ GTP-solutions.tex)].
 >
-> Here is the structure of this post:
+> Here is the structure of this series of posts:
 >
 > ```mermaid
 > graph TB
@@ -228,3 +228,58 @@ $$
 # Lie Group's (Matrix) Representations
 
 The idea of relating a Lie group to a set of action is closely related to the notion of representation. When we choose to make Lie group act on a Euclidean space, the transformation can be described by a matrix. In other words, a one-to-one correspondence can be established between a Lie group and a set of matrices.
+
+## Representation of Lie Groups
+
+A Lie group $G$ can act on a Manifold $M$, denoted as the "action" map:
+$$
+\begin{array}{cccccccc}
+G & \times & M & \rightarrow & M \\
+\text{A Lie group} & \text{acts on} & \text{a manifold} & \text{gets} & \text{the same amnifold} \\\\
+(\quad g & \cdot & m\quad ) &\mapsto & m'\dfdas(gm)\\
+\substack{\text{An element in}\newline \text{Lie group}} & \text{acts on} & \substack{\text{a point in}\newline \text{manifold}} & \text{gets} & \substack{\text{another point in}\newline \text{manifold}} \\
+\Updownarrow & & & &  {\color{red}\textbf{same}}\Updownarrow \\
+(\quad\rho(g) & \cdot & m\quad ) &\mapsto & m'\dfdas(\rho(g)m)\\
+\substack{\text{A map $\rho$}\newline \text{depend on $g$}} & \text{acts on} & \substack{\text{a point in}\newline \text{manifold}} & \text{gets} & \substack{\text{another point in}\newline \text{manifold}} \\
+\end{array}
+$$
+The same "action" map can be replaced my a map $\rho$ that is chosen to be the same at every point on $M$. Such replacement is called the **representation on the representation space $M$**, or a **representation** in short. That is to say, the action of a Lie group on a manifold is nothing but a map. This map is represented by another map $\rho$.
+$$
+\begin{array}{cccccccc}
+
+g &&&  & m'\dfdas(gm)\\
+\substack{\text{An element in}\newline \text{Lie group}}&& \Huge\circlearrowleft&  & \substack{\text{another point in}\newline \text{manifold}} \\
+\downarrow \scriptsize\text{maps to} & & \text{circles around} & & \uparrow \\
+\rho(g) & \cdot & m &\mapsto & m'\dfdas(\rho(g)m)\\
+\substack{\text{A map $\rho$}\newline \text{depend on $g$}} & \text{acts on} & \substack{\text{a point in}\newline \text{manifold}} & \text{gets} & \substack{\text{another point in}\newline \text{manifold}} \\
+\end{array}
+$$
+Notice that the map $\rho​$ need to satisfy the following conditions:
+$$
+\rho(g) m_0 = g\cdot m_0, \quad\text{for all }  g\in G\\
+\rho(g_0) m = g_0 \cdot m, \quad\text{for all }  m\in M\\
+$$
+hence such map $\rho$ does reflect the properties of Lie group, which is why representation theories are so important in group theory.
+
+## Matrix Representations
+
+Recall that a manifold always have local coordinates. Therefore, any manifold can be considered locally as a Euclidean space, which means that the map $\rho$ can be viewed as matrices. Such representations are called **linear representations**. 
+
+## Adjoint Representations
+
+For an arbitrary Lie group, to give its representation (or more precisely, representation on the representation space $M$), a manifold $M$ must be chosen. This can be quite troublesome. Say I chose $M=\set{0}$, then the representation of any Lie group is identity map $\rho(g)=\id,\, \forall g\in G$. Such representation is too trivial to reveal anything insightful about the Lie group. Even if I choose a more complicated manifold, it's still hard for me to make sure that $M​$ not any bigger, not any smaller, that such choice is **just right**. 
+
+Remember that Lie group itself is a manifold and can thus acted on. What choice is better than $G$ itself? Such representation is $M$-independent, and can provide information on $G$ "just right".
+$$
+\begin{array}{cccccccc}
+G & \times & G & \rightarrow & G \\
+\text{A Lie group} & \text{acts on} & \substack{\text{Lie group itself}\newline \text{seen as a manifold}} & \text{gets} & \text{the same Lie group} \\\\
+(\quad g_1 & \cdot & g_2 \quad)&\mapsto & g_3'\dfdas(g_1g_2)\\
+\substack{\text{An element in}\newline \text{Lie group}} & \text{acts on} & \substack{\text{another element in Lie group}\newline \text{seen as a point in a manifold}} & \text{gets} & \substack{\text{yet another element in Lie group}\newline \text{seen as a point in a manifold}} \\
+\Updownarrow & & & & {\color{red}\textbf{same}}\Updownarrow \\
+(\quad\rho(g_1) & \cdot & g_2\quad) &\mapsto & g_3'\dfdas(\rho(g_1)\cdot g_2)\\
+\substack{\text{A map $\rho$}\newline \text{depend on $g_1$}} & \text{acts on} & \substack{\text{another element in Lie group}\newline \text{seen as a point in a manifold}} & \text{gets} & \substack{\text{yet another element in Lie group}\newline \text{seen as a point in a manifold}}
+\end{array}
+$$
+
+
