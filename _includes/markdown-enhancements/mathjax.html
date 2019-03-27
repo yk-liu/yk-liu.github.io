@@ -1,56 +1,21 @@
    <script type="text/x-mathjax-config">
-      <!-- MathJax.Hub.Config({ -->
-        <!-- extensions: ["tex2jax.js","MathZoom.js"], -->
-        <!-- jax: ["input/TeX", "output/HTML-CSS"], -->
-        <!-- TeX: { -->
-        <!-- extensions: ["noUndefined.js","autoload-all.js","AMSmath.js","AMSsymbols.js","color.js","cancel.js"], -->
-        <!-- equationNumbers: { autoNumber: "all" } -->
-        <!-- }, -->
-        <!-- tex2jax: { -->
-          <!-- displayMath: [ ['$$','$$'], ["\\[","\\]"] ], -->
-          <!-- inlineMath: [ ['$','$'], ["\\(","\\)"] ], -->
-          <!-- processEscapes: true -->
-        <!-- }, -->
-        <!-- "HTML-CSS": { fonts: ["TeX"] } -->
-      <!-- }); -->
-      
-      
-      
-      
       MathJax.Hub.Config({
-			messageStyle: "none",
-			skipStartupTypeset: true,
-			jax: ["input/TeX", "output/SVG"],
-			extensions: ["tex2jax.js", "toMathML.js"],
-			TeX: {
-				extensions: ["noUndefined.js", "autoload-all.js", "AMSmath.js", "AMSsymbols.js", "mediawiki-texvc.js"]
-			},
-			SVG: {
-				useGlobalCache: false,
-				merrorStyle: {
-					fontSize:"90%", color:"red", background:"",
-      				border: "1px solid red", padding:"2px"
-				},
-				scale: 100, 
-				minScaleAdjust: 80,
-				blacker: 0,
-				matchFontHeight: false
-			},
-			showProcessingMessages: false,
-			tex2jax: {
-				displayMath: [['$$\n', '\n$$'], ['$$\r\n', '\r\n$$']],
+        extensions: ["tex2jax.js","MathZoom.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        TeX: {
+        extensions: ["noUndefined.js","autoload-all.js","AMSmath.js","AMSsymbols.js","color.js","cancel.js"],
+        equationNumbers: { autoNumber: "all" }
+        },
+        tex2jax: {
+          				displayMath: [['$$\n', '\n$$'], ['$$\r\n', '\r\n$$']],
 				inlineMath: [ ['$','$'], ['$$', '$$']],
-				processEscapes: true,
-				preview: "none",
-				skipTags: ["script","noscript","style","textarea","pre","code", "span"],
-			},
-			menuSettings: {
-				inTabOrder: false
-			},
-		});
-      
+          processEscapes: true
+        },
+        "HTML-CSS": { fonts: ["TeX"] }
+      });
+            
    </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js" type="text/javascript" async></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js" type="text/javascript" async></script>
    <!--
    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
    -->
