@@ -1,0 +1,35 @@
+
+<p>
+   {% assign established = {{site.post[-1].date | date "%Y" }} %}
+   {% assign now  = {{ "today" | date "%Y" }} %}
+   
+   {% comment %} syntax see http://strftime.net/ {% endcomment %}
+   
+   {% for post in site.posts %}
+      {% assign date = post.date %}
+      
+      {% assign day_since_newyear = {{date | date: "%j" }} | plus: 0 %}
+      {% assign day = {{date | date: "%e" }} | plus: 0 %}
+      {% assign month = {{date | date: "%d" }} | plus: 0 %}
+      {% assign year = {{date | date: "%Y" }} | plus: 0 %}
+      {% assign week_sun = {{date | date" "%U" }} | plus 0 %}
+      {% assign week_mon = {{date | date" "%W" }} | plus 0 %}
+      {% assign weekday = {{date | date" "%W" }} | plus 0 %}
+      
+      {{ post.title}} was written on the {{day_since_newyear}}th day since new year, {{week_sun}}th week, {{year}} {{month }} {day}}, weekday {{weekday}}.
+      
+      {% assign date = post.edit %}
+      
+      {% assign day_since_newyear = {{date | date: "%j" }} | plus: 0 %}
+      {% assign day = {{date | date: "%e" }} | plus: 0 %}
+      {% assign month = {{date | date: "%d" }} | plus: 0 %}
+      {% assign year = {{date | date: "%Y" }} | plus: 0 %}
+      {% assign week_sun = {{date | date" "%U" }} | plus 0 %}
+      {% assign week_mon = {{date | date" "%W" }} | plus 0 %}
+      {% assign weekday = {{date | date" "%W" }} | plus 0 %}
+      
+      edited on the {{day_since_newyear}}th day since new year, {{week_sun}}th week, {{year}} {{month }} {day}}, weekday {{weekday}}.
+      <br>
+         
+    {% endfor %}     
+</p>
