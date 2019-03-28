@@ -138,18 +138,12 @@ In the [last post]({{ site.baseurl }}{% post_url 2019-03-11-Lie-Group-as-Differe
 
 ## $\log$ Map
 
-With $\exp$ map defined, $\log$ map arises naturally. 
+With $\exp$ map defined, $\log$ map arises naturally. Proof: see <https://mathoverflow.net/questions/99230/modern-proof-for-the-baker-campbell-hausdorff-formula/99251#99251> 
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/LogMap.png' width='80%' >
-
-
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/LogMap.png' width='60%' >
 
 
-
- 
-
-
-
+{% comment %}
 # Sources
 
 
@@ -207,4 +201,4 @@ spin and genreator
 ```
 https://www.ks.uiuc.edu/Services/Class/PHYS480/qm_PDF/chp5.pdf
 ```
-
+{% endcomment %}
