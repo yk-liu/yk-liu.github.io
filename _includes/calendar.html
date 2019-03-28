@@ -6,17 +6,10 @@
    
    {% for post in site.posts %}
       {% assign date = post.date %}
-
-      {% assign day_since_newyear = {{date | date: "%j" }} | plus: 0 %}
-      {% assign day = {{date | date: "%e" }} | plus: 0 %}
-      {% assign month = {{date | date: "%d" }} | plus: 0 %}
-      {% assign year = {{date | date: "%Y" }} | plus: 0 %}
-      {% assign week_sun = {{date | date" "%U" }} | plus 0 %}
-      {% assign week_mon = {{date | date" "%W" }} | plus 0 %}
-      {% assign weekday = {{date | date" "%W" }} | plus 0 %}
       
       {% capture my_calendar %}
-         {{ my_calendar }}{{ post.title}} was written on the {{day_since_newyear}}th day since new year, {{week_sun}}th week, {{year}} {{month }} {day}}, weekday {{weekday}},
+         {{ my_calendar }}
+         {{ post.title}} was written on the {{date | date: "%j"  | plus: 0 }}th day since {{ date | date: "%Y" | plus: 0 }}, {date | date" "%U" | plus 0 }} th week, on {{date | date: "%m"  | plus: 0 }} {{date | date: "%d"  | plus: 0 }}, weekday {{date | date" "%W" | plus 0 }},
       {% endcapture %}
       
       {% comment %}   
