@@ -1,4 +1,4 @@
-{% comment %}
+
 {% capture calendarWorkspace %}
    {% capture my_calendar %}{% endcapture %}
 
@@ -22,7 +22,8 @@
       {% capture my_calendar %}
          {{ my_calendar }}{{ post.title}} was written on the {{day_since_newyear}}th day since new year, {{week_sun}}th week, {{year}} {{month }} {day}}, weekday {{weekday}},
       {% endcapture %}
-         
+      
+      {% comment %}   
       {% assign date = post.edit %}
       
       {% assign day_since_newyear = {{date | date: "%j" }} | plus: 0 %}
@@ -36,10 +37,9 @@
       {% capture my_calendar %}
       {{ my_calendar }} edited on the {{day_since_newyear}}th day since new year, {{week_sun}}th week, {{year}} {{month }} {day}}, weekday {{weekday}}.
       {% endcapture %}
-      
+      {% endcomment %}
     {% endfor %}     
 {% endcapture %}
 
 {{ my_calendar | markdownify | strip }}
 
-{% endcomment %}
