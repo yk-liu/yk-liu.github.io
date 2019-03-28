@@ -5,7 +5,8 @@ date formatting syntax see http://strftime.net/
 {% capture CalendarWorkspace %}
    {% assign from_year = {{ site.posts[-1].date | date: "%Y" | plus: 0 }} %}
    {% assign to_year = {{ "today" | date: "%Y" | plus: 0 }} %}
-
+   {{ from_year }}
+   {{ to_year }}
    {% capture my_cal_list %}{% endcapture %}
 
    {% for year in (from_year..to_year) %}
