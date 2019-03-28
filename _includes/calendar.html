@@ -3,7 +3,7 @@ date formatting syntax see http://strftime.net/
 {% endcomment %}
 
 {% capture CalendarWorkspace %}
-   {% assign from_year = {{ cite.posts[-1].date | date: "%Y" | plus: 0 }} %}
+   {% assign from_year = {{ site.posts[-1].date | date: "%Y" | plus: 0 }} %}
    {% assign to_year = {{ today | date: "%Y" | plus: 0 }} %}
 
    {% capture my_cal_list %}{% endcapture %}
@@ -11,40 +11,40 @@ date formatting syntax see http://strftime.net/
    {% for year in (from_year..to_year) %}
       {{ year }}
       
-      {% comment %}
-         {% capture end_of_this_year %}
-            {{year}}-12-31
-         {% endcapture %}
+      
+      {% capture end_of_this_year %}
          {{year}}-12-31
-         {% assign days_in_this_year = {{ end_of_this_year | date: "%j" | plus: 0 }} %} 
-         {{ days_in_this_year }}
-         {% capture my_calendar %}{% endcapture %}
-         {% capture active_days %}0{% endcapture %}
-         {% capture empty_calendar %}{% endcapture %}
-         
-         {% comment %} initialize active days {% endcomment %}
-         {% for day in (0..days_in_this_year) %}
-            {% capture active_days %}
-               {{ active_days }}, 0
-            {% endcapture %}
-         {% endfor %}
-         
-         {% assign active_list = {{ active_days | split: ", "}} %}
-         
-         {% comment %} fill in active days {% endcomment %}
-         {% for post in site.posts %}
-            {% assign posted_date = post.date %}
-            {% assign posted_year = {{ posted_date | date: "%Y" | plus: 0 }} %}
-            {% assign posted_day_since_newyear = {{ posted_date | date: "%j" | plus: 0 }} %}
-            {% if posted_year==year %}
-               {% assign active_list[posted_day_since_newyear] = {{ post.url | prepend: site.baseurl | prepend: site.url }} %}
-            {% endif %}
-         {% endfor %}
-         
-         {% for i in active_list %}
-            {% capture my_cal_list %}{{my_cal_list}} {{ i }}{% endcapture %}
-         {% endfor %}
-      {% endcomment %}
+      {% endcapture %}
+      {{year}}-12-31
+      {% assign days_in_this_year = {{ end_of_this_year | date: "%j" | plus: 0 }} %} 
+      {{ days_in_this_year }}
+      {% capture my_calendar %}{% endcapture %}
+      {% capture active_days %}0{% endcapture %}
+      {% capture empty_calendar %}{% endcapture %}
+      
+      {% comment %} initialize active days {% endcomment %}
+      {% for day in (0..days_in_this_year) %}
+         {% capture active_days %}
+            {{ active_days }}, 0
+         {% endcapture %}
+      {% endfor %}
+      
+      {% assign active_list = {{ active_days | split: ", "}} %}
+      
+      {% comment %} fill in active days {% endcomment %}
+      {% for post in site.posts %}
+         {% assign posted_date = post.date %}
+         {% assign posted_year = {{ posted_date | date: "%Y" | plus: 0 }} %}
+         {% assign posted_day_since_newyear = {{ posted_date | date: "%j" | plus: 0 }} %}
+         {% if posted_year==year %}
+            {% assign active_list[posted_day_since_newyear] = {{ post.url | prepend: site.baseurl | prepend: site.url }} %}
+         {% endif %}
+      {% endfor %}
+      
+      {% for i in active_list %}
+         {% capture my_cal_list %}{{my_cal_list}} {{ i }}{% endcapture %}
+      {% endfor %}
+      
       {% comment %} 
          {% for post in site.posts %}
             {% assign date = post.date %}
