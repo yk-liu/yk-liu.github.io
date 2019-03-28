@@ -28,8 +28,8 @@
       {% comment %} fill in active days {% endcomment %}
       {% for post in site.posts %}
          {% assign posted_date = post.date %}
-         {% assign posted_year = {{ posted_date | date: "%Y" | plus: 0 }}
-         {% assign posted_day_since_newyear = {{ posted_date | date: "%j" | plus: 0 }}
+         {% assign posted_year = {{ posted_date | date: "%Y" | plus: 0 }} %}
+         {% assign posted_day_since_newyear = {{ posted_date | date: "%j" | plus: 0 }} %}
          {% if posted_year==year %}
             {% assign active_list[posted_day_since_newyear] = {{ post.url | prepend: site.baseurl | prepend: site.url }} %}
          {% endif %}
@@ -70,5 +70,5 @@
    {% endfor %} 
 {% endcapture %}
 
-{{ my_calendar | markdownify | strip }}
+{{ calendarWorkspace | markdownify | strip }}
 
