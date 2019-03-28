@@ -7,12 +7,13 @@
    {% capture my_cal_list %}{% endcapture %}
 
    {% for year in (from_year..to_year) %}
+      {{ year }}
       {% capture end_of_this_year %}
          {{year}}-12-31
       {% endcapture %}
-      
+      {{year}}-12-31
       {% assign days_in_this_year = {{ end_of_this_year | date: "%j" | plus: 0 }} %} 
-      
+      {{ days_in_this_year }}
       {% capture my_calendar %}{% endcapture %}
       {% capture active_days %}0{% endcapture %}
       {% capture empty_calendar %}{% endcapture %}
@@ -70,5 +71,5 @@
       
    {% endfor %} 
 {% endcapture %}
-{% assign CalendarWorkspace = '' %}
+{{ CalendarWorkspace }}
 {{my_cal_list | markdownify | strip}}
