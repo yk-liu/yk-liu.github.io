@@ -3,8 +3,8 @@ date formatting syntax see http://strftime.net/
 {% endcomment %}
 
 {% capture CalendarWorkspace %}
-   {% assign from_year = {{ site.posts[-1].date | date: "%Y" | plus: 0 }} %}
-   {% assign to_year = {{ "today" | date: "%Y" | plus: 0 }} %}
+   {% assign from_year = {{ site.posts[-1].date | date: '%Y' | times: 1 }} %}
+   {% assign to_year = {{ site.time | date: '%Y' | times: 1 }} %}
    {{ from_year }}
    {{ to_year }}
    {% capture my_cal_list %}{% endcapture %}
