@@ -8,6 +8,18 @@ protected: true
 mathjax: true
 ---
 
+# Lifelong Learning Definition (Opinions are my own)
+
+The first and the most crutial thing needed to be seriously considered is what is **"lifelong learning"** in robotic vision area. Below we have summaried some senarios that should be included under this definition. Robot continuously learns 
+
+
+- the instances of the known class, and improves classifier based on accumulated intances, it is an enhancement process.
+- the novel class, which has not been appeared in the previous learning procedure. The model should be able to increase class-incremental capability.
+- s 
+
+
+
+
 # Why We Focus on Lifelong Robotic Vision
 
 Humans have the remarkable ability to **learn continuously** from the external environment and the inner experience. One of the grand goals of robots is also building an artificial **"lifelong learning"** agent that can shape a cultivated understanding of the world from the current scene and their previous knowledge via an **autonomous lifelong development.**
@@ -57,5 +69,8 @@ I mainly use [Typora](https://www.typora.io) to write my post.-->
 
 # Contact
 
-The best way to reach us is via email: $qi.she$ @ $intel.com$
+The best way to reach us is via email: $qi.she$ @ $intel.com$，$xuesong.shi$ @ $intel.com$
+
+# Further materials 
+
 
