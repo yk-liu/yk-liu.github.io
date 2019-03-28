@@ -43,7 +43,7 @@ $$
 
 From the last post, a one-to-one correspondence between three entities has been established, namely
 
-- Left-invariant vector field $X​$,
+- Left-invariant vector field $X$, such $X$ is sometimes called the **infinitesimal generator** of the one-parameter group $t \rightarrow \exp(tX)​$.
 - Tangent vector at identity $X_e\in T_eG$,
 - One-parameter subgroup $\gamma_X(t)​$.
 
@@ -51,9 +51,9 @@ The relationship between them can be summarized as
 
 ```mermaid
 graph LR
-A(Xe)-->|translated, </br>pushed around|B(Left-invariant vector field)
-B-->|integral|C(one-parameter subgroup)
-A-->|expo|C
+A(Xe)-->|Translated around G|B(Left-invariant vector field)
+B-->|Integral|C(one-parameter subgroup)
+A-->|Exponential Map|C
 ```
 
 ## Lie Group's Generator
@@ -78,30 +78,22 @@ One important observation is that such neighborhood does not have any limitation
 
 ## Tangent Space and Neighborhood Diffeomorphism
 
-Taking smaller and smaller neighborhoods of e, one eventually "arrives" at the tangent space of $G$ at $e$. Namely, the tangent space $T_eG​$ generates the entire Lie group.
+Taking smaller and smaller neighborhoods of e, one eventually "arrives" at the tangent space of $G$ at $e$. Namely, the tangent space $T_eG$ generates the entire Lie group.
 
-To prove that, we can proove that there is a diffeomorphism between an open neighborhood of tangent space and an open neighborhood near the identity.
+To prove the above statement, we can prove that there is a diffeomorphism between an open neighborhood of tangent space and an open neighborhood near the identity.
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/ExpDiffeo.png' width='70%'>
 
-The exponential map $\exp : T_e G \rightarrow G$ is smooth, and it is a local diffeomorphism at $0$.
+Proposition: The exponential map $\exp : T_e G \rightarrow G$ is smooth, and it is a local diffeomorphism at $0$.
 
 > Proof:
 >
 > 1. **Inverse Function Theorem**: Let $f : M \rightarrow N$ be a smooth map between two smooth manifolds $M$, $N$, and let $p \in M$ and $q = f(p)$. If $\d f_p : T_pM \rightarrow T_qN$ is an isomorphism, then there exists an open neighborhood $W$ of $p$ such that $f(W)$ is an open neighborhood of $q$ and $f$ restricts to a diffeomorphism from $W$ onto $f(W)$.
+> In other words, a function is invertible in a neighborhood of a point in its domain as long as its derivative is continuous and non-zero at the point. Thus this function induces a diffeomorphism.
 >
->    In other words, a function is invertible in a neighborhood of a point in its domain as long as its derivative is continuous and non-zero at the point. Thus this function induces a diffeomorphism.
+> <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/InverseFunctionTheorem.png' width='70%'>
 >
->    <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/InverseFunctionTheorem.png' width='70%'>
->
-> 2. Since $\exp(tX) = \phi_X(t)$ is a curve on $G$, it's tangent vector at $t=0$ is $X​$,
->
->    $$
->     \left.\D{}{t} \exp(tX) \right\vert_{t=0}=X
->    $$
->
->     This means that the map $\d \exp$ at $t=0$ is just identity map, which clearly has inverse. By the Inverse function theorem, $\exp$ is a local diffeomorphism.
->
+> 2. Since $\exp(tX) = \phi_X(t)$ is a curve on $G$, it's tangent vector at $t=0$ is $X$, we have $\left.\D{}{t} \exp(tX) \right\vert_{t=0}=X$. This means that the map $\d \exp$ at $t=0$ is just identity map, which clearly has inverse. By the Inverse function theorem, $\exp$ is a local diffeomorphism.
 
 ## Tangent Space Encodes (Generates) the Lie Group
 
@@ -111,11 +103,9 @@ I like to think it as tangent vectors dictates different one-parameter subgroups
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/exponetialMap.png' width='80%'>
 
-
-
 # Associated Lie Algebra of Lie Group
 
-Lie algebra should "know" everything about $G$, then it should know about the group operation, which leads to the Campbell-Baker-Hausdorff formula. The formula can be better understood with the "bracket" in Lie algebra is introduced as a measure of non-commutativity.
+Lie algebra should "know" everything about $G​$, then it should know about the group operation, which leads to the Campbell-Baker-Hausdorff formula. The formula can be better understood with the "bracket" in Lie algebra is introduced as a measure of non-commutativity.
 
 > Lie published an article titled "*Über Gruppen von Transformationen*" in 1874. As early as 1871, the idea of an infinitesimal generator of a one-parameter group of transformations had already appeared in his work.
 >
@@ -144,60 +134,21 @@ such that
 
 In the [last post]({{ site.baseurl }}{% post_url 2019-03-11-Lie-Group-as-Differential-Manifold %}#four-properties-of-brackets), the bracket of left invariant vector fields are defined. The brackets satisfies all the requirements of a Lie algebra. Hence, **All left-invariant vector fields form a Lie algebra**.
 
+
+
+## $\log$ Map
+
+With $\exp$ map defined, $\log$ map arises naturally.
+
+
+
  
 
 
 
 # Sources
 
-```
-Proposition 1.4. For any X, Y ∈ g, there is a smooth map Z : (−ε, ε) → g so that for all
-t ∈ (−ε, ε),
-exp(tX) exp(tY ) = exp(t(X + Y ) + t
-2Z(t)).
-Proof. Since exp is a diffeomorphism near 0 ∈ g, there is an ε > 0 so that the map
-ϕ : (−ε, ε) → g, t 7→ ϕ(t) = exp−1
-(exp(tX) exp(tY ))
-is smooth. Note that we can write ϕ as the composition
-R
-γX
-e ×γ
-Y
-e −→ G × G
-µ
-−→ G
-exp−1
-−→ R.
-According to lemma 1.2 in lecture 12, dµe,e(X, Y ) = X + Y . It follows
-ϕ
-0
-(0) = (d exp0
-)
-−1
-( ˙γ
-X
-e
-(0) + ˙γ
-Y
-e
-(0)) = X + Y.
-Since ϕ(0) = 0, by Taylor’s theorem,
-ϕ(t) = t(X + Y ) + t
-2Z(t)
-for some smooth function Z.
-Remark. The mysterious function Z is explicitly given by the Baker-Campbell-Hausdorff formula:
-Z(t) = 1
-2
-[X, Y ] + t
-12
-([X, [X, Y ]] − [Y, [X, Y ]]) + t
-2
-24
-[X, [Y, [X, Y ]]] + · · ·
 
-```
-
-<http://staff.ustc.edu.cn/~wangzuoq/Courses/16F-Manifolds/Notes/Lec13.pdf>
 
 **defnition of infintestmal operators**
 
