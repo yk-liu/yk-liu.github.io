@@ -1,8 +1,11 @@
 {% comment %} date formatting syntax see http://strftime.net/ {% endcomment %}
 
-
+{% capture CalendarWorkspace %}
    {% assign from_year = {{ cite.posts[-1].date | date: "%Y" | plus: 0 }} %}
    {% assign to_year = {{ today | date: "%Y" | plus: 0 }} %}
+
+   {% capture my_cal_list %}{% endcapture %}
+
    {% for year in (from_year..to_year) %}
       {% capture end_of_this_year %}
          {{year}}-12-31
@@ -34,7 +37,7 @@
       {% endfor %}
       
       {% for i in active_list %}
-         {{ i }}
+         {% capture my_cal_list %}{{my_cal_list}} {{ i }}{% endcapture %}
       {% endfor %}
       
       {% comment %} 
@@ -66,4 +69,6 @@
       {% endcomment %} 
       
    {% endfor %} 
-
+{% endcapture %}
+{% assign CalendarWorkspace = '' %}
+{{my_cal_list | markdownify | strip}}
