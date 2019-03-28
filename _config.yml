@@ -49,7 +49,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   
-
 permalink: none
 
 defaults:
