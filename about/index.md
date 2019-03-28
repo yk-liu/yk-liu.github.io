@@ -15,9 +15,8 @@ The first and the most crutial thing needed to be seriously considered is what i
 
 - the instances of the known class, and improves classifier based on accumulated intances, it is an enhancement process.
 - the novel class, which has not been appeared in the previous learning procedure. The model should be able to increase class-incremental capability.
-- s 
-
-
+- multiple tasks which are highly relevant, such as from I.I.D assumptions, we can say the tasks are within the same environment.
+- multiple tasks which are from None I.I.D situations. 
 
 
 # Why We Focus on Lifelong Robotic Vision
