@@ -9,9 +9,8 @@
       
       {% capture my_calendar %}
          {{ my_calendar }}
-         {{ post.title}} was written on the {{ post.date | date: "%Y" | plus: 1 }}
-         {% comment %}  
-         {{date | date: "%j"  | plus: 0 }}th day since {{ date | date: "%Y" | plus: 0 }}, {date | date" "%U" | plus 0 }} th week, on {{date | date: "%m"  | plus: 0 }} {{date | date: "%d"  | plus: 0 }}, weekday {{date | date" "%W" | plus 0 }},
+         {{ post.title}} was written on the 
+         {{ post.date | date: "%j"  | plus: 0 }}th day since {{ post.date | date: "%Y" | plus: 0 }}, {{ post.date | date" "%U" | plus: 0 }} th week, on {{ post.date | date: "%m"  | plus: 0 }} {{ post.date | date: "%d"  | plus: 0 }}, weekday {{ post.date | date" "%W" | plus: 0 }},
          {% endcomment %}  
       {% endcapture %}
       
