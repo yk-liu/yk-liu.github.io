@@ -1,4 +1,4 @@
-
+{% comment %}
 {% capture calendarWorkspace %}
    {% capture my_calendar %}{% endcapture %}
 
@@ -41,3 +41,5 @@
 {% endcapture %}
 
 {{ my_calendar | markdownify | strip }}
+
+{% endcomment %}
