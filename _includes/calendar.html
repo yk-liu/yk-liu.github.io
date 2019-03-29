@@ -19,8 +19,10 @@ generate empty calendar
       {% assign total_weeks = end_of_this_year | date: "%U" | plus: 1 %}
       {% assign first_day_dow = start_of_this_year | date: "%u" | plus: 0 %}
       
-      {% assign Jan = {{year}}-01-01 | date: "%j" | plus: 0 %}
-      {% assign Feb = {{year}}-02-01 | date: "%j" | plus: 0 %}
+      {% capture Jan %} {{year}}-01-01 {% endcapture %}
+      
+      {% assign Jan = Jan | date: "%j" | plus: 0 %}
+      {% assign Feb = year | append: "-02-01" | date: "%j" | plus: 0 %}
       {% assign Mar = {{year}}-03-01 | date: "%j" | plus: 0 %}
       {% assign Apr = {{year}}-04-01 | date: "%j" | plus: 0 %}
       {% assign May = {{year}}-05-01 | date: "%j" | plus: 0 %}
@@ -35,7 +37,7 @@ generate empty calendar
       <table><thead><tr>
       {% for week in (1..total_weeks) %}
          {% assign monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
-         {{  monday_day_sn }}, Jan: {{Jan}}
+         {{  monday_day_sn }}, Jan: {{Jan}}, Feb: {{Feb}}
          {{ monday_day_sn | plus: 1}}
          {% if    monday_day_sn <= Jan and {{monday_day_sn | plus: 1}} > Jan %}
             <th> Jan </th>
@@ -112,9 +114,17 @@ generate empty calendar
          {% for post in site.posts %}
             {% assign posted_year   = post.date | date: "%Y" | plus: 0 %}
             {% assign posted_day_sn = post.date | date: "%j" | plus: 0 %}
-
+            {% assign edited_year   = post.edit | date: "%Y" | plus: 0 %}
+            {% assign edited_day_sn = post.edit | date: "%j" | plus: 0 %}
+            
             {% if posted_day_sn == day %}
                {% if posted_year == year %}
+                  {% assign activity = activity | plus: 1 %}
+               {% endif %}
+            {% endif %}
+
+            {% if edited_day_sn == day %}
+               {% if edited_year == year %}
                   {% assign activity = activity | plus: 1 %}
                {% endif %}
             {% endif %}
@@ -166,5 +176,5 @@ generate empty calendar
       
    {% endfor %} 
 {% endcapture %}
-{{ CalendarWorkspace |  markdownify | strip }}
+{{ CalendarWorkspace | strip }}
 
