@@ -67,9 +67,8 @@ generate empty calendar
             <th> </th>
          {% endif %}
       {% endfor%}
-      <th rowspan="8"> {{ year }}</th>
       </tr>
-      
+      <th rowspan="8"> {{ year }}</th>
       </thead>
       
       </tbody>
@@ -121,12 +120,14 @@ generate empty calendar
                {% else %}
                   <td> NA </td>
                {% endif %}
-            {% elsif forloop.last %}
+            {% elsif forloop.rindex ==2 %}
                {% if weekday > last_day_dow %}
                   <td> NA </td>
                {% else %}
                   <td> {{ activity }} </td>
                {% endif %}
+            {% elsif forloop.rindex ==1 %} 
+               <td>  </td>       
             {% else %}
                <td> {{ activity }} </td>
             {% endif %}
