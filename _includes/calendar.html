@@ -3,15 +3,8 @@ date formatting syntax see http://strftime.net/
 {% endcomment %}
 {% assign from_year = site.posts[-1].date | date: '%Y' | times: 1 %}
 {% assign to_year =  site.time | date: '%Y' | times: 1 %}
-
-{% assign dummya = '2018' %} {% assign dummyb = '2018' %}
-{% if dummya == dummyb %}
-   dumdum
-{% endif %}
-{% if {{dummya}} == {{dummyb}} %}
-   dumdum2
-{% endif %}
-
+{{ from_year }}
+{{ to_year }}
 {% capture CalendarWorkspace %}
    
    {% capture my_cal_list %}{% endcapture %}
@@ -22,8 +15,6 @@ date formatting syntax see http://strftime.net/
          {{year}}-12-31
       {% endcapture %}
       
-      {% capture year %}   {{year}}    {% endcapture %}
-
       {% assign days_in_this_year = end_of_this_year | date: "%j" | plus: 0 %} 
 
       {% capture my_calendar %}{% endcapture %}
@@ -36,11 +27,11 @@ date formatting syntax see http://strftime.net/
          initial activity = {{activity}} ;
          {% increment activity %}
          tested activity = {{activity}} ;
-         {% capture day %}    {{day}}     {% endcapture %}
+         
          {% for post in site.posts %}
             {% capture posted_year %}   {{post.date | date: "%Y" }} {% endcapture %}
             {% capture posted_day_sn %} {{post.date | date: "%j" }} {% endcapture %}
-            
+            ;;info: {{ day }} {{year }} : {{posted_day_sn}} {{posted_year }} ;;
             {% if posted_day_sn == day %}
                day match!
                {% if posted_year == year %}
