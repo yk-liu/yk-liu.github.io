@@ -23,19 +23,20 @@ date formatting syntax see http://strftime.net/
             
       {% comment %} initialize active days {% endcomment %}
       {% for day in (0..days_in_this_year) %}
+         
          {% assign activity = 0 %}
          initial activity = {{activity}} ;
          {% increment activity %}
          tested activity = {{activity}} ;
          
          {% for post in site.posts %}
-            {% capture posted_year %}   {{post.date | date: "%Y" }} {% endcapture %}
-            {% capture posted_day_sn %} {{post.date | date: "%j" }} {% endcapture %}
-            ;;info: {{ day }} {{year }} : {{posted_day_sn}} {{posted_year }} ;;
+            {% assign posted_year   = post.date | date: "%Y" | plus: 0 %}
+            {% assign posted_day_sn = post.date | date: "%j" | plus: 0 %}
+            
             {% if posted_day_sn == day %}
-               day match!
+               day match! ;;info: {{ day }} {{year }} : {{posted_day_sn}} {{posted_year }} ;;
                {% if posted_year == year %}
-                  year match!
+                  year match! ;;info: {{ day }} {{year }} : {{posted_day_sn}} {{posted_year }} ;;
                   {% increment activity %}
                {% endif %}
             {% endif %}
