@@ -5,6 +5,20 @@ date formatting syntax see http://strftime.net/
 {% assign to_year =  site.time | date: '%Y' | times: 1 %}
 {{ from_year }}
 {{ to_year }}
+
+{% comment %} 
+generate empty calendar
+{% for year in (from_year..to_year) %}
+   {% capture end_of_this_year %}   {{year}}-12-31  {% endcapture %}
+   {% capture start_of_this_year %} {{year}}-01-01  {% endcapture %}
+   
+   {% assign total_days = end_of_this_year | date: "%j" | plus: 0 %} 
+   {% assign total_weeks = end_of_this_year | date: "%U" | plus: 0 %}
+   {% assign first_day_dow = start_of_this_year | date: "%u" | plus: 0 %}
+{% endfor %}
+{% endcomment %}
+
+
 {% capture CalendarWorkspace %}
    
    {% capture my_cal_list %}{% endcapture %}
@@ -26,7 +40,7 @@ date formatting syntax see http://strftime.net/
          
          {% assign activity = 0 %}
          initial activity = {{activity}} ;
-         {% increment activity %}
+         {% assign activity = activity | plus: 1 %}
          tested activity = {{activity}} ;
          
          {% for post in site.posts %}
@@ -36,7 +50,7 @@ date formatting syntax see http://strftime.net/
             {% if posted_day_sn == day %}
                {% if posted_year == year %}
                   match! 
-                  {% increment activity %}
+                  {% assign activity = activity | plus: 1 %}
                   ;;info: {{ day }} {{year }} : {{posted_day_sn}} {{posted_year }} ; activity = {{activity}};
                {% endif %}
             {% endif %}
