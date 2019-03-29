@@ -27,9 +27,11 @@ date formatting syntax see http://strftime.net/
          {% assign activity = 0 %}
          {% for post in site.posts %}
             {% assign posted_year =  post.date | date: "%Y"   %}
-            {{posted_year}}
+            {{posted_year == year}}
             {% assign posted_day_since_newyear = post.date | date: "%j"  %}
-            {{posted_day_since_newyear}}
+            {{posted_day_since_newyear == day}}
+            {% assign is_posted_this_day = posted_year == year and posted_day_since_newyear == day %}
+            {{ is_posted_this_day }}
             {% if posted_year == year and posted_day_since_newyear == day %}
                {% assign activity = activity | plus: 1 %}
             {% endif %}
