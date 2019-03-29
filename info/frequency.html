@@ -157,7 +157,7 @@ generate empty calendar
                {% endif %}  
             {% elsif forloop.index==2 %}
                {% if weekday >= first_day_dow %}
-                  <td class="act_{{ activity }}"> </td>
+                  <td class="act_{{ activity }}" title="{{today_sn}}"> </td>
                {% else %}
                   <td class="not_this_year">  </td>
                {% endif %}
@@ -165,12 +165,12 @@ generate empty calendar
                {% if weekday > last_day_dow %}
                   <td class="not_this_year">  </td>
                {% else %}
-                  <td class="act_{{ activity }}"> </td>
+                  <td class="act_{{ activity }}" title="{{today_sn}}"> </td>
                {% endif %}
             {% elsif forloop.rindex ==1 %} 
                <td>  </td>       
             {% else %}
-               <td class="act_{{ activity }}"> </td>
+               <td class="act_{{ activity }}" title="{{today_sn}}"> </td>
             {% endif %}
          {% endfor %}
          </tr>
