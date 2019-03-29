@@ -66,8 +66,11 @@ generate empty calendar
          {% else %}
             <th> </th>
          {% endif %}
+         <th rowspan="8"> {{ year }}</th>
       {% endfor%}
-      </tr></thead>
+      </tr>
+      
+      </thead>
       
       </tbody>
       {% for weekday in (1..7) %}
@@ -136,7 +139,6 @@ generate empty calendar
       
       </table>
    {% endfor %}
-
 {% endcapture %}
 
 {{ empty_cal }}
