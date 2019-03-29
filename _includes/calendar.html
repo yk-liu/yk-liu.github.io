@@ -16,7 +16,7 @@ date formatting syntax see http://strftime.net/
          {{year}}-12-31
       {% endcapture %}
       {{year}}-12-31
-      {% assign days_in_this_year = {{ end_of_this_year | date: "%j" | plus: 0 }} %} 
+      {% assign days_in_this_year = end_of_this_year | date: "%j" | plus: 0 %} 
       {{ days_in_this_year }}
       {% capture my_calendar %}{% endcapture %}
       {% capture active_days %}0{% endcapture %}
@@ -34,8 +34,8 @@ date formatting syntax see http://strftime.net/
       {% comment %} fill in active days {% endcomment %}
       {% for post in site.posts %}
          {% assign posted_date = post.date %}
-         {% assign posted_year = {{ posted_date | date: "%Y" | plus: 0 }} %}
-         {% assign posted_day_since_newyear = {{ posted_date | date: "%j" | plus: 0 }} %}
+         {% assign posted_year =  posted_date | date: "%Y" | plus: 0  %}
+         {% assign posted_day_since_newyear = posted_date | date: "%j" | plus: 0 %}
          {% if posted_year==year %}
             {% assign active_list[posted_day_since_newyear] = {{ post.url | prepend: site.baseurl | prepend: site.url }} %}
          {% endif %}
@@ -76,4 +76,5 @@ date formatting syntax see http://strftime.net/
    {% endfor %} 
 {% endcapture %}
 {{ CalendarWorkspace }}
+cal_list
 {{my_cal_list | markdownify | strip}}
