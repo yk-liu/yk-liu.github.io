@@ -4,6 +4,11 @@ date formatting syntax see http://strftime.net/
 {% assign from_year = site.posts[-1].date | date: '%Y' | times: 1 %}
 {% assign to_year =  site.time | date: '%Y' | times: 1 %}
 
+{% assign dummya = '2018' %} {% assign dummyb = '2018' %}
+{% if dummya == dummyb %}
+   dumdum
+{% endif %}
+
 {% capture CalendarWorkspace %}
    
    {% capture my_cal_list %}{% endcapture %}
@@ -25,15 +30,22 @@ date formatting syntax see http://strftime.net/
       {% comment %} initialize active days {% endcomment %}
       {% for day in (0..days_in_this_year) %}
          {% assign activity = 0 %}
-         
+         initial activity = {{activity}} ;
+         {% assign activity = activity | plus: 1 %}
+         tested activity = {{activity}} ;
          {% capture day %}    {{day}}     {% endcapture %}
          {% for post in site.posts %}
             {% capture posted_year %}   {{post.date | date: "%Y" }} {% endcapture %}
             {% capture posted_day_sn %} {{post.date | date: "%j" }} {% endcapture %}
-
-            {% if posted_year == year and posted_day_sn == day %}
-               {% assign activity = activity | plus: 1 %}
+            
+            {% if posted_day_sn == day %}
+               day match!
+               {% if posted_year == year %}
+                  year match!
+                  {% assign activity = activity | plus: 1 %}
+               {% endif %}
             {% endif %}
+            
          {% endfor %}
          added activity = {{activity}} <br>
          {% capture active_days %}
