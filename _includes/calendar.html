@@ -73,7 +73,7 @@ generate empty calendar
       {% for weekday in (1..7) %}
          <tr>
          {% for week in (1..total_weeks) %} 
-            {% assign daynumber = week | minus: 1 | times: 7 | plus: weekday | minus: first_day_dow %}
+            {% assign daynumber = week | minus: 1 | times: 7 | plus: weekday | minus: first_day_dow | plus: 1 %}
             {% if forloop.first %}
                {% if weekday >= first_day_dow %}
                   <td> {{ daynumber }} </td>
