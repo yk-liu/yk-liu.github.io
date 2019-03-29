@@ -95,6 +95,10 @@ generate empty calendar
                {% endif %}
             {% endfor %}
             
+            {% if activity == 0 %}
+               {% assign activity = '' %}
+            {% endif %}
+            
             {% if forloop.first %}
                {% if weekday >= first_day_dow %}
                   <td> {{ activity }} </td>
