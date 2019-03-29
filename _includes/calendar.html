@@ -26,10 +26,12 @@ date formatting syntax see http://strftime.net/
       {% for day in (0..days_in_this_year) %}
          {% assign activity = 0 %}
          {% for post in site.posts %}
-            {% assign posted_year =  post.date | date: "%Y" | plus: 0  %}
-            {% assign posted_day_since_newyear = post.date | date: "%j" | plus: 0 %}
-            {% if posted_year==year and posted_day_since_newyear==day %}
-               {% assign activity = activity | add: 1 %}
+            {% assign posted_year =  post.date | date: "%Y"   %}
+            {{posted_year}}
+            {% assign posted_day_since_newyear = post.date | date: "%j"  %}
+            {{posted_day_since_newyear}}
+            {% if posted_year == year and posted_day_since_newyear == day %}
+               {% assign activity = activity | plus: 1 %}
             {% endif %}
          {% endfor %}
          {% capture active_days %}
