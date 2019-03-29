@@ -32,7 +32,8 @@ generate empty calendar
       {% capture Nov %} {{year}}-11-01 {% endcapture %} {% assign Nov = Nov | date: "%j" | plus: 0 %}
       {% capture Dec %} {{year}}-12-01 {% endcapture %} {% assign Dec = Dec | date: "%j" | plus: 0 %}
 
-      <table><thead><tr>
+      <table>
+      <thead><tr>
       {% for week in (1..total_weeks) %}
          {% assign monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
          {{  monday_day_sn }}, Jan: {{Jan}}, Feb: {{Feb}}
@@ -65,28 +66,35 @@ generate empty calendar
             <th> </th>
          {% endif %}
       {% endfor%}
-      </tr></thead></table>
-      {% comment %}
-      {% for week in (1..total_weeks) %}
-         {% if forloop.first %}
-            {% for weekday in (1..7) %}
-               {% if weekday == first_day_dow %}
-                  
+      </tr></thead>
+      
+      </tbody>
+      {% for weekday in (1..7) %}
+         <tr>
+         {% for week in (1..total_weeks) %} 
+            {% if forloop.first %}
+               {% if weekday >= first_day_dow %}
+                  <td>  </td>
                {% else %}
-               
+                  <td> NA </td>
                {% endif %}
-            {% endfor %}
-         {% else %}
-            {% for weekday in (1..7) %}
-            {% endfor %}
-         {% endif %}
+            {% else %}
+               <td>  </td>
+            {% endif %}
+         {% endfor %}
+         </tr>
       {% endfor %}
-      {% endcomment %}
+      </tbody>
+      
+      </table>
    {% endfor %}
 
 {% endcapture %}
 
 {{ empty_cal }}
+
+
+
 
 {% capture CalendarWorkspace %}
    
