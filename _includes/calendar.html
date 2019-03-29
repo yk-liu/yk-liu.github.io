@@ -73,9 +73,10 @@ generate empty calendar
       {% for weekday in (1..7) %}
          <tr>
          {% for week in (1..total_weeks) %} 
+            {% assign daynumber = week | minus: 1 | times: 7 | plus: weekday %}
             {% if forloop.first %}
                {% if weekday >= first_day_dow %}
-                  <td>  </td>
+                  <td> {{ daynumber }} </td>
                {% else %}
                   <td> NA </td>
                {% endif %}
@@ -83,10 +84,10 @@ generate empty calendar
                {% if weekday >= last_day_dow %}
                   <td> NA </td>
                {% else %}
-                  <td>  </td>
+                  <td> {{ daynumber }} </td>
                {% endif %}
             {% else %}
-               <td>  </td>
+               <td> {{ daynumber }} </td>
             {% endif %}
          {% endfor %}
          </tr>
