@@ -23,7 +23,7 @@ date formatting syntax see http://strftime.net/
 background-color: {{notthisyear}};
 }
 .act_0 {
-background-color: {{activity_color_1}};
+background-color: {{activity_color_0}};
 }
 .act_1 {
 background-color: {{activity_color_1}};
@@ -37,6 +37,17 @@ background-color: {{activity_color_3}};
 .act_4 {
 background-color: {{activity_color_4}};
 }
+table, th, td {
+border-collapse: collapse;
+border: 3px solid #f8f8f8
+}
+th {
+width: 1rem
+}
+.act_1 {
+background-color: black
+}
+
 </style>
 
 {% comment %} 
@@ -65,7 +76,8 @@ generate empty calendar
       {% capture Oct %} {{year}}-10-01 {% endcapture %} {% assign Oct = Oct | date: "%j" | plus: 0 %}
       {% capture Nov %} {{year}}-11-01 {% endcapture %} {% assign Nov = Nov | date: "%j" | plus: 0 %}
       {% capture Dec %} {{year}}-12-01 {% endcapture %} {% assign Dec = Dec | date: "%j" | plus: 0 %}
-
+      
+      <div style="overflow-x:auto;">
       <table>
       <thead><tr>
       <th> </th> {% comment %} This column is for week days {% endcomment %}
@@ -165,6 +177,8 @@ generate empty calendar
       </tbody>
       
       </table>
+      </div>
+      
    {% endfor %}
 {% endcapture %}
 
