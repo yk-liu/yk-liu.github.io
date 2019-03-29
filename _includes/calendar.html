@@ -3,21 +3,88 @@ date formatting syntax see http://strftime.net/
 {% endcomment %}
 {% assign from_year = site.posts[-1].date | date: '%Y' | times: 1 %}
 {% assign to_year =  site.time | date: '%Y' | times: 1 %}
-{{ from_year }}
-{{ to_year }}
+
+
 
 {% comment %} 
 generate empty calendar
-{% for year in (from_year..to_year) %}
-   {% capture end_of_this_year %}   {{year}}-12-31  {% endcapture %}
-   {% capture start_of_this_year %} {{year}}-01-01  {% endcapture %}
-   
-   {% assign total_days = end_of_this_year | date: "%j" | plus: 0 %} 
-   {% assign total_weeks = end_of_this_year | date: "%U" | plus: 0 %}
-   {% assign first_day_dow = start_of_this_year | date: "%u" | plus: 0 %}
-{% endfor %}
 {% endcomment %}
 
+{% capture empty_cal %}
+   {% for year in (from_year..to_year) %}
+      {% capture end_of_this_year %}   {{year}}-12-31  {% endcapture %}
+      {% capture start_of_this_year %} {{year}}-01-01  {% endcapture %}
+      
+      {% assign total_days = end_of_this_year | date: "%j" | plus: 0 %} 
+      {% assign total_weeks = end_of_this_year | date: "%U" | plus: 1 %}
+      {% assign first_day_dow = start_of_this_year | date: "%u" | plus: 0 %}
+      
+      {% assign Jan = {{year}}-01-01 | date: "%j" | plus: 0 %}
+      {% assign Feb = {{year}}-02-01 | date: "%j" | plus: 0 %}
+      {% assign Mar = {{year}}-03-01 | date: "%j" | plus: 0 %}
+      {% assign Apr = {{year}}-04-01 | date: "%j" | plus: 0 %}
+      {% assign May = {{year}}-05-01 | date: "%j" | plus: 0 %}
+      {% assign Jun = {{year}}-06-01 | date: "%j" | plus: 0 %}
+      {% assign Jul = {{year}}-07-01 | date: "%j" | plus: 0 %}
+      {% assign Aug = {{year}}-08-01 | date: "%j" | plus: 0 %}
+      {% assign Sep = {{year}}-09-01 | date: "%j" | plus: 0 %}
+      {% assign Oct = {{year}}-10-01 | date: "%j" | plus: 0 %}
+      {% assign Nov = {{year}}-11-01 | date: "%j" | plus: 0 %}
+      {% assign Dec = {{year}}-12-01 | date: "%j" | plus: 0 %}
+
+      <thead><tr>
+      {% for week in (1..total_weeks) %}
+         {% assign monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
+         {% if    monday_day_sn <= Jan and {{monday_day_sn | plus: 1}} > Jan %}
+            <th> Jan </th>
+         {% elsif monday_day_sn <= Feb and {{monday_day_sn | plus: 1}} > Feb %} 
+            <th> Feb </th>
+         {% elsif monday_day_sn <= Mar and {{monday_day_sn | plus: 1}} > Mar %} 
+            <th> Mar </th>
+         {% elsif monday_day_sn <= Apr and {{monday_day_sn | plus: 1}} > Apr %} 
+            <th> Apr </th>
+         {% elsif monday_day_sn <= May and {{monday_day_sn | plus: 1}} > May %} 
+            <th> May </th>
+         {% elsif monday_day_sn <= Jun and {{monday_day_sn | plus: 1}} > Jun %} 
+            <th> Jun </th>
+         {% elsif monday_day_sn <= Jul and {{monday_day_sn | plus: 1}} > Jul %} 
+            <th> Jul </th>
+         {% elsif monday_day_sn <= Aug and {{monday_day_sn | plus: 1}} > Aug %} 
+            <th> Aug </th>
+         {% elsif monday_day_sn <= Sep and {{monday_day_sn | plus: 1}} > Sep %} 
+            <th> Sep </th>
+         {% elsif monday_day_sn <= Oct and {{monday_day_sn | plus: 1}} > Oct %} 
+            <th> Oct </th>
+         {% elsif monday_day_sn <= Nov and {{monday_day_sn | plus: 1}} > Nov %} 
+            <th> Nov </th>
+         {% elsif monday_day_sn <= Dec and {{monday_day_sn | plus: 1}} > Dec %} 
+            <th> Dec </th>
+         {% else %}
+            <th> </th>
+         {% endif %}
+      {% endfor%}
+      </tr></thead>
+      {% comment %}
+      {% for week in (1..total_weeks) %}
+         {% if forloop.first %}
+            {% for weekday in (1..7) %}
+               {% if weekday == first_day_dow %}
+                  
+               {% else %}
+               
+               {% endif %}
+            {% endfor %}
+         {% else %}
+            {% for weekday in (1..7) %}
+            {% endfor %}
+         {% endif %}
+      {% endfor %}
+      {% endcomment %}
+   {% endfor %}
+
+{% endcapture %}
+
+{{ empty_cal }}
 
 {% capture CalendarWorkspace %}
    
@@ -39,9 +106,6 @@ generate empty calendar
       {% for day in (0..days_in_this_year) %}
          
          {% assign activity = 0 %}
-         initial activity = {{activity}} ;
-         {% assign activity = activity | plus: 1 %}
-         tested activity = {{activity}} ;
          
          {% for post in site.posts %}
             {% assign posted_year   = post.date | date: "%Y" | plus: 0 %}
@@ -49,9 +113,7 @@ generate empty calendar
             
             {% if posted_day_sn == day %}
                {% if posted_year == year %}
-                  match! 
                   {% assign activity = activity | plus: 1 %}
-                  ;;info: {{ day }} {{year }} : {{posted_day_sn}} {{posted_year }} ; activity = {{activity}};
                {% endif %}
             {% endif %}
             
