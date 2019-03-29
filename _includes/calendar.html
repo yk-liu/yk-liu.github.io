@@ -37,31 +37,31 @@ generate empty calendar
       <thead><tr>
       {% for week in (1..total_weeks) %}
          {% assign monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
-         {% assign tuesday_day_sn = week | minus: 1 | times: 7 | plus: 2 %}
+         {% assign prev_monday_day_sn = week | minus: 2 | times: 7 | plus: 1 %}
          {{ monday_day_sn | plus: 1}}
-         {% if    monday_day_sn <= Jan and tuesday_day_sn > Jan %}
-            <th> Jan, {{monday_day_sn}}, {{ tuesday_day_sn}}, {{Jan}} </th>
-         {% elsif monday_day_sn <= Feb and tuesday_day_sn > Feb %} 
-            <th> Feb, {{monday_day_sn}}, {{ tuesday_day_sn}}, {{Feb}}</th>
-         {% elsif monday_day_sn <= Mar and tuesday_day_sn > Mar %} 
+         {% if    prev_monday_day_sn < Jan and monday_day_sn >= Jan %}
+            <th> Jan, {{prev_monday_day_sn}}, {{ monday_day_sn}}, {{Jan}} </th>
+         {% elsif prev_monday_day_sn < Feb and monday_day_sn >= Feb %} 
+            <th> Feb, {{prev_monday_day_sn}}, {{ monday_day_sn}}, {{Feb}}</th>
+         {% elsif prev_monday_day_sn < Mar and monday_day_sn >= Mar %} 
             <th> Mar </th>
-         {% elsif monday_day_sn <= Apr and tuesday_day_sn > Apr %} 
+         {% elsif prev_monday_day_sn < Apr and monday_day_sn >= Apr %} 
             <th> Apr </th>
-         {% elsif monday_day_sn <= May and tuesday_day_sn > May %} 
+         {% elsif prev_monday_day_sn < May and monday_day_sn >= May %} 
             <th> May </th>
-         {% elsif monday_day_sn <= Jun and tuesday_day_sn > Jun %} 
+         {% elsif prev_monday_day_sn < Jun and monday_day_sn >= Jun %} 
             <th> Jun </th>
-         {% elsif monday_day_sn <= Jul and tuesday_day_sn > Jul %} 
+         {% elsif prev_monday_day_sn < Jul and monday_day_sn >= Jul %} 
             <th> Jul </th>
-         {% elsif monday_day_sn <= Aug and tuesday_day_sn > Aug %} 
+         {% elsif prev_monday_day_sn < Aug and monday_day_sn >= Aug %} 
             <th> Aug </th>
-         {% elsif monday_day_sn <= Sep and tuesday_day_sn > Sep %} 
+         {% elsif prev_monday_day_sn < Sep and monday_day_sn >= Sep %} 
             <th> Sep </th>
-         {% elsif monday_day_sn <= Oct and tuesday_day_sn > Oct %} 
+         {% elsif prev_monday_day_sn < Oct and monday_day_sn >= Oct %} 
             <th> Oct </th>
-         {% elsif monday_day_sn <= Nov and tuesday_day_sn > Nov %} 
+         {% elsif prev_monday_day_sn < Nov and monday_day_sn >= Nov %} 
             <th> Nov </th>
-         {% elsif monday_day_sn <= Dec and tuesday_day_sn > Dec %} 
+         {% elsif prev_monday_day_sn < Dec and monday_day_sn > Dec %} 
             <th> Dec </th>
          {% else %}
             <th> </th>
@@ -81,7 +81,7 @@ generate empty calendar
                   <td> NA </td>
                {% endif %}
             {% elsif forloop.last %}
-               {% if weekday >= last_day_dow %}
+               {% if weekday > last_day_dow %}
                   <td> NA </td>
                {% else %}
                   <td> {{ daynumber }} </td>
