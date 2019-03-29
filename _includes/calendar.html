@@ -16,7 +16,7 @@ generate empty calendar
       {% capture start_of_this_year %} {{year}}-01-01  {% endcapture %}
       
       {% assign total_days = end_of_this_year | date: "%j" | plus: 0 %} 
-      {% assign total_weeks = end_of_this_year | date: "%U" | plus: 1 %}
+      {% assign total_weeks = end_of_this_year | date: "%U" | plus: 0 %}
       {% assign first_day_dow = start_of_this_year | date: "%u" | plus: 0 %}
       {% assign last_day_dow = end_of_this_year | date: "%u" | plus: 0 %}
       
@@ -67,7 +67,6 @@ generate empty calendar
             <th> </th>
          {% endif %}
       {% endfor%}
-      <th rowspan="8"> {{ year }}</th>
       </tr>
       </thead>
       
@@ -131,8 +130,6 @@ generate empty calendar
             {% else %}
                <td> {{ activity }} </td>
             {% endif %}
-            
-            
          {% endfor %}
          </tr>
       {% endfor %}
