@@ -35,6 +35,7 @@ generate empty calendar
 
       <table>
       <thead><tr>
+      <th> </th> {% comment %} This column is for week days {% endcomment %}
       {% for week in (1..total_weeks) %}
          {% assign monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
          {% assign prev_monday_day_sn = week | minus: 2 | times: 7 | plus: 1 %}
@@ -99,7 +100,19 @@ generate empty calendar
                {% assign activity = '' %}
             {% endif %}
             
-            {% if forloop.first %}
+            {% if forloop.index==1 %}
+               {% if weekday ==1 %}
+                  <td> Mon </td>
+               {% elsif weekday == 3 %}
+                  <td> Tue </td>
+               {% elsif weekday == 5 %}
+                  <td> Fri </td>
+               {% elsif weekday == 7 %}
+                  <td> Sun </td>
+               {% else %}
+                  <td>  </td>
+               {% endif %}  
+            {% elsif forloop.index==2 %}
                {% if weekday >= first_day_dow %}
                   <td> {{ activity }} </td>
                {% else %}
@@ -128,41 +141,5 @@ generate empty calendar
 
 {{ empty_cal }}
 
-{% capture CalendarWorkspace %}
-   
-   {% capture my_cal_list %}{% endcapture %}
-
-   {% for year in (from_year..to_year) %}
-      
-      {% capture end_of_this_year %}
-         {{year}}-12-31
-      {% endcapture %}
-      
-      {% assign days_in_this_year = end_of_this_year | date: "%j" | plus: 0 %} 
-
-      {% capture my_calendar %}{% endcapture %}
-      {% capture active_days %}{% endcapture %}
-      {% capture empty_calendar %}{% endcapture %}
-            
-      {% comment %} initialize active days {% endcomment %}
-      {% for day in (0..days_in_this_year) %}
-         
-         
-         
-         {% capture active_days %}
-            {{ active_days }}, {{activity}}
-         {% endcapture %}
-         
-      {% endfor %}
-      
-      <p>active_days
-      {{ active_days }}
-      </p>
-      {% comment %} fill in active days {% endcomment %}
-      
-      {% assign active_list =  active_days | split: ", " %}
-      
-   {% endfor %} 
-{% endcapture %}
 {{ CalendarWorkspace | strip }}
 
