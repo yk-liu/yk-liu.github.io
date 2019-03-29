@@ -19,20 +19,18 @@ generate empty calendar
       {% assign total_weeks = end_of_this_year | date: "%U" | plus: 1 %}
       {% assign first_day_dow = start_of_this_year | date: "%u" | plus: 0 %}
       
-      {% capture Jan %} {{year}}-01-01 {% endcapture %}
-      
-      {% assign Jan = Jan | date: "%j" | plus: 0 %}
-      {% assign Feb = year | append: "-02-01" | date: "%j" | plus: 0 %}
-      {% assign Mar = {{year}}-03-01 | date: "%j" | plus: 0 %}
-      {% assign Apr = {{year}}-04-01 | date: "%j" | plus: 0 %}
-      {% assign May = {{year}}-05-01 | date: "%j" | plus: 0 %}
-      {% assign Jun = {{year}}-06-01 | date: "%j" | plus: 0 %}
-      {% assign Jul = {{year}}-07-01 | date: "%j" | plus: 0 %}
-      {% assign Aug = {{year}}-08-01 | date: "%j" | plus: 0 %}
-      {% assign Sep = {{year}}-09-01 | date: "%j" | plus: 0 %}
-      {% assign Oct = {{year}}-10-01 | date: "%j" | plus: 0 %}
-      {% assign Nov = {{year}}-11-01 | date: "%j" | plus: 0 %}
-      {% assign Dec = {{year}}-12-01 | date: "%j" | plus: 0 %}
+      {% capture Jan %} {{year}}-01-01 {% endcapture %} {% assign Jan = Jan | date: "%j" | plus: 0 %}
+      {% capture Feb %} {{year}}-02-01 {% endcapture %} {% assign Feb = Feb | date: "%j" | plus: 0 %}
+      {% capture Mar %} {{year}}-03-01 {% endcapture %} {% assign Mar = Mar | date: "%j" | plus: 0 %}
+      {% capture Apr %} {{year}}-04-01 {% endcapture %} {% assign Apr = Apr | date: "%j" | plus: 0 %}
+      {% capture May %} {{year}}-05-01 {% endcapture %} {% assign May = May | date: "%j" | plus: 0 %}
+      {% capture Jun %} {{year}}-06-01 {% endcapture %} {% assign Jun = Jun | date: "%j" | plus: 0 %}
+      {% capture Jul %} {{year}}-07-01 {% endcapture %} {% assign Jul = Jul | date: "%j" | plus: 0 %}
+      {% capture Aug %} {{year}}-08-01 {% endcapture %} {% assign Aug = Aug | date: "%j" | plus: 0 %}
+      {% capture Sep %} {{year}}-09-01 {% endcapture %} {% assign Sep = Sep | date: "%j" | plus: 0 %}
+      {% capture Oct %} {{year}}-10-01 {% endcapture %} {% assign Oct = Oct | date: "%j" | plus: 0 %}
+      {% capture Nov %} {{year}}-11-01 {% endcapture %} {% assign Nov = Nov | date: "%j" | plus: 0 %}
+      {% capture Dec %} {{year}}-12-01 {% endcapture %} {% assign Dec = Dec | date: "%j" | plus: 0 %}
 
       <table><thead><tr>
       {% for week in (1..total_weeks) %}
@@ -130,7 +128,6 @@ generate empty calendar
             {% endif %}
          {% endfor %}
          
-         added activity = {{activity}} <br>
          {% capture active_days %}
             {{ active_days }}, {{activity}}
          {% endcapture %}
@@ -142,37 +139,7 @@ generate empty calendar
       </p>
       {% comment %} fill in active days {% endcomment %}
       
-      
       {% assign active_list =  active_days | split: ", " %}
-
-      
-      {% comment %} 
-         {% for post in site.posts %}
-            {% assign date = post.date %}
-            
-            {% capture my_calendar %}
-               {{ my_calendar }}
-               {{ post.title}} was written on the 
-               {{ date | date: "%j"  | plus: 0 }}th day since {{ date | date: "%Y" | plus: 0 }}, {{ date | date: "%U" | plus: 0 }} th week, on {{ date | date: "%m"  | plus: 0 }} {{ date | date: "%d"  | plus: 0 }}, weekday {{ date | date: "%u" | plus: 0 }}, 
-            {% endcapture %}
-            
-              
-            {% assign date = post.edit %}
-            
-            {% assign day_since_newyear = {{date | date: "%j" }} | plus: 0 %}
-            {% assign day = {{date | date: "%e" }} | plus: 0 %}
-            {% assign month = {{date | date: "%d" }} | plus: 0 %}
-            {% assign year = {{date | date: "%Y" }} | plus: 0 %}
-            {% assign week_sun = {{date | date" "%U" }} | plus 0 %}
-            {% assign week_mon = {{date | date" "%W" }} | plus 0 %}
-            {% assign weekday = {{date | date" "%W" }} | plus 0 %}
-               
-            {% capture my_calendar %} 
-            edited on the {{ date | date: "%j"  | plus: 0 }}th day since {{ date | date: "%Y" | plus: 0 }}, {{ date | date: "%U" | plus: 0 }} th week, on {{ date | date: "%m"  | plus: 0 }} {{ date | date: "%d"  | plus: 0 }}, weekday {{ date | date: "%u" | plus: 0 }}, 
-            {% endcapture %}
-            
-         {% endfor %}
-      {% endcomment %} 
       
    {% endfor %} 
 {% endcapture %}
