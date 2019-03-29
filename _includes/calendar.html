@@ -42,8 +42,11 @@ date formatting syntax see http://strftime.net/
       {% endfor %}
       
       {% for i in active_list %}
-         {% capture my_cal_list %}{{my_cal_list}} {{ i }}{% endcapture %}
+         {% capture my_cal_list %}{{my_cal_list}},{{ i }}{% endcapture %}
       {% endfor %}
+      
+      cal_list
+      {{my_cal_list | markdownify | strip}}
       
       {% comment %} 
          {% for post in site.posts %}
@@ -76,5 +79,4 @@ date formatting syntax see http://strftime.net/
    {% endfor %} 
 {% endcapture %}
 {{ CalendarWorkspace }}
-cal_list
-{{my_cal_list | markdownify | strip}}
+
