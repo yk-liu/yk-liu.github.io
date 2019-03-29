@@ -134,6 +134,7 @@ generate empty calendar
                {% if posted_day_sn == today_sn %}
                   {% if posted_year == year %}
                      {% assign activity = activity | plus: 1 %}
+                     {% assign today_date = post.date | date: "%b. %d, %Y" %}
                   {% endif %}
                {% endif %}
 
@@ -159,7 +160,7 @@ generate empty calendar
                {% endif %}  
             {% elsif forloop.index==2 %}
                {% if weekday >= first_day_dow %}
-                  <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}"> </td>
+                  <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}">{% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
                {% else %}
                   <td class="not_this_year">  </td>
                {% endif %}
