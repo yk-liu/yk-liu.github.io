@@ -34,10 +34,10 @@ date formatting syntax see http://strftime.net/
             {% assign posted_day_sn = post.date | date: "%j" | plus: 0 %}
             
             {% if posted_day_sn == day %}
-               day match! ;;info: {{ day }} {{year }} : {{posted_day_sn}} {{posted_year }} ;;
                {% if posted_year == year %}
-                  year match! ;;info: {{ day }} {{year }} : {{posted_day_sn}} {{posted_year }} ;;
+                  match! 
                   {% increment activity %}
+                  ;;info: {{ day }} {{year }} : {{posted_day_sn}} {{posted_year }} ; activity = {{activity}};
                {% endif %}
             {% endif %}
             
