@@ -37,12 +37,12 @@ generate empty calendar
       <thead><tr>
       {% for week in (1..total_weeks) %}
          {% assign monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
-         {{  monday_day_sn }}, Jan: {{Jan}}, Feb: {{Feb}}
+         
          {{ monday_day_sn | plus: 1}}
          {% if    monday_day_sn <= Jan and {{monday_day_sn | plus: 1}} > Jan %}
             <th> Jan, {{monday_day_sn}}, {{Jan}} </th>
          {% elsif monday_day_sn <= Feb and {{monday_day_sn | plus: 1}} > Feb %} 
-            <th> Feb </th>
+            <th> Feb, {{monday_day_sn}}, {{Feb}}</th>
          {% elsif monday_day_sn <= Mar and {{monday_day_sn | plus: 1}} > Mar %} 
             <th> Mar </th>
          {% elsif monday_day_sn <= Apr and {{monday_day_sn | plus: 1}} > Apr %} 
@@ -73,7 +73,7 @@ generate empty calendar
       {% for weekday in (1..7) %}
          <tr>
          {% for week in (1..total_weeks) %} 
-            {% assign daynumber = week | minus: 1 | times: 7 | plus: weekday %}
+            {% assign daynumber = week | minus: 1 | times: 7 | plus: weekday | minus: first_day_dow %}
             {% if forloop.first %}
                {% if weekday >= first_day_dow %}
                   <td> {{ daynumber }} </td>
