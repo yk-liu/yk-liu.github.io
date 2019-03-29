@@ -31,7 +31,7 @@ date formatting syntax see http://strftime.net/
       {% for day in (0..days_in_this_year) %}
          {% assign activity = 0 %}
          initial activity = {{activity}} ;
-         {% assign activity = activity | plus: 1 %}
+         {% increment activity %}
          tested activity = {{activity}} ;
          {% capture day %}    {{day}}     {% endcapture %}
          {% for post in site.posts %}
@@ -42,7 +42,7 @@ date formatting syntax see http://strftime.net/
                day match!
                {% if posted_year == year %}
                   year match!
-                  {% assign activity = activity | plus: 1 %}
+                  {% increment activity %}
                {% endif %}
             {% endif %}
             
