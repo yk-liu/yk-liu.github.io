@@ -157,20 +157,18 @@ generate empty calendar
                {% endif %}  
             {% elsif forloop.index==2 %}
                {% if weekday >= first_day_dow %}
-                  <td class="act_{{ activity }}" title="{{today_sn}}"> </td>
+                  <td class="act_{{ activity }}" title="{{today_sn}}'s day in {{year}}, {{ activity }} activity"> </td>
                {% else %}
                   <td class="not_this_year">  </td>
                {% endif %}
-            {% elsif forloop.rindex ==2 %}
+            {% elsif forloop.rindex ==1 %}
                {% if weekday > last_day_dow %}
                   <td class="not_this_year">  </td>
                {% else %}
-                  <td class="act_{{ activity }}" title="{{today_sn}}"> </td>
-               {% endif %}
-            {% elsif forloop.rindex ==1 %} 
-               <td>  </td>       
+                  <td class="act_{{ activity }}" title="{{today_sn}}'s day in {{year}}, {{ activity }} activity"> </td>
+               {% endif %}      
             {% else %}
-               <td class="act_{{ activity }}" title="{{today_sn}}"> </td>
+               <td class="act_{{ activity }}" title="{{today_sn}}'s day in {{year}}, {{ activity }} activity"> </td>
             {% endif %}
          {% endfor %}
          </tr>
@@ -185,5 +183,4 @@ generate empty calendar
 
 {{ empty_cal }}
 
-{{ CalendarWorkspace | strip }}
 
