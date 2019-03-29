@@ -37,12 +37,17 @@ background-color: {{activity_color_3}};
 .act_4 {
 background-color: {{activity_color_4}};
 }
-table, th, td {
+#calendar, #calendar th, #calendar td {
 border-collapse: collapse;
-border: 3px solid #f8f8f8
+border: 3px solid #f8f8f8;
+font-size: small;
 }
-th {
+#calendar th {
 width: 1rem
+}
+#calendar th, #calendar td {
+width: 2rem;
+height: 2rem;
 }
 </style>
 
@@ -74,7 +79,7 @@ generate empty calendar
       {% capture Dec %} {{year}}-12-01 {% endcapture %} {% assign Dec = Dec | date: "%j" | plus: 0 %}
       
       <div style="overflow-x:auto;">
-      <table>
+      <table id="calendar">
       <thead><tr>
       <th> </th> {% comment %} This column is for week days {% endcomment %}
       {% for week in (1..total_weeks) %}
