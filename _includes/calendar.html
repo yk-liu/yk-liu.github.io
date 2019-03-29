@@ -5,6 +5,34 @@ date formatting syntax see http://strftime.net/
 {% assign to_year =  site.time | date: '%Y' | times: 1 %}
 
 
+{% assign notthisyear = '#dddddd' %}
+{% assign activity_color_0 = '#f1f1f1' %}
+{% assign activity_color_1 = '#78cfa8' %}
+{% assign activity_color_2 = '#53c28f' %}
+{% assign activity_color_3 = '#42b983' %}
+{% assign activity_color_4 = '#3ba676' %}
+
+
+<style>
+.not_this_year {
+background-color: {{notthisyear}};
+}
+.act_0 {
+background-color: {{activity_color_1}};
+}
+.act_1 {
+background-color: {{activity_color_1}};
+}
+.act_2 {
+background-color: {{activity_color_2}};
+}
+.act_3 {
+background-color: {{activity_color_3}};
+}
+.act_4 {
+background-color: {{activity_color_4}};
+}
+</style>
 
 {% comment %} 
 generate empty calendar
@@ -96,11 +124,7 @@ generate empty calendar
                   {% endif %}
                {% endif %}
             {% endfor %}
-            
-            {% if activity == 0 %}
-               {% assign activity = '' %}
-            {% endif %}
-            
+                        
             {% if forloop.index==1 %}
                {% if weekday ==1 %}
                   <td> Mon </td>
@@ -115,20 +139,20 @@ generate empty calendar
                {% endif %}  
             {% elsif forloop.index==2 %}
                {% if weekday >= first_day_dow %}
-                  <td> {{ activity }} </td>
+                  <td class="act_{{ activity }}"> </td>
                {% else %}
-                  <td> NA </td>
+                  <td class="not_this_year">  </td>
                {% endif %}
             {% elsif forloop.rindex ==2 %}
                {% if weekday > last_day_dow %}
-                  <td> NA </td>
+                  <td class="not_this_year">  </td>
                {% else %}
-                  <td> {{ activity }} </td>
+                  <td class="act_{{ activity }}"> </td>
                {% endif %}
             {% elsif forloop.rindex ==1 %} 
                <td>  </td>       
             {% else %}
-               <td> {{ activity }} </td>
+               <td class="act_{{ activity }}"> </td>
             {% endif %}
          {% endfor %}
          </tr>
