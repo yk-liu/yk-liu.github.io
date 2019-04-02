@@ -84,31 +84,31 @@ generate empty calendar
       <thead><tr>
       <th> </th> {% comment %} This column is for week days {% endcomment %}
       {% for week in (1..total_weeks) %}
-         {% assign monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
+         {% assign nextmonday_day_sn = week | times: 7 | plus: 1 %}
          {% assign prev_monday_day_sn = week | minus: 2 | times: 7 | plus: 1 %}
-         {% if    prev_monday_day_sn < Jan and monday_day_sn >= Jan %}
+         {% if    prev_monday_day_sn < Jan and nextmonday_day_sn >= Jan %}
             <th> Jan </th>
-         {% elsif prev_monday_day_sn < Feb and monday_day_sn >= Feb %} 
+         {% elsif prev_monday_day_sn < Feb and nextmonday_day_sn >= Feb %} 
             <th> Feb </th>
-         {% elsif prev_monday_day_sn < Mar and monday_day_sn >= Mar %} 
+         {% elsif prev_monday_day_sn < Mar and nextmonday_day_sn >= Mar %} 
             <th> Mar </th>
-         {% elsif prev_monday_day_sn < Apr and monday_day_sn >= Apr %} 
+         {% elsif prev_monday_day_sn < Apr and nextmonday_day_sn >= Apr %} 
             <th> Apr </th>
-         {% elsif prev_monday_day_sn < May and monday_day_sn >= May %} 
+         {% elsif prev_monday_day_sn < May and nextmonday_day_sn >= May %} 
             <th> May </th>
-         {% elsif prev_monday_day_sn < Jun and monday_day_sn >= Jun %} 
+         {% elsif prev_monday_day_sn < Jun and nextmonday_day_sn >= Jun %} 
             <th> Jun </th>
-         {% elsif prev_monday_day_sn < Jul and monday_day_sn >= Jul %} 
+         {% elsif prev_monday_day_sn < Jul and nextmonday_day_sn >= Jul %} 
             <th> Jul </th>
-         {% elsif prev_monday_day_sn < Aug and monday_day_sn >= Aug %} 
+         {% elsif prev_monday_day_sn < Aug and nextmonday_day_sn >= Aug %} 
             <th> Aug </th>
-         {% elsif prev_monday_day_sn < Sep and monday_day_sn >= Sep %} 
+         {% elsif prev_monday_day_sn < Sep and nextmonday_day_sn >= Sep %} 
             <th> Sep </th>
-         {% elsif prev_monday_day_sn < Oct and monday_day_sn >= Oct %} 
+         {% elsif prev_monday_day_sn < Oct and nextmonday_day_sn >= Oct %} 
             <th> Oct </th>
-         {% elsif prev_monday_day_sn < Nov and monday_day_sn >= Nov %} 
+         {% elsif prev_monday_day_sn < Nov and nextmonday_day_sn >= Nov %} 
             <th> Nov </th>
-         {% elsif prev_monday_day_sn < Dec and monday_day_sn > Dec %} 
+         {% elsif prev_monday_day_sn < Dec and nextmonday_day_sn > Dec %} 
             <th> Dec </th>
          {% else %}
             <th> </th>
