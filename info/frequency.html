@@ -121,7 +121,7 @@ generate empty calendar
       </tbody>
       {% for weekday in (1..7) %}
          <tr>
-         {% for week in (0..total_weeks | plus: 1) %} 
+         {% for week in (0..{{total_weeks | plus: 1}}) %} 
             {% assign today_sn = week | minus: 1 | times: 7 | plus: weekday | minus: first_day_dow | plus: 1 %}
             
             {% assign activity = 0 %}
