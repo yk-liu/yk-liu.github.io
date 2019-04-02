@@ -42,12 +42,14 @@ border-collapse: collapse;
 border: 3px solid #f8f8f8;
 font-size: small;
 }
-#calendar th {
-width: 1rem
-}
 #calendar th, #calendar td {
-width: 2rem;
-height: 2rem;
+width: 0.8rem;
+height: 0.8rem;
+}
+#calendar {
+line-height: unset;
+table-layout: fixed;
+padding: unset;
 }
 </style>
 
@@ -141,7 +143,7 @@ generate empty calendar
                {% if edited_day_sn == today_sn %}
                   {% if edited_year == year %}
                      {% assign activity = activity | plus: 1 %}
-                     {% assign today_date = post.date | date: "%b. %d, %Y" %}
+                     {% assign today_date = post.edit | date: "%b. %d, %Y" %}
                   {% endif %}
                {% endif %}
             {% endfor %}
@@ -168,10 +170,10 @@ generate empty calendar
                {% if weekday > last_day_dow %}
                   <td class="not_this_year">  </td>
                {% else %}
-                  <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}"> </td>
+                  <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}"> {% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
                {% endif %}      
             {% else %}
-               <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}"> </td>
+               <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}"> {% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
             {% endif %}
          {% endfor %}
          </tr>
