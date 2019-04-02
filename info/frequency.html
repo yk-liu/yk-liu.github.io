@@ -89,7 +89,7 @@ generate empty calendar
       {% for week in (1..total_weeks_pp) %}
          {% assign monday_day_sn = week | times: 7 | plus: 1 %}
          {% assign prev_monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
-         {% if    prev_monday_day_sn < Jan and  monday_day_sn >= Jan %}
+         {% if forloop.index0 == 1 %}
             <th> Jan </th>
          {% elsif prev_monday_day_sn < Feb and monday_day_sn >= Feb %} 
             <th> Feb </th>
@@ -151,7 +151,7 @@ generate empty calendar
             {% endfor %}
                         
             {% if forloop.first %}
-               {% if weekday ==1 %}
+               {% if weekday == 1 %}
                   <td> Mon </td>
                {% elsif weekday == 3 %}
                   <td> Tue </td>
@@ -162,7 +162,7 @@ generate empty calendar
                {% else %}
                   <td>  </td>
                {% endif %}  
-            {% elsif forloop.index0==1 %}
+            {% elsif forloop.index0 == 1 %}
                {% if weekday >= first_day_dow %}
                   <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}">{% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
                {% else %}
