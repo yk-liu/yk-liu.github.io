@@ -162,7 +162,7 @@ generate empty calendar
                {% else %}
                   <td>  </td>
                {% endif %}  
-            {% elsif forloop.index0 == 1 %}
+            {% elsif forloop.index == 1 %}
                {% if weekday >= first_day_dow %}
                   <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}">{% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
                {% else %}
