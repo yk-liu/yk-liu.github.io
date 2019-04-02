@@ -63,7 +63,7 @@ generate empty calendar
 {% endcomment %}
 
 {% capture empty_cal %}
-   {% for year in (from_year..to_year) %}
+   {% for year in (from_year..to_year) reversed %}
       <h3> {{year}} </h3>
       {% capture end_of_this_year %}   {{year}}-12-31  {% endcapture %}
       {% capture start_of_this_year %} {{year}}-01-01  {% endcapture %}
