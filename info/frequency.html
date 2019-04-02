@@ -1,5 +1,5 @@
 ---
-layout: info
+layout: displayindex
 title: Calendar
 ---
 
@@ -85,8 +85,8 @@ generate empty calendar
       <thead><tr>
       <th> </th> {% comment %} This column is for week days {% endcomment %}
       {% for week in (1..total_weeks) %}
-         {% assign monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
-         {% assign prev_monday_day_sn = week | minus: 2 | times: 7 | plus: 1 %}
+         {% assign monday_day_sn = week | minus: 2 | times: 7 | plus: 1 %}
+         {% assign prev_monday_day_sn = week | minus: 3 | times: 7 | plus: 1 %}
          {% if    prev_monday_day_sn < Jan and  monday_day_sn >= Jan %}
             <th> Jan </th>
          {% elsif prev_monday_day_sn < Feb and monday_day_sn >= Feb %} 
@@ -121,7 +121,7 @@ generate empty calendar
       </tbody>
       {% for weekday in (1..7) %}
          <tr>
-         {% for week in (0..total_weeks) %} 
+         {% for week in (0..total_weeks | plus: 1) %} 
             {% assign today_sn = week | minus: 1 | times: 7 | plus: weekday | minus: first_day_dow | plus: 1 %}
             
             {% assign activity = 0 %}
@@ -160,13 +160,13 @@ generate empty calendar
                {% else %}
                   <td>  </td>
                {% endif %}  
-            {% elsif forloop.index==2 %}
+            {% elsif forloop.index0==1 %}
                {% if weekday >= first_day_dow %}
                   <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}">{% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
                {% else %}
                   <td class="not_this_year">  </td>
                {% endif %}
-            {% elsif forloop.rindex ==1 %}
+            {% elsif forloop.last %}
                {% if weekday > last_day_dow %}
                   <td class="not_this_year">  </td>
                {% else %}
