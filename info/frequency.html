@@ -19,6 +19,9 @@ date formatting syntax see http://strftime.net/
 
 
 <style>
+#calendar_wrapper{
+line-height: 0.5rem;
+}
 .not_this_year {
 background-color: {{notthisyear}};
 }
@@ -84,7 +87,7 @@ generate empty calendar
       
       {% assign total_weeks_pp = total_weeks | plus: 1 %}
       
-      <div style="overflow-x:auto;">
+      <div id="calendar_wrapper" style="overflow-x:auto;">
       <table id="calendar">
       <thead><tr>
       <th> </th> {% comment %} This column is for week days {% endcomment %}
