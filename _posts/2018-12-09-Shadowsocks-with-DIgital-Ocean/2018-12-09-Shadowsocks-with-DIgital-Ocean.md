@@ -3,9 +3,21 @@ title: Shadowsocks + Digital Ocean = VPN of 1TB/month
 categories: Code-Snippets
 tags: VPN
 keywords: VPN shadowsocks digital-ocean
-description: Code for using digital ocean service for VPN. It is cheap for .edu-e-mail owners (free 50\$ on GitHub Student Pack). 
+description: >-
+  Code for using digital ocean service for VPN. It is cheap for .edu-e-mail
+  owners (free 50\$ on GitHub Student Pack).
 toc: false
 mathjax: false
+comments:
+  - author:
+      type: twitter
+      displayName: shang_leslie
+      url: 'https://twitter.com/shang_leslie'
+      picture: >-
+        https://pbs.twimg.com/profile_images/1108982041410830336/uJfe8Ecr_bigger.jpg
+    content: thanks
+    date: 2019-04-09T07:06:18.256Z
+
 ---
 
 Digital Ocean is a cheap-for-someone-has-a-.edu-mail (free 50\$ on GitHub Student Pack) service for online calculations. It can also be used as a VPN providing encryption for your data, for it comes with a 1 TB outbound data transfer. Here are my setups. I chose the cheapest option for my droplet (5\$/month). If you have trouble accessing Digital Ocean, take a look at [psiphone](https://www.psiphon3.com/en/index.html), or [Tunnel Bear](https://www.tunnelbear.com/) has a free 500MB monthly data.
