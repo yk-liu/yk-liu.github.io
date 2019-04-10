@@ -68,8 +68,12 @@ I mainly use [Typora](https://www.typora.io) to write my post.-->
 
 # Contact
 
-The best way to reach us is via email: $qi.she$ @ $intel.com$，$xuesong.shi$ @ $intel.com$
+For joining our IROS2019 competition (either Lifelong Object Recognition or Lifelong SLAM tasks), please contact us via: $qi.she$ @ $intel.com$ or $xuesong.shi$ @ $intel.com$. 
 
 # Further materials 
+
+- [Incremental Learning Makes the Robot Smarter]{https://mp.weixin.qq.com/s/_txt3Y9HJlNDFljDCjKODA}
+- [From Computer Vision to Rbotic Spatial Intelligence]{https://mp.weixin.qq.com/s/9d0sbFdeAzgu81rzwDii9A}
+
 
 
