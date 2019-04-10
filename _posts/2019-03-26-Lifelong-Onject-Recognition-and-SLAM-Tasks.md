@@ -14,13 +14,15 @@
 
 # Important Dates
 ```md
-### Dataset Release - June, 2019
+Dataset Release - June, 2019
 - The teams could choose the sensors and processing platforms. It is a virtual competition (software-level).
-### First Round - Sept, 2019
+
+First Round - Sept, 2019
 - Register for the competition first. 
 - Download datasets, software tools, and upload the results before the deadline.
 - Highest-scored teams will be invited to the final competition.
-### Final Round - Nov, 2019
+
+Final Round - Nov, 2019
 - A new dataset will be used for the final competition.
 - The algorithms from each team shall be run onsite. 
 - Results will be visualized in real time for the audience.
