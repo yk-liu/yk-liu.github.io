@@ -1,5 +1,17 @@
+The competition will be held during IROS 2019, at November 5^th, 2019
+
+<style>
+table th:first-of-type {
+    width: 30%;
+}
+
+table th:nth-of-type(2) {
+    width: 30%;
+}
+</style>
+
 | Time | Event | Comments |
-|:-----: | :---------: | :-------: |
+|----- | ------ | ----- |
 | 8:30 - 9:00 | Organizer move-in and setup | The competition organizer can help to setup the devices |
 | 9:00 - 10:00 | Participants setup and trial on given machines | Deployment over the cloud or local machine |
 | 10:00 - 10:30 | Time break |  |
