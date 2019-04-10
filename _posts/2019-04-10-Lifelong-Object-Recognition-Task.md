@@ -5,6 +5,12 @@
 
 - The final score is obtained via averaging the 3 aspects scores. (1) accuracy over both new and old tasks, e.g. object recognition; (2) the memory efficiency. The model size should be fixed not exceeding our bounded value, and (3) the running time for inference under the same setting. An evaluation metric will be provided.
 
+# Task-specific Rules
+- The methods should be incremental, which means the model should be only trained over current task, and test over all learned tasks.
+- The memory requirement of the model should be bounded by a finite bound, especially, the bound shall be independent of the number of training samples presented to the system, e.g. fixed model size.
+- The computational demand of adding new training tasks or making a single inference should be bounded by a finite bound.
+- The final score is obtained via averaging the 3 aspects scores. (1) accuracy over both new and old tasks, e.g. object recognitions; (2) the memory efficiency. The model size should be fixed not exceeding our bounded value; and (3) the running time for inference under same setting. An evaluation metric will be provided.
+
 # Important Dates
 *Dataset Release - June, 2019*
 - The teams could choose the sensors and processing platforms. It is a virtual competition (software-level).
