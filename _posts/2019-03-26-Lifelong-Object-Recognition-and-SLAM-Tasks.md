@@ -1,4 +1,4 @@
-# Lifelong Onject Recognition 
+# Lifelong Object Recognition 
 - This task intends to explore how to leverage the knowledge learned from previous tasks that could help learn new task better, and also how to efficiently memorize of previously learned tasks. Making the robot behaves like the human with knowledge transfer, association, and combination capabilities.
 
 - From instance-incremental; class-incremental; attribute-incremental. The goal is to test the model’s capability over continuous learning without forgetting learned patterns at several levels (instances/classes/attributes).
