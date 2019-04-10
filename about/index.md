@@ -72,8 +72,8 @@ For joining our IROS2019 competition (either Lifelong Object Recognition or Life
 
 # Further materials 
 
-- [Incremental Learning Makes the Robot Smarter]{https://mp.weixin.qq.com/s/_txt3Y9HJlNDFljDCjKODA}
-- [From Computer Vision to Rbotic Spatial Intelligence]{https://mp.weixin.qq.com/s/9d0sbFdeAzgu81rzwDii9A}
+- [Incremental Learning Makes the Robot Smarter](https://mp.weixin.qq.com/s/_txt3Y9HJlNDFljDCjKODA)
+- [From Computer Vision to Rbotic Spatial Intelligence](https://mp.weixin.qq.com/s/9d0sbFdeAzgu81rzwDii9A)
 
 
 
