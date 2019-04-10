@@ -1,6 +1,6 @@
 # About this website
 
-This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) uses these sources:
+This website uses these sources:
 
 | Module                                                       | Mainly used in                                  | License/ TOS                                                 |
 | ------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------------------------------ |
