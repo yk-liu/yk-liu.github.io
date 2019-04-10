@@ -15,10 +15,8 @@
 # Important Dates
 <div class="mermaid">
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    Dataset Release - June, 2019 --> First Round - Sept, 2019;
+    First Round - Sept, 2019 --> Final Round-Nov, 2019
 </div>
 
 
