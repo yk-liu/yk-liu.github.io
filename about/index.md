@@ -21,7 +21,7 @@ The first and the most crutial thing needed to be seriously considered is what i
 
 
 # Lifelong Robotic Vision
-![Tri](https://github.com/lifelong-robotic-vision/lifelong-robotic-vision.github.io/blob/master/about/Relation.png)
+![Humman-Computer-Robot](https://github.com/lifelong-robotic-vision/lifelong-robotic-vision.github.io/blob/master/about/Relation.png)
 
 Humans have the remarkable ability to **learn continuously** from the external environment and the inner experience. One of the grand goals of robots is also building an artificial **"lifelong learning"** agent that can shape a cultivated understanding of the world from the current scene and their previous knowledge via an **autonomous lifelong development.**
 
