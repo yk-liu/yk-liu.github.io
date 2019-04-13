@@ -66,9 +66,9 @@ Typically the fundamental piece is taken to be a quantum two-state system known 
 
 While a classical bit, *i.e.*, a classical two-state system, can be either “zero” or “one” at any given time, a qubit can be in one of the infinitely many superpositions $a\ket{0}+b\ket{1}$. For $n$ qubits, the state becomes a vector in a $2n​$–dimensional Hilbert space, in which the different qubits are generally entangled with one another.
 
-<img src='assets/Qbits.png' alt='qubits v.s. bits' width="60%">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-11-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-I/assets/Qbits.png' alt='qubits v.s. bits' width="60%">
 
-The quantum phenomenon of superposition allows a system to traverse many trajectories in parallel, and determine its state by their coherent sum. In some sense, this coherent sum amounts to massive quantum parallelism. It should not, however, be confused with classical parallel computing, where many "bits" are used instead of one "qubit" in a superposition state.[^1 ] 
+The quantum phenomenon of superposition allows a system to traverse many trajectories in parallel, and determine its state by their coherent sum. In some sense, this coherent sum amounts to massive quantum parallelism. It should not, however, be confused with classical parallel computing, where many "bits" are used instead of one "qubit" in a superposition state.[^1] 
 
 Pachos' book[^2] also has a clear explanation on this topic.
 
@@ -79,7 +79,7 @@ Pachos' book[^2] also has a clear explanation on this topic.
 The over-simplification of Quantum Computation is as such:
 
 - **Initialization** of the system in a given state $\ket{\psi_i}$. This system can be a many-body system, thus entanglements amongst subsystems are possible. The presence of entanglement dramatically increases the dimension of the encoding space. 
-- **Manipulation** of the system. Usually done by letting the system evolve <u>**unitarily**</u> according to a certain Hamiltonian $H$, then according to the Schrödinger Equation, $\ket{\psi}=U(t) \ket{\psi_i}$, where $\tfrac{\d U}{\d t} = iH(t)U(t)/\hbar$. $U$ is often referred to as the quantum gate. 
+- **Manipulation** of the system. Usually done by letting the system evolve **<u>unitarily</u>** according to a certain Hamiltonian $H$, then according to the Schrödinger Equation, $\ket{\psi}=U(t) \ket{\psi_i}$, where $\tfrac{\d U}{\d t} = iH(t)U(t)/\hbar$. $U$ is often referred to as the quantum gate. 
 - **Measurement** of the system. Such measurement will break any superposition of the system. The system will give a certain outcome for each measurement. 
 
 ## Setup of Toy Quantum Computation: Qubits, Gates
@@ -101,15 +101,20 @@ $$
 $$
 
 Where $\sigma_x$ is known as the classical $NOT$ gate that changes the input $0$ or $1$ to the output $1$ or $0 $, respectively.
+
 $$
 \sigma_x \ket{0} = \begin{pmatrix} 0& 1\\ 1 & 0\end{pmatrix} \cdot \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}0\\1\end{pmatrix} = \ket{1} \\
 \sigma_x \ket{1} = \begin{pmatrix} 0& 1\\ 1 & 0\end{pmatrix} \cdot \begin{pmatrix}0\\1\end{pmatrix} = \begin{pmatrix}1\\0\end{pmatrix} = \ket{0}
 $$
+
 By adjusting the orientations of the magnetic field, since $\sigma_x,\sigma_y,\sigma_z$ are the generators of this Lie group, any unitary matrix can be implemented as $\sigma_{\vec d} = d_1\sigma_x+d_2\sigma_y+d_3\sigma_z$, where $\vec d$ is a unitary vector along the direction of the magnetic field. For example, The Hadamard gate is 
+
 $$
 H = \frac{1}{\sqrt 2}\begin{pmatrix} 1& 1\\ 1 & -1\end{pmatrix} = \sigma_{\scriptsize (\tfrac{1}{\sqrt 2}, \tfrac{1}{\sqrt 2},0)}.
 $$
+
 To create entanglement between two qubits we need to introduce two qubit quantum gates. An important class of two qubit gates is the controlled gates, $CU$. These gates treat one qubit as the controller and the other one as the target. The action of $CU$ is to leave the target qubit unaffected when the control is in state $\ket0$ and to apply the unitary matrix $U$ on the target qubit when the control is in state $\ket1$. One of them being $CNOT$
+
 $$
 CNOT = \begin{pmatrix}1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1\\ 0 & 0 & 1 & 0 \end{pmatrix}.
 $$
@@ -117,9 +122,11 @@ $$
 ## Measurement
 
 The measurement is described by the projection matrix
+
 $$
 P=\ket{\psi}\bra{\psi}
 $$
+
 while projections of a many-qubit state onto an entangled two-qubit state can also be considered.
 
 # Example of Quantum Circuit
@@ -128,8 +135,8 @@ See [Grover's Algorithm](https://medium.com/@jonathan_hui/qc-grovers-algorithm-c
 
  
 
-[1]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
+[^1]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
 
-[2]: Pachos, J. K. (2012). *Introduction to topological quantum computation*. Cambridge University Press.
+[^2]: Pachos, J. K. (2012). *Introduction to topological quantum computation*. Cambridge University Press.
 
-[3]:  https://quantumexperience.ng.bluemix.net/qx/editor
+[^3]: <https://quantumexperience.ng.bluemix.net/qx/editor>

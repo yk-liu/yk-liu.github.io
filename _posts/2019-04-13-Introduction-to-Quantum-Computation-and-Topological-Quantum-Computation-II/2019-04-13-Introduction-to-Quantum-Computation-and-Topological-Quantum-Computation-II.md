@@ -1,6 +1,6 @@
 ---
 title: >
-   Introduction to Topological Quantum Computation: Basics of Topological Quantum computation
+   Introduction to Topological Quantum Computation: Braiding Anyons
 categories: Quantum-computation Topology-quantum-computation
 tags: Quantum-computation Topological-quantum-computation
 keywords: Braiding Anyon Qubit Moore's-Law
@@ -37,3 +37,8 @@ $$
 \notag
 $$
 
+# Anyons
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-11-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Loop-on-Lattice.png" alt="Loop on Lattice" width="80%"> 
+
+# Braiding DIagrams
