@@ -12,7 +12,7 @@ numbering: false
 
 It's well known that Python makes you fly. Undoubtedly, Python is a very charming language that can reduce heavy workloads to simple codes. Due to its amazingly abundant libraries, complicated jobs can be done easily within a few lines such as "antigravity". (image from [xkcd.com](xkcd.com/))
 
-<img src="https://imgs.xkcd.com/comics/python.png" width="50%" />
+<img src="https://imgs.xkcd.com/comics/python.png" alt="Flying Python" width="50%" />
 
 
 

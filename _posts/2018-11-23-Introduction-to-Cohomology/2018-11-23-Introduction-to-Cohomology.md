@@ -73,7 +73,7 @@ $$
 
 Hence we have the following diagram.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/FormsComplex.png" width="80%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/FormsComplex.png" alt="Forms complex" width="80%">
 
 The differences exist but the symbol $\d$ still stands for "take the edge". 
 
@@ -174,7 +174,7 @@ $$
 
 Like in the case of homology group, the cohomology group is just those closed $r​$-forms that are not exact.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/ChainComplex.png" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/ChainComplex.png" alt="Chain complex" width="50%">
 
 # Exactness
 
@@ -191,7 +191,7 @@ The sufficient and necessary conditions of exactness in the last post about homo
 
 So far we have defined the cohomology group and pointed out the relationships between it and the homology group. Now it is time to find some examples.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/ChainComplex.png" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-23-Introduction-to-Cohomology/assets/ChainComplex.png" alt="Chain complex" width="50%">
 
 In short, we are looking for closed $r$-forms that are not exact. For simplicity, we will be looking at one-forms in $2$-dimensional spaces, $\omega = F\d x+G\d y$. 
 

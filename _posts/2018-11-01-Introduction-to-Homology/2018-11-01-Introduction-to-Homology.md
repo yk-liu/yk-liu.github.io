@@ -67,11 +67,11 @@ Most of the students will draw a few polyhedrons, a cube or a tetrahedron, count
 
 |            Name            |                            Image                             | Vertices $V$ | Edges $E$ | Faces $F$ | Euler characteristic: $V-E+F$ |
 | :------------------------: | :----------------------------------------------------------: | ------------ | --------- | --------- | ----------------------------- |
-|        Tetrahedron         | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/tetrahedron.png) | 4            | 6         | 4         | 2                             |
-|            Cube            | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Cube.png) | 8            | 12        | 6         | 2                             |
-|  Cube with a hole (wrong)  | ![](https://raw.github.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/wrongCubeWithHole.png) | 16           | 24        | 10        | 2                             |
-| Cube with a hole (correct) | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CubeWithHole.png) | 16           | 32        | 16        | 0                             |
-|        Hollow cube         | ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/hollowCube.png) | 16           | 24        | 12        | 4                             |
+|        Tetrahedron         | ![Tetrahedron](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/tetrahedron.png) | 4            | 6         | 4         | 2                             |
+|            Cube            | ![Cube](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Cube.png) | 8            | 12        | 6         | 2                             |
+|  Cube with a hole (wrong)  | ![Cube with a hole (wrong)](https://raw.github.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/wrongCubeWithHole.png) | 16           | 24        | 10        | 2                             |
+| Cube with a hole (correct) | ![Cube with a hole (correct)](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CubeWithHole.png) | 16           | 32        | 16        | 0                             |
+|        Hollow cube         | ![Hollow cube](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/hollowCube.png) | 16           | 24        | 12        | 4                             |
 
 Notice that a polyhedron's faces must be simple connected (any two vertices must be connected by an edge), so the correct cube with a hole needs a few extra lines.
 
@@ -85,7 +85,7 @@ Why is a cube with a hole different from other polyhedrons and how can we charac
 
 One way to see it is that it has a hole in it. However, a hole is a concept from daily life, which a typical mathematician might ask unhumorously for clarification. One way to see it is that there exist some loops, as is shown below, that will not cut the **surface** of this polyhedron into halves. This partly explains the motivation of defining chains and boundaries later.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CutCubeWithHole.png" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CutCubeWithHole.png" alt="Cut Cube with a hole" width="60%">
 
 # Triangulation
 
@@ -95,17 +95,17 @@ Homology, however, is just a natural way of defining Euler characteristics in to
 
 Triangulation is again no stranger for anyone who ever took part in [IYPT](http://iypt.org)(International Young Physicists' Tournament), [CUPT](http://adsabs.harvard.edu/abs/2013APS..MARF38013L)(China Undergraduate Physics Tournament), or any PTs, and had some experience with [COMSOL Multiphysics® software](https://www.comsol.com/comsol-multiphysics). The following is a triangulation or a "meshing" as is called in the software, of a spring (from [Nishant Nath](https://nishantnath.wordpress.com/2012/06/21/comsol-tutorials-meshing/)).
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/COMSOL(R)mesh.png" width="80%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/COMSOL(R)mesh.png" alt="COMSOL screenshot" width="80%">
 
 It is also very commonly seen at 3D modeling and Art (image from [freepik](https://www.freepik.com/blog/10-free-low-poly-animal-vector-images/)), see also [here](https://poly.google.com/view/46bXrRt8pFF).
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/LowPolyBear.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/LowPolyBear.png" alt="triangulation of a bear" width="30%">
 
 It is self-evident that this technique is very helpful as it converts a smooth object to a "discrete" one while maintaining its most essential traits so that you can still recognize it is a bear. Acute readers might have known where we are heading: we are going to calculate the Euler Characteristic of smooth objects (topological spaces) by triangulating. 
 
 Indeed, similar techniques can be adapted to topology spaces. We can use "triangles" to mesh out any oddly shaped topological space, turning it into a "polyhedron". From this polyhedron, we can calculate the Euler characteristic of the space, telling us how many "holes" are in this topological space. This gives us a way to classify topology spaces according to its "holes". This is an important aspect of a topological space as in the famous example of topology - a cup and a doughnut is topological equivalent. (image from [Wikipedia](https://en.wikipedia.org/wiki/Topology))
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif" width="20%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif" alt ="Mug and Torus morph" width="20%">
 
 ## Simplexes
 
@@ -121,7 +121,7 @@ A simplex can have generalized "faces". These are named $k$-faces. For instance,
 
 ## Simplicial Complexes and Polyhedrons
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersection.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersection.png" alt="intersected polyhedrons" width="30%">
 
 From simplexes, simplicial complexes can be constructed. Simplicial complexes are again generalizations of polyhedrons in higher or lower dimensions.
 
@@ -132,13 +132,13 @@ A simplicial complex $K$ is a set of simplexes glued together, such that
 
 This definition is quite intuitive. By requirement 1., a simplicial complex has a well-defined boundary (surface). All bodies must be covered by a surface. For example, the interior of a cube is not a simplicial complex. By requirement 2., simplexes in a simplicial complex are not allowed to pass through each other freely. By "not passing through", we mean all the points generated by the intersection must be included. For example, the left is not a simplicial complex for the intersection is not counted while the right is a lawful simplicial complex. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersectionExample.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/intersectionExample.png" alt="intersected simplexes" width="30%">
 
 Formally, the simplicial complex $K$ is defined as a set of simplexes.
 
 The dimension of $K$, denoted as $\dim K$ is defined as the largest dimension of simplexes in $K$. This means that although a complex can be in high dimensional space, for example, a triangle embedded in a $4$-dimensional space, the dimension of the complex itself is unchanged, $3$ as in the example.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/complex.png" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/complex.png"  alt="a simplicial complex" width="30%">
 
 The set of the above object is
 
@@ -163,7 +163,7 @@ From polyhedrons, we are going to construct three groups. By combining these gro
 
 The notation of a simplex as $\spl{p _ 1,p _ 2,\cdots,p _ n}$ is in fact insufficient.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/triangles.png" alt="orientation of triangles" width="50%">
 
 These two triangles cannot be brought to overlap without flipping; neither can these two tetrahedrons without mirroring. Thus for every simplex, we need to define an "orientation", characterized by the arrangement of the points.  It also helps in to define the boundary of simplexes.
 
@@ -208,11 +208,11 @@ $$
 >
 > These big words of "intrinsic geometric structure" is still quite hard to understand. Just think of Planet Earth. You are living on the surface of the Earth. You know there are no boundaries on the **surface** of Earth. Otherwise, Christopher Columbus would have fallen into nothingness.
 >
-> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/FlatEarth.png" width="50%">
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/FlatEarth.png" alt="Flat Earth" width="50%">
 >
 >  The same reasoning applies, even if the Earth were a doughnut, you cannot find and boundary to fall from.
 >
-> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/DoughnutEarth.png" width="50%">
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/DoughnutEarth.png" alt="Doughnut Earth" width="50%">
 >
 > Jokes aside, you can think of a sheet of paper as having boundaries, i.e., four edges. Gluing two of them we have a tube, leaving only two edges. Further gluing these two edges together we end up with a torus with no boundaries.
 
@@ -247,19 +247,19 @@ It's always a good idea to base a discussion on some concrete examples. Here are
 
 ​    The most natural way of seeing the triangulation of a cylinder is to see it as "equivalent" with a triangular prism. However, since the surface of a cylinder is only $2$ dimensional, mathematicians prefer to draw them as flat as possible, so we introduce a notation of "gluing", as is shown on the right. The arrows on edge $(p _ 0,p _ 1)$ emphasize the way of gluing.
 
-   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfCylinder.png" width="80%">
+   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfCylinder.png" alt="Triangulation of Cylinder" width="80%">
 
 **2. Triangulation of the Mobius strip.**
 
 ​    The famous Mobius strip is much less trivial than the cylinder. Still, we can "crush" the band and see a good way to triangulate it. The arrows on edge $(p _ 0,p _ 5)$ emphasize the way of gluing, as a Mobius strip is made by twisting a strip $180$ degree and then joining the ends of the strip.
 
-   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfMobius.png" width="80%">
+   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfMobius.png" alt="Triangulation of Mobius Band" width="80%">
 
 **3. Triangulation of Torus.**
 
 ​    A surface without boundary like a torus can also be conveniently and intuitively triangulated. Note that the simplest triangulation is not a triangular tube. By squeezing the inner upper and lower rim of the tube together, we have a $3\times3$ mesh of triangulation. 
 
-   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfTorus.png" width="80%">
+   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfTorus.png" alt="Triangulation of Torus" width="80%">
 
 **4. Triangulation of the Klein bottle.**
 
@@ -267,7 +267,7 @@ It's always a good idea to base a discussion on some concrete examples. Here are
 
 ​    It is quite hard to picture the triangulation of the Klein bottle directly. However, once we know how it is made, we can build it from right to left. The $\color{green}green$ edge is where the piercing occurs. The $\color{magenta} magenta$ line is the "edge" of the Mobius strip.  
 
-   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfKlein.png" width="80%">
+   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/TriangulationOfKlein.png" alt="Triangulation of Klein bottle" width="80%">
 
 ## Chains
 
@@ -297,7 +297,7 @@ The $r$-chain group of simplicial complex $K$ is denoted as $C_r(K)$. We allow $
 >
 > > Insisting on putting $0$ on the left side seems to me purely an aesthetic choice. The boundary group $B_n(K) = 0$ is a definition (see [`Boundaries`](#Boundaries)). This chain complex is commonly seen in k-theories.
 > >
-> > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/ChainComplex.png" width="50%">
+> > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/ChainComplex.png" alt="chain complex" width="50%">
 
 ## Cycles
 
@@ -325,11 +325,11 @@ You are probably wondering why examples of cycles and boundaries are identical. 
 
 It is natural to ask, are all cycles necessarily boundaries? The answer is No. A trivial example is a single point. A single point has no boundaries but is not a boundary. However, it is hard to come up with an example other than a point. You can draw as many strange shapes as you want, a torus, a two-torus, a torus with a $2$-dimensional fin, etc. However, you will not find such cycles. As a matter of fact, as long as you are drawing in $\R^3$, you will always find your cycle is a boundary of something. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndBoundary.png" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndBoundary.png" alt="Cycles and Boundaries" width="60%">
 
 Now let's study circles on the torus. Are those cycles? Yes. But are those boundaries? One way to see if a cycle is a boundary is to expand the "territory" of the cycle and see if that cycle can contract to a point. You will immediately see the lower two types of cycles are not boundaries of anything. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndHole.png" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/CycleAndHole.png" alt="cycles and holes" width="60%">
 
 This is the motivation of Homology group. The existence of a cycle that is not a boundary indicates that there is at least one hole on the surface. More information can also be derived using the homology group.
 
@@ -364,7 +364,7 @@ $$
 
 If $z$ and $z^\prime$ belong to the same equivalent class, they are called **homologous**. The two chains on the left are homologous since $z-z^\prime$ is a boundary of a triangular prism $K$, $\dim K=3$. Those on the right are not homologous since $z-z^\prime$ is not a boundary of anything.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Homologous.png" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Homologous.png" alt="Homologous relation" width="60%">
 
 > Like the discussion in section [`Cycles and Holes`](#cycles-and-holes), on the right, $z-z^\prime$ is the boundary of a square and a triangle in $\R^3$, but it's not a boundary on the torus.
 
