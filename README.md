@@ -1,6 +1,6 @@
 # If you want to use this theme
 
-Please read [this link](https://yk-liu.github.io/jekyll/Jekyll-Build.html#what-should-i-modify). Remove files/ descriptions about `yk-liu` so I don't have to pester you to clean up. Also I would appreciate if you don't fork my repo, but clone it and upload to your own, so there is no network between you and me. If you really want to fork it, please fork from the branch `theme-for-fork` where I have organized stuff for you. And if you really like this repo, maybe consider giving it a star :star.
+Please read [this link](https://yk-liu.github.io/jekyll/Jekyll-Build.html#what-should-i-modify). Remove files/ descriptions about `yk-liu` so I don't have to pester you to clean up. Also I would appreciate if you don't fork my repo, but clone it and upload to your own, so there is no network between you and me. If you really want to fork it, please fork from the branch `theme-for-fork` where I have organized stuff for you. And if you really like this repo, maybe consider giving it a star.
 
 # About this website
 
