@@ -7,7 +7,8 @@ commentable: false
 protected: true
 mathjax: true
 ---
-
+#About the dataset
+TBD
 <!--
 # Lifelong Learning Definition (Opinions are my own)
 
@@ -17,7 +18,7 @@ The first and the most crutial thing needed to be seriously considered is what i
 - the instances of the known class, and improves classifier based on accumulated intances, it is an enhancement process.
 - the novel class, which has not been appeared in the previous learning procedure. The model should be able to increase class-incremental capability.
 - multiple tasks which are highly relevant, such as from I.I.D assumptions, we can say the tasks are within the same environment.
-- multiple tasks which are from None I.I.D situations.--> 
+- multiple tasks which are from None I.I.D situations.
 
 
 # Lifelong Robotic Vision
@@ -73,7 +74,7 @@ This website (source code [here](https://github.com/yk-liu/yk-liu.github.io)) us
 
 Additional licensing information can be found [here](https://github.com/yk-liu/yk-liu.github.io/blob/master/LICENSE.md).
 
-I mainly use [Typora](https://www.typora.io) to write my post.-->
+I mainly use [Typora](https://www.typora.io) to write my post.
 
 # Organizers
 - Dr. Qi She (<b>Intel Labs China</b>)
@@ -89,7 +90,5 @@ I mainly use [Typora](https://www.typora.io) to write my post.-->
 # Further materials
 
 - [Incremental Learning Makes the Robot Smarter](https://mp.weixin.qq.com/s/_txt3Y9HJlNDFljDCjKODA)
-- [From Computer Vision to Rbotic Spatial Intelligence](https://mp.weixin.qq.com/s/9d0sbFdeAzgu81rzwDii9A)
-
-
+- [From Computer Vision to Rbotic Spatial Intelligence](https://mp.weixin.qq.com/s/9d0sbFdeAzgu81rzwDii9A) --->
 
