@@ -189,7 +189,7 @@ A[1维曲线]--> B[2维曲面]
 
 简单地说, 给一个拓扑空间配备一个性质足够好(可<u>微分</u>)的坐标映射, 就得到<u>微分</u>流形
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra/流形.png" style="zoom:50%" />
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra-cn/流形.png" alt='流形' style="zoom:50%" />
 
 (未完)
 
@@ -245,7 +245,7 @@ $$
 
 诱导出一个切空间的微分映射$dL _ g$. 如图所示.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra/%E5%88%87%E7%A9%BA%E9%97%B4.png" style="zoom:30%" />
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-06-Lie-group-and-Lie-algebra-cn/切空间.png" alt="切空间" style="zoom:30%" />
 
 由此可以得到
 
@@ -603,8 +603,7 @@ $$
 
 [^李群短文2]: Tom Church. *LIE GROUPS AND LIE ALGEBRAS.* PDF file.April 25, 2018. <http://math.uchicago.edu/~womp/2007/lie2007.pdf>
 
-[^李群短文3]: <http://idv.sinica.edu.tw/ftliang/diff _ geom/*diff _ geometry(II)/Lie _ theory/2lie _ algebra.pdf>
-
+[^李群短文3]: <http://idv.sinica.edu.tw/ftliang/diff_geom/*diff_geometry(II)/Lie_theory/2lie_algebra.pdf>
 [^海森堡量子力学]: Heisenberg's QM", P58, Baker-Campbell-Hausdorff Formula
 
-[^BCH公式]: https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff _ formula
+[^BCH公式]: <https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula>

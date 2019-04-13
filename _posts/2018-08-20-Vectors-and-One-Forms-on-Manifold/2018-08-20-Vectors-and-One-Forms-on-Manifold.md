@@ -43,7 +43,7 @@ One form is a concept useful in integration, and the integrand is a one-form. On
 
 The definitions of curves and functions are as follow. A curve on a manifold is a linear map from interval $[a,b]$ to a set of points. Functions are defined over curves on a manifold, *not* over curves in $\R^n$. With the help of local coordinates, curves and functions each have coordinate representations.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-One-Forms-on-Manifold/assets/curve-function.png" width="80%" />
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-08-20-Vectors-and-One-Forms-on-Manifold/assets/curve-function.png" alt="curves and functions on manifold" width="80%" />
 
 # Vectors and Covectors in Euclidean Space
 
@@ -301,7 +301,7 @@ We can assign a vector, say $V$, to each point in the space $X$. This is equival
 
 The Lorentz attractor can also be seen as a complicated manifold sprinkled with "velocity vectors." (from [Wikipedia](https://en.wikipedia.org/wiki/File:A _ Trajectory _ Through _ Phase _ Space _ in _ a _ Lorenz _ Attractor.gif)).
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/13/A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/13/A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif" alt="Lorentz attractor">
 
 #  One-forms
 

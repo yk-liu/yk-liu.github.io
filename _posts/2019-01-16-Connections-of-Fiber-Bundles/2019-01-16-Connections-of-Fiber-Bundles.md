@@ -51,7 +51,7 @@ This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783
 
 Generally speaking, a fiber bundle is a topological space where there are extra structures. This structure is summarized as the topological space locally looks like the direct product of two subspaces - a typical fiber and a base space. 
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Connections-of-Fiber-Bundles/assets/pasta.png' width="20%" alt="a bunch of pasta">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Connections-of-Fiber-Bundles/assets/pasta.png' width="40%" alt="a bunch of pasta">
 
 A fiber bundle is just like a bunch of pasta. Each piece of pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle or a total space. That pasta can be twisted and bent, but each piece of pasta is distinguishable and looks alike. And at each point of the total space (the entire bunch of pasta), it looks like a direct product of a base space and a fiber. This means two things. 
 
@@ -67,7 +67,7 @@ Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of th
 1. A differentiable manifold $F$ called the **fiber** (or **typical fiber**).
 1. A surjection $\pi : E\rightarrow M$ called the **projection**. The inverse image of a point $p\in M$, $\pi^{-1}(p)$ is called the fiber $F_p\simeq F$ at point $p$.
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Connections-of-Fiber-Bundles/assets/fiber-bundle.png' width="30%">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Connections-of-Fiber-Bundles/assets/fiber-bundle.png' alt="Fiber bundle" width="30%">
 
 > In many textbooks a fiber bundle is defined as a quintuple $(E,\pi,M,G,F)$. I think it's better to start defining as little as possible, so I chose to define it as a triple and add $G$ and transition functions later.
 

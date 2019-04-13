@@ -82,7 +82,7 @@ Taking smaller and smaller neighborhoods of e, one eventually "arrives" at the t
 
 To prove the above statement, we can prove that there is a diffeomorphism between an open neighborhood of tangent space and an open neighborhood near the identity.
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/ExpDiffeo.png' width='70%'>
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/ExpDiffeo.png' alt="differential of the Exponential map" width='70%'>
 
 Proposition: The exponential map $\exp : T_e G \rightarrow G$ is smooth, and it is a local diffeomorphism at $0$.
 
@@ -91,7 +91,7 @@ Proposition: The exponential map $\exp : T_e G \rightarrow G$ is smooth, and it 
 > 1. **Inverse Function Theorem**: Let $f : M \rightarrow N$ be a smooth map between two smooth manifolds $M$, $N$, and let $p \in M$ and $q = f(p)$. If $\d f_p : T_pM \rightarrow T_qN$ is an isomorphism, then there exists an open neighborhood $W$ of $p$ such that $f(W)$ is an open neighborhood of $q$ and $f$ restricts to a diffeomorphism from $W$ onto $f(W)$.
 > In other words, a function is invertible in a neighborhood of a point in its domain as long as its derivative is continuous and non-zero at the point. Thus this function induces a diffeomorphism.
 >
-> <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/InverseFunctionTheorem.png' width='70%'>
+> <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/InverseFunctionTheorem.png' alt="Inverse Function Theorem" width='70%'>
 >
 > 2. Since $\exp(tX) = \phi_X(t)$ is a curve on $G$, it's tangent vector at $t=0$ is $X$, we have $\left.\D{}{t} \exp(tX) \right\vert_{t=0}=X$. This means that the map $\d \exp$ at $t=0$ is just identity map, which clearly has inverse. By the Inverse function theorem, $\exp$ is a local diffeomorphism.
 
@@ -101,7 +101,7 @@ From the last two sections, the tangent space at $e$ is diffeomorphic to an open
 
 I like to think it as tangent vectors dictates different one-parameter subgroups which in turn "covers" the entire Lie group. Since the tangent space is in general uncountable, such is "cover" on a higher dimensional "surface" (or "volume") using a lower dimensional "line".
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/exponetialMap.png' width='80%'>
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/exponentialMap.png' alt="exponential map" width='80%'>
 
 # Associated Lie Algebra of Lie Group
 
@@ -140,7 +140,7 @@ In the [last post]({{ site.baseurl }}{% post_url 2019-03-11-Lie-Group-as-Differe
 
 With $\exp$ map defined, $\log$ map arises naturally. Proof: see <https://mathoverflow.net/questions/99230/modern-proof-for-the-baker-campbell-hausdorff-formula/99251#99251> 
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/LogMap.png' width='60%' >
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-20-Lie-Agebra-as-Generator/assets/LogMap.png' alt="log map" width='60%' >
 
 
 {% comment %}

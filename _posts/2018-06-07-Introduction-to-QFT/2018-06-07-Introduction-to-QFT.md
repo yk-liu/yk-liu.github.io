@@ -455,7 +455,7 @@ $$
 >
 > 对$p _ 0$解析延拓到复平面, 根据$(t _ x-t _ y)$的符号, 选取积分路径$C _ \pm$, 得到
 >
-> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-07-Introduction-to-QFT/feynman-pro.png" style="zoom:50%" />
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-07-Introduction-to-QFT/feynman-pro.png" alt='Feynman propagator' style="zoom:50%" />
 > $$
 > \begin{align*}
 > &\quad \oint _ {C _ \pm}  f(p _ 0)  \d p _ 0 \\
@@ -767,7 +767,7 @@ $$
 > \end{align*}
 > $$
 >
-> ![](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-07-Introduction-to-QFT/Un.png)
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-06-07-Introduction-to-QFT/Un.png" alt="Time ordering operator">
 >
 >
 >
@@ -1076,6 +1076,7 @@ $$
 [^langrangian1]: About the notion of the self-interaction of a field, ACuriousMind (https://physics.stackexchange.com/users/50583/acuriousmind),Physics Stack Exchange, URL:https://physics.stackexchange.com/q/277861  version: 2016-09-02,https://physics.stackexchange.com/q/277861
 
 [^ first book]: first book in quantum field theory
+
 [^skriptQFT1]: skriptQFT1
 
 

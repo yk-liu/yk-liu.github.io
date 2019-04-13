@@ -298,7 +298,7 @@ A flow is a map $\Phi: \R\times M \rightarrow M, (t,p)\mapsto \phi _ t(p)$. This
 
 Imagine at $t=0$, every point $p$ on the manifold starts moving with the speed of $X _ p$, in the "direction" of $X _ p$. In the next interval of time $t=\d t$, every point is moved to a new point $p^\prime$ and changes its velocity according to $X _ {p^\prime}$. The process goes on and on, and soon the manifold is going to be covering with such trajectories. If the manifold is taken to be $S _ 2​$, it will look like either one of below (image credit: NASA).
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-11-Lie-Group-as-Differential-Manifold/assets/Flows.png' width='50%'>
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-11-Lie-Group-as-Differential-Manifold/assets/Flows.png' alt="flows on manifold, earth's winds" width='50%'>
 
 So a flow $\Phi _ 1​$ maps each point, at each time, to another point on the manifold. In other words, $\Phi _ 1​$ assigns a history and a future to where every single point on the manifold have been and will be. By the same rationale, $\Phi _ 2​$ can assign a different history and a future. To put it more intuitively, a flow is like a "cloud forecast" on earth. Each "cloud" is assigned to a certain position on the planet. Over time that assignment becomes a "flow", hence the name. Since there is freedom to make up different versions of such forecasts (below are two versions of flow, from [[giphy](https://giphy.com)]), different flows can be defined. 
 

@@ -60,7 +60,7 @@ $$
 
 Such tensors are called of type $(q,r)$. $T_{(1,1)},\, T_{(2,0)},\,T_{(0,2)}$ can be written as matrices, while it takes a third dimension to write tensors like $T_{(3,0)}$ in the similar fashion. Below is a diagram from [Wikipeida](https://en.wikipedia.org/wiki/OLAP_cube), showing an example of some kind of $3$-d matrix.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/OLAP_drill_up%26down.png" width="80%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/OLAP_drill_up%26down.png" width="80%" alt="3d matrix">
 
 # Wedge Product
 
@@ -148,9 +148,9 @@ $$
 >
 > 4. **Generalization as a direct way to calculate $n$-dimensional area, (specially, $3$-dimensional area being the volume)**: the $n$-dimensional area is defined as a $n$ wedge product of $n$-dimensional vectors. For $n=3$, 
 >    
->     $$
+>    $$
 >     \vec{u} \wedge \vec{v} \wedge \vec{w} = (u _ 1 v _ 2 w _ 3 + u _ 2 v _ 3 w _ 1 + u _ 3 v _ 1 w _ 2 - u _ 1 v _ 3 w _ 2 - u _ 2 v _ 1 w _ 3 - u _ 3 v _ 2 w _ 1) (\uvec{e} _ 1 \wedge \uvec{e} _ 2 \wedge \uvec{e} _ 3) 
->     $$
+>    $$
 >
 >     Again we obtain the volume ($3$-dimensional area) $V^2=\norm{\vec{u} \wedge \vec{v} \wedge \vec{w} }$. 
 >
@@ -250,14 +250,14 @@ From this definition, we have
 > 3. $\d^2=0$.
 >
 >      Proof for $\d^2=0 $:
->      
->      $$
+>    
+>    $$
 >      \begin{align*}
 >      \d(\d\omega) &= \d (\frac{1}{p!}\Partial{ω_{i_1\cdots i_p}}{x^i}\d x^i \wedge  \d x^{i_1} \wedge\cdots\wedge \d x^{i_p})\\
 >      &=\frac{1}{p!}\d (\Partial{ω_{i_1\cdots i_p}}{x^i}\d x^i )\wedge \d x^{i_1} \wedge\cdots\wedge \d x^{i_p} \\
 >      &=\frac{1}{p!} \Partial{^2ω_{i_1\cdots i_p}}{x^i\partial x^j}\d x^i \wedge \d x^j \wedge \d x^{i_1} \wedge\cdots\wedge \d x^{i_p} 
 >      \end{align*}
->      $$
+>    $$
 >
 >      Since $\Partial{^2ω_{i_1\cdots i_p}}{x^i\partial x^j}$ is symmetric with respect to $x^i$ and $x^j$, and $\d x^i \wedge \d x^j$ is antisymmetric, the RHS is zero.
 >
