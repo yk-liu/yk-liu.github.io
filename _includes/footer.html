@@ -1,6 +1,6 @@
 <footer>
    <p style="margin-left: auto; margin-right: auto;"> 
-      &copy; {{ site.posts[-1].date | date: '%Y' }}-{{ site.time | date: '%Y' }}, {{ site.author.name }}. This site is open source. <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/commits/master/{{ page.path }}" > Version history</a>. <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/edit/master/{{ page.path }}" target="_blank">Improve this page</a>. <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/blob/master/LICENSE.md" target="_blank">License</a>. <a href="{{site.url}}{{site.baseurl}}/info/disclaimer" target="_blank">Disclaimer</a>. 
+      &copy; {{ site.posts[-1].date | date: '%Y' }}-{{ site.time | date: '%Y' }}, {{ site.author.name }}. This site is open source. {% if page.edit %}<a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/commits/master/{{ page.path }}" > Version history</a>.{% endif %} <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/edit/master/{{ page.path }}" target="_blank">Improve this page</a>. <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/blob/master/LICENSE.md" target="_blank">License</a>. <a href="{{site.url}}{{site.baseurl}}/info/disclaimer" target="_blank">Disclaimer</a>. 
    </p>
 	 {% if include.analytics == false %}
 	 {% else %}
