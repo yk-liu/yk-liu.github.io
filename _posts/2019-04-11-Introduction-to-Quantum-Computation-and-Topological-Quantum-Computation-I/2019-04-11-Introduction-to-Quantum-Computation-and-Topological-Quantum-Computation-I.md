@@ -1,7 +1,7 @@
 ---
 title: >
    Introduction to Topological Quantum Computation: Basics of Quantum computation
-categories: Quantum-computation Topology-quantum-computation
+categories: Quantum-computation Topological-quantum-computation
 tags: Quantum-computation Topological-quantum-computation
 keywords: Braiding Anyon Qubit Moore's-Law
 description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post establishes the barebone basics of quantum computations.
