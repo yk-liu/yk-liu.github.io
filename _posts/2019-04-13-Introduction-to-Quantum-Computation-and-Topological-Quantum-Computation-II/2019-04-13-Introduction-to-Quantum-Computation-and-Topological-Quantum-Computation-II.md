@@ -1,11 +1,23 @@
 ---
-title: >
-   Introduction to Topological Quantum Computation: Braiding Anyons
+title: |
+  Introduction to Topological Quantum Computation: Braiding Anyons
 categories: Quantum-computation Topology-quantum-computation
 tags: Quantum-computation Topological-quantum-computation
 keywords: Braiding Anyon Qubit Moore's-Law
 status: Writing
-description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post describes TQC as braiding anyons.
+description: >-
+  This is a series of posts on topological quantum computations. The aim of this
+  series is to work my way to understanding the diagrams of "strands" widely
+  used in the field. This post describes TQC as braiding anyons.
+comments:
+  - author:
+      type: full
+      displayName: sheqi
+      url: 'https://github.com/sheqi'
+      picture: 'https://avatars3.githubusercontent.com/u/8046255?v=4&s=73'
+    content: Super cool posts !
+    date: 2019-04-14T14:53:32.307Z
+
 ---
 
 $$
