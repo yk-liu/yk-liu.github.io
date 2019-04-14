@@ -1,9 +1,10 @@
 ---
 layout: info
 title: Markdown Syntax
-Edit: 2019-03-26
+edit: 2019-03-26
 mathjax: true
 mermaid: true
+highlight: true
 ---
 
 # Basics Markdown Syntax

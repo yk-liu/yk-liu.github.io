@@ -2,7 +2,7 @@
 layout: info
 title: Commenting FAQs & Guidelines
 commentable: false
-Edit: 2018-11-01
+edit: 2018-11-01
 ---
 
 

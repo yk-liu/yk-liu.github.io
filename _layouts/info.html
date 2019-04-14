@@ -43,11 +43,8 @@
                <div id="info">
                   <div id="date">
                      {% if page.edit %}
-                     <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
                      <p><code>Edited</code>:  &nbsp; {{ page.edit | date: '%B %d, %Y' }} </p>
                      {% else %}
-                     <p><code>Posted</code>:  &nbsp; {{ page.date | date: '%B %d, %Y' }} </p>
-                     {% endif %}
                   </div>
                </div>
                {% if page.toc %}
