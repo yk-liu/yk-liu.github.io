@@ -16,7 +16,7 @@
 				 <p><code>Status</code>:  &nbsp; {% include status-indicator.html status=page.status%} </p>
 				 {% endif %}
 			</div>
-			{% if site.tags != '' %}
+			<!---{% if site.tags != '' %}
 			<div id="tag-list">
 				 <p><code> Tags </code>:  &nbsp; 
 						{% for tag in page.tags %}
@@ -35,7 +35,8 @@
 						{% endfor %}
 				 </p>
 			</div>
-			{% endif %}	
+			{% endif %}
+			--->	
 	 </div>
 	 {% comment %}
 	 <div id="info" >
@@ -43,7 +44,7 @@
 	 </div>
 	 {% endcomment %}
 	 
-	<div class="hint" style="font-size: 0.7rem;line-height: 0.7rem;color: #A9A9A9;"> Were equations, pictures or diagrams not properly rendered, please refresh the page. If the problem persists, you can <a href="{{site.url}}{{site.baseurl}}/about/#contact" style="color: inherit">contact me</a>. </div>
+	<div class="hint" style="font-size: 0.7rem;line-height: 0.7rem;color: #A9A9A9;"> Were pictures or diagrams not properly rendered, please refresh the page. If the problem persists, you can contact me via <a href="mailto:qi.she@intel.com">qi.she@intel.com</a>. </div>
 	 <hr>
 </div>
 

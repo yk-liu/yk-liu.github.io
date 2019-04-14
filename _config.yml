@@ -55,7 +55,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      toc: false
+      toc: true
       mathjax: true
       mermaid: true
       highlight: false
