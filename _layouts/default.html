@@ -2,39 +2,33 @@
 <html lang="en">
    <head>
       {% include head.html %}  
-			{% if page.mathjax %}			
-				{% include markdown-enhancements/mathjax.html %}
-			{% endif %} 
+      {% if page.mathjax %}			
+      {% include markdown-enhancements/mathjax.html %}
+      {% endif %} 
       {% include theme-vue.html%}
       <!-- change font -->
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet" async>
       <!--  -->
    </head>
    {% include topnav.html active="home"%}
-
    <body>
-   <div id="main"> 
-	 <div class="page">
-				{% include frontmatter.html %}
-				
-				<div id="content-container" style="text-align:justify">
-					 {{ content }}			
-				</div>
-				
-				<div id="comment-session">
-					 {% include commentit.html %}
-				</div>
-				
-			 </div>
-   </div>
-	    {% include footer.html %} 
+      <div id="main">
+         <div class="page">
+            {% include frontmatter.html %}
+            <div id="content-container" style="text-align:justify">
+               {{ content }}			
+            </div>
+            <div id="comment-session">
+               {% include commentit.html %}
+            </div>
+         </div>
+      </div>
+      {% include footer.html %} 
    </body>
-	{% if page.mermaid == true %}
-	{% include markdown-enhancements/mermaid.html %}
-	{% endif %}
-
-	{% if page.highlight == true %}
-		{% include markdown-enhancements/highlight.html %}
-	{% endif %}
-
+   {% if page.mermaid == true %}
+   {% include markdown-enhancements/mermaid.html %}
+   {% endif %}
+   {% if page.highlight == true %}
+   {% include markdown-enhancements/highlight.html %}
+   {% endif %}
 </html>

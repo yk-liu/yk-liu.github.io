@@ -401,4 +401,5 @@ The Foot notes are like this
 
 [^that]: or, naturally, simple paragraphs.
 
-[linkid]: https://yk-liu.github.io "Optional Title"
+[^linkid]: https://yk-liu.github.io "Optional Title"
+

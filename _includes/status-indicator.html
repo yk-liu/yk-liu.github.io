@@ -1,15 +1,13 @@
-
 {% assign status = include.status %}
-
 {% case status%}
-	{% when "Completed" %}
-		<code style="background-color: #42B4B9; color: white;"><b>{{ status}}</b></code> 
-	{% when 'Writing' %}
-		<code style="background-color: #139223; color: white;"><b>{{ status}}</b></code> 
-	{% when  'Paused' %}
-		<code style="background-color: #B98342; color: white;"><b>{{ status}}</b></code> 
-	{% when  'Archived' %}
-		<code style="background-color: #345E5E;color: white;"><b>{{ status}}</b></code> 
-	{% else %}	
-		<code><b>{{ post.status}}</b></code> 
+{% when "Completed" %}
+<code style="background-color: #42B4B9; color: white;"><b>{{ status}}</b></code> 
+{% when 'Writing' %}
+<code style="background-color: #139223; color: white;"><b>{{ status}}</b></code> 
+{% when  'Paused' %}
+<code style="background-color: #B98342; color: white;"><b>{{ status}}</b></code> 
+{% when  'Archived' %}
+<code style="background-color: #345E5E;color: white;"><b>{{ status}}</b></code> 
+{% else %}	
+<code><b>{{ post.status}}</b></code> 
 {% endcase %}
