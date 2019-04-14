@@ -47,10 +47,27 @@ Fermions and Bosons are familiar concepts in statistics. Statistics means that m
 
 When we consider particles on $2+1$ dimension, we find that things are quite different. 
 
-The exchange of two particles are equivalent to circling one particle around another. When the space is $3​$-dimensional, the path can shrink to a single point as is shown below.
+Twice exchange of two particles is equivalent to circling one particle around another. When the space is $3$-dimensional, the path can shrink to a single point as is shown below. That gives the equation $\lambda^2=1​$. 
+
+While on $2$-dimensional space, the light-blue path cannot shrink to the dark-blue path since they are topologically inequivalent. That means $\lambda^2\neq1$. Such encircling can result in a complex phase factor or even a unitary matrix. The former case it's called Abelian anyons, while the latter called non-Abelian anyons.
 
 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Loop-on-Lattice.png" alt="Loop shrink on 3d and 2d-Lattice" width="80%"> 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Loop-on-Lattice.png" alt="Loop shrink on 3d and 2d-Lattice" width="80%">
 
-# Braiding DIagrams
+## Anyons as Quasi-particles
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/FluxTubes.png" alt="Loop shrink on 3d and 2d-Lattice" width="70%">
+
+
+
+# Braiding Diagrams
+
+
+
+---
+
+# Acknowledgement
+
+This series is made possible by Dr. Emil Prodan's kind mentorship.
+
