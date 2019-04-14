@@ -79,8 +79,6 @@ To provide a more intuitive understanding of such braiding, The $\small\boxed{\s
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/BraidingdiagramExample1.png" alt="Braiding diagram example" width="70%">
 
-
-
 # Acknowledgement
 
 This series is made possible by Dr. Emil Prodan's kind mentorship.
