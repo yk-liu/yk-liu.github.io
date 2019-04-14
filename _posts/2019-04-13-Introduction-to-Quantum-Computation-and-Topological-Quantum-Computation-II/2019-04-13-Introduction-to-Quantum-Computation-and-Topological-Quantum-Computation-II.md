@@ -39,6 +39,18 @@ $$
 
 # Anyons
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Loop-on-Lattice.png" alt="Loop on Lattice" width="80%"> 
+## Fermions and Bosons
+
+Fermions and Bosons are familiar concepts in statistics. Statistics means that more than one particle is present in the system. When exchanged, Boson system's wavefunction remains unchanged while Fermion system's wavefunction gains an additional  minus sign. The above results are the solutions of the equation $\lambda^2=1$. Because obviously, exchange two particles twice is the equivalent to no exchange.
+
+## Anyons
+
+When we consider particles on $2+1$ dimension, we find that things are quite different. 
+
+The exchange of two particles are equivalent to circling one particle around another. When the space is $3​$-dimensional, the path can shrink to a single point as is shown below.
+
+
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Loop-on-Lattice.png" alt="Loop shrink on 3d and 2d-Lattice" width="80%"> 
 
 # Braiding DIagrams
