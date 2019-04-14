@@ -60,13 +60,13 @@ $$
 
 ## Fermions and Bosons
 
-Fermions and Bosons are familiar concepts in statistics. Statistics means that more than one particle is present in the system. When exchanged, Boson system's wavefunction remains unchanged while Fermion system's wavefunction gains an additional  minus sign. The above results are the solutions of the equation $\lambda^2=1$. Because obviously, exchange two particles twice is the equivalent to no exchange.
+Fermions and Bosons are familiar concepts in statistics. Statistics means that more than one particle is present in the system. When exchanged, Bosonic system's wavefunction remains unchanged while Fermionic system's wavefunction gains an additional minus sign. The above results are the solutions of the equation $\lambda^2=1$. Because obviously, exchange two particles twice are equivalent to no exchange.
 
 ## Anyons
 
 When we consider particles on $2+1​$ dimension, we find that things are quite different. 
 
-Twice exchange of two particles is equivalent to circling one particle around another. When the space is $3$-dimensional, the path can shrink to a single point as is shown below. That gives the equation $\lambda^2=1​$. 
+Twice exchange of two particles is equivalent to circling one particle around another. When space is $3$-dimensional, the path can shrink to a single point as is shown below. That gives the equation $\lambda^2=1​$. 
 
 While on $2​$-dimensional space, the light-blue path cannot shrink to the dark-blue path since they are topologically inequivalent. That means $\lambda^2\neq1​$. Such encircling can result in a complex phase factor or even a unitary matrix. The former case it's called Abelian anyons, while the latter called non-Abelian anyons.
 
@@ -89,8 +89,6 @@ Such braiding can also be realized on a $1​$D nanowire as long as there is a T
 To provide a more intuitive understanding of such braiding, The $\small\boxed{\substack{\nwarrow\,\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,\, \, \diagdown }  }$ represents a clockwise exchange, while a $\small\boxed{\substack{\nwarrow\,\,\,\, \nearrow \newline \diagdown \newline \diagup\,\,\,\, \, \diagdown }  }​$ represents a counter-clockwise exchange.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/BraidingdiagramExample1.png" alt="Braiding diagram example" width="70%">
-
-
 
 # Acknowledgement
 
