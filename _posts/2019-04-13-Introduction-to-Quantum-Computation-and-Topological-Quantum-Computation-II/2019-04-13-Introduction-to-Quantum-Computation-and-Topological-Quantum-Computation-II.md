@@ -1,11 +1,14 @@
 ---
-title: >
-   Introduction to Topological Quantum Computation: Braiding Anyons
+title: |
+  Introduction to Topological Quantum Computation: Braiding Anyons
 categories: Topological-quantum-computation
 tags: Anyon-Braiding Topological-quantum-computation
 keywords: Braiding Anyon Fermion Boson
 status: Writing
-description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post describes braiding anyons.
+description: >-
+  This is a series of posts on topological quantum computations. The aim of this
+  series is to work my way to understanding the diagrams of "strands" widely
+  used in the field. This post describes braiding anyons.
 comments:
   - author:
       type: full
@@ -14,6 +17,14 @@ comments:
       picture: 'https://avatars3.githubusercontent.com/u/8046255?v=4&s=73'
     content: Super cool posts !
     date: 2019-04-14T14:53:32.307Z
+  - author:
+      type: github
+      displayName: yk-liu
+      url: 'https://github.com/yk-liu'
+      picture: 'https://avatars1.githubusercontent.com/u/31454695?v=4&s=73'
+    content: '&#x1F604; Thanks!'
+    date: 2019-04-14T15:48:36.733Z
+
 ---
 
 $$
