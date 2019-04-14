@@ -51,21 +51,21 @@ Twice exchange of two particles is equivalent to circling one particle around an
 
 While on $2$-dimensional space, the light-blue path cannot shrink to the dark-blue path since they are topologically inequivalent. That means $\lambda^2\neq1$. Such encircling can result in a complex phase factor or even a unitary matrix. The former case it's called Abelian anyons, while the latter called non-Abelian anyons.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Loop-on-Lattice.png" alt="Loop shrink on 3d and 2d-Lattice" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Loop-on-Lattice.png" alt="Loop shrink on 3d and 2d-Lattice" width="50%">
 
 ## Anyons as Quasi-particles
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/FluxTubes.png" alt="Loop shrink on 3d and 2d-Lattice" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/FluxTubes.png" alt="Loop shrink on 3d and 2d-Lattice" width="50%">
 
-A feasible realization of such anyons is to use quasi-particles on $2$D lattice, by either introducing defects or use flux tubes. The braiding is therefore realized by the motion of the various order parameter defects (vortices, domain walls, etc.) or the flux tubes.
+A feasible realization of such anyons is to use quasi-particles on $2​$D lattice, by either introducing defects or use flux tubes. The braiding is therefore realized by the motion of the various order parameter defects (vortices, domain walls, etc.) or the flux tubes. The following gif shows the zero modes braided due to flux tubes' movement.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/ZeroModes.gif" alt="Zero modes moving on a 2d lattice" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/ZeroModes.gif" alt="Zero modes moving on a 2d lattice" width="30%">
 
 Such braiding can also be realized on a $1​$D nanowire as long as there is a T-junction as in[^1][^2].
 
 # Braiding Diagrams
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Braiding2plus1.png" alt="Braiding scheme" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Braiding2plus1.png" alt="Braiding scheme" width="40%">
 
 To provide a more intuitive understanding of such braiding, 
 
