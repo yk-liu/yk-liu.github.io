@@ -1,11 +1,11 @@
 ---
 title: >
    Introduction to Topological Quantum Computation: Braiding Anyons
-categories: Quantum-computation Topology-quantum-computation
-tags: Quantum-computation Topological-quantum-computation
-keywords: Braiding Anyon Qubit Moore's-Law
+categories: Topological-quantum-computation
+tags: Anyon-Braiding Topological-quantum-computation
+keywords: Braiding Anyon Fermion Boson
 status: Writing
-description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post describes TQC as braiding anyons.
+description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post describes braiding anyons.
 ---
 
 $$
@@ -45,11 +45,11 @@ Fermions and Bosons are familiar concepts in statistics. Statistics means that m
 
 ## Anyons
 
-When we consider particles on $2+1$ dimension, we find that things are quite different. 
+When we consider particles on $2+1​$ dimension, we find that things are quite different. 
 
 Twice exchange of two particles is equivalent to circling one particle around another. When the space is $3$-dimensional, the path can shrink to a single point as is shown below. That gives the equation $\lambda^2=1​$. 
 
-While on $2$-dimensional space, the light-blue path cannot shrink to the dark-blue path since they are topologically inequivalent. That means $\lambda^2\neq1$. Such encircling can result in a complex phase factor or even a unitary matrix. The former case it's called Abelian anyons, while the latter called non-Abelian anyons.
+While on $2​$-dimensional space, the light-blue path cannot shrink to the dark-blue path since they are topologically inequivalent. That means $\lambda^2\neq1​$. Such encircling can result in a complex phase factor or even a unitary matrix. The former case it's called Abelian anyons, while the latter called non-Abelian anyons.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Loop-on-Lattice.png" alt="Loop shrink on 3d and 2d-Lattice" width="50%">
 
@@ -57,7 +57,7 @@ While on $2$-dimensional space, the light-blue path cannot shrink to the dark-bl
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/FluxTubes.png" alt="Loop shrink on 3d and 2d-Lattice" width="50%">
 
-A feasible realization of such anyons is to use quasi-particles on $2​$D lattice, by either introducing defects or use flux tubes. The braiding is therefore realized by the motion of the various order parameter defects (vortices, domain walls, etc.) or the flux tubes. The following gif shows the zero modes braided due to flux tubes' movement.
+A feasible realization of such anyons is to use quasi-particles on $2$D lattice, by either introducing defects or use flux tubes. The braiding is therefore realized by the motion of the various order parameter defects (vortices, domain walls, etc.) or the flux tubes. The following gif (first and last frame last for $1​$ second) shows that the zero modes are braided due to flux tubes' movement.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/ZeroModes.gif" alt="Zero modes moving on a 2d lattice" width="30%">
 
@@ -67,9 +67,11 @@ Such braiding can also be realized on a $1​$D nanowire as long as there is a T
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Braiding2plus1.png" alt="Braiding scheme" width="40%">
 
-To provide a more intuitive understanding of such braiding, 
+To provide a more intuitive understanding of such braiding, The $\small\boxed{\substack{\nwarrow\,\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,\, \, \diagdown }  }$ represents a clockwise exchange, while a $\small\boxed{\substack{\nwarrow\,\,\,\, \nearrow \newline \diagdown \newline \diagup\,\,\,\, \, \diagdown }  }​$ represents a counter-clockwise exchange.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/BraidingdiagramExample1.png" alt="Braiding diagram example 1" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/BraidingdiagramExample1.png" alt="Braiding diagram example" width="70%">
+
+
 
 # Acknowledgement
 
