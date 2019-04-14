@@ -6,6 +6,14 @@ tags: Anyon-Braiding Topological-quantum-computation
 keywords: Braiding Anyon Fermion Boson
 status: Writing
 description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post describes braiding anyons.
+comments:
+  - author:
+      type: full
+      displayName: sheqi
+      url: 'https://github.com/sheqi'
+      picture: 'https://avatars3.githubusercontent.com/u/8046255?v=4&s=73'
+    content: Super cool posts !
+    date: 2019-04-14T14:53:32.307Z
 ---
 
 $$
