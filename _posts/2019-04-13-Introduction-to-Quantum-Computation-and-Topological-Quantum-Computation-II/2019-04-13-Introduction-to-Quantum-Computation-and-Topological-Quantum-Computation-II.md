@@ -88,7 +88,9 @@ Such braiding can also be realized on a $1​$D nanowire as long as there is a T
 
 To provide a more intuitive understanding of such braiding, The $\small\boxed{\substack{\nwarrow\,\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,\, \, \diagdown }  }$ represents a clockwise exchange, while a $\small\boxed{\substack{\nwarrow\,\,\,\, \nearrow \newline \diagdown \newline \diagup\,\,\,\, \, \diagdown }  }​$ represents a counter-clockwise exchange.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/BraidingdiagramExample1.png" alt="Braiding diagram example" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="70%">
+
+
 
 # Acknowledgement
 
