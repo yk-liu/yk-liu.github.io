@@ -133,7 +133,7 @@ while projections of a many-qubit state onto an entangled two-qubit state can al
 
 See [Grover's Algorithm](https://medium.com/@jonathan_hui/qc-grovers-algorithm-cd81e61cf248), or a [documentation for Grover's Algorithm from IBM](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/070-Grover's_Algorithm.html). The famous Shor's algorithm can also be found at [IBM's documentation](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
 
- 
+---
 
 [^1]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
 
