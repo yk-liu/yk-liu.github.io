@@ -9,14 +9,26 @@ mathjax: true
 ---
 
 # Lifelong SLAM in the Real Environment
-- The task is to evaluate the robustness and accuracy of visual or visual-inertial SLAM algorithms with commodity sensors in dynamic and daily changing environments.
 
-- We intend to provide an advanced benchmark for current and future SLAM research (especially for semantic SLAM) as well as an indicator of their real-world practicality.
+In most real-world robotic scenarios, robots should be able to long-termly operate in dynamic and daily changing environments, and SLAM should be one of their most fundemental capabilities. However, most existing SLAM frameworks are evaluated in static environments, or in scenes containing some apparent dynamics such as moving people and objects. This competition brings new challenges by introducing *out-of-sight scene changes*. For example, in home scenarios, most objects may be movable or deformable, and the visual features of the same place may be significantly different in some successive days. Such out-of-sight dynamics pose challenges to the robustness of (re-)localization and the reusability of mapping, which to our knowledge have not been well studied. We use the term *Lifelong SLAM* to emphasize the capability of long-term mapping and robust localization.
 
-- Traditional metrics for SLAM (e.g. ATE, RPE) only measure the accuracy of pose tracking, but for lifelong SLAM the tracking failure rate and re-localization success rate are also important. New metrics shall be designed along with the lifelong learning datasets for SLAM tasks.
+The dataset for this competition is collected in homes, offices, and other indoor places. Data are collected for multiple times in each place, to get scene changes in real life. Ground-truth trajectories are acquired by a motion capture system and other auxiliary means. Benchmarking tools will be released to evaluate SLAM algorithms in the lifelong setting.
 
-# Task-specific Rules
-Traditional metrics for SLAM (e.g. ATE, RPE) only measure the accuracy of pose tracking, but for lifelong SLAM the tracking failure rate and re-localization success rate are also important. New metrics shall be designed along with the lifelong learning datasets for SLAM tasks.
+Though the problem of *Lifelong SLAM* may be bit different from conventional SLAM, we will do our best to provide user-frinedly data format and evaluation tools to ensure minimum overhead of participating this competition.
+
+# Competition Task
+
+- Participants should build a visual or visual-inertial SLAM system to join the competition.
+- Participants can choose a subset of sensor data for their algorithm, e.g. monocular or RGB-D, with IMU or without.
+- The SLAM system is encouraged to have re-localization capability to deal with kidnapped robot issue and to recover from tracking failures.
+- The SLAM system is encouraged to make use of semantic information for robust localization in changed scenes.
+- The SLAM system is encouraged to be power efficient (i.e. being able to run on an edge device instead of servers).
+
+More detailed rules are under discussion. Please feel free to [contact us](mailto:xuesong.shi@intel.com) to negotiate for your best interest.
+
+# Evaluation Metrics
+
+We will introduce some new metrics for this competition, as traditional SLAM evaluation (e.g. ATE, RPE) measures mostly the accuracy of pose tracking. We will emphsize more on the robustness of tracking (and maybe also re-localization, which we have not decided). The metrics will be announced before the competition starts.
 
 # Important Dates
 *Dataset Release - June, 2019*
