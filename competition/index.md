@@ -10,8 +10,8 @@ mathjax: true
 
 **The competition will be held during IROS 2019, at November 5th, 2019.**
 
-- [Lifelong SLAM Task](https://lifelong-robotic-vision.github.io/competition/Lifelong-SLAM-Task.html)
-- [Lifelong Object Recognition Task]({{site.url}}{{site.baseurl}}/Lifelong-Object-Recognition-Task.html)
+- [Lifelong SLAM Task]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
+- [Lifelong Object Recognition Task]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
 
 **Program (draft)**
 

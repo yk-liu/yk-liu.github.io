@@ -36,5 +36,3 @@ Traditional metrics for SLAM (e.g. ATE, RPE) only measure the accuracy of pose t
 - Results of the final round will be announced.
 - Results will be visualized for the audience.
 
-
-
