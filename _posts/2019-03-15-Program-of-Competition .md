@@ -1,4 +1,4 @@
-The competition will be held during IROS 2019, at November 5^th, 2019
+The competition will be held during IROS 2019, at November 5th, 2019
 
 <style>
 table th:first-of-type {
