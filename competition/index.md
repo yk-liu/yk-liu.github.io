@@ -13,7 +13,7 @@ mathjax: true
 - [Lifelong SLAM Task](https://lifelong-robotic-vision.github.io/Lifelong-SLAM-Task.html)
 - [Lifelong Object Recognition Task](https://lifelong-robotic-vision.github.io/Lifelong-Object-Recognition-Task.html)
 
-## Program (draft)
+**Program (draft)**
 
 <style>
 table th:first-of-type {

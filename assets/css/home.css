@@ -283,13 +283,13 @@ sub,sup{
 .down .icon:active,.down .icon:hover,.footer a:active,.footer a:hover{
     color:#4b5664
 }
-#about{
+#dataset{
     width:95%;
     margin:0 auto;
     /* max-width:960px */
 }
 @media only screen and (min-width:550px){
-    #about{
+    #dataset{
         width:90%
     }
 }
