@@ -86,7 +86,20 @@ Such braiding can also be realized on a $1$D nanowire as long as there is a T-ju
 
 To make the braiding topological rather than a simple permutation, the lattice need to have a non-trivial topological characteristic. Such connection is made by Witten’s work which connected Chern Simons theory with the knot and link invariants of Jones and Kauffman (from[^3] in Section II.A.1).
 
-# Braiding and Fusion Diagrams
+# Fusion Rules and Braiding Rules
+
+## Fusion rules
+
+When fused, there could be several possible outcomes, denoted as
+$$
+a\times b = \sum N_{ab}^c c
+$$
+
+
+
+
+
+## Braiding and Fusion Diagrams
 
 To maintain consistency with Pachos book[^4], time direction is from top to bottom.
 
@@ -96,7 +109,11 @@ To provide a more intuitive understanding of such braiding, A $\scriptsize\boxed
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="70%">
 
-Two particles can also meet together or stem from vacuum (particle can be it's own anti-particle) like real particles, commonly denoted as $1​$. However, diagrams like in (e) are not considered just yet.
+Two particles can also meet together or stem from vacuum (particle can be it's own anti-particle) like real particles, commonly denoted as $1$. However, diagrams like in (e) are not considered just yet.
+
+## Braiding Diagram
+
+
 
 # Braiding as Quantum Computer
 
