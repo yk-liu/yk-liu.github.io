@@ -27,6 +27,7 @@ author:
 markdown: kramdown
   
 kramdown:
+ auto_ids: false
  footnote_nr: 1
  entity_output: as_char
  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting

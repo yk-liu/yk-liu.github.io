@@ -32,7 +32,7 @@ Traditional metrics for SLAM (e.g. ATE, RPE) only measure the accuracy of pose t
 - A new set of data will be used for the final round.
 - The algorithms from each team shall be uploaded to our benchmarking server and run in a controlled environment.
 
-*Onsite Event - Nov 6, 2019*
+*Onsite Event - Nov 5, 2019*
 - Results of the final round will be announced.
 - Results will be visualized for the audience.
 

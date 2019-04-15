@@ -8,12 +8,14 @@ protected: true
 mathjax: true
 ---
 
+# Competition
+
 **The competition will be held during IROS 2019, at November 5th, 2019.**
 
 - [Lifelong SLAM Task]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
 - [Lifelong Object Recognition Task]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
 
-**Program (draft)**
+# Program (draft)
 
 <style>
 table th:first-of-type {

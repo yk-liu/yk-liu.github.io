@@ -34,7 +34,7 @@ mathjax: true
 - A new dataset will be used for the final competition.
 - The algorithms from each team shall be uploaded to our benchmarking server and run in a controlled environment.
 
-*Onsite Event - Nov 6, 2019*
+*Onsite Event - Nov 5, 2019*
 - Results of the final round will be announced.
 - Results will be visualized for the audience.
 
