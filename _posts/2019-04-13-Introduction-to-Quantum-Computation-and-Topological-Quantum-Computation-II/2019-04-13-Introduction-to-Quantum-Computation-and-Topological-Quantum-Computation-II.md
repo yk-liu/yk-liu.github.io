@@ -84,7 +84,7 @@ Such braiding can also be realized on a $1$D nanowire as long as there is a T-ju
 
 ## A Note on the Lattice
 
-To make the braiding topological rather than a simple permutation, the lattice need to have a non-trivial topological characteristic. Such connection is made by Witten’s work which connected Chern Simons theory with the knot and link invariants of Jones and Kauffman (I learned this from[^3]in Section II.A.1).
+To make the braiding topological rather than a simple permutation, the lattice need to have a non-trivial topological characteristic. Such connection is made by Witten’s work which connected Chern Simons theory with the knot and link invariants of Jones and Kauffman (from[^3] in Section II.A.1).
 
 # Braiding and Fusion Diagrams
 
