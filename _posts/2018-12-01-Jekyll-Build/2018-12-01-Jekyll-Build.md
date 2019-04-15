@@ -54,23 +54,38 @@ About the extended markdown syntaxes, you can see it [here]().
 
 I am going to assume that you know the basic operations of git. If not, download the [GitHub Desktop](https://desktop.github.com/), and do everything in GUI. For the majority of bloggers, only commit and push is required. For you to publish your work, save your file in your editor, go to GitHub Desktop, commit your changes, and push.
 
-<img src="https://raw.githubusercontent.com/yk-liu/PointingToTheMoon/master/_posts/2018-12-11-Jekyll-Build/assets/GitHub-desktop.png" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/PointingToTheMoon/master/_posts/2018-12-11-Jekyll-Build/assets/GitHub-desktop.png" alt="GitHub desktop screen shot" width="60%">
 
 # Clone The Repo
 
-Clone the [repo](https://github.com/yk-liu/PointingToTheMoon) and publish it! I would appreciate if you don't fork my repo.
+Clone this [repo](https://github.com/yk-liu/PointingToTheMoon) and publish it!
 
 # What Should I Modify
 
 Here is a list of files you need to modify
 
-1. **FIRST: REMOVE ALL INFO ABOUT YK-LIU.** Including personal description in `/index.html`, `/google8e731c6ab620fd34`, `/about/index.md` and my CV at `/about/CV-of-Liu-Yingkai.pdf`. Please please do so!
+1. **FIRST: If you are using the "yk-liu.github.io" repo, REMOVE ALL INFO ABOUT YK-LIU.** If you are using "/PointingToTheMoon" repo, you can ignore this step. Including personal description in `/index.html`, `/google8e731c6ab620fd34`, `/about/index.md` and my CV at `/about/CV-of-Liu-Yingkai.pdf`.
+
 2. License.md: add your version of license at the beginning of the file.
+
 3. Readme.md: add your description.
-4. config.yml: fill in as much as you can. 
+
+4. config.yml: fill in as much as you can. Also see step 7.
+
 5. index.html: fill in the description and (if any) proposed posts.
+
 6. register at [commentit.io](https://commentit.io/). This enables your website's comment feature.
-7. secret/index.html: decrypt the page use password `ykliu` and save the page locally. Choose your password, copy and paste the HTML into the input textbox, and download the page. Replace secret/index.html with the HTML file you downloaded. Now you have an encrypted page only you can use to encrypt your other pages!
-8. Better google discovery: Google site authentication. Just go to [webmaster](https://search.google.com/search-console?hl=en) and click `add property` and download the google authentication file, put in under the root of your repo. A few days later, you should be able to see your website in google search by searching `site:your-site-name.github.io` (no space in between).
+
+7. register at [clustermap.com](clustermap.com). Choose your widget as "Map widget", and you will see something like
+
+   ```html
+   <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=MlqUzlcZFdHetSQtyml5oHyt9RwVjZrsGbvyaRpMwgU&cl=ffffff&w=a"></script>
+   ```
+
+   copy the string from "d=" to "&cl=", namely "MlqUzlcZFdHetSQtyml5oHyt9RwVjZrsGbvyaRpMwgU" in this case to config.yml.
+
+8. secret/index.html: decrypt the page use password `ykliu` and save the page locally. Choose your password, copy and paste the HTML into the input textbox, and download the page. Replace secret/index.html with the HTML file you downloaded. Now you have an encrypted page only you can use to encrypt your other pages!
+
+9. Better google discovery: Google site authentication. Just go to [webmaster](https://search.google.com/search-console?hl=en) and click `add property` and download the google authentication file, put in under the root of your repo. A few days later, you should be able to see your website in google search by searching `site:your-site-name.github.io` (no space in between).
 
 After that, you should be able to enjoy your blogging!
