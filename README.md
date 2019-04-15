@@ -1,10 +1,12 @@
 # If you want to use this theme
 
-Please read [this link](https://yk-liu.github.io/jekyll/Jekyll-Build.html#what-should-i-modify).
+Please read [this link](https://yk-liu.github.io/jekyll/Jekyll-Build.html#what-should-i-modify). 
 
-# About me
+I **strongly** recommand that you use the other [repo](https://github.com/yk-liu/PointingToTheMoon) I specially prepared for you! It has all the features that this webiste has and has no personal information of me. You can fork that repo or leave a star if you like. 
 
-Fill in your description.
+However, you can still use this repo for some fine-tuning or hackering. But please at least use the "theme-for-fork" branch rather than the master branch.
+
+If you still want to use the master branch for some reason, please remove files/ descriptions about `yk-liu` so I don't have to pester you to clean up. Also I would appreciate if you don't fork this repo, but clone it and upload to your own, so there is no network between you and me. And if you really like this repo, maybe consider giving it a star.
 
 # About this website
 
