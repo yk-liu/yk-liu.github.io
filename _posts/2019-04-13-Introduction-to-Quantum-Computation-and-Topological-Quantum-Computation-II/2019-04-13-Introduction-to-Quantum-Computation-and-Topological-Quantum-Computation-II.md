@@ -80,15 +80,27 @@ A feasible realization of such anyons is to use quasi-particles on $2$D lattice,
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/ZeroModes.gif" alt="Zero modes moving on a 2d lattice" width="30%">
 
-Such braiding can also be realized on a $1​$D nanowire as long as there is a T-junction as in[^1][^2].
+Such braiding can also be realized on a $1$D nanowire as long as there is a T-junction as in[^1][^2].
 
-# Braiding Diagrams
+## A Note on the Lattice
+
+To make the braiding topological rather than a simple permutation, the lattice need to have a non-trivial topological characteristic. Such connection is made by Witten’s work which connected Chern Simons theory with the knot and link invariants of Jones and Kauffman (I learned this from[^3]in Section II.A.1).
+
+# Braiding and Fusion Diagrams
+
+To maintain consistency with [^Pachos book], time direction is from top to bottom.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Braiding2plus1.png" alt="Braiding scheme" width="40%">
 
-To provide a more intuitive understanding of such braiding, The $\small\boxed{\substack{\nwarrow\,\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,\, \, \diagdown }  }$ represents a clockwise exchange, while a $\small\boxed{\substack{\nwarrow\,\,\,\, \nearrow \newline \diagdown \newline \diagup\,\,\,\, \, \diagdown }  }​$ represents a counter-clockwise exchange.
+To provide a more intuitive understanding of such braiding, A $\scriptsize\boxed{\substack{\nwarrow\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,  \diagdown }  }$ diagram represents a clockwise exchange, while a $\scriptsize\boxed{\substack{\nwarrow\,\,\,  \nearrow \newline \diagdown \newline \diagup\,\,\,  \diagdown }  }​$ represents a counter-clockwise exchange.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="70%">
+
+Two particles can also meet together or stem from vacuum (particle can be it's own anti-particle) like real particles, commonly denoted as $1​$. However, diagrams like in (e) are not considered just yet.
+
+# Braiding as Quantum Computer
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/braiding-QC.png" alt="Braiding as quantum computer" width="20%">
 
 
 
@@ -99,3 +111,5 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 ---
 [^1]: Alicea, J., Oreg, Y., Refael, G., Von Oppen, F., & Fisher, M. P. (2011). Non-Abelian statistics and topological quantum information processing in 1D wire networks. *Nature Physics*, *7*(5), 412.
 [^2]: Kitaev, A. Y. (2001). Unpaired Majorana fermions in quantum wires. *Physics-Uspekhi*, *44*(10S), 131.
+[^3]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
+[^Pachos Book]: Pachos, J. K. (2012). *Introduction to topological quantum computation*. Cambridge University Press.
