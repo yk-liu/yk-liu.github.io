@@ -51,7 +51,7 @@ $$
 \newcommand{\slot}{\,\cdot\,}
 \newcommand{\lact}{\triangleright}
 \newcommand{\ract}{\triangleleft}
-\newcommand{\id}{1\!\!\!\mathsf{\phantom{I}I}}
+\newcommand{\vac}{1\!\!\!\mathsf{\phantom{I}I}}
 \newcommand{\la}{\mathfrak}
 \notag
 $$
@@ -88,6 +88,19 @@ To make the braiding topological rather than a simple permutation, the lattice n
 
 # Fusion Rules and Braiding Rules
 
+Here I will ignore how anyons can be realized on a particular system whether experimentally or in a toy model. That would be discussed in later posts. This post will focus on how these anyons can be manipulated and give desired results as a useful topological quantum computer.
+1. Anyons can be created or annihilated in pairwise fashion. (Initialization and measurement)
+2. Anyons can be fused to form other types of anyons. (manipulation and measurement)
+3. Anyons can be exchanged adiabatically. (manipulation)
+
+To define an anyon model, one first specifies how many distinct anyons there are. For completeness, this list must include a trivial label, $\vac$, corresponding to the vacuum with no anyons. The anyon model is then spanned by some number of particles
+
+$$
+M=\set{\vac,a,b,c,\cdots},\quad \text{$a,b,c,\cdots\,$ are distinct particles}
+$$
+
+As charges they must satisfy conservation rules.
+
 ## Fusion rules
 
 When fused, there could be several possible outcomes, denoted as
@@ -95,10 +108,6 @@ When fused, there could be several possible outcomes, denoted as
 $$
 a\times b = \sum N_{ab}^c c
 $$
-
-
-
-
 
 ## Braiding and Fusion Diagrams
 
@@ -112,11 +121,7 @@ To provide a more intuitive understanding of such braiding, A $\scriptsize\boxed
 
 Two particles can also meet together or stem from vacuum (particle can be it's own anti-particle) like real particles, commonly denoted as $1​$. However, diagrams like in (e) are not considered just yet.
 
-## Braiding Diagram
-
-Braiding the 09
-
-# Braiding as Quantum Computer
+# Braiding as Quantum Computation
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/braiding-QC.png" alt="Braiding as quantum computer" width="20%">
 
