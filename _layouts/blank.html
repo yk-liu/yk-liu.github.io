@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <base >
+      {% include head.html %}  
+      {% include mathjax.html %}  
+      {% include theme-vue.html%}
+      <!-- font awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+      <!-- change font -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet" async>
+      <!--  -->
+   </head>
+   {% include topnav.html active="home"%}
+
+   <body>
+   <div id="main"> 
+	 <div style = "margin-right: 3%;padding: 50px" class="container">
+		{{ content }}
+	 </div>
+   </div>
+   </body>
+   {% include footer.html %} 
+</html>

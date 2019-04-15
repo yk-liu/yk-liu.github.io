@@ -1,0 +1,11 @@
+<h1>Tag Cloud</h1>
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+	<span class="site-tag">
+		<a href="{{site.url}}{{ site.baseurl }}/blog/tags#{{ tag[0] | slugify }}" data-scroll style="text-decoration: none;" >
+		   <code class="highligher-rouge" style="font-size: {{ tag | last | size  |  times: 2 | plus: 80  }}%">
+			  <nobr>{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</nobr>
+		   </code>
+		</a> &nbsp;
+	</span>
+{% endfor %}

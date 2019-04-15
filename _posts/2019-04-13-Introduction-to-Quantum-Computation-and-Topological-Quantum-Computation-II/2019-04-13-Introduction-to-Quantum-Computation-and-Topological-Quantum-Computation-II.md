@@ -51,7 +51,7 @@ $$
 \newcommand{\slot}{\,\cdot\,}
 \newcommand{\lact}{\triangleright}
 \newcommand{\ract}{\triangleleft}
-\newcommand{\id}{1\!\!\!\mathsf{\phantom{I}I}}
+\newcommand{\vac}{1\!\!\!\mathsf{\phantom{I}I}}
 \newcommand{\la}{\mathfrak}
 \notag
 $$
@@ -88,6 +88,20 @@ To make the braiding topological rather than a simple permutation, the lattice n
 
 # Fusion Rules and Braiding Rules
 
+Here I will ignore how anyons can be realized on a particular system whether experimentally or in a toy model. That would be discussed in later posts. This post will focus on how these anyons can be manipulated and give desired results as a useful topological quantum computer.
+1. Anyons can be created or annihilated in pairwise fashion. (Initialization and measurement)
+2. Anyons can be fused to form other types of anyons. (manipulation and measurement)
+3. Anyons can be exchanged adiabatically. (manipulation)
+
+To define an anyon model, one first specifies how many distinct anyons there are. For completeness, this list must include a trivial label, $\vac​$, corresponding to the vacuum with no anyons. The anyon model is then spanned by some number of particles
+$$
+M=\set{\vac,a,b,c,\cdots},\quad \text{$a,b,c,\cdots\,$ are distinct particles}
+$$
+
+
+As charges they
+must satisfy conservation rules. For anyons these are known as fusion rules, that take the form
+
 ## Fusion rules
 
 When fused, there could be several possible outcomes, denoted as
@@ -114,7 +128,7 @@ Two particles can also meet together or stem from vacuum (particle can be it's o
 
 ## Braiding Diagram
 
-Braiding the 09
+Braiding the 
 
 # Braiding as Quantum Computer
 
