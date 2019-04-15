@@ -24,8 +24,10 @@ author:
 
 
 # markdown
+# https://kramdown.gettalong.org/converter/html.html
 markdown: kramdown
-  
+auto_ids: false
+
 kramdown:
  auto_ids: false
  footnote_nr: 1
