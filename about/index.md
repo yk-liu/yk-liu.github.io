@@ -15,6 +15,7 @@ In the following parts we describe how we collect our data.
 
 ## Scenes
 
+To be released around June, 2019.
 
 ## Robot and Sensors
 
@@ -23,5 +24,7 @@ We will collect sensor data with a grounded robot, which is like common service 
 The primary sensor is a RealSense D435i camera, mounted at a fixed height of about 1m. It provides aligned color images and depth images, and IMU measurements.
 
 ## Data Format
+
+To be released around June, 2019.
 
 
