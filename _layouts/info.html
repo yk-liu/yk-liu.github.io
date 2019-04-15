@@ -17,7 +17,7 @@
    </head>
 
 <div class="topnav" id="topnav">
-{% include topnav.html active="home"%}
+{% include topnav.html active=page.title%}
 </div>
 
       <!-- link to topbar.css-->
@@ -29,7 +29,7 @@
 <body>
 	<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 	<!-- this is side bar -->
-	<div class="sidebar" id="sidebar">
+	<!--div class="sidebar" id="sidebar">
 		<nav class="sidebar-nav">
 			{% include navitem.html %}
 		</nav>	
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 		{% endif %}
-	</div>
+	</div-->
 
 	<!-- Add all page content inside this div if you want the side nav to push page content to the right
 		 (not used if you only want the sidenav to sit on top of the page -->
