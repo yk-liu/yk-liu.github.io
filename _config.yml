@@ -1,29 +1,27 @@
 # Site settings
-title: Website Title
-description: Website short description
-baseurl: "/PointingToTheMoon" 
-#change the baseurl to "" if you are using it as your user GitHub Pages
-url: "https://yk-liu.github.io"  
-
+title: Pointing to the Moon
+description: Blog of Yingkai Liu
+baseurl: "" 
+url: "https://yk-liu.github.io" 
 
 # GitHub User settings
-username: Username
-github_username: github_username
-user_description: user_description
-user_title: user_title
-email: 
+username: Yingkai Liu
+github_username: yk-liu
+user_description: A Physics undergrad with a broad interest
+user_title: Physics Undergraduate
+email: yingkai.liu@outlook.com
 
 # Blog Author settings
 author:
-  name:            
+  name:           Yingkai Liu
   picture:        
-  email:           
-  description:     
+  email:          yingkai.liu@outlook.com
+  description:    I'm a Physics undergrad with a broad interest.
   twitter:
   facebook:
-  github:          
+  github:         https://github.com/yk-liu
   linkedin:
-  # If you're forking this site, make sure you delete this entry!
+  # # If you're forking this site, make sure you delete this entry!
   clustrmap:      MlqUzlcZFdHetSQuxml5oHyt9RwVjZrsGbvyaRpMwgU 
   # If you're forking this site, make sure you delete this entry!
 
