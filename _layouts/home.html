@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   {% include head.html %}
-   <!-- main style sheet -->  
-   <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/home.css">
-   <!-- font awesome --> 
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-   <!-- google font-->
-   <link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
-   <!-- --> 
-</head>	 
+   <head>
+      {% include head.html %}
+      <!-- main style sheet -->  
+      <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/home.css">
+      <!-- font awesome --> 
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+      <!-- google font-->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
+      <!-- --> 
+   </head>
    <body>
       <div id="particles-js" style="background-image: url('https://yk-liu.github.io/about/Moon.png');background-size: 20%;background-repeat: no-repeat;background-position: 80% 20%;">
          <div class="header">
@@ -27,20 +27,18 @@
       </div>
       <section id="about">
          <div class="lower">
-            
-               {{ content }}
-            
+            {{ content }}
          </div >
       </section>
       <script src= "https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/particles.js@2/particles.js"></script>
-			<script src="{{site.url}}{{site.baseurl}}/assets/js/particles_conf.js"></script>
-			<script>
-			/* sweetScroll load */
-				document.addEventListener('DOMContentLoaded', () => {
-					const scroller = new SweetScroll({/* some options */});
-				}, false);
-			</script>
+      <script src="{{site.url}}{{site.baseurl}}/assets/js/particles_conf.js"></script>
+      <script>
+         /* sweetScroll load */
+         	document.addEventListener('DOMContentLoaded', () => {
+         		const scroller = new SweetScroll({/* some options */});
+         	}, false);
+      </script>
    </body>
    {% include footer.html analytics=false %} 
 </html>

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <base >
       {% include head.html %}  
-			{% if page.mathjax %}			
-				{% include markdown-enhancements/mathjax.html %}
-			{% endif %}
+      {% include mathjax.html %}  
       {% include theme-vue.html%}
       <!-- font awesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
@@ -20,15 +19,6 @@
 		{{ content }}
 	 </div>
    </div>
-	    {% include footer.html %} 
    </body>
-
-	 	{% if page.mermaid == true %}
-	{% include markdown-enhancements/mermaid.html %}
-	{% endif %}
-
-	{% if page.highlight == true %}
-		{% include markdown-enhancements/highlight.html %}
-	{% endif %}
-
+   {% include footer.html %} 
 </html>

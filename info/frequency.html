@@ -1,0 +1,212 @@
+---
+layout: displayindex
+title: Calendar
+---
+
+{% comment %} 
+date formatting syntax see http://strftime.net/ 
+{% endcomment %}
+{% assign from_year = site.posts[-1].date | date: '%Y' | times: 1 %}
+{% assign to_year =  site.time | date: '%Y' | times: 1 %}
+
+
+{% assign notthisyear = '#dddddd' %}
+{% assign activity_color_0 = '#f1f1f1' %}
+{% assign activity_color_1 = '#78cfa8' %}
+{% assign activity_color_2 = '#53c28f' %}
+{% assign activity_color_3 = '#42b983' %}
+{% assign activity_color_4 = '#3ba676' %}
+
+
+<style>
+#calendar_wrapper{
+line-height: 0.5rem;
+width: 54rem
+}
+.not_this_year {
+background-color: {{notthisyear}};
+}
+.act_0 {
+background-color: {{activity_color_0}};
+}
+.act_1 {
+background-color: {{activity_color_1}};
+}
+.act_2 {
+background-color: {{activity_color_2}};
+}
+.act_3 {
+background-color: {{activity_color_3}};
+}
+.act_4 {
+background-color: {{activity_color_4}};
+}
+#calendar, #calendar th, #calendar td {
+border-collapse: collapse;
+border: 3px solid #f8f8f8;
+font-size: small;
+padding: unset;
+table-layout: fixed;
+padding: unset;
+font-family: 'Ubuntu Mono', monospace;
+font-size: x-small
+}
+#calendar th, #calendar td {
+width: 0.8rem;
+height: 0.8rem;
+table-layout: fixed;
+}
+</style>
+
+{% comment %} 
+generate empty calendar
+{% endcomment %}
+
+{% capture empty_cal %}
+   {% for year in (from_year..to_year) reversed %}
+      <h3> {{year}} </h3>
+      {% capture end_of_this_year %}   {{year}}-12-31  {% endcapture %}
+      {% capture start_of_this_year %} {{year}}-01-01  {% endcapture %}
+      
+      {% assign total_days = end_of_this_year | date: "%j" | plus: 0 %} 
+      {% assign total_weeks = end_of_this_year | date: "%U" | plus: 0 %}
+      {% assign first_day_dow = start_of_this_year | date: "%u" | plus: 0 %}
+      {% assign last_day_dow = end_of_this_year | date: "%u" | plus: 0 %}
+      
+      {% capture Jan %} {{year}}-01-01 {% endcapture %} {% assign Jan = Jan | date: "%j" | plus: 0 %}
+      {% capture Feb %} {{year}}-02-01 {% endcapture %} {% assign Feb = Feb | date: "%j" | plus: 0 %}
+      {% capture Mar %} {{year}}-03-01 {% endcapture %} {% assign Mar = Mar | date: "%j" | plus: 0 %}
+      {% capture Apr %} {{year}}-04-01 {% endcapture %} {% assign Apr = Apr | date: "%j" | plus: 0 %}
+      {% capture May %} {{year}}-05-01 {% endcapture %} {% assign May = May | date: "%j" | plus: 0 %}
+      {% capture Jun %} {{year}}-06-01 {% endcapture %} {% assign Jun = Jun | date: "%j" | plus: 0 %}
+      {% capture Jul %} {{year}}-07-01 {% endcapture %} {% assign Jul = Jul | date: "%j" | plus: 0 %}
+      {% capture Aug %} {{year}}-08-01 {% endcapture %} {% assign Aug = Aug | date: "%j" | plus: 0 %}
+      {% capture Sep %} {{year}}-09-01 {% endcapture %} {% assign Sep = Sep | date: "%j" | plus: 0 %}
+      {% capture Oct %} {{year}}-10-01 {% endcapture %} {% assign Oct = Oct | date: "%j" | plus: 0 %}
+      {% capture Nov %} {{year}}-11-01 {% endcapture %} {% assign Nov = Nov | date: "%j" | plus: 0 %}
+      {% capture Dec %} {{year}}-12-01 {% endcapture %} {% assign Dec = Dec | date: "%j" | plus: 0 %}
+      
+      {% assign total_weeks_pp = total_weeks | plus: 1 %}
+      
+      <div id="calendar_wrapper" style="overflow-x:auto;">
+      <table id="calendar">
+      <thead><tr>
+      <th> </th> {% comment %} This column is for week days {% endcomment %}
+      {% for week in (1..total_weeks_pp) %}
+         {% assign monday_day_sn = week | times: 7 | plus: 1 %}
+         {% assign prev_monday_day_sn = week | minus: 1 | times: 7 | plus: 1 %}
+         {% if forloop.index == 1 %}
+            <th> Jan </th>
+         {% elsif prev_monday_day_sn < Feb and monday_day_sn >= Feb %} 
+            <th> Feb </th>
+         {% elsif prev_monday_day_sn < Mar and monday_day_sn >= Mar %} 
+            <th> Mar </th>
+         {% elsif prev_monday_day_sn < Apr and monday_day_sn >= Apr %} 
+            <th> Apr </th>
+         {% elsif prev_monday_day_sn < May and monday_day_sn >= May %} 
+            <th> May </th>
+         {% elsif prev_monday_day_sn < Jun and monday_day_sn >= Jun %} 
+            <th> Jun </th>
+         {% elsif prev_monday_day_sn < Jul and monday_day_sn >= Jul %} 
+            <th> Jul </th>
+         {% elsif prev_monday_day_sn < Aug and monday_day_sn >= Aug %} 
+            <th> Aug </th>
+         {% elsif prev_monday_day_sn < Sep and monday_day_sn >= Sep %} 
+            <th> Sep </th>
+         {% elsif prev_monday_day_sn < Oct and monday_day_sn >= Oct %} 
+            <th> Oct </th>
+         {% elsif prev_monday_day_sn < Nov and monday_day_sn >= Nov %} 
+            <th> Nov </th>
+         {% elsif prev_monday_day_sn < Dec and monday_day_sn > Dec %} 
+            <th> Dec </th>
+         {% else %}
+            <th> </th>
+         {% endif %}
+      {% endfor%}
+      </tr>
+      </thead>
+      
+      </tbody>
+      {% for weekday in (1..7) %}
+         <tr>
+         {% for week in (0..total_weeks_pp) %} 
+            {% assign today_sn = week | minus: 1 | times: 7 | plus: weekday | minus: first_day_dow | plus: 1 %}
+            
+            {% assign activity = 0 %}
+            {% assign today_date = '' %}
+            
+            {% for post in site.posts %}
+               {% assign posted_year   = post.date | date: "%Y" | plus: 0 %}
+               {% assign posted_day_sn = post.date | date: "%j" | plus: 0 %}
+               {% assign edited_year   = post.edit | date: "%Y" | plus: 0 %}
+               {% assign edited_day_sn = post.edit | date: "%j" | plus: 0 %}
+               
+               {% if posted_day_sn == today_sn %}
+                  {% if posted_year == year %}
+                     {% assign activity = activity | plus: 1 %}
+                     {% assign today_date = post.date | date: "%b. %d, %Y" %}
+                  {% endif %}
+               {% endif %}
+
+               {% if edited_day_sn == today_sn %}
+                  {% if edited_year == year %}
+                     {% assign activity = activity | plus: 1 %}
+                     {% assign today_date = post.edit | date: "%b. %d, %Y" %}
+                  {% endif %}
+               {% endif %}
+            {% endfor %}
+                        
+            {% if forloop.first %}
+               {% if weekday == 1 %}
+                  <td> Mon </td>
+               {% elsif weekday == 3 %}
+                  <td> Tue </td>
+               {% elsif weekday == 5 %}
+                  <td> Fri </td>
+               {% elsif weekday == 7 %}
+                  <td> Sun </td>
+               {% else %}
+                  <td>  </td>
+               {% endif %}  
+            {% elsif forloop.index0 == 1 %}
+               {% if weekday >= first_day_dow %}
+                  <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}">{% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
+               {% else %}
+                  <td class="not_this_year">  </td>
+               {% endif %}
+            {% elsif forloop.last %}
+               {% if weekday > last_day_dow %}
+                  <td class="not_this_year">  </td>
+               {% else %}
+                  <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}"> {% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
+               {% endif %}      
+            {% else %}
+               <td class="act_{{ activity }}" title="{{ activity }} activity on {{today_date}}"> {% comment %}  <a href="#{{day}}-{{year}}" style="display:block;">&nbsp;</a> {% endcomment %}</td>
+            {% endif %}
+         {% endfor %}
+         </tr>
+      {% endfor %}
+      </tbody>
+      
+      </table>
+      </div>
+      
+   {% endfor %}
+{% endcapture %}
+
+{{ empty_cal }}
+
+<dl class="posts">
+	 {% for post in site.posts %}
+		<dt>
+    <code>{{ post.date | date_to_string }}</code> <i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;{% include status-indicator.html status=post.status%}
+    </dt>
+    {% if post.description %}
+ <dd style="text-align: justify">{{ post.description  | markdownify }}
+    </dd>
+			 {% endif %}
+		
+		{% endfor %}
+	</dl>
+
+
