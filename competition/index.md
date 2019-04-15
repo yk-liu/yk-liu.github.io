@@ -10,7 +10,7 @@ mathjax: true
 
 # Lifelong Robotic Vision Competition
 
-**The competition will be held during IROS 2019, at November 5th, 2019.**
+**The competition will be held with IROS 2019, on November 5, 2019.**
 
 - [Lifelong SLAM Task]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
 - [Lifelong Object Recognition Task]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
