@@ -88,7 +88,7 @@ To make the braiding topological rather than a simple permutation, the lattice n
 
 # Braiding and Fusion Diagrams
 
-To maintain consistency with [^Pachos book], time direction is from top to bottom.
+To maintain consistency with Pachos book[^4], time direction is from top to bottom.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Braiding2plus1.png" alt="Braiding scheme" width="40%">
 
@@ -112,4 +112,4 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 [^1]: Alicea, J., Oreg, Y., Refael, G., Von Oppen, F., & Fisher, M. P. (2011). Non-Abelian statistics and topological quantum information processing in 1D wire networks. *Nature Physics*, *7*(5), 412.
 [^2]: Kitaev, A. Y. (2001). Unpaired Majorana fermions in quantum wires. *Physics-Uspekhi*, *44*(10S), 131.
 [^3]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
-[^Pachos Book]: Pachos, J. K. (2012). *Introduction to topological quantum computation*. Cambridge University Press.
+[^4]: Pachos, J. K. (2012). *Introduction to topological quantum computation*. Cambridge University Press.
