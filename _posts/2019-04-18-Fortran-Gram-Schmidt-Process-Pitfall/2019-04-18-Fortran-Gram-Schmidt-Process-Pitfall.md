@@ -121,4 +121,4 @@ $$
 A=\begin{pmatrix}4 & -2\\3 & 1\end{pmatrix}.
 $$
 
-I wouldn't say that my version of G-S is industrial grade, but this is surely a lesson: **actual programs' behavior is much more complicated and a pure "theoretical" way of doing it might not work. Do not ever forget the error even if someone might have done the dirty work for you.**
+I wouldn't say that my version of G-S is industrial grade, but this is surely a lesson: **actual programs' behaviors are much more complicated and a pure "theoretical" way of doing it might not work. Do not ever forget the error even if someone might have done the dirty work for you.**
