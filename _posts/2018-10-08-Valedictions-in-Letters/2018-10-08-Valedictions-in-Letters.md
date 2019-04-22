@@ -47,6 +47,18 @@ comments:
 
       Anyway, thanks for your advice!
     date: 2019-03-26T14:15:53.213Z
+  - author:
+      type: github
+      displayName: dsmagiya
+      url: 'https://github.com/dsmagiya'
+      picture: 'https://avatars1.githubusercontent.com/u/32017884?v=4&s=73'
+    content: >-
+      You might find it interesting checking out this page: 
+      https://physcai.com. He is a friend of mine who also studies CMT. And, I
+      enjoyed your latest post on topological QC. It is a very bizarre topic,
+      except its great difficulty in experimental implementation. If you are
+      very into it, StationQ should be a good place for your gap year. (IMHO)
+    date: 2019-04-22T10:42:52.156Z
 
 ---
 
