@@ -1,7 +1,7 @@
 # Site settings
 title: Website Title
 description: Website short description
-baseurl: "/PointingToTheMoon" 
+baseurl: "" 
 #change the baseurl to "" if you are using it as your user GitHub Pages
 url: "https://yk-liu.github.io"  
 
@@ -23,9 +23,7 @@ author:
   facebook:
   github:          
   linkedin:
-  # If you're forking this site, make sure you delete this entry!
   clustrmap:      
-  # If you're forking this site, make sure you delete this entry!
 
 
 # markdown
