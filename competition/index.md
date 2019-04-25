@@ -10,13 +10,44 @@ mathjax: true
 
 # Lifelong Robotic Vision Competition
 
-**The competition will be held with IROS 2019, on November 5, 2019.**
+The competition is composed of two challenges with separate scoreboards. Each team can register for either challenge or both. The competition will mostly be online, with an on-site event at [IROS 2019](https://www.iros2019.org/) to announce the final scores, demonstrate the best results, and hold technical talks and discussions.
 
-- [Lifelong SLAM Task]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
-- [Lifelong Object Recognition Task]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
+For the details of each challenge, please follow their webpages:
 
-## Program (draft)
+- [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
+- [Lifelong Object Recognition Challenge]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
 
+# Registration
+
+If you are interested in either challenge, we encourage you to [pre-register with email](mailto:xuesong.shi@intel.com,qi.she@intel.com?subject=Pre-register%20for%20Lifelong%20Robotic%20Vision%20Competition&Body=Dear%20Organizers,%0D%0A) right now to tell us your interests and special requests. Your early feedbacks can help us define the data and rules.
+
+The official registration will be open around June, with sample dataset available then.
+
+# Important Dates
+*Dataset Release - June, 2019*
+- Register for the competition first.
+- Download the dataset.
+- Develop your algorithm, evaluate it with the dataset and improve it.
+
+*First Round - Sept, 2019*
+- Download competition datasets, software tools, and upload the results before the deadline.
+- Highest-scored teams will be invited to the final round and to the onsite event.
+
+*Final Round - Oct, 2019*
+- A new set of data will be used for the final round.
+- The algorithms from each team shall be uploaded to our benchmarking server and run in a controlled environment.
+
+*Onsite Event - Nov 5, 2019*
+- Results of the final round will be announced.
+- Results will be visualized for the audience.
+
+# IROS 2019 Onsite Event
+
+Time: Nov 5, 2019
+
+Venue: The Venetian Macao Resort Hotel, Macau, China
+
+Program: (draft)
 <style>
 table th:first-of-type {
     width: 30%;

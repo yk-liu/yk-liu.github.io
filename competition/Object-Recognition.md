@@ -21,20 +21,5 @@ mathjax: true
 - The computational demand of adding new training tasks or making a single inference should be bounded by a finite bound.
 - The final score is obtained via averaging the 3 aspects scores. (1) accuracy over both new and old tasks, e.g. object recognitions; (2) the memory efficiency. The model size should be fixed not exceeding our bounded value; and (3) the running time for inference under same setting. An evaluation metric will be provided.
 
-# Important Dates
-*Dataset Release - June, 2019*
-- Develop your object recognition algorithm and evaluate with our lifelong robotic vision data.
 
-*First Round - Sept, 2019*
-- Register for the competition first. 
-- Download datasets, software tools, and upload the results before the deadline.
-- Highest-scored teams will be invited to the final competition and to the onsite event.
-
-*Final Round - Oct, 2019*
-- A new dataset will be used for the final competition.
-- The algorithms from each team shall be uploaded to our benchmarking server and run in a controlled environment.
-
-*Onsite Event - Nov 5, 2019*
-- Results of the final round will be announced.
-- Results will be visualized for the audience.
 
