@@ -61,8 +61,8 @@ table th:nth-of-type(2) {
 | Time | Event | Comments |
 |----- | ------ | ----- |
 | 8:30 - 9:00 | Organizer move-in and setup | The competition organizer can help to setup the devices |
-| 9:00 - 10:00 | Participants setup and trial on given machines | Deployment over the cloud or local machine |
-| 10:00 - 10:30 | Time break |  |
+| 9:00 - 10:00 | Invited talks |  |
+| 10:00 - 10:30 | Coffee break |  |
 | 10:30 - 12:30 | Competition1: Lifelong Object Recognition | The competition is held on organizer-provided computers based on given dataset, without real robots on-site |
 | 12:30 - 13:30 | Lunch |  |
 | 13:30 - 15:30 | Competition 2: Lifelong SLAM | The competition is held on organizer-provided computers based on given dataset, without real robots on-site |
