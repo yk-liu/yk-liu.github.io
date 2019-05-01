@@ -5,7 +5,7 @@ categories: Topological-quantum-computation
 tags: Anyon-Braiding Topological-quantum-computation
 keywords: Braiding Anyon Fermion Boson
 status: Writing
-edit: 2018-04-19
+edit: 2018-05-01
 description: >-
   This is a series of posts on topological quantum computations. The aim of this
   series is to work my way to understanding the diagrams of "strands" widely
@@ -75,18 +75,28 @@ While on $2$-dimensional space, the light-blue path cannot shrink to the dark-bl
 
 ## Anyons as Quasi-particles
 
+{% comment %}
+
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/FluxTubes.png" alt="Loop shrink on 3d and 2d-Lattice" width="50%">
 
 A feasible realization of such anyons is to use quasi-particles on $2$D lattice, by either introducing defects or use flux tubes. The braiding is therefore realized by the motion of the various order parameter defects (vortices, domain walls, etc.) or the flux tubes. The following gif (first and last frame last for $1.5$ second) shows that two lower zero modes are braided due to flux tubes' movement.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/ZeroModes.gif" alt="Zero modes moving on a 2d lattice" width="30%">
 
-Such braiding can also be realized on a $1$D nanowire as long as there is a T-junction as in[^1][^2]. The process is like trying make a [three-point turn](https://en.wikipedia.org/wiki/Three-point_turn)(<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Three-point_turn.svg/266px-Three-point_turn.svg.pngon" alt="three-point-turn" width="7%">) on a narrow street using a T-intersection. 
+{% endcomment %}
+
+Such braiding can also be realized on a $1$D nanowire as long as there is a T-junction as in[^1][^2]. The process is like trying make a [three-point turn](https://en.wikipedia.org/wiki/Three-point_turn)
+
+<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Three-point_turn.svg/266px-Three-point_turn.svg.pngon" alt="three-point-turn" width="30%">
+
+ on a narrow street using a T-intersection. 
 
 <figure>
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/T-junction.png" alt="Braiding on a T-junction nanowire" width="80%">
 <figcaption>Braiding on a T-junction nanowire. Two anyons on the nanowire is mapped to the head and tail of the car. When the car is truned around, the two anyons are swaped, or braided.</figcaption>
 </figure>
+More complicated realizations of zero modes and their braiding will be discussed later.
+
 ## A Note on the Lattice
 
 To make the braiding topological rather than a simple permutation, the lattice need to have a non-trivial topological characteristic. In my understanding, such connection is made by Witten’s work which connected Chern Simons theory with the knot and link invariants of Jones and Kauffman (from[^3] in Section II.A.1).
@@ -116,6 +126,7 @@ $$
 
 For example, $\sigma\times \sigma = \vac + \psi$ means that two $\sigma$ anyons can be fused together, the result is either a $\psi$ particle, **or** (not **and**) a $\vac$ vacuum. Notice that $N_{ab}^c$ is not necessarily $1$, for two particles might fuse into more particles, for example, $\alpha \times \beta = 2\theta + 3\gamma$. That equation means an $\alpha$ anyon can fuse with a $\beta$ anyon, the result is either two $\theta$ anyons, <u>or</u> 3 $\gamma$ anyons. The result is **NOT**  two $\theta$ anyons, <u>and</u> 3 $\gamma$ anyons. 
 
+
 The "or" statement is the part of the foundation of quantum computation.
 
 
@@ -128,11 +139,12 @@ To maintain consistency with Pachos' book[^4], evolution starts from the top.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Braiding2plus1.png" alt="Braiding scheme" width="40%">
 
-{% endcomment %}
-
 To provide a more intuitive understanding of such braiding, A $\scriptsize\boxed{\substack{\nwarrow\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,  \diagdown }  }$ diagram represents a clockwise exchange, while a $\scriptsize\boxed{\substack{\nwarrow\,\,\,  \nearrow \newline \diagdown \newline \diagup\,\,\,  \diagdown }  }$ represents a counter-clockwise exchange.
 
+{% endcomment %}
+
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="70%">
+
 
 Two particles can also meet together or stem from vacuum (particle can be it's own anti-particle) like real particles, commonly denoted as $1$. However, diagrams like in (e) are not considered just yet.
 
