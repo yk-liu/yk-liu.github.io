@@ -66,6 +66,7 @@ defaults:
       protected: false
       commentable: true
       rss: true
+      numbering: true
 
 
 exclude:
