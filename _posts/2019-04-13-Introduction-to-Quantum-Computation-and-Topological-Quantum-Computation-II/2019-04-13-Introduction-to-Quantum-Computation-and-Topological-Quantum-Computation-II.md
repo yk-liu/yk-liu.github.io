@@ -89,7 +89,7 @@ Such braiding can also be realized on a $1$D nanowire as long as there is a T-ju
 </figure>
 ## A Note on the Lattice
 
-To make the braiding topological rather than a simple permutation, the lattice need to have a non-trivial topological characteristic. Such connection is made by Witten’s work which connected Chern Simons theory with the knot and link invariants of Jones and Kauffman (from[^3] in Section II.A.1).
+To make the braiding topological rather than a simple permutation, the lattice need to have a non-trivial topological characteristic. In my understanding, such connection is made by Witten’s work which connected Chern Simons theory with the knot and link invariants of Jones and Kauffman (from[^3] in Section II.A.1).
 
 # Fusion Rules and Braiding Rules
 
@@ -114,9 +114,9 @@ $$
 a\times b = \sum N_{ab}^c c
 $$
 
-For example, $\sigma\times \sigma = \vac + \psi$ means that two $\sigma$ anyons can be fused together, the result is either a $\psi$ particle, **or** (not **and**) a $\vac$ vacuum. Notice that $N_{ab}^c$ is not necessarily $1$, for two particles might fuse into more particles, for example, $\alpha \times \beta = 2\theta + 3\gamma$. That equation means an $\alpha$ anyon can fuse with a $\beta$ anyon, the result is either two $\theta$ anyons, or 3 $\gamma$ anyons. The result is **<u>NOT</u>** 
+For example, $\sigma\times \sigma = \vac + \psi$ means that two $\sigma$ anyons can be fused together, the result is either a $\psi$ particle, **or** (not **and**) a $\vac$ vacuum. Notice that $N_{ab}^c$ is not necessarily $1$, for two particles might fuse into more particles, for example, $\alpha \times \beta = 2\theta + 3\gamma$. That equation means an $\alpha$ anyon can fuse with a $\beta$ anyon, the result is either two $\theta$ anyons, <u>or</u> 3 $\gamma$ anyons. The result is **NOT**  two $\theta$ anyons, <u>and</u> 3 $\gamma$ anyons. 
 
-For quantum computation, superposition states must be created. 
+The "or" statement is the part of the foundation of quantum computation.
 
 
 
@@ -124,7 +124,11 @@ For quantum computation, superposition states must be created.
 
 To maintain consistency with Pachos' book[^4], evolution starts from the top.
 
+{% comment %}
+
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-II/assets/Braiding2plus1.png" alt="Braiding scheme" width="40%">
+
+{% endcomment %}
 
 To provide a more intuitive understanding of such braiding, A $\scriptsize\boxed{\substack{\nwarrow\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,  \diagdown }  }$ diagram represents a clockwise exchange, while a $\scriptsize\boxed{\substack{\nwarrow\,\,\,  \nearrow \newline \diagdown \newline \diagup\,\,\,  \diagdown }  }$ represents a counter-clockwise exchange.
 
