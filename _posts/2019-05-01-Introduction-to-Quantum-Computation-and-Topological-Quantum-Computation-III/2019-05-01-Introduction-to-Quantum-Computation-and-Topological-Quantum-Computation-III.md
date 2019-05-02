@@ -62,7 +62,7 @@ $$
 $$
 But that's not even an unitary matrix! 
 
-
+So I realized that the apparatuses used in Stern-Gerlach is in fact apparatuses for measurement. A measurement is in no way represented by a unitary matrix. Thus my attempt to build a quantum computer using Stern-Gerlach experiment is bound to fail. Besides, there is no paper on building quantum computers using Stern-Gerlach experiments.
 
 
 
@@ -74,9 +74,15 @@ But that's not even an unitary matrix!
 
 # Simulation of TQC
 
+Code in [^2]. The claim: 
 
+> QTop allows for the simulation of topologies with arbitrary code depth, qudit dimension, and error models. Currently, QTop features Kitaev quantum double models, as well as color codes in 3-regular planar tilings.
 
+Zhenhan wa: 4.3. Clifford Operators. in paper[^3]
 
+a simulator[^4]
+
+SE posts[^5]
 
 # Acknowledgement
 
@@ -84,6 +90,23 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 
 ---
 [^1]: ASarkar, Angik, T. K. Bhattacharyya, and Ajay Patwardhan. "Quantum Logic Processor: A Mach Zehnder Interferometer based Approach." *arXiv preprint cond-mat/0603695* (2006).
-[^2]: Kitaev, A. Y. (2001). Unpaired Majorana fermions in quantum wires. *Physics-Uspekhi*, *44*(10S), 131.
-[^3]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
-[^4]: Pachos, J. K. (2012). *Introduction to topological quantum computation*. Cambridge University Press.
+[^2]: <https://github.com/jacobmarks/QTop>
+[^3]: Bloomquist, Wade, and Zhenghan Wang. "On topological quantum computing with mapping class group representations." *Journal of Physics A: Mathematical and Theoretical* 52.1 (2018): 015301.
+
+[^4]: <http://www.quantumplayground.net/#/home>
+[^5]: 
+>  - list of code for QC:
+>
+>    <https://quantumcomputing.stackexchange.com/questions/12/are-there-emulators-for-quantum-computers>
+>
+>  - Turing machine and QC:
+>
+>    <https://quantumcomputing.stackexchange.com/questions/1/can-a-turing-machine-simulate-a-quantum-computer>
+>
+>  - intuitive numbers why it's hard tosimulate
+>
+>  - <https://quantumcomputing.stackexchange.com/questions/5005/why-it-is-hard-to-simulate-a-quantum-device-by-a-classical-devices>
+>
+>  - 
+>
+>  
