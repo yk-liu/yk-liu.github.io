@@ -39,50 +39,135 @@ $$
 \notag
 $$
 
-# A novice Pitfall
+This post contains debates inside my mind, after failing to write it concisely in plain paragraphs, I decided to write this post in the form of three characters, ***Smarty***, ***`Dummy`*** and ***<a>Sassy</a>***discussing. Some of the cited materials are selected to prove a point, but may contain more information than the speaker intended or conveyed.
 
-When I was writing on the first post of this series, I was planning to use electrons in Stern-Gerlach experiment as qubits and gates. I initially prepared a diagram like this:
+# A Novice's Pitfall
 
+---
+
+***Smarty***: The quantum computing is quite complicated and can be hard to understand. If I make use of electrons in Stern-Gerlach experiment as qubits and gates. like this:
 <img src='./assets/incorrect-implementation-of-TQC.png' alt="an incorrect implementation of TQC" width="60%">
+Then it will be very intuitive for me and the reader! 
 
-Then I sensed something was off. 
+---
 
-The CNOT gate do not flip the second spin with respect to the first spin's orientation. Aha! that's because a CU gate ([controlled gate](https://en.wikipedia.org/wiki/Quantum_logic_gate#Controlled_(cX_cY_cZ)_gates)) is meant for creating entanglement. That's easy. I'll just measure the total spin of two spins. That should create a maximally-entangled state. So I started drawing the following diagram.
+***`Dummy`***: Then why haven't anyone done so? This is perfect for heuristic educations as well as actual commercial/ experimental setups. Yet I looked up in the internet, but no one seemed to have made such construction. The only paper I found is about an implementation using Mach Zehnder Interferometer[^1] (see table 3. about how each gate is implemented).
+
+---
+
+ ***<a>Sassy</a>***: Hmm... while you guys are making your diagram, I am wondering how this computer works. You know, when you draw some diagram like that, you give an input, and an output is generated. How is that anything "quantum"? I mean, I could easily write any quantum circuit down and know the answer, without even running the actual machine.
+
+---
+
+***`Dummy`***: And wait! The above CNOT gate do not flip the second spin with respect to the first spin's orientation. 
+
+---
+
+***Smarty***: Of course! You guys are right! A CU gate ([controlled gate](https://en.wikipedia.org/wiki/Quantum_logic_gate#Controlled_(cX_cY_cZ)_gates)) is meant for creating entanglement. The above CNOT gate does not create any entanglement. 
+
+---
+
+***`Dummy`***: And fixing that would solve ***Sassy***'s problem. An entangled state can create superposition and thus cause uncertainty. You will then get a different result for each measurement, like in Glover's Algorithm, where you get the matching result with **<u>almost</u>** 100% chance. But you are still **not** 100% sure **that is it**.
+
+---
+
+***Smarty***: Ok, that's easy. I'll just measure the total spin of two spins. That should create a maximally-entangled state. Let me try something...
+
+---
+
+***<a>Sassy</a>***: But you guys haven't answered my question yet. Even if you came up with something like that, this circuit is still predictable, and thus deterministic. * writes on the note *
 
 <img src='./assets/notes-on-modified-but-still-incorrect-implementation-of-TQC.png' alt="notes on modified-but-still-wrong implementation of TQC" width="80%">
 
-I ended up with a matrix which I called $\Sigma_Z$:
+---
+
+***Smarty***: Okay, I seems to get stuck on this one. 
+
+---
+
+***`Dummy`***: Yeah, you are... see if you implement the above "circuit", if that's one, you will end up with a matrix (call that $\Sigma_Z$):
 $$
-\Sigma_Z=\begin{pmatrix}
-1 &&&\\
-& \tfrac{1}{2} & \tfrac{1}{2} & \\
-& \tfrac{1}{2} & \tfrac{1}{2} & \\
-&&& 1
-\end{pmatrix}
+  \Sigma_Z=\begin{pmatrix}
+  1 &&&\\
+  & \tfrac{1}{2} & \tfrac{1}{2} & \\
+  & \tfrac{1}{2} & \tfrac{1}{2} & \\
+  &&& 1
+  \end{pmatrix}.
 $$
-But that's not even an unitary matrix! 
+ But  $\Sigma_Z$ is  not even an unitary matrix! 
 
-So I realized that the apparatuses used in Stern-Gerlach is in fact apparatuses for measurement. A measurement is in no way represented by a unitary matrix. Thus my attempt to build a quantum computer using Stern-Gerlach experiment is bound to fail. Besides, there is no paper on building quantum computers using Stern-Gerlach experiments.
+---
 
+***Smarty***: Oh I know! The apparatuses used in Stern-Gerlach is in fact apparatuses for **measurement**. A measurement is in no way represented by a **unitary** matrix. Thus my attempt to build a quantum computer using Stern-Gerlach experiment is bound to fail! That's why no one have done that before!
 
+---
 
-> I found an implementation using Mach Zehnder Interferometer in[^1] (see table 3. in paper).
+***`Dummy`***: Wow! Can't believe how me missed that! 
 
-# A merit in failure
+---
 
+# A Merit in Failure
 
+---
+
+***<a>Sassy</a>***: But I am still wondering, even if you are working with a ***true*** quantum computer, like that [bluemix](https://quantumexperience.ng.bluemix.net/) in IBM, or other pioneer sites like [quantumplayground](http://www.quantumplayground.net/#/home), when you draw a circuit, the outcome is still pretty clear to me. I can look at any circuit and tell you what the outcome would be. You wouldn't need any quantum computers to do that. You just need a well trainer quantum programmer!
+
+---
+
+***Smarty***: ***<a>Sassy</a>***'s got a point. A program or a "code" should be deterministic, when you read a code, the steps should be clear, and ideally, can be carried out by "human computers". And IBM and other big companies are even provide "**coding languages**" for quantum computers, like [Qiskit](https://qiskit.org/) and [Q#](https://docs.microsoft.com/en-us/quantum/language/). And many [more languages](https://quantumcomputing.stackexchange.com/questions/12/are-there-emulators-for-quantum-computers)!
+
+> As a rule-of-thumb, if a human could manually describe or imagine how something ought to operate, that imagining can be implemented on a Turing machine. Quantum computers fall into this category. (from [SE](https://quantumcomputing.stackexchange.com/questions/1/can-a-turing-machine-simulate-a-quantum-computer))
+
+How is that possible?
+
+---
+
+***`Dummy`***: I agree with you guys. Remember quantum computers are just about solving evolutionary equations? You can even get you desired output by simply multiplying the matrices! You don't even need a code to do that!
+
+---
+
+***Smarty***: ***`Dummy`*** and ***<a>Sassy</a>*** inspired me. I looked up the internet, and found out that in principle, you can do that. For $n$-qubits' simulation, the unitary matrix of a quantum gate would be $2^n\times 2^n$, which is a ***HUGE*** number. 
+
+> - $n=30$ you will need at least $2^{33}=8GB$ of RAM. A publicly-accessible laptop is capable of doing it, but old computer may not have a sufficient amount of RAM.
+>
+> - $n=40$ you will need at least $2^{43}=8TB$ of RAM. This is definitely out of reach for publicly-accessible things, you will need access to a computing server.
+>
+> - $n=50$ you will need at least $2^{53}=8PB$ of RAM. Some top-tire super-computers "only" have $2.8PB$ of RAM.
+>
+>   (from [SE](https://quantumcomputing.stackexchange.com/questions/5005/why-it-is-hard-to-simulate-a-quantum-device-by-a-classical-devices))
+
+So our way of simulating a quantum computer will not work.
+
+---
+
+***`Dummy`***: So ***that***'s why people are saying quantum computers are efficient! I guess I didn't fully understand the meaning and implications that statement of `yk-liu`'s first post about "quantum computers are exponentially faster than classical computers".
+
+---
 
 # Simulation of TQC
 
-Code in [^2]. The claim: 
+---
+
+***<a>Sassy</a>***: But what about topological quantum computers (TQC)? Like in many papers, the TQC is implemented by a chemical potentials, domain walls or defects in topological insulators. A braiding is a (slow) change of the environment. That does not require those memories!
+
+And if you read the Chapter 4.3. Clifford Operators. in paper[^2], you will see that this is true!
+
+---
+
+***Smarty***: This could even mean [quantum supremacy](https://en.wikipedia.org/wiki/Quantum_supremacy)! All you need then, is a specially tailored computer that runs *ab-initio*  calculations really fast, and you run the calculations on that "simulation", and you will have quantum supremacy! You can factorize any prime number, as large as you want! RSA encryption is obsolete!
+
+---
+
+***<a>Sassy</a>***: Yey! There is even a code on GitHub called [QTop](https://github.com/jacobmarks/QTop). The claim: 
 
 > QTop allows for the simulation of topologies with arbitrary code depth, qudit dimension, and error models. Currently, QTop features Kitaev quantum double models, as well as color codes in 3-regular planar tilings.
 
-Zhenhan wa: 4.3. Clifford Operators. in paper[^3]
+---
 
-a simulator[^4]
+***`Dummy`***: Guys, that's quite a rosy picture, but I would like to ask one more time. Why haven't anyone done that yet?
 
-SE posts[^5]
+
+
 
 # Acknowledgement
 
@@ -90,23 +175,4 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 
 ---
 [^1]: ASarkar, Angik, T. K. Bhattacharyya, and Ajay Patwardhan. "Quantum Logic Processor: A Mach Zehnder Interferometer based Approach." *arXiv preprint cond-mat/0603695* (2006).
-[^2]: <https://github.com/jacobmarks/QTop>
-[^3]: Bloomquist, Wade, and Zhenghan Wang. "On topological quantum computing with mapping class group representations." *Journal of Physics A: Mathematical and Theoretical* 52.1 (2018): 015301.
-
-[^4]: <http://www.quantumplayground.net/#/home>
-[^5]: 
->  - list of code for QC:
->
->    <https://quantumcomputing.stackexchange.com/questions/12/are-there-emulators-for-quantum-computers>
->
->  - Turing machine and QC:
->
->    <https://quantumcomputing.stackexchange.com/questions/1/can-a-turing-machine-simulate-a-quantum-computer>
->
->  - intuitive numbers why it's hard tosimulate
->
->  - <https://quantumcomputing.stackexchange.com/questions/5005/why-it-is-hard-to-simulate-a-quantum-device-by-a-classical-devices>
->
->  - 
->
->  
+[^2]: Bloomquist, Wade, and Zhenghan Wang. "On topological quantum computing with mapping class group representations." *Journal of Physics A: Mathematical and Theoretical* 52.1 (2018): 015301.
