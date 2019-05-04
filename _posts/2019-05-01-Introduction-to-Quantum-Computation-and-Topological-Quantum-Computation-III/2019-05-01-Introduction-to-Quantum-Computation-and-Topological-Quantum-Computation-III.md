@@ -5,6 +5,7 @@ categories: Topological-quantum-computation
 tags: Topological-quantum-computation pitfall Classical-simulation-of-Quantum-computers
 keywords: Braiding Anyon Fermion Boson
 status: Writing
+highlight: true
 edit: 2018-05-01
 description: >-
   This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post started as introducing a pitfall of using Stern-Gerlach experiment as quantum computers, and end with a discussion on simulations of QC and TQC using classical computers.
@@ -41,7 +42,7 @@ $$
 
 This post contains debates inside my mind, after failing to write it concisely in plain paragraphs, I decided to write this post in the form of three characters, **Smarty**, **`Dummy`** and **<a>Sassy</a>**discussing. Some of the cited materials are selected to prove a point, but may contain more information than the speaker intended or conveyed.
 
-# A Novice's Pitfall
+# Can you build a QC using Stern-Gerlach Experiment?
 
 ---
 
@@ -69,7 +70,7 @@ Then it will be very intuitive for me and the reader!
 
 ---
 
-**`Dummy`**: And fixing that would solve ***Sassy***'s problem. An entangled state can create superposition and thus cause uncertainty. You will then get a different result for each measurement, like in Glover's Algorithm, where you get the matching result with **<u>almost</u>** 100% chance. But you are still **not** 100% sure **that is it**.
+**`Dummy`**: And fixing that would partly explain ***Sassy***'s problem. An entangled state can create superposition and thus cause uncertainty. You will then get a different result for each measurement, like in Glover's Algorithm, where you get the matching result with **<u>almost</u>** 100% chance. But you are still **not** 100% sure **that is it**.
 
 ---
 
@@ -102,7 +103,15 @@ $$
 
 ---
 
-**Smarty**: Oh I know! The apparatuses used in Stern-Gerlach is in fact apparatuses for **measurement**. A measurement is in no way represented by a **unitary** matrix. Thus my attempt to build a quantum computer using Stern-Gerlach experiment is bound to fail! That's why no one has done that before!
+**Smarty**: Oh I know! The apparatuses used in Stern-Gerlach is in fact apparatuses for **measurement**. A measurement is in no way represented by a **unitary** matrix. 
+
+In fact, those matrices shown in the diagram are not even $\sigma$ matrices, rather projection operators, such as 
+
+$$
+P_\uparrow =\ket{\uparrow}\bra{\uparrow}=\begin{pmatrix}1&0\\0&0\end{pmatrix}.
+$$
+
+Thus my attempt to build a quantum computer using Stern-Gerlach experiment is bound to fail! That's why no one has done that before!
 
 ---
 
@@ -110,7 +119,7 @@ $$
 
 ---
 
-# A Merit in Failure
+# Are QC deterministic? Can We Simulate QC Using Classical Computers?
 
 ---
 
@@ -148,7 +157,7 @@ So our way of simulating a quantum computer will not work.
 
 ---
 
-# Simulation of TQC
+# Is Simulation of TQC a Way to Quantum Supremacy?
 
 ---
 
@@ -162,7 +171,7 @@ And if you read Chapter 4.3. Clifford Operators. in paper[^2], you will see that
 
 ---
 
-**<a>Sassy</a>**: Yey! There is even a code on GitHub called [QTop](https://github.com/jacobmarks/QTop). The claim: 
+**<a>Sassy</a>**: That's a huge leap! There is even a code on GitHub called [QTop](https://github.com/jacobmarks/QTop). The claim of the program is that: 
 
 > QTop allows for the simulation of topologies with arbitrary code depth, qudit dimension, and error models. Currently, QTop features Kitaev quantum double models, as well as color codes in 3-regular planar tilings.
 
@@ -172,9 +181,56 @@ And if you read Chapter 4.3. Clifford Operators. in paper[^2], you will see that
 
 ---
 
+**Smarty**: If you read Van den Nest's paper[^3], you will see that a certain class of non-trivial quantum circuits, called “Clifford circuits”, can be simulated efficiently on a classical computer, and can hence not provide any speed-up w.r.t. classical computation. A Clifford circuit is any quantum circuit which is composed of Hadamard, PHASE and CNOT gates.
+
+==Quantum circuits that involve only Clifford group operations are not universal for quantum computing. In fact, one can efficiently simulate such circuits on a classical computer.==
+
+==difference between Clifford gates and universal gates? Pachos==
+
+---
+
+
+
+# Will QC be "better" than a classical computers at all?
+
+---
+
+**<a>Sassy</a>**: Okay, you made a very good point. So what I was wondering have already been proven by the paper in such an abstract level: you don't even need to consider which type of QC you are using (be that QC or TQC), classical simulation can only utilize Clifford gates, which is not capable of performing arbitrary quantum algorithms. Thus quantum computers are indeed more capable than a computer. 
+
+But now, I have a problem with all kinds of QC and TQC. That is, whatever kind of physical manipulations can always be simulated in the computer. That's what *ab-initio* calculations are for. Even a quantum computer at IBM, regardless of the technology they are using, can always be simulated in computers. Each quantum gates correspond to a certain manipulation of environment, which can be simulated by a series of time steps in  *ab-initio* calculations.
+
+1. No matter how many qubits you are using, you need linearly more "patches" for these qubits to reside on.
+2. No matter how many quantum gates you are using, you need linearly more "time" to calculate the result.
+
+This will give us a computer that runs quantum code as fast as a quantum computer, meaning "cost linearly in resources proportional to that of a quantum computer". Is this possible?
+
+---
+
+**`Dummy`**: You actually got me thinking. Forget the simulation of an actual implementation of a QC, and consider the quantum code itself. The quantum code itself is still a code. Does that mean I could write a program on a classical computer that read these quantum code and give a result in reasonably short time? 
+
+---
+
+**Smarty**: Let me address **`Dummy`**'s statement first. I am no computer scientist, but I know for sure such program will not be able to give the result for any code in ***polynomial time***. In other words, it will not provide a drastic improvement over speed or resource benefits. 
+
+Let's consider a classical computer for now. If there exists such program, which I will call `magical program™`, such program will give result in ***polynomial time*** for any well-optimized code. Or you would have proved $P=NP$ ([wiki link](https://en.wikipedia.org/wiki/P_versus_NP_problem)), which is generally considered not true. Consider a well-optimized `code A` for factoring large prime numbers. If you input `code A` to your `magical program™`, it can do nothing better than running `code A` itself, or you would have cracked RSA by now. 
+
+Although it is not possible to improve any program that runs $\exp (n^3)$ to polynomial time, I don't know if you can make minor improvement to it so it will run a bit faster, like from $\exp (n^3)$ to $\exp (n^2)$.  Also, a [complier](https://en.wikipedia.org/wiki/Compiler) can sometimes make some optimization to your code, such as the [Intel fortran compiler](https://software.intel.com/en-us/fortran-compilers), and the more famous [jit](http://numba.pydata.org/) for Python. But such improvement are customary and routine, and are not always prominent or even possible. Therefore, if you do have such `magical program™` that applies to any type of codes, you would be famous. 
+
+But I don't know any proof why such program does not exist. My take on this subject is that it is hard even to do that with a classical code, let alone a quantum one. So **`Dummy`**'s `magical program™` might not exist.
+
+---
+
+**<a>Sassy</a>**: By the way, your question is related to mine in [Chapter 1:Can you build a QC using Stern-Gerlach Experiment?](#can-you-build-a-qc-using-stern-gerlach-experiment-) And I think a program that reads other program and gives an output is related to the [halting problem](https://en.wikipedia.org/wiki/Halting_problem). 
+
+---
+
+**Smarty**: But  **<a>Sassy</a>**'s certainly get a point about hardware level simulation of a QC... I might need to read more paper on that subject. 
+
+---
+
+
+
 To be continued.
-
-
 
 
 # Acknowledgement
@@ -184,3 +240,4 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 ---
 [^1]: ASarkar, Angik, T. K. Bhattacharyya, and Ajay Patwardhan. "Quantum Logic Processor: A Mach Zehnder Interferometer based Approach." *arXiv preprint cond-mat/0603695* (2006).
 [^2]: Bloomquist, Wade, and Zhenghan Wang. "On topological quantum computing with mapping class group representations." *Journal of Physics A: Mathematical and Theoretical* 52.1 (2018): 015301.
+[^3]: Nest, M. "Classical simulation of quantum computation, the Gottesman-Knill theorem, and slightly beyond." *arXiv preprint arXiv:0811.0898* (2008).
