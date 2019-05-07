@@ -5,8 +5,7 @@ categories: Topological-quantum-computation
 tags: Topological-quantum-computation pitfall Classical-simulation-of-Quantum-computers
 keywords: Braiding Anyon Fermion Boson
 status: Writing
-highlight: true
-edit: 2018-05-01
+edit: 2019-05-01
 description: >-
   This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post started as introducing a pitfall of using Stern-Gerlach experiment as quantum computers, and end with a discussion on simulations of QC and TQC using classical computers.
 ---
@@ -157,52 +156,56 @@ So our way of simulating a quantum computer will not work.
 
 ---
 
-# Is Simulation of TQC a Way to Quantum Supremacy?
+# Is Simulation of QC/TQC at Hardware Level a Way to Quantum Supremacy?
 
 ---
 
-**<a>Sassy</a>**: But what about topological quantum computers (TQC)? Like in many papers, the TQC is implemented by chemical potentials, domain walls or defects in topological insulators. A braiding is a (slow) change of the environment. That does not require those memories!
+**<a>Sassy</a>**: But what if the simulation is at the hardware level? 
 
-And if you read Chapter 4.3. Clifford Operators. in paper[^2], you will see that this is true!
+I could calculate various properties of a given material using ab-initio calculations. Does that mean I could simulate the hardware of a quantum computer to circumvent the exponential cost of memory? 
+
+For a QC, like that [bluemix](https://www.research.ibm.com/ibm-q/learn/what-is-ibm-q/) in IBM, or, I could calculate the qubit's state of the junction.
+
+Or like topological quantum computers (TQC)? Like in many papers, a TQC is implemented by chemical potentials, domain walls or defects in topological insulators. A braiding is a (slow) change of the environment. That does not require those memories!
+
+Worst case, I could build a toy model for QC or TQC, and run the simulation in a classical computer. This seems to circumvent the exponential cost of memory. Since
+
+1. No matter how many qubits you are using, you need linearly more "virtual material" to simulate for these qubits to reside on.
+2. No matter how many quantum gates you are using, you need linearly more "time" to calculate the result.
+
+This will give us a computer that runs quantum code as fast as a quantum computer, meaning "cost linearly in resources proportional to that of a quantum computer". Is this possible?
 
 ---
 
-**Smarty**: This could even mean [quantum supremacy](https://en.wikipedia.org/wiki/Quantum_supremacy)! All you need then, is a specially tailored computer that runs *ab-initio*  calculations really fast, and you run the calculations on that "simulation", and you will have quantum supremacy! You can factorize any prime number, as large as you want! RSA encryption is obsolete!
+**Smarty**: If this is true, this could mean [quantum supremacy](https://en.wikipedia.org/wiki/Quantum_supremacy)! All you need then, is a specially tailored computer that runs *ab-initio*  calculations really fast, and you run the calculations on that "simulation", and you will have a classical computer  You can factorize any prime number, as large as you want! RSA encryption will be rendered obsolete!
 
----
-
-**<a>Sassy</a>**: That's a huge leap! There is even a code on GitHub called [QTop](https://github.com/jacobmarks/QTop). The claim of the program is that: 
+There is even a code on GitHub called [QTop](https://github.com/jacobmarks/QTop). The claim of the program is that: 
 
 > QTop allows for the simulation of topologies with arbitrary code depth, qudit dimension, and error models. Currently, QTop features Kitaev quantum double models, as well as color codes in 3-regular planar tilings.
 
 ---
 
-**`Dummy`**: Guys, that's quite a rosy picture, but I would like to ask one more time. Why hasn't anyone done that yet?
+**`Dummy`**: Guys, that's quite a rosy picture, but I would like to ask one more time. **Why hasn't anyone done that yet?**
+
+I found that for TQC, it indeed can be simulated in polynomial time in a classical computer. (Chapter 4.3. Clifford Operators  in paper[^2]). 
+
+I followed the paper and found Van den Nest's paper[^3], you will see that a certain class of non-trivial quantum circuits, called “Clifford circuits”, can be simulated efficiently on a classical computer, and can hence not provide any speed-up w.r.t. classical computation. 
+
+But sadly, quantum circuits that involve only Clifford group operations are not universal for quantum computing. In fact, one can efficiently simulate such circuits on a classical computer.
+
+> - A Clifford circuit is any quantum circuit which is composed of Hadamard, PHASE and CNOT gates.
+>
+> - Difference between Clifford gates and universal gates? Cn together with any other gate not in Cn form a universal set of quantum gates[^4]
 
 ---
 
-**Smarty**: If you read Van den Nest's paper[^3], you will see that a certain class of non-trivial quantum circuits, called “Clifford circuits”, can be simulated efficiently on a classical computer, and can hence not provide any speed-up w.r.t. classical computation. A Clifford circuit is any quantum circuit which is composed of Hadamard, PHASE and CNOT gates.
+**Smarty**: Okay, **`Dummy`** made a very good point. So what I was wondering have already been proven by the paper in such an abstract level: you don't even need to consider which type of QC you are using (be that QC or TQC), classical simulation can only utilize Clifford gates, which is not capable of performing arbitrary quantum algorithms. Thus quantum computers are indeed more capable than a computer. 
 
-==Quantum circuits that involve only Clifford group operations are not universal for quantum computing. In fact, one can efficiently simulate such circuits on a classical computer.==
-
-==difference between Clifford gates and universal gates? Pachos==
+==what can/connot be done with only Clifford gates? Shor? Grover?==
 
 ---
 
-
-
-# Will QC be "better" than a classical computers at all?
-
----
-
-**<a>Sassy</a>**: Okay, you made a very good point. So what I was wondering have already been proven by the paper in such an abstract level: you don't even need to consider which type of QC you are using (be that QC or TQC), classical simulation can only utilize Clifford gates, which is not capable of performing arbitrary quantum algorithms. Thus quantum computers are indeed more capable than a computer. 
-
-But now, I have a problem with all kinds of QC and TQC. That is, whatever kind of physical manipulations can always be simulated in the computer. That's what *ab-initio* calculations are for. Even a quantum computer at IBM, regardless of the technology they are using, can always be simulated in computers. Each quantum gates correspond to a certain manipulation of environment, which can be simulated by a series of time steps in  *ab-initio* calculations.
-
-1. No matter how many qubits you are using, you need linearly more "patches" for these qubits to reside on.
-2. No matter how many quantum gates you are using, you need linearly more "time" to calculate the result.
-
-This will give us a computer that runs quantum code as fast as a quantum computer, meaning "cost linearly in resources proportional to that of a quantum computer". Is this possible?
+# A Small Misconception about Quantum Code
 
 ---
 
@@ -212,11 +215,11 @@ This will give us a computer that runs quantum code as fast as a quantum compute
 
 **Smarty**: Let me address **`Dummy`**'s statement first. I am no computer scientist, but I know for sure such program will not be able to give the result for any code in ***polynomial time***. In other words, it will not provide a drastic improvement over speed or resource benefits. 
 
-Let's consider a classical computer for now. If there exists such program, which I will call `magical program™`, such program will give result in ***polynomial time*** for any well-optimized code. Or you would have proved $P=NP$ ([wiki link](https://en.wikipedia.org/wiki/P_versus_NP_problem)), which is generally considered not true. Consider a well-optimized `code A` for factoring large prime numbers. If you input `code A` to your `magical program™`, it can do nothing better than running `code A` itself, or you would have cracked RSA by now. 
+Let's consider a classical computer for now. If there exists such program, which I will call `magical program™`, such program will give result in ***polynomial time*** for any well-optimized code. Or you would have proven $P=NP$ ([wiki link](https://en.wikipedia.org/wiki/P_versus_NP_problem)), which is generally considered not true. Consider a well-optimized `code A` for factoring large prime numbers. If you input `code A` to your `magical program™`, it can do nothing better than running `code A` itself, or you would have cracked RSA by now. 
 
-Although it is not possible to improve any program that runs $\exp (n^3)$ to polynomial time, I don't know if you can make minor improvement to it so it will run a bit faster, like from $\exp (n^3)$ to $\exp (n^2)$.  Also, a [complier](https://en.wikipedia.org/wiki/Compiler) can sometimes make some optimization to your code, such as the [Intel fortran compiler](https://software.intel.com/en-us/fortran-compilers), and the more famous [jit](http://numba.pydata.org/) for Python. But such improvement are customary and routine, and are not always prominent or even possible. Therefore, if you do have such `magical program™` that applies to any type of codes, you would be famous. 
+Although it is not possible to improve any program that runs $\exp (n^3)$ to polynomial time, I don't know if you can make minor improvement to it so it will run a bit faster, like from $\exp (n^3)$ to $\exp (n^2)$.  Also, a [complier](https://en.wikipedia.org/wiki/Compiler) can sometimes make small optimization to your code, such as the [Intel fortran compiler](https://software.intel.com/en-us/fortran-compilers). But such improvement are routine, tends to modify more on a technical, machine-specific level rather than algorithm level, and are not always prominent or even possible. Therefore, if you do have such `magical program™` that automagically applies to any type of codes and improve the speed, you would be famous. 
 
-But I don't know any proof why such program does not exist. My take on this subject is that it is hard even to do that with a classical code, let alone a quantum one. So **`Dummy`**'s `magical program™` might not exist.
+But I don't know any proof why such programs do not exist. My take on this subject is that it is hard even to do that with a classical code, let alone a quantum one. So **`Dummy`**'s `magical program™` might not exist.
 
 ---
 
@@ -224,14 +227,19 @@ But I don't know any proof why such program does not exist. My take on this subj
 
 ---
 
-**Smarty**: But  **<a>Sassy</a>**'s certainly get a point about hardware level simulation of a QC... I might need to read more paper on that subject. 
+# Hype over QC/TQC
 
 ---
 
+From the computational complexity stand point, QC can only solve of BQP problems. NP-hard problems are still out of reach.
 
+Maybe a direct improvement on computational power is a way with a further perspective to go?
+
+As a wild thought:  complete paradigm shifting computer can realized.
+
+wilder thought: Like gold, the real universal currency could be computation power: has a maximal size, .. etc. 
 
 To be continued.
-
 
 # Acknowledgement
 
@@ -241,3 +249,4 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 [^1]: ASarkar, Angik, T. K. Bhattacharyya, and Ajay Patwardhan. "Quantum Logic Processor: A Mach Zehnder Interferometer based Approach." *arXiv preprint cond-mat/0603695* (2006).
 [^2]: Bloomquist, Wade, and Zhenghan Wang. "On topological quantum computing with mapping class group representations." *Journal of Physics A: Mathematical and Theoretical* 52.1 (2018): 015301.
 [^3]: Nest, M. "Classical simulation of quantum computation, the Gottesman-Knill theorem, and slightly beyond." *arXiv preprint arXiv:0811.0898* (2008).
+[^4]: <http://home.lu.lv/~sd20008/papers/essays/Clifford%20group%20[paper].pdf>
