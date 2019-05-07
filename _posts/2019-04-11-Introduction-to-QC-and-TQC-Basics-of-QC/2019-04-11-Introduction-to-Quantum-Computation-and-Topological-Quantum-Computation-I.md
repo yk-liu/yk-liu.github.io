@@ -1,6 +1,6 @@
 ---
 title: >
-   Introduction to Topological Quantum Computation: Basics of Quantum computation
+   Introduction to Topological Quantum Computation: Basics of Quantum Computation
 categories: Quantum-computation Topological-quantum-computation
 tags: Quantum-computation Topological-quantum-computation
 keywords: Braiding Anyon Qubit Moore's-Law
@@ -64,7 +64,7 @@ There is a free 5-qubit computer at IBM[^3]. You can read more at the [tutorial 
 
 Typically the fundamental piece is taken to be a quantum two-state system known as a “qubit” which is the quantum analog of a bit. (Of course, one could equally well take general “dits”, for which the fundamental unit is some $d$-state system with d not too large).
 
-While a classical bit, *i.e.*, a classical two-state system, can be either “zero” or “one” at any given time, a qubit can be in one of the infinitely many superpositions $a\ket{0}+b\ket{1}$. For $n$ qubits, the state becomes a vector in a $2n​$–dimensional Hilbert space, in which the different qubits are generally entangled with one another.
+While a classical bit, *i.e.*, a classical two-state system, can be either “zero” or “one” at any given time, a qubit can be in one of the infinitely many superpositions $a\ket{0}+b\ket{1}$. For $n$ qubits, the state becomes a vector in a $2n$–dimensional Hilbert space, in which the different qubits are generally entangled with one another.
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-11-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-I/assets/Qbits.png' alt='qubits v.s. bits' width="60%">
 
@@ -90,7 +90,7 @@ I am going to use a $\tfrac{1}{2}$-spin particle such as an electron as a qubit 
 
 ## Initialization
 
-The states can be conveniently initialized by a measurement. More importantly, an entangled state can be prepared by a measurement of $H\propto \vec S_1 \cdot \vec S_2​$. 
+The states can be conveniently initialized by a measurement. More importantly, an entangled state can be prepared by a measurement of $H\propto \vec S_1 \cdot \vec S_2$. 
 
 ## Manipulation
 
