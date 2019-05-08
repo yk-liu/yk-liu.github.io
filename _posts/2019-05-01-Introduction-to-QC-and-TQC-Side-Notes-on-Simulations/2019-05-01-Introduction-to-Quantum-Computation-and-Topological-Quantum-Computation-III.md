@@ -47,7 +47,7 @@ This post contains debates inside my mind, after failing to write it concisely i
 
 **Smarty**: Quantum computing is quite complicated and can be hard to understand. If I make use of electrons in a Stern-Gerlach experiment as qubits and gates. like this:
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-01-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-III/assets/incorrect-implementation-of-TQC.png" alt="an incorrect implementation of TQC" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-01-Introduction-to-QC-and-TQC-Side-Notes-on-Simulations/assets/incorrect-implementation-of-TQC.png" alt="an incorrect implementation of TQC" width="60%">
 
 Then it will be very intuitive for me and the reader! 
 
@@ -79,7 +79,7 @@ Then it will be very intuitive for me and the reader!
 
 **<a>Sassy</a>**: But you guys haven't answered my question yet. Even if you came up with something like that, this circuit is still predictable, and thus deterministic. * writes on the note *
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-01-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-III/assets/notes-on-modified-but-still-incorrect-implementation-of-TQC.png" alt="notes on modified-but-still-wrong implementation of TQC" width="80%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-01-Introduction-to-QC-and-TQC-Side-Notes-on-Simulations/assets/notes-on-modified-but-still-incorrect-implementation-of-TQC.png" alt="notes on modified-but-still-wrong implementation of TQC" width="80%">
 
 ---
 
