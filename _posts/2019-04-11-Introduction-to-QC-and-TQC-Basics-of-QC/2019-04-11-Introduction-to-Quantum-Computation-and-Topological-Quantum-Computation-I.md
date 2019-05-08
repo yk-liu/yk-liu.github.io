@@ -66,7 +66,7 @@ Typically the fundamental piece is taken to be a quantum two-state system known 
 
 While a classical bit, *i.e.*, a classical two-state system, can be either “zero” or “one” at any given time, a qubit can be in one of the infinitely many superpositions $a\ket{0}+b\ket{1}$. For $n$ qubits, the state becomes a vector in a $2n$–dimensional Hilbert space, in which the different qubits are generally entangled with one another.
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-11-Introduction-to-Quantum-Computation-and-Topological-Quantum-Computation-I/assets/Qbits.png' alt='qubits v.s. bits' width="60%">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-11-Introduction-to-QC-and-TQC-Basics-of-QC/assets/Qbits.png' alt='qubits v.s. bits' width="60%">
 
 The quantum phenomenon of superposition allows a system to traverse many trajectories in parallel, and determine its state by their coherent sum. In some sense, this coherent sum amounts to massive quantum parallelism. It should not, however, be confused with classical parallel computing, where many "bits" are used instead of one "qubit" in a superposition state.[^1] 
 
