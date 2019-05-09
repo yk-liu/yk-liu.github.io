@@ -39,7 +39,7 @@ $$
 \notag
 $$
 
-This post contains debates inside my mind, after failing to write it concisely in plain paragraphs, I decided to write this post in the form of three characters, **Smarty**, **`Dummy`** and **<a>Sassy</a>**discussing. Some of the cited materials are selected to prove a point, but may contain more information than the speaker intended or conveyed.
+> This post contains debates inside my mind, after failing to write it concisely in plain paragraphs, I decided to write this post in the form of three characters, **Smarty**, **`Dummy`** and **<a>Sassy</a>**discussing. Some of the cited materials are selected to prove a point, but may contain more information than the speaker intended or conveyed.
 
 # Can you build a QC using Stern-Gerlach Experiment?
 
