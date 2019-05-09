@@ -51,7 +51,7 @@ This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783
 
 Generally speaking, a fiber bundle is a topological space where there are extra structures. This structure is summarized as the topological space locally looks like the direct product of two subspaces - a typical fiber and a base space. 
 
-
+A good example of a fiber bundle is a cylinder. I think this is the most intuitive way of explaining the name. A bundle of fibers is called a fiber bundle, like a handful of pasta. However, a fiber need not to be an actual "fiber", it could also be a higher dimensional manifolds. 
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/cylinder-food-bundles.png' width="40%" alt="trivial fiber bundle: a cylinder">
 
