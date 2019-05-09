@@ -1,11 +1,11 @@
 ---
-title: Connections of Fiber Bundles
+title: Fiber Bundles
 categories: Topology
 edit: 2019-01-16
 status: Writing
 tags: Fiber Fiber-bundles Topology Berry's-Phase
 keywords: 
-description: My study notes on Fiber bundles for Berry Phase.
+description: Fiber bundle is introduced with intuitive examples of pasta and pancakes, Berry phase and Calabi-Yau space. Structure group is introduced as a natural consequence of transition functions.
 ---
 
 $$
@@ -51,20 +51,33 @@ This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783
 
 Generally speaking, a fiber bundle is a topological space where there are extra structures. This structure is summarized as the topological space locally looks like the direct product of two subspaces - a typical fiber and a base space. 
 
-A good example of a fiber bundle is a cylinder. I think this is the most intuitive way of explaining the name. A bundle of fibers is called a fiber bundle, like a handful of pasta. However, a fiber need not to be an actual "fiber", it could also be a higher dimensional manifolds. 
+A good example of a fiber bundle is a cylinder. I think this is the most intuitive way of explaining the name. A bundle of fibers is called a fiber bundle, like a handful of pasta. However, a fiber need not be an actual "fiber", it could also be a higher dimensional manifold, like a piece of pancake or a potato chip.
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/cylinder-food-bundles.png' width="40%" alt="trivial fiber bundle: a cylinder">
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/cylinder-food-bundles.png' width="60%" alt="trivial fiber bundle: a cylinder">
 
+A non-trivial example of braiding is the braiding of strands.
 
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/4-Strand-Braiding.png' width="35%" alt="non-trivial fiber bundle: a braiding">
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/4-Strand-Braiding.png' width="40%" alt="non-trivial fiber bundle: a braiding">
+Take a bunch of pasta for example. A fiber bundle is just like a bunch of pasta. Each piece of pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle or a total space. That pasta can be twisted and bent, but each piece of pasta is distinguishable and looks alike. And at each point of the total space (the entire bunch of pasta), it looks like a direct product of a base space and a fiber. This means two things. 
 
+1. **This higher dimensional total space can be reduced to lower dimensional spaces.** We can ignore the additional fiber sometimes to have a good "approximation" when the effects of fibers are not strong, like when the phase of  state vector can be ignored.
+2. **A lower dimensional space can be mapped to a higher dimensional space.** An extra structure can always help us understand the total space better. Also, problems considered in a higher dimensional space can sometimes give simpler expression, like in the case of Calabi-Yau space.
 
-
-A fiber bundle is just like a bunch of pasta. Each piece of pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle or a total space. That pasta can be twisted and bent, but each piece of pasta is distinguishable and looks alike. And at each point of the total space (the entire bunch of pasta), it looks like a direct product of a base space and a fiber. This means two things. 
-
-1. This higher dimensional total space can be reduced to lower dimensional spaces. AN extra structure can always help us understand the total space better.
-2. We can construct higher dimensional non-trivial spaces from simple lower dimensional spaces. Putting our problems in a higher dimensional space can sometimes give us simpler expression.
+> Examples of fiber bundles includes
+>
+> - Hilbert space in Quantum Mechanics. 
+>   In Quantum Mechanics, phases are usually ignored in solutions to the Schrödinger equation. Not until Berry made the discovery of the Berry phase did the complex phase was regarded seriously, and that leads directly to topological insulators as well as quantum computations. To maintain what we have already had for quantum mechanics, we can view the complex phases as strands stemming from each point of the Hilbert space. Originally, the state vector traces out a circle during a cyclic evolution. Now when we look closer, there is an additional structure to each point of the Hilbert space, namely the phase. We found out that during a cyclic evolution, the state vector traces out a spiral. In other words, the state vectors $\ket{\psi}$ are really an equivalent classes $\set{\ket{\psi} \mid \ket{\psi}=\e^{\i \varphi} \ket{\psi _ 0} }$. 
+>
+> <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/Phase-lift.png' width="40%" alt="a phase lift from Hilbert space">
+>
+> - [Calabi-Yau space](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture adopted from [code](https://mathematica.stackexchange.com/questions/61590/problem-with-old-code-for-a-calabi-yau-manifold/61595). A common saying is that each point of space is a Calabi-Yau space. Usually, the extra $6$ dimensional are overlooked and we are fine in our daily lives. But once we look closely enough, space reveals its additional structure.
+>
+> <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/calabi-yau.png' width="40%" alt='Calabi-Yau space looks like assign to each point a complex structure'>
+>
+> - A mathematical example of a trivial and a non-trivial example: the surface of a cylinder and a Mobius band can both be considered as fiber bundles.
+>
+> <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/Mobius-strip.png' width="45%" alt="cylinder and a Mobius band">
 
 ## Basic Definition
 
@@ -75,29 +88,25 @@ Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of th
 1. A differentiable manifold $F$ called the **fiber** (or **typical fiber**).
 1. A surjection $\pi : E\rightarrow M$ called the **projection**. The inverse image of a point $p\in M$, $\pi^{-1}(p)$ is called the fiber $F_p\simeq F$ at point $p$.
 
+The relationships between these entities are represented by the following diagram. Notice that the base space is not a subset of the total space. It is an **independent** manifold "outside" of the total space. The same is true for a fiber.
+
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/fiber-bundle.png' alt="Fiber bundle" width="30%">
 
 > In many textbooks a fiber bundle is defined as a quintuple $(E,\pi,M,G,F)$. I think it's better to start defining as little as possible, so I chose to define it as a triple and add $G$ and transition functions later.
 
-> Examples of fiber bundles includes
->
-> - Hilbert space in Quantum Mechanics. 
->
->   In Quantum Mechanics, phase are ignored in solutions to the Schrödinger equation. In other words, the state vectors $\ket{\psi}$ are really an equivalent classes $\set{\ket{\psi} \mid \ket{\psi}=\e^{\i \varphi} \ket{\psi _ 0} }$. 
->
->   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/Phase-lift.png' width="40%" alt="a phase lift from Hilbert space">
->
-> - [Calabi-Yau space](https://www.mat.univie.ac.at/~westra/calabiyau3.pdf), picture adopted from [code](https://mathematica.stackexchange.com/questions/61590/problem-with-old-code-for-a-calabi-yau-manifold/61595).
->
->   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/calabi-yau.png' width="40%" alt='Calabi-Yau space looks like assign to each point a complex structure'>
->
-> - A cylinder and a Mobius band can both be considered as fiber bundles.
->
->   <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/Mobius-strip.png' width="40%" alt="cylinder and a Mobius band">
-
 ## Transition Function and Structure Group
 
-Recall that the topological aspect of a manifold is represented as how the charts are glued together. The topological aspect of a fiber bundle is best represented by the transition functions. In the following diagram, the red dots on the left are "glued" together, the red lines on the right are "glued" together.
+> Short reminder of the word "Topology":
+>
+> Mathematically, a topology is defined as a family of subsets $\tau$ of a set $X$. The pair $(\tau,X)$ is called a topology. This definition is evidently related to the connectedness of the set $X$. Elements belong to the same subset are connected, otherwise they are separated. From the connectedness all topological properties are defined. 
+>
+> For a manifold, the topology is also represented as how the charts are glued together. Different gluing choices shows different "twisting". For example, different gluing of triangles form different topology, image from Wikipedia.
+>
+> <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/gluing.png' width="75%" alt="Different gluing of triangles form different topology">
+
+Recall that the topological aspect of a manifold is represented as how the charts are glued together. Thus the topological aspect of a fiber bundle is best represented by the transition functions. 
+
+In the following diagram, the red dots on the left are "glued" together, the red lines on the right are "glued" together.
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/Transition-function.png' width="75%" alt="Transition function indicates how the fibers are glued">
 
@@ -160,7 +169,7 @@ $$
 F=\frac{1}{2\pi r} (x_1 \d x_2 \wedge \d  x_3 + \text{cyclic})=\frac{1}{4 \pi}\sin\theta \d \theta \wedge \d \varphi
 $$
 
-$F$ is not only closed, but exact as well. A choice of $F=\d A$ is 
+$F$ is not only closed but exact as well. A choice of $F=\d A$ is 
 
 $$
 A=-\frac{1}{4 \pi} \cos \theta \d \varphi=\frac{x_3}{4\pi r} \frac{x_2\d x_1-x_1\d x_2}{x_1^2+x_2^2}
@@ -230,7 +239,7 @@ $$
 \i(\dot\phi -E)\ket{n(t)}=-\Partial{}{t}\ket{n(t)}. \label{totalphase}
 $$
 
-We already know that an time-evolution can have a dynamic phase factor
+We already know that a time-evolution can have a dynamic phase factor
 
 > The time-dependent Schrödinger equation
 > 
@@ -246,7 +255,7 @@ We already know that an time-evolution can have a dynamic phase factor
 > 
 > where dynamic phase factor arises naturally.
 
-So to remove the dynamic phase factor, we still has the extra phase factor
+So to remove the dynamic phase factor, we still have the extra phase factor
 
 $$
 \gamma(t)=\phi(t)-\int_0^tE_n(t^\prime)\d t^\prime
