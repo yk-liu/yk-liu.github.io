@@ -88,21 +88,29 @@ Formally, a (differentiable) fiber bundle is a triple $(E,\pi,M)$ consists of th
 1. A differentiable manifold $F$ called the **fiber** (or **typical fiber**).
 1. A surjection $\pi : E\rightarrow M$ called the **projection**. The inverse image of a point $p\in M$, $\pi^{-1}(p)$ is called the fiber $F_p\simeq F$ at point $p$.
 
-The relationships between these entities are represented by the following diagram. Notice that the base space is not a subset of the total space. It is an **independent** manifold "outside" of the total space. The same is true for a fiber.
+The relationships between these entities are represented by the following diagram. Notice that the base space is not a subset of the total space. It is an **independent** manifold "outside" of the total space. The same is true for the fiber.
 
 <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/fiber-bundle.png' alt="Fiber bundle" width="30%">
 
 > In many textbooks a fiber bundle is defined as a quintuple $(E,\pi,M,G,F)$. I think it's better to start defining as little as possible, so I chose to define it as a triple and add $G$ and transition functions later.
 
-## Transition Function and Structure Group
+## Additional Structures of Fiber Bundles: Transition Functions *etc*.
 
-> Short reminder of the word "Topology":
+An important insight of fiber bundle is the existence of local trivializations. Namely in a small enough neighborhood of the total space, it is always possible to find a way to "decompose" the total space to the direct product of a neighborhood of base space and a typical fiber. 
+
+
+
+
+
+## Interpretation of the Transition Functions and Structure Group
+
+> **Short reminder of the word "Topology"**:
 >
 > Mathematically, a topology is defined as a family of subsets $\tau$ of a set $X$. The pair $(\tau,X)$ is called a topology. This definition is evidently related to the connectedness of the set $X$. Elements belong to the same subset are connected, otherwise they are separated. From the connectedness all topological properties are defined. 
 >
-> For a manifold, the topology is also represented as how the charts are glued together. Different gluing choices shows different "twisting". For example, different gluing of triangles form different topology, image from Wikipedia.
+> For a manifold, the topology is also represented as how the charts are glued together. Different gluing choices shows different "twisting". For example, different gluing of triangles can form different topologies like below, image adopted from Wikipedia.
 >
-> <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/gluing.png' width="75%" alt="Different gluing of triangles form different topology">
+> <img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/gluing.png' width="70%" alt="Different gluing of triangles form different topology">
 
 Recall that the topological aspect of a manifold is represented as how the charts are glued together. Thus the topological aspect of a fiber bundle is best represented by the transition functions. 
 
@@ -150,156 +158,3 @@ This section follows [Peter Szekeres](https://www.cambridge.org/core/books/cours
 There is no natural way of comparing tangent vectors $V_p$ and $V_q$ at $p$ and $q$, for if they had identical components in one coordinate system this will not generally be true in a different coordinate chart covering the two points.
 
 Consider the coordinate transformation:
-
-
-
-#  Examples in Physics
-
-## Dirac Monopole
-
-The magnetic field $\vec B$ of a magnetic monopole at the origin in $\R^3$, given by
-
-$$
-\vec B(\vec x) = \frac{\vec x}{4\pi r^3}
-$$
-
-where $r=\abs{\vec x}$. This satisfies the condition $\nabla \cdot \vec B=0$ and this expression is valid in $\R^3/\{0\}$. This vector field can also be represented by a two form 
-
-$$
-F=\frac{1}{2\pi r} (x_1 \d x_2 \wedge \d  x_3 + \text{cyclic})=\frac{1}{4 \pi}\sin\theta \d \theta \wedge \d \varphi
-$$
-
-$F$ is not only closed but exact as well. A choice of $F=\d A$ is 
-
-$$
-A=-\frac{1}{4 \pi} \cos \theta \d \varphi=\frac{x_3}{4\pi r} \frac{x_2\d x_1-x_1\d x_2}{x_1^2+x_2^2}
-$$
-
-where the singularity lies at $x _ 1 = x _ 2 = 0$. 
-
- 
-
-## Berry's Phase
-
-Berry's phase is the main reason why I am studying connections, curvatures, etc. First I am going to review a simple example where Berry's phase can be easily computed, and I am going to point out how the concept of connections and curvatures arise from this physical system.
-
-The system is a spin $\frac 12$ in a adiabatically rotating magnetic field,
-
-$$
-\vec B(t) = B_0 (\sin\varphi\cos\theta,\sin \varphi \sin \theta,\cos\varphi).
-$$
-
-where the parameters were chosen as $\vec R(t)=(B_0,\theta,\phi)$. The Hamiltonian is written as
-
-$$
-H(t)=\mu\vec B(t)\cdot \vec\sigma
-$$
-
-Use Pauli matrices, Hamiltonian is expressed as
-
-$$
-H(t)=\mu B_0
-     \begin{pmatrix}
-     \cos\varphi               &  \e^{-\i\theta}\sin\varphi \\
-     \e^{\i\theta}\sin\varphi  &  \cos\varphi
-     \end{pmatrix}.
-$$
-
-Its eigenvalues and eigenvectors of time-independent Schrödinger's equation are
-
-$$
-E_\pm=\pm\mu B_0\\
-\ket{n_+(t)}=
-\begin{pmatrix}\cos\frac{\varphi}{2}\\ \e^{\i\theta}\sin\frac{\varphi}{2}\end{pmatrix}\\
-\ket{n_-(t)}=
-\begin{pmatrix}-\sin\frac{\varphi}{2}\\ \e^{\i\theta}\cos\frac{\varphi}{2}\end{pmatrix}
-$$
-
-The time-dependent Schrödinger's equation gives ($\hbar=1$)
-
-$$
-H(t)\ket{\psi(t)}=\i\Partial{}{t}\ket{\psi(t)}
-$$
-
-From the Adiabatic approximation, we have the state stays on the same energy level
-
-$$
--\i\Partial{}{t}\ket{\psi(t)}=E_\pm \ket{\psi(t)}
-$$
-
-And the state vector of time-evolution is allowed to have an extra phase factor $\phi(t)$ compared to the time-independent state vector
-
-$$
-\ket{\psi(t)}=\e^{\i\phi}\ket{n(t)}
-$$
-
-Substitute that into the Schrödinger equation, we have
-
-$$
-\i(\dot\phi -E)\ket{n(t)}=-\Partial{}{t}\ket{n(t)}. \label{totalphase}
-$$
-
-We already know that a time-evolution can have a dynamic phase factor
-
-> The time-dependent Schrödinger equation
-> 
-> $$
-> -\i\Partial{}{t}\ket{\psi(t)}=E(t)\ket{\psi(t)}
-> $$
-> 
-> has the simple formal solution
-> 
-> $$
-> \ket{\psi(t)}=\e^{\i\int_0^t E(t^\prime)\d t^\prime}\ket{\psi(t)}
-> $$
-> 
-> where dynamic phase factor arises naturally.
-
-So to remove the dynamic phase factor, we still have the extra phase factor
-
-$$
-\gamma(t)=\phi(t)-\int_0^tE_n(t^\prime)\d t^\prime
-$$
-
-which satisfies the equation
-
-$$
-\dot \gamma (t)=\dot\phi(t)-E(t)
-$$
-
-Substitute into the $\Eqn{totalphase}$ that gives
-
-$$
-\i \D{\gamma(t)}{t}\ket{n(t)}=-\Partial{}{t}\ket{n(t)}
-$$
-
-notice that the $\D{\gamma(t)}{t}$ is a number, thus we can multiply $\bra{n(t)}$ on both side
-
-$$
-\begin{align*}
-\bra{n(t)}\i\D{\gamma(t)}{t}\ket{n(t)}&=-\braket{n}{\dot{n}}\\
-\D{\gamma(t)}{t}&=-i\braket{n}{\dot{n}}
-\end{align*}
-$$
-
-From that we have the solution of $\gamma(T)$, using
-
-$$
-\begin{align*}
-\gamma(T)&=\int_0^T\D{}{t}\gamma(t) \d t \\
-&=\int_{0}^{T}-i\bra{n}\nabla_{\vec R} \D{\vec R(t)}{t}\ket{n}\d t\\
-&=\int_{R(0)}^{R(T)}-i\bra{n}\nabla_{\vec R}\ket{n}\d \vec R\\
-\end{align*}
-$$
-
-Put the expression of $\ket{n}$ and $R(t)=(B_0,\omega t,\varphi)$, we have
-
-$$
-\begin{align*}
-\gamma(C)&=\oint \bra{n_\pm}\nabla_R\ket{n_\pm} B_0 \sin\varphi (\d \theta\, \uvec \theta)\\
-&=\oint_{\theta\in[0,2\pi]} (1\mp\cos\varphi) \d \theta \\
-&=i\pi(1\mp\cos\varphi)
-\end{align*}
-$$
-
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/Phase-lift.png' width="50%">
