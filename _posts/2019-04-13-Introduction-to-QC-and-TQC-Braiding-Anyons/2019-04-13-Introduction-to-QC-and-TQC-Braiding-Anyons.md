@@ -75,15 +75,11 @@ While on $2$-dimensional space, the light-blue path cannot shrink to the dark-bl
 
 ## Anyons as Quasi-particles
 
-{% comment %}
-
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/FluxTubes.png" alt="Loop shrink on 3d and 2d-Lattice" width="50%">
 
-A feasible realization of such anyons is to use quasi-particles on $2$D lattice, by either introducing defects or use flux tubes. The braiding is therefore realized by the motion of the various order parameter defects (vortices, domain walls, etc.) or the flux tubes. The following gif (first and last frame last for $1.5$ second) shows that two lower zero modes are braided due to flux tubes' movement.
+A feasible realization of such anyons is to use quasi-particles on $2$D lattice, by either introducing defects or use flux tubes. The braiding is therefore realized by the motion of the various order parameter defects (vortices, domain walls, etc.) or the flux tubes. The following gif (first and last frame last for $1.5$ second) shows that two lower zero modes are braided due to flux tubes' movement. [^5]
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/ZeroModes.gif" alt="Zero modes moving on a 2d lattice" width="30%">
-
-{% endcomment %}
 
 Such braiding can also be realized on a $1$D nanowire as long as there is a T-junction as in[^1][^2]. The process is like trying make a [three-point turn](https://en.wikipedia.org/wiki/Three-point_turn)
 
@@ -133,15 +129,11 @@ The "or" statement is the part of the foundation of quantum computation.
 
 ## Braiding and Fusion Diagrams
 
-To maintain consistency with Pachos' book[^4], evolution starts from the top.
-
-{% comment %}
+To maintain consistency with Pachos' book[^4], evolution starts from the top.[^5]
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Braiding2plus1.png" alt="Braiding scheme" width="40%">
 
 To provide a more intuitive understanding of such braiding, A $\scriptsize\boxed{\substack{\nwarrow\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,  \diagdown }  }$ diagram represents a clockwise exchange, while a $\scriptsize\boxed{\substack{\nwarrow\,\,\,  \nearrow \newline \diagdown \newline \diagup\,\,\,  \diagdown }  }$ represents a counter-clockwise exchange.
-
-{% endcomment %}
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="70%">
 
@@ -163,3 +155,4 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 [^2]: Kitaev, A. Y. (2001). Unpaired Majorana fermions in quantum wires. *Physics-Uspekhi*, *44*(10S), 131.
 [^3]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
 [^4]: Pachos, J. K. (2012). *Introduction to topological quantum computation*. Cambridge University Press.
+[^5]: Liu, Y., Liu, Y., & Prodan, E. (2019). Braiding Flux-Tubes in a Topological Lattice Model from Class-D. *arXiv e-prints* *64*(2), p. arXiv:1905.02457.
