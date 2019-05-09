@@ -87,7 +87,7 @@ A feasible realization of such anyons is to use quasi-particles on $2$D lattice,
 
 Such braiding can also be realized on a $1$D nanowire as long as there is a T-junction as in[^1][^2]. The process is like trying make a [three-point turn](https://en.wikipedia.org/wiki/Three-point_turn)
 
-<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Three-point_turn.svg/266px-Three-point_turn.svg.pngon" alt="three-point-turn" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/three-point-turn.png" alt="three-point-turn" width="30%">
 
  on a narrow street using a T-intersection. 
 

@@ -201,6 +201,8 @@ But sadly, quantum circuits that involve only Clifford group operations are not 
 
 **Smarty**: Okay, **`Dummy`** made a very good point. So what I was wondering have already been proven by the paper in such an abstract level: you don't even need to consider which type of QC you are using (be that QC or TQC), classical simulation can only utilize Clifford gates, which is not capable of performing arbitrary quantum algorithms. Thus quantum computers are indeed more capable than a computer. 
 
+---
+
 ==what can/connot be done with only Clifford gates? Shor? Grover?==
 
 ---
@@ -227,17 +229,13 @@ But I don't know any proof why such programs do not exist. My take on this subje
 
 ---
 
-# Hype over QC/TQC
-
----
+# Complexity?
 
 From the computational complexity stand point, QC can only solve of BQP problems. NP-hard problems are still out of reach.
 
 Maybe a direct improvement on computational power is a way with a further perspective to go?
 
 As a wild thought:  complete paradigm shifting computer can realized.
-
-wilder thought: Like gold, the real universal currency could be computation power: has a maximal size, .. etc. 
 
 To be continued.
 

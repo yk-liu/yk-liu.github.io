@@ -105,11 +105,11 @@ It is self-evident that this technique is very helpful as it converts a smooth o
 
 Indeed, similar techniques can be adapted to topology spaces. We can use "triangles" to mesh out any oddly shaped topological space, turning it into a "polyhedron". From this polyhedron, we can calculate the Euler characteristic of the space, telling us how many "holes" are in this topological space. This gives us a way to classify topology spaces according to its "holes". This is an important aspect of a topological space as in the famous example of topology - a cup and a doughnut is topological equivalent. (image from [Wikipedia](https://en.wikipedia.org/wiki/Topology))
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif" alt ="Mug and Torus morph" width="20%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2018-11-01-Introduction-to-Homology/assets/Mug-and-Torus-morph.png" alt ="Mug and Torus morph" width="20%">
 
 ## Simplexes
 
-Simplexes are the generalization of triangles and tetrahedrons to lower or higher dimensions. A $0​$-simplex, denoted as $\spl{p _ 0}​$ is a point, a $1​$-simplex $\spl{p _ 0p _ 1}​$ is a line, a $3​$-simplex $\spl{p _ 0p _ 1p _ 2}​$ is a triangle with its interior, a $4​$-simplex a solid tetrahedron. A $n​$-simplex $\sigma _ n​$ is denoted as $\sigma _ n=\spl{ p _ 0,p _ 1,\cdots,p _ n}​$, with $\set{p _ i}​$ is a set of $n​$ geometrically independent points,
+Simplexes are the generalization of triangles and tetrahedrons to lower or higher dimensions. A $0$-simplex, denoted as $\spl{p _ 0}$ is a point, a $1$-simplex $\spl{p _ 0p _ 1}$ is a line, a $3$-simplex $\spl{p _ 0p _ 1p _ 2}$ is a triangle with its interior, a $4$-simplex a solid tetrahedron. A $n$-simplex $\sigma _ n$ is denoted as $\sigma _ n=\spl{ p _ 0,p _ 1,\cdots,p _ n}$, with $\set{p _ i}$ is a set of $n$ geometrically independent points,
 
 $$
 \sigma _ r=\set{x\in\R^N \mid x=\sum _ {i=0}^n c _ ip _ i, c _ i\ge0, \sum _ {i=0}^n c _ i=1},\quad N\gt n.
@@ -153,7 +153,7 @@ If every simplex in the set is regarded as a subset of $\R^n$, the simplicial co
 
 ## Triangulation of Topological Space
 
-If there is a homeomorphism $f:\abs{K}\rightarrow X$, topological space is said to be **triangulable** and the pair $(K,f)​$ is called a **triangulation**. 
+If there is a homeomorphism $f:\abs{K}\rightarrow X$, topological space is said to be **triangulable** and the pair $(K,f)$ is called a **triangulation**. 
 
 # Homology Group - Elements
 
