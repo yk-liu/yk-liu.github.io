@@ -75,7 +75,7 @@ While on $2$-dimensional space, the light-blue path cannot shrink to the dark-bl
 
 ## Anyons as Quasi-particles
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/FluxTubes.png" alt="Loop shrink on 3d and 2d-Lattice" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/FluxTubes.png" alt="Flux Tubes" width="50%">
 
 A feasible realization of such anyons is to use quasi-particles on $2$D lattice, by either introducing defects or use flux tubes. The braiding is therefore realized by the motion of the various order parameter defects (vortices, domain walls, etc.) or the flux tubes. The following gif (first and last frame last for $1.5$ second) shows that two lower zero modes are braided due to flux tubes' movement. [^5]
 
