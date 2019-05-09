@@ -51,7 +51,15 @@ This section follows [[**Bohm**, A. et al](https://www.springer.com/us/book/9783
 
 Generally speaking, a fiber bundle is a topological space where there are extra structures. This structure is summarized as the topological space locally looks like the direct product of two subspaces - a typical fiber and a base space. 
 
-<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/pasta.png' width="40%" alt="a bunch of pasta">
+
+
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/cylinder-food-bundles.png' width="40%" alt="trivial fiber bundle: a cylinder">
+
+
+
+<img src='https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-01-16-Fiber-Bundles/assets/4-Strand-Braiding.png' width="40%" alt="non-trivial fiber bundle: a braiding">
+
+
 
 A fiber bundle is just like a bunch of pasta. Each piece of pasta is a fiber. All the pasta put together becomes the entire topological space which we call a fiber bundle or a total space. That pasta can be twisted and bent, but each piece of pasta is distinguishable and looks alike. And at each point of the total space (the entire bunch of pasta), it looks like a direct product of a base space and a fiber. This means two things. 
 
@@ -130,7 +138,7 @@ This section follows [Peter Szekeres](https://www.cambridge.org/core/books/cours
 
 ## Linear Connections
 
-There is no natural way of comparing tangent vectors $V_p$ and $V_q$ at $p$ and $q​$, for if they had identical components in one coordinate system this will not generally be true in a different coordinate chart covering the two points.
+There is no natural way of comparing tangent vectors $V_p$ and $V_q$ at $p$ and $q$, for if they had identical components in one coordinate system this will not generally be true in a different coordinate chart covering the two points.
 
 Consider the coordinate transformation:
 
