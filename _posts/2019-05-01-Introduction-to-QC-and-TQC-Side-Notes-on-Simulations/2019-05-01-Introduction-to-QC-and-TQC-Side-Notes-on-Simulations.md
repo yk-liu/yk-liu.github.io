@@ -5,7 +5,7 @@ categories: Topological-quantum-computation
 tags: Topological-quantum-computation pitfall Classical-simulation-of-Quantum-computers
 keywords: Braiding Anyon Fermion Boson
 status: Writing
-edit: 2019-05-01
+edit: 2019-05-10
 description: >-
   This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post started as introducing a pitfall of using Stern-Gerlach experiment as quantum computers, and end with a discussion on simulations of QC and TQC using classical computers.
 ---
@@ -152,7 +152,7 @@ So our way of simulating a quantum computer will not work.
 
 ---
 
-**`Dummy`**: So ***that***'s why people are saying quantum computers are efficient! I guess I didn't fully understand the meaning and implications that statement of `yk-liu`'s first post about "quantum computers are exponentially faster than classical computers".
+**`Dummy`**: So ***that***'s why people are saying quantum computers are efficient! I guess I didn't fully understand the meaning and implications that statement of `yk-liu`'s first post about "quantum computers are exponentially faster than classical computers" since qubits runs "in parallel".
 
 ---
 
@@ -177,7 +177,7 @@ This will give us a computer that runs quantum code as fast as a quantum compute
 
 ---
 
-**Smarty**: If this is true, this could mean [quantum supremacy](https://en.wikipedia.org/wiki/Quantum_supremacy)! All you need then, is a specially tailored computer that runs *ab-initio*  calculations really fast, and you run the calculations on that "simulation", and you will have a classical computer  You can factorize any prime number, as large as you want! RSA encryption will be rendered obsolete!
+**<a>Sassy</a>**: If this is true, this could mean [quantum supremacy](https://en.wikipedia.org/wiki/Quantum_supremacy)! All you need then, is a specially tailored computer that runs *ab-initio*  calculations really fast, and you run the calculations on that "simulation", and you will have a classical computer  You can factorize any prime number, as large as you want! RSA encryption will be rendered obsolete!
 
 There is even a code on GitHub called [QTop](https://github.com/jacobmarks/QTop). The claim of the program is that: 
 
@@ -199,11 +199,11 @@ But sadly, quantum circuits that involve only Clifford group operations are not 
 
 ---
 
-**Smarty**: Okay, **`Dummy`** made a very good point. So what I was wondering have already been proven by the paper in such an abstract level: you don't even need to consider which type of QC you are using (be that QC or TQC), classical simulation can only utilize Clifford gates, which is not capable of performing arbitrary quantum algorithms. Thus quantum computers are indeed more capable than a computer. 
+**Smarty**: I am skeptical about <a>Sassy</a>'s Point. I think it has been theoretically proven that QC (with T-gate) will out perform CC. Yet I could not find a way to disproof your proposal.
 
----
+And **`Dummy`** made a very good point. So what I was wondering have already been proven by the paper in such an abstract level: you don't even need to consider which type of QC you are using (be that QC or TQC), classical simulation can only utilize Clifford gates, which is not capable of performing arbitrary quantum algorithms. Thus quantum computers are indeed more capable than a computer. 
 
-==what can/connot be done with only Clifford gates? Shor? Grover?==
+==what can/connot be done with only Clifford gates? Shor? Grover?== Couldn't find any real world algorithms.
 
 ---
 
@@ -235,7 +235,7 @@ From the computational complexity stand point, QC can only solve of BQP problems
 
 Maybe a direct improvement on computational power is a way with a further perspective to go?
 
-As a wild thought:  complete paradigm shifting computer can realized.
+As a wild thought: are there more ways to realize a "computer" theoretically? can or cannot a complete paradigm shifting computer be realized? No? Turing machine dictates that all "computers" by definition is reduced to our "computer"?
 
 To be continued.
 
