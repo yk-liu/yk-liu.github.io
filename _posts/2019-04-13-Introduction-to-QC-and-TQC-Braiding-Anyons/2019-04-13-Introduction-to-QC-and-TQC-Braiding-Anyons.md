@@ -5,7 +5,7 @@ categories: Topological-quantum-computation
 tags: Anyon-Braiding Topological-quantum-computation
 keywords: Braiding Anyon Fermion Boson
 status: Writing
-edit: 2018-05-01
+edit: 2018-05-11
 description: >-
   This is a series of posts on topological quantum computations. The aim of this
   series is to work my way to understanding the diagrams of "strands" widely
@@ -103,11 +103,12 @@ Sometimes the antiparticle of particle $a$ will be denoted as $\anti a$.
 Two anyons can fuse together, just like particles in a collider can violently collide and shatter into other particles, and possible results can arise. For example, two protons might collide to two $K^+$ particles, or two $\pi^+$ particles, denoted as $pp\rightarrow K^+K^+$, $pp\rightarrow \pi^+\pi^+$ respectively, along with many other possibilities. In high energy physics, a particular result is called a decay channel. To find out about a fusion channel, you can go to [PDG](http://pdg.lbl.gov) (thanks [Yifei](yf-liu.github.io) for teaching me that).
 
 <figure>
-<img src="./assets/Higgs.png" alt="Higgs boson decays to four muons" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Higgs.png" alt="Higgs boson decays to four muons" width="40%">
     <figcaption>
     Simulated data of two protons at 14 TeV "fused" to (eventually and mainly) four muons. The tracks of the other products of the collision are shown by lines and the energy deposited in the detector is shown in blue. Image creator: Lucas Taylor.
     <br><small>The Higgs boson is produced in the collision. For the orginal picture and description, see <a href="https://cds.cern.ch/record/39444">image source</a>. </small></figcaption>
 </figure>
+
 
 Two anyons can also gently fuse together to give birth to new particle(s). Like in the case of LHC, there could be several possible outcomes for two fused particles. denoted as
 $$
@@ -141,6 +142,38 @@ Below is a schematic diagram of three anyons (quasiparticles) braided on a $2$D 
 A more abstract and simpler diagram is often used as below. A $\scriptsize\boxed{\substack{\nwarrow\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,  \diagdown }  }$ diagram represents a anticlockwise exchange, while a $\scriptsize\boxed{\substack{\nwarrow\,\,\,  \nearrow \newline \diagdown \newline \diagup\,\,\,  \diagdown }  }$ represents a counter-clockwise exchange. When two lines meet together, two particles are fused together. The height indicates the order of fusion like in (a), $a$ and $b$ are fused first. Sometimes fusion are omitted to emphasize on the braiding, as is in (c). Since an antiparticle travelling forwards in time is indistinguishable from the corresponding particle travelling backwards in time, diagram as (e) is possible. However, I am not going to concern such situation in the near future.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="90%">
+
+# Algebraic Relations Between Diagrams
+
+## $F$-Matrices
+
+To have a better understanding of $F$-matrices, we need to consider creating superposition in fusion diagrams.
+
+As is stated in the last chapter, fusion is much like a measurement. If one two particles are considered, there will be no superposition. Everything is deterministic. There is no room for probabilities of different outcomes.
+
+
+
+> **Side Note**:
+>
+> A measurement of total spin of two spin-$\tfrac12$ particles might yield spin-$1$ or spin-$0$. But there is no superposition in this process.
+
+## $R$-Matrices
+
+
+
+
+
+
+
+## Pentagon Equations and Hexagon equations
+
+
+
+
+
+
+
+
 
 # Braiding as Quantum Computation
 
