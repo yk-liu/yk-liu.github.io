@@ -110,12 +110,18 @@ Two anyons can fuse together, just like particles in a collider can violently co
 
 
 Two anyons can also gently fuse together to give birth to new particle(s). Like in the case of LHC, there could be several possible outcomes for two fused particles. denoted as
+
 $$
 a\times b = \sum N_{ab}^c c.
 $$
 
-Adopting the term "decay channel" in high energy physics, a particular result of fusion is called a "fusion channel". 
+such that
 
+$$
+a\times b = b \times a \quad \text{and}\quad a \times \vac = a
+$$
+
+Adopting the term "decay channel" in high energy physics, a particular result of fusion is called a "fusion channel". 
 
 
 ### Interpretation of Fusion Equations
@@ -139,13 +145,23 @@ Below is a schematic diagram of three anyons (quasiparticles) braided on a $2$D 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/braiding-animation.gif" alt="Braiding animation" width="70%">
 
-A more abstract and simpler diagram is often used as below. A $\scriptsize\boxed{\substack{\nwarrow\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,  \diagdown }  }$ diagram represents a anticlockwise exchange, while a $\scriptsize\boxed{\substack{\nwarrow\,\,\,  \nearrow \newline \diagdown \newline \diagup\,\,\,  \diagdown }  }$ represents a counter-clockwise exchange. When two lines meet together, two particles are fused together. The height indicates the order of fusion like in (a), $a$ and $b$ are fused first. Sometimes fusion are omitted to emphasize on the braiding, as is in (c). Since an antiparticle travelling forwards in time is indistinguishable from the corresponding particle travelling backwards in time, diagram as (e) is possible. However, I am not going to concern such situation in the near future.
+A more abstract and simpler diagram is often used as below. A $\scriptsize\boxed{\substack{\diagdown\,\,\, \diagup \newline \diagup \newline \swarrow\,\,\,  \searrow }  }$ diagram represents a counter-clockwise exchange, while a $\scriptsize\boxed{\substack{\diagdown\,\,\,  \diagup \newline \diagdown \newline \swarrow\,\,\,  \searrow }  }$ represents a counter-clockwise exchange. When two lines meet together, two particles are fused together. The height indicates the order of fusion like in (a), $a$ and $b$ are fused first. Sometimes fusion are omitted to emphasize on the braiding, as is in (c). Since an antiparticle travelling forwards in time is indistinguishable from the corresponding particle travelling backwards in time, diagram as (e) is possible. However, I am not going to concern such situation in the near future.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="90%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="85%">
 
 # Algebraic Relations Between Diagrams
 
+## Construction of Hilbert Space
+
+Usually a state vector of such anyonic system is represented as $\ket{ab;c}$, which means anyon $a$ and $b$ are fused into anyon $c$. The notation can get significantly more complex, such as $\ket{(ab)c;ec;d}$, which means $a\times b=e$, then $e\times c=d$. 
+
+ If you think about it, it's quite strange. We are familiar with a wave function of particle(s) or quasiparticle(s), which we normally write simply as $\ket{c}$. But we have never seen any ket vector that considers the entire process of evolution. In fact, such "kets" should be considered as $\e^{\imath \varphi}\ket{c}$, where $\varphi$ is related to the "history" of anyon $c$, which can be conveniently represented by it's history. $\ket{ab;c}$ and $\ket{de;c}$ will correspond to respectively $\e^{\imath \varphi_1}\ket{c}$, $\e^{\imath \varphi_2}\ket{c}$.
+
+
+
 ## $F$-Matrices
+
+### Superpositions in Fusion Diagram
 
 To have a better understanding of $F$-matrices, we need to consider creating superposition in fusion diagrams.
 
@@ -153,7 +169,19 @@ As is stated in the last chapter, fusion is much like a measurement. If one two 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/two-and-three-anyons-fusion.png" alt="two and three anyons fusion" width="70%">
 
-Now that we have clarified the condition for determinate state and condition for superposed states, we are ready to look at $F$-matrices. For three anyons, there could be multiple anyons $f$ such that $a\times f=d$. Hence there is a summation 
+### $F$-Matrices
+
+The fusion is associative, *i.e.*
+
+$$
+(a\times b)\times c = a\times (b\times c)
+$$
+
+The associativity is captured by the $F$-matrix. 
+
+
+
+For three anyons, there could be multiple anyons $f$ such that $a\times f=d$. If we list 
 
 ## $R$-Matrices
 
