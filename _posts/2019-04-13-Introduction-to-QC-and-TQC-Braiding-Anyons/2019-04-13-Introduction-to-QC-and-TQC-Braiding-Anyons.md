@@ -135,7 +135,7 @@ We can think of fusion as a measurement in the sense that
 
 Below is a schematic diagram of three anyons (quasiparticles) braided on a $2$D lattice. To maintain consistency with Pachos' book[^4], evolution starts from the top.[^5] 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Braiding2plus1.png" alt="Braiding scheme" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Braidinganimation.gif" alt="Braiding animation" width="60%">
 
 
 
@@ -149,7 +149,13 @@ A more abstract and simpler diagram is often used as below. A $\scriptsize\boxed
 
 To have a better understanding of $F$-matrices, we need to consider creating superposition in fusion diagrams.
 
-As is stated in the last chapter, fusion is much like a measurement. If one two particles are considered, there will be no superposition. Everything is deterministic. There is no room for probabilities of different outcomes.
+As is stated in the last chapter, fusion is much like a measurement. If one two anyons are fused to a certain type of anyon, there will be no superposition between different fusion channels. Much like the total spin of two spin-half particles: once you have measured the total spin, everything is deterministic. The total spin is not in the superposition of both $0$ and $1$, it can only be either. There is no room for probabilities of different outcomes. However,  when there are more than two anyons present in the fusion, the information of intermediate result is not always determinant. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/two-and-three-anyons-fusion.png" alt="two and three anyons fusion" width="60%">
+
+
+
+
 
 
 

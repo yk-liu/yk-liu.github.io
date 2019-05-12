@@ -1,0 +1,19 @@
+## Anyons as Quasi-particles
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/FluxTubes.png" alt="Flux Tubes" width="50%">
+
+A feasible realization of such anyons is to use quasi-particles on $2$D lattice, by either introducing defects or use flux tubes. The braiding is therefore realized by the motion of the various order parameter defects (vortices, domain walls, etc.) or the flux tubes. The following gif (first and last frame last for $1.5$ second) shows that two lower zero modes are braided due to flux tubes' movement. [^5]
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/ZeroModes.gif" alt="Zero modes moving on a 2d lattice" width="30%">
+
+Such braiding can also be realized on a $1$D nanowire as long as there is a T-junction as in[^1][^2]. The process is like trying make a [three-point turn](https://en.wikipedia.org/wiki/Three-point_turn)
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/three-point-turn.png" alt="three-point-turn" width="30%">
+
+ on a narrow street using a T-intersection. 
+
+<figure>
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/T-junction.png" alt="Braiding on a T-junction nanowire" width="80%">
+<figcaption>Braiding on a T-junction nanowire. Two anyons on the nanowire is mapped to the head and tail of the car. When the car is truned around, the two anyons are swaped, or braided.</figcaption>
+</figure>
+More complicated realizations of zero modes and their braiding will be discussed in later posts.
