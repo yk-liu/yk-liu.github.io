@@ -105,8 +105,7 @@ Two anyons can fuse together, just like particles in a collider can violently co
 <figure>
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Higgs.png" alt="Higgs boson decays to four muons" width="40%">
     <figcaption>
-    Simulated data of two protons at 14 TeV "fused" to (eventually and mainly) four muons. The tracks of the other products of the collision are shown by lines and the energy deposited in the detector is shown in blue. Image creator: Lucas Taylor.
-    <br><small>The Higgs boson is produced in the collision. For the orginal picture and description, see <a href="https://cds.cern.ch/record/39444">image source</a>. </small></figcaption>
+    Simulated data of two protons at 14 TeV "fused" to (eventually and mainly) four muons. The tracks of the other products of the collision are shown by lines and the energy deposited in the detector is shown in blue. Image creator: Lucas Taylor. (The famous Higgs boson is produced as an intermidiate product. For the orginal picture and description, see <a href="https://cds.cern.ch/record/39444">image source</a>.) </figcaption>
 </figure>
 
 
@@ -115,8 +114,11 @@ $$
 a\times b = \sum N_{ab}^c c.
 $$
 
-
 Adopting the term "decay channel" in high energy physics, a particular result of fusion is called a "fusion channel". 
+
+
+
+### Interpretation of Fusion Equations
 
 For example, $\sigma\times \sigma = \vac + \psi$ means that two $\sigma$ anyons can be fused together, the result is either a $\psi$ particle, **or** (not **and**) a $\vac$ vacuum. 
 
@@ -135,9 +137,7 @@ We can think of fusion as a measurement in the sense that
 
 Below is a schematic diagram of three anyons (quasiparticles) braided on a $2$D lattice. To maintain consistency with Pachos' book[^4], evolution starts from the top.[^5] 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Braidinganimation.gif" alt="Braiding animation" width="60%">
-
-
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/braiding-animation.gif" alt="Braiding animation" width="70%">
 
 A more abstract and simpler diagram is often used as below. A $\scriptsize\boxed{\substack{\nwarrow\,\,\, \nearrow \newline \diagup \newline \diagup\,\,\,  \diagdown }  }$ diagram represents a anticlockwise exchange, while a $\scriptsize\boxed{\substack{\nwarrow\,\,\,  \nearrow \newline \diagdown \newline \diagup\,\,\,  \diagdown }  }$ represents a counter-clockwise exchange. When two lines meet together, two particles are fused together. The height indicates the order of fusion like in (a), $a$ and $b$ are fused first. Sometimes fusion are omitted to emphasize on the braiding, as is in (c). Since an antiparticle travelling forwards in time is indistinguishable from the corresponding particle travelling backwards in time, diagram as (e) is possible. However, I am not going to concern such situation in the near future.
 
@@ -149,19 +149,11 @@ A more abstract and simpler diagram is often used as below. A $\scriptsize\boxed
 
 To have a better understanding of $F$-matrices, we need to consider creating superposition in fusion diagrams.
 
-As is stated in the last chapter, fusion is much like a measurement. If one two anyons are fused to a certain type of anyon, there will be no superposition between different fusion channels. Much like the total spin of two spin-half particles: once you have measured the total spin, everything is deterministic. The total spin is not in the superposition of both $0$ and $1$, it can only be either. There is no room for probabilities of different outcomes. However,  when there are more than two anyons present in the fusion, the information of intermediate result is not always determinant. 
+As is stated in the last chapter, fusion is much like a measurement. If one two anyons are fused to a certain type of anyon, there will be no superposition between different fusion channels. Much like the total spin of two spin-half particles: once you have measured the total spin, everything is deterministic. The total spin is not in the superposition of both $0$ and $1$, it can only be either. There is no room for probabilities of different outcomes. However,  when there are more than two anyons present in the fusion, the information of intermediate result is not always determinant. Like to total spin of four spin-half particles. If the total spin is $1$, the total spin of the first pair and that of the second pair is in the superposition of two possibilities.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/two-and-three-anyons-fusion.png" alt="two and three anyons fusion" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/two-and-three-anyons-fusion.png" alt="two and three anyons fusion" width="70%">
 
-
-
-
-
-
-
-> **Side Note**:
->
-> A measurement of total spin of two spin-$\tfrac12$ particles might yield spin-$1$ or spin-$0$. But there is no superposition in this process.
+Now that we have clarified the condition for determinate state and condition for superposed states, we are ready to look at $F$-matrices. For three anyons, there could be multiple anyons $f$ such that $a\times f=d$. Hence there is a summation 
 
 ## $R$-Matrices
 
