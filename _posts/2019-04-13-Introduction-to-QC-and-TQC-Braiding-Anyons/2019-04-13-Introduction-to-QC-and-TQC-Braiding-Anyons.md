@@ -179,21 +179,27 @@ $$
 
 The associativity is captured by the $F$-matrix. 
 
-
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Fmatrix.png" alt="F-matrix" width="70%">
 
 For three anyons, there could be multiple anyons $f$ such that $a\times f=d$. If we list 
 
 ## $R$-Matrices
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Rmatrix.png" alt="R-matrix" width="70%">
 
 
 
 
 
+## Pentagon Equation
 
-## Pentagon Equations and Hexagon equations
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Pentagon.png" alt="Pentagon Equation" width="70%">
 
 
+
+### Hexagon equation
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon.png" alt="Hexagon equation" width="70%">
 
 
 
