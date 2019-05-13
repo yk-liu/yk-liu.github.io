@@ -151,11 +151,23 @@ A more abstract and simpler diagram is often used as below. A $\scriptsize\boxed
 
 # Algebraic Relations Between Diagrams
 
-## Construction of Hilbert Space
+## The Anyonic Hilbert Space
 
-Usually a state vector of such anyonic system is represented as $\ket{ab;c}$, which means anyon $a$ and $b$ are fused into anyon $c$. The notation can get significantly more complex, such as $\ket{(ab)c;ec;d}$, which means $a\times b=e$, then $e\times c=d$. 
+As you will see in the following sections, in $R$-matrices, the fusion states $\ket{ab;c}$ are just like actual wavefunctions of anyons: when exchanged, an additional phase factor arises. Such wavefunction of a quasiparticle is normally denoted as $\ket a \rightarrow \e ^{\imath \pi/n}\ket a$. While in $F$-matrices, such interpretation will be problematic. Of course you can see fusion states $\ket{ab;c}$ merely a fancy way to show an wavefunction of a quasiparticle $c$, whose phase factor is determined by it's origin, as $\e ^{\imath\varphi}\ket c=\ket{ab;c}$. But we further demand that the state $\ket{(a(bc);ae;d}$ and state $\ket{a(bc);af;d}$ are orthogonal, and there is a unitary transformation between two sets of basis $\set{\ket{a(bc);a\_;d}}$ and $\set{\ket{(ab)c;\_c;d}}$. Such requirement would force us to accommodate a tortured definition of such fusion state from quantum mechanics. 
 
- If you think about it, it's quite strange. We are familiar with a wave function of particle(s) or quasiparticle(s), which we normally write simply as $\ket{c}$. But we have never seen any ket vector that considers the entire process of evolution. In fact, such "kets" should be considered as $\e^{\imath \varphi}\ket{c}$, where $\varphi$ is related to the "history" of anyon $c$, which can be conveniently represented by it's history. $\ket{ab;c}$ and $\ket{de;c}$ will correspond to respectively $\e^{\imath \varphi_1}\ket{c}$, $\e^{\imath \varphi_2}\ket{c}$.
+The question remains unanswered. What are the states written as $\ket{ab;c}$, or even more fancily denoted as $\ket{\substack{a \quad b\newline \diagdown\diagup\newline \ \!\mid \newline c}}$? Are these states merely wavefunctions in quantum mechanics? The answer is no. But the answer to what exactly are these states are complicated.
+
+Simulation-wise, $R$-matrices are easy to understand as extra phase, just as is in our naïve understanding. $F$-matrices are understood as a measurement as is described in [^8] along with detailed description toy models where various anyons are supported. (Reading [^8] is strong recommended.)
+
+Theoretically speaking, such state is descried by [TQFT](https://en.wikipedia.org/wiki/Topological_quantum_field_theory)[^9] or [CFT](https://en.wikipedia.org/wiki/Conformal_field_theory)(in a foot note in[^10]). The reference is abstracted partially below. Pachos' book [^4] mentioned that such states are "a whole family of states of the microscopic system". 
+
+> As already spoiled in the introduction, we want to construct a computer device out  of a topological quantum field theory and anyons. ... As it turns out, it is very convenient to extract  the relevant properties that are shared by all these models and formulate an abstract framework that allows for the most general treatment. ...The assignment ... and the representation... are the essential ingredients of a functor from the extended Teichmüller space of genus g surfaces with n punctures to finite dimensional complex vector spaces... that qualifies as a unitary topological modular functor (UTMF). The data of a UTMF is equivalent to a unitary modular tensor category (UMTC) which one might also call "abstract anyonic system", as it generalizes the notion of a physical system with anyon excitations. (pointing to *Bojko Bakalov and Alexander Kirillov. **Lectures on Tensor Categories and Modular Functors.** 2000.*)[^9]
+
+> Description of fractional quantum Hall liquids the ground states can be described by conformal blocks, which form a basis of the modular functor. Conformal blocks are known to be represented by labeled fusion trees, which we refer to as fusion paths.[^10]
+
+> After all, when the topological model is physically realized, the fusion states have to correspond to certain quantum states of the constituent particles. ... fusion state $\ket{ab;c}$ corresponds to a concrete state of the underlying microscopic system. When this state evolves adiabatically in order to fuse anyonic quasiparticles, the state that corresponds to quasiparticle $c$ results. All the states of the constituent particles along this time evolution that describe different positions of the $a$ and $b$ quasiparticles are equivalent since they correspond to the same fusion state. **As a conclusion the fusion states correspond, in general, to a whole family of states of the microscopic system.**[^4] 
+
+To conclude, I don't have enough knowledge now to give a simple explanation about what these states are (if you do, please leave a comment), but I hope such 
 
 
 
@@ -181,11 +193,20 @@ The associativity is captured by the $F$-matrix.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Fmatrix.png" alt="F-matrix" width="50%">
 
-For three anyons, there could be multiple anyons $f$ such that $a\times f=d$. If we list 
+For three anyons, there could be multiple anyons $f$ such that $a\times f=d$. If we list all the possible..
+
+> This is just a different basis in the ***<u>same</u>*** two-dimensional space.[^3]
 
 ## $R$-Matrices
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Rmatrix.png" alt="R-matrix" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Rmatrix.png" alt="R-matrix" width="40%">
+
+
+
+##  Possible confusion explained
+
+According to Pachos[^4], the Hilbert space of anyons is the space of states that corresponds to the fusion **process**. We assign a distinct state to the time evolution of two anyons that fuse to a certain outcome. Usually such a state vector of such anyonic system is represented as $\ket{ab;c}$, which means anyon $a$ and $b$ are fused into anyon $c$. The notation can get significantly more complex, such as $\ket{(ab)c;ec;d}$, which means $a\times b=e$, then $e\times c=d$. 
+
 
 
 
@@ -197,9 +218,15 @@ For three anyons, there could be multiple anyons $f$ such that $a\times f=d$. If
 
 
 
+
+
+
+
+
+
 ### Hexagon equation
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon.png" alt="Hexagon equation" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon.png" alt="Hexagon equation" width="59%" align="bottom"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph.gif" alt="Hexagon equation" width="39%" align="bottom"> 
 
 
 
@@ -233,3 +260,10 @@ All rights reserved for this post.
 [^5]: Liu, Y., Liu, Y., & Prodan, E. (2019). Braiding Flux-Tubes in a Topological Lattice Model from Class-D. *arXiv e-prints* *64*(2), p. arXiv:1905.02457.
 [^6]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
 [^7]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
+[^8]: Roy, A., & DiVincenzo, D. P. (2017). Topological quantum computing. *arXiv preprint arXiv:1701.05052*.
+[^9]: Hahn, L. (2019). Topological Quantum Computing. Retrieved from <https://www.mathi.uni-heidelberg.de/~walcher/teaching/sose17/atqft/writeups/Lukas.pdf>
+
+[^10]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
+
+
+
