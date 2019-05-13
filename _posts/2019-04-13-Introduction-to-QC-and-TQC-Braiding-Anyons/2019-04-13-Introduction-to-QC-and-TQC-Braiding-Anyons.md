@@ -166,7 +166,7 @@ Consider four angular momentums (spins) forming a total spin. How many ways for 
 
 Notice that an $LS$ coupling can be written as $\ket{L,S,J}$, while $jj$ coupling will be written as $\ket{j_1,j_2,J}$. These two sets of states spans the same Hilbert space, and are related to each other by [Clebsch–Gordan coefficients](https://en.wikipedia.org/wiki/Clebsch–Gordan_coefficients). 
 
-If we only care about the result of a given configuration of spins and orbital angular momenta, we can draw a diagram like the one on the far right. 
+If we only care about the result of a given configuration of spins and orbital angular momenta, we can draw a diagram like the one on the far right. And we can assert with confidence that either way of coupling is "correct" in describing the "fusion" result. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/three-spin-coupling.png" alt="Three spin coupling treated as fusion" width="70%">
 
