@@ -2,7 +2,7 @@
 title: Fiber Bundles
 categories: Topology
 edit: 2019-01-16
-status: Writing
+status: Paused
 tags: Fiber Fiber-bundles Topology Berry's-Phase
 keywords: 
 description: Fiber bundle is introduced with intuitive examples of pasta and pancakes, Berry phase and Calabi-Yau space. Structure group is introduced as a natural consequence of transition functions.
