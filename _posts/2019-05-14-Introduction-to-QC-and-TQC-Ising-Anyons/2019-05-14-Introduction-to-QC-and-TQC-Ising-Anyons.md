@@ -40,6 +40,62 @@ $$
 
 # Properties of Ising Anyons
 
+## Fusion Channels
+
+There are three elements in the Ising anyons model. A fermion denoted as $\psi$, an anyon denoted as $\sigma$, and vacuum $\vac$. The fusion rules are
+$$
+\begin{array}{cccccc}
+\vac \times \vac =& \vac &
+\vac \times \psi =& \psi &
+\vac \times \sigma =& \sigma \\
+& & 
+\psi\times \psi =& \vac &
+\psi\times \sigma =& \sigma  \\
+& &
+& &
+\sigma\times\sigma  =& \vac+\psi.
+\end{array}
+$$
+The physical significance as well as experimental realization will not be discussed in this post.
+
+> If you write the consecutive fusion result of $\sigma$ anyons, you will have
+> $$
+> \begin{align*}
+> \sigma \times \sigma \times \sigma &= (\sigma \times \sigma) \times \sigma \\
+> &=(\vac + \psi)\times \sigma\\
+> &=\vac \times \sigma + \psi \times \sigma\\
+> &=\sigma + \sigma \\
+> & = 2\sigma
+> \end{align*}
+> $$
+> Where the $2$ does not mean two sigma anyons. It is means that there are two fusion channels or paths, one of them passes through $\vac$ and the other passes through $\psi$. Both of them end up with one $\sigma$ anyon.
+
+## $F$-Matrices
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Fmatrix.png" alt="F-matrix" width="50%">
+
+If we list all the possible combinations of fusion tree, the only non-trivial ones are those have $\sigma\times \sigma=\psi+\vac$ as intermediate results. In that case, $a$ and $b$ must be $\sigma$ on the left fusion tree, $b$ and $c$ must be $\sigma$ on the right fusion tree, the total fusion is either $\vac$ with $\sigma$ or $\psi$ with $\sigma$, leaving the $d$ a $\sigma$ anyon.
+
+Thus the only non-trivial $F$-matrix is $F_{\sigma\sigma\sigma}^\sigma$, for simplicity, this matrix will be denoted as $F$. Since there are only two fusion channels, $F$ is a $2\times 2$ matrix, whose elements will be denoted as $F_{ij}$.
+
+Next, we are going to solve for the explicit matrix elements of $F$-matrices using the pentagon identity.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Pentagon.png" alt="Pentagon identity" width="40%">
+
+
+
+## $R$-matrices
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Rmatrix.png" alt="R-matrix" width="50%">
+
+
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Hexagon.png" alt="Hexagon identity" width="30%">
+
+
+
+# Computation with Ising Anyons
+
 
 
 
