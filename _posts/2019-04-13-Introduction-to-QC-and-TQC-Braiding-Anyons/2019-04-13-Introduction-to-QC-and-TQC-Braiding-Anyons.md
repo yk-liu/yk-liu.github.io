@@ -272,7 +272,7 @@ If the order of the initial anyons are changed, there should be extra $R$-matric
 
 ## Notes on the Complexity of Pentagon and Hexagon Equations
 
-The pentagon and hexagon equations looks very complicated. Once we apply the equations to actual models, things will become drastically simplified. Fibonacci anyons and Majorana anyons contains a very limited types of anyons, and many of the $F$-matrices are trivial. We will see that in the upcoming notes of case study.
+The pentagon and hexagon equations looks very complicated. Once we apply the equations to actual models, things will become drastically simplified. Fibonacci anyons and Ising anyons contains a very limited types of anyons, and many of the $F$-matrices are trivial. We will see that in the upcoming notes of case study.
 
 ## Notes on the Pentagon and Hexagon Equations
 
