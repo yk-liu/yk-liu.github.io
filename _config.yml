@@ -76,3 +76,4 @@ exclude:
  - "*.nb"
  - "*.bk"
  - "*.draft.md"
+ - "*.source.*"

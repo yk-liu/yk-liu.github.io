@@ -146,9 +146,15 @@ A more abstract and simpler diagram is often used as below. A $\scriptsize\boxed
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="85%">
 
+The diagram is hard to write within a document. The fusion diagram is often written in a string inside a bra or a ket, like
+$$
+\ket{ab;c},\ \ket{(ab);c},\ \ket{abc;ic;d},\ \ket{a(bc);ai;d}, \textit{ etc.}
+$$
+The semicolon means different "stages" as time goes forward. The parentheses indicate a braiding, while a fusion is implied by the two consecutive stages. These state vectors are called fusio
+
 # Algebraic Relations Between Diagrams
 
-## $F$-Matrices and Fusion States
+## Prelude of $F$-Matrices: Fusion States, Anyonic Hilbert Space
 
 ### Superpositions in Fusion Diagram
 
@@ -158,29 +164,23 @@ As is stated in the last chapter, fusion is much like a measurement. If one two 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/two-and-three-anyons-fusion.png" alt="two and three anyons fusion" width="70%">
 
-### Anyonic Hilbert Space and Fusion States
+### Spin "Fusion" Diagrams
 
 Consider four angular momentums (spins) forming a total spin. How many ways for them to combine to a certain total spin? Two ways. $LS$ coupling and $jj$ coupling. If we consider "coupling" as fusion, we can draw the following "coupling diagram":
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/soc.png" alt="LS coupling and jj coupling" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/soc.png" alt="LS coupling and jj coupling" width="90%">
 
 Notice that an $LS$ coupling can be written as $\ket{L,S,J}$, while $jj$ coupling will be written as $\ket{j_1,j_2,J}$. These two sets of states spans the same Hilbert space, and are related to each other by [Clebsch–Gordan coefficients](https://en.wikipedia.org/wiki/Clebsch–Gordan_coefficients). 
 
-If we only care about the result of a given configuration of spins and orbital angular momenta, we can draw a diagram like the one on the far right. 
+If we only care about the result of a given configuration of spins and orbital angular momenta, we can draw a diagram like the one on the far right. And we can assert with confidence that either way of coupling is "correct" in describing the "fusion" result. To write in the form of fusion state, that would be $\ket{(s_1s_2)(l_1l_2);(SL);J}$ and $\ket{(s_1l_1)(s_2l_2);(j_1j_2);J}$.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/three-spin-coupling.png" alt="Three spin coupling treated as fusion" width="70%">
+Now if we consider three spins in the "fusion" order of  $\ket{(s_1s_2)s_3;(S_{12}s_3);S}$ and $\ket{s_1(s_2s_3);(s_1S_{23});S}$ respectively, we will have the following diagrams.
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/three-spin-coupling.png" alt="Three spin coupling treated as fusion" width="90%">
 
+Like before, these two sets of state vectors span the **same** Hilbert space, where three spins are coupled as one total spin $S$. Although it's obvious from the fact that they span the Hilbert space, I want to make this point explicitly that the state vectors of the form $\ket{s_1(s_2s_3);(s_1S_{23});S}$ are orthogonal to each other. Different value of $S_{23}$ will correspond to distinguishable states, hence these states are orthogonal.
 
-
-
-
-
-
-
-
-
-> **What confused me when I first studied it**:
+> **Why I wrote this subsection**:
 >
 > As you will see in the following sections, in $R$-matrices, the fusion states $\ket{ab;c}$ are just like actual wavefunctions of anyons: when exchanged, an additional phase factor arises. Such wavefunction of a quasiparticle is normally denoted as $\ket a \rightarrow \e ^{\imath \pi/n}\ket a$. While in $F$-matrices, such interpretation will be problematic. Of course you can see fusion states $\ket{ab;c}$ merely a fancy way to show an wavefunction of a quasiparticle $c$, whose phase factor is determined by it's origin, as $\e ^{\imath\varphi}\ket c=\ket{ab;c}$. But we further demand that the state $\ket{(a(bc);ae;d}$ and state $\ket{a(bc);af;d}$ are orthogonal, and there is a unitary transformation between two sets of basis $\set{\ket{a(bc);a\_;d}}$ and $\set{\ket{(ab)c;\_c;d}}$. 
 >
@@ -190,12 +190,19 @@ If we only care about the result of a given configuration of spins and orbital a
 >
 > > Recall that in $\mathrm{SU}(2)$, there are multiple states in which spins $j_1$, $j_2$, $j_3$ couple to form a total spin $J$. For instance, $j_1$ and $j_2$ can add to form $j_12$, which can then add with $j_3$ to give $J$. The eigenstates of $\vert j_{12}\vert^2$ form a basis of the different states with fixed $j_1$, $j_2$, $j_3$, and $J$. Alternatively, $j_2$ and $j_3$ can add to form $j_{23}$, which can then add with $j_1$ to give $J$. The eigenstates of $\vert j_{23}\vert^2$ form a different basis. The $6$$j$ symbol gives the basis change between the two.
 >
-> That's why I wrote this subsection.
+> I wrote this section so the idea of different fusion states are orthogonal to each other wouldn't seem so abrupt to readers who are new to this field. I sure spend a lot of time struggle with it.
 
-### $F$-Matrices
+### A Word on Fusion
+
+When you consider anyons fusion, how exactly do they fuse in your mind? Do you picture the fusion as two particles violently smash to each other, crashing into debris, or do you picture the process as two drops of water merge into one bigger drop of water? 
+
+The fusion of anyons can be neither. Two anyons close together, away from each other can be efficiently considered as fused. In this case, the fusion is more like a anyonic party where some of the anyons pair together dancing in distinct rhythms, while others walking around talking to each other as "braiding". Just like when two electrons are brought together and isolated, they behave exactly like a single new spin, but the two electrons are not smashing nor merging into each other. They stay perfectly as individual particles.
+
+## $F$-Matrices
+
+After a long prelude, I hope you can still remember the title of this chapter: "Algebraic Relations Between Diagrams". We are going to find out the algebraic relations between fusion diagrams. The first one being $F$-matrices.
 
 The fusion is associative, *i.e.*
-
 $$
 (a\times b)\times c = a\times (b\times c)
 $$
@@ -204,36 +211,33 @@ The associativity is captured by the $F$-matrix.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Fmatrix.png" alt="F-matrix" width="50%">
 
-For three anyons, there could be multiple anyons $f$ such that $a\times f=d$. If we list all the possible...
+Just like the case of three spins, left-most-first fusion states span the **same** Hilbert space as the right-most-first fusion states. $F$-matrix is the representation transformation matrix between these two basis. And as bases, the left-most-first fusion states are orthogonal to each other, and or are the right-most-first fusion states.
 
-
-
+Write that in fusion s
+$$
+\ket{abc;ic;d}=\sum_j\left(F_{abc}^d\right)^i_j\ket{abc;aj;d}.
+$$
+Of course the above equation can be revered, as
+$$
+\ket{abc;aj;d}=\sum_i\left({F_{abc}^d}^{-1}\right)^j_i\ket{abc;ic;d},
+$$
+where the convention is that an $F$-matrix represents the representation transformation from right-most-first fusion to left-most-first fusion, and an $F^{-1}$-matrix represents the reverse.
 
 ## $R$-Matrices
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Rmatrix.png" alt="R-matrix" width="40%">
 
-
-
-## Further Discussion on the Fusion States
-
-Simulation-wise, $R$-matrices are easy to understand as extra phase, just as is in our naïve understanding. $F$-matrices are understood as a measurement as is described in [^8] along with detailed description toy models where various anyons are supported. (Reading [^8] is strongly recommended.) 
-
-Theoretically speaking, such state is descried by [TQFT](https://en.wikipedia.org/wiki/Topological_quantum_field_theory)[^9] or [CFT](https://en.wikipedia.org/wiki/Conformal_field_theory)(in a foot note in[^10]). The reference is abstracted partially below. Pachos' book [^4] mentioned that such states are "a whole family of states of the microscopic system". 
-
-> As already spoiled in the introduction, we want to construct a computer device out  of a topological quantum field theory and anyons. ... As it turns out, it is very convenient to extract  the relevant properties that are shared by all these models and formulate an abstract framework that allows for the most general treatment. ...The assignment ... and the representation... are the essential ingredients of a functor from the extended Teichmüller space of genus g surfaces with n punctures to finite dimensional complex vector spaces... that qualifies as a unitary topological modular functor (UTMF). The data of a UTMF is equivalent to a unitary modular tensor category (UMTC) which one might also call "abstract anyonic system", as it generalizes the notion of a physical system with anyon excitations. (pointing to *Bojko Bakalov and Alexander Kirillov. **Lectures on Tensor Categories and Modular Functors.** 2000.*)[^9]
-
-> Description of fractional quantum Hall liquids the ground states can be described by conformal blocks, which form a basis of the modular functor. Conformal blocks are known to be represented by labeled fusion trees, which we refer to as fusion paths.[^10]
-
-> After all, when the topological model is physically realized, the fusion states have to correspond to certain quantum states of the constituent particles. ... fusion state $\ket{ab;c}$ corresponds to a concrete state of the underlying microscopic system. When this state evolves adiabatically in order to fuse anyonic quasiparticles, the state that corresponds to quasiparticle $c$ results. All the states of the constituent particles along this time evolution that describe different positions of the $a$ and $b$ quasiparticles are equivalent since they correspond to the same fusion state. **As a conclusion the fusion states correspond, in general, to a whole family of states of the microscopic system.**[^4] 
-
-Nevertheless, as far as calculation is concerned, our discussion of anyons model not not require a deep understanding of what these states actually are. They would be just an abstract vector space where we can define various operations.
+$R$-matrices is pretty easy to understand, as they describe the defining property of anyons: when exchanged, an non-trivial phase factor (matrix) 
 
 ## Pentagon Equation
 
+Given a fusion diagram, it is possible to transform or simplify it using $R$-moves and $F$-moves. You can imagine that we can unwind a intertwined fusion diagram in a boring-looking diagram with a lot $F$-matrices and $R$-matrices multiplied. 
+
+We can even make a full circle of such transformations. One of them is the pentagon equation or pentagon identity
+
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Pentagon.png" alt="Pentagon Equation" width="50%">
 
-
+This picture is quite self-explanatory. Notice that $, we can write that
 
 
 
@@ -243,11 +247,25 @@ Nevertheless, as far as calculation is concerned, our discussion of anyons model
 
 ### Hexagon Equation
 
+Another identity we can find is the hexagon identity, pictured as below. Notice the e
+
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon.png" alt="Hexagon equation" width="70%" align="bottom" style="display:inline-block"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph.gif" alt="Fusion diagram morphing gif" width="25%" align="bottom" style="display:inline-blcok"> 
 
 
 
+## Further Discussion on the Fusion States
 
+Simulation-wise, $R$-matrices are easy to understand as extra phase, just as is in our naïve understanding. $F$-matrices are understood as a measurement as is described in[^8] along with detailed description toy models where various anyons are supported. (Reading[^8] is strongly recommended.) 
+
+Theoretically speaking, such state is descried by [TQFT](https://en.wikipedia.org/wiki/Topological_quantum_field_theory)[^9] or [CFT](https://en.wikipedia.org/wiki/Conformal_field_theory)(in a foot note in[^10]). The reference is abstracted partially below. Pachos' book[^4] mentioned that such states are "a whole family of states of the microscopic system". 
+
+> As already spoiled in the introduction, we want to construct a computer device out  of a topological quantum field theory and anyons. ... As it turns out, it is very convenient to extract  the relevant properties that are shared by all these models and formulate an abstract framework that allows for the most general treatment. ...The assignment ... and the representation... are the essential ingredients of a functor from the extended Teichmüller space of genus g surfaces with n punctures to finite dimensional complex vector spaces... that qualifies as a unitary topological modular functor (UTMF). The data of a UTMF is equivalent to a unitary modular tensor category (UMTC) which one might also call "abstract anyonic system", as it generalizes the notion of a physical system with anyon excitations. (pointing to *Bojko Bakalov and Alexander Kirillov. **Lectures on Tensor Categories and Modular Functors.** 2000.*)[^9]
+
+> Description of fractional quantum Hall liquids the ground states can be described by conformal blocks, which form a basis of the modular functor. Conformal blocks are known to be represented by labeled fusion trees, which we refer to as fusion paths.[^10]
+
+> After all, when the topological model is physically realized, the fusion states have to correspond to certain quantum states of the constituent particles. ... fusion state $\ket{ab;c}$ corresponds to a concrete state of the underlying microscopic system. When this state evolves adiabatically in order to fuse anyonic quasiparticles, the state that corresponds to quasiparticle $c$ results. All the states of the constituent particles along this time evolution that describe different positions of the $a$ and $b$ quasiparticles are equivalent since they correspond to the same fusion state. **As a conclusion the fusion states correspond, in general, to a whole family of states of the microscopic system.**[^4] 
+
+Nevertheless, as far as calculation is concerned, our discussion of anyons model not not require a deep understanding of what these states actually are. They would be just an abstract vector space where we can define various operations.
 
 
 
