@@ -244,17 +244,8 @@ We can even make a full circle of such transformations. One of them is the penta
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Pentagon.png" alt="Pentagon Equation" width="50%">
 
-This picture adopted from [^4] is quite self-explanatory. The equation can be written as 
+This picture adopted from [^4] is quite self-explanatory. We will see more at the case study of Ising anyons.
 
-$$
-F_{a34}^5 \cdot F_{12c}^5 \cdot {F_{234}^d}^{-1} \cdot {F_{1e4}^5}^{-1}  \cdot{F_{12c}^5}^{-1} = \operatorname{Id}
-$$
-
-and can be written in a more compact form, as
-
-$$
-F_{a34}^5 \cdot F_{12c}^5 = F_{234}^d \cdot F_{1e4}^5 \cdot F_{12c}^5.
-$$
 
 ### Hexagon Equation
 
