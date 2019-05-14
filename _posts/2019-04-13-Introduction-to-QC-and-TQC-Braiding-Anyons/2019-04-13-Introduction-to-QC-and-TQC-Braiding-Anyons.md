@@ -5,7 +5,7 @@ categories: Topological-quantum-computation
 tags: Anyons Braiding Fusion Topological-quantum-computation
 keywords: Braiding Anyon Fermion Boson
 status: Writing
-edit: 2018-05-13
+edit: 2018-05-14
 description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post discusses anyon model in general. Fusion diagram and hexagon and pentagon identities are introduced.
 comments:
   - author:
@@ -218,7 +218,7 @@ The associativity is captured by the $F$-matrix.
 
 Just like the case of three spins, left-most-first fusion states span the **same** Hilbert space as the right-most-first fusion states. $F$-matrix is the representation transformation matrix between these two bases. And as bases, the left-most-first fusion states are orthogonal to each other, and or are the right-most-first fusion states.
 
-Write that in fusion s
+Write that in the form of fusion states, we have
 
 $$
 \ket{(ab)c;ic;d}=\sum_j\left(F_{abc}^d\right)^i_j\ket{a(bc);aj;d}.
@@ -238,7 +238,7 @@ where the convention is that an $F$-matrix represents the representation transfo
 
 $R$-matrices are pretty easy to understand, as they describe the defining property of anyons: when exchanged, a non-trivial phase factor (matrix) is present.
 
-## Pentagon Equation
+# Pentagon Equation
 
 Given a fusion diagram, it is possible to transform or simplify it using $R$-moves and $F$-moves. You can imagine that we can unwind an intertwined fusion diagram in a boring-looking diagram with a lot $F$-matrices and $R$-matrices multiplied. This is nothing more than a complicated representation transformation between the fusion states $\ket{1234;\ \dots\ ;5}$.
 
@@ -253,6 +253,7 @@ F_{a34}^5 \cdot F_{12c}^5 \cdot {F_{234}^d}^{-1} \cdot {F_{1e4}^5}^{-1}  \cdot{F
 $$
 
 and can be written in a more compact form, as
+
 $$
 F_{a34}^5 \cdot F_{12c}^5 = F_{234}^d \cdot F_{1e4}^5 \cdot F_{12c}^5.
 $$
@@ -262,15 +263,18 @@ $$
 Another identity we can find is the hexagon identity, as is pictured as below.
 
 <div style="position:relative;text-align: center;display:inline-blcok;"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon.png" alt="Hexagon equation" width="60%" align="bottom" style="display:inline-block">
-    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph.gif" alt="Fusion diagram morphing gif" width="15%" align="bottom" style="display:inline-blcok;position: absolute;left:20%;bottom:0px;"></div>
+    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph.gif" alt="Fusion diagram morphing gif" width="16%" align="bottom" style="display:inline-blcok;position: absolute;left:20%;bottom:0px;"></div>
+ This picture adopted from [^4] is quite self-explanatory. Notice that the gif in the lower right corner shows that just like strands in our daily life, we can gently move them is they are not intertwined. Notice that the order of the fused anyons are not changed. 
 
- This picture adopted from [^4] is quite self-explanatory. Notice that the gif in the lower right corner shows that just like strands in our daily life, we can gently move them is they are not intertwined.
+If the order of the initial anyons are changed, there should be extra $R$-matrices, even if there is a way to obtain the same result. One of such incorrect ways to morph is shown below. (As you might have guessed, I discovered it after I made the mistake.)
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph-wrong.gif" alt="Wrong way of morphing fusion diagrams gif" width="30%">
 
+## Notes on the Complexity of Pentagon and Hexagon Equations
 
+The pentagon and hexagon equations looks very complicated. Once we apply the equations to actual models, things will become drastically simplified. Fibonacci anyons and Majorana anyons contains a very limited types of anyons, and many of the $F$-matrices are trivial. We will see that in the upcoming notes of case study.
 
-
-## Notes on the Pentagon and Hexagon Equation
+## Notes on the Pentagon and Hexagon Equations
 
 As is stated in [^3], we can solve for the $F$-matrix and $R$-matrix directly from the pentagon and hexagon equations. The only information a specific anyon model can provide is in the fusion equation $a\times b = \sum N_{ab}^c c$. For example, the $F$-matrices for Fibonacci anyons are solved from pentagon equation in[^10]. 
 
@@ -280,8 +284,7 @@ Also, $F$- and $R$-matrices can be viewed from modular tensor category, which I 
 >
 > The $F$ and $R$ matrices play particularly important roles. The $F$ matrix can essentially be viewed an associativity relation for fusion: we could first fuse $i$ with $j$, and then fuse the result with $k$; or we could fuse $i$ with the result of fusing $j$ with $k$. The consistency of this property leads to a constraint on the $F$-matrices called the pentagon equation. Consistency between $F$ and $R$ leads to a constraint called the hexagon equation. Modularity is the condition that the $S$-matrix be invertible. **These self-consistency conditions are sufficiently strong that a solution to them completely defines a topological phase**.[^3]
 
-
-## Further Discussion on the Fusion States
+# Further Discussion on the Fusion States
 
 Simulation-wise, $R$-matrices are easy to understand as extra phase, just as is in our naïve understanding. $F$-matrices are understood as a measurement as is described in[^8] along with detailed description toy models where various anyons are supported. (Reading[^8] is recommended.) 
 
