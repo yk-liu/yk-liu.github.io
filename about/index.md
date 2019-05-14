@@ -1,8 +1,8 @@
 ---
 title: About
 layout: info
-Edit: 2018-11-14
 toc: false
+edit: 2019-05-15
 commentable: false
 protected: true
 mathjax: true
@@ -10,7 +10,7 @@ mathjax: true
 
 # Me
 
-My name is Yingkai Liu. I am currently a senior undergraduate at Nankai University, China. I major in Physics. 
+My name is Yingkai Liu ([Google Scholar](https://scholar.google.co.kr/citations?user=NIySL50AAAAJ&hl=en)). I am currently a senior undergraduate at Nankai University, China. I major in Physics. 
 
 With more understanding of physics, I found the theory used to describe a phenomenon is more and more elegant but in the same time complicated. I was happy about the differential equations, impressed by linear algebra, struck by group theory and now mesmerized by topology and differential geometry. **I am aware that physics requires much more than *just* mathematics. In the same time I believe that with more mathematics there will be deeper physics.** 
 
@@ -35,7 +35,7 @@ The posts are at different status.
 | Completed | This post is considered completed, but I might edit it when I came up with something new. |
 | Writing   | This post is being actively edited.                          |
 | Paused    | This post is considered of low priority. I will come back to this post later. |
-| Archived  | This post is outdated and I probably won't update it anymore. |
+| Archived  | This post is outdated and probably won't receive any update. |
 
 
 
@@ -80,4 +80,4 @@ Which has been beautifully put by Bruce Lee:
 
 # Contact
 
-The best way to reach me is via email: $water$ @ $mail.nankai.edu.cn$
+The best way to reach me is via email: $water$ _@_ $mail.nankai.edu.cn$
