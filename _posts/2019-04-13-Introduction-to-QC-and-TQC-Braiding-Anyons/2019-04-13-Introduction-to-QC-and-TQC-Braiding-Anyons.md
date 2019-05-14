@@ -277,7 +277,7 @@ Also, $F$- and $R$-matrices can be viewed from modular tensor category, which I 
 
 Simulation-wise, $R$-matrices are easy to understand as extra phase, just as is in our naïve understanding. $F$-matrices are understood as a measurement as is described in[^8] along with detailed description toy models where various anyons are supported. (Reading[^8] is recommended.) 
 
-Theoretically speaking, such state is described by [TQFT](https://en.wikipedia.org/wiki/Topological_quantum_field_theory)[^9] or [CFT](https://en.wikipedia.org/wiki/Conformal_field_theory)(in a footnote in[^10]). The reference is abstracted partially below. Pachos' book[^4] mentioned that such states are "a whole family of states of the microscopic system". 
+Theoretically speaking, such state is described by [TQFT](https://en.wikipedia.org/wiki/Topological_quantum_field_theory)[^9] or [CFT](https://en.wikipedia.org/wiki/Conformal_field_theory)(in a footnote in[^10][^11]). The reference is abstracted partially below. Pachos' book[^4] mentioned that such states are "a whole family of states of the microscopic system". 
 
 > As already spoiled in the introduction, we want to construct a computer device out of a topological quantum field theory and anyons. ... As it turns out, it is very convenient to extract the relevant properties that are shared by all these models and formulate an abstract framework that allows for the most general treatment. ...The assignment ... and the representation... are the essential ingredients of a functor from the extended Teichmüller space of genus g surfaces with n punctures to finite-dimensional complex vector spaces... that qualifies as a unitary topological modular functor (UTMF). The data of a UTMF is equivalent to a unitary modular tensor category (UMTC) which one might also call "abstract anyonic system", as it generalizes the notion of a physical system with anyon excitations. (pointing to *Bojko Bakalov and Alexander Kirillov. **Lectures on Tensor Categories and Modular Functors.** 2000.*)[^9]
 
@@ -302,8 +302,11 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 [^6]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
 [^7]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
 [^8]: Roy, A., & DiVincenzo, D. P. (2017). Topological quantum computing. *arXiv preprint arXiv:1701.05052*.
-[^9]: Hahn, L. (2019). Topological Quantum Computing. Retrieved from <https://www.mathi.uni-heidelberg.de/~walcher/teaching/sose17/atqft/writeups/Lukas.pdf>.
+[^9]: Hahn, L. (2019). Topological Quantum Computing. Retrieved from [web](https://www.mathi.uni-heidelberg.de/~walcher/teaching/sose17/atqft/writeups/Lukas.pdf).
+
 [^10]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
+
+[^11]: <https://qudev.phys.ethz.ch/content/courses/QSIT07/presentations/BozyigitClaassen.pdf>
 
 
 
