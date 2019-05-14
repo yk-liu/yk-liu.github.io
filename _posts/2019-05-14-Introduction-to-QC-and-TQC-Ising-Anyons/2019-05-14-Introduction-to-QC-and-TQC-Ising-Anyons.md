@@ -1,12 +1,11 @@
 ---
 title: |
-  Introduction to Topological Quantum Computation: Majorana Anyons Case Study
+  Introduction to Topological Quantum Computation: Ising Anyons Case Study
 categories: Topological-quantum-computation
-tags: Anyons Braiding Fusion Topological-quantum-computation Majorana-anyons
-keywords: Braiding Anyon Fermion Boson
+tags: Topological-quantum-computation Ising-anyons Majorana-zero-modes
+keywords: Braiding Anyon
 status: Writing
-edit: 2018-05-17
-description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post discusses anyon model in general. Fusion diagram and hexagon and pentagon identities are introduced.
+description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. In this post, the most promising candidate for TQC, Ising anyons, are discussed. A set of Clifford gates is implemented as the result of braiding.
 ---
 
 $$
@@ -39,7 +38,7 @@ $$
 \notag
 $$
 
-# Properties of Majorana Anyons
+# Properties of Ising Anyons
 
 
 
