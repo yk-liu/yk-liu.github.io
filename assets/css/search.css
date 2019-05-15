@@ -5,6 +5,14 @@
   font-family: inherit;
 }
 
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+
 .tooltip {
   position: relative;
   display: inline-block;
