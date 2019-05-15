@@ -1,45 +1,100 @@
-<!-- Html Elements for Search -->
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: #D3D3D3;
+  border-color: #A9A9A9;
+  border-width: medium;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+  color: black;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+{% assign totalPosts = 0 %}{% for post in site.posts %}{% assign totalPosts=totalPosts | plus:1 %}{% endfor %}
+
 <div id="search-container">
    <input type="text" id="search-input" style="width: 100%;" placeholder="type in to search...">
    <ul id="results-container"></ul>
 </div>
-Enable Full-content search: <input type="checkbox" id="Full-content"  onclick="CheckBox()">
-<!-- Enable Fuzzy search: <input type="checkbox" id="fuzzy"  onclick="CheckBox()"> 
-   fuzzy search is awful
-   -->
+<p>
+Enable Full-content search <a class="tooltip">	&#128712;  <span class="tooltiptext">Since the search is not server-side, you need to download about {{ totalPosts | times: 0.01 | round: 2}} MB (one-time download only) to perform a full-content search.</span></a>: <input type="checkbox" id="Full-content" onclick="updateConfig()">
+</p>
+<p>
+Enable Fuzzy search <a class="tooltip">	&#128712;  <span class="tooltiptext">Only use this if you cannot find any results. You may get a mass of irrelevant results, if Fuzzy search and full-content search is enabled.</span></a>: <input type="checkbox" id="fuzzy" onclick="updateConfig()"> 
+</p>
+<p>
+Search in all posts: <a class="tooltip">	&#128712;  <span class="tooltiptext">This allows you to see up to {{ totalPosts }} results, which is the total number of posts. Else only 15 results will be shown</span></a><input type="checkbox" id="all-posts" onclick="updateConfig()"> 
+</p>
+
 <script src="{{site.url}}{{site.baseurl}}/assets/js/search-script.js" type="text/javascript" ></script>
-<!-- Configuration -->
+
 <script type="text/javascript">
-   SimpleJekyllSearch({
+   
+   var SJSconfig = {
        searchInput: document.getElementById('search-input'),
        resultsContainer: document.getElementById('results-container'),
        json: '{{site.url}}{{site.baseurl}}/blog/searchFull.json',
        noResultsText: 'No results found',
        limit: 15,
-       fuzzy: false
-   }) 
-   		
-   function CheckBox() {
-      var full = document.getElementById("Full-content");
-      if (full.checked == true){
-           return SimpleJekyllSearch({
-               searchInput: document.getElementById('search-input'),
-               resultsContainer: document.getElementById('results-container'),
-               json: '{{site.url}}{{site.baseurl}}/blog/searchFull.json',
-   			noResultsText: 'No results found',
-               limit: 15,
-               fuzzy: false
-           }) 
-       } else {
-           return SimpleJekyllSearch({
-               searchInput: document.getElementById('search-input'),
-               resultsContainer: document.getElementById('results-container'),
-               json: '{{site.url}}{{site.baseurl}}/blog/search.json',
-      noResultsText: 'No results found',
-               limit: 15,
-               fuzzy: false
-           }) 
-       }
-      }
+       fuzzy: false,
+       searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
+   }
+   
+   function updateConfig() {
+   var full = document.getElementById("Full-content");
+   if (full.checked == true){
+    SJSconfig.json = '{{site.url}}{{site.baseurl}}/blog/searchFull.json'
+   } else {
+    SJSconfig.json = '{{site.url}}{{site.baseurl}}/blog/search.json'
+   }
+   
+   var fuzzy = document.getElementById("fuzzy");
+   if (fuzzy.checked == true){
+    SJSconfig.fuzzy = true
+   } else {
+    SJSconfig.fuzzy = false
+   }
+   
+   var allposts= document.getElementById("all-posts");
+   if (allposts.checked == true){
+    SJSconfig.limit = {{ totalPosts }}
+   }
+   
+   console.log("config updated!")
+   SimpleJekyllSearch(SJSconfig) 
+   }
+   
+   updateConfig()
+     
    
 </script>
+
+   
