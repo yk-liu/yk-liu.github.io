@@ -4,14 +4,14 @@ layout: null
 [
   {% for post in site.posts %}
     {
-      "title"       : "{{ post.title | escape | jsonify }}",
+      "title"       : {{ post.title | escape | jsonify }},
       "category"    : "{{ post.category }}",
       "tags"        : "{{ post.tags | join: ', ' }}",
       "keywords"    : "{{ post.keywords | join: ', ' }}",
       "url"         : "{{ site.baseurl }}{{ post.url }}",
       "date"        : "{{ post.date }}",
       "edit"        : "{{ post.edit }}",
-      "description" : "{{ post.description | strip_html | strip_newlines | escape | jsonify }}"
+      "description" : {{ post.description | strip_html | strip_newlines | escape | jsonify }}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
