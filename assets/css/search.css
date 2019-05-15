@@ -9,6 +9,14 @@
   font-size: 120%
 }
 
+#results-container{
+list-style-type: none;
+}
+
+#results-container li{
+  line-height: 1.4
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -17,12 +25,14 @@
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 240px;
+    min-width: 200px;
+    max-width: 240px;
     background-color: #eeeeee;
     border-color: #eeeeee;
     border-width: medium;
     color: black;
     font-size: 80%;
+    line-height: initial;
     border-radius: 6px;
     position: absolute;
     z-index: 1;
