@@ -76,7 +76,11 @@ The physical significance as well as experimental realization will not be discus
 
 If we list all the possible combinations of fusion tree, the only non-trivial ones are those have $\sigma\times \sigma=\psi+\vac$ as intermediate results. In that case, $a$ and $b$ must be $\sigma$ on the left fusion tree, $b$ and $c$ must be $\sigma$ on the right fusion tree, the total fusion is either $\vac$ with $\sigma$ or $\psi$ with $\sigma$, leaving the $d$ a $\sigma$ anyon.
 
-Thus the only non-trivial $F$-matrix is $F_{\sigma\sigma\sigma}^\sigma$, for simplicity, this matrix will be denoted as $F$. Since there are only two fusion channels, $F$ is a $2\times 2$ matrix, whose elements will be denoted as $F_{ij}$.
+Thus the only non-trivial $F$-matrix is $F_{\sigma\sigma\sigma}^\sigma$, for simplicity, this matrix will be denoted as $F$. Since there are only two fusion channels, $F$ is a $2\times 2$ matrix, whose elements will be denoted as $F_{11},\ F_{12},\ F_{21},\ F_{22}$, where subscript $1$ correspond to $\vac$ and $2$ correspond to $\psi$.
+
+All other $F$-matrices are just $\mathbb{C}$-numbers. We are going to find and list some of the most trivial $F$-matrices so we can use them in the pentagon equation to obtain $F_{\sigma\sigma\sigma}^\sigma$.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices.png" alt="Trivial F-matrices" width="70%">
 
 Next, we are going to solve for the explicit matrix elements of $F$-matrices using the pentagon identity.
 
