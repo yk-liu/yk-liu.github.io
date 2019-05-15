@@ -28,6 +28,8 @@ author:
 
 # markdown
 markdown: kramdown
+
+future: true
   
 kramdown:
  footnote_nr: 1
