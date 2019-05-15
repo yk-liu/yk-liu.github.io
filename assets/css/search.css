@@ -5,11 +5,6 @@
   font-family: inherit;
 }
 
-.page-height-controller{
- min-height: 100vh;
-}
-
-
 .tooltip {
   position: relative;
   display: inline-block;

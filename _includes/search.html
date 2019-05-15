@@ -1,24 +1,25 @@
 {% assign totalPosts = 0 %}{% for post in site.posts %}{% assign totalPosts=totalPosts | plus:1 %}{% endfor %}
 <div id="search-container">
    <input type="text" id="search-input" placeholder="What are you looking for?">
+   
+   <div class='search-configs'>
+      <p>
+         Enable full-content search<sup><a class="tooltip">&#128712;<span class="tooltiptext">Since the search is not server-side, you need to download about {{ totalPosts | times: 0.01 | round: 2}} MB (one-time download only) to perform a full-content search.</span></a></sup>: <input type="checkbox" id="Full-content" onclick="updateConfig()">
+      </p>
+      <p>
+         Enable fuzzy search<sup><a class="tooltip">&#128712;<span class="tooltiptext">Only use this if you cannot find any results. You may get a mass of irrelevant results, if both of fuzzy search and full-content search is enabled.</span></a></sup>: <input type="checkbox" id="fuzzy" onclick="updateConfig()"> 
+      </p>
+      <p>
+         Search in all posts<sup><a class="tooltip">&#128712;<span class="tooltiptext">This allows you to see up to {{ totalPosts }} results, which is the total number of posts. Else only 15 results will be shown</span></a></sup>: <input type="checkbox" id="all-posts" onclick="updateConfig()"> 
+      </p>
+   </div>
+
+   
    <div class='results-display'>
-   <ul id="results-container"></ul>
+      <ul id="results-container"></ul>
    </div>
    
 </div>
-
-<div class='search-configs'>
-   <p>
-      Enable full-content search<sup><a class="tooltip">&#128712;<span class="tooltiptext">Since the search is not server-side, you need to download about {{ totalPosts | times: 0.01 | round: 2}} MB (one-time download only) to perform a full-content search.</span></a></sup>: <input type="checkbox" id="Full-content" onclick="updateConfig()">
-   </p>
-   <p>
-      Enable fuzzy search<sup><a class="tooltip">&#128712;<span class="tooltiptext">Only use this if you cannot find any results. You may get a mass of irrelevant results, if both of fuzzy search and full-content search is enabled.</span></a></sup>: <input type="checkbox" id="fuzzy" onclick="updateConfig()"> 
-   </p>
-   <p>
-      Search in all posts<sup><a class="tooltip">&#128712;<span class="tooltiptext">This allows you to see up to {{ totalPosts }} results, which is the total number of posts. Else only 15 results will be shown</span></a></sup>: <input type="checkbox" id="all-posts" onclick="updateConfig()"> 
-   </p>
-</div>
-
 
 <script src="{{site.url}}{{site.baseurl}}/assets/js/search-script.js" type="text/javascript" ></script>
 <script type="text/javascript">
