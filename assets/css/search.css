@@ -4,26 +4,26 @@
 
 .tooltip {
   position: relative;
-  color: blue;
   display: inline-block;
   border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 240px;
-  background-color: #eeeeee;
-  border-color: #eeeeee;
-  border-width: medium;
-  color: black;
-  font-size: small;
-  border-radius: 4px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: -5px;
-  left: 110%;
-  color: black;
+    visibility: hidden;
+    width: 240px;
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+    border-width: medium;
+    color: black;
+    font-size: 80%;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+    color: black;
+    font-weight: initial;
+    padding: 5px 10px 5px 10px;
 }
 
 .tooltip:hover .tooltiptext {
