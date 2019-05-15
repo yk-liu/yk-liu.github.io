@@ -4,7 +4,7 @@
    
    <div class='search-configs'>
       <p>
-         Enable full-content search<sup><a class="tooltip">&#128712;<span class="tooltiptext">Since the search is not server-side, you need to download about {{ totalPosts | times: 0.01 | round: 2}} MB (one-time download only) to perform a full-content search.</span></a></sup>: <input type="checkbox" id="Full-content" onclick="updateConfig()">
+         Enable full-content search<sup><a class="tooltip">&#128712;<span class="tooltiptext">Since the search is not server-side, you need to download about {{ totalPosts | times: 0.01 | round: 2}} MB (one-time download only when you check the box) to perform a full-content search.</span></a></sup>: <input type="checkbox" id="Full-content" onclick="updateConfig()">
       </p>
       <p>
          Enable fuzzy search<sup><a class="tooltip">&#128712;<span class="tooltiptext">Only use this if you cannot find any results. You may get a mass of irrelevant results, if both of fuzzy search and full-content search is enabled.</span></a></sup>: <input type="checkbox" id="fuzzy" onclick="updateConfig()"> 

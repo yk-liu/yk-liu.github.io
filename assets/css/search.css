@@ -5,6 +5,10 @@
   font-family: inherit;
 }
 
+#search-container{
+  font-size: 120%
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
