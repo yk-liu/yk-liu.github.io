@@ -285,19 +285,36 @@ The abandonment of super- and subscripts look daunting, but the equation will be
 
 ## Hexagon Equation
 
-There is another kind of transformation which involves both $F$ and $R$ matrices. The identity is called the hexagon identity, as is pictured as below. To be concise, the transformation does not go around a circle to avoid unwanted inverses of matrices. The "active" part during each part is circled out.
+There is another kind of transformation which involves both $F$ and $R$ matrices. The identity is called the hexagon identity, as is pictured as below. To be concise, the transformation does not go around a circle to avoid unwanted inverses of matrices. The "active" part during each part is circled out. The initial arrangement of anyons are always $123$, and intermediate arrangements are labeled in red.
 
 <div style="position:relative;text-align: center;display:inline-blcok;"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon.png" alt="Hexagon equation" width="60%" align="bottom" style="display:inline-block">
     <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph.gif" alt="Fusion diagram morphing gif" width="16%" align="bottom" style="display:inline-blcok;position: absolute;left:20%;bottom:0px;"></div>
-This picture adopted from [^4] is quite self-explanatory. Notice that the gif in the lower right corner shows that just like strands in our daily life, we can gently move them is they are not intertwined. Notice that the order of the fused anyons are not changed. 
+This picture adopted from[^6] is quite self-explanatory. Notice that the gif in the lower right corner shows that just like strands in our daily life, we can gently move them is they are not intertwined. Notice that the order of the fused anyons are not changed. 
 
-There is also other versions of hexagon identities. Particularly, there is another family of hexagons obtained by replacing all righthanded braids with left-handed ones. In general, these two families of hexagons are independent of each other.[^10] (picture taken from [this slide show](http://users.physik.fu-berlin.de/~pelster/Anyon3/baranov-slides1.pdf). Pachos' book is using the following family of hexagon identity.
+> **Note on morph**:
+>
+> 1. Morph an important step in hexagon identities. I was baffled when I was writing this post.
+>
+>    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/morph.png" alt="Morph importance" width="40%">
+>
+> 2. If the order of the initial anyons are changed, there should be extra $R$-matrices, even if there is a way to obtain the same result. One of such incorrect ways to morph is shown below. (As you might have guessed, I discovered it after I made the mistake.)
+>
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph-wrong.gif" alt="Wrong way of morphing fusion diagrams gif" width="20%">
+>
+> 2. The morph actually says a lot about what the fusion is. From the diagram below you see that a fused anyon $b$ is actually equivalent to the direct package of $2$ and $3$ as individuals.
+>
+>    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/morph-and-equiv.png" alt="Morph and equivalence" width="40%">
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2.png" alt="Another hexagon representation" width="40%">
+There is also other versions of hexagon identity, as is shown below (picture taken from [this slide show](http://users.physik.fu-berlin.de/~pelster/Anyon3/baranov-slides1.pdf)) where Pachos' book is using.
 
-If the order of the initial anyons are changed, there should be extra $R$-matrices, even if there is a way to obtain the same result. One of such incorrect ways to morph is shown below. (As you might have guessed, I discovered it after I made the mistake.)
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph-wrong.gif" alt="Wrong way of morphing fusion diagrams gif" width="30%">
+<figure>
+    <div style="position:relative;text-align: center;display:inline-blcok;">
+        <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2.png" alt="Another hexagon representation" width="40%" align="bottom" style="display:inline-block"> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2-explained.png" alt="Another hexagon representation explained" width="40%" align="bottom" style="display:inline-block">
+    </div>
+<figcaption>
+    Notice that this is an oversimplified way to represent the results, where the braiding part of the fusion tree is completely ignored. To make sense of it, the configuration labeled at the top of the trees should be considered as intermediate configurations. "Particularly, there is another family of hexagons obtained by replacing all righthanded braids with left-handed ones. In general, these two families of hexagons are independent of each other.[^10]" 
+</figcaption>
+</figure>
 
 ## Notes on the Complexity of Pentagon and Hexagon Equations
 
