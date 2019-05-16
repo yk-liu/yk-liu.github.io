@@ -84,11 +84,11 @@ Thus the only non-trivial $F$-matrix is $F_{\sigma\sigma\sigma}^\sigma$, for sim
 
 All other $F$-matrices are just $\mathbb{C}$-numbers. We are going to find and list some of the most trivial $F$-matrices so we can use them in the pentagon equation to obtain $F_{\sigma\sigma\sigma}^\sigma$.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices.png" alt="Trivial F-matrices" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices.png" alt="Trivial F-matrices" width="80%">
 
 Next, we are going to solve for the explicit matrix elements of $F$-matrices using the pentagon identity.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Pentagon.png" alt="Pentagon identity" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Pentagon.png" alt="Pentagon identity" width="80%">
 
 
 
