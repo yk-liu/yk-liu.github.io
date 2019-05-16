@@ -230,7 +230,7 @@ $$
 
 where the convention is that an $F$-matrix represents the representation transformation from right-most-first fusion to left-most-first fusion (which is called a **canonical fusion**), and an $F^{-1}$-matrix represents the reverse.
 
-> On some literature, you will see $F$-matrix noted as $F_d^{abc}$, which is in accordance with the orientation of the fusion tree. Why am I not using this notation, you ask. That's because I used Pachos' book as main reference, and it was too late for me to change my notation. Let this be a lesson for you.
+> On some literature, you will see $F$-matrix noted as $F_d^{abc}$, which is in accordance with the orientation of the fusion tree. Why am I not using this notation, you ask. That's because I used Pachos' book as main reference, and it was too late for me to change my notation. Let this be a lesson.
 
 ## $R$-Matrices
 
@@ -246,9 +246,9 @@ Notice that $R_{ab}^c$ is not necessarily the inverse to $R_{ba}^c$, since an ex
 
 Given a fusion diagram, it is possible to transform or simplify it using $R$-moves and $F$-moves. You can imagine that we can unwind an intertwined fusion diagram in a boring-looking diagram with a lot $F$-matrices and $R$-matrices multiplied. This is nothing more than a complicated representation transformation between the fusion states $\ket{1234;\ \dots\ ;5}$.
 
-We can even make a full circle of such transformations. One of them is the pentagon equation or pentagon identity.
+We can even make a full circle of such transformations. In other words, there exists two path to transform a fusion tree to another. One of such transformation is characterized by the pentagon equation (or pentagon identity).
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Pentagon.png" alt="Pentagon Equation" width="50%">
+<div style="position:relative;text-align: center;display:inline-blcok;"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Pentagon-c.png" alt="circle Pentagon Equation" width="40%" align="bottom" style="display:inline-block"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Pentagon.png" alt="Pentagon Equation" width="40%" align="bottom" style="display:inline-block"></div>
 
 This picture adopted from [^4] is quite self-explanatory. With some effort, we can write the element-wise equations clockwise starting from the canonical fusion.
 
@@ -275,14 +275,18 @@ $$
 Where leading term "$1234;$" and the ending term "$;5$" part of fusion state $\ket{1234;a34;b4;5}$ are omitted, so that would become $\ket{a34;b4}$.
 
 Combine the above equations, we have
+
 $$
 \ket{a34;b4} =\sum_c \sum_d  \left(F_{a34}^5\right)_c^b \left(F_{12c}^5\right)_d^a \ket{12c;dc}
 \\\ket{a34;b4}= \sum_e \sum_d \sum_c \left(F_{123}^b\right)_e^a  \left(F_{1e4}^5\right)_d^b  \left(F_{234}^d\right)_c^e  \ket{12c;dc}
 $$
+
 Thus the pentagon identity is
+
 $$
 \left(F_{a34}^5\right)_c^b  \left(F_{12c}^5\right)_d^a  = \sum_e \left(F_{123}^b\right)_e^a  \left(F_{1e4}^5\right)_d^b  \left(F_{234}^d\right)_c^e 
 $$
+
 The abandonment of super- and subscripts look daunting, but the equation will be drastically simplified if there are only a few ($2$ for Fibonacci , $3$ for Ising) anyons in the model, which we will see later.
 
 ## Hexagon Equation
@@ -319,6 +323,7 @@ There is also other versions of hexagon identity, as is shown below (picture tak
 </figure>
 
 Hence using the same technique before if you are not quite familiar with it. Personally I prefer to note the coefficients on the diagram so I don't have to go through the hassle. We can write down (a version of) hexagon identity as
+
 $$
 \begin{array}{}
 \sum_b \left(F_{312}^4\right)_b^a R_{3b}^4 \left(F_{123}^4 \right)_c^b = R_{13}^a \left(F_{132}^4\right)_c^a R_{23}^c 
@@ -327,6 +332,8 @@ $$
 &\text{Pachos' version}.
 \end{array}
 $$
+
+Again, the abandonment of super- and subscripts look daunting, but the equation will be drastically simplified if there are only a few ($2$ for Fibonacci , $3$ for Ising) anyons in the model, which we will see later.
 
 ## Notes on the Complexity of Pentagon and Hexagon Equations
 
