@@ -228,13 +228,17 @@ $$
 \ket{a(bc);aj;d}=\sum_i\left({F_{abc}^d}^{-1}\right)^j_i\ket{(ab)c;ic;d},
 $$
 
-where the convention is that an $F$-matrix represents the representation transformation from right-most-first fusion to left-most-first fusion, and an $F^{-1}$-matrix represents the reverse.
+where the convention is that an $F$-matrix represents the representation transformation from right-most-first fusion to left-most-first fusion (which is called a **canonical fusion**), and an $F^{-1}$-matrix represents the reverse.
 
 ## $R$-Matrices
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Rmatrix.png" alt="R-matrix" width="40%">
 
-$R$-matrices are pretty easy to understand, as they describe the defining property of anyons: when exchanged, a non-trivial phase factor (matrix) is present.
+$R$-matrices are pretty easy to understand, as they describe the defining property of anyons: when exchanged, a non-trivial phase factor (matrix) is present. 
+
+Notice that $R_{ab}^c$ is not necessarily the inverse to $R_{ba}^c$, since an exchange of two anyons does not necessarily return to the original state. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Product-of-R-matrices.png" alt="product of R-matrices" width="40%">
 
 # Pentagon Equation
 
@@ -244,16 +248,52 @@ We can even make a full circle of such transformations. One of them is the penta
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Pentagon.png" alt="Pentagon Equation" width="50%">
 
-This picture adopted from [^4] is quite self-explanatory. We will see more at the case study of Ising anyons.
+This picture adopted from [^4] is quite self-explanatory. With some effort, we can write the element-wise equations clockwise starting from the canonical fusion.
 
+$$
+\begin{array}{}
+&&&\ket{a34;b4} &= \sum_c \left(F_{a34}^5\right)_c^b \ket{a34;ac}
+\\
+&&&\ket{a34;ac} &= \sum_d \left(F_{12c}^5\right)_d^a \ket{12c;dc}
+\\
+\ket{12c;dc} &= \sum_e \left({F_{234}^d}^{-1}\right)_e^c \ket{1e4;1d} 
+& \rightarrow & 
+\ket{1e4;1d} &= \sum_c \left(F_{234}^d\right)_c^e \ket{12c;dc}
+\\
+\ket{1e4;1d} &= \sum_b \left({F_{a34}^5}^{-1}\right)_b^c \ket{1e4;b4} 
+& \rightarrow & 
+\ket{1e4;b4} &= \sum_d \left(F_{1e4}^5\right)_d^b \ket{1e4;1d}
+\\
+\ket{1e4;b4} &= \sum_e \left({F_{123}^b}^{-1}\right)_d^b \ket{a34;b4} 
+& \rightarrow & 
+\ket{a34;b4} &= \sum_e \left(F_{123}^b\right)_e^a \ket{1e4;b4}
+\end{array}
+$$
 
-### Hexagon Equation
+Where leading term "$1234;$" and the ending term "$;5$" part of fusion state $\ket{1234;a34;b4;5}$ are omitted, so that would become $\ket{a34;b4}$.
 
-Another identity we can find is the hexagon identity, as is pictured as below.
+Combine the above equations, we have
+$$
+\ket{a34;b4} =\sum_c \sum_d  \left(F_{a34}^5\right)_c^b \left(F_{12c}^5\right)_d^a \ket{12c;dc}
+\\\ket{a34;b4}= \sum_e \sum_d \sum_c \left(F_{123}^b\right)_e^a  \left(F_{1e4}^5\right)_d^b  \left(F_{234}^d\right)_c^e  \ket{12c;dc}
+$$
+Thus the pentagon identity is
+$$
+\left(F_{a34}^5\right)_c^b  \left(F_{12c}^5\right)_d^a  = \sum_e \left(F_{123}^b\right)_e^a  \left(F_{1e4}^5\right)_d^b  \left(F_{234}^d\right)_c^e 
+$$
+The abandonment of super- and subscripts look daunting, but the equation will be drastically simplified if there are only a few ($2$ for Fibonacci , $3$ for Ising) anyons in the model, which we will see later.
+
+## Hexagon Equation
+
+There is another kind of transformation which involves both $F$ and $R$ matrices. The identity is called the hexagon identity, as is pictured as below. To be concise, the transformation does not go around a circle to avoid unwanted inverses of matrices. The "active" part during each part is circled out.
 
 <div style="position:relative;text-align: center;display:inline-blcok;"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon.png" alt="Hexagon equation" width="60%" align="bottom" style="display:inline-block">
     <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph.gif" alt="Fusion diagram morphing gif" width="16%" align="bottom" style="display:inline-blcok;position: absolute;left:20%;bottom:0px;"></div>
- This picture adopted from [^4] is quite self-explanatory. Notice that the gif in the lower right corner shows that just like strands in our daily life, we can gently move them is they are not intertwined. Notice that the order of the fused anyons are not changed. 
+This picture adopted from [^4] is quite self-explanatory. Notice that the gif in the lower right corner shows that just like strands in our daily life, we can gently move them is they are not intertwined. Notice that the order of the fused anyons are not changed. 
+
+There is also other versions of hexagon identities. Particularly, there is another family of hexagons obtained by replacing all righthanded braids with left-handed ones. In general, these two families of hexagons are independent of each other.[^10] (picture taken from [this slide show](http://users.physik.fu-berlin.de/~pelster/Anyon3/baranov-slides1.pdf). Pachos' book is using the following family of hexagon identity.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2.png" alt="Another hexagon representation" width="40%">
 
 If the order of the initial anyons are changed, there should be extra $R$-matrices, even if there is a way to obtain the same result. One of such incorrect ways to morph is shown below. (As you might have guessed, I discovered it after I made the mistake.)
 
