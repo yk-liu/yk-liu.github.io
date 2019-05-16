@@ -3,7 +3,7 @@ title: |
   Introduction to Topological Quantum Computation: Anyons Model
 categories: Topological-quantum-computation
 tags: Anyons Braiding Fusion Topological-quantum-computation
-edit: 2018-05-14
+edit: 2018-05-16
 description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post discusses anyon model in general. Fusion diagram and hexagon and pentagon identities are introduced.
 comments:
   - author:
@@ -230,6 +230,8 @@ $$
 
 where the convention is that an $F$-matrix represents the representation transformation from right-most-first fusion to left-most-first fusion (which is called a **canonical fusion**), and an $F^{-1}$-matrix represents the reverse.
 
+> On some literature, you will see $F$-matrix noted as $F_d^{abc}$, which is in accordance with the orientation of the fusion tree. Why am I not using this notation, you ask. That's because I used Pachos' book as main reference, and it was too late for me to change my notation. Let this be a lesson for you.
+
 ## $R$-Matrices
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Rmatrix.png" alt="R-matrix" width="40%">
@@ -289,7 +291,7 @@ There is another kind of transformation which involves both $F$ and $R$ matrices
 
 <div style="position:relative;text-align: center;display:inline-blcok;"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon.png" alt="Hexagon equation" width="60%" align="bottom" style="display:inline-block">
     <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph.gif" alt="Fusion diagram morphing gif" width="16%" align="bottom" style="display:inline-blcok;position: absolute;left:20%;bottom:0px;"></div>
-This picture adopted from[^6] is quite self-explanatory. Notice that the gif in the lower right corner shows that just like strands in our daily life, we can gently move them is they are not intertwined. Notice that the order of the fused anyons are not changed. 
+This picture adopted from[^6] is quite self-explanatory. Notice that the gif in the lower right corner shows that just like strands in our daily life, we can gently move them is they are not intertwined. Notice that the order of the fused anyons are not changed. This version of hexagon diagram I will call as **Simon's version**.
 
 > **Note on morph**:
 >
@@ -305,16 +307,26 @@ This picture adopted from[^6] is quite self-explanatory. Notice that the gif in 
 >
 >    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/morph-and-equiv.png" alt="Morph and equivalence" width="40%">
 
-There is also other versions of hexagon identity, as is shown below (picture taken from [this slide show](http://users.physik.fu-berlin.de/~pelster/Anyon3/baranov-slides1.pdf)) where Pachos' book is using.
+There is also other versions of hexagon identity, as is shown below (picture taken from [this slide show](http://users.physik.fu-berlin.de/~pelster/Anyon3/baranov-slides1.pdf)) where Pachos' book is using. As you can probably see, this version's fusion tree are flipped horizontally, as by [^10]: "Particularly, there is another family of hexagons obtained by replacing all righthanded braids with left-handed ones. In general, these two families of hexagons are independent of each other." 
 
 <figure>
     <div style="position:relative;text-align: center;display:inline-blcok;">
-        <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2.png" alt="Another hexagon representation" width="40%" align="bottom" style="display:inline-block"> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2-explained.png" alt="Another hexagon representation explained" width="40%" align="bottom" style="display:inline-block">
+        <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2.png" alt="Another hexagon representation" width="35%"  style="display:inline-block"> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2-explained.png" alt="Another hexagon representation explained" width="55%" style="display:inline-block">
     </div>
 <figcaption>
-    Notice that this is an oversimplified way to represent the results, where the braiding part of the fusion tree is completely ignored. To make sense of it, the configuration labeled at the top of the trees should be considered as intermediate configurations. "Particularly, there is another family of hexagons obtained by replacing all righthanded braids with left-handed ones. In general, these two families of hexagons are independent of each other.[^10]" 
+    Notice that this is an oversimplified way to represent the results, where the braiding part of the fusion tree is completely ignored. To make sense of it, the configuration labeled at the top of the trees should be considered as intermediate configurations. I will call this <b>Pachos' version<b>.
 </figcaption>
 </figure>
+
+Hence using the same technique before if you are not quite familiar with it. Personally I prefer to note the coefficients on the diagram so I don't have to go through the hassle. We can write down (a version of) hexagon identity as
+$$
+\begin{array}{}
+\sum_b \left(F_{312}^4\right)_b^a R_{3b}^4 \left(F_{123}^4 \right)_c^b = R_{13}^a \left(F_{132}^4\right)_c^a R_{23}^c 
+& \text{Simon's version.}\\
+\sum_b \left(F_{231}^4\right)_b^c R_{1b}^4 \left(F_{123}^4 \right)_a^b = R_{13}^c \left(F_{213}^{4}\right)_a^c R_{12}^a 
+&\text{Pachos' version}.
+\end{array}
+$$
 
 ## Notes on the Complexity of Pentagon and Hexagon Equations
 
