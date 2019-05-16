@@ -6,6 +6,7 @@ toc: false
 commentable: false
 protected: true
 mathjax: true
+numbering: false
 ---
 
 # Lifelong Robotic Vision Competition
