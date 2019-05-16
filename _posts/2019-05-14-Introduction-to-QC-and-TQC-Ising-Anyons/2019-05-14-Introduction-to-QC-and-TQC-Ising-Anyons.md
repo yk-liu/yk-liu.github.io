@@ -43,6 +43,7 @@ $$
 ## Fusion Channels
 
 There are three elements in the Ising anyons model. A fermion denoted as $\psi$, an anyon denoted as $\sigma$, and vacuum $\vac$. The fusion rules are
+
 $$
 \begin{array}{cccccc}
 \vac \times \vac =& \vac &
@@ -56,9 +57,11 @@ $$
 \sigma\times\sigma  =& \vac+\psi.
 \end{array}
 $$
+
 The physical significance as well as experimental realization will not be discussed in this post.
 
 > If you write the consecutive fusion result of $\sigma$ anyons, you will have
+> 
 > $$
 > \begin{align*}
 > \sigma \times \sigma \times \sigma &= (\sigma \times \sigma) \times \sigma \\
@@ -68,6 +71,7 @@ The physical significance as well as experimental realization will not be discus
 > & = 2\sigma
 > \end{align*}
 > $$
+> 
 > Where the $2$ does not mean two sigma anyons. It is means that there are two fusion channels or paths, one of them passes through $\vac$ and the other passes through $\psi$. Both of them end up with one $\sigma$ anyon.
 
 ## $F$-Matrices
