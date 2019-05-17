@@ -207,7 +207,7 @@ ol {
 
 code, tt {
 	margin: 0 2px;
-  padding: 2px 4px;
+ padding: 2px 4px;
 	font-size: 0.92rem;
 	background-color: #eeeeee;
 	border-radius: 4px;
@@ -290,6 +290,25 @@ pre.highlight > code, tt {
 code.highlighter-rouge {
 	color: #e96900;
 	font-family: 'Ubuntu Mono', monospace;
+}
+
+a.footnote {
+	color: #e96900;
+	margin: 0 2px;
+ padding: 2px 4px;
+	font-size: 0.92rem;
+	background-color: #eeeeee;
+	border-radius: 4px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a.reversefootnote {
+	margin: 0 2px;
+ padding: 2px 4px;
+	font-size: 0.92rem;
+	background-color: #eeeeee;
+	border-radius: 4px;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 span.highlight {
