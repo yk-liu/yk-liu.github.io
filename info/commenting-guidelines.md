@@ -3,6 +3,7 @@ layout: info
 title: Commenting FAQs & Guidelines
 commentable: false
 edit: 2018-11-01
+toc: true
 ---
 
 

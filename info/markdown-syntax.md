@@ -4,7 +4,9 @@ title: Markdown Syntax
 edit: 2019-05-17
 mathjax: true
 mermaid: true
+numbering: true
 highlight: true
+toc: true
 ---
 
 # Basics Markdown Syntax
