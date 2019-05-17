@@ -239,13 +239,15 @@ Finally, we have the solutions:
 
 $$
 R_{\sigma\vac}^\sigma=1 \quad \text{as a given trivial matrix}\\ R_{\sigma\psi}^{\sigma} = \imath\\
-R_{\sigma\vac}^\sigma= , R_{\sigma\vac}^\sigma
+R_{\sigma\sigma}^\psi= \pm \e^{-\tfrac{3\pi}{8}\imath} , 
+R_{\sigma\sigma}^\vac= \pm \imath \e^{-\tfrac{3\pi}{8}\imath}
 $$
 
-
-
+Where the overall phase is a choice of the combinations of different signs.
 
 # Computation with Ising Anyons
+
+
 
 
 
