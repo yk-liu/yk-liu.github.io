@@ -32,7 +32,7 @@ $$
 \newcommand{\slot}{\,\cdot\,}
 \newcommand{\lact}{\triangleright}
 \newcommand{\ract}{\triangleleft}
-\newcommand{\vac}{ {1\!\!\!\mathsf{\phantom{I}I}}}
+\newcommand{\vac}{ {1\!\!1}}
 \newcommand{\la}{\mathfrak}
 \newcommand{\anti}{\overline}
 \notag
@@ -111,7 +111,7 @@ Apart from $F_{\sigma\sigma\sigma}^\sigma$, all other $F$-matrices are just $\ma
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices.png" alt="Trivial F-matrices" width="100%">
 
-Notice the forbidden fusion tree is marked with a large red cross. $F$-matrices with such trees are just $0$. Substitute corresponding values of $a,c$ into $\left(F_{a\sigma\sigma}^\vac\right)_c^\sigma  \left(F_{\sigma\sigma c}^\vac\right)_\sigma ^a  = \sum_e F_e^a  \left(F_{\sigma e\sigma}^\vac\right)_\sigma^\sigma  F_c^e$, we have
+Notice the forbidden fusion tree is marked with a large red cross. $F$-matrices with such trees are just $0$. Substitute corresponding values of $a,c$ into $\left(F _ {a\sigma\sigma}^\vac\right) _ c^\sigma  \left(F _ {\sigma\sigma c}^\vac\right) _ \sigma ^a  = \sum _ e F _ e^a  \left(F _ {\sigma e\sigma}^\vac\right) _ \sigma^\sigma  F _ c^e$, we have
 
 |          |                          $a =\vac$                           |                          $a= \psi$                           |
 | -------- | :----------------------------------------------------------: | :----------------------------------------------------------: |
@@ -194,7 +194,7 @@ where the $\pm$ is called the Frobenius–Schur indicator (see Pachos).
 
 From [^1]:
 
-> Given a set of fusion rules $N^k_{i,j}$ solving the pentagons turns out to be a difficult task (even with the help of computers). However, certain normalizations can be made to simplify the solutions. If one of the indices of the $F$-matrix $a, b, c$ is the trivial type $\vac$, we may assume $F^{d}_{a,b,c} = 1$. In the Fibonacci theory, we may also assume $F_{a,b,c}^\vac = 1$. There are many pentagons even for the Fibonacci theory depending on the four anyons to be fused and their total charges: a priori $2^5 = 32$.
+> Given a set of fusion rules $N^k_{i,j}$ solving the pentagons turns out to be a difficult task (even with the help of computers). However, certain normalizations can be made to simplify the solutions. If one of the indices of the $F$-matrix $a, b, c$ is the trivial type $\vac$, we may assume $F^{d} _ {a,b,c} = 1$. In the Fibonacci theory, we may also assume $F _ {a,b,c}^\vac = 1$. There are many pentagons even for the Fibonacci theory depending on the four anyons to be fused and their total charges: a priori $2^5 = 32$.
 
 While in Pachos' book, the explanation for some elements is set to $1$ was simply "otherwise the $F$-matrix wouldn't be unitary". I suspect the justification is or (superficially) a direct result from brute force calculation, or may be related to the category theory. For now, I will stop digging deeper and be content with what I have.
 
@@ -236,6 +236,7 @@ The equations are the same with Pachos version of the hexagon. Notice that there
 $\Eqn{avaccvac}$ and $\Eqn{apsicpsi}$ implies that $R_{\sigma\sigma}^1=\pm \imath R_{\sigma\sigma}^\psi$. Adding $\Eqn{apsicvac}$ and $\Eqn{apsicpsi}$ gives $\sqrt 2=(1\pm \imath)(R_{\sigma\sigma}^1)^2$.
 
 Finally, we have the solutions:
+
 $$
 R_{\sigma\vac}^\sigma=1 \quad \text{as a given trivial matrix}\\ R_{\sigma\psi}^{\sigma} = \imath\\
 R_{\sigma\vac}^\sigma= , R_{\sigma\vac}^\sigma

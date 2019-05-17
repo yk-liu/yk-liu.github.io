@@ -318,9 +318,10 @@ There is also other versions of hexagon identity, as is shown below (picture tak
         <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2.png" alt="Another hexagon representation" width="35%"  style="display:inline-block"> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2-explained.png" alt="Another hexagon representation explained" width="55%" style="display:inline-block">
     </div>
 <figcaption>
-    Notice that this is an oversimplified way to represent the results, where the braiding part of the fusion tree is completely ignored. To make sense of it, the configuration labeled at the top of the trees should be considered as intermediate configurations. I will call this <b>Pachos' version<b>.
+    Notice that this is an oversimplified way to represent the results, where the braiding part of the fusion tree is completely ignored. To make sense of it, the configuration labeled at the top of the trees should be considered as intermediate configurations. I will call this <b>Pachos' version</b>.
 </figcaption>
 </figure>
+
 
 Hence using the same technique before if you are not quite familiar with it. Personally I prefer to note the coefficients on the diagram so I don't have to go through the hassle. We can write down (a version of) hexagon identity as
 
@@ -381,8 +382,4 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 [^9]: Hahn, L. (2019). Topological Quantum Computing. Retrieved from [web](https://www.mathi.uni-heidelberg.de/~walcher/teaching/sose17/atqft/writeups/Lukas.pdf).
 
 [^10]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
-
-[^11]: <https://qudev.phys.ethz.ch/content/courses/QSIT07/presentations/BozyigitClaassen.pdf>
-
-
-
+[^11]:  [Link](https://qudev.phys.ethz.ch/content/courses/QSIT07/presentations/BozyigitClaassen.pdf)
