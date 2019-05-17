@@ -28,7 +28,7 @@ As far as we know, we are alone in the universe. If millions year ago, a civiliz
 
 ### 4020, Jan, 1<sup>st</sup>
 
-We should we leave? 
+What should we leave? 
 
 Thousands years later, we could not build anything more stable and durable than a big stone. Leaving a huge stone is not going to last long enough. It should last longer than a block of stone.
 
