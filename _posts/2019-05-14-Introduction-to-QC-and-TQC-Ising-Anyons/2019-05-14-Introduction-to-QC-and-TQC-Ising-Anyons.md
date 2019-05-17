@@ -249,6 +249,18 @@ Where the overall phase is a choice of the combinations of different signs.
 
 ## Single Qubit
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/single-qubit.png" alt="Anyons fusion space single Qubit" width="40%">
+
+
+
+
+
+## Two Q-Bits
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/two-qubit.png" alt="Anyons fusion space two Qubits" width="60%">
+
+
+
 ## Braiding
 
 
