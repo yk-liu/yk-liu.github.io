@@ -41,6 +41,8 @@ $$
 
 # Properties of Ising Anyons
 
+This post mostly follows Pachos's book of introduction to topological quantum computation.
+
 ## Fusion Channels
 
 There are three elements in the Ising anyons model. A fermion denoted as $\psi$, an anyon denoted as $\sigma$, and vacuum $\vac$. The fusion rules are
@@ -73,7 +75,7 @@ The physical significance as well as experimental realization will not be discus
 > \end{align*}
 > $$
 > 
-> Where the $2$ does not mean two sigma anyons. It is means that there are two fusion channels or paths, one of them passes through $\vac$ and the other passes through $\psi$. Both of them end up with one $\sigma$ anyon.
+> Where the $2$ does not mean two sigma anyons. It is means that there are two fusion channels or paths, one of them passes through $\vac$ and the other passes through $\psi$. Both of them end up with one $\sigma$ anyon. Thus, $2$ retains the dimension of this fusion space.
 
 ## $F$-Matrices
 
@@ -103,7 +105,7 @@ $$
 \label{penta}
 \end{align}
 $$
-Apart from $F_{\sigma\sigma\sigma}^\sigma$, all other $F$-matrices are just $\mathbb{C}$-numbers, up to an overall phase factor. We will set trivial $F$-matrices as $1$. We are going to find and list some of the trivial $F$-matrices appeared in $\Eqn{penta}$ so we can use them in the pentagon equation to obtain $F_{\sigma\sigma\sigma}^\sigma$.
+Apart from $F_{\sigma\sigma\sigma}^\sigma$, all other $F$-matrices are just $\mathbb{C}$-numbers, up to an overall phase factor. This corresponds to a gauge degree of freedom that I will fix to $+1$ (or $-1$, read on to see when it's $-1$). We are going to find and list the trivial $F$-matrices appeared in $\Eqn{penta}$ so we can use them in the pentagon equation to obtain $F_{\sigma\sigma\sigma}^\sigma$.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices.png" alt="Trivial F-matrices" width="100%">
 
@@ -126,18 +128,36 @@ As you can see, there is only two independent equations, from diagonal parts of 
 
 ### Step 2: Second Pentagon
 
+We can draw a second pentagon as below.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Pentagon-2.png" alt="Second pentagon identity" width="100%">
+
+This time we are going to find out the two sets of independent equations from $\Eqn{penta2}$ and only list the $F$-matrices appears in those equations.
 $$
 \begin{align}\left(F_{a34}^5\right)_c^b  \left(F_{12c}^5\right)_d^a & = \sum_e \left(F_{123}^b\right)_e^a  \left(F_{1e4}^5\right)_d^b  \left(F_{234}^d\right)_c^e 
 \notag\\ 
-&\downarrow \set{1,2,3,4,b,d} =\set{\sigma},\  5=\vac 
+&\downarrow \set{2,3,4,5,a,d} =\set{\sigma},\  1=\psi 
 \notag\\
-\left(F_{a\sigma\sigma}^\vac\right)_c^\sigma  \left(F_{\sigma\sigma c}^\vac\right)_\sigma ^a  & = \sum_e \left(F_{\sigma\sigma\sigma}^\sigma\right)_e^a  \left(F_{\sigma e\sigma}^\vac\right)_\sigma^\sigma  \left(F_{\sigma\sigma\sigma}^\sigma\right)_c^e
+\left(F_{\sigma\sigma\sigma}^\sigma\right)_c^b  \left(F_{\psi\sigma c}^\sigma\right)_\sigma^\sigma & = \sum_e \left(F_{\psi\sigma\sigma}^b\right)_e^\sigma  \left(F_{\psi e\sigma}^\sigma\right)_\sigma^b  \left(F_{\sigma\sigma\sigma}^\sigma\right)_c^e 
+\label{penta2}\\ 
 \end{align}
 $$
 
+The two sets of independent equation can be obtained by setting $b=\vac, c=\vac $ and $b=\vac, c=\psi$. We have
 
+| $$b=\vac ,\ c=\vac$$                                         | $$b=\vac ,\ c=\psi$$                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| $$\begin{align*}F_\vac^\vac  \left(F_{\psi\sigma \vac}^\sigma\right)_\sigma^\sigma &= \sum_e \left(F_{\psi\sigma\sigma}^\vac\right)_e^\sigma  \left(F_{\psi e\sigma}^\sigma\right)_\sigma^\vac  F_\vac^e \\F_\vac^\vac \cdot  =& \left(F_{\psi\sigma\sigma}^\vac\right)_\psi^\sigma  \left(F_{\psi \psi\sigma}^\sigma\right)_\sigma^\vac  F_\vac^\psi +  \left(F_{\psi\sigma\sigma}^\vac\right)_\vac^\sigma  \left(F_{\psi \vac\sigma}^\sigma\right)_\sigma^\vac  F_\vac^\vac\\F_\vac^\vac =& 1\cdot1\cdot F_\vac^\psi + 0\cdot 1 \cdot F_\vac^\vac\\F_\vac^\vac=&F_\vac^\psi\end{align*}$$ | $$\begin{align*}F_\psi^\vac  \left(F_{\psi\sigma \psi}^\sigma\right)_\sigma^\sigma & = \sum_e \left(F_{\psi\sigma\sigma}^\vac\right)_e^\sigma  \left(F_{\psi e\sigma}^\vac\right)_\sigma^\vac  F_\psi^e \\F_\psi^\vac \cdot ({\color{red}-1})=&\left(F_{\psi\sigma\sigma}^\vac\right)_\vac^\sigma  \left(F_{\psi \vac\sigma}^\sigma\right)_\sigma^\vac  F_\psi^\vac + \left(F_{\psi\sigma\sigma}^\vac\right)_\psi^\sigma  \left(F_{\psi \psi\sigma}^\vac\right)_\sigma^\vac  F_\psi^\psi\\-F_\psi^\vac=&0\cdot 1\cdot F_\psi^\vac +1\cdot1\cdot F_\psi^\psi\\-F_\psi^\vac=&F_\psi^\psi\end{align*}$$ |
 
+where $\left(F_{\psi\sigma \psi}^\sigma\right)_\sigma^\sigma = -1$ is a choice to make $F$-matrix unitary. As the reason for doing so, see [`About the "Arbitrary Phase Factor"`](#about-the--arbitrary-phase-factor-).
 
+### About the "Arbitrary Phase Factor"
+
+From [^1]:
+
+> Given a set of fusion rules $N^k_{i,j}$ solving the pentagons turns out to be a difficult task (even with the help of computers). However, certain normalizations can be made to simplify the solutions. If one of the indices of the $F$-matrix $a, b, c$ is the trivial type $\vac$, we may assume $F^{d}_{a,b,c} = 1$. In the Fibonacci theory, we may also assume $F_{a,b,c}^\vac = 1$. There are many pentagons even for the Fibonacci theory depending on the four anyons to be fused and their total charges: a priori $2^5 = 32$.
+
+While in Pachos' book, the explanation for some element are set to $1$ was simply "otherwise the $F$-matrix wouldn't be unitary". I suspect the justification is or (superficially) a direct result from brute force calculation, or maybe related to the category theory. For now I will stop digging deeper and be content with what I have.
 
 
 ## $R$-matrices
@@ -162,5 +182,4 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 
 ---
 
-
-
+[^1]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
