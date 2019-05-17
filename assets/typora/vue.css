@@ -295,20 +295,22 @@ code.highlighter-rouge {
 a.footnote {
 	color: #e96900;
 	margin: 0 2px;
- padding: 2px 4px;
-	font-size: 0.92rem;
+ padding: 2px 3px;
+	font-size: 0.7rem;
 	background-color: #eeeeee;
 	border-radius: 4px;
 	font-family: 'Source Sans Pro', sans-serif;
+ text-decoration: none;
 }
 
 a.reversefootnote {
-	margin: 0 2px;
- padding: 2px 4px;
-	font-size: 0.92rem;
+ margin: 0 1px;
+ padding: 1px 2px;
+ font-size: 0.9rem;
 	background-color: #eeeeee;
 	border-radius: 4px;
 	font-family: 'Source Sans Pro', sans-serif;
+ text-decoration: none;
 }
 
 span.highlight {
