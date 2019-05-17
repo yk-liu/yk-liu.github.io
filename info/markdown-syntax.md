@@ -24,7 +24,7 @@ _This is also italic._ __This is also Bold__. _ If underscore is surrounded by s
 
 You can mix them like [*this*](https://bit.ly), [`this`](https://bit.ly), **[this](https://bit.ly)**, but not like `[this](https://bit.ly)`.
 
-== Highlighting is not supported by GFM, but I implemented on this theme. ==
+Highlighting is not supported by GFM, but I implemented on this theme. Is is implemented on client-side so I can't demo here. Just add two equal signs before and after (no space) the text you want to highlight. You can see the source code.
 
 ~~This is strike through.~~
 
