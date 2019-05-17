@@ -247,6 +247,10 @@ Where the overall phase is a choice of the combinations of different signs.
 
 # Computation with Ising Anyons
 
+## Single Qubit
+
+## Braiding
+
 
 
 
