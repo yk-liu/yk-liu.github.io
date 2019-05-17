@@ -32,7 +32,7 @@ $$
 \newcommand{\slot}{\,\cdot\,}
 \newcommand{\lact}{\triangleright}
 \newcommand{\ract}{\triangleleft}
-\newcommand{\vac}{{1\!\!\!\mathsf{\phantom{I}I}}}
+\newcommand{\vac}{ {1\!\!\!\mathsf{\phantom{I}I}}}
 \newcommand{\la}{\mathfrak}
 \newcommand{\anti}{\overline}
 \notag
