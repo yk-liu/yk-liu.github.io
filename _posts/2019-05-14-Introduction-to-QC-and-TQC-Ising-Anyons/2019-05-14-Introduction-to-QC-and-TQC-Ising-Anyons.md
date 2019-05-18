@@ -128,7 +128,7 @@ $$
 \end{array}
 $$
 
-As you can see, there is only two independent equations, from diagonal parts of the above table.
+As you can see, there are only two independent equations, from diagonal parts of the above table.
 
 ### Step 2: Second Pentagon
 
@@ -162,7 +162,7 @@ where $\left(F_{\psi\sigma \psi}^\sigma\right)_\sigma^\sigma = -1$ is a choice t
 
 ### Step 3: Solve for the $F$-Matrix
 
-So far we have $4$ equations for the elements. Notice the fact that $F$-matrix is unitary does not appear as a constraint, but serves as an condition to be satisfied after our choices of gauge (i.e., the arbitrary phase factor).
+So far we have $4$ equations for the elements. Notice the fact that $F$-matrix is unitary does not appear as a constraint but serves as a condition to be satisfied after our choices of gauge (i.e., the arbitrary phase factor).
 
 $$
 \begin{align*}
@@ -247,23 +247,49 @@ Where the overall phase is a choice of the combinations of different signs.
 
 # Computation with Ising Anyons
 
-## Single Qubit
+## Encoding Single Qubit
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/single-qubit.png" alt="Anyons fusion space single Qubit" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/single-qubit.png" alt="Anyons fusion space single Qubit" width="50%">
 
+As is described before, since fusion is equivalent to a measurement, the only way to achieve superposition is to have an "incomplete measurement". For $4$ anyons, a certain total fusion result (called a sector) has two intermediate channels. In our case, we will always pull our $\sigma$ anyons pairwise form the vacuum, and fusion them back into the vacuum. 
 
-
-
-
-## Two Q-Bits
+## Encoding Two Q-Bits
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/two-qubit.png" alt="Anyons fusion space two Qubits" width="60%">
 
+The same can be done for $2$ Qubits. $6$ anyons can encode two qubits. Following the same pattern, $2N$ anyons have $2^{N-1}$ intermediate fusion channels, and can thus encode $N-1$ qubits. 
 
+As you can imagine, with the increase of the number of qubits, the fusion tree will become considerably larger and harder to draw. A new type of fusion diagram came into existence just to save some space. The idea depicted as below.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/different-fusion-diagrams.png" alt="different fusion diagrams" width="60%">
+
+## Initialization
+
+The initialization is then pulling different intermediate anyons from the vacuum. What is the physical process that determines whether a pair of $\sigma$ anyons or a pair of $\psi$ anyons are pulled from the vacuum? As an oversimplification, we can slowly turn on the defects so some excitations as anyons are introduced. Such appearance of anyons can be regarded as "pulling from the vacuum". In the case of Ising anyons, the building block is $\sigma$ anyon. By introducing defects, $\sigma$ anyons emerge. We can bring the $\sigma$ anyons together pair-wise to see if they behave like a $\psi$ or $\vac$. After such operation, we separate the anyons pair-wise as if they were pulled form $\psi$ or $\vac$. I will leave a detailed answer to the question to a case study of physical realization of such a system in later posts. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/initialization.png" alt="initialization of two Qubits" width="80%">
+
+For now, we will just concern ourselves with the fact that we can control what to be pulled from the vacuum. As such, $N$ qubits can be prepared.
 
 ## Braiding
 
+You might ask that if two anyons are created pairwise from the vacuum, how can they possibly fuse into $\psi$. That is achieved through Braiding to these anyons. In other words, two pairs of $\sigma$ anyons pulled from vacuum respectively can be regrouped pair-wisely and fused. Such fusion does not necessarily result in $\vac$ since the only constraint is the total fusion to be $\vac$.
 
+
+
+## Some of the Quantum Gates
+
+
+
+## Fusion
+
+
+
+## Summary
+
+As is stressed before, the only constraint on the entire process of TQC is that we pull everything from the vacuum and return back to vacuum.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/knot.png" alt="fusion as knot" width="80%">
 
 
 
