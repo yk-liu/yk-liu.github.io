@@ -20,7 +20,7 @@ For the details of each challenge, please follow their webpages:
 
 # Registration
 
-If you are interested in either challenge, we encourage you to [pre-register with email](mailto:xuesong.shi@intel.com,qi.she@intel.com?subject=Pre-register%20for%20Lifelong%20Robotic%20Vision%20Competition&Body=Dear%20Organizers,%0D%0A) right now to tell us your interests and special requests. Your early feedbacks can help us define the data and rules.
+If you are interested in either challenge, we encourage you to [pre-register with email](mailto:xuesong.shi@intel.com?subject=Pre-register%20for%20Lifelong%20Robotic%20Vision%20Competition&Body=Dear%20Organizers,%0D%0A) right now to tell us your interests and special requests. Your early feedbacks can help us define the data and rules.
 
 The official registration will be open around June, with sample dataset available then.
 
