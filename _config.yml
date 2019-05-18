@@ -62,7 +62,7 @@ defaults:
       mathjax: true
       mermaid: true
       highlight: false
-      numbering: true
+      numbering: false
       status: Ongoing
       protected: false
       commentable: true
