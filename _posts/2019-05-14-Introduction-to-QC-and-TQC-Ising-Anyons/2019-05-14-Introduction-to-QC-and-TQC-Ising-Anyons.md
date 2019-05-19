@@ -12,29 +12,14 @@ $$
 \newcommand{\bra}[1]{\left\langle{#1}\right\vert }
 \newcommand{\ket}[1]{\left\vert {#1}\right\rangle}
 \newcommand{\braket}[2]{\left\langle {#1} \, \middle\vert \,{#2} \right\rangle }
-\newcommand{\d}{\mathrm{d}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\K}{\mathbb{K}}
-\newcommand{\D}[2]{\frac{\d {#1}}{\d {#2} }}
-\newcommand{\Partial}[2]{\frac{\partial {#1} }{\partial {#2} }}
-\newcommand{\op}{\hat}
 \newcommand{\uvec}{\hat}
 \newcommand{\dfdas}{:=}
 \newcommand{\Eqn}[1]{\text{Eqn. (}\ref{#1}\text{)}}
-\newcommand{\vard}{\mathfrak{d}}
-\newcommand{\vare}{\mathfrak{e}}
-\newcommand{\e}{\mathrm{e}}
-\newcommand{\i}{\mathrm{i}}
-\newcommand{\norm}[1]{\left\vert{#1}\right\vert}
 \newcommand{\set}[1]{\left\lbrace {#1}\right\rbrace}
-\newcommand{\comm}[2]{\left[ #1 , \, #2 \right]}
-\newcommand{\slot}{\,\cdot\,}
-\newcommand{\lact}{\triangleright}
-\newcommand{\ract}{\triangleleft}
 \newcommand{\vac}{ {1\!\!1}}
 \newcommand{\la}{\mathfrak}
 \newcommand{\anti}{\overline}
+\newcommand{\Id}{\mathbb I}
 \notag
 \require{cancel}
 $$
@@ -185,7 +170,7 @@ F_\psi^\vac & F_\psi^\psi
 \begin{pmatrix}
 1 & 1 \\
 1 & -1
-\end{pmatrix} 
+\end{pmatrix}
 $$
 
 where the $\pm$ is called the Frobenius–Schur indicator (see Pachos).
@@ -239,11 +224,17 @@ Finally, we have the solutions:
 
 $$
 R_{\sigma\vac}^\sigma=1 \quad \text{as a given trivial matrix}\\ R_{\sigma\psi}^{\sigma} = \imath\\
-R_{\sigma\sigma}^\psi= \pm \e^{-\tfrac{3\pi}{8}\imath} , 
-R_{\sigma\sigma}^\vac= \pm \imath \e^{-\tfrac{3\pi}{8}\imath}
+R_{\sigma\sigma}^\psi= \pm \e^{\tfrac{3\pi}{8}\imath} , 
+R_{\sigma\sigma}^\vac= \pm \imath \e^{\tfrac{3\pi}{8}\imath}
 $$
 
 Where the overall phase is a choice of the combinations of different signs.
+
+The $R_{\sigma\sigma}$ is considered a matrix as
+$$
+R_{\sigma\sigma} = \begin{pmatrix}R_{\sigma\sigma}^\vac &0\\0&R_{\sigma\sigma}^\psi\end{pmatrix}
+$$
+
 
 # Computation with Ising Anyons
 
@@ -273,11 +264,28 @@ For now, we will just concern ourselves with the fact that we can control what t
 
 ## Braiding
 
-You might ask that if two anyons are created pairwise from the vacuum, how can they possibly fuse into $\psi$. That is achieved through Braiding to these anyons. In other words, two pairs of $\sigma$ anyons pulled from vacuum respectively can be regrouped pair-wisely and fused. Such fusion does not necessarily result in $\vac$ since the only constraint is the total fusion to be $\vac$.
+You might ask that if two anyons are created pairwise from the vacuum, how can they possibly fuse into $\psi$. That is achieved through Braiding to these anyons. In other words, two pairs of $\sigma$ anyons pulled from vacuum respectively can be regrouped pair-wisely and fused. Such intermediate fusion does not necessarily result in $\vac$ since the only constraint is the total fusion to be $\vac$.
+
+The two ingredients we have are $F_{\sigma\sigma\sigma}^\sigma$ and $R_{\sigma\sigma}$, where we choose the gauge as
+$$
+F_{\sigma\sigma\sigma}^\sigma=F=\frac{1}{\sqrt2}\begin{pmatrix}1 & 1 \\1 & -1 \end{pmatrix}
+\\
+R_{\sigma\sigma}=R= \e^{-\tfrac{\pi}{8}\imath}\begin{pmatrix}1 &0\\0&\imath\end{pmatrix}
+$$
+
+> Such result can also be directly calculated from specific systems. See Section III. B. 2 of [^2].
+
+To write the matrix in the fusion space of $6$ anyons, we have
+$$
+F_{ij}=\begin{pmatrix}\Id \\ &F_{11} &&F_{12} \\&&\Id \\ &F_{21}&&F_{22} \\ &&&&\Id \end{pmatrix}
+$$
+Here are some of the gates:
+$$
+R_{23}^2 = \begin{pmatrix}1\\&\e^{-\tfrac{\pi}{8}}\\ &&\imath \e^{-\tfrac{\pi}{8}} \\&&&1 \\ &&&&1\\&&&&&1\end{pmatrix}
+$$
 
 
 
-## Some of the Quantum Gates
 
 
 
@@ -302,3 +310,4 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 ---
 
 [^1]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
+[^2]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
