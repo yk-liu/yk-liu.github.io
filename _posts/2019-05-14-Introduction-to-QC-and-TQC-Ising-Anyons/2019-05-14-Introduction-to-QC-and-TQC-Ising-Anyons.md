@@ -262,7 +262,17 @@ The initialization is then pulling different intermediate anyons from the vacuum
 
 For now, we will just concern ourselves with the fact that we can control what to be pulled from the vacuum. As such, $N$ qubits can be prepared.
 
-## Braiding
+## Braiding Matrices
+
+Imagine we implement some of the quantum gates using $R$ and $F$ matrices. The problem is that our $F$ and $R$ matrices are written in the basis of six $\sigma$ anyons, while our quantum gates are written in the basis of three pairwise fusion results.
+
+
+
+
+
+
+
+## implementation of Clifford Gates
 
 You might ask that if two anyons are created pairwise from the vacuum, how can they possibly fuse into $\psi$. That is achieved through Braiding to these anyons. In other words, two pairs of $\sigma$ anyons pulled from vacuum respectively can be regrouped pair-wisely and fused. Such intermediate fusion does not necessarily result in $\vac$ since the only constraint is the total fusion to be $\vac$.
 
@@ -275,13 +285,23 @@ $$
 
 > Such result can also be directly calculated from specific systems. See Section III. B. 2 of [^2].
 
+Prepare:
+$$
+F^{-1}=F=\frac{1}{\sqrt2}\begin{pmatrix}1 & 1 \\1 & -1 \end{pmatrix}
+\\
+R^{-1}=R= \e^{-\tfrac{\pi}{8}\imath}\begin{pmatrix}1 &0\\0&\imath\end{pmatrix}
+$$
+
+
 To write the matrix in the fusion space of $6$ anyons, we have
 $$
 F_{ij}=\begin{pmatrix}\Id \\ &F_{11} &&F_{12} \\&&\Id \\ &F_{21}&&F_{22} \\ &&&&\Id \end{pmatrix}
 $$
 Here are some of the gates:
 $$
-R_{23}^2 = \begin{pmatrix}1\\&\e^{-\tfrac{\pi}{8}}\\ &&\imath \e^{-\tfrac{\pi}{8}} \\&&&1 \\ &&&&1\\&&&&&1\end{pmatrix}
+R_{23} = \begin{pmatrix}1\\&\e^{-\tfrac{\pi}{8}}\\ &&\imath \e^{-\tfrac{\pi}{8}} \\&&&1 \\ &&&&1\\&&&&&1\end{pmatrix}
+\\
+\left(R_{23}\right)^2 = \begin{pmatrix}1\\&\e^{-\tfrac{\pi}{4}}\\ && \e^{\tfrac{\pi}{4}} \\&&&1 \\ &&&&1\\&&&&&1\end{pmatrix}
 $$
 
 
