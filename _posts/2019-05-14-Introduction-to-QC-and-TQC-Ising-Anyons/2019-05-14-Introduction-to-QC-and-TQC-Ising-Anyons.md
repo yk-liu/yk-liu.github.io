@@ -20,6 +20,7 @@ $$
 \newcommand{\la}{\mathfrak}
 \newcommand{\anti}{\overline}
 \newcommand{\Id}{\mathbb I}
+\newcommand{\e}{\mathrm{e}}
 \notag
 \require{cancel}
 $$
@@ -264,17 +265,57 @@ For now, we will just concern ourselves with the fact that we can control what t
 
 ## Braiding Matrices
 
-Imagine we implement some of the quantum gates using $R$ and $F$ matrices. The problem is that our $F$ and $R$ matrices are written in the basis of six $\sigma$ anyons, while our quantum gates are written in the basis of three pairwise fusion results.
-
-
-
-
-
-
-
-## implementation of Clifford Gates
-
 You might ask that if two anyons are created pairwise from the vacuum, how can they possibly fuse into $\psi$. That is achieved through Braiding to these anyons. In other words, two pairs of $\sigma$ anyons pulled from vacuum respectively can be regrouped pair-wisely and fused. Such intermediate fusion does not necessarily result in $\vac$ since the only constraint is the total fusion to be $\vac$.
+
+So how exactly are we going to arrange our combination of $F$ and $R$ moves, such that it could give us a quantum gate on a qubit? Well, $R$ moves won't be of much use. If you braid two anyons which originally fuse to $c$, then they will continue fuse to $c$, due to the conservation of topological charges.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Rmatrix.png" alt="R-matrix" width="20%">
+
+Hence, to make the magic happen, like we said before, we need to regroup and then fuse the anyons, like this.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/quantum-gates-upshot.png" alt="quantum gates upshot" width="40%">
+
+Let us try to find a way to do this step by step. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="quantum gates by braiding, step by step" width="90%">
+
+1. We start from the left side and list our options.
+   1. A $F$ move will move the. 
+   2. Since a $R$ move will introduce no change to the intermediate fusion result. 
+   3. If we exchange our middle two anyons, it will give us the correct result, but such operation is neither $R$ or $F$ move, so it is undefined, so we don't know how to implement it (for now). 
+2. From the result of last step, we have two options
+   1. We can apply another $F$ move, but that will only send us along the path of pentagon identity. Let's check other options where there is no $F$ moves. 
+      1. we can exchange the first two anyons, which is sadly undefined. or we can exchange the middle two, which has no effect.
+   2. If the first two $\sigma$ anyons are fused to $\vac$, no matter how we try to change the fusion order, we will never get a something new. 
+   3. By braiding, however, we are creating new fusion results.
+
+
+
+
+
+
+
+## Implementation of Clifford Gates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 The two ingredients we have are $F_{\sigma\sigma\sigma}^\sigma$ and $R_{\sigma\sigma}$, where we choose the gauge as
 $$
