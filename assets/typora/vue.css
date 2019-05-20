@@ -205,13 +205,13 @@ ol {
     margin-bottom: 0;
 }
 
-ol {
+div#content-container ol {
   counter-reset: item
 }
-li {
+div#content-container li {
   display: block
 }
-li:before {
+div#content-container li:before {
   content: counters(item, ".") " ";
   counter-increment: item
 }
