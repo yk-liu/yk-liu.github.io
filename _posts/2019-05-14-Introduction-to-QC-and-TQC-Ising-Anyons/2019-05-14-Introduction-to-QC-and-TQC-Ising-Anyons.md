@@ -176,6 +176,18 @@ $$
 
 where the $\pm$ is called the Frobenius–Schur indicator (see Pachos).
 
+The $F$ matrices is better understood with the following diagram as basis transformation:
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements.png" alt="F-matrix elements" width="60%">
+
+With additional "branches" of the fusion tree, we have:
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B1.png" alt="F-matrix elements, Kronecker product" width="60%">
+
+or with irregular elements like
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements-irregular.png" alt="F-matrix elements, Kronecker product" width="60%">
+
 ### About the "Arbitrary Phase Factor"
 
 From [^1]:
@@ -236,6 +248,9 @@ $$
 R_{\sigma\sigma} = \begin{pmatrix}R_{\sigma\sigma}^\vac &0\\0&R_{\sigma\sigma}^\psi\end{pmatrix}
 $$
 
+The $R$ matrix is understood as a basis transformation of fusion trees as the following
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B2.png" alt="R-matrix elements, Kronecker product" width="60%">
 
 # Computation with Ising Anyons
 
@@ -271,24 +286,35 @@ So how exactly are we going to arrange our combination of $F$ and $R$ moves, suc
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Rmatrix.png" alt="R-matrix" width="20%">
 
-Hence, to make the magic happen, like we said before, we need to regroup and then fuse the anyons, like this.
+Hence, to make the magic happen, like we said before, we need to regroup and then fuse the anyons, like the upper two fusion trees.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/quantum-gates-upshot.png" alt="quantum gates upshot" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-2.png" alt="quantum gates by braiding, step by step" width="70%">
 
-Let us try to find a way to do this step by step. 
+Such action can be achieved though a sequence of $F$ and $R$ moves. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="quantum gates by braiding, step by step" width="90%">
+However, if we wish to calculate the matrix from one tree to another, we need to think carefully what there $R$ and $F$ matrices are.
 
-1. We start from the left side and list our options.
-   1. A $F$ move will move the. 
-   2. Since a $R$ move will introduce no change to the intermediate fusion result. 
-   3. If we exchange our middle two anyons, it will give us the correct result, but such operation is neither $R$ or $F$ move, so it is undefined, so we don't know how to implement it (for now). 
-2. From the result of last step, we have two options
-   1. We can apply another $F$ move, but that will only send us along the path of pentagon identity. Let's check other options where there is no $F$ moves. 
-      1. we can exchange the first two anyons, which is sadly undefined. or we can exchange the middle two, which has no effect.
-   2. If the first two $\sigma$ anyons are fused to $\vac$, no matter how we try to change the fusion order, we will never get a something new. 
-   3. By braiding, however, we are creating new fusion results.
+Now let's calculate the matrix correspond to such fusion. 
 
+> The two ingredients we have are $F_{\sigma\sigma\sigma}^\sigma$ and $R_{\sigma\sigma}$, where we choose the gauge as
+> $$
+> \begin{array}{cc}
+> F=F_{\sigma\sigma\sigma}^\sigma=\frac{1}{\sqrt2}\begin{pmatrix}1 & 1 \\1 & -1 \end{pmatrix}
+> &\quad
+> R= R_{\sigma\sigma}=\e^{-\tfrac{\pi}{8}\imath}\begin{pmatrix}1 &0\\0&\imath\end{pmatrix},
+> \\
+> F^{-1}=\frac{1}{\sqrt2}\begin{pmatrix}1 & 1 \\1 & -1 \end{pmatrix}=F
+> &\quad
+> R^{-1}= \e^{-\tfrac{\pi}{8}\imath}\begin{pmatrix}1 &0\\0&\imath\end{pmatrix}=R
+> \end{array}
+> $$
+>
+> > Such result can also be directly calculated from specific systems. See Section III. B. 2 of [^2].
+
+Hence we have
+$$
+FF^{-1}RFF^{-1}
+$$
 
 
 
@@ -301,6 +327,7 @@ Let us try to find a way to do this step by step.
 
 
 
+Imagine we implement some of the quantum gates using $R$ and $F$ matrices. The problem is that our $F$ and $R$ matrices are written in the basis of six $\sigma$ anyons, while our quantum gates are written in the basis of three pairwise fusion results.
 
 
 
@@ -315,23 +342,6 @@ Let us try to find a way to do this step by step.
 
 
 
-
-
-The two ingredients we have are $F_{\sigma\sigma\sigma}^\sigma$ and $R_{\sigma\sigma}$, where we choose the gauge as
-$$
-F_{\sigma\sigma\sigma}^\sigma=F=\frac{1}{\sqrt2}\begin{pmatrix}1 & 1 \\1 & -1 \end{pmatrix}
-\\
-R_{\sigma\sigma}=R= \e^{-\tfrac{\pi}{8}\imath}\begin{pmatrix}1 &0\\0&\imath\end{pmatrix}
-$$
-
-> Such result can also be directly calculated from specific systems. See Section III. B. 2 of [^2].
-
-Prepare:
-$$
-F^{-1}=F=\frac{1}{\sqrt2}\begin{pmatrix}1 & 1 \\1 & -1 \end{pmatrix}
-\\
-R^{-1}=R= \e^{-\tfrac{\pi}{8}\imath}\begin{pmatrix}1 &0\\0&\imath\end{pmatrix}
-$$
 
 
 To write the matrix in the fusion space of $6$ anyons, we have
@@ -349,7 +359,6 @@ $$
 
 
 
-
 ## Fusion
 
 
@@ -358,7 +367,7 @@ $$
 
 As is stressed before, the only constraint on the entire process of TQC is that we pull everything from the vacuum and return back to vacuum.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/knot.png" alt="fusion as knot" width="80%">
+About the indistinguishability of anyons, I am not very sure. We are not using QFT/"second quantization", hence these anyons are still distinguishable.
 
 
 
