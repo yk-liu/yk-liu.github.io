@@ -248,6 +248,7 @@ $$
 Where the overall phase is a choice of the combinations of different signs.
 
 The $R_{\sigma\sigma}$ is considered a matrix as
+
 $$
 R_{\sigma\sigma} = \begin{pmatrix}R_{\sigma\sigma}^\vac &0\\0&R_{\sigma\sigma}^\psi\end{pmatrix}
 $$
@@ -264,11 +265,13 @@ The $R$ matrix is understood as a basis transformation of fusion trees as the fo
 
 As is described before, since fusion is equivalent to a measurement, the only way to achieve superposition is to have an "incomplete measurement". For $4$ anyons, a certain total fusion result (called a sector) has two intermediate channels. In our case, we will always pull our $\sigma$ anyons pairwise form the vacuum, and fusion them back into the vacuum. 
 
+The upside-down fusion tree symbolizes that these anyons are pulled from vacuum.
+
 ## Encoding Two Q-Bits
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/two-qubit.png" alt="Anyons fusion space two Qubits" width="60%">
 
-The same can be done for $2$ Qubits. $6$ anyons can encode two qubits. Following the same pattern, $2N$ anyons have $2^{N-1}$ intermediate fusion channels, and can thus encode $N-1$ qubits. 
+The same can be done for $2$ Qubits. $6$ anyons can encode two qubits. Following the same pattern, $2N$ anyons have $2^{N-1}$ intermediate fusion channels, and can thus encode $N-1$ qubits. The upside-down fusion tree symbolizes that these anyons are pulled from vacuum.
 
 As you can imagine, with the increase of the number of qubits, the fusion tree will become considerably larger and harder to draw. A new type of fusion diagram came into existence just to save some space. The idea depicted as below.
 
@@ -282,7 +285,7 @@ The initialization is then pulling different intermediate anyons from the vacuum
 
 For now, we will just concern ourselves with the fact that we can control what to be pulled from the vacuum. As such, $N$ qubits can be prepared.
 
-## Braiding Matrices
+## First Attempt to a Quantum Gate
 
 You might ask that if two anyons are created pairwise from the vacuum, how can they possibly fuse into $\psi$. That is achieved through Braiding to these anyons. In other words, two pairs of $\sigma$ anyons pulled from vacuum respectively can be regrouped pair-wisely and fused. Such intermediate fusion does not necessarily result in $\vac$ since the only constraint is the total fusion to be $\vac$.
 
@@ -292,21 +295,8 @@ So how exactly are we going to arrange our combination of $F$ and $R$ moves, suc
 
 Hence, to make the magic happen, like we said before, we need to regroup and then fuse the anyons, like the upper two fusion trees.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-2.png" alt="quantum gates by braiding, step by step" width="70%">
-
-Such action can be achieved though a sequence of $F$ and $R$ moves. We can identify the $R$ and $F$ matrices in the process by writing the following diagrams. Here is the first three matrices:
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-matrices.png" alt="quantum gates by braiding, step by step, matrices" width="100%">
-
-
-
-
-
-
-
-Now let's calculate the matrix correspond to such fusion. 
-
-> The two ingredients we have are $F_{\sigma\sigma\sigma}^\sigma$ and $R_{\sigma\sigma}$, where we choose the gauge as
+> In the following calculations, we have chosen the gauge as
+> 
 > $$
 > \begin{array}{cc}
 > F=F_{\sigma\sigma\sigma}^\sigma=\frac{1}{\sqrt2}\begin{pmatrix}1 & 1 \\1 & -1 \end{pmatrix}
@@ -321,13 +311,32 @@ Now let's calculate the matrix correspond to such fusion.
 >
 > > Such result can also be directly calculated from specific systems. See Section III. B. 2 of [^2].
 
-Hence we have
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-2.png" alt="quantum gates by braiding, step by step" width="70%">
+
+Such action can be achieved though a sequence of $F$ and $R$ moves. We can identify the $R$ and $F$ matrices in the process by writing the following diagrams. Here is the first three matrices:
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-matrices.png" alt="quantum gates by braiding, step by step, matrices" width="100%">
+
+Now let's calculate the matrix correspond to such fusion, let's denote the matrix as $B$ for reasons will be clear later.
+
 $$
-FF^{-1}RFF^{-1}
+B=F\cdot \Id\cdot R\cdot F^{-1}\cdot I^{-1} =\frac{1}{\sqrt 2} \e^{\imath \pi/8} \begin{pmatrix}1&\imath\\\imath&1\end{pmatrix}
 $$
 
+Which is conveniently the square root of $\begin{pmatrix}0&1\\1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
+$$
+B'=F\cdot \Id\cdot R^2\cdot F^{-1}\cdot I^{-1} =(F\cdot \Id\cdot R\cdot \cancel{F^{-1}\cdot I^{-1}} )(\cancel{F\cdot \Id}\cdot R\cdot F^{-1}\cdot I^{-1}) = (B)^2.
+$$
+After so much trouble, we found a single qubit gate. As you can imagine, if we want to write a $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
 
+All the trouble is simply because we can not define a matrix that characterize two non-fusing anyons exchange. How easier our lives will be if only we have such matrix!
 
+> Alternatively, you can start from one fusion tree and enumerate all the possible moves and see whether the path lead you to your destination. You can see that there are so many diagrams that are marked "undefined", which are moves that exchange two anyons that are not fused together.
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enerating all the possible F- and R- moves" width="80%">
+
+## Braiding Matrices
+
+Braiding matrix is the savior. What we get from the last section is the step-by-step construction of a braiding matrix, commonly denoted as $B$.
 
 
 
@@ -355,10 +364,13 @@ Imagine we implement some of the quantum gates using $R$ and $F$ matrices. The p
 
 
 To write the matrix in the fusion space of $6$ anyons, we have
+
 $$
 F_{ij}=\begin{pmatrix}\Id \\ &F_{11} &&F_{12} \\&&\Id \\ &F_{21}&&F_{22} \\ &&&&\Id \end{pmatrix}
 $$
+
 Here are some of the gates:
+
 $$
 R_{23} = \begin{pmatrix}1\\&\e^{-\tfrac{\pi}{8}}\\ &&\imath \e^{-\tfrac{\pi}{8}} \\&&&1 \\ &&&&1\\&&&&&1\end{pmatrix}
 \\
