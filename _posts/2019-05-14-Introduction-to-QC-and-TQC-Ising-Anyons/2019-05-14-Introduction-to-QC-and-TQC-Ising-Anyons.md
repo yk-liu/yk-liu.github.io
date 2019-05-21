@@ -178,15 +178,19 @@ where the $\pm$ is called the Frobenius–Schur indicator (see Pachos).
 
 The $F$ matrices is better understood with the following diagram as basis transformation:
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements.png" alt="F-matrix elements" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements.png" alt="F-matrix elements" width="40%">
 
 With additional "branches" of the fusion tree, we have:
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B1.png" alt="F-matrix elements, Kronecker product" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B1.png" alt="F-matrix elements, Kronecker product" width="45%">
 
-or with irregular elements like
+or with irregular elements like the following one.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements-irregular.png" alt="F-matrix elements, Kronecker product" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements-irregular.png" alt="F-matrix elements, Kronecker product" width="45%">
+
+The inverse is written as
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B3.png" alt="F-matrix elements, Kronecker product" width="50%">
 
 ### About the "Arbitrary Phase Factor"
 
@@ -248,9 +252,9 @@ $$
 R_{\sigma\sigma} = \begin{pmatrix}R_{\sigma\sigma}^\vac &0\\0&R_{\sigma\sigma}^\psi\end{pmatrix}
 $$
 
-The $R$ matrix is understood as a basis transformation of fusion trees as the following
+The $R$ matrix is understood as a basis transformation of fusion trees as the following.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B2.png" alt="R-matrix elements, Kronecker product" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B2.png" alt="R-matrix elements, Kronecker product" width="45%">
 
 # Computation with Ising Anyons
 
@@ -290,9 +294,15 @@ Hence, to make the magic happen, like we said before, we need to regroup and the
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-2.png" alt="quantum gates by braiding, step by step" width="70%">
 
-Such action can be achieved though a sequence of $F$ and $R$ moves. 
+Such action can be achieved though a sequence of $F$ and $R$ moves. We can identify the $R$ and $F$ matrices in the process by writing the following diagrams. Here is the first three matrices:
 
-However, if we wish to calculate the matrix from one tree to another, we need to think carefully what there $R$ and $F$ matrices are.
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-matrices.png" alt="quantum gates by braiding, step by step, matrices" width="100%">
+
+
+
+
+
+
 
 Now let's calculate the matrix correspond to such fusion. 
 
