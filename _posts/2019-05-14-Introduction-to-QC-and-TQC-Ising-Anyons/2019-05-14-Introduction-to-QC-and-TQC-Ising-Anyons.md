@@ -77,6 +77,22 @@ As expected, since there are only three types of anyons including vacuum, the pe
 
 The key is to make sure our target $F_{\sigma\sigma\sigma}^\sigma$ appears somewhere in the edge of the pentagon. But we need to draw multiple Pentagon diagrams to have enough equations to solve for the $F$-matrices.
 
+The $F$ matrices is better understood with the following diagram as basis transformation:
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements.png" alt="F-matrix elements" width="40%">
+
+With additional "branches" of the fusion tree, we have:
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B1.png" alt="F-matrix elements, Kronecker product" width="45%">
+
+or with irregular elements like the following one.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements-irregular.png" alt="F-matrix elements, Kronecker product" width="45%">
+
+The inverse is written as
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B3.png" alt="F-matrix elements, Kronecker product" width="50%">
+
 ### Step 1: First Pentagon
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Pentagon.png" alt="Pentagon identity" width="100%">
@@ -176,22 +192,6 @@ $$
 
 where the $\pm$ is called the Frobenius–Schur indicator (see Pachos).
 
-The $F$ matrices is better understood with the following diagram as basis transformation:
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements.png" alt="F-matrix elements" width="40%">
-
-With additional "branches" of the fusion tree, we have:
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B1.png" alt="F-matrix elements, Kronecker product" width="45%">
-
-or with irregular elements like the following one.
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements-irregular.png" alt="F-matrix elements, Kronecker product" width="45%">
-
-The inverse is written as
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B3.png" alt="F-matrix elements, Kronecker product" width="50%">
-
 ### About the "Arbitrary Phase Factor"
 
 From [^1]:
@@ -205,7 +205,13 @@ While in Pachos' book, the explanation for some elements is set to $1$ was simpl
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Rmatrix.png" alt="R-matrix" width="40%">
 
-Recall the $R$-matrix as above. With all the $F$ matrices figured out, $R$-matrix is easy to calculate. The $R$-matrix is trivial if either $a$ or $b$ is vacuum. Since moving around a particle would not result in any topological phase.
+Recall the $R$-matrix as above. The $R$ matrix is understood as a basis transformation of fusion trees like the following.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B2.png" alt="R-matrix elements, Kronecker product" width="45%">
+
+With all the $F$ matrices figured out, $R$-matrix is easy to calculate. The $R$-matrix is trivial if either $a$ or $b$ is vacuum. Since moving around a particle would not result in any topological phase.
+
+
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Hexagon.png" alt="Hexagon identity" width="70%">
 
@@ -252,10 +258,6 @@ The $R_{\sigma\sigma}$ is considered a matrix as
 $$
 R_{\sigma\sigma} = \begin{pmatrix}R_{\sigma\sigma}^\vac &0\\0&R_{\sigma\sigma}^\psi\end{pmatrix}
 $$
-
-The $R$ matrix is understood as a basis transformation of fusion trees like the following.
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B2.png" alt="R-matrix elements, Kronecker product" width="45%">
 
 # Computation with Ising Anyons
 
@@ -320,13 +322,15 @@ Such action can be achieved through a sequence of $F$ and $R$ moves. We can iden
 Now let's calculate the matrix correspond to such fusion, let's denote the matrix as $B$ for reasons will be clear later.
 
 $$
-B=F\cdot \Id\cdot R\cdot F^{-1}\cdot I^{-1} =\frac{1}{\sqrt 2} \e^{\imath \pi/8} \begin{pmatrix}1&\imath\\\imath&1\end{pmatrix}
+B=F\cdot \Id\cdot R\cdot F^{-1}\cdot \Id^{-1} =\frac{1}{\sqrt 2} \e^{\imath \pi/8} \begin{pmatrix}1&\imath\\\imath&1\end{pmatrix}
 $$
 
 Which is conveniently the square root of $\sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
+
 $$
-B'=F\cdot \Id\cdot R^2\cdot F^{-1}\cdot I^{-1} =F\cdot \Id\cdot R\cdot \left(\cancel{F^{-1}\cdot I^{-1}} \cancel{F\cdot \Id}\right)\cdot R\cdot F^{-1}\cdot I^{-1} = (B)^2.
+B'=F\cdot \Id\cdot R^2\cdot F^{-1}\cdot \Id^{-1} =F\cdot \Id\cdot R\cdot \left(\cancel{F^{-1}\cdot \Id^{-1}} \cdot\cancel{F\cdot \Id}\right)\cdot R\cdot F^{-1}\cdot \Id^{-1} = (B)^2.
 $$
+
 After so much trouble, we found a single qubit gate. As you can imagine, if we want to write a $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
 
 All the trouble is simply because we can not define a matrix that characterizes two non-fusing anyons exchange. How easier our lives will be if only we have such matrix!
@@ -344,7 +348,9 @@ $B$ matrices enable us to consider the moves of anyons in a more direct way. Rem
 
 After pulling anyons from the vacuum and before fusing them together in the end, we can concern ourselves solely on the exchange. Like is depicted below.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Braiding-diagram.png" alt="braiding diagrams" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Braiding-diagram.png" alt="braiding diagrams" width="20%">
+
+Our mission is then to find out the explicit matrix elements of $B$.
 
 
 
