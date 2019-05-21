@@ -323,20 +323,24 @@ $$
 B=F\cdot \Id\cdot R\cdot F^{-1}\cdot I^{-1} =\frac{1}{\sqrt 2} \e^{\imath \pi/8} \begin{pmatrix}1&\imath\\\imath&1\end{pmatrix}
 $$
 
-Which is conveniently the square root of $\begin{pmatrix}0&1\\1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
+Which is conveniently the square root of $\sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
 $$
-B'=F\cdot \Id\cdot R^2\cdot F^{-1}\cdot I^{-1} =(F\cdot \Id\cdot R\cdot \cancel{F^{-1}\cdot I^{-1}} )(\cancel{F\cdot \Id}\cdot R\cdot F^{-1}\cdot I^{-1}) = (B)^2.
+B'=F\cdot \Id\cdot R^2\cdot F^{-1}\cdot I^{-1} =F\cdot \Id\cdot R\cdot \left(\cancel{F^{-1}\cdot I^{-1}} \cancel{F\cdot \Id}\right)\cdot R\cdot F^{-1}\cdot I^{-1} = (B)^2.
 $$
 After so much trouble, we found a single qubit gate. As you can imagine, if we want to write a $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
 
 All the trouble is simply because we can not define a matrix that characterize two non-fusing anyons exchange. How easier our lives will be if only we have such matrix!
 
 > Alternatively, you can start from one fusion tree and enumerate all the possible moves and see whether the path lead you to your destination. You can see that there are so many diagrams that are marked "undefined", which are moves that exchange two anyons that are not fused together.
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enerating all the possible F- and R- moves" width="80%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enumerating all the possible F- and R- moves" width="80%">
 
 ## Braiding Matrices
 
-Braiding matrix is the savior. What we get from the last section is the step-by-step construction of a braiding matrix, commonly denoted as $B$.
+Braiding matrix is the savior. What we get from the last section is the step-by-step construction of a braiding matrix, commonly denoted as $B$. The idea of a braiding matrix is that we can exchange any neighboring anyons without having to worry about whether they are fused together in the next step or not.
+
+$B$ matrices enables us to consider the moves of anyons in a more direct way. Remember that I introduced figure (c) in the second post of this series.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-diagrams.png" alt="fusion diagrams" width="60%">
 
 
 
@@ -347,18 +351,6 @@ Braiding matrix is the savior. What we get from the last section is the step-by-
 
 
 Imagine we implement some of the quantum gates using $R$ and $F$ matrices. The problem is that our $F$ and $R$ matrices are written in the basis of six $\sigma$ anyons, while our quantum gates are written in the basis of three pairwise fusion results.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
