@@ -253,7 +253,7 @@ $$
 R_{\sigma\sigma} = \begin{pmatrix}R_{\sigma\sigma}^\vac &0\\0&R_{\sigma\sigma}^\psi\end{pmatrix}
 $$
 
-The $R$ matrix is understood as a basis transformation of fusion trees as the following.
+The $R$ matrix is understood as a basis transformation of fusion trees like the following.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B2.png" alt="R-matrix elements, Kronecker product" width="45%">
 
@@ -265,15 +265,15 @@ The $R$ matrix is understood as a basis transformation of fusion trees as the fo
 
 As is described before, since fusion is equivalent to a measurement, the only way to achieve superposition is to have an "incomplete measurement". For $4$ anyons, a certain total fusion result (called a sector) has two intermediate channels. In our case, we will always pull our $\sigma$ anyons pairwise form the vacuum, and fusion them back into the vacuum. 
 
-The upside-down fusion tree symbolizes that these anyons are pulled from vacuum.
+The upside-down fusion tree symbolizes that these anyons are pulled from the vacuum.
 
 ## Encoding Two Q-Bits
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/two-qubit.png" alt="Anyons fusion space two Qubits" width="60%">
 
-The same can be done for $2$ Qubits. $6$ anyons can encode two qubits. Following the same pattern, $2N$ anyons have $2^{N-1}$ intermediate fusion channels, and can thus encode $N-1$ qubits. The upside-down fusion tree symbolizes that these anyons are pulled from vacuum.
+The same can be done for $2$ Qubits. $6$ anyons can encode two qubits. Following the same pattern, $2N$ anyons have $2^{N-1}$ intermediate fusion channels, and can thus encode $N-1$ qubits. The upside-down fusion tree symbolizes that these anyons are pulled from the vacuum.
 
-As you can imagine, with the increase of the number of qubits, the fusion tree will become considerably larger and harder to draw. A new type of fusion diagram came into existence just to save some space. The idea depicted as below.
+As you can imagine, with the increase in the number of qubits, the fusion tree will become considerably larger and harder to draw. A new type of fusion diagram came into existence just to save some space. The idea depicted as below.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/different-fusion-diagrams.png" alt="different fusion diagrams" width="60%">
 
@@ -283,7 +283,7 @@ The initialization is then pulling different intermediate anyons from the vacuum
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/initialization.png" alt="initialization of two Qubits" width="80%">
 
-For now, we will just concern ourselves with the fact that we can control what to be pulled from the vacuum. As such, $N$ qubits can be prepared.
+For now, we will just concern ourselves with the fact that we can control what to be pulled from the vacuum. As such, $N$ qubits can be prepared. 
 
 ## First Attempt to a Quantum Gate
 
@@ -293,7 +293,7 @@ So how exactly are we going to arrange our combination of $F$ and $R$ moves, suc
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Rmatrix.png" alt="R-matrix" width="20%">
 
-Hence, to make the magic happen, like we said before, we need to regroup and then fuse the anyons, like the upper two fusion trees.
+Hence, to make the magic happen, as we said before, we need to regroup and then fuse the anyons, like the upper two fusion trees.
 
 > In the following calculations, we have chosen the gauge as
 > 
@@ -313,7 +313,7 @@ Hence, to make the magic happen, like we said before, we need to regroup and the
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-2.png" alt="quantum gates by braiding, step by step" width="70%">
 
-Such action can be achieved though a sequence of $F$ and $R$ moves. We can identify the $R$ and $F$ matrices in the process by writing the following diagrams. Here is the first three matrices:
+Such action can be achieved through a sequence of $F$ and $R$ moves. We can identify the $R$ and $F$ matrices in the process by writing the following diagrams. Here are the corresponding matrices:
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-matrices.png" alt="quantum gates by braiding, step by step, matrices" width="100%">
 
@@ -329,7 +329,7 @@ B'=F\cdot \Id\cdot R^2\cdot F^{-1}\cdot I^{-1} =F\cdot \Id\cdot R\cdot \left(\ca
 $$
 After so much trouble, we found a single qubit gate. As you can imagine, if we want to write a $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
 
-All the trouble is simply because we can not define a matrix that characterize two non-fusing anyons exchange. How easier our lives will be if only we have such matrix!
+All the trouble is simply because we can not define a matrix that characterizes two non-fusing anyons exchange. How easier our lives will be if only we have such matrix!
 
 > Alternatively, you can start from one fusion tree and enumerate all the possible moves and see whether the path lead you to your destination. You can see that there are so many diagrams that are marked "undefined", which are moves that exchange two anyons that are not fused together.
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enumerating all the possible F- and R- moves" width="80%">
@@ -338,9 +338,13 @@ All the trouble is simply because we can not define a matrix that characterize t
 
 Braiding matrix is the savior. What we get from the last section is the step-by-step construction of a braiding matrix, commonly denoted as $B$. The idea of a braiding matrix is that we can exchange any neighboring anyons without having to worry about whether they are fused together in the next step or not.
 
-$B$ matrices enables us to consider the moves of anyons in a more direct way. Remember that I introduced figure (c) in the second post of this series.
+$B$ matrices enable us to consider the moves of anyons in a more direct way. Remember that I introduced figure (c) in the second post of this series.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-diagrams.png" alt="fusion diagrams" width="60%">
+
+After pulling anyons from the vacuum and before fusing them together in the end, we can concern ourselves solely on the exchange. Like is depicted below.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Braiding-diagram.png" alt="braiding diagrams" width="30%">
 
 
 
