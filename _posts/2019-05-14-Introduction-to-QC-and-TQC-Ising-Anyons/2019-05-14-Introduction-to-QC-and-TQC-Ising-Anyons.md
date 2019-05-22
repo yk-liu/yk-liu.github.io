@@ -5,7 +5,7 @@ categories: Topological-quantum-computation
 tags: Topological-quantum-computation Ising-anyons Majorana-zero-modes
 keywords: Braiding Anyon
 status: Writing
-description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. In this post, the most promising candidate for TQC, Ising anyons, are discussed. A set of Clifford gates is implemented as the result of braiding.
+description: This is a series of posts on topological quantum computations. In this post, the most promising candidate for TQC, Ising anyons, are discussed. F and R matrices are calculated from the consistency requirement, *i.e.* Hexagon and Pentagon equations. Braiding matrices are introduced heuristically. A set of Clifford gates is implemented as the result of braiding. This post features lots of diagrams.
 ---
 
 $$
@@ -330,26 +330,26 @@ Such action can be achieved through a sequence of $F$ and $R$ moves. We can iden
 Now let's calculate the matrix correspond to such fusion, let's denote the matrix as $B$ for reasons will be clear later.
 
 $$
-B=F\cdot \Id\cdot R\cdot F^{-1}\cdot \Id^{-1} =\frac{1}{\sqrt 2} \e^{\imath \pi/8} \begin{pmatrix}1&\imath\\\imath&1\end{pmatrix}
+B= \Id^{-1} \cdot F\cdot R\cdot F^{-1}\cdot \Id =\frac{1}{\sqrt 2} \e^{\imath \pi/8} \begin{pmatrix}1&\imath\\\imath&1\end{pmatrix}
 $$
 
 Where $\Id$ shows again that there is a one-to-one correspondence between the canonical tree and the pairwise tree.
 
 $B$ is conveniently the square root of $\sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
 $$
-B'=F\cdot \Id\cdot R^2\cdot F^{-1}\cdot \Id^{-1} =F\cdot \Id\cdot R\cdot \left(\cancel{F^{-1}\cdot \Id^{-1}} \cdot\cancel{F\cdot \Id}\right)\cdot R\cdot F^{-1}\cdot \Id^{-1} = (B)^2.
+B'=\Id^{-1} \cdot F\cdot R^2\cdot F^{-1}\cdot \Id =\Id^{-1} \cdot F\cdot R\cdot \cancel{\left(F^{-1}\cdot \Id\cdot\Id^{-1} \cdot F\right)}\cdot R\cdot F^{-1}\cdot \Id = (B)^2.
 $$
 
-After so much trouble, we found a single qubit gate. As you can imagine, if we want to write a $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
+After so much trouble, we found a single qubit gate $X=\sigma_x$. As you can imagine, if we want to write a $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
 
 > Alternatively, you can start from one fusion tree and enumerate all the possible moves and see whether the path lead you to your destination. You can see that there are so many diagrams that are marked "undefined", which are moves that exchange two anyons that are not fused together.
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enumerating all the possible F- and R- moves" width="80%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enumerating all the possible F- and R-moves" width="80%">
 
 All the trouble is simply because we can not define a matrix that characterizes two non-fusing anyons exchange. How easier our lives will be if only we have such matrix!
 
 ## Braiding Matrices
 
-Braiding matrix is the savior. What we get from the last section is the step-by-step construction of a braiding matrix, commonly denoted as $B$. The idea of a braiding matrix is that we can exchange any neighboring anyons without having to worry about whether they are fused together in the next step or not.
+Braiding matrix is the savior. What we have got from the last section is the step-by-step construction of a braiding matrix, commonly denoted as $B$. The idea of a braiding matrix is that we can exchange any neighboring anyons without having to worry about whether they are fused together in the next step or not.
 
 $B$ matrices enable us to consider the moves of anyons in a more direct way. Remember that I introduced figure (c) in the second post of this series.
 
@@ -359,17 +359,29 @@ After pulling anyons from the vacuum and before fusing them together in the end,
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Braiding-diagram.png" alt="braiding diagrams" width="20%">
 
-Our mission is then to find out the explicit matrix elements of $B$. We can extract the key steps from the braiding procedure as below.
+Our mission is then to find out the explicit matrix elements of $B$. The essence of $B$ matrix or a $B$ move is that it exchanges two anyons that are not immediately fused. We can extract the key steps from the braiding procedure as below. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-steps.png" alt="braiding diagrams" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-steps.png" alt=" essence of braiding matrix" width="60%">
 
 Obviously an exchange of $(2i-1,2i)$ anyons are not the same as the exchange of $(2i,2i+1)$ anyons on the canonical tree (label start from left to right, starting from $1$). The former exchange is represented by a $R$ matrix, while the later is not an legal $R$ move. The same is true for the pairwise fusion tree. $(2i-1,2i)$ anyon pairs are different from $(2i,2i+1)$ anyon pairs, in that the fusion ingredient and result are distinct.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-cases.png" alt="braiding diagrams" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-cases.png" alt="Cases of Braiding" width="60%">
 
+- When $(2i-1,2i)$ are exchanged as is indicated in the blue rectangle, the $F$ matrices are trivial, as $\set{a_i,a_{i+1},c}=\set{\psi,\vac}$. $B=R_{\sigma\sigma}$.
 
+- When $(2i-1,2i)$ are exchanged as is indicated in the red rectangle, $B=  F\cdot R\cdot F^{-1}$.
 
 ## Implementation of Clifford Gates
+
+With $B$ matrices at hand, we are ready to implement quantum gates, or more specifically, Clifford gates. We will consider only quantum gates on two qubits, for quantum gates on more qubits can be viewed as the direct product of two-qubits gates.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Clifford.png" alt="Clifford gates by braiding" width="60%">
+
+
+
+
+
+
 
 
 
