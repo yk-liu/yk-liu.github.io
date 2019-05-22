@@ -336,7 +336,7 @@ $$
 
 Where $\Id$ shows again that there is a one-to-one correspondence between the canonical tree and the pairwise tree.
 
-$B$ is conveniently the square root of $\sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
+$B$ is conveniently the square root of $\sigma_x=\begin{pmatrix}0&1\newline 1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
 
 $$
 B'=\Id^{-1} \cdot F\cdot R^2\cdot F^{-1}\cdot \Id =\Id^{-1} \cdot F\cdot R\cdot \cancel{\left(F^{-1}\cdot \Id\cdot\Id^{-1} \cdot F\right)}\cdot R\cdot F^{-1}\cdot \Id = (B)^2.
