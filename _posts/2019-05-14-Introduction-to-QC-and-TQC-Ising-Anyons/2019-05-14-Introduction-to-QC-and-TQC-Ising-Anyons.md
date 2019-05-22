@@ -111,7 +111,7 @@ $$
 
 Apart from $F_{\sigma\sigma\sigma}^\sigma$, all other $F$-matrices are just $\mathbb{C}$-numbers, up to an overall phase factor. This corresponds to a gauge degree of freedom that I will fix to $+1$ (or $-1$, read on to see when it's $-1$). We are going to find and list the trivial $F$-matrices appeared in $\Eqn{penta}$ so we can use them in the pentagon equation to obtain $F_{\sigma\sigma\sigma}^\sigma$.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices.png" alt="Trivial F-matrices" width="85%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices.png" alt="Trivial F-matrices" width="75%">
 
 Notice the forbidden fusion tree is marked with a large red cross. $F$-matrices with such trees are just $0$. Substitute corresponding values of $a,c$ into $\left(F _ {a\sigma\sigma}^\vac\right) _ c^\sigma  \left(F _ {\sigma\sigma c}^\vac\right) _ \sigma ^a  = \sum _ e F _ e^a  \left(F _ {\sigma e\sigma}^\vac\right) _ \sigma^\sigma  F _ c^e$, we have
 
