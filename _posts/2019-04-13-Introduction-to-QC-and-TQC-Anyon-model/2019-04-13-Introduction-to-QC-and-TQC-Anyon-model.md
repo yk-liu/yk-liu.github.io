@@ -118,6 +118,12 @@ $$
 
 Adopting the term "decay channel" in high energy physics, a particular result of the fusion is called a "fusion channel". 
 
+Fusion is also independent of order, i.e.,
+
+$$
+(a\times b )\times c = a \times (b \times c)
+$$
+
 
 ### Interpretation of Fusion Equations
 
