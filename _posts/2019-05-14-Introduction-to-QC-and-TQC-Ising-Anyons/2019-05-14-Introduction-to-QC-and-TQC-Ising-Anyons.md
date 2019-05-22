@@ -338,6 +338,7 @@ $$
 Where $\Id$ shows again that there is a one-to-one correspondence between the canonical tree and the pairwise tree.
 
 $B$ is conveniently the square root of $\sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
+
 $$
 B'=\Id^{-1} \cdot F\cdot R^2\cdot F^{-1}\cdot \Id =\Id^{-1} \cdot F\cdot R\cdot \cancel{\left(F^{-1}\cdot \Id\cdot\Id^{-1} \cdot F\right)}\cdot R\cdot F^{-1}\cdot \Id = (B)^2.
 $$
@@ -445,11 +446,11 @@ To complete our setup for a topological quantum computer, we need to define our 
 
 As is stressed before, the only constraint on the entire process of TQC is that we pull everything from the vacuum and return back to vacuum. Sometimes the following diagram is drawn to capture the entire process. The implementation of quantum gates via braiding is a lot like literal "braiding with strands". Such braiding forms a group named Braid group. Many interesting aspects of the braid group can be understood can be calculated intuitively from the diagrams. What is more interesting is when you connect the open ends of the braiding diagrams: you will get a knot, which is remarkable, for you can imagine that the knot is actually topologically invariant against deformations on which the idea of topological quantum computation is built! Are there any ways to characterize TQC with the topological invariants of knots? 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/knot.png" alt="braiding diagrams and knots" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/knot.png" alt="braiding diagrams and knots" width="40%">
 
 In later posts, we will discuss the Johns polynomials[^7][^8], where you will find some weird equations that motivated me writing this series (picture from [^7]).
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/johns.png" alt="Johns Polynomials and 'weird' equations" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/johns.png" alt="Johns Polynomials and 'weird' equations" width="40%">
 
 Since we are not using QFT/"second quantization", hence these anyons are still distinguishable, which makes me wonder how the theory goes to make them indistinguishable. This is a long shot and probably won't be discussed in any posts in the near future.
 
