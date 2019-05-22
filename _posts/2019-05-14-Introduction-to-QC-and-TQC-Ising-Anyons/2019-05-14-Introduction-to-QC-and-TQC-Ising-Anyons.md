@@ -2,10 +2,10 @@
 title: |
   Introduction to Topological Quantum Computation: Ising Anyons Case Study
 categories: Topological-quantum-computation
-tags: Topological-quantum-computation Ising-anyons Majorana-zero-modes
+tags: Topological-quantum-computation Ising-anyons Braiding Pentagon-and-Hexagon-equation
 keywords: Braiding Anyon
-status: Writing
-description: This is a series of posts on topological quantum computations. In this post, the most promising candidate for TQC, Ising anyons, are discussed. F and R matrices are calculated from the consistency requirement, *i.e.* Hexagon and Pentagon equations. Braiding matrices are introduced heuristically. A set of Clifford gates is implemented as the result of braiding. This post features lots of diagrams.
+edit: 2019-05-22
+description: This is a series of posts on topological quantum computations. In this post, the most promising candidate for TQC, Ising anyons, are discussed. A theoretical topological quantum computer is realized via Ising anyons' initialization, braiding, and fusion. F and R matrices are calculated from the consistency requirement, *i.e.* Hexagon and Pentagon equations. Braiding matrices are introduced heuristically. A set of Clifford gates is implemented as the result of braiding. This post features lots of diagrams.
 ---
 
 $$
@@ -281,11 +281,13 @@ As you can imagine, with the increase in the number of qubits, the fusion tree w
 
 ## Encoding $n$-qubits
 
-Let's consider $n$ pairs of $\sigma$ anyons fusing together to $\vac$. Two fusion trees are of particular interest to us. The first one is the canonical fusion tree, the other is the pair wise fusion tree. It's easy to draw a canonical fusion tree horizontally like the one below, and the pair-wise fusion tree is the one more visually intuitive to encode qubit with. Since the fusion result is irrelevant to the order of fusion, $a_i$ on the canonical tree is in one-to-one correspondence to the pairwise tree. Since $a_i$ is always the fusion result of $2i$ $\sigma$ anyons. Thus the $F$-matrices between these two fusion trees are trivial, for $a_i\neq \sigma$. 
+Let's consider $n$ pairs of $\sigma$ anyons fusing together to $\vac$. Two fusion trees are of particular interest to us. The first one is the canonical fusion tree, the other is the pairwise fusion tree. It's easy to draw a canonical fusion tree horizontally like the one below, and the pair-wise fusion tree is the one more visually intuitive to encode qubit with. Since the fusion result is irrelevant to the order of fusion, $a_i$ on the canonical tree is in one-to-one correspondence to the pairwise tree. Since $a_i$ is always the fusion result of $2i$ $\sigma$ anyons. Thus the $F$-matrices between these two fusion trees are trivial, for $a_i\neq \sigma$. 
 
 <figure><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-tree-one-to-one.png" alt="one-to-one correspondence between the canonical tree and the pairwise tree" width="80%"><figcaption>I have provided a flat version below each tree for later use.</figcaption></figure>
 
-Namely, there is a one-to-one correspondence between the canonical tree and the pairwise tree. This preposition is also evident if you consider that these trees have exactly the same degrees of freedom. So if the pairwise tree can be used to encode qubits, so can the canonical tree. In stead of using $\set{a_1,b_2,b_3,\cdots}$ to encode qubits, we can use $\set{a_1,a_2,a_3,\cdots}$. 
+Namely, there is a one-to-one correspondence between the canonical tree and the pairwise tree. This proposition is also evident if you consider that these trees have exactly the same degrees of freedom. So if the pairwise tree can be used to encode qubits, so can the canonical tree. Instead of using $\set{a_1,b_1,b_2,b_3,\cdots,b_n}$ to encode qubits, we can use $\set{a_1,a_2,a_3,\cdots,a_n}$. 
+
+> Although there are $n+1$ elements in $\set{a_1,b_1,b_2,b_3,\cdots,b_n}$, and only $n$ elements in $\set{a_1,a_2,a_3,\cdots,a_n}$, they do have the same degrees of freedom. For elements in $\set{a_1,a_2,a_3,\cdots,a_n}$, each one is free to choose from $\set{\vac,\psi}$, resulting in to $2^n$ choices; but for elements in $\set{a_1,b_1,b_2,b_3,\cdots,b_n}$, they have to fuse into $\vac$ so there is one additional constrain on them (for example, you can not have odd number of $\psi$), hence there is only $2^{(n+1)-1}$ choices, which is the same as elements in $\set{a_1,a_2,a_3,\cdots,a_n}$.
 
 ## Initialization
 
@@ -315,7 +317,7 @@ Hence, to make the magic happen, as we said before, we need to regroup and then 
 > \\
 > F^{-1}=\frac{1}{\sqrt2}\begin{pmatrix}1 & 1 \\1 & -1 \end{pmatrix}=F
 > &\quad
-> R^{-1}= \e^{-\tfrac{\pi}{8}\imath}\begin{pmatrix}1 &0\\0&\imath\end{pmatrix}=R
+> R^{-1}= \e^{\tfrac{\pi}{8}\imath}\begin{pmatrix}1 &0\\0&-\imath\end{pmatrix}
 > \end{array}
 > $$
 >
@@ -340,7 +342,7 @@ $$
 B'=\Id^{-1} \cdot F\cdot R^2\cdot F^{-1}\cdot \Id =\Id^{-1} \cdot F\cdot R\cdot \cancel{\left(F^{-1}\cdot \Id\cdot\Id^{-1} \cdot F\right)}\cdot R\cdot F^{-1}\cdot \Id = (B)^2.
 $$
 
-After so much trouble, we found a single qubit gate $X=\sigma_x$. As you can imagine, if we want to write a $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
+After so much trouble, we found a single qubit gate $X=\sigma_x$. As you can imagine, if we want to write an $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
 
 > Alternatively, you can start from one fusion tree and enumerate all the possible moves and see whether the path lead you to your destination. You can see that there are so many diagrams that are marked "undefined", which are moves that exchange two anyons that are not fused together.
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enumerating all the possible F- and R-moves" width="80%">
@@ -355,74 +357,101 @@ $B$ matrices enable us to consider the moves of anyons in a more direct way. Rem
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-diagrams.png" alt="fusion diagrams" width="70%">
 
-After pulling anyons from the vacuum and before fusing them together in the end, we can concern ourselves solely on the exchange. Like is depicted below.
+After pulling anyons from the vacuum and before fusing them together in the end, we can concern ourselves solely on the exchange, depicted below.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Braiding-diagram.png" alt="braiding diagrams" width="20%">
+
+## Braiding Matrix on Single Qubit
 
 Our mission is then to find out the explicit matrix elements of $B$. The essence of $B$ matrix or a $B$ move is that it exchanges two anyons that are not immediately fused. We can extract the key steps from the braiding procedure as below. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-steps.png" alt=" essence of braiding matrix" width="60%">
 
-Obviously an exchange of $(2i-1,2i)$ anyons are not the same as the exchange of $(2i,2i+1)$ anyons on the canonical tree (label start from left to right, starting from $1$). The former exchange is represented by a $R$ matrix, while the later is not an legal $R$ move. The same is true for the pairwise fusion tree. $(2i-1,2i)$ anyon pairs are different from $(2i,2i+1)$ anyon pairs, in that the fusion ingredient and result are distinct.
+Obviously, an exchange of $(2i-1,2i)$ anyons is not the same as the exchange of $(2i,2i+1)$ anyons on the canonical tree (label start from left to right, starting from $1$). The former exchange is represented by an $R$ matrix, while the later is not a legal $R$ move. The same is true for the pairwise fusion tree. $(2i-1,2i)$ anyon pairs are different from $(2i,2i+1)$ anyon pairs, in that the fusion ingredient and result are distinct.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-cases.png" alt="Cases of Braiding" width="60%">
 
-- When $(2i-1,2i)$ are exchanged as is indicated in the blue rectangle, the $F$ matrices are trivial, as $\set{a_i,a_{i+1},c}=\set{\psi,\vac}$. $B=R_{\sigma\sigma}$.
+- When $(2i-1,2i)$ are exchanged as is indicated in the blue rectangle, the $F$ matrices are trivial, as $\set{a_i,a_{i+1},c}=\set{\psi,\vac}$. $B_{2i-1,2i}=R_{\sigma\sigma}$.
+- When $(2i-1,2i)$ are exchanged as is indicated in the red rectangle, $B_{2i,2i+1}=  F\cdot R\cdot F^{-1}$.
 
-- When $(2i-1,2i)$ are exchanged as is indicated in the red rectangle, $B=  F\cdot R\cdot F^{-1}$.
+## Braiding Matrix on two-qubits
 
-## Implementation of Clifford Gates
+To implement a $B$ matrix on $6$ qubits, we need to write down the $F$ and $R$ matrices on $6$ qubits. Once we have determined $B$ matrices on two qubits fusion space, we will be ready to implement quantum gates, or more specifically, Clifford gates, which generates a large portion of quantum gates.
 
-With $B$ matrices at hand, we are ready to implement quantum gates, or more specifically, Clifford gates. We will consider only quantum gates on two qubits, for quantum gates on more qubits can be viewed as the direct product of two-qubits gates.
+Here are some examples of braiding diagrams with corresponding quantum gates labeled below.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Clifford.png" alt="Clifford gates by braiding" width="60%">
 
-
-
-
-
-
-
-
-
-
-
-Imagine we implement some of the quantum gates using $R$ and $F$ matrices. The problem is that our $F$ and $R$ matrices are written in the basis of six $\sigma$ anyons, while our quantum gates are written in the basis of three pairwise fusion results.
-
-
-
-
-To write the matrix in the fusion space of $6$ anyons, we have
+As we have discussed before, the first 6 braiding diagrams are pretty straight forward to calculate, since the $B$ action only act on a sidle qubit and leaves the other invariant, we have $Z$, $X$ and $H$ (Hadamard) gates on qubit $1$ and $2$ as
 
 $$
-F_{ij}=\begin{pmatrix}\Id \\ &F_{11} &&F_{12} \\&&\Id \\ &F_{21}&&F_{22} \\ &&&&\Id \end{pmatrix}
+Z_1 = (B_{12}\otimes \Id)^2,\\
+Z_2 = (\Id\otimes B_{12})^2,\\
+X_1 = (B_{23}\otimes \Id)^2,\\
+X_2 = (\Id\otimes B_{45})^2,\\
+U_{H,1} = (B_{12}\otimes \Id)\cdot(B_{23}\otimes \Id)\cdot(B_{12}\otimes \Id), \\
+U_{H,2} = (B_{56}\otimes \Id)\cdot(B_{45}\otimes \Id)\cdot(B_{56}\otimes \Id).\\
 $$
 
-Here are some of the gates:
+But we do not know how to define $B_{34}$ from single-qubit $B$ moves, which is no surprise since $CZ$ gates (or $CPhase$ gates) are fundamentally different from single qubit gates as in it creates entanglement between qubits. To obtain $B_{34}$, we have to write the involved $R$ and $F$ matrices in the  $6$-anyon fusion space. Since $3=2i-1,4=2i,(i=2)$ we only need to find out the $R$ matrix.
 
 $$
-R_{23} = \begin{pmatrix}1\\&\e^{-\tfrac{\pi}{8}}\\ &&\imath \e^{-\tfrac{\pi}{8}} \\&&&1 \\ &&&&1\\&&&&&1\end{pmatrix}
+B_{34}= R_{34}= \tilde R_{\sigma\sigma}
+$$
+
+Since our pairwise fusion tree's basis are $\ket{\vac\vac\vac},\ket{\psi\psi\vac},\ket{\vac\psi\psi},\ket{\psi\vac\psi}$, the $R$ matrices will be non-zero only at diagonal elements, since all the states are distinct (If you are not sure, just draw it yourself, see an example [here](https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/B34.png)). Hence we can directly write down the $R$ matrices as
+
+$$
+\begin{array}{ccccc}
+R_{12} = \operatorname{diag}(&R^\vac,&R^\psi,&R^\vac,&R^\psi&)\\
+R_{34} = \operatorname{diag}(&R^\vac,&R^\psi,&R^\psi,&R^\vac&)\\
+R_{56} = \operatorname{diag}(&R^\vac,&R^\vac,&R^\psi,&R^\psi&)\\
+\text{Basis:}&\begin{pmatrix}\vac\\\vac\\\vac\end{pmatrix}
+&\begin{pmatrix}\psi\\\psi\\\vac\end{pmatrix}
+&\begin{pmatrix}\vac\\\psi\\\psi\end{pmatrix}
+&\begin{pmatrix}\psi\\\vac\\\psi\end{pmatrix}       
+\end{array}
+$$
+
+Which gives us the $CZ$ gate we wanted
+
+$$
+\begin{align*}
+CZ&=(R_{12})^{-1}(R_{56})^{-1}R_{34} 
 \\
-\left(R_{23}\right)^2 = \begin{pmatrix}1\\&\e^{-\tfrac{\pi}{4}}\\ && \e^{\tfrac{\pi}{4}} \\&&&1 \\ &&&&1\\&&&&&1\end{pmatrix}
+&= \operatorname{diag}(R^\vac,R^\psi,R^\vac,R^\psi)^{-1}\cdot\operatorname{diag}(R^\vac,R^\vac,R^\psi,R^\psi)^{-1}\cdot \operatorname{diag}(R^\vac,R^\psi,R^\psi,R^\vac)
+\\
+& = \operatorname{diag}(1,-\imath,1,-\imath)\cdot\operatorname{diag}(1,1,-\imath,-\imath)\cdot \operatorname{diag}(1,\imath,\imath,1)
+\\
+&=\operatorname{diag}(1,1,1,-1)
+ \end{align*}
 $$
 
+## Clifford Gates v.s. Universal Gates
 
+We have implemented a set of quantum gates $\set{X_1,X_2,Z_1,Z_2,H_1,H_2,CZ}$ which generates the Clifford gates. Sadly that's the best we can do with Ising anyons, according to[^3]. I think related articles are
 
+-  1.[^4] why MZM can only have Clifford gates, 
+-  2.[^5] Why do we need gates other than gates from Clifford group.
+-  3.[^6] detailed description on Clifford group, points to "Gottesman-Knill theorem" and states "no elementary proof for universality".
 
+Unfortunately, I do not know much on the topic. The discussion could take on another whole post so hopefully, I can write about that in future posts.
 
 ## Fusion
 
+To complete our setup for a topological quantum computer, we need to define our fusion operators, which is conveniently defined as projection operators such as $\ket{1}\bra{1}\otimes \Id$. This again reminds us that fusion is just like measurements.
 
+# Summary and Outlook
 
-## Summary
+As is stressed before, the only constraint on the entire process of TQC is that we pull everything from the vacuum and return back to vacuum. Sometimes the following diagram is drawn to capture the entire process. The implementation of quantum gates via braiding is a lot like literal "braiding with strands". Such braiding forms a group named Braid group. Many interesting aspects of the braid group can be understood can be calculated intuitively from the diagrams. What is more interesting is when you connect the open ends of the braiding diagrams: you will get a knot, which is remarkable, for you can imagine that the knot is actually topologically invariant against deformations on which the idea of topological quantum computation is built! Are there any ways to characterize TQC with the topological invariants of knots? 
 
-As is stressed before, the only constraint on the entire process of TQC is that we pull everything from the vacuum and return back to vacuum.
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/knot.png" alt="braiding diagrams and knots" width="50%">
 
-About the indistinguishability of anyons, I am not very sure. We are not using QFT/"second quantization", hence these anyons are still distinguishable.
+In later posts, we will discuss the Johns polynomials[^7][^8], where you will find some weird equations that motivated me writing this series (picture from [^7]).
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/johns.png" alt="Johns Polynomials and 'weird' equations" width="50%">
 
-
-
+Since we are not using QFT/"second quantization", hence these anyons are still distinguishable, which makes me wonder how the theory goes to make them indistinguishable. This is a long shot and probably won't be discussed in any posts in the near future.
 
 # Acknowledgement
 
@@ -432,3 +461,11 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 
 [^1]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
 [^2]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
+[^3]: Lahtinen, V., & Pachos, J. (2017). A short introduction to topological quantum computation. *SciPost Physics*, *3*(3), 021.
+[^4]: Roy, Ananda, and David P. DiVincenzo. "Topological quantum computing." *arXiv preprint arXiv:1701.05052* (2017).
+[^5]: Bravyi, S., Gosset, D., & Koenig, R. (2018). Quantum advantage with shallow circuits. *Science*, *362*(6412), 308-311.
+[^6]: [http://home.lu.lv/~sd20008/papers/essays/Clifford%20group%20[paper].pdf](http://home.lu.lv/~sd20008/papers/essays/Clifford%20group%20[paper].pdf)
+[^7]: <http://users.physik.fu-berlin.de/~pelster/Anyon1/Lecture3.pdf>
+[^8]: <https://pdfs.semanticscholar.org/3c5c/6ece0e0738c7d3f30940d2bd4937d7f7acf9.pdf>
+
+
