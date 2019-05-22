@@ -205,17 +205,6 @@ ol {
     margin-bottom: 0;
 }
 
-div#content-container ol {
-  counter-reset: item
-}
-div#content-container li {
-  display: block
-}
-div#content-container li:before {
-  content: counters(item, ".") " ";
-  counter-increment: item
-}
-
 code, tt {
 	margin: 0 2px;
  padding: 2px 4px;
