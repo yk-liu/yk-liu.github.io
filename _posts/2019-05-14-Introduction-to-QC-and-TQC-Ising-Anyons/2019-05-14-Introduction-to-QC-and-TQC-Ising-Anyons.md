@@ -61,7 +61,7 @@ The physical significance, as well as experimental realization, will not be disc
 > \end{align*}
 > $$
 > 
-> Where the $2$ does not mean two sigma anyons. It is means that there are two fusion channels or paths, one of them passes through $\vac$ and the other passes through $\psi$. Both of them end up with one $\sigma$ anyon. Thus, $2$ retains the dimension of this fusion space.
+> Where the $2$ does not mean two sigma anyons. It is means that there are two fusion channels or paths, one of them passes through $\vac$ and the other passes through $\psi$. Both of them end up with one $\sigma$ anyon. Thus, $2$ retains the dimension of this fusion space. See below when we actually find the fusion space for $\sigma\times\sigma\times\sigma=2\sigma$ in calculating $F_{\sigma\sigma\sigma}^\sigma$'s elements
 
 ## $F$-Matrices
 
@@ -83,19 +83,19 @@ The $F$ matrices is better understood with the following diagram as basis transf
 
 With additional "branches" of the fusion tree, we have:
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B1.png" alt="F-matrix elements, Kronecker product" width="45%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B1.png" alt="F-matrix elements, Kronecker product" width="40%">
 
 or with irregular elements like the following one.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements-irregular.png" alt="F-matrix elements, Kronecker product" width="45%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/F-matrix-elements-irregular.png" alt="F-matrix elements, Kronecker product" width="40%">
 
 The inverse is written as
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B3.png" alt="F-matrix elements, Kronecker product" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B3.png" alt="F-matrix elements, Kronecker product" width="40%">
 
 ### Step 1: First Pentagon
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Pentagon.png" alt="Pentagon identity" width="100%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Pentagon.png" alt="Pentagon identity" width="85%">
 
 The pentagon equation is written as
 
@@ -111,7 +111,7 @@ $$
 
 Apart from $F_{\sigma\sigma\sigma}^\sigma$, all other $F$-matrices are just $\mathbb{C}$-numbers, up to an overall phase factor. This corresponds to a gauge degree of freedom that I will fix to $+1$ (or $-1$, read on to see when it's $-1$). We are going to find and list the trivial $F$-matrices appeared in $\Eqn{penta}$ so we can use them in the pentagon equation to obtain $F_{\sigma\sigma\sigma}^\sigma$.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices.png" alt="Trivial F-matrices" width="100%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices.png" alt="Trivial F-matrices" width="85%">
 
 Notice the forbidden fusion tree is marked with a large red cross. $F$-matrices with such trees are just $0$. Substitute corresponding values of $a,c$ into $\left(F _ {a\sigma\sigma}^\vac\right) _ c^\sigma  \left(F _ {\sigma\sigma c}^\vac\right) _ \sigma ^a  = \sum _ e F _ e^a  \left(F _ {\sigma e\sigma}^\vac\right) _ \sigma^\sigma  F _ c^e$, we have
 
@@ -136,7 +136,7 @@ As you can see, there are only two independent equations, from diagonal parts of
 
 We can draw a second pentagon as below.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Pentagon-2.png" alt="Second pentagon identity" width="100%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Pentagon-2.png" alt="Second pentagon identity" width="85%">
 
 This time we are going to find out the two sets of independent equations from $\Eqn{penta2}$ and only list the $F$-matrices appears in those equations.
 
@@ -152,7 +152,7 @@ $$
 
 The two sets of independent equation can be obtained by setting $b=\vac, c=\vac $ and $b=\vac, c=\psi$. After finding the trivial $F$-matrices associated with the equations,  
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices-2.png" alt="Trivial F-matrices" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Trivial-F-matrices-2.png" alt="Trivial F-matrices" width="60%">
 
 We have:
 
@@ -203,18 +203,17 @@ While in Pachos' book, the explanation for some elements is set to $1$ was simpl
 
 ## $R$-matrices
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Rmatrix.png" alt="R-matrix" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Rmatrix.png" alt="R-matrix" width="30%">
 
 Recall the $R$-matrix as above. The $R$ matrix is understood as a basis transformation of fusion trees like the following.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B2.png" alt="R-matrix elements, Kronecker product" width="45%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/4by4B2.png" alt="R-matrix elements, Kronecker product" width="40%">
 
 With all the $F$ matrices figured out, $R$-matrix is easy to calculate. The $R$-matrix is trivial if either $a$ or $b$ is vacuum. Since moving around a particle would not result in any topological phase.
 
 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Hexagon.png" alt="Hexagon identity" width="70%">
-
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Hexagon.png" alt="Hexagon identity" width="60%">
 $$
 \begin{array}{}
 \sum_b \left(F_{312}^4\right)_b^a R_{3b}^4 \left(F_{123}^4 \right)_c^b = R_{13}^a \left(F_{132}^4\right)_c^a R_{23}^c 
@@ -263,7 +262,7 @@ $$
 
 ## Encoding Single Qubit
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/single-qubit.png" alt="Anyons fusion space single Qubit" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/single-qubit.png" alt="Anyons fusion space single Qubit" width="40%">
 
 As is described before, since fusion is equivalent to a measurement, the only way to achieve superposition is to have an "incomplete measurement". For $4$ anyons, a certain total fusion result (called a sector) has two intermediate channels. In our case, we will always pull our $\sigma$ anyons pairwise form the vacuum, and fusion them back into the vacuum. 
 
@@ -271,19 +270,19 @@ The upside-down fusion tree symbolizes that these anyons are pulled from the vac
 
 ## Encoding Two Q-Bits
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/two-qubit.png" alt="Anyons fusion space two Qubits" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/two-qubit.png" alt="Anyons fusion space two Qubits" width="40%">
 
 The same can be done for $2$ Qubits. $6$ anyons can encode two qubits. Following the same pattern, $2N$ anyons have $2^{N-1}$ intermediate fusion channels, and can thus encode $N-1$ qubits. The upside-down fusion tree symbolizes that these anyons are pulled from the vacuum.
 
 As you can imagine, with the increase in the number of qubits, the fusion tree will become considerably larger and harder to draw. A new type of fusion diagram came into existence just to save some space. The idea depicted as below.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/different-fusion-diagrams.png" alt="different fusion diagrams" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/different-fusion-diagrams.png" alt="different fusion diagrams" width="50%">
 
 ## Encoding $n$-qubits
 
 Let's consider $n$ pairs of $\sigma$ anyons fusing together to $\vac$. Two fusion trees are of particular interest to us. The first one is the canonical fusion tree, the other is the pairwise fusion tree. It's easy to draw a canonical fusion tree horizontally like the one below, and the pair-wise fusion tree is the one more visually intuitive to encode qubit with. Since the fusion result is irrelevant to the order of fusion, $a_i$ on the canonical tree is in one-to-one correspondence to the pairwise tree. Since $a_i$ is always the fusion result of $2i$ $\sigma$ anyons. Thus the $F$-matrices between these two fusion trees are trivial, for $a_i\neq \sigma$. 
 
-<figure><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-tree-one-to-one.png" alt="one-to-one correspondence between the canonical tree and the pairwise tree" width="80%"><figcaption>I have provided a flat version below each tree for later use.</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-tree-one-to-one.png" alt="one-to-one correspondence between the canonical tree and the pairwise tree" width="70%"><figcaption>I have provided a flat version below each tree for later use.</figcaption></figure>
 
 Namely, there is a one-to-one correspondence between the canonical tree and the pairwise tree. This proposition is also evident if you consider that these trees have exactly the same degrees of freedom. So if the pairwise tree can be used to encode qubits, so can the canonical tree. Instead of using $\set{a_1,b_1,b_2,b_3,\cdots,b_n}$ to encode qubits, we can use $\set{a_1,a_2,a_3,\cdots,a_n}$. 
 
@@ -293,7 +292,7 @@ Namely, there is a one-to-one correspondence between the canonical tree and the 
 
 The initialization is then pulling different intermediate anyons from the vacuum. What is the physical process that determines whether a pair of $\sigma$ anyons or a pair of $\psi$ anyons are pulled from the vacuum? As an oversimplification, we can slowly turn on the defects so some excitations as anyons are introduced. Such appearance of anyons can be regarded as "pulling from the vacuum". In the case of Ising anyons, the building block is $\sigma$ anyon. By introducing defects, $\sigma$ anyons emerge. We can bring the $\sigma$ anyons together pair-wise to see if they behave like a $\psi$ or $\vac$. After such operation, we separate the anyons pair-wise as if they were pulled form $\psi$ or $\vac$. I will leave a detailed answer to the question to a case study of physical realization of such a system in later posts. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/initialization.png" alt="initialization of two Qubits" width="80%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/initialization.png" alt="initialization of two Qubits" width="70%">
 
 For now, we will just concern ourselves with the fact that we can control what to be pulled from the vacuum. As such, $N$ qubits can be prepared. 
 
@@ -303,7 +302,7 @@ You might ask that if two anyons are created pairwise from the vacuum, how can t
 
 So how exactly are we going to arrange our combination of $F$ and $R$ moves, such that it could give us a quantum gate on a qubit? Well, $R$ moves won't be of much use. If you braid two anyons which originally fuse to $c$, then they will continue fuse to $c$, due to the conservation of topological charges.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Rmatrix.png" alt="R-matrix" width="20%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Rmatrix.png" alt="R-matrix" width="25%">
 
 Hence, to make the magic happen, as we said before, we need to regroup and then fuse the anyons, like the upper two fusion trees.
 
@@ -323,11 +322,11 @@ Hence, to make the magic happen, as we said before, we need to regroup and then 
 >
 > > Such result can also be directly calculated from specific systems. See Section III. B. 2 of [^2].
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-2.png" alt="quantum gates by braiding, step by step" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-2.png" alt="quantum gates by braiding, step by step" width="60%">
 
 Such action can be achieved through a sequence of $F$ and $R$ moves. We can identify the $R$ and $F$ matrices in the process by writing the following diagrams. Here are the corresponding matrices:
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-matrices.png" alt="quantum gates by braiding, step by step, matrices" width="100%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates-matrices.png" alt="quantum gates by braiding, step by step, matrices" width="85%">
 
 Now let's calculate the matrix correspond to such fusion, let's denote the matrix as $B$ for reasons will be clear later.
 
@@ -346,7 +345,7 @@ $$
 After so much trouble, we found a single qubit gate $X=\sigma_x$. As you can imagine, if we want to write an $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
 
 > Alternatively, you can start from one fusion tree and enumerate all the possible moves and see whether the path lead you to your destination. You can see that there are so many diagrams that are marked "undefined", which are moves that exchange two anyons that are not fused together.
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enumerating all the possible F- and R-moves" width="80%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enumerating all the possible F- and R-moves" width="70%">
 
 All the trouble is simply because we can not define a matrix that characterizes two non-fusing anyons exchange. How easier our lives will be if only we have such matrix!
 
@@ -356,21 +355,21 @@ Braiding matrix is the savior. What we have got from the last section is the ste
 
 $B$ matrices enable us to consider the moves of anyons in a more direct way. Remember that I introduced figure (c) in the second post of this series.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-diagrams.png" alt="fusion diagrams" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-diagrams.png" alt="fusion diagrams" width="65%">
 
 After pulling anyons from the vacuum and before fusing them together in the end, we can concern ourselves solely on the exchange, depicted below.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Braiding-diagram.png" alt="braiding diagrams" width="20%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Braiding-diagram.png" alt="braiding diagrams" width="12%">
 
 ## Braiding Matrix on Single Qubit
 
 Our mission is then to find out the explicit matrix elements of $B$. The essence of $B$ matrix or a $B$ move is that it exchanges two anyons that are not immediately fused. We can extract the key steps from the braiding procedure as below. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-steps.png" alt=" essence of braiding matrix" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-steps.png" alt=" essence of braiding matrix" width="50%">
 
 Obviously, an exchange of $(2i-1,2i)$ anyons is not the same as the exchange of $(2i,2i+1)$ anyons on the canonical tree (label start from left to right, starting from $1$). The former exchange is represented by an $R$ matrix, while the later is not a legal $R$ move. The same is true for the pairwise fusion tree. $(2i-1,2i)$ anyon pairs are different from $(2i,2i+1)$ anyon pairs, in that the fusion ingredient and result are distinct.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-cases.png" alt="Cases of Braiding" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-cases.png" alt="Cases of Braiding" width="50%">
 
 - When $(2i-1,2i)$ are exchanged as is indicated in the blue rectangle, the $F$ matrices are trivial, as $\set{a_i,a_{i+1},c}=\set{\psi,\vac}$. $B_{2i-1,2i}=R_{\sigma\sigma}$.
 - When $(2i-1,2i)$ are exchanged as is indicated in the red rectangle, $B_{2i,2i+1}=  F\cdot R\cdot F^{-1}$.
@@ -381,7 +380,7 @@ To implement a $B$ matrix on $6$ qubits, we need to write down the $F$ and $R$ m
 
 Here are some examples of braiding diagrams with corresponding quantum gates labeled below.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Clifford.png" alt="Clifford gates by braiding" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Clifford.png" alt="Clifford gates by braiding" width="50%">
 
 As we have discussed before, the first 6 braiding diagrams are pretty straight forward to calculate, since the $B$ action only act on a sidle qubit and leaves the other invariant, we have $Z$, $X$ and $H$ (Hadamard) gates on qubit $1$ and $2$ as
 
