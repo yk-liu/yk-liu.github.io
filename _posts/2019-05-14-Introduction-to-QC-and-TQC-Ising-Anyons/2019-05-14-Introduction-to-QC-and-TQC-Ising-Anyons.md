@@ -447,9 +447,9 @@ As is stressed before, the only constraint on the entire process of TQC is that 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/knot.png" alt="braiding diagrams and knots" width="40%">
 
-In later posts, we will discuss the Johns polynomials[^7][^8], where you will find some weird equations that motivated me writing this series (picture from [^7]).
+In later posts, we will discuss the Jones polynomials[^7][^8], where you will find some weird equations that motivated me writing this series (picture from [^7]).
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/johns.png" alt="Johns Polynomials and 'weird' equations" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/jones.png" alt="Jones Polynomials and 'weird' equations" width="40%">
 
 Since we are not using QFT/"second quantization", hence these anyons are still distinguishable, which makes me wonder how the theory goes to make them indistinguishable. This is a long shot and probably won't be discussed in any posts in the near future.
 
