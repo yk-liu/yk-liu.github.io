@@ -2,7 +2,7 @@
 title: |
   Introduction to Topological Quantum Computation: Anyons Model
 categories: Topological-quantum-computation
-tags: Anyons Braiding Fusion Topological-quantum-computation
+tags: Anyons Topological-quantum-computation Braiding Pentagon-and-Hexagon-equation
 edit: 2018-05-16
 description: This is a series of posts on topological quantum computations. The aim of this series is to work my way to understanding the diagrams of "strands" widely used in the field. This post discusses anyon model in general. Fusion diagram and hexagon and pentagon identities are introduced.
 comments:
