@@ -279,6 +279,14 @@ As you can imagine, with the increase in the number of qubits, the fusion tree w
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/different-fusion-diagrams.png" alt="different fusion diagrams" width="60%">
 
+## Encoding $n$-qubits
+
+Let's consider $n$ pairs of $\sigma$ anyons fusing together to $\vac$. Two fusion trees are of particular interest to us. The first one is the canonical fusion tree, the other is the pair wise fusion tree. It's easy to draw a canonical fusion tree horizontally like the one below, and the pair-wise fusion tree is the one more visually intuitive to encode qubit with. Since the fusion result is irrelevant to the order of fusion, $a_i$ on the canonical tree is in one-to-one correspondence to the pairwise tree. Since $a_i$ is always the fusion result of $2i$ $\sigma$ anyons. Thus the $F$-matrices between these two fusion trees are trivial, for $a_i\neq \sigma$. 
+
+<figure><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-tree-one-to-one.png" alt="one-to-one correspondence between the canonical tree and the pairwise tree" width="80%"><figcaption>I have provided a flat version below each tree for later use.</figcaption></figure>
+
+Namely, there is a one-to-one correspondence between the canonical tree and the pairwise tree. This preposition is also evident if you consider that these trees have exactly the same degrees of freedom. So if the pairwise tree can be used to encode qubits, so can the canonical tree. In stead of using $\set{a_1,b_2,b_3,\cdots}$ to encode qubits, we can use $\set{a_1,a_2,a_3,\cdots}$. 
+
 ## Initialization
 
 The initialization is then pulling different intermediate anyons from the vacuum. What is the physical process that determines whether a pair of $\sigma$ anyons or a pair of $\psi$ anyons are pulled from the vacuum? As an oversimplification, we can slowly turn on the defects so some excitations as anyons are introduced. Such appearance of anyons can be regarded as "pulling from the vacuum". In the case of Ising anyons, the building block is $\sigma$ anyon. By introducing defects, $\sigma$ anyons emerge. We can bring the $\sigma$ anyons together pair-wise to see if they behave like a $\psi$ or $\vac$. After such operation, we separate the anyons pair-wise as if they were pulled form $\psi$ or $\vac$. I will leave a detailed answer to the question to a case study of physical realization of such a system in later posts. 
@@ -325,18 +333,19 @@ $$
 B=F\cdot \Id\cdot R\cdot F^{-1}\cdot \Id^{-1} =\frac{1}{\sqrt 2} \e^{\imath \pi/8} \begin{pmatrix}1&\imath\\\imath&1\end{pmatrix}
 $$
 
-Which is conveniently the square root of $\sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
+Where $\Id$ shows again that there is a one-to-one correspondence between the canonical tree and the pairwise tree.
 
+$B$ is conveniently the square root of $\sigma_x=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ with an overall phase. Which we can construct by repeating the above result. Alternatively, we can rotate the middle two anyons twice, which numerically
 $$
 B'=F\cdot \Id\cdot R^2\cdot F^{-1}\cdot \Id^{-1} =F\cdot \Id\cdot R\cdot \left(\cancel{F^{-1}\cdot \Id^{-1}} \cdot\cancel{F\cdot \Id}\right)\cdot R\cdot F^{-1}\cdot \Id^{-1} = (B)^2.
 $$
 
 After so much trouble, we found a single qubit gate. As you can imagine, if we want to write a $n$-qubit gate, even if $n=2$, writing down all these fusion trees will be very painful. 
 
-All the trouble is simply because we can not define a matrix that characterizes two non-fusing anyons exchange. How easier our lives will be if only we have such matrix!
-
 > Alternatively, you can start from one fusion tree and enumerate all the possible moves and see whether the path lead you to your destination. You can see that there are so many diagrams that are marked "undefined", which are moves that exchange two anyons that are not fused together.
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/steps-to-quantum-gates.png" alt="enumerating all the possible F- and R- moves" width="80%">
+
+All the trouble is simply because we can not define a matrix that characterizes two non-fusing anyons exchange. How easier our lives will be if only we have such matrix!
 
 ## Braiding Matrices
 
@@ -344,13 +353,19 @@ Braiding matrix is the savior. What we get from the last section is the step-by-
 
 $B$ matrices enable us to consider the moves of anyons in a more direct way. Remember that I introduced figure (c) in the second post of this series.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-diagrams.png" alt="fusion diagrams" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/fusion-diagrams.png" alt="fusion diagrams" width="70%">
 
 After pulling anyons from the vacuum and before fusing them together in the end, we can concern ourselves solely on the exchange. Like is depicted below.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Braiding-diagram.png" alt="braiding diagrams" width="20%">
 
-Our mission is then to find out the explicit matrix elements of $B$.
+Our mission is then to find out the explicit matrix elements of $B$. We can extract the key steps from the braiding procedure as below.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-steps.png" alt="braiding diagrams" width="60%">
+
+Obviously an exchange of $(2i-1,2i)$ anyons are not the same as the exchange of $(2i,2i+1)$ anyons on the canonical tree (label start from left to right, starting from $1$). The former exchange is represented by a $R$ matrix, while the later is not an legal $R$ move. The same is true for the pairwise fusion tree. $(2i-1,2i)$ anyon pairs are different from $(2i,2i+1)$ anyon pairs, in that the fusion ingredient and result are distinct.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-14-Introduction-to-QC-and-TQC-Ising-Anyons/assets/Bmatrix-cases.png" alt="braiding diagrams" width="60%">
 
 
 
