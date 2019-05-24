@@ -29,7 +29,7 @@ This post mostly follows [^Kauffmanknots]
 
 # Overview of the Strangeness of Knots Theory
 
-Knots are simple and mundane objects everyone knows from their daily life. Tying is easy and untying a knot can be challenging. What is more challenging is to tell if a knot is "the same" as another one, namely the classification of knots. As is shown by the magic tricks in the beginning of Dr. Kauffman's lecture at KITP titled [Revolutions in Knots, Braids and Physics, Louis Kauffman](http://online.kitp.ucsb.edu/online/friends/kauffman/), our intuition can not be trusted. Below is an example of a nasty un-knot (Example taken from[^knotbook]).
+Knots are simple and mundane objects everyone knows from their daily life. Tying is easy and untying a knot can be challenging. What is more challenging is to tell if a knot is "the same" as another one, namely the classification of knots. As is shown by the magic tricks in the beginning of Dr. Kauffman's lecture at KITP titled [Revolutions in Knots, Braids and Physics, Louis Kauffman](http://online.kitp.ucsb.edu/online/friends/kauffman/), our intuition can not be trusted. Below is an example of a nasty unknot (Example taken from[^knotbook]).
 
 ![two-knots-equivalent](/assets/unknot-equivalence.png)
 
@@ -149,23 +149,38 @@ a\times b=c, \quad \text{all three colors are present}\newline
 a\times c=b, \quad \text{all three colors are present}
 \end{cases}
 $$
-where $\times$ is read as "cross", as the string of color $a$ crosses string of color $b$. Of course once we have generalized to $N$ colorability, we don't have $a\times b=c$ any more, instead we will have $a \times b = x$. To avoid loss of generality, $a\times b $ is often left un-evaluated as a "color" as a whole.
+where $\times$ is read as "cross", as the string of color $a$ crosses string of color $b$. 
 
-A careful inspection on the following diagram reveals that we need to make a further distinction between an over-crossing and an under-crossing, denoted respectively as $a\#b$ and $a*b$  as in [^Kauffmanknots], since the two $a\times b$ are in different colors. 
+A careful inspection on the following diagram reveals that we need to make a further distinction between an over-crossing and an under-crossing, since the two $a\times b$ are in different colors and cannot be the same, as is illustrated below. 
 
 ![](assets/quandle-over-and-under.png)
 
-A further look at the trefoil reveals that $*$ is not associative. The same is true for $\#$.
+Also to spare ourselves from writing redundant equations as "$a$ goes over $b$ does not change color" such as $a\boxed{\text{cross over}} b=a$, we will only make distinction between a left-handed or a right-handed crossing, and leave the upper string unchanged. 
+
+We assign to each string in a knot an arrow in a self-consistent way. If the cross product of the directional vector of the upper string and that lower string is **outward**-perpendicular to the page, we call the crossing right-handed, otherwise it's left-handed. Or you can orient the lower string upward and the direction of the upper string determines it's handedness. We use $a∗b$ to denote that string $a$ is right-handed crossed by $b$; and $a\#b$ to denoted the other case as in [^Kauffmanknots]. 
+
+![](assets/quandle-hand.png)
+
+We can test out our labeling system in tri-color examples. All the crossing of the trefoil shown below are left-handed, hence
+
+![](assets/quandle-trefoil.png)
 $$
 \begin{array}{}
-\enclose{circle}{1}: c*a=b,\quad \text{$c$ goes under $a$, turns into $b$.}\\
-\enclose{circle}{2}: a*b=c,\quad \text{$a$ goes under $b$, turns into $c$.}\\
-\enclose{circle}{3}: b*c=a,\quad \text{$b$ goes under $c$, turns into $a$.}\\
+\enclose{circle}{1}: c\#a=b,\quad \text{$c$ goes under $a$, turns into $b$.}\\
+\enclose{circle}{2}: a\#b=c,\quad \text{$a$ goes under $b$, turns into $c$.}\\
+\enclose{circle}{3}: b\#c=a,\quad \text{$b$ goes under $c$, turns into $a$.}\\
 \end{array}\\
-a*(b*c) = a*a =a \\
-(a*b)*c = c*c = c
 $$
-In order to make such distinction on orders, we can introduce a direction to stings. We are going to use arrows  consistently mark the direction to travel trough a certain link. And now let's translate the color rules to label rules using the Reidemeister's Theorem. 
+ A further look at the trefoil soon reveals that $\#$ is not associative. The same is true for $*$.
+$$
+a\#(c\#b) = a\#a = a \\
+(a\#c)\#b = b\#b = b
+$$
+Now let's translate the color rules to label rules using the Reidemeister's Theorem. 
+
+### Obtain the Quandle
+
+In this section, we are using $N$ colors (labels), denoted as $\set{a,b,c,d,\cdots}$. Although there are only $26$ letters, we imagine that we will never run out of characters, also because $a,b,c$ is always nicer to read than $a_1,a_2,a_3$. Of course once we have generalized to $N$ colorability, we don't have $a\times b=c$ or $a\#b=c$ as in the last section any more, instead we have $a \# b = x$. To avoid loss of generality, $a\# b $ is often left un-evaluated as a "color" as a whole.
 
 The first Reidemeister's move is evident. 
 
@@ -175,13 +190,28 @@ We have
 $$
 a\#a =a , \quad a* a = a
 $$
+---
+
 ![](assets/R-move-2-N-color.png)
 
-The second Reidemeister's move is a little bit complicated, but we can simplify many expressions from the previous equations. Note that we still want to preserve the definition of a "strand", thus although there are many four-term operations, we can simplify the final terms using $a\#b=b, b\#a=b$ as intermediate results. 
+The second Reidemeister's move is a little complicated. I used more than three colors to color code it to avoid confusion (since $b\#a\neq a*b$). The Reidemeister's theorem requires that the corresponding ends have the same color.
+
 $$
-(a\#b)\#(b*a) \substack{\text{simplify}\newline =} a\#(b*a)
+(b\#a)*a = b \\
+(a*b)\#b = b
 $$
 
+From these equations, $\#$ and $*$ looks like inverse operations to each other, which is discussed in detail in Chapter 3 in [^Alge-Knots].
+
+---
+
+![](assets/R-move-3-N-color.png)
+
+In the same manner we can get results form the third Reidemeister's move. We require again that corresponding ends have the same color. From the above diagram, we have
+$$
+(a\#b)\#c = (a\#c)\#(b\#c)
+$$
+and the mirror diagram would be
 
 
 
@@ -245,3 +275,4 @@ a,b,c.
 [^Kauffmanknots]: Kauffman, L. H. (2005). Knots. *Geometries of Nature, Living Systems and Human Cognition,* 131-202. doi:10.1142/9789812700889_0003. [A better typeset version](http://homepages.math.uic.edu/~kauffman/Knots.pdf).
 [^Reidemeister-theorem]: <https://www.encyclopediaofmath.org/index.php/Reidemeister_theorem>
 [^Culprit]: Henrich, A., & Kauffman, L. H. (2010). Unknotting unknots. *arXiv preprint arXiv:1006.4176*.
+[^Alge-Knots]: Elhamdadi, M., & Nelson, S. (2015). *Quandles* (Vol. 74). American Mathematical Soc..
