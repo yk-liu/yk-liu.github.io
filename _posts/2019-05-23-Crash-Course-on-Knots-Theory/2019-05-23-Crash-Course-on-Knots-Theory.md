@@ -1,8 +1,9 @@
 ---
+
 title: |
   Introduction to Topological Quantum Computation: Crash Course on Knots Theory
-categories: Topological-quantum-computation Knot-theory
-tags: Topological-quantum-computation Knot-theory Braiding Jones-Polynomial 
+categories: Topological-quantum-computation Knot-theory 
+tags: Topological-quantum-computation Knot-theory Braiding Jones-Polynomial modular
 edit: 2019-05-23
 description: This is a series of posts on topological quantum computations. To address the reason why we introduce such "strange-looking" equations to calculate Jones polynomials, we have to know the history of knot theory, and understand how the pioneers came up with their ideas. 
 ---
@@ -25,7 +26,7 @@ $$
 \require{cancel}
 $$
 
-This post mostly follows [^Kauffmanknots]
+This post mostly follows [^Kauffman-knots]
 
 # Overview of the Strangeness of Knots Theory
 
@@ -51,7 +52,7 @@ In 1860s, Lord Kelvin, like all giants in science, was pondering about a theory 
 - The variety of atoms, as shown by the periodic table of elements.
 - The vibrational properties of atoms, as shown by their spectral lines.
 
-One day he saw smoke rings of his physicist friend P.G. Tait[^smokerings], and was impressed by their stability, and vibrational properties of the smoke rings. He noticed how knots resembles atoms in many ways. In 1867, He presented a paper to the Royal Society of Edinburgh, in which he wrote:
+One day he saw smoke rings of his physicist friend P.G. Tait[^smoke-rings], and was impressed by their stability, and vibrational properties of the smoke rings. He noticed how knots resembles atoms in many ways. In 1867, He presented a paper to the Royal Society of Edinburgh, in which he wrote:
 
 > Models of knotted and linked vortex atoms were presented to the Society, the infinite variety of which is more than sufficient to explain the allotropies and affinities of all known matter.
 
@@ -89,7 +90,9 @@ Although the Reidemeister theorem is a huge success in telling us how to deform 
 
 A natural question arises: "Is the trefoil knotted at all?" Since we cannot exhaust the infinite moves on a knot, we are unable to make the conclusion that the trefoil is knotted simply because *we can't find* a series of Reidemeister moves. For all we know, there might be a way to deform a trefoil to a unknot, we just didn't know yet. Of course a trefoil is knotted, the question is how to ***prove*** it. To prove trefoil is knotted, mathematicians came up with a knot invariant called the tri-colorability.
 
-## Search of Invariants of Knots:
+# Search for Simple Invariants of Knots
+
+## Tri-colorability
 
 The most intuitive knot invariant is tri-colorability [^knotbook], which maps knots into the set $\set{\text{True}, \text{False}}$. 
 
@@ -126,7 +129,7 @@ Thus we have proven that the three Reidemeister's move preserves tri-colorabilit
 
 Since a trefoil can be tri-colored and a unknot can't, and tricolorability being a knot invariant, we have proven that the trefoil is indeed knotted. Which is the perfect example of how mathematicians go out of their ways to prove things that does not require proving. However, such tri-colorability can be generalized to $N$-colorability.
 
-## $N$-colorability: Quandle
+## $N$-colorability and "Quandle"
 
 Remember the figure 8 knot. It cannot be tri-colored, but can be quad-colored. Is quad-colorability a knot invariant? It is also natural to ask if $N$-colorability is a knot invariant. To study $N$-colorability, clearly we cannot rely on drawing colorful diagrams of knots. For we will soon run out of distinguishable colors, and even coloring Reidemeister's moves will become impossible.
 
@@ -157,7 +160,7 @@ A careful inspection on the following diagram reveals that we need to make a fur
 
 Also to spare ourselves from writing redundant equations as "$a$ goes over $b$ does not change color" such as $a\boxed{\text{cross over}} b=a$, we will only make distinction between a left-handed or a right-handed crossing, and leave the upper string unchanged. 
 
-We assign to each string in a knot an arrow in a self-consistent way. If the cross product of the directional vector of the upper string and that lower string is **outward**-perpendicular to the page, we call the crossing right-handed, otherwise it's left-handed. Or you can orient the lower string upward and the direction of the upper string determines it's handedness. We use $a∗b$ to denote that string $a$ is right-handed crossed by $b$; and $a\#b$ to denoted the other case as in [^Kauffmanknots]. 
+We assign to each string in a knot an arrow in a self-consistent way. If the cross product of the directional vector of the upper string and that lower string is **outward**-perpendicular to the page, we call the crossing right-handed, otherwise it's left-handed. Or you can orient the lower string upward and the direction of the upper string determines it's handedness. We use $a∗b$ to denote that string $a$ is right-handed crossed by $b$; and $a\#b$ to denoted the other case as in [^Kauffman-knots]. 
 
 ![](assets/quandle-hand.png)
 
@@ -178,7 +181,7 @@ a\#(c\#b) = a\#a = a \\
 $$
 Now let's translate the color rules to label rules using the Reidemeister's Theorem. 
 
-### Obtain the Quandle
+### Obtain the $N$-colorability
 
 In this section, we are using $N$ colors (labels), denoted as $\set{a,b,c,d,\cdots}$. Although there are only $26$ letters, we imagine that we will never run out of characters, also because $a,b,c$ is always nicer to read than $a_1,a_2,a_3$. Of course once we have generalized to $N$ colorability, we don't have $a\times b=c$ or $a\#b=c$ as in the last section any more, instead we have $a \# b = x$. To avoid loss of generality, $a\# b $ is often left un-evaluated as a "color" as a whole.
 
@@ -207,72 +210,153 @@ From these equations, $\#$ and $*$ looks like inverse operations to each other, 
 
 ![](assets/R-move-3-N-color.png)
 
-In the same manner we can get results form the third Reidemeister's move. We require again that corresponding ends have the same color. From the above diagram, we have
+In the same manner we can get results form the third Reidemeister's move. We require again that corresponding ends have the same color. The arrows on the diagram were carefully chose to obtain 
+
+From the above diagram, we have
 $$
 (a\#b)\#c = (a\#c)\#(b\#c)
 $$
-and the mirror diagram would be
+and the mirror diagram would give the equation
+$$
+(a*b)*c = (a*c)*(b*c)
+$$
+
+---
+
+Summarizing, we have an algebraic system satisfying these rules is called a quandle:
+
+1. $a*a=a$ and $a\#a=a$ for any $a$
+2. $(a ∗ b)\#b = a$ and $(a\#b) ∗ b = a$ for any labels $a$ and $b$.
+3.  $(a ∗ b) ∗ c = (a ∗ c) ∗ (b ∗ c)$ and $(a\#b)\#c = (a\#c)\#(b\#c)$ for any labels $a$, $b$, and $c$. 
+
+### Example of a Quandle [TO BE CONT'D]
+
+To give an example of such quandle, consider color rules as numbers: $a ∗ b = a\#b = 2b - a $.
+
+It's easy to check that this relation agrees with the above definition, with some help from **modular number system**, since we need the color to "circle around" with additions. 
+
+On the trefoil, we have $a*b=c,c*a=b,b*c=a$, Hence we have $2b-a=c,2a-c=b,2c-b=a$. if $a = 0$ and $b = 1$, then
+$c = 2b - a = 2$ and $a = 2c - b = 4 - 1 = 3$. We need $3 = 0$. Hence this system of equations will be satisfied for appropriate labelings in $\mathbb{Z}/\mathbb{3Z}$, which reproduces exactly the three coloring of the trefoil, and we see that the number 3 emerges as a characteristic of the equations associated with the knot.  
+
+For the figure eight knot E, we have that the modulus is 5. This shows that E is indeed knotted and that it is distinct from the trefoil. We can color (label) the figure eight knot with five \colors"0; 1; 2; 3; 4 with the rules: a ∗ b = 2b - a(mod5). See Figure 18. [^Kauffman-knots]
+
+# Polynomials as Knot Invariants
+
+## Alexander Polynomials
+
+### Alexander Polynomials as Generalized Quandle
+
+The modular labelling method has a marvelous generalization to the Alexander
+polynomial of the knot. This comes about through generalized coloring rules
+a ∗ b = ta + (1 − t)b
+and
+a#b = t−1a + (1 − t−1)b;
+where t is an indeterminate. It is a nice exercise to verify that these rules satisfy
+the axioms for the quandle. This algebraic structure is called the **Alexander Module.**
+
+The case t = -1 gives the rule 2b - a that we have already considered [^Kauffman-knots]
+
+### Original Alexander Polynomials
+
+1920 Alexander[^AP-intro] discovered a polynomial that is also a knot invariant. His idea was pretty straight forward: You can layout a knot like a square. What's better in characterizing a square than a matrix! A matrix can store $2$ dimensional data that contains how lines are intersected, which in turn is vital to the characterization of knots. 
+
+From such matrices, we need to find an invariant. What invariants does a matrix have? That depends on the transformation, but naturally the determinant of the matrix is invariant in many cases and is complicated enough to cover "all elements" or all crossings, (unlike the trace only concerns the diagonal crossings).
+
+![1558694411092](assets/1558694411092.png)  
+
+
+
+### 1970 Skein Relations discovered by Conway
+
+> Fun fact: [Conway](https://en.wikipedia.org/wiki/John_Horton_Conway) is the designer of the [game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
+>
+> ![](assets/game-of-live.gif)
+
+This is an axiomatic approach ... It seems nothing short of miraculous that such a scheme should produce good invariants!  <https://arxiv.org/pdf/math/0605622.pdf>
+
+The calculation seems awfully complicated, but Conway came up with a way to calculate it. And I think it's better understood this way: 
+
+Since the matrix Alexander used was constructed by the crossings, what kind of modifications one could make to a crossing? Of course changing a crossing to a different type will potentially change the "type" of a knot and hence it's polynomial. The problem is how drastic such change is? 
+
+
+
+Alexander found this and listed in the mis. part. COnway rediscovered it 30 years later. 
+
+## Jone's Polynomial: Knots are Back in Physics
+
+### discovery of Jone's Polynomial
+
+In the summer of 1982, Vaughan Jones was presenting a lecture on von Neumann algebras in Geneva. At the end of his talk Didier Hatt-Arnold, a graduate student in the audience, suggested that the relations in his algebraic structures were similar to those in the braid groups. Soon afterwards, Jones worked out how to construct representations of the braid groups into his algebras, but he did not immediately recognize their significance. The following summer, Jones realized that the image of B5 under one of the representations was the projective symplectic group PSp(4, Z3), the finite simple group of order 25 920. Thinking that this might be of some interest, Jones arranged to discuss his representations with Joan Birman\
+
+Jones travelled to New York in May 1984. He and Birman soon showed that this was not just another technique for deriving the Alexander polynomial. One simple test proved that this invariant was new: it could distinguish the left-handed and right-handed trefoils! Jones later established that his polynomial also satisfies a skein relation: 
+
+>  From 9.2 of[^knots-and-links] which took a definitive approach.
+
+What we need to know now is that this was a highly complicated history and an accidental discovery. However, such polynomial can be found by defining a new set of skein relations.
+
+(You might ask, are there any other skein relations that gives rise to new polynomials? Yes, the HOMPFLY-polynomial.) 
+
+The theory was complicated, but the simplest way to define the Jones polynomial is a recursive definition due to Louis Kauffman using the Kauffman bracket skein relation.
+
+Let's take a hypothetically route of history: how would the Jone's polynomial be discovered if not by Jone himself?
+
+### Strand and spin
+
+First let's see Pachos: braiding and bands and spins.
+
+### Knots and spin
+
+See Chapter 6 of [^knots-twist], which did not gave explanation of the coefficients.
+
+### How did Kauffman do it?
+
+Instead Kauffman [^Kauffman-knots] did gave a detailed explanation in `8 Knot Amplitudes` of [^Kauffman-knots] on how he obtained such coefficients.
+
+# Further Readings
+
+Time-line of history: Collberg, E. (2017). A brief history of knot theory. *Página consultada a*, *8*.
+
+[Daniel Moskovich](https://mathoverflow.net/users/2051/daniel-moskovich), How to motivate the skein relations?, URL (version: 2010-04-06): https://mathoverflow.net/q/20505
+
+Fun tricks with knots. Plus a history Kauffman's lecture at KITP: [Revolutions in Knots, Braids and Physics, Louis Kauffman](http://online.kitp.ucsb.edu/online/friends/kauffman/).
+
+NJ's brief history of knots: <https://www.youtube.com/watch?v=KYddgeiyLJ8
+
+YouTube Video [Tying Things Together: Knots in Maths, Physics and Biology' - Dr David Skinner](https://www.youtube.com/watch?v=uvsQUANjHB8). factorizing and knot: jones polynomial similarity: 21:36
+
+Witten's talk <https://www.youtube.com/watch?v=cuJY14BYac4>
+
+Knot theory and CHern simons, probably not very useful later. https://www.youtube.com/watch?v=8wWvUJ6qJx0
+
+Jones's intro to Jones Polynomials. <https://math.berkeley.edu/~vfr/jones.pdf> Jones, V. F. (2005). The Jones polynomial. *Discrete Math*, *294*, 275-277.
+
+A very mathematical way of introducing the tri-colorability as quandles, keis, etc. : Quandles: An Introduction to the Algebra of Knots
+
+Nice intro but lacks explannation of Jones: [^knotbook]
+
+<big>**Knots on a Torus**</big> Kauffman, L. H. (1998). Virtual knot theory. *arXiv preprint math/9811028*.<http://homepages.math.uic.edu/~kauffman/VKT.pdf> 
+
+>  Might be important when calculating braiding on PBC
+
+# Acknowledgment
 
 
 
 
-
->  An algebra is a linear vector space with vector product defined.
-
-
-
-
-
-
-
-It turns out that a good way to articulate such a rule of combination is to make the label on one of the undercrossing arcs at a crossing a product (in the sense of this new mode of (combination) of the labels of the other two arcs. In fact, we shall assume that this product operation depends upon the orientation of the arcs as shown below.[^Kauffmanknots]
-
-
-
-
-
-
-
-we show how a label a on an undercrossing arc combines with a label b on an overcrossing arc to form c = a ∗ b or c = a#b depending upon whether the overcrossing arc is oriented to the left or to the right for an observer facing the overcrossing line and standing on the arc labelled a: 
-
-An 
-
-
-
-We can use the Reidemeister's theorem to find out the algebraic system satisfying these rules is called a quandle [35].
-
-1. a ∗ a = a and a#a = a for any label a:
-2. (a ∗ b)#b = a and (a#b) ∗ b = a for any labels a and b:
-3. (a ∗ b) ∗ c = (a ∗ c) ∗ (b ∗ c) and (a#b)#c = (a#c)#(b#c) for any labels
-a,b,c. 
-
-
-
-## Generalized Quandle: Polynomials
-
-1920 Alexander
-
-## 1970 Skein Relations discovered by Conway
-
-[Conway](https://en.wikipedia.org/wiki/John_Horton_Conway) is the designer of the [game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
-
-![](assets/game-of-live.gif)
-
-## Kauffman brackets
-
-### Stand and spin
-
-### Calculation by Kauffman
 
 ---
 
 [^knotbook]:  Adams, C. C. (2004). *The knot book: an elementary introduction to the mathematical theory of knots*. American Mathematical Soc..
-[^smokerings]: <https://www.popmath.org.uk/exhib/pagesexhib/aether.html>
+[^smoke-rings]: <https://www.popmath.org.uk/exhib/pagesexhib/aether.html>
 [^ytb-David]: [Tying Things Together: Knots in Maths, Physics and Biology' - Dr David Skinner](https://www.youtube.com/watch?v=uvsQUANjHB8)
 [^ytb-alge-topo]: [Knots and surfaces I - Algebraic Topology - NJ Wildberger](https://www.youtube.com/watch?v=KYddgeiyLJ8)
 [^Conway]:  Conway, J. H. (1970, January). An enumeration of knots and links, and some of their algebraic properties. In *Computational problems in abstract algebra* (pp. 329-358). Pergamon. [Retriving link](https://www.maths.ed.ac.uk/~v1ranick/papers/conway.pdf).
 [^Alexander]: Alexander, J. W. (1928). Topological invariants of knots and links. *Transactions of the American Mathematical Society*, *30*(2), 275-306. [Retriving link](https://www.ams.org/journals/tran/1928-030-02/S0002-9947-1928-1501429-1/S0002-9947-1928-1501429-1.pdf).
-[^Kauffmanknots]: Kauffman, L. H. (2005). Knots. *Geometries of Nature, Living Systems and Human Cognition,* 131-202. doi:10.1142/9789812700889_0003. [A better typeset version](http://homepages.math.uic.edu/~kauffman/Knots.pdf).
+[^Kauffman-knots]: Kauffman, L. H. (2005). Knots. *Geometries of Nature, Living Systems and Human Cognition,* 131-202. doi:10.1142/9789812700889_0003. [A better typeset version](http://homepages.math.uic.edu/~kauffman/Knots.pdf).
 [^Reidemeister-theorem]: <https://www.encyclopediaofmath.org/index.php/Reidemeister_theorem>
 [^Culprit]: Henrich, A., & Kauffman, L. H. (2010). Unknotting unknots. *arXiv preprint arXiv:1006.4176*.
 [^Alge-Knots]: Elhamdadi, M., & Nelson, S. (2015). *Quandles* (Vol. 74). American Mathematical Soc..
+[^Ap-intro]: Collins, J. (2007). The Alexander Polynomial The woefully overlooked granddaddy of knot polynomials. [Retrieving link](http://infohost.nmt.edu/~starrett/Fall2014/TopologyOfChaos/KnotTheory/GeomClub.pdf)
+[^knots-twist]:Sossinsky, A. B. (2002). *Knots: mathematics with a twist*. Harvard University Press.
+[^knots-and-links]: Cromwell, P. R. (2004). *Knots and links*. Cambridge university press.
+
