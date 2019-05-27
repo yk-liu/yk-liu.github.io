@@ -65,7 +65,7 @@ When we consider particles in $2+1$ dimension space, we find that things are qui
 
 Twice exchange of two particles is equivalent to circling one particle around another. When space is $3$-dimensional, the path can shrink to a single point as is shown below. That gives the equation $\lambda^2=1$, which is the case of Fermions and Bosons. While on $2$-dimensional space, the light-blue path cannot shrink to the dark-blue path since they are topologically inequivalent. That means $\lambda^2\neq1$. Such encircling can result in a complex phase factor[^7] rather than simply $\pm 1$.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Loop-on-Lattice.png" alt="Loop shrink on 3d and 2d-Lattice" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Loop-on-Lattice.png" alt="Loop shrink on 3d and 2d-Lattice" width="50%">
 
 ## A Note on the Lattice
 
@@ -100,7 +100,7 @@ Sometimes the antiparticle of particle $a$ will be denoted as $\anti a$.
 Two anyons can fuse together, just like particles in a collider can violently collide and shatter into other particles, and possible results can arise. For example, two protons might collide to two $K^+$ particles, or two $\pi^+$ particles, denoted as $pp\rightarrow K^+K^+$, $pp\rightarrow \pi^+\pi^+$ respectively, along with many other possibilities. In high energy physics, a particular result is called a decay channel. To find out about a fusion channel, you can go to [PDG](http://pdg.lbl.gov) (thanks [Yifei](yf-liu.github.io) for teaching me that).
 
 <figure>
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Higgs.png" alt="Higgs boson decays to four muons" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Higgs.png" alt="Higgs boson decays to four muons" width="40%">
     <figcaption>
     Simulated data of two protons at 14 TeV "fused" to (eventually and mainly) four muons. The tracks of the other products of the collision are shown by lines and the energy deposited in the detector is shown in blue. Image creator: Lucas Taylor. (The famous Higgs boson is produced as an intermediate product. For the original picture and description, see <a href="https://cds.cern.ch/record/39444">image source</a>.) </figcaption>
 </figure>
@@ -144,11 +144,11 @@ We can think of fusion as a measurement in the sense that
 
 Below is a schematic diagram of three anyons (quasiparticles) braided on a $2$D lattice. To maintain consistency with Pachos' book[^4], evolution starts from the top.[^5] 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/braiding-animation.gif" alt="Braiding animation" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/braiding-animation.gif" alt="Braiding animation" width="70%">
 
 A more abstract and simpler diagram is often used as below. A $\scriptsize\boxed{\substack{\diagdown\,\,\, \diagup \newline \diagup \newline \swarrow\,\,\,  \searrow }  }$ diagram represents a counter-clockwise exchange, while a $\scriptsize\boxed{\substack{\diagdown\,\,\,  \diagup \newline \diagdown \newline \swarrow\,\,\,  \searrow }  }$ represents a counter-clockwise exchange. When two lines meet together, two particles are fused together. The height indicates the order of fusion like in (a), $a$ and $b$ are fused first. Sometimes fusion are omitted to emphasize on the braiding, as is in (c). Since an antiparticle travelling forwards in time is indistinguishable from the corresponding particle travelling backwards in time, diagram as (e) is possible. However, I am not going to concern such situation in this post.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="85%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/fusion-diagrams.png" alt="Braiding and fusion diagram examples" width="85%">
 
 The diagram is hard to write within a document. The fusion diagram is often written in a string inside a bra or a ket, called the **fusion states**.
 
@@ -168,13 +168,13 @@ To have a better understanding of $F$-matrices, we need to consider creating sup
 
 As is stated in the last chapter, fusion is much like a measurement. If two anyons are fused to a certain type of anyon, there will be no superposition between different fusion channels. Much like the total spin of two spin-half particles: once you have measured the total spin, everything is deterministic. The total spin is not in the superposition of both $0$ and $1$, it can only be either. There is no room for probabilities of different outcomes. However,  when there are more than two anyons present in the fusion, the information of the intermediate result is not always determinant. Like to total spin of four spin-half particles. If the total spin is $1$, the total spin of the first pair and that of the second pair is in the superposition of two possibilities.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/two-and-three-anyons-fusion.png" alt="two and three anyons fusion" width="70%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/two-and-three-anyons-fusion.png" alt="two and three anyons fusion" width="70%">
 
 ### Spin "Fusion" Diagrams
 
 Consider four angular momentums (spins) forming a total spin. How many ways for them to combine to a certain total spin? Two ways. $LS$ coupling and $jj$ coupling. If we consider "coupling" as fusion, we can draw the following "coupling diagram":
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/soc.png" alt="LS coupling and jj coupling" width="90%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/soc.png" alt="LS coupling and jj coupling" width="90%">
 
 Notice that an $LS$ coupling can be written as $\ket{L,S,J}$, while $jj$ coupling will be written as $\ket{j_1,j_2,J}$. These two sets of states span the same Hilbert space, and are related to each other by [Clebsch–Gordan coefficients](https://en.wikipedia.org/wiki/Clebsch–Gordan_coefficients). 
 
@@ -182,7 +182,7 @@ If we only care about the result of a given configuration of spins and orbital a
 
 Now if we consider three spins in the "fusion" order of  $\ket{(s_1s_2)s_3;(S_{12}s_3);S}$ and $\ket{s_1(s_2s_3);(s_1S_{23});S}$ respectively, we will have the following diagrams.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/three-spin-coupling.png" alt="Three spin coupling treated as fusion" width="90%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/three-spin-coupling.png" alt="Three spin coupling treated as fusion" width="90%">
 
 Like before, these two sets of state vectors span the **same** Hilbert space, where three spins are coupled as one total spin $S$. Although it's obvious from the fact that they span the Hilbert space, I want to make this point explicitly that the state vectors of the form $\ket{s_1(s_2s_3);s_1S_{23};S}$ are orthogonal to each other. Different value of $S_{23}$ will correspond to distinguishable states, hence these states are orthogonal.
 
@@ -218,7 +218,7 @@ $$
 
 The associativity is captured by the $F$-matrix. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Fmatrix.png" alt="F-matrix" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Fmatrix.png" alt="F-matrix" width="50%">
 
 Just like the case of three spins, left-most-first fusion states span the **same** Hilbert space as the right-most-first fusion states. $F$-matrix is the representation transformation matrix between these two bases. And as bases, the left-most-first fusion states are orthogonal to each other, and or are the right-most-first fusion states.
 
@@ -240,13 +240,13 @@ where the convention is that an $F$-matrix represents the representation transfo
 
 ## $R$-Matrices
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Rmatrix.png" alt="R-matrix" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Rmatrix.png" alt="R-matrix" width="40%">
 
 $R$-matrices are pretty easy to understand, as they describe the defining property of anyons: when exchanged, a non-trivial phase factor (matrix) is present. 
 
 Notice that $R_{ab}^c$ is not necessarily the inverse to $R_{ba}^c$, since an exchange of two anyons does not necessarily return to the original state. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Product-of-R-matrices.png" alt="product of R-matrices" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Product-of-R-matrices.png" alt="product of R-matrices" width="40%">
 
 # Pentagon Equation
 
@@ -254,7 +254,7 @@ Given a fusion diagram, it is possible to transform or simplify it using $R$-mov
 
 We can even make a full circle of such transformations. In other words, there exists two path to transform a fusion tree to another. One of such transformation is characterized by the pentagon equation (or pentagon identity).
 
-<div style="position:relative;text-align: center;display:inline-blcok;"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Pentagon-c.png" alt="circle Pentagon Equation" width="40%" align="bottom" style="display:inline-block"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Pentagon.png" alt="Pentagon Equation" width="40%" align="bottom" style="display:inline-block"></div>
+<div style="position:relative;text-align: center;display:inline-blcok;"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Pentagon-c.png" alt="circle Pentagon Equation" width="40%" align="bottom" style="display:inline-block"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Pentagon.png" alt="Pentagon Equation" width="40%" align="bottom" style="display:inline-block"></div>
 
 This picture adopted from [^4] is quite self-explanatory. With some effort, we can write the element-wise equations clockwise starting from the canonical fusion.
 
@@ -299,29 +299,29 @@ The abandonment of super- and subscripts look daunting, but the equation will be
 
 There is another kind of transformation which involves both $F$ and $R$ matrices. The identity is called the hexagon identity, as is pictured as below. To be concise, the transformation does not go around a circle to avoid unwanted inverses of matrices. The "active" part during each part is circled out. The initial arrangement of anyons are always $123$, and intermediate arrangements are labeled in red.
 
-<div style="position:relative;text-align: center;display:inline-blcok;"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon.png" alt="Hexagon equation" width="60%" align="bottom" style="display:inline-block">
-    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph.gif" alt="Fusion diagram morphing gif" width="16%" align="bottom" style="display:inline-blcok;position: absolute;left:20%;bottom:0px;"></div>
+<div style="position:relative;text-align: center;display:inline-blcok;"><img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Hexagon.png" alt="Hexagon equation" width="60%" align="bottom" style="display:inline-block">
+    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Hexagon-morph.gif" alt="Fusion diagram morphing gif" width="16%" align="bottom" style="display:inline-blcok;position: absolute;left:20%;bottom:0px;"></div>
 This picture adopted from[^6] is quite self-explanatory. Notice that the gif in the lower right corner shows that just like strands in our daily life, we can gently move them is they are not intertwined. Notice that the order of the fused anyons are not changed. This version of hexagon diagram I will call as **Simon's version**.
 
 > **Note on morph**:
 >
 > 1. Morph an important step in hexagon identities. I was baffled when I was writing this post.
 >
->    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/morph.png" alt="Morph importance" width="40%">
+>    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/morph.png" alt="Morph importance" width="40%">
 >
 > 2. If the order of the initial anyons are changed, there should be extra $R$-matrices, even if there is a way to obtain the same result. One of such incorrect ways to morph is shown below. (As you might have guessed, I discovered it after I made the mistake.)
 >
-> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-morph-wrong.gif" alt="Wrong way of morphing fusion diagrams gif" width="20%">
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Hexagon-morph-wrong.gif" alt="Wrong way of morphing fusion diagrams gif" width="20%">
 >
 > 2. The morph actually says a lot about what the fusion is. From the diagram below you see that a fused anyon $b$ is actually equivalent to the direct package of $2$ and $3$ as individuals.
 >
->    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/morph-and-equiv.png" alt="Morph and equivalence" width="40%">
+>    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/morph-and-equiv.png" alt="Morph and equivalence" width="40%">
 
 There is also other versions of hexagon identity, as is shown below (picture taken from [this slide show](http://users.physik.fu-berlin.de/~pelster/Anyon3/baranov-slides1.pdf)) where Pachos' book is using. As you can probably see, this version's fusion tree are flipped horizontally, as by [^10]: "Particularly, there is another family of hexagons obtained by replacing all righthanded braids with left-handed ones. In general, these two families of hexagons are independent of each other." 
 
 <figure>
     <div style="position:relative;text-align: center;display:inline-blcok;">
-        <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2.png" alt="Another hexagon representation" width="35%"  style="display:inline-block"> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Braiding-Anyons/assets/Hexagon-2-explained.png" alt="Another hexagon representation explained" width="55%" style="display:inline-block">
+        <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Hexagon-2.png" alt="Another hexagon representation" width="35%"  style="display:inline-block"> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-04-13-Introduction-to-QC-and-TQC-Anyon-Model/assets/Hexagon-2-explained.png" alt="Another hexagon representation explained" width="55%" style="display:inline-block">
     </div>
 <figcaption>
     Notice that this is an oversimplified way to represent the results, where the braiding part of the fusion tree is completely ignored. To make sense of it, the configuration labeled at the top of the trees should be considered as intermediate configurations. I will call this <b>Pachos' version</b>.
