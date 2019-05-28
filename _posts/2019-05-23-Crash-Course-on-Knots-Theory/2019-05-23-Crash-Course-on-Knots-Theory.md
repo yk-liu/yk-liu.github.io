@@ -55,7 +55,7 @@ One day he saw smoke rings of his physicist friend P.G. Tait[^smoke-rings], and 
 
 > Models of knotted and linked vortex atoms were presented to the Society, the infinite variety of which is more than sufficient to explain the allotropies and affinities of all known matter.
 
-Lord Kelvin's envision of atoms as tiny knots of ether is a very insightful discovery, since it's not that far from what we call string theory today, which envisions fundamental particles as vibrating strings.
+Lord Kelvin's envision of atoms as tiny knots vortices of ether (like a knotted smoke ring, which has only been recently realized in lab[^knot-vortex]) is a very insightful discovery, since it's not that far from what we call string theory today, which envisions fundamental particles as vibrating strings.
 
 > **Definition**:
 >
@@ -367,4 +367,6 @@ Nice intro but lacks explannation of Jones: [^knotbook]
 [^Ap-intro]: Collins, J. (2007). The Alexander Polynomial The woefully overlooked granddaddy of knot polynomials. [Retrieving link](http://infohost.nmt.edu/~starrett/Fall2014/TopologyOfChaos/KnotTheory/GeomClub.pdf)
 [^knots-twist]:Sossinsky, A. B. (2002). *Knots: mathematics with a twist*. Harvard University Press.
 [^knots-and-links]: Cromwell, P. R. (2004). *Knots and links*. Cambridge university press.
+
+[^knot-vortex]: Kleckner, D., & Irvine, W. T. (2013). Creation and dynamics of knotted vortices. *Nature physics*, *9*(4), 253.
 
