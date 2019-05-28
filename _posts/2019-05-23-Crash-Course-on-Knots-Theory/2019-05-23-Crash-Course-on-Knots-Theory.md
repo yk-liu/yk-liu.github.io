@@ -4,6 +4,7 @@ title: |
 categories: Topological-quantum-computation Knot-theory 
 tags: Topological-quantum-computation Knot-theory Braiding Jones-Polynomial modular Kauffman-bracket
 edit: 2019-05-24
+status: Writing
 description: This is a series of posts on topological quantum computations. To address the reason why we introduce such "strange-looking" equations to calculate Jones polynomials, we have to know the history of knot theory, and understand how the pioneers came up with their ideas. 
 ---
 
