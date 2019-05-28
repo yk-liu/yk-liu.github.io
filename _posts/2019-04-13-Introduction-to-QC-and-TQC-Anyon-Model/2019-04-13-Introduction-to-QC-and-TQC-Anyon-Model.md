@@ -192,7 +192,7 @@ Like before, these two sets of state vectors span the **same** Hilbert space, wh
 >
 > The question remains unanswered. What are the states written as $\ket{ab;c}$, or even more fancily denoted as $\ket{\substack{a \quad b\newline \diagdown\diagup\newline \mid \newline c}}$? Are these states merely wavefunctions in quantum mechanics? As is stated in [^4], the fusion states have to correspond to certain quantum states of the constituent particles. 
 >
-> I struggled a lot when I first studied TQC. I just couldn't convince myself that such states are orthogonal. Then I read in [^3]:
+> I struggled a lot when I first studied TQC. I just couldn't convince myself that such states are orthogonal. Then I read in [^7]:
 >
 > > Recall that in $\mathrm{SU}(2)$, there are multiple states in which spins $j_1$, $j_2$, $j_3$ couple to form a total spin $J$. For instance, $j_1$ and $j_2$ can add to form $j_12$, which can then add with $j_3$ to give $J$. The eigenstates of $\vert j_{12}\vert^2$ form a basis of the different states with fixed $j_1$, $j_2$, $j_3$, and $J$. Alternatively, $j_2$ and $j_3$ can add to form $j_{23}$, which can then add with $j_1$ to give $J$. The eigenstates of $\vert j_{23}\vert^2$ form a different basis. The $6$$j$ symbol gives the basis change between the two.
 >
@@ -348,13 +348,13 @@ The pentagon and hexagon equations looks very complicated. Once we apply the equ
 
 ## Notes on the Pentagon and Hexagon Equations
 
-As is stated in [^3], we can solve for the $F$-matrix and $R$-matrix directly from the pentagon and hexagon equations. The only information a specific anyon model can provide is in the fusion equation $a\times b = \sum N_{ab}^c c$. For example, the $F$-matrices for Fibonacci anyons are solved from pentagon equation in[^10]. 
+As is stated in [^7], we can solve for the $F$-matrix and $R$-matrix directly from the pentagon and hexagon equations. The only information a specific anyon model can provide is in the fusion equation $a\times b = \sum N_{ab}^c c$. For example, the $F$-matrices for Fibonacci anyons are solved from pentagon equation in[^10]. 
 
 Also, $F$- and $R$-matrices can be viewed from modular tensor category, which I am not familiar with at all now.
 
 > Why is it necessary to invoke category theory simply to specify the topological properties of non-Abelian anyons?Could the braid group not be the highest level of abstraction that we need? The answer is that for a fixed number of particles $n$, the braid group $\mathcal B_n$ completely specifies their topological properties (perhaps with the addition of twists a to account for the finite size of the particles). However, we need representations of $\mathcal B_n$ for all values of $n$ which are compatible with each other and with fusion (of which pair creation and an-nihilation is simply the special case of fusion to the vacuum). So we really need a more complex — and much more tightly constrained — structure. This is provided by the concept of a **modular tensor category**. 
 >
-> The $F$ and $R$ matrices play particularly important roles. The $F$ matrix can essentially be viewed an associativity relation for fusion: we could first fuse $i$ with $j$, and then fuse the result with $k$; or we could fuse $i$ with the result of fusing $j$ with $k$. The consistency of this property leads to a constraint on the $F$-matrices called the pentagon equation. Consistency between $F$ and $R$ leads to a constraint called the hexagon equation. Modularity is the condition that the $S$-matrix be invertible. **These self-consistency conditions are sufficiently strong that a solution to them completely defines a topological phase**.[^3]
+> The $F$ and $R$ matrices play particularly important roles. The $F$ matrix can essentially be viewed an associativity relation for fusion: we could first fuse $i$ with $j$, and then fuse the result with $k$; or we could fuse $i$ with the result of fusing $j$ with $k$. The consistency of this property leads to a constraint on the $F$-matrices called the pentagon equation. Consistency between $F$ and $R$ leads to a constraint called the hexagon equation. Modularity is the condition that the $S$-matrix be invertible. **These self-consistency conditions are sufficiently strong that a solution to them completely defines a topological phase**.[^7]
 
 # Further Discussion on the Fusion States
 
@@ -378,14 +378,14 @@ This series is made possible by Dr. Emil Prodan's kind mentorship.
 
 ---
 [^1]: Alicea, J., Oreg, Y., Refael, G., Von Oppen, F., & Fisher, M. P. (2011). Non-Abelian statistics and topological quantum information processing in 1D wire networks. *Nature Physics*, *7*(5), 412.
-[^2]: Kitaev, A. Y. (2001). Unpaired Majorana fermions in quantum wires. *Physics-Uspekhi*, *44*(10S), 131.
-[^3]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
+[^2]: Three point turn: Kitaev, A. Y. (2001). Unpaired Majorana fermions in quantum wires. *Physics-Uspekhi*, *44*(10S), 131.
 [^4]: Pachos, J. K. (2012). *Introduction to topological quantum computation*. Cambridge University Press.
-[^5]: Liu, Y., Liu, Y., & Prodan, E. (2019). Braiding Flux-Tubes in a Topological Lattice Model from Class-D. *arXiv e-prints* *64*(2), p. arXiv:1905.02457.
+[^5]: Our paper: Liu, Y., Liu, Y., & Prodan, E. (2019). Braiding Flux-Tubes in a Topological Lattice Model from Class-D. *arXiv e-prints* *64*(2), p. arXiv:1905.02457.
+
 [^6]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
+
 [^7]: Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Sarma, S. D. (2008). Non-Abelian anyons and topological quantum computation. *Reviews of Modern Physics*, *80*(3), 1083.
 [^8]: Roy, A., & DiVincenzo, D. P. (2017). Topological quantum computing. *arXiv preprint arXiv:1701.05052*.
 [^9]: Hahn, L. (2019). Topological Quantum Computing. Retrieved from [web](https://www.mathi.uni-heidelberg.de/~walcher/teaching/sose17/atqft/writeups/Lukas.pdf).
-
 [^10]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.
 [^11]:  [Link](https://qudev.phys.ethz.ch/content/courses/QSIT07/presentations/BozyigitClaassen.pdf)
