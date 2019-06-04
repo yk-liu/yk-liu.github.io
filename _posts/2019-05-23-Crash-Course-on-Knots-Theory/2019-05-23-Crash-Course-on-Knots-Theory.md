@@ -24,9 +24,10 @@ $$
 \newcommand{\xeq}[1]{\substack{\text{#1}\newline =}}
 \newcommand{\rc}{\dashv}
 \newcommand{\lc}{\vdash}
-\newcommand{\int}{\mathbb{ Z}}
+\newcommand{\ints}{\mathbb{ Z}}
 \newcommand{\Reals}{\mathbb{R}}
-\notag
+\newcommand{\Hashtag}{\rlap{=}/\!/}
+\newcommand{\hashtag}{\mathchoice{\Hashtag}{\Hashtag}{\scriptsize\Hashtag}{\tiny\Hashtag}}
 \require{cancel}
 $$
 
@@ -164,7 +165,7 @@ A careful inspection on the following diagram reveals that we need to make a fur
 
 Also to spare ourselves from writing redundant equations as "$a$ goes over $b$ does not change color" such as $a\times_{\text{over}} b=a$, we will only make distinction between a left-handed or a right-handed crossing, and leave the upper string unchanged. 
 
-We assign to each string in a knot an arrow in a self-consistent way. If the cross product of the directional vector of the upper string and that lower string is **outward**-perpendicular to the page, we call the crossing right-handed, otherwise it's left-handed. Or you can orient the lower string upward and the direction of the upper string determines it's handedness. We use $a∗b$ to denote that string $a$ is right-handed crossed by $b$; and $a\#  b$ to denoted the other case as in [^Kauffman-knots]. 
+We assign to each string in a knot an arrow in a self-consistent way. If the cross product of the directional vector of the upper string and that lower string is **outward**-perpendicular to the page, we call the crossing right-handed, otherwise it's left-handed. Or you can orient the lower string upward and the direction of the upper string determines it's handedness. We use $a∗b$ to denote that string $a$ is right-handed crossed by $b$; and $a\hashtag  b$ to denoted the other case as in [^Kauffman-knots]. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/quandle-hand.png" alt="quandle and handedness of crossings" width="30%">
 
@@ -173,27 +174,27 @@ We can test out our labeling system in tri-color examples. All the crossing of t
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/quandle-trefoil.png" alt="quandle of trefoil" width="20%">
 $$
 \begin{array}{}
-\enclose{circle}{1}: c\#  a=b,
+\enclose{circle}{1}: c\hashtag  a=b,
 \\ \quad \text{A strand colored in $c$ goes under a strand colored $a$, turns into color $b$.}\\
-\enclose{circle}{2}: a\#  b=c,
+\enclose{circle}{2}: a\hashtag  b=c,
 \\ \quad \text{A strand colored in $a$ goes under a strand colored $b$, turns into color $c$.}\\
-\enclose{circle}{3}: b\#  c=a,
+\enclose{circle}{3}: b\hashtag  c=a,
 \\ \quad \text{A strand colored in $b$ goes under a strand colored $c$, turns into color $a$.}\\
 \end{array}\\
 $$
 
-A further look at the trefoil soon reveals that $\#  $ is not associative. The same is true for $*$.
+A further look at the trefoil soon reveals that $\hashtag  $ is not associative. The same is true for $*$.
 
 $$
-a\# (c\# b) = a\# a = a \\
-(a\# c)\# b = b\# b = b
+a\hashtag (c\hashtag b) = a\hashtag a = a \\
+(a\hashtag c)\hashtag b = b\hashtag b = b
 $$
 
 Now let's translate the color rules to label rules using the Reidemeister's Theorem. 
 
 ## Obtain the $N$-coloring Rules
 
-In this section, we are using $N$ colors (labels), denoted as $\set{a,b,c,d,\cdots}$. Although there are only $26$ letters, we imagine that we will never run out of characters, also because $a,b,c$ is always nicer to read than $a_1,a_2,a_3$. To avoid loss of generality, $a\#  b $ is left un-evaluated as a "color" as a whole.
+In this section, we are using $N$ colors (labels), denoted as $\set{a,b,c,d,\cdots}$. Although there are only $26$ letters, we imagine that we will never run out of characters, also because $a,b,c$ is always nicer to read than $a_1,a_2,a_3$. To avoid loss of generality, $a\hashtag b $ is left un-evaluated as a "color" as a whole.
 
 The first Reidemeister's move is evident. 
 
@@ -201,20 +202,20 @@ The first Reidemeister's move is evident.
 
 We have 
 $$
-a\# a =a , \quad a* a = a
+a\hashtag a =a , \quad a* a = a
 $$
 ---
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/R-move-2-N-color.png" alt="N-colorability and the second Reidemeister move" width="60%">
 
-The second Reidemeister's move is a little complicated. I used more than three colors to color code it to avoid confusion (since $b\# a\neq a*b$). The Reidemeister's theorem requires that the corresponding ends have the same color.
+The second Reidemeister's move is a little complicated. I used more than three colors to color code it to avoid confusion (since $b\hashtag a\neq a*b$). The Reidemeister's theorem requires that the corresponding ends have the same color.
 
 $$
-(b\# a)*a = b \\
-(a*b)\# b = b
+(b\hashtag a)*a = b \\
+(a*b)\hashtag b = b
 $$
 
-From these equations, $\#  $ and $*$ looks like inverse operations to each other, which is discussed in detail in Chapter 3 in [^Alge-Knots].
+From these equations, $\hashtag  $ and $*$ looks like inverse operations to each other, which is discussed in detail in Chapter 3 in [^Alge-Knots].
 
 ---
 
@@ -225,7 +226,7 @@ In the same manner we can get results form the third Reidemeister's move. We req
 From the above diagram, we have
 
 $$
-(a\# b)\# c = (a\# c)\#  (b\# c)
+(a\hashtag b)\hashtag c = (a\hashtag c)\hashtag  (b\hashtag c)
 $$
 
 and the mirror diagram would give the equation
@@ -238,19 +239,19 @@ $$
 
 Summarizing, we have an algebraic system satisfying these rules (correspond to three Reidemeister's moves respectively):
 
-1. $a*a=a$ and $a\# a=a$ for any $a$
-2. $(a * b)\# b = a$ and $(a\# b) * b = a$ for any labels $a$ and $b$.
-3.  $(a * b) * c = (a * c) * (b * c)$ and $(a\# b)\# c = (a\# c)\#  (b\# c)$ for any labels $a$, $b$, and $c$. 
+1. $a*a=a$ and $a\hashtag a=a$ for any $a$
+2. $(a * b)\hashtag b = a$ and $(a\hashtag b) * b = a$ for any labels $a$ and $b$.
+3.  $(a * b) * c = (a * c) * (b * c)$ and $(a\hashtag b)\hashtag c = (a\hashtag c)\hashtag  (b\hashtag c)$ for any labels $a$, $b$, and $c$. 
 
 ## Color Rule as Modular System
 
 ### A Linear Color Rule
 
-The upshot is that we could use numbers $\set{1,2,3,\cdots,N}$ to represent $N$ different colors, and feed these numbers in the law of $*$ and $\#  $, and find out the coloring relations between them. Let's suppose that these two operations are liner, that is 
+The upshot is that we could use numbers $\set{1,2,3,\cdots,N}$ to represent $N$ different colors, and feed these numbers in the law of $*$ and $\hashtag  $, and find out the coloring relations between them. Let's suppose that these two operations are liner, that is 
 $$
 \begin{align*}
 a * b &= x^* a + y^* b\\
-a \# b &= x^\# a+y^\# b
+a \hashtag b &= x^\hashtag a+y^\hashtag b
 \end{align*}
 $$
 
@@ -258,27 +259,27 @@ Using the three laws it's easy to find out that
 
 $$
 \begin{array}{crlrl}
-\text{law 1: } & x^* +y^* =1, &x^\# +y^\# = 1\\
-\text{law 2: } & x^*x^\# =1, &x^\# x ^* = 1\\
-\text{law 3: } & \begin{cases}x^*y^*=y^*x^* \\ y^*(x^*+y^*-1)=0 \end{cases} , &\begin{cases}x^\# y^\# =y^\# x^\#  \\ y^\# (x^\# +y^\# -1)=0 \end{cases}\\
+\text{law 1: } & x^* +y^* =1, &x^\hashtag +y^\hashtag = 1\\
+\text{law 2: } & x^*x^\hashtag =1, &x^\hashtag x ^* = 1\\
+\text{law 3: } & \begin{cases}x^*y^*=y^*x^* \\ y^*(x^*+y^*-1)=0 \end{cases} , &\begin{cases}x^\hashtag y^\hashtag =y^\hashtag x^\hashtag  \\ y^\hashtag (x^\hashtag +y^\hashtag -1)=0 \end{cases}\\
 \end{array}
 $$
 
-Starting from the law 3. If $y^*=0$ or $y^\# =0$, then we could only use one color since $a*b=a\# b = a$, $\forall a\in \set{1,2,\cdots,N}$. Hence the non-trivial linear color rule would be 
+Starting from the law 3. If $y^*=0$ or $y^\hashtag =0$, then we could only use one color since $a*b=a\hashtag b = a$, $\forall a\in \set{1,2,\cdots,N}$. Hence the non-trivial linear color rule would be 
 
 $$
 a * b =t a + (1-t) b \\
-a \# b = \tfrac{1}{t} a+(1- \tfrac{1}{t}) b
+a \hashtag b = \tfrac{1}{t} a+(1- \tfrac{1}{t}) b
 $$
 
 Note that strangely law 3 does not provide much useful information, I think it's partly due to our color law is linear. 
 
 ### Why a Linear Color Rule Is Incorrect
 
-To give an example of the aforementioned linear color rule, consider a special kind of color rule such that $a ∗ b = a\# b$, namely set $t=1$. We have 
+To give an example of the aforementioned linear color rule, consider a special kind of color rule such that $a ∗ b = a\hashtag b$, namely set $t=1$. We have 
 
 $$
-a * b = a\# b = 2b-a
+a * b = a\hashtag b = 2b-a
 $$
 
 Put the law into the relationships we obtained in [`Tri-coloring Revisited`](#tri-coloring-revisited), we have
@@ -312,10 +313,10 @@ It's obvious that the discrepancy gets worse if we keep going. Color $\color{red
 
 The minimal modification we can make to a linear color rule is making it a modular system. We want $1,4,7,\cdots$ to represent the same color, $3,0,-3,\cdots$ to represent another one. The obvious solution is take the module of $3 $ for $a$, $b$ and $c$. 
 
-In other words, we represent colors using $\int/3\int=\set{1,2,3}$ to represent the numbers, and modify the rules to be 
+In other words, we represent colors using $\ints/3\ints=\set{1,2,3}$ to represent the numbers, and modify the rules to be 
 
 $$
-a * b = a\# b = (2b-a)\mod 3
+a * b = a\hashtag b = (2b-a)\mod 3
 $$
 
 which is hinted by $\Eqn{tri-color-modul}$, if we sum all of the equations we will have $3(a+b+c)=0$.
@@ -338,11 +339,11 @@ This section follows [^MX4540].
 
 ### Coloring Equations of a Knot
 
-So far we have worked out the coloring relations, namely how to device an algebraic rule on the ring $\int/N\int$. So far we only discussed the coloring for the trefoil, which is actually done by "trial and err": We assign an arbitrary color to an arbitrary strand and work our way to the next. We assume the next strand may have a different color and see if there is  an contradiction. Luckily there is none for trefoil. But we cannot say that for any knot, especially when the knot are complicated. In this section we will consider $a\# b = a*b = 2b-a$ unless otherwise stated.
+So far we have worked out the coloring relations, namely how to device an algebraic rule on the ring $\ints/N\ints$. So far we only discussed the coloring for the trefoil, which is actually done by "trial and err": We assign an arbitrary color to an arbitrary strand and work our way to the next. We assume the next strand may have a different color and see if there is  an contradiction. Luckily there is none for trefoil. But we cannot say that for any knot, especially when the knot are complicated. In this section we will consider $a\hashtag b = a*b = 2b-a$ unless otherwise stated.
 
 To find all possible colorings of a knot, we will have to turn the problem into a solution of a set of equations. We will define -coloring as a map from strands of a knot to the a set of integers, $\set{1,2,3,\cdots,N}$. If we label the strands as $\set{x_1,x_2,\cdots,x_m}$, the map can be written as: $\chi: \set{x_1,x_2,\cdots,x_m} \rightarrow\set{1,2,3,\cdots,N}$. We will have $m$ equations at $m$ crossings (if there is no closed loop in the knot, as is shown below, the red string is a closed loop and can be removed), 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/closed-loop.png" alt="closed loop" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/closed-loop.png" alt="closed loop" width="20%">
 
 and each solution of $\set{x_1,x_2,\cdots,x_m}$ is a valid coloring. For example, the trefoil and the figure eight knot has the following coloring equations:
 
@@ -401,8 +402,6 @@ A knot's property is completely determined by it's crossings. Once the types of 
 
 One candidate of such table is as below
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/knot-table.png" alt="knot crossing table" >
-
 |              | strand $1$          | strand $2$ | strand $3$ | strand $4$ | $\cdots$ | strand$m$            |
 | ------------ | ------------------- | ---------- | ---------- | ---------- | -------- | -------------------- |
 | crossing $1$ | over-strand-to-left |            | strand-in  | strand-out |          |                      |
@@ -413,10 +412,11 @@ One candidate of such table is as below
 
 Conveniently, our linear color rule provide us with an algebraic way to represent each type of crossings.
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/knot-table.png" alt="knot crossing table" width="50%">
 $$
 \begin{cases}
 a * b =t a + (1-t) b \\
-a \# b = \tfrac{1}{t} a+(1- \tfrac{1}{t}) b
+a \hashtag b = \tfrac{1}{t} a+(1- \tfrac{1}{t}) b
 \end{cases}
 \rightarrow
 \begin{cases}
@@ -428,7 +428,7 @@ $$
 Thus the above table can be transferred to the following matrix
 
 $$
-\hspace{-6 cm}\begin{array}{cccccccc}
+\begin{array}{cccccccc}
 &\text{strand $1$}&\text{strand $2$}&\text{strand $3$}&\text{strand $4$}&\cdots&\text{strand $m$}\\
 \text{crossing $1$}\\
 \text{crossing $2$}\\
@@ -451,22 +451,62 @@ Thus the coloring matrix faithfully characterizes a knot diagram in that we can 
 
 If there is a knot invariant associated with the coloring matrix, it almost has to be the determinant. It involves all the entries (unlike the trace) hence it is "faithful", and more importantly, it is invariant under unitary transformations. Our knot diagram can be seen as projection of a $3$-dimensional knot. Therefore different knot diagrams of the same knot is related to each other by a unitary transformation. (Although we do not consider deformation of the same knot as unitary transformation.)
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/unitary-transformation-of-knot.png" alt="unitary transformation of a knot" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/unitary-transformation-of-knot.png" alt="unitary transformation of a knot" width="35%">
 
-Since the determinant of the coloring matrix is $0$, we will use reduced coloring matrix instead. The determinant of the reduced coloring matrix $\tilde M$ of a linear coloring rule is a Laurent polynomial of $t$ with integer coefficients. The polynomial is called the **Alexander Polynomial**, named after its discoverer J. W. Alexander.
+Since the determinant of the coloring matrix is $0$, we will use reduced coloring matrix instead. The determinant of the reduced coloring matrix $\tilde M$ of a linear coloring rule is a Laurent polynomial of $t$ with integer coefficients. This polynomial is called the **Alexander Polynomial**, named after its discoverer J. W. Alexander.
 
 >  Alexander found his polynomial in a similar way. He started off by a different way of forming the knot table, but arrived at the same conclusion. For an easy introduction, see [^Ap-intro]. 
 >
-> Many textbooks I have read either took an axiomatic approach as was introduced by Conway, or a very mathematical way all the way from fundamental groups, or "from the abelianization of $\int [\pi_1 (\Reals^3/
+> Many textbooks I have read either took an axiomatic approach as was introduced by Conway, or a very mathematical way all the way from fundamental groups, or "from the abelianization of $\ints [\pi_1 (\Reals^3/
 > K)]$"[^Alex-poly-talk]. If you are interested, you can find out more in the [`Further Reading`](#further-reading) section.
+
+> The invariance of the determinant can be proven using Reidemeister's moves, omitted here. Proof see [^three-way-Ap].
 
 ## Examples of Alexander Polynomials
 
+We can calculate the Alexander polynomial using the coloring equations
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/trefoil-Alexander.png" alt="Alexander polynomials of trefoil and deformed trefoil" width="80%">
+$$
+M_\text{trefoil}=\pmatrix{1-t & t&-1\\  -1 &1-t&t\\ t  & -1 & 1-t}
+\\
+M_\text{deformed trefoil}=\pmatrix{-1 & 1-\tfrac{1}{t}&\tfrac{1}{t}&\\  1-\tfrac{1}{t} &\tfrac{1}{t}&-1&\\ \tfrac{1}{t}  & 1-\tfrac{1}{t} & & -1 \\ 1-\tfrac{1}{t} &-1 && \tfrac{1}{t}}
+$$
+
+And the alexander polynomial for the above diagrams of the same knot are 
+
+$$
+\det(M_\text{trefoil}) =1-t+t^2 \\
+\det(M_\text{deformed trefoil})=-1 - \tfrac{1}{t^2} + \tfrac{1}{t}=-t^{-2}(1 - t + t^2)
+$$
+
+Note that they differ by a factor of $-t^{-2}$. Alexander polynomial is still a modular system, such that polynomials differ by a factor of $\pm t^{n}$ are the same in a "modular sense". To show that Alexander polynomial is indeed a knot invariant that sets different types of knots apart, here is the figure eight knot, 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/figure-eight-Alexander.png" alt="Alexander polynomial of figure eight knot" width="40%">
+$$
+\begin{array}{rrrrrrr}
+\alpha:& (1-t)x_1 & +t x_2 & x_3 &      &= 0\\
+\beta :& -x_1   &        & +(1-t)  x_3 & &= 0 \\
+\gamma:& \tfrac{1}{t}x_1 & - x_2 & &  +(1-\tfrac{1}{t})x_4 &= 0 \\
+\delta:& &  +(1-\tfrac{1}{t})x_2 &  +\tfrac{1}{t} x_3 & -x_4 &= 0 \\
+\end{array}
+$$
+
+
+and its Alexander polynomial is different from that of trefoil. 
+$$
+\det(\tilde M_\text{figure eight})=1 - 3 t + t^2
+$$
 
 ## Skein Relations
 
 Alexander found out in his paper that the Alexander polynomial can be written in a recursive fashion listed in a chapter titled "Miscellaneous theorems". Conway (whose name you could have heard from [the game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)) rediscovered the relationship from another point of view, as the "skein relations" 30 years later [^Conway]. 
+
+
+
+
+
+
 
 The idea of the skein relation is to change the type of one crossing of a diagram and see what effect it has on the polynomial. In the diagram below the polynomials are represented by the bracket or $P()$. 
 
@@ -561,11 +601,13 @@ Nice intro but lacks explannation of Jones: [^knotbook]
 [^knots-twist]:Sossinsky, A. B. (2002). *Knots: mathematics with a twist*. Harvard University Press.
 [^knots-and-links]: Cromwell, P. R. (2004). *Knots and links*. Cambridge university press.
 [^knot-vortex]: Kleckner, D., & Irvine, W. T. (2013). Creation and dynamics of knotted vortices. *Nature physics*, *9*(4), 253.
+
 [^Alex-poly-talk]: <http://www.math.toronto.edu/ivahal/MGSA%20talk%20The%20Alexander%20polynomial.pdf>
 [^SE]: [Daniel Moskovich](https://mathoverflow.net/users/2051/daniel-moskovich), How to motivate the skein relations?, URL (version: 2010-04-06): https://mathoverflow.net/q/20505.
 [^AP-physics]: Kauffman, L. H., & Saleur, H. (1991). Free fermions and the Alexander-Conway polynomial. Communications in mathematical physics, 141(2), 293-327.
 [^Witten-physics]: Witten, E. (1989). Quantum field theory and the Jones polynomial. Communications in Mathematical Physics, 121(3), 351-399.
 [^MX4540]: [Course description](https://www.abdn.ac.uk/registry/courses/undergraduate/2017/mathematical_sciences/mx4540), [Notes](http://homepages.abdn.ac.uk/r.hepworth/pages/files/Knots_Notes.pdf)
+[^three-way-Ap]:Long, E. (2005). Topological invariants of knots: three routes to the Alexander Polynomial. *Manchester University*.
 
 
 
