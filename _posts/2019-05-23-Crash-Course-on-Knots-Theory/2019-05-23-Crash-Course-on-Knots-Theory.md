@@ -2,7 +2,8 @@
 title: |
   Introduction to Topological Quantum Computation: Crash Course on Knots Theory
 categories: Topological-quantum-computation Knot-theory 
-tags: Topological-quantum-computation Knot-theory Braiding Jones-Polynomial modular Kauffman-bracket
+tags: Topological-quantum-computation Knot-theory Jones-polynomial Alexander-polynomial Kauffman-bracket
+keywords: modular
 edit: 2019-06-04
 status: Writing
 description: This is a series of posts on topological quantum computations. To address the reason why we introduce such "strange-looking" equations to calculate Jones polynomials, we have to know the history of knot theory, and understand how the pioneers came up with their ideas. 
@@ -515,9 +516,9 @@ An example would be
 
 > For a long time why such skein relations would work remained a mystery. Turns out the skein relation is deeply connected to various fields in physics, such as statistical mechanics and quantum field theory, which we shall discuss in the following section.
 
-# Jone's Polynomial: Knots and Physics
+# Jones Polynomial: Knots and Physics
 
-## Discovery of Jone's Polynomial and Its Infulence
+## Discovery of Jones Polynomial and Its Infulence
 
 > In the summer of 1982, Vaughan Jones was presenting a lecture on von Neumann algebras in Geneva. At the end of his talk Didier Hatt-Arnold, a graduate student in the audience, suggested that the relations in his algebraic structures were similar to those in the braid groups. Soon afterwards, Jones worked out how to construct representations of the braid groups into his algebras, but he did not immediately recognize their significance. The following summer, Jones realized that the image of $\mathbb B _ 5$ under one of the representations was the projective symplectic group $\mathrm{PSp}(4, \ints _ 3)$, the finite simple group of order $25920$. Thinking that this might be of some interest, Jones arranged to discuss his representations with Joan Birman.
 >
@@ -530,27 +531,31 @@ An example would be
 
 What we need to know now is that this was a highly complicated history and a somewhat "accidental" discovery. However, such polynomial can be found by defining a new set of skein relations. This new type skein relation fueled the search for more polynomials by choosing different skein relations. Later the HOMFLY polynomial were quick discovered by choosing yet another skein relation. 
 
-However, such skein relation remained largely as a mathematical trick for calculating the corresponding polynomials, without knowing "why this would work". Later Witten realized that the Jone's polynomial is relation to QFT, as according to the path integral formalism, particles may travel freely forward and backwards in time. Thus a particle confined in $2$-dimensional space can have a "knotted" trajectory in $(2+1)$ space-time. The knottedness is related to Chern-Simons theory and it turns out that the amplitude of a trajectory is related to whether the trajectory is knotted or not. This point of view gave birth to the Kauffman bracket, which we should discuss in detail below. For more information, you can read [^Ap-physics] and [^Witten-physics].
+However, such skein relation remained largely as a mathematical trick for calculating the corresponding polynomials, without knowing "why this would work". Later Witten realized that the Jones polynomial is relation to QFT, as according to the path integral formalism, particles may travel freely forward and backwards in time. Thus a particle confined in $2$-dimensional space can have a "knotted" trajectory in $(2+1)$ space-time. The knottedness is related to Chern-Simons theory and it turns out that the amplitude of a trajectory is related to whether the trajectory is knotted or not. This point of view gave birth to the Kauffman bracket, which we should discuss in detail below. For more information, you can read [^Ap-physics] and [^Witten-physics]. For the original definition, see chapter 4 of [^jones-explain].
 
-## Jone's Polynomial and QFT
+## Original Definition
+
+
+
+## Jones Polynomial and Statistical Mechanics
+
+See Chapter 6 of [^knots-twist], which did not gave explanation of the coefficients.
+
+This chapter follows `2. Spin models, the Potts model, IRF models` of  [^jones-sm].
+
+## Jones Polynomial and QFT
 
 ### Review of Quantum Field Theory
 
 >  From 9.2 of[^knots-and-links] which took a definitive approach.
 
-(You might ask, are there any other skein relations that gives rise to new polynomials? Yes, the HOMPFLY-polynomial.) 
-
 The theory was complicated, but the simplest way to define the Jones polynomial is a recursive definition due to Louis Kauffman using the Kauffman bracket skein relation.
-
-Let's take a hypothetically route of history: how would the Jone's polynomial be discovered if not by Jone himself?
 
 ### How did Kauffman do it?
 
 Instead Kauffman [^Kauffman-knots] did gave a detailed explanation in `Chapter 8. Knot Amplitudes` of [^Kauffman-knots] on how he obtained such coefficients.
 
-## Jone's Polynomial and Statistical Mechanics
 
-See Chapter 6 of [^knots-twist], which did not gave explanation of the coefficients.
 
 # Further Readings
 
@@ -574,7 +579,7 @@ A very mathematical way of introducing the tri-colorability as quandles, keis, e
 
 Knots and "universe" Kauffman, L. H. (2006). *Formal knot theory*. Courier Corporation.
 
-Nice intro but lacks explannation of Jones: [^knotbook]
+Nice intro but lacks explanation of Jones: [^knotbook]
 
 <big>**Knots on a Torus**</big> Kauffman, L. H. (1998). Virtual knot theory. *arXiv preprint math/9811028*.<http://homepages.math.uic.edu/~kauffman/VKT.pdf> 
 
@@ -609,6 +614,8 @@ Nice intro but lacks explannation of Jones: [^knotbook]
 [^Witten-physics]: Witten, E. (1989). Quantum field theory and the Jones polynomial. Communications in Mathematical Physics, 121(3), 351-399.
 [^MX4540]: [Course description](https://www.abdn.ac.uk/registry/courses/undergraduate/2017/mathematical_sciences/mx4540), [Notes](http://homepages.abdn.ac.uk/r.hepworth/pages/files/Knots_Notes.pdf)
 [^three-way-Ap]:Long, E. (2005). Topological invariants of knots: three routes to the Alexander Polynomial. *Manchester University*.
+[^jones-sm]: Jones, V. F. (1989). On knot invariants related to some statistical mechanical models.. *Pacific Journal of Mathematics*, 137(2), 311-334.
+[^jones-explain]: Jones, V. F. (2005). The Jones polynomial. *Discrete Math*, *294*, 275-277.
 
 
 
