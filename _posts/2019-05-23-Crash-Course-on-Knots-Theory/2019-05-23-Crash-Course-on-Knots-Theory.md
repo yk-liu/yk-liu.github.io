@@ -171,17 +171,7 @@ We assign to each string in a knot an arrow in a self-consistent way. If the cro
 
 We can test out our labeling system in tri-color examples. All the crossing of the trefoil shown below are left-handed, hence
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/quandle-trefoil.png" alt="quandle of trefoil" width="20%">
-$$
-\begin{array}{}
-\enclose{circle}{1}: c\hashtag  a=b,
-\\ \quad \text{A strand colored in $c$ goes under a strand colored $a$, turns into color $b$.}\\
-\enclose{circle}{2}: a\hashtag  b=c,
-\\ \quad \text{A strand colored in $a$ goes under a strand colored $b$, turns into color $c$.}\\
-\enclose{circle}{3}: b\hashtag  c=a,
-\\ \quad \text{A strand colored in $b$ goes under a strand colored $c$, turns into color $a$.}\\
-\end{array}\\
-$$
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/quandle-trefoil.png" alt="quandle of trefoil" width="60%">
 
 A further look at the trefoil soon reveals that $\hashtag  $ is not associative. The same is true for $*$.
 
@@ -201,9 +191,11 @@ The first Reidemeister's move is evident.
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/R-move-1-N-color.png" alt="N-colorability and the first Reidemeister move" width="60%">
 
 We have 
+
 $$
 a\hashtag a =a , \quad a* a = a
 $$
+
 ---
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/R-move-2-N-color.png" alt="N-colorability and the second Reidemeister move" width="60%">
@@ -212,7 +204,7 @@ The second Reidemeister's move is a little complicated. I used more than three c
 
 $$
 (b\hashtag a)*a = b \\
-(a*b)\hashtag b = b
+(a*b)\hashtag b = a
 $$
 
 From these equations, $\hashtag  $ and $*$ looks like inverse operations to each other, which is discussed in detail in Chapter 3 in [^Alge-Knots].
@@ -248,6 +240,7 @@ Summarizing, we have an algebraic system satisfying these rules (correspond to t
 ### A Linear Color Rule
 
 The upshot is that we could use numbers $\set{1,2,3,\cdots,N}$ to represent $N$ different colors, and feed these numbers in the law of $*$ and $\hashtag  $, and find out the coloring relations between them. Let's suppose that these two operations are liner, that is 
+
 $$
 \begin{align*}
 a * b &= x^* a + y^* b\\
@@ -265,7 +258,7 @@ $$
 \end{array}
 $$
 
-Starting from the law 3. If $y^*=0$ or $y^\hashtag =0$, then we could only use one color since $a*b=a\hashtag b = a$, $\forall a\in \set{1,2,\cdots,N}$. Hence the non-trivial linear color rule would be 
+Starting from the law 3. If $y^ * =0$ or $y^\hashtag =0$, then we could only use one color since $a * b=a\hashtag b = a$, $\forall a\in \set{1,2,\cdots,N}$. Hence the non-trivial linear color rule would be 
 
 $$
 a * b =t a + (1-t) b \\
@@ -392,7 +385,7 @@ M_\text{figure 8} = \begin{pmatrix} 2 & -1&0&-1\\0&2& -1&-1 \\ -1 & -1 & 2&0\\ -
 \end{array}
 $$
 
-The matrix's determinant is actually the number $\vert N\vert $ of $N$-colorability. $\det(\tilde{M}_\text{trefoil})=3$, and $\det(\tilde{M}_\text{figure 8} )= 5$ as is calculated before. The matrices $M$ are called the coloring matrix, $\tilde M$ the reduced coloring matrix.
+The matrix's determinant is actually the number $\vert N\vert $ of $N$-colorability. $\det(\tilde{M} _ \text{trefoil})=3$, and $\det(\tilde{M} _ \text{figure 8} )= 5$ as is calculated before. The matrices $M$ are called the coloring matrix, $\tilde M$ the reduced coloring matrix.
 
 ### Coloring Matrix as a Knot Characteristic
 
@@ -467,13 +460,14 @@ Since the determinant of the coloring matrix is $0$, we will use reduced colorin
 We can calculate the Alexander polynomial using the coloring equations
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/trefoil-Alexander.png" alt="Alexander polynomials of trefoil and deformed trefoil" width="80%">
+
 $$
 M_\text{trefoil}=\pmatrix{1-t & t&-1\\  -1 &1-t&t\\ t  & -1 & 1-t}
-\\
+\qquad
 M_\text{deformed trefoil}=\pmatrix{-1 & 1-\tfrac{1}{t}&\tfrac{1}{t}&\\  1-\tfrac{1}{t} &\tfrac{1}{t}&-1&\\ \tfrac{1}{t}  & 1-\tfrac{1}{t} & & -1 \\ 1-\tfrac{1}{t} &-1 && \tfrac{1}{t}}
 $$
 
-And the alexander polynomial for the above diagrams of the same knot are 
+And the Alexander polynomial for the above diagrams of the same knot are 
 
 $$
 \det(M_\text{trefoil}) =1-t+t^2 \\
@@ -482,7 +476,8 @@ $$
 
 Note that they differ by a factor of $-t^{-2}$. Alexander polynomial is still a modular system, such that polynomials differ by a factor of $\pm t^{n}$ are the same in a "modular sense". To show that Alexander polynomial is indeed a knot invariant that sets different types of knots apart, here is the figure eight knot, 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/figure-eight-Alexander.png" alt="Alexander polynomial of figure eight knot" width="40%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/figure-eight-Alexander.png" alt="Alexander polynomial of figure eight knot" width="20%">
+
 $$
 \begin{array}{rrrrrrr}
 \alpha:& (1-t)x_1 & +t x_2 & x_3 &      &= 0\\
@@ -492,46 +487,56 @@ $$
 \end{array}
 $$
 
-
 and its Alexander polynomial is different from that of trefoil. 
+
 $$
 \det(\tilde M_\text{figure eight})=1 - 3 t + t^2
 $$
 
 ## Skein Relations
 
-Alexander found out in his paper that the Alexander polynomial can be written in a recursive fashion listed in a chapter titled "Miscellaneous theorems". Conway (whose name you could have heard from [the game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)) rediscovered the relationship from another point of view, as the "skein relations" 30 years later [^Conway]. 
+Alexander found out in his paper that the Alexander polynomial of "similar knots" have certain relations, which he then listed in a chapter titled "Miscellaneous theorems". 
 
+![1559649717723](assets/1559649717723.png)
 
+If three oriented links $L _ -$, $L _ +$ and $L_0$ have diagrams $D _ -$, $D _ +$ and $D_0$ which differ only in a small neighborhood as shown above, then
+$$
+\Delta(L_+)-\Delta(L_-)=(x^{-1}-x)\Delta(L_0)
+$$
+Conway (whose name you could have heard from [the game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)) rediscovered and reformulated it as a set of recursive rules called the "skein relations" 30 years later [^Conway]. 
 
+> Conway's idea was "to consider knot invariants not as maps of the set of knots to the set of polynomials (for instance), but as maps from some sort of space of knots, locally characterized by how they behave on knots in 'close proximity'. "[^SE] 
 
+The significance of the skein relation is that it allows us to abandon the tedious calculations of the coloring matrix, and turn the algorithm for obtaining the Alexander polynomial into a child's play.
 
+An example would be
 
+![Untitled](assets/Untitled.png)
 
-The idea of the skein relation is to change the type of one crossing of a diagram and see what effect it has on the polynomial. In the diagram below the polynomials are represented by the bracket or $P()$. 
-
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/strange-skein-relation.png" alt="stange-looking skein relations" width="40%">
-
-Conway's idea was "to consider knot invariants not as maps of the set of knots to the set of polynomials (for instance), but as maps from some sort of space of knots, locally characterized by how they behave on knots in 'close proximity'. "[^SE] Starting from a knot-diagram and keep using the skein relations we will eventually arrive at a bunch of unknots. Define the unknot's polynomial as 1, the polynomial of the original diagram can be obtained. 
-
+> For a long time why such skein relations would work remained a mystery. Turns out the skein relation is deeply connected to various fields in physics, such as statistical mechanics and quantum field theory, which we shall discuss in the following section.
 
 # Jone's Polynomial: Knots and Physics
 
-> In the summer of 1982, Vaughan Jones was presenting a lecture on von Neumann algebras in Geneva. At the end of his talk Didier Hatt-Arnold, a graduate student in the audience, suggested that the relations in his algebraic structures were similar to those in the braid groups. Soon afterwards, Jones worked out how to construct representations of the braid groups into his algebras, but he did not immediately recognize their significance. The following summer, Jones realized that the image of B5 under one of the representations was the projective symplectic group $PSp(4, Z3)$, the finite simple group of order 25920. Thinking that this might be of some interest, Jones arranged to discuss his representations with Joan Birman.
->
-> Jones travelled to New York in May 1984. He and Birman soon showed that this was not just another technique for deriving the Alexander polynomial. One simple test proved that this invariant was new: it could distinguish the left-handed and right-handed trefoils! Jones later established that his polynomial also satisfies a skein relation: 
+## Discovery of Jone's Polynomial and Its Infulence
 
-What we need to know now is that this was a highly complicated history and an accidental discovery. However, such polynomial can be found by defining a new set of skein relations. This new type skein relation fueled the search for more polynomials by choosing different skein relations. Later the HOMFLY polynomial were quick discovered by choosing yet another skein relation. 
+> In the summer of 1982, Vaughan Jones was presenting a lecture on von Neumann algebras in Geneva. At the end of his talk Didier Hatt-Arnold, a graduate student in the audience, suggested that the relations in his algebraic structures were similar to those in the braid groups. Soon afterwards, Jones worked out how to construct representations of the braid groups into his algebras, but he did not immediately recognize their significance. The following summer, Jones realized that the image of $\mathbb B _ 5$ under one of the representations was the projective symplectic group $\mathrm{PSp}(4, \ints _ 3)$, the finite simple group of order $25920$. Thinking that this might be of some interest, Jones arranged to discuss his representations with Joan Birman.
+>
+> Jones travelled to New York in May 1984. He and Birman soon showed that this was not just another technique for deriving the Alexander polynomial. One simple test proved that this invariant was new: it could distinguish the left-handed and right-handed trefoils! Jones later established that his polynomial also satisfies a skein relation: [^knots-and-links]
+> 
+> $$
+> tV(L_+) - t^{-1}V(L _ -) = (t^{1/2}-t^{-1/2})V(L_ 0 )
+> $$
+> This discovery had a tremendous impact, and not only on knot theory. Once it was known that the Alexander polynomial was not the only polynomial link invariant, people started to search for more, some using combinatorics and others following the algebraic route used by Jones. Close connections with physics generated a lot of interdisciplinary research, and polynomials were defined via physical methods related to statistical mechanics, where the Yang-Baxter equation provides an analogue of the third braid relation, and quantum groups. These new link invariants were also extended to give invariants of 3-manifolds.
+
+What we need to know now is that this was a highly complicated history and a somewhat "accidental" discovery. However, such polynomial can be found by defining a new set of skein relations. This new type skein relation fueled the search for more polynomials by choosing different skein relations. Later the HOMFLY polynomial were quick discovered by choosing yet another skein relation. 
 
 However, such skein relation remained largely as a mathematical trick for calculating the corresponding polynomials, without knowing "why this would work". Later Witten realized that the Jone's polynomial is relation to QFT, as according to the path integral formalism, particles may travel freely forward and backwards in time. Thus a particle confined in $2$-dimensional space can have a "knotted" trajectory in $(2+1)$ space-time. The knottedness is related to Chern-Simons theory and it turns out that the amplitude of a trajectory is related to whether the trajectory is knotted or not. This point of view gave birth to the Kauffman bracket, which we should discuss in detail below. For more information, you can read [^Ap-physics] and [^Witten-physics].
 
-## discovery of Jone's Polynomial
+## Jone's Polynomial and QFT
 
-
+### Review of Quantum Field Theory
 
 >  From 9.2 of[^knots-and-links] which took a definitive approach.
-
-
 
 (You might ask, are there any other skein relations that gives rise to new polynomials? Yes, the HOMPFLY-polynomial.) 
 
@@ -539,17 +544,13 @@ The theory was complicated, but the simplest way to define the Jones polynomial 
 
 Let's take a hypothetically route of history: how would the Jone's polynomial be discovered if not by Jone himself?
 
-### Strand and spin
-
-First let's see Pachos: braiding and bands and spins.
-
-### Knots and spin
-
-See Chapter 6 of [^knots-twist], which did not gave explanation of the coefficients.
-
 ### How did Kauffman do it?
 
 Instead Kauffman [^Kauffman-knots] did gave a detailed explanation in `Chapter 8. Knot Amplitudes` of [^Kauffman-knots] on how he obtained such coefficients.
+
+## Jone's Polynomial and Statistical Mechanics
+
+See Chapter 6 of [^knots-twist], which did not gave explanation of the coefficients.
 
 # Further Readings
 
