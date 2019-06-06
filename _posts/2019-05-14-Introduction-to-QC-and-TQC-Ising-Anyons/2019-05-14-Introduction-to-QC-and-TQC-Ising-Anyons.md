@@ -453,10 +453,6 @@ In later posts, we will discuss the Jones polynomials[^7][^8], where you will fi
 
 Since we are not using QFT/"second quantization", hence these anyons are still distinguishable, which makes me wonder how the theory goes to make them indistinguishable. This is a long shot and probably won't be discussed in any posts in the near future.
 
-# Acknowledgement
-
-This series is made possible by Dr. Emil Prodan's kind mentorship.
-
 ---
 
 [^1]: Trebst, S., Troyer, M., Wang, Z., & Ludwig, A. W. (2008). A short introduction to Fibonacci anyon models. *Progress of Theoretical Physics Supplement*, *176*, 384-407.

@@ -372,10 +372,6 @@ Nevertheless, as far as the calculation is concerned, our discussion of anyons m
 
 
 
-# Acknowledgement
-
-This series is made possible by Dr. Emil Prodan's kind mentorship.
-
 ---
 [^1]: Alicea, J., Oreg, Y., Refael, G., Von Oppen, F., & Fisher, M. P. (2011). Non-Abelian statistics and topological quantum information processing in 1D wire networks. *Nature Physics*, *7*(5), 412.
 [^2]: Three point turn: Kitaev, A. Y. (2001). Unpaired Majorana fermions in quantum wires. *Physics-Uspekhi*, *44*(10S), 131.

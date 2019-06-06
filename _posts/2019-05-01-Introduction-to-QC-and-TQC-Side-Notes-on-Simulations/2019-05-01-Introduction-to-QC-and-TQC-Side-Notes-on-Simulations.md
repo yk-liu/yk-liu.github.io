@@ -239,9 +239,6 @@ As a wild thought: are there more ways to realize a "computer" theoretically? ca
 
 To be continued.
 
-# Acknowledgement
-
-This series is made possible by Dr. Emil Prodan's kind mentorship.
 
 ---
 [^1]: ASarkar, Angik, T. K. Bhattacharyya, and Ajay Patwardhan. "Quantum Logic Processor: A Mach Zehnder Interferometer based Approach." *arXiv preprint cond-mat/0603695* (2006).

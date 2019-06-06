@@ -585,11 +585,6 @@ Nice intro but lacks explanation of Jones: [^knotbook]
 
 >  Might be important when calculating braiding on PBC
 
-# Acknowledgment
-
-
-
-
 
 ---
 
