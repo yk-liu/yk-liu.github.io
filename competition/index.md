@@ -38,13 +38,13 @@ The official registration will be open around June, with sample dataset availabl
 - A new set of data will be used for the final round.
 - The algorithms from each team shall be uploaded to our benchmarking server and run in a controlled environment.
 
-*Onsite Event - Nov 5, 2019*
+*Onsite Event - Nov 4, 2019*
 - Results of the final round will be announced.
 - Results will be visualized for the audience.
 
 # IROS 2019 Onsite Event
 
-Time: Nov 5, 2019
+Time: Nov 4, 2019
 
 Venue: The Venetian Macao Resort Hotel, Macau, China
 
@@ -59,18 +59,16 @@ table th:nth-of-type(2) {
 }
 </style>
 
-| Time | Event | Comments |
-|----- | ------ | ----- |
-| 8:30 - 9:00 | Organizer move-in and setup | The competition organizer can help to setup the devices |
-| 9:00 - 10:00 | Invited talks |  |
-| 10:00 - 10:30 | Coffee break |  |
-| 10:30 - 12:30 | Competition1: Lifelong Object Recognition | The competition is held on organizer-provided computers based on given dataset, without real robots on-site |
-| 12:30 - 13:30 | Lunch |  |
-| 13:30 - 15:30 | Competition 2: Lifelong SLAM | The competition is held on organizer-provided computers based on given dataset, without real robots on-site |
-| 15:30 - 16:00 | Coffee break | |
-| 16:00 - 17:30 | Panel discussion | We will lead the discussion for enhancing lifelong robotic vision research |
-| 17:30 - 18:00 | Awards ceremony | Intel may provide opportunities for further collaborations with the potential teams |
-| 18:00 | End |  |
-
-
+| Time          | Event  | Comments |
+|-------------- | ------ | -------- |
+| 8:30 - 9:00   | Welcome and overview |  |
+| 9:00 - 10:00  | Invited talks |  |
+| 10:00 - 10:30 | Coffee break  |  |
+| 10:30 - 12:00 | Competition1: Lifelong Object Recognition | Each team gives a short presentation of their techniques |
+| 12:00 - 13:30 | Lunch         |  |
+| 13:30 - 15:00 | Competition 2: Lifelong SLAM | Each team gives a short presentation of their techniques |
+| 15:00 - 15:30 | Coffee break  |  |
+| 15:30 - 16:30 | Invited talks |  |
+| 16:30 - 17:00 | Awards ceremony | Intel may provide opportunities for further collaborations with the potential teams |
+| 17:00 - 18:00 | Discussions   |  |
 
