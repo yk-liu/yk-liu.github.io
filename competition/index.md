@@ -25,21 +25,23 @@ If you are interested in either challenge, we encourage you to [pre-register wit
 The official registration will be open around June, with sample dataset available then.
 
 # Important Dates
-*Dataset Release - June, 2019*
+*Dataset Release - July, 2019*
 - Register for the competition first.
 - Download the dataset.
 - Develop your algorithm, evaluate it with the dataset and improve it.
+- Benchmarking metrics will be announced.
 
-*First Round - Sept, 2019*
-- Download competition datasets, software tools, and upload the results before the deadline.
-- Highest-scored teams will be invited to the final round and to the onsite event.
+*First Round - July to Sept, 2019*
+- Download competition datasets, software tools, and upload the model/results before the deadline.
+- Highest-scored teams will be invited to the final round and to the workshop.
 
 *Final Round - Oct, 2019*
 - A new set of data will be used for the final round.
 - The algorithms from each team shall be uploaded to our benchmarking server and run in a controlled environment.
 
-*Onsite Event - Nov 4, 2019*
-- Results of the final round will be announced.
+*Workshop - Nov 4, 2019*
+- Each team shall deliver a presentation about their techniques, which will be scored by a technical committee and considered in the final ranking.
+- Final ranks (final round scores & presentation scores) will be announced.
 - Results will be visualized for the audience.
 
 # IROS 2019 Onsite Event
