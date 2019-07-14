@@ -326,16 +326,6 @@ sub,sup{
 }
 }
 
-#vimeo-embed iframe,
-#vimeo-embed object,
-#vimeo-embed embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .people-pic {
   max-width: 125px;
   max-height: 125px;

@@ -15,8 +15,9 @@ The competition is composed of two challenges with separate scoreboards. Each te
 
 For the details of each challenge, please follow their webpages:
 
-- [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
 - [Lifelong Object Recognition Challenge]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
+- [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
+
 
 # Registration
 
