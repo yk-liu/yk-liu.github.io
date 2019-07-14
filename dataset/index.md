@@ -9,7 +9,7 @@ mathjax: true
 ---
 # Lifelong Robotic Vision Dataset
 
-We will provide a dataset, along with benchmarking tools, for the Lifelong Robotic Vision Competition on IROS 2019 and for any other research purpose.Currently we are collecting data by ourselves, but we welcome contribution of data from third parties, as long as the data are relevant to lifelong robotic vision research and are in a good enough quality. Please contact [Xuesong Shi](mailto:xuesong.shi@intel.com) for data contribution.
+We will provide a dataset, along with benchmarking tools, for the Lifelong Robotic Vision Competition on IROS 2019 and for any other research purpose.nCurrently we are collecting data by ourselves, but we welcome contribution of data from third parties, as long as the data are relevant to lifelong robotic vision research and are in a good enough quality. Please contact [Xuesong Shi](mailto:xuesong.shi@intel.com) for data contribution.
 
 In the following parts we describe how we collect our data. The dataset will be released to IROS competition teams around June. More details will be added before the releasing.
 
@@ -31,4 +31,13 @@ For SLAM evaluation, the ground-truth trajectory of the robot is obtained by a m
 
 For object recognition, the ground-truth of the objects is labelled at both class and instance level under different illuminations, camera directions, and occlusions.
 
+## Dataset Details
+For the details of lifelong object recognition and lifelong SLAM datasets, please follow their webpages:
+
+- [Lifelong Object Recognition Dataset]({{site.url}}{{site.baseurl}}/dataset/Data_Object-Recognition.html)
+- [Lifelong SLAM Dataset]({{site.url}}{{site.baseurl}}/dataset/Data_SLAM.html)
+
+
 **[Pre-register the competition](mailto:xuesong.shi@intel.com?subject=Pre-register%20for%20Lifelong%20Robotic%20Vision%20Competition&Body=Dear%20Organizers,%0D%0A) and get the first time notice when the data be available!**
+
+
