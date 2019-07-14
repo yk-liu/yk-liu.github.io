@@ -326,5 +326,30 @@ sub,sup{
 }
 }
 
+#vimeo-embed iframe,
+#vimeo-embed object,
+#vimeo-embed embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.people-pic {
+  max-width: 125px;
+  max-height: 125px;
+  border-radius:50%;
+}
+
+.people-name {
+  margin: 5px 0 10px;
+}
+
+.people-name h6 {
+  margin: 2px 0;
+  font-weight: 300;
+  font-size: 11px;
+}
 
  
