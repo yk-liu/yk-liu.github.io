@@ -75,3 +75,7 @@ table th:nth-of-type(2) {
 | 16:30 - 17:00 | Awards ceremony | Intel may provide opportunities for further collaborations with the potential teams |
 | 17:00 - 18:00 | Discussions   |  |
 
+# Partners
+We thank the following partners for their data contribution and valuable suggetions on the competition.
+
+

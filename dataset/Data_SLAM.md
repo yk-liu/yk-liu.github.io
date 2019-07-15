@@ -1,5 +1,5 @@
 ---
-title: Competition
+title: Dataset
 layout: info
 Edit: 2019-04-15
 toc: false
@@ -8,29 +8,28 @@ protected: true
 mathjax: true
 ---
 
-# Lifelong SLAM in the Real Environment
+# Lifelong SLAM Dataset
 
-In most real-world robotic scenarios, robots should be able to long-termly operate in dynamic and daily changing environments, and SLAM should be one of their most fundemental capabilities. However, most existing SLAM frameworks are evaluated in static environments, or in scenes containing some apparent dynamics such as moving people and objects. This competition brings new challenges by introducing *out-of-sight scene changes*. For example, in home scenarios, most objects may be movable or deformable, and the visual features of the same place may be significantly different in some successive days. Such out-of-sight dynamics pose challenges to the robustness of (re-)localization and the reusability of mapping, which to our knowledge have not been well studied. We use the term *Lifelong SLAM* to emphasize the capability of long-term mapping and robust localization.
+We will provide a dataset, along with benchmarking tools, for the Lifelong Robotic Vision Competition on IROS 2019 and for any other research purpose. Currently we are collecting data by ourselves, but we welcome contribution of data from third parties, as long as the data are relevant to lifelong robotic vision research and are in a good enough quality. Please contact [Xuesong Shi](mailto:xuesong.shi@intel.com) for data contribution.
 
-[![home](home.png "Pictures taken in someone's home"){:width="640px"}](home.png)
+In the following parts we describe how we collect our data. The dataset will be released to IROS competition teams around June. More details will be added before the releasing.
 
-[![office](office-compressed.gif "Videos taken in an office")](office.gif)
+## Scenes
 
-The dataset for this competition is collected in homes, offices, and other indoor places. Data are collected for multiple times in each place, to get scene changes in real life. Ground-truth trajectories are acquired by a motion capture system and other auxiliary means. Benchmarking tools will be released to evaluate SLAM algorithms in the lifelong setting.
+Data will be collected in office and home environments. We will collect data for multiple times at each place, to get scene changes in real life.
 
-Though the problem of *Lifelong SLAM* may be bit different from conventional SLAM, we will do our best to provide user-frinedly data format and evaluation tools to ensure minimum overhead of participating this competition.
+## Robot and Sensors
 
-# Competition Task
+We will collect sensor data with a grounded robot, which is like common service robots you would expect in hotels or restaurants. It will move relatively smoothly at a speed of no faster than 1 m/s.
 
-- Participants should build a visual or visual-inertial SLAM system to join the competition.
-- Participants can choose a subset of sensor data for their algorithm, e.g. monocular or RGB-D, with IMU or without.
-- The SLAM system is encouraged to have re-localization capability to deal with kidnapped robot issue and to recover from tracking failures.
-- The SLAM system is encouraged to make use of semantic information for robust localization in changed scenes.
-- The SLAM system is encouraged to be power efficient (i.e. being able to run on an edge device instead of servers).
+The primary sensors include a RealSense D435i camera and a RealSense T265 camera, both mounted at a fixed height of about 1m. The D435i camera provides aligned color images and depth images, and IMU measurements. The T265 camera provides stereo fisheye images and aligned IMU measurements.
 
-More detailed rules are under discussion. Please feel free to [contact us](mailto:xuesong.shi@intel.com) to negotiate for your best interest.
+Odometry data from wheel encoders will also be provided.
 
-# Evaluation Metrics
+## Ground-truth
 
-We will introduce some new metrics for this competition, as traditional SLAM evaluation (e.g. ATE, RPE) measures mostly the accuracy of pose tracking. We will emphsize more on the robustness of tracking (and maybe also re-localization, which we have not decided). The metrics will be announced before the competition starts.
+For SLAM evaluation, the ground-truth trajectory of the robot is obtained by a motion capture system or a LiDAR, with alignment to the camera coordinates.
+
+For object recognition, the ground-truth of the objects is labelled at both class and instance level under different illuminations, camera directions, and occlusions.
+
 
