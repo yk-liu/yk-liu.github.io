@@ -10,7 +10,7 @@ mathjax: true
 
 # Lifelong Robotic Vision - Object Recognition Dataset 
 
-(L)ifel(O)ng {R}obotic V{IS}ion (**OpenLORIS**) - Object Recognition Dataset (OpenLORIS-object) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on the common objects existing in the home scenario. 
+(L)ifel(O)ng {R}obotic V{IS}ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on the common objects existing in the home scenario. 
 
 ## Data collection
 Data is obtained in the office and home environments. Several grounded robots mounted by Intel RealSense D435i and T265 camera is used for data collection. The D435i camera provides aligned color images and depth images, and IMU measurements. The T265 camera provides stereo fisheye images and aligned IMU measurements. 
@@ -42,8 +42,7 @@ For each instance in each level, we provided $260$ samples. That is, for each in
 ## Data visualization
 
 The presence of temporal coherent sessions (i.e., the robot camera gently move around the objects) can provide a temporal smoothness which simplifies the process of object detection, improve classification accuracy and address semi-supervised (or unsupervised) scenarios. Picked samples have been shown below. 
-![Objects under 12 level environment conditions](https://lifelong-robotic-vision.github.io/about/object.gif =250x)
-
+<img src="https://lifelong-robotic-vision.github.io/about/object.gif" alt="Objects under 12 level environment conditions" width="650">
 Each column of the figure above shows the clutter (from 1st row to 3rd row, simple, normal, complex), occlusion ($0\%$, $25\%$, $50\%$), object pixels ($< 30 \times 30$, $30 \times 30 - 200 \times 200$, $> 200 \times 200$), and illumination (weak, normal, strong).
 
 <!--
