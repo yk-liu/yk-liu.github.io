@@ -15,12 +15,11 @@ The competition is composed of two challenges with separate scoreboards. Each te
 
 For the details of each challenge, please follow their webpages:
 
-- [Lifelong Object Recognition Challenge]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
-
+> [Lifelong Object Recognition Challenge]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
 > the official website for our Lifelong Object Recognition starts on [Codalab here](https://codalab.lri.fr/competitions/581), wish you achieve a great score !
+_________
 
-- [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
-
+> [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) 
 > the official website for Lifelong SLAM is pending !
 
 # Registration
