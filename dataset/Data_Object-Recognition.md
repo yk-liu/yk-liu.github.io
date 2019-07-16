@@ -10,12 +10,12 @@ mathjax: true
 
 # Lifelong Robotic Vision - Object Recognition Dataset 
 
-(L)ifel(O)ng (R)obotic V(IS)ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on improving the continuous learning capbility of the common objects in the home scenario. 
+>(L)ifel(O)ng (R)obotic V(IS)ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on improving the continuous learning capbility of the common objects in the home scenario. 
 
 ## Data collection
 Data is obtained in the office and home environments. Several grounded robots mounted by Intel RealSense D435i and T265 camera is used for data collection. The D435i camera provides aligned color images and depth images, and IMU measurements. The T265 camera provides stereo fisheye images and aligned IMU measurements. 
 
-The robot is actively recording the videos of targeted objects under multiple illuminations, occlusions, camera-object distances/angles, and context information (clutters). We do include the common challenges that the robot is usually faced with. For example,
+>The robot is actively recording the videos of targeted objects under multiple illuminations, occlusions, camera-object distances/angles, and context information (clutters). We do include the common challenges that the robot is usually faced with. For example,
 
 - **Illumination**. In real-world applications, the illumination can vary significantly across time, e.g. day and night differences. Our dataset is mainly collected from normal daylight and include weak and strong lights, each accounts for $10\%$ of objects under each scene. The task becomes challenging with lights to be weaker.
 - **Occlusion**. Occlusion happens when a part of an object is hidden by one or more objects, or only a portion of the object is shown in the field of view. Since distinctive characteristics of the object might be hidden, occlusion makes the classification task considerably more challenging.  
@@ -24,7 +24,7 @@ The robot is actively recording the videos of targeted objects under multiple il
 - **Context information**. The environment information should be another factor during learning, such as the kitten scene should be an enhancement for the objects like the knife, cooker to be recognized. Most of the previous studies ignore the context information for object recognition.
 
 ## Data description
-The dataset is collected under multiple scenes, such as living room, kitchen, and bedroom (objects located on the desk, floor, bed, and wall), which explicitly incorporates the context information into object recognition tasks. 
+>The dataset is collected under multiple scenes, such as living room, kitchen, and bedroom (objects located on the desk, floor, bed, and wall), which explicitly incorporates the context information into object recognition tasks. 
 
 Our released dataset is a collection of $51$ instances including $13$ categories daily necessities objects under $5$ scenes. For each instance, a $17$ seconds video (at $30$ fps) has been recorded with a Realsense D435i camera delivering ～$500$ RGB-D frames. $4$ environment factors, each has $3$ level changes, are considered explicitly in our dataset, including illumination, occlusion, clutter and actual pixel sizes of the object in the images. The defined three difficulty levels for each factor are shown below (thus, totally we have $12$ subcategories w.r.t. the environment factors):
 
