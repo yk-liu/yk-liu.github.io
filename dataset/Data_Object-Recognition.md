@@ -7,8 +7,12 @@ commentable: false
 protected: true
 mathjax: true
 ---
+> Lifelong Object Recognition Challenge starts online now, [please join the competition on Codalab](https://codalab.lri.fr/competitions/581) ! Give us feedback if you encounter any problem.
 
-# Lifelong Robotic Vision - Object Recognition Dataset 
+- [Github page](https://github.com/lifelong-robotic-vision/lifelong-robotic-vision.github.io) 
+- Organizer: [Qi She](mailto:qi.she@intel.com)
+
+# OpenLORIS-object Dataset 
 
 >(L)ifel(O)ng (R)obotic V(IS)ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on improving the continuous learning capbility of the common objects in the home scenario. 
 

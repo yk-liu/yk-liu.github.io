@@ -12,6 +12,8 @@ mathjax: true
 
 <img src="https://lifelong-robotic-vision.github.io/competition/object.gif" alt="Objects-demo" width="700">
 
+> Lifelong Object Recognition Challenge starts online now, [please join the competition on Codalab](https://codalab.lri.fr/competitions/581) ! Give us feedback at [Github page](https://github.com/lifelong-robotic-vision/lifelong-robotic-vision.github.io) or mail to [Qi She](mailto:qi.she@intel.com) if you encounter any problem.
+
 - This challenge intends to explore how to leverage the knowledge learned from previous tasks that could generalize to new task effectively, and also how to efficiently memorize of previously learned tasks. Making the robot behaves like the human with knowledge transfer, association, and combination capabilities.
 
 - To our best knowledge, the provided lifelong object recognition dataset is the 1st one that explicitly indicates the task difficulty under the incremental setting, which is able to foster the lifelong/continual/incremental learning in a supervised/semi-supervised manner. Different from previous instance/class-incremental task, the difficulty-incremental learning is to test the model’s capability over continuous learning when faced with multiple environmental factors, such as illumination, occlusion, camera-object distances/angles, clutter, and context information in a low or high dynamic scene. 

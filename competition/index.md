@@ -16,14 +16,17 @@ The competition is composed of two challenges with separate scoreboards. Each te
 For the details of each challenge, please follow their webpages:
 
 - [Lifelong Object Recognition Challenge]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
+
+> the official website for our Lifelong Object Recognition starts on [Codalab here](https://codalab.lri.fr/competitions/581), wish you achieve a great score !
+
 - [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
 
+> the official website for Lifelong SLAM is pending !
 
 # Registration
 
-If you are interested in either challenge, we encourage you to [pre-register with email](mailto:xuesong.shi@intel.com?subject=Pre-register%20for%20Lifelong%20Robotic%20Vision%20Competition&Body=Dear%20Organizers,%0D%0A) right now to tell us your interests and special requests. Your early feedbacks can help us define the data and rules.
+If you are interested in lifelong object recognition or lifelong SLAM, and have special requests, please contact [Qi She](mailto:qi.she@intel.com) or [Xuesong Shi](mailto:xuesong.shi@intel.com). Your early feedbacks can help us polish the rules.
 
-The official registration will be open around June, with sample dataset available then.
 
 # Important Dates
 *Dataset Release - July, 2019*
