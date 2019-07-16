@@ -10,7 +10,7 @@ mathjax: true
 
 # Lifelong Robotic Vision - Object Recognition Dataset 
 
-(L)ifel(O)ng {R}obotic V{IS}ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on the common objects existing in the home scenario. 
+(L)ifel(O)ng (R)obotic V(IS)ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on improving the continuous learning capbility of the common objects in the home scenario. 
 
 ## Data collection
 Data is obtained in the office and home environments. Several grounded robots mounted by Intel RealSense D435i and T265 camera is used for data collection. The D435i camera provides aligned color images and depth images, and IMU measurements. The T265 camera provides stereo fisheye images and aligned IMU measurements. 
