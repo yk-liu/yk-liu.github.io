@@ -17,7 +17,6 @@ For the details of each challenge, please follow their webpages:
 
 > [Lifelong Object Recognition Challenge]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
 > the official website for our Lifelong Object Recognition starts on [Codalab here](https://codalab.lri.fr/competitions/581), wish you achieve a great score !
-_________
 
 > [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) 
 > the official website for Lifelong SLAM is pending !
