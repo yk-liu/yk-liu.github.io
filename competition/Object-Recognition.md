@@ -10,7 +10,7 @@ mathjax: true
 
 # Lifelong Object Recognition 
 
-<img src="https://lifelong-robotic-vision.github.io/competition/object.gif" alt="Objects-demo" width="700">
+<img src="https://lifelong-robotic-vision.github.io/competition/object.gif" alt="object-demo" width="700">
 
 > Lifelong Object Recognition Challenge starts online now, [please join the competition on Codalab](https://codalab.lri.fr/competitions/581) ! Give us feedback at [Github page](https://github.com/lifelong-robotic-vision/lifelong-robotic-vision.github.io) or mail to [Qi She](mailto:qi.she@intel.com) if you encounter any problem.
 

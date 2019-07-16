@@ -7,10 +7,6 @@ commentable: false
 protected: true
 mathjax: true
 ---
-> Lifelong Object Recognition Challenge starts online now, [please join the competition on Codalab](https://codalab.lri.fr/competitions/581) ! Give us feedback if you encounter any problem.
-
-- [Github page](https://github.com/lifelong-robotic-vision/lifelong-robotic-vision.github.io) 
-- Organizer: [Qi She](mailto:qi.she@intel.com)
 
 # OpenLORIS-object Dataset 
 
@@ -122,8 +118,12 @@ For competition dataset, we randomly shuffled the dataset with multiple factors.
 |8	|	strong |	 | $30 \times 30 - 200 \times 200$ | complex | 
 |9	|	weak	 |	$50\%$ | $> 200 \times 200$ | |
 
+## Join the IROS2019 lifelong object recognition competition
 
+> Lifelong Object Recognition Challenge starts online now, [please join the competition on Codalab](https://codalab.lri.fr/competitions/581) ! if you encounter any problem, give us feedback via
 
+- [Github for lifelong robotic vision challenge](https://github.com/lifelong-robotic-vision/lifelong-robotic-vision.github.io) or
+- Organizer: [Qi She](mailto:qi.she@intel.com)
 
 
 
