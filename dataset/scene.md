@@ -24,6 +24,7 @@ collaboration.
 
 For now the data are available only to competition participants of [Lifelong SLAM
 Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) with IROS 2019.
+[Register the competition](http://sv.mikecrm.com/jTS0wi7) to get the dataset at the earliest!
 
 ## Robot and Sensors
 
