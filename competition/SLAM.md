@@ -42,5 +42,5 @@ More detailed rules are under discussion. Please feel free to [contact us](mailt
 
 # Evaluation Metrics
 
-We will introduce some new metrics for this competition, as traditional SLAM evaluation (e.g. ATE, RPE) measures mostly the accuracy of pose tracking. We will emphsize more on the robustness of tracking (and maybe also re-localization, which we have not decided). The metrics will be announced before the competition starts.
+We will introduce some new metrics for this competition, as traditional SLAM evaluation (e.g. ATE, RPE) measures mostly the accuracy of pose tracking. We will emphsize more on the robustness of tracking and re-localization. Specifically, success rate of localization for each frame will be evaluated. Please refer to [this paper](https://drive.google.com/file/d/10EBSxett6dFhl-6QJ0PW30c6RsSU_ZZu/view?usp=sharing) for more details.
 
