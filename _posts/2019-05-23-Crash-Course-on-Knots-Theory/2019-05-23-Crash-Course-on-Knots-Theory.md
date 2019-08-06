@@ -4,9 +4,9 @@ title: |
 categories: Topological-quantum-computation Knot-theory 
 tags: Topological-quantum-computation Knot-theory Jones-polynomial Alexander-polynomial Kauffman-bracket
 keywords: modular
-edit: 2019-06-04
-status: Writing
-description: This is a series of posts on topological quantum computations. To address the reason why we introduce such "strange-looking" equations to calculate Jones polynomials, we have to know the history of knot theory, and understand how the pioneers came up with their ideas. 
+edit: 2019-08-06
+status: Completed
+description: This is a series of posts on topological quantum computations. To address the reason why we introduce such "strange-looking" equations to calculate Jones polynomials, we have to know the history of knot theory, and understand how the pioneers came up with their ideas. This post provide a somewhat natural way to define Alexander Polynomials and skein relations from the coloring of knots, and ended on the note that the author is currently incapable of giving an equivalently convincing reason behind the definition of the Jones or the Kauffman polynomial.
 ---
 
 $$
@@ -30,6 +30,7 @@ $$
 \newcommand{\Hashtag}{\rlap{=}/\!/}
 \newcommand{\hashtag}{\mathchoice{\Hashtag}{\Hashtag}{\scriptsize\Hashtag}{\tiny\Hashtag}}
 \require{cancel}
+\notag
 $$
 
 This post mostly follows [^Kauffman-knots].
@@ -461,7 +462,6 @@ Since the determinant of the coloring matrix is $0$, we will use reduced colorin
 We can calculate the Alexander polynomial using the coloring equations
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/trefoil-Alexander.png" alt="Alexander polynomials of trefoil and deformed trefoil" width="80%">
-
 $$
 M_\text{trefoil}=\pmatrix{1-t & t&-1\\  -1 &1-t&t\\ t  & -1 & 1-t}
 \qquad
@@ -498,7 +498,7 @@ $$
 
 Alexander found out in his paper that the Alexander polynomial of "similar knots" have certain relations, which he then listed in a chapter titled "Miscellaneous theorems". 
 
-![1559649717723](assets/1559649717723.png)
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/skein.png" alt="skein relations" width="80%">
 
 If three oriented links $L _ -$, $L _ +$ and $L_0$ have diagrams $D _ -$, $D _ +$ and $D_0$ which differ only in a small neighborhood as shown above, then
 $$
@@ -510,15 +510,15 @@ Conway (whose name you could have heard from [the game of life](https://en.wikip
 
 The significance of the skein relation is that it allows us to abandon the tedious calculations of the coloring matrix, and turn the algorithm for obtaining the Alexander polynomial into a child's play.
 
-An example would be
+An example would be as below.
 
-![Untitled](assets/Untitled.png)
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-05-23-Crash-Course-on-Knots-Theory/assets/proximity.png" alt="skein relations in proximity" width="80%">
 
 > For a long time why such skein relations would work remained a mystery. Turns out the skein relation is deeply connected to various fields in physics, such as statistical mechanics and quantum field theory, which we shall discuss in the following section.
 
-# Jones Polynomial: Knots and Physics
+# Jones Polynomial and Beyond Knots and Physics
 
-## Discovery of Jones Polynomial and Its Infulence
+## Discovery of Jones Polynomial and Its Influence
 
 > In the summer of 1982, Vaughan Jones was presenting a lecture on von Neumann algebras in Geneva. At the end of his talk Didier Hatt-Arnold, a graduate student in the audience, suggested that the relations in his algebraic structures were similar to those in the braid groups. Soon afterwards, Jones worked out how to construct representations of the braid groups into his algebras, but he did not immediately recognize their significance. The following summer, Jones realized that the image of $\mathbb B _ 5$ under one of the representations was the projective symplectic group $\mathrm{PSp}(4, \ints _ 3)$, the finite simple group of order $25920$. Thinking that this might be of some interest, Jones arranged to discuss his representations with Joan Birman.
 >
@@ -531,31 +531,15 @@ An example would be
 
 What we need to know now is that this was a highly complicated history and a somewhat "accidental" discovery. However, such polynomial can be found by defining a new set of skein relations. This new type skein relation fueled the search for more polynomials by choosing different skein relations. Later the HOMFLY polynomial were quick discovered by choosing yet another skein relation. 
 
-However, such skein relation remained largely as a mathematical trick for calculating the corresponding polynomials, without knowing "why this would work". Later Witten realized that the Jones polynomial is relation to QFT, as according to the path integral formalism, particles may travel freely forward and backwards in time. Thus a particle confined in $2$-dimensional space can have a "knotted" trajectory in $(2+1)$ space-time. The knottedness is related to Chern-Simons theory and it turns out that the amplitude of a trajectory is related to whether the trajectory is knotted or not. This point of view gave birth to the Kauffman bracket, which we should discuss in detail below. For more information, you can read [^Ap-physics] and [^Witten-physics]. For the original definition, see chapter 4 of [^jones-explain].
+However, such skein relation remained largely as a mathematical trick for calculating the corresponding polynomials, without knowing "why this would work". Later Witten realized that the Jones polynomial is related to QFT, as according to the path integral formalism, particles may travel freely forward and backwards in time. Thus a particle confined in $2$-dimensional space can have a "knotted" trajectory in $(2+1)$ space-time. The knottedness is related to Chern-Simons theory and it turns out that the amplitude of a trajectory is related to whether the trajectory is knotted or not. This point of view gave birth to the Kauffman bracket, which we should discuss in detail below. For more information, you can read [^Ap-physics] and [^Witten-physics]. For the original definition, see chapter 4 of [^jones-explain].
 
-## Original Definition
+## Polynomials and Physics
 
+I spent quite some time trying to sort out the logic between these polynomials for about a month, decided to give it a rest, and gave it another week after a 2 months break. I have to say regrettably that I have not seen a introductory paper or book that dumbed down the relations of polynomials and physics to a level that I could understand. 
 
+Apparently there are two kinds of connections, one is with statistical mechanics, which we start from arranging knots on an Ising model. (See `2. Spin models, the Potts model, IRF models` of [^jones-sm] or [^knots-and-links].) The other is with quantum field theory or an enhanced version of it (topological QFT etc.), where a expectation value is **assigned** to the vacuum. (See `Chapter 8. Knot Amplitudes` of [^Kauffman-knots] .)
 
-## Jones Polynomial and Statistical Mechanics
-
-See Chapter 6 of [^knots-twist], which did not gave explanation of the coefficients.
-
-This chapter follows `2. Spin models, the Potts model, IRF models` of  [^jones-sm].
-
-## Jones Polynomial and QFT
-
-### Review of Quantum Field Theory
-
->  From 9.2 of[^knots-and-links] which took a definitive approach.
-
-The theory was complicated, but the simplest way to define the Jones polynomial is a recursive definition due to Louis Kauffman using the Kauffman bracket skein relation.
-
-### How did Kauffman do it?
-
-Instead Kauffman [^Kauffman-knots] did gave a detailed explanation in `Chapter 8. Knot Amplitudes` of [^Kauffman-knots] on how he obtained such coefficients.
-
-
+What I struggle with is that I could not answer why such arrangements were made. They seemed to me as a effort to force the idea of knot theory on a physical system. I don't have the knowledge needed to understand it comprehensively so I have to end it here. If you have any suggestions or any directions you can provide me to chase, feel free to leave a comment. This crash course has gone way out of my expectation so far and I might circle back if I need more knowledge on knot theory.
 
 # Further Readings
 
@@ -584,7 +568,6 @@ Nice intro but lacks explanation of Jones: [^knotbook]
 <big>**Knots on a Torus**</big> Kauffman, L. H. (1998). Virtual knot theory. *arXiv preprint math/9811028*.<http://homepages.math.uic.edu/~kauffman/VKT.pdf> 
 
 >  Might be important when calculating braiding on PBC
-
 
 ---
 
