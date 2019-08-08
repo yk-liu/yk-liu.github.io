@@ -62,8 +62,6 @@ motion capture system or a LiDAR, with alignment to either D435i color camera an
 T265 left camera.
 
 
-**[Pre-register the competition](mailto:xuesong.shi@intel.com?subject=Pre-register%20for%20Lifelong%20Robotic%20Vision%20Competition&Body=Dear%20Organizers,%0D%0A) and get the first time notice when the data be available!**
-
 ## FAQ
 
 <ul><li>
@@ -98,7 +96,7 @@ Yes. For each scene the sensor setup are unchanged.
 How did you get the intrinsics and extrinsics?
 </li></ul>
 <ul><p>
-All the intrinsics are from RealSense factory calibration (except for D435i IMU which was from <a href=https://www.intelrealsense.com/wp-content/uploads/2019/07/Intel_RealSense_Depth_D435i_IMU_Calibration.pdf>official calibration procedure</a>). Extrinsics are calibrated with various tools. If you would like to perform your own calibration, please contact us.
+All the intrinsics are from RealSense factory calibration (except for D435i IMU which was from [official calibration procedure](https://www.intelrealsense.com/wp-content/uploads/2019/07/Intel_RealSense_Depth_D435i_IMU_Calibration.pdf)). Extrinsics are calibrated with various tools. If you would like to perform your own calibration, please contact us.
 </p></ul>
 
 <ul><li>
@@ -123,3 +121,5 @@ No. Random biases have been added to the stamps.
 </p></ul>
 
 Other questions? Please open an issue [here](https://github.com/lifelong-robotic-vision/lifelong-slam/issues).
+
+**[Register the competition](http://sv.mikecrm.com/jTS0wi7) to get the dataset at the earliest!**
