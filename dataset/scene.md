@@ -44,7 +44,7 @@ List of available data:
 |--------|---------------|-----|------------|
 | D435i  | color         | 30  | 848x480    |
 | D435i  | depth         | 30  | 848x480    |
-| D435i  | aligned_depth | 30  | 848x480    |
+| D435i  | aligned_depth_to_color | 30  | 848x480    |
 | D435i  | accel         | 250 |            |
 | D435i  | gyro          | 400 |            |
 | T265   | fisheye1      | 30  | 848x800    |
@@ -52,6 +52,8 @@ List of available data:
 | T265   | accel         | 62.5|            |
 | T265   | gyro          | 200 |            |
 | base   | odom          | 20  |            |
+
+[![robot-frames](robot-frames.png "Coordinates")](robot-frames.png)
 
 ## Ground-truth
 
@@ -62,3 +64,62 @@ T265 left camera.
 
 **[Pre-register the competition](mailto:xuesong.shi@intel.com?subject=Pre-register%20for%20Lifelong%20Robotic%20Vision%20Competition&Body=Dear%20Organizers,%0D%0A) and get the first time notice when the data be available!**
 
+## FAQ
+
+<ul><li>
+Where can I download the data?
+</li></ul>
+<ul><p>
+For now the data are provided only to competition participants. If you have registered the competition, you will get Google Drive / Baidu Pan links of the data by emails.
+</p></ul>
+
+<ul><li>
+Are all data synchronized?
+</li></ul>
+<ul><p>
+Yes. The data from the same RealSense camera are hardware synchronized. Others are synchronized by software with a millisec level accuracy.
+</p></ul>
+
+<ul><li>
+Where are the intrinsics and extrinsics?
+</li></ul>
+<ul><p>
+With the data. In the ROS bags, camera/IMU intrinsics are included in the camera_info/imu_info topics, extrinsics are in the tf_static topic.
+</p></ul>
+
+<ul><li>
+Can I assume identical intrinsics and extrinsics for all trajectories of the same scene?
+</li></ul>
+<ul><p>
+Yes. For each scene the sensor setup are unchanged.
+</p></ul>
+
+<ul><li>
+How did you get the intrinsics and extrinsics?
+</li></ul>
+<ul><p>
+All the intrinsics are from RealSense factory calibration (except for D435i IMU which was from <a href=https://www.intelrealsense.com/wp-content/uploads/2019/07/Intel_RealSense_Depth_D435i_IMU_Calibration.pdf>official calibration procedure</a>). Extrinsics are calibrated with various tools. If you would like to perform your own calibration, please contact us.
+</p></ul>
+
+<ul><li>
+Why are there two sets of IMU data?
+</li></ul>
+<ul><p>
+Both RealSense D435i and RealSense T265 has an integrated IMU (BMI055). Please choose the IMU data from the same device of your primary image source for better synchronization. Note that the two sets of IMU data have different axis directions.
+</p></ul>
+
+<ul><li>
+Are the IMU data calibrated?
+</li></ul>
+<ul><p>
+No. Those are raw data from the sensor. You may want to apply the intrinsic matrix onto the data for better accuracy.
+</p></ul>
+
+<ul><li>
+Do the timestamps represent the true time of each recording?
+</li></ul>
+<ul><p>
+No. Random biases have been added to the stamps.
+</p></ul>
+
+Other questions? Please open an issue [here](https://github.com/lifelong-robotic-vision/lifelong-slam/issues).
