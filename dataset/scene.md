@@ -96,7 +96,7 @@ Yes. For each scene the sensor setup are unchanged.
 How did you get the intrinsics and extrinsics?
 </li></ul>
 <ul><p>
-All the intrinsics are from RealSense factory calibration (except for D435i IMU which was from [official calibration procedure](https://www.intelrealsense.com/wp-content/uploads/2019/07/Intel_RealSense_Depth_D435i_IMU_Calibration.pdf)). Extrinsics are calibrated with various tools. If you would like to perform your own calibration, please contact us.
+All the intrinsics are from RealSense factory calibration (except for D435i IMU which was from <a href="https://www.intelrealsense.com/wp-content/uploads/2019/07/Intel_RealSense_Depth_D435i_IMU_Calibration.pdf">official calibration procedure</a>). Extrinsics are calibrated with various tools. If you would like to perform your own calibration, please contact us.
 </p></ul>
 
 <ul><li>
