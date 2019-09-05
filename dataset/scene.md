@@ -61,6 +61,13 @@ For SLAM evaluation, the ground-truth trajectory of the robot is obtained by a
 motion capture system or a LiDAR, with alignment to either D435i color camera and
 T265 left camera.
 
+## Known Issues
+
+Following are some know issues with the preview-version dataset released to the competition registrants. They will be corrected in the future public release.
+
+- For office/corridor/cafe/home data, there is an translation error of over 1cm in the extrinsics of D435i IMU. The translation of d400_imu from d400_color should be [0.0203127935528755, -0.0051032523624599, -0.0112013882026076], while the current values are [0.014881294220686, -2.32995425903937e-05, 0.000588475959375501].
+
+- For all data, the noise factors of D435i IMU are not provided. An estimation of noise variances of D435i should be 0.0002678 for accel, and 1.0296e-5 for gyro. These values are derived from T265 noise factors scaled by their filter bandwidth.
 
 ## FAQ
 
@@ -111,6 +118,13 @@ Are the IMU data calibrated?
 </li></ul>
 <ul><p>
 No. Those are raw data from the sensor. You may want to apply the intrinsic matrix onto the data for better accuracy.
+</p></ul>
+
+<ul><li>
+Can I get the exposure time of each image?
+</li></ul>
+<ul><p>
+Yes. The exposure time is in header.seq of each image message in the ROS bags.
 </p></ul>
 
 <ul><li>
