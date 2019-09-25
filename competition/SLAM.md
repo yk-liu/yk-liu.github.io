@@ -12,6 +12,8 @@ mathjax: true
 
 > Please fill [the registration form](http://sv.mikecrm.com/jTS0wi7) to get the dataset for the competition.
 
+> Please submit your results to [codalab](https://competitions.codalab.org/competitions/21484).
+
 In most real-world robotic scenarios, robots should be able to long-termly operate in dynamic and daily changing environments, and SLAM should be one of their most fundemental capabilities. However, most existing SLAM frameworks are evaluated in static environments, or in scenes containing some apparent dynamics such as moving people and objects. This competition brings new challenges by introducing *out-of-sight scene changes*. For example, in home scenarios, most objects may be movable or deformable, and the visual features of the same place may be significantly different in some successive days. Such out-of-sight dynamics pose challenges to the robustness of (re-)localization and the reusability of mapping, which to our knowledge have not been well studied. We use the term *Lifelong SLAM* to emphasize the capability of long-term mapping and robust localization.
 
 [![home](home.png "Pictures taken in someone's home"){:width="640px"}](home.png)
@@ -48,21 +50,15 @@ The major consideration is the robustness of pose estimation. Two metrics will b
 
 ### Correct Rate (CR)
 
-- An estimated pose is considered to be correct if both its absolute trajectory error (ATE) and absolute orientation error (AOE) are no larger than a threshold. The ATE threshold for this competition is 1 meter for office, 3 meters for cafe/home, and 5 meters for corridor/market. The AOE threshold is 30 degree for all scenes.
-- The correct time of a trajectory is the total time with correct poses. Each correct pose will contribute a piece of correct time until the next pose or end of the sequence, with a upper limit of 1 sec.
-- The correct rate of a trajectory is ratio of correct time and total length of the sequence (from ground-truth).
-
-[![CR](\text{CR}^\epsilon=\frac{\sum_{k=0}^{N} \left(\min \left(t_{k+1}-t_{k}, \delta\right) \cdot u\left(\epsilon-\text{ATE}\left(p_{k}\right)\right)\right)}{t_{\max }-t_{\min}})](https://latex.codecogs.com/svg.download?%5Ctext%7BCR%7D%5E%5Cepsilon%3D%5Cfrac%7B%5Csum_%7Bk%3D0%7D%5E%7BN%7D%20%5Cleft%28%5Cmin%20%5Cleft%28t_%7Bk+1%7D-t_%7Bk%7D%2C%20%5Cdelta%5Cright%29%20%5Ccdot%20u%5Cleft%28%5Cepsilon-%5Ctext%7BATE%7D%5Cleft%28p_%7Bk%7D%5Cright%29%5Cright%29%5Cright%29%7D%7Bt_%7B%5Cmax%20%7D-t_%7B%5Cmin%7D%7D)
-
-[![CR](\text{CR}^\epsilon=\frac{\sum_{k=0}^{N} \left(\min \left(t_{k+1}-t_{k}, \delta\right) \cdot u\left(\epsilon-\text{ATE}\left(p_{k}\right)\right)\right)}{t_{\max }-t_{\min}})](https://latex.codecogs.com/png.download?%5Ctext%7BCR%7D%5E%5Cepsilon%3D%5Cfrac%7B%5Csum_%7Bk%3D0%7D%5E%7BN%7D%20%5Cleft%28%5Cmin%20%5Cleft%28t_%7Bk+1%7D-t_%7Bk%7D%2C%20%5Cdelta%5Cright%29%20%5Ccdot%20u%5Cleft%28%5Cepsilon-%5Ctext%7BATE%7D%5Cleft%28p_%7Bk%7D%5Cright%29%5Cright%29%5Cright%29%7D%7Bt_%7B%5Cmax%20%7D-t_%7B%5Cmin%7D%7D)
-
-Total CR is the sum of CR for each sequence weighted by the sequence length. It indicates the percentage of correct pose estimates over all data sequences.
+- An estimated pose is considered to be **correct** if both its absolute trajectory error (ATE) and absolute orientation error (AOE) are no larger than a threshold. The ATE threshold for this competition is 1 meter for office, 3 meters for cafe/home, and 5 meters for corridor/market. The AOE threshold is 30 degree for all scenes.
+- The **correct time** of a trajectory is the total time with correct poses. Each correct pose will contribute a piece of correct time until the next pose or end of the sequence, with a upper limit of 1 sec.
+- The **correct rate** of a trajectory is ratio of correct time and total length of the sequence (from ground-truth).
+- **Total CR** is the sum of CR for each sequence weighted by the sequence length. It indicates the percentage of correct pose estimates over all data sequences.
 
 ### Re-localization Score
 
-A score is calculated for re-localization in each non-first sequences. The score is 0 if the first pose on the trajectory is incorrect (with the same criterion as for CR above), otherwise it is exp(-(t0-tmin)/60), where t0 is the time of the first pose, and tmin is the starting time of the sequence.
-
-Total re-localization score is the sum of re-localization scores for each sequence.
+- A **re-localization score** is calculated for each non-first sequence. The score is 0 if the first pose on the trajectory is incorrect (with the same criterion as for CR above), otherwise it is exp(-(t0-tmin)/60), where t0 is the time of the first pose, and tmin is the starting time of the sequence.
+- **Total re-localization score** is the sum of re-localization scores for each sequence.
 
 ### Total Score
 
