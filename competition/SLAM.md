@@ -34,11 +34,8 @@ For more details of the data, please visit [the OpenLORIS-Scene Dataset](https:/
 
 - Participants should build a visual or visual-inertial SLAM system to join the competition.
 - Participants can choose a subset of sensor data for their algorithm, e.g. monocular or RGB-D, with IMU or without.
-- Participants should feed their SLAM algorithm with given data in real time, record the results with given tools (will be released later), and submit the results to an evaluation server (will be announced later).
+- Participants should feed their SLAM algorithm with given data in real time, record the results (tools provided), and submit the results to [the codalab server](https://competitions.codalab.org/competitions/21484).
 - Finalists will be invited to give a 10-min talk about their techniques at IROS 2019 on Nov 4. The presentation quality will be scored together with algorithm performance in the final ranking, and winners will be awarded at IROS 2019 Award Luncheon.
-- The SLAM system is encouraged to have re-localization capability to deal with kidnapped robot issue and to recover from tracking failures.
-- The SLAM system is encouraged to make use of semantic information for robust localization in changed scenes.
-- The SLAM system is encouraged to be power efficient (i.e. being able to run on an edge device instead of servers).
 - Manual or hardcoded adaption to the evaluation data is prohibited and might be considered as cheating, including
     - any kind of manual input at runtime
     - any kind of hardcoded states or features
@@ -47,7 +44,35 @@ For more details of the data, please visit [the OpenLORIS-Scene Dataset](https:/
 
 ## Evaluation Metrics
 
-We will introduce some new metrics for this competition, as traditional SLAM evaluation (e.g. ATE, RPE) measures mostly the accuracy of pose tracking. We will evaluate the robustness of localization. Specifically, success rate of re-localization for each trajectory and success rate of tracking for each frame will be scored. Please refer to [this paper](https://drive.google.com/file/d/10EBSxett6dFhl-6QJ0PW30c6RsSU_ZZu/view?usp=sharing) for more details.
+The major consideration is the robustness of pose estimation. Two metrics will be used to score the performance.
+
+### Correct Rate (CR)
+
+- An estimated pose is considered to be correct if both its absolute trajectory error (ATE) and absolute orientation error (AOE) are no larger than a threshold. The ATE threshold for this competition is 1 meter for office, 3 meters for cafe/home, and 5 meters for corridor/market. The AOE threshold is 30 degree for all scenes.
+- The correct time of a trajectory is the total time with correct poses. Each correct pose will contribute a piece of correct time until the next pose or end of the sequence, with a upper limit of 1 sec.
+- The correct rate of a trajectory is ratio of correct time and total length of the sequence (from ground-truth).
+
+[![CR](\text{CR}^\epsilon=\frac{\sum_{k=0}^{N} \left(\min \left(t_{k+1}-t_{k}, \delta\right) \cdot u\left(\epsilon-\text{ATE}\left(p_{k}\right)\right)\right)}{t_{\max }-t_{\min}})](https://latex.codecogs.com/svg.download?%5Ctext%7BCR%7D%5E%5Cepsilon%3D%5Cfrac%7B%5Csum_%7Bk%3D0%7D%5E%7BN%7D%20%5Cleft%28%5Cmin%20%5Cleft%28t_%7Bk+1%7D-t_%7Bk%7D%2C%20%5Cdelta%5Cright%29%20%5Ccdot%20u%5Cleft%28%5Cepsilon-%5Ctext%7BATE%7D%5Cleft%28p_%7Bk%7D%5Cright%29%5Cright%29%5Cright%29%7D%7Bt_%7B%5Cmax%20%7D-t_%7B%5Cmin%7D%7D)
+
+[![CR](\text{CR}^\epsilon=\frac{\sum_{k=0}^{N} \left(\min \left(t_{k+1}-t_{k}, \delta\right) \cdot u\left(\epsilon-\text{ATE}\left(p_{k}\right)\right)\right)}{t_{\max }-t_{\min}})](https://latex.codecogs.com/png.download?%5Ctext%7BCR%7D%5E%5Cepsilon%3D%5Cfrac%7B%5Csum_%7Bk%3D0%7D%5E%7BN%7D%20%5Cleft%28%5Cmin%20%5Cleft%28t_%7Bk+1%7D-t_%7Bk%7D%2C%20%5Cdelta%5Cright%29%20%5Ccdot%20u%5Cleft%28%5Cepsilon-%5Ctext%7BATE%7D%5Cleft%28p_%7Bk%7D%5Cright%29%5Cright%29%5Cright%29%7D%7Bt_%7B%5Cmax%20%7D-t_%7B%5Cmin%7D%7D)
+
+Total CR is the sum of CR for each sequence weighted by the sequence length. It indicates the percentage of correct pose estimates over all data sequences.
+
+### Re-localization Score
+
+A score is calculated for re-localization in each non-first sequences. The score is 0 if the first pose on the trajectory is incorrect (with the same criterion as for CR above), otherwise it is exp(-(t0-tmin)/60), where t0 is the time of the first pose, and tmin is the starting time of the sequence.
+
+Total re-localization score is the sum of re-localization scores for each sequence.
+
+### Total Score
+
+The total score to rank for this competition is a weighted sum of total CR (60%) and total re-localization score (40%). Total CR is a percentage itself. Total re-localization score is percentalized by dividing the total number of re-localizations (i.e. the number of all non-first sequences, equals 17 in the first round of competition).
+
+Total_Score = Total_CR * 60 + Total_Reloc_Score / Total_Reloc_Number * 40
+
+### Correct ATE (C-ATE) RMSE
+
+A value of C-ATE RMSE is also reported on the leaderboard. It is the RMSE of all correct estimated poses. This is for reference only and contribute to the rank only to multiple teams with the same total score (unlikely to happen).
 
 ## Timeline
 
