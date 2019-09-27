@@ -12,7 +12,7 @@ mathjax: true
 
 > Please fill [the registration form](http://sv.mikecrm.com/jTS0wi7) to get the dataset for the competition.
 
-> Please submit your results to [codalab](https://competitions.codalab.org/competitions/21505).
+> Please submit your results to [codalab](https://competitions.codalab.org/competitions/21484).
 
 In most real-world robotic scenarios, robots should be able to long-termly operate in dynamic and daily changing environments, and SLAM should be one of their most fundemental capabilities. However, most existing SLAM frameworks are evaluated in static environments, or in scenes containing some apparent dynamics such as moving people and objects. This competition brings new challenges by introducing *out-of-sight scene changes*. For example, in home scenarios, most objects may be movable or deformable, and the visual features of the same place may be significantly different in some successive days. Such out-of-sight dynamics pose challenges to the robustness of (re-)localization and the reusability of mapping, which to our knowledge have not been well studied. We use the term *Lifelong SLAM* to emphasize the capability of long-term mapping and robust localization.
 
@@ -36,7 +36,7 @@ For more details of the data, please visit [the OpenLORIS-Scene Dataset](https:/
 
 - Participants should build a visual or visual-inertial SLAM system to join the competition.
 - Participants can choose a subset of sensor data for their algorithm, e.g. monocular or RGB-D, with IMU or without.
-- Participants should feed their SLAM algorithm with given data in real time, record the results (with [openloris_test_ros](https://github.com/lifelong-robotic-vision/lifelong-slam/issues/1) or [SLAMBench](https://github.com/lifelong-robotic-vision/slambench2)), and submit the results to [the codalab server](https://competitions.codalab.org/competitions/21505).
+- Participants should feed their SLAM algorithm with given data in real time, record the results (with [openloris_test_ros](https://github.com/lifelong-robotic-vision/lifelong-slam/issues/1) or [SLAMBench](https://github.com/lifelong-robotic-vision/slambench2)), and submit the results to [the codalab server](https://competitions.codalab.org/competitions/21484).
 - Finalists will be invited to give a 10-min talk about their techniques at IROS 2019 on Nov 4. The presentation quality will be scored together with algorithm performance in the final ranking, and winners will be awarded at IROS 2019 Award Luncheon.
 - Manual or hardcoded adaption to the evaluation data is prohibited and might be considered as cheating, including
     - any kind of manual input at runtime
