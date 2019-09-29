@@ -69,6 +69,8 @@ Following are some know issues with the preview-version dataset released to the 
 
 - For all data, the noise factors of D435i IMU are not provided. An estimation of noise variances of D435i should be 0.0002678 for accel, and 1.0296e-5 for gyro. These values are derived from T265 noise factors scaled by their filter bandwidth.
 
+- There are duplicated messages on the /odom topic in office-1 bags. Can be removed with [this script](https://github.com/lifelong-robotic-vision/lifelong-slam/issues/2).
+
 ## FAQ
 
 <ul><li>
@@ -136,4 +138,4 @@ No. Random biases have been added to the stamps.
 
 Other questions? Please open an issue [here](https://github.com/lifelong-robotic-vision/lifelong-slam/issues).
 
-**[Register the competition](http://sv.mikecrm.com/jTS0wi7) to get the dataset at the earliest!**
+**[Register the competition](http://sv.mikecrm.com/jTS0wi7) to get the dataset now!**
