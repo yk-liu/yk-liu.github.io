@@ -14,6 +14,8 @@ mathjax: true
 
 > Please submit your results to [codalab](https://competitions.codalab.org/competitions/21505).
 
+> The submit deadline of first round has been extended to Oct 10.
+
 In most real-world robotic scenarios, robots should be able to long-termly operate in dynamic and daily changing environments, and SLAM should be one of their most fundemental capabilities. However, most existing SLAM frameworks are evaluated in static environments, or in scenes containing some apparent dynamics such as moving people and objects. This competition brings new challenges by introducing *out-of-sight scene changes*. For example, in home scenarios, most objects may be movable or deformable, and the visual features of the same place may be significantly different in some successive days. Such out-of-sight dynamics pose challenges to the robustness of (re-)localization and the reusability of mapping, which to our knowledge have not been well studied. We use the term *Lifelong SLAM* to emphasize the capability of long-term mapping and robust localization.
 
 [![home](home.png "Pictures taken in someone's home"){:width="640px"}](home.png)
@@ -72,9 +74,9 @@ A value of C-ATE RMSE is also reported on the leaderboard. It is the RMSE of all
 
 ## Timeline
 
-* First Round - now to Sept 30, 2019
+* First Round - now to ~~Sept 30~~ **Oct 10**, 2019
 * Final Round - Oct, 2019
-* Workshop - Nov 4, 2019
+* [Workshop](https://lifelong-robotic-vision.github.io/competition) - Nov 4, 2019
 
 ## Registration
 
