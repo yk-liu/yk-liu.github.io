@@ -22,7 +22,6 @@ For the details of each challenge, please follow their webpages:
 > [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) ([leaderboard](https://competitions.codalab.org/competitions/21505#results)) (contact: [Xuesong Shi](mailto:xuesong.shi@intel.com))
 
 <details><summary><b>Schedule</b></summary>
-<p>
 
 *Dataset Release - July, 2019*
 - Register for the competition first.
@@ -43,7 +42,6 @@ For the details of each challenge, please follow their webpages:
 - Final ranks (final round scores & presentation scores) will be announced.
 - Results will be visualized for the audience.
 
-</p>
 </details>
 
 ## Competition Workshop with IROS 2019
