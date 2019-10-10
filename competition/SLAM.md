@@ -10,11 +10,11 @@ mathjax: true
 
 # Lifelong SLAM Challenge
 
-> Please fill [the registration form](http://sv.mikecrm.com/jTS0wi7) to get the dataset for the competition.
+> Registration has been closed.
 
-> Please submit your results to [codalab](https://competitions.codalab.org/competitions/21505).
+> Please submit your results to [codalab](https://competitions.codalab.org/competitions/21505). Deadline: Oct 11 00:00 Anywhere on Earth (UTC-12).
 
-> The submit deadline of first round has been extended to Oct 10.
+> Please visit [Lifelong Robotic Vision Competition](https://lifelong-robotic-vision.github.io/competition/) for the workshop information.
 
 In most real-world robotic scenarios, robots should be able to long-termly operate in dynamic and daily changing environments, and SLAM should be one of their most fundemental capabilities. However, most existing SLAM frameworks are evaluated in static environments, or in scenes containing some apparent dynamics such as moving people and objects. This competition brings new challenges by introducing *out-of-sight scene changes*. For example, in home scenarios, most objects may be movable or deformable, and the visual features of the same place may be significantly different in some successive days. Such out-of-sight dynamics pose challenges to the robustness of (re-)localization and the reusability of mapping, which to our knowledge have not been well studied. We use the term *Lifelong SLAM* to emphasize the capability of long-term mapping and robust localization.
 
@@ -64,7 +64,7 @@ The major consideration is the robustness of pose estimation. Two metrics will b
 
 ### Total Score
 
-The total score to rank for this competition is a weighted sum of total CR (60%) and total re-localization score (40%). Total CR is a percentage itself. Total re-localization score is percentalized by dividing the total number of re-localizations (i.e. the number of all non-first sequences, equals 17 in the first round of competition).
+The total score to rank for this competition is a weighted sum of total CR (60%) and total re-localization score (40%). Total CR is a percentage itself. Total re-localization score is percentalized by dividing the total number of re-localizations (i.e. the number of all non-first sequences, equals 13 in the first round of competition).
 
 Total_Score = Total_CR * 60 + Total_Reloc_Score / Total_Reloc_Number * 40
 
@@ -78,6 +78,6 @@ A value of C-ATE RMSE is also reported on the leaderboard. It is the RMSE of all
 * Final Round - Oct, 2019
 * [Workshop](https://lifelong-robotic-vision.github.io/competition) - Nov 4, 2019
 
-## Registration
+## Registration (closed)
 
-**[Register now](http://sv.mikecrm.com/jTS0wi7) to get email instructions of dataset downloading.**
+~~[Register now](http://sv.mikecrm.com/jTS0wi7) to get email instructions of dataset downloading.~~

@@ -11,22 +11,18 @@ numbering: false
 
 # Lifelong Robotic Vision Competition
 
-The competition is composed of two challenges with separate scoreboards. Each team can register for either challenge or both. The competition will mostly be online, with an on-site event at [IROS 2019](https://www.iros2019.org/) to announce the final scores, demonstrate the best results, and hold technical talks and discussions.
+The competition is composed of two challenges with separate scoreboards. Each team can register for either challenge or both. The competition will mostly be online, with an on-site workshop at [IROS 2019](https://www.iros2019.org/) to announce the final scores, demonstrate the best results, and hold technical talks and discussions.
+
+## Challenges
 
 For the details of each challenge, please follow their webpages:
 
-> [Lifelong Object Recognition Challenge]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html)
-> the official website for our Lifelong Object Recognition starts on [Codalab here](https://codalab.lri.fr/competitions/581), wish you achieve a great score!
+> [Lifelong Object Recognition Challenge]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html) ([leaderboard](https://codalab.lri.fr/competitions/581#results)) (contact: [Qi She](mailto:qi.she@intel.com))
 
-> [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html)
-> Fill the [registration form](http://sv.mikecrm.com/jTS0wi7) to get dataset download instructions by email! Have Fun!
-
-# Registration
-
-If you are interested in lifelong object recognition or lifelong SLAM, and have special requests, please contact [Qi She](mailto:qi.she@intel.com) or [Xuesong Shi](mailto:xuesong.shi@intel.com). Your early feedbacks can help us polish the rules.
+> [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) ([leaderboard](https://competitions.codalab.org/competitions/21505#results)) (contact: [Xuesong Shi](mailto:xuesong.shi@intel.com))
 
 
-# Important Dates
+### Important Dates
 *Dataset Release - July, 2019*
 - Register for the competition first.
 - Download the dataset.
@@ -46,7 +42,8 @@ If you are interested in lifelong object recognition or lifelong SLAM, and have 
 - Final ranks (final round scores & presentation scores) will be announced.
 - Results will be visualized for the audience.
 
-# Competition Workshop with IROS 2019
+
+## Competition Workshop with IROS 2019
 
 Time: Nov 4, 2019
 
@@ -54,9 +51,9 @@ Venue: The Venetian Macao Resort Hotel, Macau, China
 
 The competition workshop will be open to anyone who has registered [IROS 2019](https://iros2019.org/registration).
 
-## Invited Talks
+### Invited Talks
 
-### From 3D vision to robotics vision
+#### From 3D vision to robotics vision
 
 **Baoquan Chen, Professor, Peking University**
 <details><summary>bio</summary>
@@ -67,7 +64,7 @@ Baoquan Chen is an Endowed Professor of Peking University, where he is the Execu
 
 In this talk, I will discuss how 3D environment acquisition can benefit from robot platform, and then, how 3D vision becomes an essential part of robotics vision, with 3D visual learning the essential underlying technique.
 
-### Bespoke machine learning for humanoid robots
+#### Bespoke machine learning for humanoid robots
 **Giorgio Metta, Dr., Istituto Italiano di Tecnologia**
 <details><summary>bio</summary>
 <p>
@@ -77,7 +74,7 @@ Giorgio Metta is the Scientific Director of the Istituto Italiano di Tecnologia 
 
 We are interested in developing humanoid robots with learning capabilities. Computation and memory  are typically limited on a robot and there are often requirements of tight real-time performance. Therefore we would like to design algorithms with guaranteed computational and memory bounds. We will show that we do not need to sacrifice much in terms of performance (e.g. recognition rates, accuracy, etc.). We will show practical examples in typical robotics applications such as in the estimation of the robot’s dynamics, on the fly object learning, and speech perception. Results come in different flavors as for example in dynamics estimation the controller has to potentially learn and provide estimates in the millisecond range while longer timescales are acceptable in e.g. visual object recognition. Speech recognition, on the other hand, requires integrating voice input over time. We will show implementations in some of our humanoid robots, namely the iCub and the recently developed R1 service robot.
 
-### Title TBD
+#### Title TBD
 **Jianwei Zhang, Professor, University of Hamburg**
 <details><summary>bio</summary>
 <p>
@@ -85,7 +82,7 @@ We are interested in developing humanoid robots with learning capabilities. Comp
 </details>
 
 
-## Program: (draft)
+### Program: (draft)
 <style>
 table th:first-of-type {
     width: 30%;
@@ -109,7 +106,10 @@ table th:nth-of-type(2) {
 | 16:30 - 17:00 | Awards ceremony | Intel may provide opportunities for further collaborations with the potential teams |
 | 17:00 - 18:00 | Discussions   |  |
 
-# Partners
+## Organizers
+<img src="https://lifelong-robotic-vision.github.io/about/organizer.png" alt="Human-Robot-Computer" width="820">
+
+## Partners
 We thank the following partners for their data contribution and valuable suggetions on the competition.
 
 <img src="https://lifelong-robotic-vision.github.io/about/partner.png" alt="partner" width="900">
