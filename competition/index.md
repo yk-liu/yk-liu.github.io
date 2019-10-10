@@ -21,7 +21,7 @@ For the details of each challenge, please follow their webpages:
 
 > [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) ([leaderboard](https://competitions.codalab.org/competitions/21505#results)) (contact: [Xuesong Shi](mailto:xuesong.shi@intel.com))
 
-<details><summary><b>Schedule</b></summary>
+<details><summary><b>Schedule</b></summary><br>
 
 *Dataset Release - July, 2019*
 - Register for the competition first.
@@ -105,11 +105,11 @@ table th:nth-of-type(2) {
 | 17:00 - 18:00 | Discussions   |  |
 
 ## Organizers
-<img src="https://lifelong-robotic-vision.github.io/about/organizer.png" alt="Human-Robot-Computer" width="820">
+<img src="https://lifelong-robotic-vision.github.io/about/organizer.png" alt="Human-Robot-Computer" max-width="820" height="auto">
 
 ## Partners
 We thank the following partners for their data contribution and valuable suggetions on the competition.
 
-<img src="https://lifelong-robotic-vision.github.io/about/partner.png" alt="partner" width="900">
+<img src="https://lifelong-robotic-vision.github.io/about/partner.png" alt="partner" max-width="900">
 
 
