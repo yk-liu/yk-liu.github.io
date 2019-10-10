@@ -23,24 +23,32 @@ For the details of each challenge, please follow their webpages:
 
 <details><summary><b>Schedule</b></summary><br>
 
-*Dataset Release - July, 2019*
-- Register for the competition first.
-- Download the dataset.
-- Develop your algorithm, evaluate it with the dataset and improve it.
-- Benchmarking metrics will be announced.
+<i>Dataset Release - July, 2019</i>
+<ul>
+<li> Register for the competition first.</li>
+<li> Download the dataset.</li>
+<li> Develop your algorithm, evaluate it with the dataset and improve it.</li>
+<li> Benchmarking metrics will be announced.</li>
+</ul>
 
-*First Round - July to Sept, 2019*
-- Download competition datasets, software tools, and upload the model/results before the deadline.
-- Highest-scored teams will be invited to the final round and to the workshop.
+<i>First Round - July to Sept, 2019</i>
+<ul>
+<li> Download competition datasets, software tools, and upload the model/results before the deadline.</li>
+<li> Highest-scored teams will be invited to the final round and to the workshop.</li>
+</ul>
 
-*Final Round - Oct, 2019*
-- A new set of data will be used for the final round.
-- The algorithms from each team shall be uploaded to our benchmarking server and run in a controlled environment.
+<i>Final Round - Oct, 2019</i>
+<ul>
+<li> A new set of data will be used for the final round.</li>
+<li> The algorithms from each team shall be uploaded to our benchmarking server and run in a controlled environment.</li>
+</ul>
 
-*Workshop - Nov 4, 2019*
-- Each team shall deliver a presentation about their techniques, which will be scored by a technical committee and considered in the final ranking.
-- Final ranks (final round scores & presentation scores) will be announced.
-- Results will be visualized for the audience.
+<i>Workshop - Nov 4, 2019</i>
+<ul>
+<li> Each team shall deliver a presentation about their techniques, which will be scored by a technical committee and considered in the final ranking.</li>
+<li> Final ranks (final round scores & presentation scores) will be announced.</li>
+<li> Results will be visualized for the audience.</li>
+</ul>
 
 </details>
 
@@ -110,6 +118,6 @@ table th:nth-of-type(2) {
 ## Partners
 We thank the following partners for their data contribution and valuable suggetions on the competition.
 
-<img src="https://lifelong-robotic-vision.github.io/about/partner.png" alt="partner" max-width="900">
+<img src="https://lifelong-robotic-vision.github.io/about/partner.png" alt="partner" max-width="900" height="auto">
 
 
