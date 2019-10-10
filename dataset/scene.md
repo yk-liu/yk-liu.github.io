@@ -24,7 +24,6 @@ collaboration.
 
 For now the data are available only to competition participants of [Lifelong SLAM
 Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) with IROS 2019.
-**[Register the competition](http://sv.mikecrm.com/jTS0wi7) to get the dataset at the earliest!**
 
 ## Robot and Sensors
 
@@ -138,4 +137,3 @@ No. Random biases have been added to the stamps.
 
 Other questions? Please open an issue [here](https://github.com/lifelong-robotic-vision/lifelong-slam/issues).
 
-**[Register the competition](http://sv.mikecrm.com/jTS0wi7) to get the dataset now!**
