@@ -275,3 +275,7 @@ a.sidebar-nav-item:focus {
   margin-bottom: 4em;
 }
 
+.img,
+img {
+  max-width: 100%;
+}

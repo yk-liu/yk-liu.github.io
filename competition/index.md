@@ -118,6 +118,6 @@ table th:nth-of-type(2) {
 ## Partners
 We thank the following partners for their data contribution and valuable suggetions on the competition.
 
-<img src="https://lifelong-robotic-vision.github.io/about/partner.png" alt="partner" max-width="900" height="auto">
+<img src="https://lifelong-robotic-vision.github.io/about/partner.png" alt="partner" width="900" height="auto">
 
 
