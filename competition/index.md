@@ -23,6 +23,7 @@ For the details of each challenge, please follow their webpages:
 
 <details><summary><b>Schedule</b></summary>
 <p>
+
 *Dataset Release - July, 2019*
 - Register for the competition first.
 - Download the dataset.
@@ -41,6 +42,7 @@ For the details of each challenge, please follow their webpages:
 - Each team shall deliver a presentation about their techniques, which will be scored by a technical committee and considered in the final ranking.
 - Final ranks (final round scores & presentation scores) will be announced.
 - Results will be visualized for the audience.
+
 </p>
 </details>
 
