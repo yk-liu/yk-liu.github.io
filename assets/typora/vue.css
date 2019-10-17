@@ -90,25 +90,27 @@ h6 code {
 }
 
 h1 {
-    padding-bottom: .4rem;
-    font-size: 2.2rem;
-    line-height: 1.3;
+    padding-bottom: .0rem;
+    font-size: 1.9rem;
+    line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1.225;
     margin: 35px 0px 15px 0px;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.43;
     margin: 20px 0px 7px 0px;
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    color: #363;
+    margin: 10px 0px 10px 0px;
 }
 
 h5 {
@@ -383,4 +385,8 @@ code.language-mermaid {
 	margin-right:auto;
 	background-color: initial;
 	margin: initial;
+}
+
+details {
+    background: #eee;
 }
