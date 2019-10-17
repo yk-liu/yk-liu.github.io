@@ -73,7 +73,7 @@ Baoquan Chen is an Endowed Professor of Peking University, where he is the Execu
 In this talk, I will discuss how 3D environment acquisition can benefit from robot platform, and then, how 3D vision becomes an essential part of robotics vision, with 3D visual learning the essential underlying technique.
 
 #### Bespoke machine learning for humanoid robots
-<details><summary><b>Giorgio Metta, Director, Istituto Italiano di Tecnologia</b></summary>
+<details><summary><b>Giorgio Metta, Scientific Director, Istituto Italiano di Tecnologia - Genoa, Italy</b></summary>
 <p>
 Giorgio Metta is the Scientific Director of the Istituto Italiano di Tecnologia (IIT) where he coordinated the iCub Project. He holds a MSc cum laude (1994) and PhD (2000) in electronic engineering both from the University of Genoa. From 2001 to 2002 he was postdoctoral associate at the MIT AI-Lab. He was previously with the University of Genoa and since 2012 Professor of Cognitive Robotics at the University of Plymouth (UK). He is member of the board of directors of euRobotics aisbl, the European reference organization for robotics research. Giorgio Metta research activities are in the fields of biologically motivated and humanoid robotics and, in particular, in developing humanoid robots that can adapt and learn from experience. Giorgio Metta is author of more than 250 scientific publications. He has been working as principal investigator and research scientist in about a dozen international as well as national funded projects.
 </p>
