@@ -13,6 +13,8 @@ numbering: false
 
 The competition is composed of two challenges with separate scoreboards. Each team can register for either challenge or both. The competition will mostly be online, with an on-site workshop at [IROS 2019](https://www.iros2019.org/) to announce the final scores, demonstrate the best results, and hold technical talks and discussions.
 
+> The registration of challenges have been closed, but the workshop will be open to anyone at IROS 2019. For better preparation and communication, We greatly encourage you to [register the workshop](http://openloris.sv.mikecrm.com/1zlaNmJ) (not required though) if you would be likely to join.
+
 ## Challenges
 
 For the details of each challenge, please follow their webpages:
