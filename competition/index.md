@@ -64,7 +64,7 @@ The competition workshop will be open to anyone who has registered [IROS 2019](h
 
 ### Invited Talks
 
-#### From 3D vision to robotics vision
+#### From 3D vision to robotic vision
 
 <details><summary><b>Baoquan Chen, Professor, Peking University</b></summary>
 <p>
@@ -72,7 +72,7 @@ Baoquan Chen is an Endowed Professor of Peking University, where he is the Execu
 </p>
 </details>
 
-In this talk, I will discuss how 3D environment acquisition can benefit from robot platform, and then, how 3D vision becomes an essential part of robotics vision, with 3D visual learning the essential underlying technique.
+In this talk, I will discuss how 3D environment acquisition can benefit from robot platform, and then, how 3D vision becomes an essential part of robotic vision, with 3D visual learning the essential underlying technique.
 
 #### Bespoke machine learning for humanoid robots
 <details><summary><b>Giorgio Metta, Scientific Director, Istituto Italiano di Tecnologia - Genoa, Italy</b></summary>
@@ -83,7 +83,7 @@ Giorgio Metta is the Scientific Director of the Istituto Italiano di Tecnologia 
 
 We are interested in developing humanoid robots with learning capabilities. Computation and memory  are typically limited on a robot and there are often requirements of tight real-time performance. Therefore we would like to design algorithms with guaranteed computational and memory bounds. We will show that we do not need to sacrifice much in terms of performance (e.g. recognition rates, accuracy, etc.). We will show practical examples in typical robotics applications such as in the estimation of the robot’s dynamics, on the fly object learning, and speech perception. Results come in different flavors as for example in dynamics estimation the controller has to potentially learn and provide estimates in the millisecond range while longer timescales are acceptable in e.g. visual object recognition. Speech recognition, on the other hand, requires integrating voice input over time. We will show implementations in some of our humanoid robots, namely the iCub and the recently developed R1 service robot.
 
-#### Cross-modal Learning for Robust Autonomous Robot Systems
+#### Cross-modal learning for robust autonomous robot systems
 <details><summary><b>Jianwei Zhang, Professor, University of Hamburg</b></summary>
 <p>
 Jianwei Zhang is professor and director of TAMS, Department of Informatics, University of Hamburg, Germany. He received both his Bachelor of Engineering (1986, with distinction) and Master of Engineering (1989) at the Department of Computer Science of Tsinghua University, Beijing, China, his PhD (1994) at the Institute of Real-Time Computer Systems and Robotics, Department of Computer Science, University of Karlsruhe, Germany, and Habilitation (2000) at the Faculty of Technology, University of Bielefeld, Germany. His research interests are sensor fusion, intelligent robotics and multimodal machine learning, cognitive computing of Industry4.0, etc. In these areas he has published about 300 journal and conference papers, technical reports, four book chapters and three research monographs. He holds 40+ patents on intelligent components and systems. He is the coordinator of the DFG/NSFC Transregional Collaborative Research Centre SFB/TRR169 “Crossmodal Learning” and several EU robotics projects. He has received multiple best paper awards. He is the General Chairs of IEEE MFI 2012, IEEE/RSJ IROS 2015, and the International Symposium of Human-Centered Robotics and Systems 2018. Jianwei Zhang is life-long Academician of Academy of Sciences in Hamburg Germany. 
@@ -107,14 +107,14 @@ table th:nth-of-type(2) {
 | 8:30 - 9:00   | Team registration |
 | 9:00 - 9:15   | Welcome and overview |
 | 9:15 - 10:00  | Giorgio Metta: Bespoke machine learning for humanoid robots |
-| 10:00 - 12:00 | Lifelong Object Recognition Challenge finalist reports |
+| 10:00 - 10:30 | Jianwei Zhang: Cross-modal learning for robust autonomous robot systems |
+| 10:30 - 12:00 | Lifelong Object Recognition Challenge finalist reports |
 | 12:00 - 13:30 | Lunch         |
 | 13:30 - 15:00 | Lifelong SLAM Challenge finalist reports |
 | 15:00 - 15:15 | Coffee break & Poster session  |
 | 15:15 - 16:00 | Baoquan Chen: From 3D vision to robotics vision |
-| 16:00 - 16:45 | Jianwei Zhang: Cross-modal Learning for Robust Autonomous Robot Systems |
-| 16:45 - 17:00 | Awards ceremony |
-| 17:00 - 18:00 | Discussions   |
+| 16:00 - 16:30 | Awards ceremony |
+| 16:30 - 17:00 | Discussions   |
 
 ## Organizers
 <img src="https://lifelong-robotic-vision.github.io/about/organizer.png" alt="Human-Robot-Computer" max-width="820" height="auto">
