@@ -89,6 +89,14 @@ We are interested in developing humanoid robots with learning capabilities. Comp
 Jianwei Zhang is professor and director of TAMS, Department of Informatics, University of Hamburg, Germany. He received both his Bachelor of Engineering (1986, with distinction) and Master of Engineering (1989) at the Department of Computer Science of Tsinghua University, Beijing, China, his PhD (1994) at the Institute of Real-Time Computer Systems and Robotics, Department of Computer Science, University of Karlsruhe, Germany, and Habilitation (2000) at the Faculty of Technology, University of Bielefeld, Germany. His research interests are sensor fusion, intelligent robotics and multimodal machine learning, cognitive computing of Industry4.0, etc. In these areas he has published about 300 journal and conference papers, technical reports, four book chapters and three research monographs. He holds 40+ patents on intelligent components and systems. He is the coordinator of the DFG/NSFC Transregional Collaborative Research Centre SFB/TRR169 “Crossmodal Learning” and several EU robotics projects. He has received multiple best paper awards. He is the General Chairs of IEEE MFI 2012, IEEE/RSJ IROS 2015, and the International Symposium of Human-Centered Robotics and Systems 2018. Jianwei Zhang is life-long Academician of Academy of Sciences in Hamburg Germany. 
 </p>
 </details>
+In a dynamic and changing world, a robust and effective robot system must have adaptive behaviors, incrementally learnable skills and a high-level conceptual understanding of the world it inhabits, as well as planning capabilities for autonomous operations. Future intelligent robot systems will benefit from the recent research on neurocognitive models in processing cross-modal data, exploiting synergy, integrating high-level knowledge and learning, etc. I will first introduce cross-modal learning issues of intelligent robots. Then I will present our investigation and experiments on synergy technique which uses fewer parameters to govern the high DOF of robot movement. The third part of my talk will demonstrate how an intelligent system like a robot can evolve its model as a result of learning from experiences; and how such a model allows a robot to better understand new situations by integration of knowledge, planning and learning.
+
+#### Robust and efficient visual-inertial SLAM for augmented reality
+<details><summary><b>Guofeng Zhang, Professor, Zhejiang University</b></summary>
+<p>
+</p>
+</details>
+In the past decade, visual SLAM and visual-inertial SLAM have made significant progress and been successfully applied in AR productions. However, it is still not easy to achieve a robust and efficient SLAM system in real applications due to some critical issues. For example, it is rather easy to encounter rapid camera motion, dynamic or textureless scenes. In addition, it is also not easy to achieve real-time performance on a mobile device. In this talk, I will introduce our recent works for addressing these key issues. Especially, we build a new visual-inertial dataset as well as a series of evaluation criteria for evaluating the performance V-SLAM / VI-SLAM in AR applications. A series of AR demos will be presented based on our developed SLAM system.
 
 
 ### Program: (tentative)
@@ -113,8 +121,9 @@ table th:nth-of-type(2) {
 | 13:30 - 15:00 | Lifelong SLAM Challenge finalist reports |
 | 15:00 - 15:15 | Coffee break & Poster session  |
 | 15:15 - 16:00 | Baoquan Chen: From 3D vision to robotics vision |
-| 16:00 - 16:30 | Awards ceremony |
-| 16:30 - 17:00 | Discussions   |
+| 16:00 - 16:35 | Guofeng Zhang: Robust and efficient visual-inertial SLAM for augmented reality |
+| 16:35 - 17:00 | Awards ceremony |
+| 17:00 - 17:30 | Panel Discussion |
 
 ## Organizers
 <img src="https://lifelong-robotic-vision.github.io/about/organizer.png" alt="Human-Robot-Computer" max-width="820" height="auto">
