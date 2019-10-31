@@ -62,17 +62,7 @@ Venue: The Venetian Macao Resort Hotel, Macau, China
 
 The competition workshop will be open to anyone who has registered [IROS 2019](https://iros2019.org/registration).
 
-### Invited Talks
-
-#### From 3D vision to robotic vision
-
-<details><summary><b>Baoquan Chen, Professor, Peking University</b></summary>
-<p>
-Baoquan Chen is an Endowed Professor of Peking University, where he is the Executive Director of the Center on Frontiers of Computing Studies. His research interests generally lie in computer graphics, visualization, and human-computer interaction. He has published more than 100 papers in international journals and conferences, including 30+ papers in ACM SIGGRAPH (TOG). Chen received an MS in Electronic Engineering from Tsinghua University, Beijing (1994), and a second MS (1997) and then PhD (1999) in Computer Science from the State University of New York at Stony Brook. Chen is the recipient of 2002 Microsoft Innovation Excellence Program, 2003 U.S. NSF CAREER award, 2004 University of Minnesota McKnight Land-Grant Professorship, 2005 IEEE Visualization Best Paper Award, and 2014 Chinagraph Outstanding Achievement Award. Chen serves on the editorial board of ACM Transaction on Graphics, and served as associate editor of IEEE Transaction on Visualization and Computer Graphics, and conference chair of both IEEE Visualization 2005 and SIGGRAPH Asia 2014. Personal web: <a href="https://cfcs.pku.edu.cn/baoquan">cfcs.pku.edu.cn/baoquan</a>
-</p>
-</details>
-
-In this talk, I will discuss how 3D environment acquisition can benefit from robot platform, and then, how 3D vision becomes an essential part of robotic vision, with 3D visual learning the essential underlying technique.
+### Keynote Talks
 
 #### Bespoke machine learning for humanoid robots
 <details><summary><b>Giorgio Metta, Scientific Director, Istituto Italiano di Tecnologia - Genoa, Italy</b></summary>
@@ -94,15 +84,39 @@ In a dynamic and changing world, a robust and effective robot system must have a
 #### Robust and efficient visual-inertial SLAM for augmented reality
 <details><summary><b>Guofeng Zhang, Professor, Zhejiang University</b></summary>
 <p>
+Guofeng Zhang received the B.S. and Ph.D. degrees in computer science from Zhejiang University in 2003 and 2009, respectively. He is currently a Full Professor with the State Key Laboratory of CAD&CG, Zhejiang University. His research interests include structure-from-motion, SLAM, 3D reconstruction, augmented reality, video segmentation and editing. The team he leads has developed a series of SfM/SLAM softwares (such as ACTS, LS-ACTS, RDSLAM, RKSLAM), which can be downloaded from the group website <a href="http://www.zjucvg.net">www.zjucvg.net</a>. He also has released the source code of a large-scale structure-from-motion system ENFT-SFM, a segment-based bundle adjustment algorithm SegmentBA, and incremental bundle adjustment algorithms EIBA & ICE-BA, which can be found at <a href="https://github.com/zju3dv/">github.com/zju3dv/</a>. He received the National Excellent Doctoral Dissertation Award, the Excellent Doctoral Dissertation Award of China Computer Federation, and the First Prize of the 2011 Ministry of Education Science and Technology Progress Award (ranked 4th).
 </p>
 </details>
 In the past decade, visual SLAM and visual-inertial SLAM have made significant progress and been successfully applied in AR productions. However, it is still not easy to achieve a robust and efficient SLAM system in real applications due to some critical issues. For example, it is rather easy to encounter rapid camera motion, dynamic or textureless scenes. In addition, it is also not easy to achieve real-time performance on a mobile device. In this talk, I will introduce our recent works for addressing these key issues. Especially, we build a new visual-inertial dataset as well as a series of evaluation criteria for evaluating the performance V-SLAM / VI-SLAM in AR applications. A series of AR demos will be presented based on our developed SLAM system.
 
 
-### Program: (tentative)
+#### ~~From 3D vision to robotic vision~~ (cancelled)
+
+<details><summary><b>Baoquan Chen, Professor, Peking University</b></summary>
+<p>
+Baoquan Chen is an Endowed Professor of Peking University, where he is the Executive Director of the Center on Frontiers of Computing Studies. His research interests generally lie in computer graphics, visualization, and human-computer interaction. He has published more than 100 papers in international journals and conferences, including 30+ papers in ACM SIGGRAPH (TOG). Chen received an MS in Electronic Engineering from Tsinghua University, Beijing (1994), and a second MS (1997) and then PhD (1999) in Computer Science from the State University of New York at Stony Brook. Chen is the recipient of 2002 Microsoft Innovation Excellence Program, 2003 U.S. NSF CAREER award, 2004 University of Minnesota McKnight Land-Grant Professorship, 2005 IEEE Visualization Best Paper Award, and 2014 Chinagraph Outstanding Achievement Award. Chen serves on the editorial board of ACM Transaction on Graphics, and served as associate editor of IEEE Transaction on Visualization and Computer Graphics, and conference chair of both IEEE Visualization 2005 and SIGGRAPH Asia 2014. Personal web: <a href="https://cfcs.pku.edu.cn/baoquan">cfcs.pku.edu.cn/baoquan</a>
+</p>
+</details>
+
+In this talk, I will discuss how 3D environment acquisition can benefit from robot platform, and then, how 3D vision becomes an essential part of robotic vision, with 3D visual learning the essential underlying technique.
+
+
+### Technical Committee
+
+**Guofeng Zhang**, Professor, Zhejiang University
+
+**Mihai Bujanca**, Research Assistant, University of Manchester
+
+**Qi She**, Senior Research Scientist, Intel Labs China
+
+**Xuesong Shi**, Senior Research Scientist, Intel Labs China
+
+**Yao Guo**, Department of computing, Imperial College London
+
+### Program
 <style>
 table th:first-of-type {
-    width: 30%;
+    width: 10%;
 }
 
 table th:nth-of-type(2) {
@@ -114,16 +128,19 @@ table th:nth-of-type(2) {
 |-------------- | ------ |
 | 8:30 - 9:00   | Team registration |
 | 9:00 - 9:15   | Welcome and overview |
-| 9:15 - 10:00  | Giorgio Metta: Bespoke machine learning for humanoid robots |
-| 10:00 - 10:30 | Jianwei Zhang: Cross-modal learning for robust autonomous robot systems |
+| 9:15 - 10:00  | **Giorgio Metta**: Bespoke machine learning for humanoid robots |
+| 10:00 - 10:30 | **Jianwei Zhang**: Cross-modal learning for robust autonomous robot systems |
 | 10:30 - 12:00 | Lifelong Object Recognition Challenge finalist reports |
-| 12:00 - 13:30 | Lunch         |
-| 13:30 - 15:00 | Lifelong SLAM Challenge finalist reports |
-| 15:00 - 15:15 | Coffee break & Poster session  |
-| 15:15 - 16:00 | Baoquan Chen: From 3D vision to robotics vision |
-| 16:00 - 16:35 | Guofeng Zhang: Robust and efficient visual-inertial SLAM for augmented reality |
+| 12:00 - 13:30 | Break |
+| 13:30 - 14:40 | Lifelong SLAM Challenge finalist reports |
+| 14:40 - 15:00 | **Yao Guo**: RGBD based long term and canonical gait analysis system |
+| 15:00 - 15:20 | **Mihai Bujanca**: SLAMBench: a framework for automated evaluation of SLAM algorithms |
+| 15:20 - 15:40 | **Xuesong Shi**: OpenLORIS: towards lifelong robotic vision |
+| 15:40 - 16:00 | Coffee break & Poster session |
+| 16:00 - 16:35 | **Guofeng Zhang**: Robust and efficient visual-inertial SLAM for augmented reality |
 | 16:35 - 17:00 | Awards ceremony |
-| 17:00 - 17:30 | Panel Discussion |
+| 17:00 - 17:30 | Panel discussion |
+
 
 ## Organizers
 <img src="https://lifelong-robotic-vision.github.io/about/organizer.png" alt="Human-Robot-Computer" max-width="820" height="auto">
