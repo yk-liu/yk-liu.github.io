@@ -114,7 +114,7 @@ is unrelated with the scores.
 </details>
 
 
-#### Lifelong SLAM Challenge Finalis Reports
+#### Lifelong SLAM Challenge Finalist Reports
 
 <details><summary><b>Modified ORB-SLAM with learning-based and odometry-aided relocalization</b></summary>
 <p>
