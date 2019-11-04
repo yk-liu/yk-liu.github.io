@@ -136,7 +136,7 @@ Hongle Xie, Bowen Song
 We proposed a Visual-Inertial Navigation System(VINS) which consists of a wheel odometer-enhanced visual-inertial localization module and a map management module.  The localization module fuses poses from both a wheel odometer-enhanced Visual-Inertial Odometry(VIO) system and relocalizations from map. This module acts as the front-end of VINS. The map management module has been used to build and merge maps, which acts as the back-end of VINS.  Benefited from both modules, the proposed VINS has capabilities of performing real-time localization and building consistent map. Furthermore, to make the proposed system more robust for illumination variation, we embedded deep-learned features in map merging and relocalization parts. The proposed method has been evaluated on Lifelong SLAM Challenge benchmark datasets. The experimental results prove that this method is efficient in real-time localization in illumination variational environments and enables the capability of build globally consistent maps in large scale indoor environments.
 </p>
 </details>
-Fumin Pang, Jianming Li, Jianing Mao, Xiaonan Ji, Zhiwei Wang, Yusen Qin, Zichong Chen
+Segway Robotics
 
 <details><summary><b>Customized VINS-Mono with unsupervised-based deep loop closure</b></summary>
 <p>
