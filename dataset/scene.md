@@ -25,6 +25,11 @@ collaboration.
 For now the data are available only to competition participants of [Lifelong SLAM
 Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) with IROS 2019.
 
+More description of the datasets can be found in [this paper]((https://arxiv.org/abs/1911.05603)):
+
+X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets
+for Lifelong SLAM." arXiv preprint arXiv:1911.05603 (2019).
+
 ## Robot and Sensors
 
 The data is collected by a wheeled robot moving at human walking speed or
@@ -56,9 +61,8 @@ List of available data:
 
 ## Ground-truth
 
-For SLAM evaluation, the ground-truth trajectory of the robot is obtained by a
-motion capture system or a LiDAR, with alignment to either D435i color camera and
-T265 left camera.
+The ground-truth trajectory of the robot is obtained by an OptiTrack motion capture system
+for the office scene, and from offline LiDAR SLAM based on the Hokuyo laser scans for other scenes.
 
 ## Known Issues
 
