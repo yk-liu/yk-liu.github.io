@@ -30,6 +30,8 @@ More description of the datasets can be found in [this paper]((https://arxiv.org
 X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets
 for Lifelong SLAM." arXiv preprint arXiv:1911.05603 (2019).
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SxEld0IoVhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Robot and Sensors
 
 The data is collected by a wheeled robot moving at human walking speed or
@@ -44,18 +46,19 @@ Odometry data from wheel encoders will also be provided.
 
 List of available data:
 
-| device | data          | FPS | resolution |
-|--------|---------------|-----|------------|
-| D435i  | color         | 30  | 848x480    |
-| D435i  | depth         | 30  | 848x480    |
-| D435i  | aligned_depth_to_color | 30  | 848x480    |
-| D435i  | accel         | 250 |            |
-| D435i  | gyro          | 400 |            |
-| T265   | fisheye1      | 30  | 848x800    |
-| T265   | fisheye2      | 30  | 848x800    |
-| T265   | accel         | 62.5|            |
-| T265   | gyro          | 200 |            |
-| base   | odom          | 20  |            |
+| device | data          | FPS | resolution | FOV |
+|--------|---------------|-----|------------| ----|
+| D435i  | color         | 30  | 848x480    | H:69 V:42 D:77 |
+| D435i  | depth         | 30  | 848x480    | H:91 V:65 D:100 |
+| D435i  | aligned depth | 30  | 848x480    | H:69 V:42 D:77 |
+| D435i  | accel         | 250 |            | - |
+| D435i  | gyro          | 400 |            | - |
+| T265   | fisheye1      | 30  | 848x800    | D:163 |
+| T265   | fisheye2      | 30  | 848x800    | D:163 |
+| T265   | accel         | 62.5|            | - |
+| T265   | gyro          | 200 |            | - |
+| base   | odom          | 20  |            | - |
+| LiDAR  | laser scan    | 40  | 1080       | H:270 |
 
 [![robot-frames](robot-frames.png "Coordinates")](robot-frames.png)
 
@@ -63,6 +66,13 @@ List of available data:
 
 The ground-truth trajectory of the robot is obtained by an OptiTrack motion capture system
 for the office scene, and from offline LiDAR SLAM based on the Hokuyo laser scans for other scenes.
+
+## Download
+
+Part of the data (without laser and ground-truth) have been shared to the
+participants of [IROS 2019 Lifelong Robotic Vision
+Challenge](https://lifelong-robotic-vision.github.io/competition). The full
+datasets will be made public available very soon.
 
 ## Known Issues
 
