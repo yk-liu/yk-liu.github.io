@@ -59,7 +59,8 @@ Each column of the figure above shows the clutter (from 1st row to 3rd row, simp
 
 ## Benchmarks
 - **Benchmark 1: Single factor analysis with ever-changing difficulty**
-This benchmark is conducted with 4 factors above, each of which has 3 difficulty levels. We investigate the individual factor, and change the difficulty levels of each continuously. Note that we keep other factors at the level 1 as in table above when investigating each factor, e.g., the levels of the illumination can be weak, normal, and strong, and at the same time, the occlusion is kept at 0%, the object pixel size is larger 200×200, and the clutter is simple. Fig. 1 demonstrates the experimental details of each factor analysis. For example, under illumination variants (shown in yellow bars “factor”), the model should be updated with the data from the difficulty level 1, 2, and 3 (shown in blue bars “level”) for totally 9 tasks (shown in green bars “task”). We separate each difficulty level into 3 tasks (e.g., blue bars we have three 1/2/3 level) with different views. The same experiment has been done on occlusion, object pixel size, and clutter factors.
+
+  This benchmark is conducted with 4 factors amentioned above, each of which has 3 difficulty levels. We investigate the individual factor, and change the difficulty levels of each continuously. Note that we keep other factors at the level 1 as in table above when investigating each factor, e.g., the levels of the illumination can be weak, normal, and strong, and at the same time, the occlusion is kept at 0%, the object pixel size is larger 200×200, and the clutter is simple. Fig. 1 demonstrates the experimental details of each factor analysis. For example, under illumination variants (shown in yellow bars “factor”), the model should be updated with the data from the difficulty level 1, 2, and 3 (shown in blue bars “level”) for totally 9 tasks (shown in green bars “task”). We separate each difficulty level into 3 tasks (e.g., blue bars we have three 1/2/3 level) with different views. The same experiment has been done on occlusion, object pixel size, and clutter factors.
 
 ![avatar](benchmark1.png)
 <center>Fig. 1: Four-factor analysis under the sequential learning setting. </center>
@@ -67,7 +68,7 @@ This benchmark is conducted with 4 factors above, each of which has 3 difficulty
 
 - **Benchmark 2: Sequential factors analysis with ever-changing difficulty**
 
-  We further explore the sequential task learning with four factors together. As shown in Fig. 2, the data from 4 factors with 3 difficulty levels (totally 12 tasks) are learned sequentially with about 14,400 training images and 1,800 testing images (69 objects) for each task. The number of total training and testing images of all the tasks is about 172,800 and 21,600. This benchmark would like to test the robustness and adaptation capabilities of the lifelong learning algorithms for the long sequential tasks with more variants encountered. 
+  This benchmark explores the sequential task learning with four factors together. As shown in Fig. 2, the data from 4 factors with 3 difficulty levels (totally 12 tasks) are learned sequentially with about 14,400 training images and 1,800 testing images (69 objects) for each task. The number of total training and testing images of all the tasks is about 172,800 and 21,600. This benchmark would like to test the robustness and adaptation capabilities of the lifelong learning algorithms for the long sequential tasks with more variants encountered. 
 
   ![avatar](benchmark2.png)
 <center>Fig. 2: Sequential factors analysis. </center>
