@@ -10,9 +10,8 @@ mathjax: true
 
 # Lifelong SLAM Challenge
 
-> Registration has been closed.
-
-> Please submit your results to [codalab](https://competitions.codalab.org/competitions/21505). Deadline: Oct 11 00:00 Anywhere on Earth (UTC-12).
+> The competition with IROS 2019 has ended. The description of the methods from
+> eight finalists are available on this page.
 
 > Please visit [Lifelong Robotic Vision Competition](https://lifelong-robotic-vision.github.io/competition/) for the workshop information.
 
@@ -25,6 +24,90 @@ In most real-world robotic scenarios, robots should be able to long-termly opera
 The dataset for this competition is collected in homes, offices, and other indoor places. Data are collected for multiple times in each place, to get scene changes in real life. Ground-truth trajectories are acquired by a motion capture system and other auxiliary means. Benchmarking tools will be released to evaluate SLAM algorithms in the lifelong setting.
 
 Though the problem of *Lifelong SLAM* may be bit different from conventional SLAM, we will do our best to provide user-frinedly data format and evaluation tools to ensure minimum overhead of participating this competition.
+
+## Results
+
+The following rank is based on the scores of the final round competition. Detailed results
+can be viewed on [the CodaLab
+page](https://competitions.codalab.org/competitions/21504#results) (click
+the Final button on the page).
+
+**1. Segway Robotics**
+<details><summary><b>Wheel Odometer-Enhanced VINS with Map-Based Localization</b></summary>
+<p>
+We proposed a Visual-Inertial Navigation System(VINS) which consists of a wheel odometer-enhanced visual-inertial localization module and a map management module.  The localization module fuses poses from both a wheel odometer-enhanced Visual-Inertial Odometry(VIO) system and relocalizations from map. This module acts as the front-end of VINS. The map management module has been used to build and merge maps, which acts as the back-end of VINS.  Benefited from both modules, the proposed VINS has capabilities of performing real-time localization and building consistent map. Furthermore, to make the proposed system more robust for illumination variation, we embedded deep-learned features in map merging and relocalization parts. The proposed method has been evaluated on Lifelong SLAM Challenge benchmark datasets. The experimental results prove that this method is efficient in real-time localization in illumination variational environments and enables the capability of build globally consistent maps in large scale indoor environments.
+</p>
+</details>
+
+**2. Hongle Xie, Bowen Song (Winner of $500 Segway Robotics Award)**
+
+Shanghai Jiao Tong University
+
+<details><summary><b>Multi-Level Sparse Feature Optical Flow Tracking Based Visual-Inertial SLAM with Fast Relocalization</b></summary>
+<p>
+In this work, we present a new approach for the robust visual-inertial localization under various challenging conditions, including day/night change, different illumination, moving objects and long-term scenarios. In order to solve the problem of very fragile front-end data association, we propose a new multi-level sparse feature optical flow tracking algorithm, which achieves high accuracy and robustness tracking within very sparse concise features. Unlike the existing methods that are costly to deal with a large number of redundant features and 3D map points, which are inefficient for improving positioning accuracy, we focus on the concise visual cues for high-precision pose estimating. Moreover, the lifelong SLAM is more focus on the relocalization in the same coordinate system, so we further improve the fast relocalization module by refine the efficient keyframe based 2D features to local 3D map points matching. Our method outperforms existing state-of-the-art VIO/VI-SLAM systems on the challenging OpenLORIS-Scene challenge datasets. The results effectively verify that the proposed method has better localization accuracy and real-time performance.
+</p>
+</details>
+
+**3. Shu Song, Yi Wang**
+
+Beijing University of Posts and Telecommunications
+
+<details><summary><b>Customized VINS-Mono with unsupervised-based deep loop closure</b></summary>
+<p>
+A monocular vision inertial state estimator based on unsupervised depth neural network. In order to deal with the challenges such as the movement of objects or people and the lack of rich texture , we decided to improve it based on the VINS-Mono framework, and achieve the ideal positioning effect by tightly coupling the visual data and IMU data.
+In view of the dynamic objects in the scene, we introduce graph cut RANSAC into the feature tracker to remove the dynamic points. Running graph cutting algorithm in local optimization step , considering spatial consistency, can effectively remove external points and avoid wrong trajectory estimation. At the same time, more accurate estimation can be obtained in fewer iterations by using graph cutting technique.
+A trained unsupervised deep learning network is used to detect the closed-loop in the scene with dynamic objects and lighting changes. By inputting randomly generated images of different viewpoints and using fixed length of hog descriptors, the network can better learn the geometric information of the scene and cope with the changes of illumination and viewpoint. This kind of encoder can map the high-dimensional original image to the low-dimensional descriptor space, and compress the image while retaining significant features. Therefore, the extracted features are not only robust to extreme changes in appearance, but also lightweight and efficient enough to help us achieve robust closed-loop detection.
+</p>
+</details>
+
+
+**4. Rong Wang, Fanle Meng, Xiangbing Meng**
+
+Information Science Academy of China Electronics Technology Group Corporation
+
+Institute of Automation, Chinese Academy of Sciences
+
+<details><summary><b>Modified ORB-SLAM with learning-based and odometry-aided relocalization</b></summary>
+<p>
+In order to perform SLAM long-termly in real-world scenarios, we propose a modified ORB-SLAM method to overcome challenging issues of dynamic objects, large viewpoint change and strong lighting change. Considering the effects of the challenging issues on the SLAM procedure, our method mainly aims to cope with relocalization between different times and tracking lost when visual features are failed. The input of our method are RGB-D images. To improve the performance of relocalization, we introduce a learning-based method. NetVLAD network is used to find the most similar scene which has been seen before. Then we perform feature matching through ORB descriptors between the query image and learning-based results to recover tracking. When there are not enough reliable feature matches, we use depth image registration for pose estimation. In addition, for tracking lost caused by textureless scene, we use incremental odometry data to fill the visual tracking gaps. Our method presents the capability of long-term mapping and robust localization. Experimental results on the published OpenLORIS-Scene datasets achieve evaluation score of 68.
+</p>
+</details>
+
+
+
+**5. Ge Jin, Can Huang**
+
+
+**6. Huanyu Wen, Xiaofeng Shang, Yiming Zhou, Jian Zhou**
+
+Shenzhen University
+
+<details><summary><b>PEVINS: VIO based on point-edge feature combination</b></summary>
+<p>
+In this work, we present PEVINS, a visual inertial navigation SLAM system based on point-edge feature. Our system build a complete SLAM pipeline with pose estimation, sliding window optimization, loop closure and relocation. First, we use the depth map to initialize quickly and make a good initial pose estimation. Characteristics at weak texture environment or rare cases, we detect the edge features tracking to improve the system robustness. Then, the pose of the whole system is optimized globally by the method of graph optimization. Finally, we establish a visual dictionary of point and edge features for loop detection and relocation. It is worth mentioning that we have the option of using depth maps for dense map reconstruction (CPU only).
+</p>
+</details>
+
+**7. Liming Cheng**
+
+Nanjing University of Posts and Telecommunications
+
+<details><summary><b>Direct Sparse Odometry with Self-Supervised Monocular Depth Estimation</b></summary>
+<p>
+There is no double that the reliability and accuracy of visual odometry is crucial in SLAM system. While the performance of monocular direct sparse odometry (DSO) is outstanding, there is a obvious scale uncertainty problem that affects localization accuracy. This project improves the DSO mapping by initializing the depth at a pixel position in accordance with the depth prediction from a deep learning network predicting depth of single-image. With obvious decrease of the depth uncertainty of map point, twofold benefits are obtained: trusty feature correspondence between visual frames and quick convergence to the true depth value so as to create fresh map points. We evaluate our method on the publicly available KITTI dataset, and the experimental results demonstrate that our improved approach leads to significant increase of localization accuracy.
+</p>
+</details>
+
+**8. Berta Bescos**
+
+University of Zaragoza
+
+<details><summary><b>DynaSLAM: Tracking, Mapping, and Inpainting in Dynamic Scenes</b></summary>
+<p>
+The assumption of scene rigidity is typical in SLAM algorithms. Such a strong assumption limits the use of most visual SLAM systems in populated real-world environments, which are the target of several relevant applications like service robotics or autonomous vehicles. In this letter we present DynaSLAM, a visual SLAM system that, building on ORB-SLAM2, adds the capabilities of dynamic object detection and background inpainting. DynaSLAM is robust in dynamic scenarios for monocular, stereo, and RGB-D configurations. We are capable of detecting the moving objects either by multiview geometry, deep learning, or both. Having a static map of the scene allows inpainting the frame background that has been occluded by such dynamic objects. We evaluate our system in public monocular, stereo, and RGB-D datasets. We study the impact of several accuracy/speed trade-offs to assess the limits of the proposed methodology. DynaSLAM outperforms the accuracy of standard visual SLAM baselines in highly dynamic scenarios. And it also estimates a map of the static parts of the scene, which is a must for long-term applications in real-world environments.
+</p>
+</details>
 
 ## Data
 

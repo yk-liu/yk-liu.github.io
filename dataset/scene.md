@@ -25,9 +25,9 @@ collaboration.
 For now the data are available only to competition participants of [Lifelong SLAM
 Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) with IROS 2019.
 
-More description of the datasets can be found in [this paper]((https://arxiv.org/abs/1911.05603)):
+More description of the datasets can be found in [this paper](https://arxiv.org/abs/1911.05603):
 
-X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets
+> X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets
 for Lifelong SLAM." arXiv preprint arXiv:1911.05603 (2019).
 
 <div class="container">
