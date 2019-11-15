@@ -26,7 +26,7 @@ Data is obtained in the office and home environments. Several grounded robots mo
 ## Data description
 >The dataset is collected under multiple scenes, such as living room, kitchen, and bedroom (objects located on the desk, floor, bed, and wall), which explicitly incorporates the context information into object recognition tasks. 
 
-Our released dataset is a collection of $51$ instances including $13$ categories daily necessities objects under $5$ scenes. For each instance, a $17$ seconds video (at $30$ fps) has been recorded with a Realsense D435i camera delivering ～$500$ RGB-D frames. $4$ environment factors, each has $3$ level changes, are considered explicitly in our dataset, including illumination, occlusion, clutter and actual pixel sizes of the object in the images. The defined three difficulty levels for each factor are shown below (thus, totally we have $12$ subcategories w.r.t. the environment factors):
+Our released dataset is a collection of $69$ instances including $19$ categories daily necessities objects under $7$ scenes. For each instance, a $17$ seconds video (at $30$ fps) has been recorded with a Realsense D435i camera delivering ～$500$ RGB-D frames. $4$ environment factors, each has $3$ level changes, are considered explicitly in our dataset, including illumination, occlusion, clutter and actual pixel sizes of the object in the images. The defined three difficulty levels for each factor are shown below (thus, totally we have $12$ subcategories w.r.t. the environment factors):
 
 
 | Level | Illunimation        | Occlusion (percentage)        | Object Pixel Size (pixels)  | Clutter| 
@@ -37,7 +37,7 @@ Our released dataset is a collection of $51$ instances including $13$ categories
 
 For each instance in each level, we provided $260$ samples. That is, for each instance, there are $3120$ samples. The total images provided is around 
 
-- $260$ (samples/intance)$\times$ $51$ (instance) $\times$ $4$ (factors/level) $\times$ $3$ (difficulty levels) = $159,120$ 
+- $260$ (samples/intance)$\times$ $69$ (instance) $\times$ $4$ (factors/level) $\times$ $3$ (difficulty levels) = $215，280$ 
 
 ## Data visualization
 
