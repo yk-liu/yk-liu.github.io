@@ -40,23 +40,11 @@ body {
 	margin-right: auto;
 }
 
-/*
- * Container
- *
- * Center the page content.
- */
- .container {
-	margin-right: 3%;
-}
 
 #frontmatter{
 	line-height: 0.8
 	}
 
-.container {
-  width: 90%;
-	margin-left: 2.5rem;
-}
 
 /* @media (min-width: 38rem) { */
   /* .container { */
