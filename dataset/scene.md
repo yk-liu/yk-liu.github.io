@@ -30,7 +30,10 @@ More description of the datasets can be found in [this paper]((https://arxiv.org
 X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets
 for Lifelong SLAM." arXiv preprint arXiv:1911.05603 (2019).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SxEld0IoVhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="container">
+<iframe src="https://www.youtube.com/embed/SxEld0IoVhQ" 
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+</div>
 
 ## Robot and Sensors
 
