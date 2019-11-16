@@ -64,10 +64,10 @@ Each column of the figure above shows the clutter (from 1st row to 3rd row, simp
 
 - **Lifelong learning methods**
 
-  (1) Transfer and multi-task learning: Naive and cumulative methods [1];
+  (1) Transfer and multi-task learning: Naive and cumulative methods [[1](##References)];
 
   (2) Regularization approaches: Learning without Forgetting (LwF) [2], Elastic Weight Consolidation (EWC) [3], Online EWC [4] and Synaptic Intelligence (SI) [5];
-  
+
   (3) Generative Replay approaches: Deep Generative Replay (DGR) [6], DGR with distillation [7] [8], and DGR with feedback [9].
 
 - **Evaluation metrics**
