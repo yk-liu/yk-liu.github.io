@@ -8,6 +8,11 @@ protected: true
 mathjax: true
 ---
 
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 # OpenLORIS-object Dataset 
 
 >(L)ifel(O)ng (R)obotic V(IS)ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on improving the continuous learning capbility of the common objects in the home scenario. 
@@ -58,6 +63,21 @@ Each column of the figure above shows the clutter (from 1st row to 3rd row, simp
 
 
 ## Benchmarks
+
+- **Lifelong learning methods**
+
+  (1) Transfer and multi-task learning: Naive and cumulative methods;
+  (2) Regularization approaches: Learning without Forgetting (LwF), Elastic Weight Consolidation (EWC), Online EWC and Synaptic Intelligence (SI);
+  (3) Generative Replay approaches: Deep Generative Replay (DGR), DGR with distilla- tion, and DGR with feedback.
+
+- **Evaluation metrics**
+  
+   We adopt four metrics for evaluating the performances: Accuracy, Backward transfer (BWT), Forward transfer (FWT), and Overall accuracy. The Accuracy metric considers the performance of the model at very timestep i in time that can better characterize the dynamics of the learning algorithms (average of white and gray elements in table below; BWT evaluates the memorization capability of the algorithms, which measures the accuracy over previously encountered tasks (average of gray elements in table below); FWT measures the influence that learning the current task on the performance of future tasks (average of cyan elements in table below); and Over-all accuracy summarizes the performances on all the previous, current, and future tasks, which can be viewed as an overall metric for a specific model.
+
+![avatar](metrics.png)
+<center>Train-test accuracy matrix $R$, where $Tr =$ training data, $Te =$ testing data, and $R_{ij} = $ classification accuracy of the model training on $Tr_{i}$ and testing on $Te_{j}$. The number of tasks is $N$, and the train/test split is $8:2$. </center>
+
+  
 - **Benchmark 1: Single factor analysis with ever-changing difficulty**
 
   This benchmark is conducted with 4 factors amentioned above, each of which has 3 difficulty levels. We investigate the individual factor, and change the difficulty levels of each continuously. Note that we keep other factors at the level 1 as in table above when investigating each factor, e.g., the levels of the illumination can be weak, normal, and strong, and at the same time, the occlusion is kept at 0%, the object pixel size is larger 200×200, and the clutter is simple. Fig. 1 demonstrates the experimental details of each factor analysis. For example, under illumination variants (shown in yellow bars “factor”), the model should be updated with the data from the difficulty level 1, 2, and 3 (shown in blue bars “level”) for totally 9 tasks (shown in green bars “task”). We separate each difficulty level into 3 tasks (e.g., blue bars we have three 1/2/3 level) with different views. The same experiment has been done on occlusion, object pixel size, and clutter factors.
@@ -65,6 +85,7 @@ Each column of the figure above shows the clutter (from 1st row to 3rd row, simp
 ![avatar](benchmark1.png)
 <center>Fig. 1: Four-factor analysis under the sequential learning setting. </center>
 
+  
 
 - **Benchmark 2: Sequential factors analysis with ever-changing difficulty**
 
