@@ -66,13 +66,13 @@ Each column of the figure above shows the clutter (from 1st row to 3rd row, simp
 
   (1) Transfer and multi-task learning: Naive and cumulative methods [[1](##References)];
 
-  (2) Regularization approaches: Learning without Forgetting (LwF) [2], Elastic Weight Consolidation (EWC) [3], Online EWC [4] and Synaptic Intelligence (SI) [5];
+  (2) Regularization approaches: Learning without Forgetting (LwF) [[2](##References)], Elastic Weight Consolidation (EWC) [[3](##References)], Online EWC [[4](##References)] and Synaptic Intelligence (SI) [[5](##References)];
 
-  (3) Generative Replay approaches: Deep Generative Replay (DGR) [6], DGR with distillation [7] [8], and DGR with feedback [9].
+  (3) Generative Replay approaches: Deep Generative Replay (DGR) [[6](##References)], DGR with distillation [[7](##References)] [[8](##References)], and DGR with feedback [[9](##References)].
 
 - **Evaluation metrics**
   
-   We adopt four metrics for evaluating the performances: Accuracy, Backward transfer (BWT), Forward transfer (FWT), and Overall accuracy. The Accuracy metric considers the performance of the model at very timestep i in time that can better characterize the dynamics of the learning algorithms; BWT evaluates the memorization capability of the algorithms, which measures the accuracy over previously encountered tasks; FWT measures the influence that learning the current task on the performance of future tasks; and Over-all accuracy summarizes the performances on all the previous, current, and future tasks, which can be viewed as an overall metric for a specific model. Detailed formulations of these four metrics can be refered in [10].
+   We adopt four metrics for evaluating the performances: Accuracy, Backward transfer (BWT), Forward transfer (FWT), and Overall accuracy. The Accuracy metric considers the performance of the model at very timestep i in time that can better characterize the dynamics of the learning algorithms; BWT evaluates the memorization capability of the algorithms, which measures the accuracy over previously encountered tasks; FWT measures the influence that learning the current task on the performance of future tasks; and Over-all accuracy summarizes the performances on all the previous, current, and future tasks, which can be viewed as an overall metric for a specific model. Detailed formulations of these four metrics can be refered in [[10](##References)].
 
 
   
@@ -184,7 +184,7 @@ For competition dataset, we randomly shuffled the dataset with multiple factors.
 
 
 
-##References
+## References
 
 [1] V. Lomonaco and D. Maltoni, “Core50: a new dataset and benchmark for continuous object recognition,” in Conference on Robot Learning (CoRL), 2017, pp. 17–26.
 
