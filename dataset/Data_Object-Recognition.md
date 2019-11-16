@@ -184,7 +184,7 @@ For competition dataset, we randomly shuffled the dataset with multiple factors.
 
 
 
-## References
+##References
 
 [1] V. Lomonaco and D. Maltoni, “Core50: a new dataset and benchmark for continuous object recognition,” in Conference on Robot Learning (CoRL), 2017, pp. 17–26.
 
