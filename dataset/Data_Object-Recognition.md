@@ -83,15 +83,8 @@ Each column of the figure above shows the clutter (from 1st row to 3rd row, simp
 ![avatar](benchmark1.png)
 <center>Fig. 1: Four-factor analysis under the sequential learning setting. </center>
 
-  <div align="center">
-   <img src="factor1.png" height="300px">
-   <img src="factor2.png" height="300px">
-  </div>
-  <div align="center">
-   <img src="factor3.png" height="300px">
-   <img src="factor4.png" height="300px">
-  </div>
 
+![avatar](result1.png)
 <center>Fig. 2: The spider chart of 4 evaluation metrics: Accuracy (grey), BWT (blue), FWT (red), and Over-all accuracy (yellow) of 9 lifelong learning algorithms, which are evaluated on illumination, occlusion, object pixel size, and clutter factors (the order in the figure is from upper left to lower right corners). Larger area is better. The maximum value of each evaluation metric is 100%. </center>
 
 - **Benchmark 2: Sequential factors analysis with ever-changing difficulty**
