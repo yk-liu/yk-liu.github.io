@@ -39,7 +39,7 @@ If you find our dataset and benchmark useful in your research, please consider c
     }
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/p0TYHMWY9Cw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe Weight="848", height="480", src="https://www.youtube.com/embed/p0TYHMWY9Cw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Data collection
@@ -111,7 +111,7 @@ Each column of the figure above shows the clutter (from 1st row to 3rd row, simp
 
   This benchmark explores the sequential task learning with four factors together. As shown in Fig. 3, the data from 4 factors with 3 difficulty levels (totally 12 tasks) are learned sequentially with about 14,400 training images and 1,800 testing images (69 objects) for each task. The number of total training and testing images of all the tasks is about 172,800 and 21,600. This benchmark would like to test the robustness and adaptation capabilities of the lifelong learning algorithms for the long sequential tasks with more variants encountered. The performances of all 12 tasks (4 factors ×3 tasks/factor) have been evaluated with 4 metrics (Accuracy, BWT, FWT, and Over-all accuracy) are shown in Fig. 4.
 
-<img src="benchmark2.png" height="230" alt="">
+<img src="benchmark2.png" height="200" alt="">
 <center>Fig. 3: Sequential factors analysis. </center>
 
 <img src="sefactor_result.png" height="300" alt="">
