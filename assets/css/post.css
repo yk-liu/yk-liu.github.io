@@ -22,6 +22,7 @@
 html,
 body {
   overflow-x: hidden;
+  hyphens: auto;
 }
 
 /*
@@ -104,7 +105,7 @@ body {
 /* Sidebar content */
 .sidebar a {
   font-size: 20px
-}					
+}
 .sidebar-item {
   padding: 1rem;
 }
@@ -142,7 +143,7 @@ a.sidebar-nav-item:focus {
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
   display: none;
-}																																		 
+}
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
   position: absolute;
@@ -190,7 +191,7 @@ a.sidebar-nav-item:focus {
   }
   .sidebar-toggle:before {
     padding-bottom: .15rem;
-		border-top-width: .45rem;												 
+		border-top-width: .45rem;
     border-bottom-width: .15rem;
   }
 }
@@ -245,7 +246,7 @@ a.sidebar-nav-item:focus {
       -ms-transform: translateX(14rem);
           transform: translateX(14rem);
 }
-	
+
 }
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
