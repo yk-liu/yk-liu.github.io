@@ -28,7 +28,17 @@ Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) with IROS 2019.
 More description of the datasets can be found in [this paper](https://arxiv.org/abs/1911.05603):
 
 > X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets
-for Lifelong SLAM." arXiv preprint arXiv:1911.05603 (2019).
+for Lifelong SLAM." arXiv:1911.05603 (2019).
+
+    @misc{shi2019openlorisscene,
+        title={Are We Ready for Service Robots? The {OpenLORIS-Scene} Datasets for Lifelong {SLAM}},
+        author={Xuesong Shi and Dongjiang Li and Pengpeng Zhao and Qinbin Tian and Yuxin Tian and Qiwei Long and Chunhao Zhu and Jingwei Song and Fei Qiao and Le Song and Yangquan Guo and Zhigang Wang and Yimin Zhang and Baoxing Qin and Wei Yang and Fangshi Wang and Rosa H. M. Chan and Qi She},
+        year={2019},
+        eprint={1911.05603},
+        archivePrefix={arXiv},
+        primaryClass={cs.RO}
+    }
+
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/SxEld0IoVhQ" 
