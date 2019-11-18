@@ -101,20 +101,20 @@ Each column of the figure above shows the clutter (from 1st row to 3rd row, simp
 
   This benchmark is conducted with 4 factors, each of which has 3 difficulty levels. We investigate the individual factor, and change the difficulty levels of each continuously. We separate each difficulty level into 3 tasks (e.g., blue bars we have three 1/2/3 level) with different views. The same experiment has been done on occlusion, object pixel size, and clutter factors. The performances of all 36 tasks (4 factors ×9 tasks/factor) have been evaluated with 4 metrics (Accuracy, BWT, FWT, and Over-all accuracy) are shown in Fig. 2.
 
-<img src="benchmark1.png" height="250" alt="">
+<img src="benchmark1.png" height="auto" alt="">
 <center>Fig. 1: Four-factor analysis under the sequential learning setting. </center>
 
-<img src="result1.png" height="550" alt="">
+<img src="result1.png" height="auto" alt="">
 <center>Fig. 2: The spider chart of 4 evaluation metrics: Accuracy (grey), BWT (blue), FWT (red), and Over-all accuracy (yellow) of 9 lifelong learning algorithms, which are evaluated on illumination, occlusion, object pixel size, and clutter factors (the order in the figure is from upper left to lower right corners). Larger area is better. The maximum value of each evaluation metric is 100%. </center>
 
 - **Benchmark 2: Sequential factors analysis with ever-changing difficulty**
 
   This benchmark explores the sequential task learning with four factors together. As shown in Fig. 3, the data from 4 factors with 3 difficulty levels (totally 12 tasks) are learned sequentially with about 14,400 training images and 1,800 testing images (69 objects) for each task. The number of total training and testing images of all the tasks is about 172,800 and 21,600. This benchmark would like to test the robustness and adaptation capabilities of the lifelong learning algorithms for the long sequential tasks with more variants encountered. The performances of all 12 tasks (4 factors ×3 tasks/factor) have been evaluated with 4 metrics (Accuracy, BWT, FWT, and Over-all accuracy) are shown in Fig. 4.
 
-<img src="benchmark2.png" height="190" alt="">
+<img src="benchmark2.png" width="600" height="auto" alt="">
 <center>Fig. 3: Sequential factors analysis. </center>
 
-<img src="sefactor_result.png" height="300" alt="">
+<img src="sefactor_result.png" width="640" height="auto" alt="">
 <center>Fig. 4: Evaluation results of Benchmark 2. </center>
 
 <!--
