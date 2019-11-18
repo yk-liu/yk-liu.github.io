@@ -39,7 +39,7 @@ If you find our dataset and benchmark useful in your research, please consider c
     }
 
 <div class="container">
-<iframe width="848" height="480" src="https://www.youtube.com/embed/p0TYHMWY9Cw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/p0TYHMWY9Cw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Data collection
