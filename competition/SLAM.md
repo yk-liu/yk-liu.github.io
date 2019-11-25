@@ -32,6 +32,9 @@ can be viewed on [the CodaLab
 page](https://competitions.codalab.org/competitions/21504#results) (click
 the Final button on the page).
 
+A [long-term evaluation server](https://competitions.codalab.org/competitions/21724) has been set up for
+anyone to evaluate SLAM results with the rule of this competition.
+
 **1. Segway Robotics**
 <details><summary><b>Wheel Odometer-Enhanced VINS with Map-Based Localization</b></summary>
 <p>

@@ -23,7 +23,7 @@ For the details of each challenge, please follow their webpages:
 
 > [Lifelong Object Recognition Challenge]({{site.url}}{{site.baseurl}}/competition/Object-Recognition.html) ([leaderboard](https://codalab.lri.fr/competitions/581#results)) (contact: [Qi She](mailto:qi.she@intel.com))
 
-> [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) ([leaderboard](https://competitions.codalab.org/competitions/21505#results)) (contact: [Xuesong Shi](mailto:xuesong.shi@intel.com))
+> [Lifelong SLAM Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) ([leaderboard](https://competitions.codalab.org/competitions/21504#results)) (contact: [Xuesong Shi](mailto:xuesong.shi@intel.com))
 
 <details><summary><b>Schedule</b></summary><br>
 

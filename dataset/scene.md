@@ -82,29 +82,22 @@ for the office scene, and from offline LiDAR SLAM based on the Hokuyo laser scan
 
 ## Download
 
-Part of the data (without laser and ground-truth) have been shared to the
-participants of [IROS 2019 Lifelong Robotic Vision
-Challenge](https://lifelong-robotic-vision.github.io/competition). The full
-datasets will be made public available very soon.
+Fill [this form](http://openloris.sv.mikecrm.com/Nv8LzXF) to download the data.
+The form is for us to track how many people are using the datasets, and to
+contact with users when further data or related competitions are available.
+Please leave the email field blank if you do not want to receive such emails.
 
 ## Known Issues
 
 Following are some know issues with the preview-version dataset released to the competition registrants. They will be corrected in the future public release.
 
-- For office/corridor/cafe/home data, there is an translation error of over 1cm in the extrinsics of D435i IMU. The translation of d400_imu from d400_color should be [0.0203127935528755, -0.0051032523624599, -0.0112013882026076], while the current values are [0.014881294220686, -2.32995425903937e-05, 0.000588475959375501].
-
 - For all data, the noise factors of D435i IMU are not provided. An estimation of noise variances of D435i should be 0.0002678 for accel, and 1.0296e-5 for gyro. These values are derived from T265 noise factors scaled by their filter bandwidth.
 
-- There are duplicated messages on the /odom topic in office-1 bags. Can be removed with [this script](https://github.com/lifelong-robotic-vision/lifelong-slam/issues/2).
+- (Fixed in Nov 2019 release) ~~For office/corridor/cafe/home data, there is an translation error of over 1cm in the extrinsics of D435i IMU. The translation of d400_imu from d400_color should be [0.0203127935528755, -0.0051032523624599, -0.0112013882026076], while the current values are [0.014881294220686, -2.32995425903937e-05, 0.000588475959375501].~~
+
+- (Fixed in Nov 2019 release) ~~There are duplicated messages on the /odom topic in office-1 bags. Can be removed with [this script](https://github.com/lifelong-robotic-vision/lifelong-slam/issues/2).~~
 
 ## FAQ
-
-<ul><li>
-Where can I download the data?
-</li></ul>
-<ul><p>
-For now the data are provided only to competition participants. If you have registered the competition, you will get Google Drive / Baidu Pan links of the data by emails.
-</p></ul>
 
 <ul><li>
 Are all data synchronized?
