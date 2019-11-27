@@ -14,18 +14,21 @@ The OpenLORIS-Scene dataset aims to help evaluate the maturity of SLAM and scene
 understanding algorithms for real-world deployment, by providing *visual*,
 *inertial* and *odometry* data recorded with real robots in real scenes, and
 ground-truth robot trajectories acquired by motion capture system or
-high-resolution LiDARs. Multiple trajectories will be provided for each scene,
-to capture natural scene changes in real life.
+high-resolution LiDARs. Multiple trajectories are provided for each scene,
+to capture scene changes caused by human activities, day-night shifts and other
+factors, which are crucial to address for long-term robot autonomy.
 
 OpenLORIS is an open dataset. We welcome contribution of data from third
 parties. We can help with sensor setup, calibration, data collection and
 post-processing. Please contact [Xuesong Shi](mailto:xuesong.shi@intel.com) for
 collaboration.
 
-For now the data are available only to competition participants of [Lifelong SLAM
-Challenge]({{site.url}}{{site.baseurl}}/competition/SLAM.html) with IROS 2019.
+With OpenLORIS-Scene, we also set up a benchmark for *lifelong SLAM*. Please
+refer to the [IROS 2019 Lifelong SLAM
+Challenge](({{site.url}}{{site.baseurl}}/competition/SLAM.html)) for a brief
+description of the benchmark and competition results.
 
-More description of the datasets can be found in [this paper](https://arxiv.org/abs/1911.05603):
+More description of the datasets and benchmark can be found in [this paper](https://arxiv.org/abs/1911.05603):
 
 > X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets
 for Lifelong SLAM." arXiv:1911.05603 (2019).
