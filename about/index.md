@@ -16,7 +16,7 @@ With more understanding of physics, I found the theory used to describe a phenom
 
 As for my current interest, on my CV I wrote:
 
-> I am interested in the Topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am alLearning Mathematical tools that explain the topological aspects of materials. Understanding the phenomenon of integer discreetness arising from continuous symmetry. Describing and discovering topological quantum systems. Learning through examples and models, especially coding and seeing the numerical result.so interested in how particles subject to relatively simple laws can exhibit novel collective properties. I also like coding and enjoy sharing my thoughts.
+> Learning Mathematical tools that explain the topological aspects of materials. Understanding the phenomenon of integer discreetness arising from continuous symmetry. Describing and discovering topological quantum systems. Learning through examples and models, especially coding and seeing the numerical result.
 
 Here is my [CV](https://yk-liu.github.io/about/CV-of-Liu-Yingkai.pdf) (last update: 2019-11-28).
 
