@@ -10,7 +10,7 @@ mathjax: true
 
 # Me
 
-My name is Yingkai Liu ([Google Scholar](https://scholar.google.co.kr/citations?user=NIySL50AAAAJ&hl=en)). I am currently a senior undergraduate at Nankai University, China. I major in Physics. 
+My name is Yingkai Liu ([Google Scholar](https://scholar.google.co.kr/citations?user=NIySL50AAAAJ&hl=en)). I am currently a graduate student at Yeshiva University, US. I major in Physics. 
 
 With more understanding of physics, I found the theory used to describe a phenomenon is more and more elegant but in the same time complicated. I was happy about the differential equations, impressed by linear algebra, struck by group theory and now mesmerized by topology and differential geometry. **I am aware that physics requires much more than *just* mathematics. In the same time I believe that with more mathematics there will be deeper physics.** 
 
@@ -18,7 +18,7 @@ As for my current interest, on my CV I wrote:
 
 > I am interested in the Topological properties of materials and the phenomenon of integer discreetness arising from continuous symmetry. In a different perspective, I am also interested in how particles subject to relatively simple laws can exhibit novel collective properties. I also like coding and enjoy sharing my thoughts.
 
-Here is my [CV](https://yk-liu.github.io/about/CV-of-Liu-Yingkai.pdf) (last update: 2018-11-17).
+Here is my [CV](https://yk-liu.github.io/about/CV-of-Liu-Yingkai.pdf) (last update: 2019-11-28).
 
 # This Site
 
