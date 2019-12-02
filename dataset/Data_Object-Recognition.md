@@ -54,8 +54,7 @@ For each instance in each level, we provided $260$ samples. That is, for each in
 The presence of temporal coherent sessions (i.e., the robot camera gently move around the objects) can provide a temporal smoothness which simplifies the process of object detection, improve classification accuracy and address semi-supervised (or unsupervised) scenarios. Picked samples have been shown below. 
 
 
-<img src="https://lifelong-robotic-vision.github.io/about/demo.gif" alt="Objects under 12 level environment conditions and different views" width="850">
-
+![avatar](demo.gif)
 
 Figure above shows the   illumination (weak, normal, strong), occlusion (0\%, 25\%, 50\%), object pixels ($< 30 \times 30$, $30 \times 30 - 200 \times 200$, $> 200 \times 200$), clutter (simple, normal, complex), occlusion ($0\%$, $25\%$, $50\%$) and different object views.
 
