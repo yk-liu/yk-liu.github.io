@@ -15,7 +15,7 @@ mathjax: true
 >(L)ifel(O)ng (R)obotic V(IS)ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on improving the continuous learning capability of the common objects in the home scenario.
 
 ## Dataset download
-> Our dataset can be downloaded at [OpenLORIS-Object](https://docs.google.com/document/d/1KlgjTIsMD5QRjmJhLxK4tSHIr0wo9U6XI5PuF8JDJCo/edit?usp=sharing).
+> Our dataset can be downloaded at [OpenLORIS-Object](http://bit.ly/2RbBBdc).
 Please see the details in our paper below. You can also contact with [Qi She](mailto:qi.she@intel.com) for more details.
 
 ## Background
