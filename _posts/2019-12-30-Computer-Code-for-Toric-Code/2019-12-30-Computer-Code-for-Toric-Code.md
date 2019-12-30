@@ -32,7 +32,15 @@ What is interesting is that all the ground state's degeneracy is independent of 
 
 # Definition of the Model
 
-We want to study the sum over tensor products
+The model is defined on the triangulation, such that on each edge we define two types of operators, $\sigma_v$ and $\sigma_t$. On each vertex $v$ we define an operator $A_v=\displaystyle\bigotimes_{e \text{ connected to }v}\sigma_v$, and on each triangle $t$, we define another operator $B_t=\displaystyle\bigotimes_{e \text{ constructed by }t}\sigma_t$. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-12-30-Computer-Code-for-Toric-Code/assets/model_setup.png" alt="Toric code set up" width="45%">
+
+The Hamiltonian is defined as 
+$$
+H = -\sum{A_v} -\sum B_t.
+$$
+In other words, we want to study the sum over tensor products
 $$
 \sum_{x,y}\id\otimes\id \otimes \cdots \otimes\id\otimes A^x\otimes\id\otimes \cdots \otimes\id\otimes A^y\otimes\id\otimes \cdots \id\otimes\id
 $$
@@ -381,5 +389,7 @@ end do
 - The outmost loop contains a lot of unwanted loops. When $Q$ is small compared to $L$, there are bound to be a lot of wasted resources and jumps. If the `go to` statements breaks the parallelization, we can relabel the qualified `loopn`'s and write that into a much smaller loop.
 - In extreme case, we can even compress the entire nested loop into one single big loop using the techniques stated above. But that might result in a code that is hard to understand. 
 
-# Publication
+# Publication and code samples
+
+The 
 
