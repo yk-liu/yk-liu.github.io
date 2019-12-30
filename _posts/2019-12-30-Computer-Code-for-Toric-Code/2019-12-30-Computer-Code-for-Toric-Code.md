@@ -3,7 +3,7 @@ Title: Computer Code for Kitaev's Toric Code
 edit: 2019-12-30
 categories: Topology Code Publication
 tags: Triangulation Fortran Kiatev's-Toric-Code
-description: The post is my initial set up for Kitaev's toric code. The work is published on arXiv
+description: The post is my initial set up for Kitaev's toric code. The work is published on arXiv.
 ---
 
 $$
@@ -309,7 +309,7 @@ do loopk=1,n0**Q
 end do
 ```
 
-# Final Codes
+# Combined Codes
 
 ```fortran
 do loopn=0,2**L
@@ -388,8 +388,9 @@ end do
 
 - The outmost loop contains a lot of unwanted loops. When $Q$ is small compared to $L$, there are bound to be a lot of wasted resources and jumps. If the `go to` statements breaks the parallelization, we can relabel the qualified `loopn`'s and write that into a much smaller loop.
 - In extreme case, we can even compress the entire nested loop into one single big loop using the techniques stated above. But that might result in a code that is hard to understand. 
+- In each loop, the product of $A$ is constructed more times than needed. 
 
-# Publication and code samples
+# Publication and Improved Code Samples
 
-The 
+The final optimal codes is published on arXiv: with many examples.
 
