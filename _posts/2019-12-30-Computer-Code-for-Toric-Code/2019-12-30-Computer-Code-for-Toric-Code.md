@@ -32,17 +32,17 @@ What is interesting is that all the ground state's degeneracy is independent of 
 
 # Definition of the Model
 
-The model is defined on the triangulation, such that on each edge we define two types of operators, $\sigma_v$ and $\sigma_t$. On each vertex $v$ we define an operator $A_v=\displaystyle\bigotimes_{e \text{ connected to }v}\sigma_v$, and on each triangle $t$, we define another operator $B_t=\displaystyle\bigotimes_{e \text{ constructed by }t}\sigma_t$. 
+The model is defined on the triangulation, such that on each edge we define two types of operators, $\sigma _ v$ and $\sigma _ t$. On each vertex $v$ we define an operator $A _ v=\displaystyle\bigotimes _ {e \text{ connected to }v}\sigma _ v$, and on each triangle $t$, we define another operator $B _ t=\displaystyle\bigotimes _ {e \text{ constructed by }t}\sigma _ t$. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-12-30-Computer-Code-for-Toric-Code/assets/model_setup.png" alt="Toric code set up" width="45%">
 
 The Hamiltonian is defined as 
 $$
-H = -\sum{A_v} -\sum B_t.
+H = -\sum A _ v  -\sum B _ t.
 $$
 In other words, we want to study the sum over tensor products
 $$
-\sum_{x,y}\id\otimes\id \otimes \cdots \otimes\id\otimes A^x\otimes\id\otimes \cdots \otimes\id\otimes A^y\otimes\id\otimes \cdots \id\otimes\id
+\sum _ {x,y}\id\otimes\id \otimes \cdots \otimes\id\otimes A^x\otimes\id\otimes \cdots \otimes\id\otimes A^y\otimes\id\otimes \cdots \id\otimes\id
 $$
 
 The tensor product can be grouped as such
@@ -58,7 +58,7 @@ $$
 The rule for matrix elements’ tensor product is just
 
 $$
-E^{(n)}_{i,j} \otimes E^{(m)}_{k,l} = E^{{mn}}_{(i -1)m+k,(j-1)m +l}
+E^{(n)} _ {i,j} \otimes E^{(m)} _ {k,l} = E^{mn} _ {(i -1)m+k,(j-1)m +l}
 $$
 
 The notation $E^{n}$ is to be interpreted as a matrix elements of dimension $n$ by $n$. 
@@ -74,23 +74,23 @@ That means
 
 $$
 \begin{align}
-&\id^{n_1} \otimes A^{2} \otimes
-\id^{n_2} \otimes A^{1} \otimes
+&\id^{n _ 1} \otimes A^{2} \otimes
+\id^{n _ 2} \otimes A^{1} \otimes
 \cdots\otimes
-\id^{n_K} \otimes A^{Q} \otimes
-\id^{n_K+1} 
+\id^{n _ K} \otimes A^{Q} \otimes
+\id^{n _ K+1} 
 \\
 &=
-\left(\sum_{i_1,j_1}^{n_1} E^{n_1}_{i_1,j_1}\delta_{i_1,j_1} \right)\otimes \left( \sum_{k_1,l_1}^{n} A_{k_1,l_1} E^{n}_{k_1,l_1}\right) \otimes  \left(\sum_{i_2,j_2}^{n_2} E^{n_2}_{i_2,j_2}\delta_{i_2,j_2} \right)\otimes \cdots\\
+\left(\sum _ {i _ 1,j _ 1}^{n _ 1} E^{n _ 1} _ {i _ 1,j _ 1}\delta _ {i _ 1,j _ 1} \right)\otimes \left( \sum _ {k _ 1,l _ 1}^{n} A _ {k _ 1,l _ 1} E^{n} _ {k _ 1,l _ 1}\right) \otimes  \left(\sum _ {i _ 2,j _ 2}^{n _ 2} E^{n _ 2} _ {i _ 2,j _ 2}\delta _ {i _ 2,j _ 2} \right)\otimes \cdots\\
 &=
-\left(\sum_{i_1,j_1}^{n_1}\sum_{k_1,l_1}^{n} \delta_{i_1,j_1} E^{n_1}_{i_1,j_1}\otimes A_{k_1,l_1} E^{n}_{k_1,l_1}\right) \otimes  \left(\sum_{i_2,j_2}^{n_2} \delta_{i_2,j_2} E^{n_2}_{i_2,j_2} \right)\otimes \cdots
+\left(\sum _ {i _ 1,j _ 1}^{n _ 1}\sum _ {k _ 1,l _ 1}^{n} \delta _ {i _ 1,j _ 1} E^{n _ 1} _ {i _ 1,j _ 1}\otimes A _ {k _ 1,l _ 1} E^{n} _ {k _ 1,l _ 1}\right) \otimes  \left(\sum _ {i _ 2,j _ 2}^{n _ 2} \delta _ {i _ 2,j _ 2} E^{n _ 2} _ {i _ 2,j _ 2} \right)\otimes \cdots
 \\
 &=
-\left(\sum_{i_1,j_1}^{n_1}\sum_{k_1,l_1}^{n} A_{k_1,l_1}\delta_{i_1,j_1} E^{n_1n}_{n(i_1-1)+k_1,n(j_1-1)+l_1}\right) \otimes  \left(\sum_{i_2,j_2}^{n_2} \delta_{i_2,j_2} E^{n_2}_{i_2,j_2} \right)\otimes \cdots\\
+\left(\sum _ {i _ 1,j _ 1}^{n _ 1}\sum _ {k _ 1,l _ 1}^{n} A _ {k _ 1,l _ 1}\delta _ {i _ 1,j _ 1} E^{n _ 1n} _ {n(i _ 1-1)+k _ 1,n(j _ 1-1)+l _ 1}\right) \otimes  \left(\sum _ {i _ 2,j _ 2}^{n _ 2} \delta _ {i _ 2,j _ 2} E^{n _ 2} _ {i _ 2,j _ 2} \right)\otimes \cdots\\
 &=
-\left(\sum_{i_1,j_1}^{n_1}\sum_{k_1,l_1}^{n}\sum_{i_2,j_2}^{n_2} A_{k_1,l_1}\delta_{i_1,j_1}  \delta_{i_2,j_2}E^{n_1n}_{n(i_1-1)+k_1,n(j_1-1)+l_1} \otimes  E^{n_2}_{i_2,j_2} \right)\otimes \cdots\\
+\left(\sum _ {i _ 1,j _ 1}^{n _ 1}\sum _ {k _ 1,l _ 1}^{n}\sum _ {i _ 2,j _ 2}^{n _ 2} A _ {k _ 1,l _ 1}\delta _ {i _ 1,j _ 1}  \delta _ {i _ 2,j _ 2}E^{n _ 1n} _ {n(i _ 1-1)+k _ 1,n(j _ 1-1)+l _ 1} \otimes  E^{n _ 2} _ {i _ 2,j _ 2} \right)\otimes \cdots\\
 &=
-\left(\sum_{i_1,j_1}^{n_1}\sum_{k_1,l_1}^{n}\sum_{i_2,j_2}^{n_2} A_{k_1,l_1}\delta_{i_1,j_1}  \delta_{i_2,j_2}E^{n_1nn_2}_{n_2\left(n(i_1-1)+k_1-1\right)+i_2,n_2(n(j_1-1)+l_1-1)+j_2} \ \right)\otimes \cdots\\
+\left(\sum _ {i _ 1,j _ 1}^{n _ 1}\sum _ {k _ 1,l _ 1}^{n}\sum _ {i _ 2,j _ 2}^{n _ 2} A _ {k _ 1,l _ 1}\delta _ {i _ 1,j _ 1}  \delta _ {i _ 2,j _ 2}E^{n _ 1nn _ 2} _ {n _ 2\left(n(i _ 1-1)+k _ 1-1\right)+i _ 2,n _ 2(n(j _ 1-1)+l _ 1-1)+j _ 2} \ \right)\otimes \cdots\\
 \end{align}
 $$
 
@@ -98,40 +98,40 @@ Hence we have
 
 $$
 \begin{align}
-&\id^{n_1} \otimes A^{2} \otimes
-\id^{n_2} \otimes A^{1} \otimes
+&\id^{n _ 1} \otimes A^{2} \otimes
+\id^{n _ 2} \otimes A^{1} \otimes
 \cdots\otimes
-\id^{n_K} \otimes A^{Q} \otimes
-\id^{n_K+1} 
+\id^{n _ K} \otimes A^{Q} \otimes
+\id^{n _ K+1} 
 \\
 &=
-\left(\sum_{i_1,j_1}^{n_1}\sum_{k_1,l_1}^{n}\sum_{i_2,j_2}^{n_2} A_{k_1,l_1}\delta_{i_1,j_1}  \delta_{i_2,j_2}E^{n_1nn_2}_{n_2\left(n(i_1-1)+k_1-1\right)+i_2,n_2(n(j_1-1)+l_1-1)+j_2} \ \right)\otimes \cdots\\
+\left(\sum _ {i _ 1,j _ 1}^{n _ 1}\sum _ {k _ 1,l _ 1}^{n}\sum _ {i _ 2,j _ 2}^{n _ 2} A _ {k _ 1,l _ 1}\delta _ {i _ 1,j _ 1}  \delta _ {i _ 2,j _ 2}E^{n _ 1nn _ 2} _ {n _ 2\left(n(i _ 1-1)+k _ 1-1\right)+i _ 2,n _ 2(n(j _ 1-1)+l _ 1-1)+j _ 2} \ \right)\otimes \cdots\\
 &=
-\left(\sum_{i_1}^{n_1}\sum_{i_2}^{n_2} \sum_{k_1,l_1}^{n}A_{k_1,l_1}E^{n_1nn_2}_{n_2\left(n(i_1-1)+k_1-1\right)+i_2,n_2(n(i_1-1)+l_1-1)+i_2} \ \right)\otimes \cdots\\
+\left(\sum _ {i _ 1}^{n _ 1}\sum _ {i _ 2}^{n _ 2} \sum _ {k _ 1,l _ 1}^{n}A _ {k _ 1,l _ 1}E^{n _ 1nn _ 2} _ {n _ 2\left(n(i _ 1-1)+k _ 1-1\right)+i _ 2,n _ 2(n(i _ 1-1)+l _ 1-1)+i _ 2} \ \right)\otimes \cdots\\
 &=
-\left(\sum_{i_1}^{n_1}\sum_{i_2}^{n_2} \sum_{k_1,l_1}^{n}\sum_{k_2,l_2}^{n}A_{k_1,l_1}A_{k_2,l_2}E^{n_1nn_2n}_{n(n_2\left(n(i_1-1)+k_1-1\right)+i_2-1)+k_2,n(n_2(n(i_1-1)+l_1-1)+i_2-1)+l_2} \ \right)\otimes \cdots\\
+\left(\sum _ {i _ 1}^{n _ 1}\sum _ {i _ 2}^{n _ 2} \sum _ {k _ 1,l _ 1}^{n}\sum _ {k _ 2,l _ 2}^{n}A _ {k _ 1,l _ 1}A _ {k _ 2,l _ 2}E^{n _ 1nn _ 2n} _ {n(n _ 2\left(n(i _ 1-1)+k _ 1-1\right)+i _ 2-1)+k _ 2,n(n _ 2(n(i _ 1-1)+l _ 1-1)+i _ 2-1)+l _ 2} \ \right)\otimes \cdots\\
 &=
-\left(\sum_{i_1}^{n_1}\sum_{i_2}^{n_2} \sum_{i_3}^{n_3} \sum_{k_1,l_1}^{n} \sum_{k_2,l_2}^{n} A_{k_1,l_1}A_{k_2,l_2}E^{n_1nn_2nn_3}_{n_3(n(n_2\left(n(i_1-1)+k_1-1\right)+i_2-1)+k_2-1)+i_3,n_3(n(n_2(n(i_1-1)+l_1-1)+i_2-1)+l_2-1)+i_3} \ \right)\otimes \cdots\\
+\left(\sum _ {i _ 1}^{n _ 1}\sum _ {i _ 2}^{n _ 2} \sum _ {i _ 3}^{n _ 3} \sum _ {k _ 1,l _ 1}^{n} \sum _ {k _ 2,l _ 2}^{n} A _ {k _ 1,l _ 1}A _ {k _ 2,l _ 2}E^{n _ 1nn _ 2nn _ 3} _ {n _ 3(n(n _ 2\left(n(i _ 1-1)+k _ 1-1\right)+i _ 2-1)+k _ 2-1)+i _ 3,n _ 3(n(n _ 2(n(i _ 1-1)+l _ 1-1)+i _ 2-1)+l _ 2-1)+i _ 3} \ \right)\otimes \cdots\\
 \end{align}
 $$
 
 We can see that the indices of $E$ are
 
 $$
-i_1\\
-n(i_1-1)+k_1\\
-n_2(n(i_1-1)+k_1-1)+i_2\\
-n(n_2(n(i_1-1)+k_1-1)+i_2-1)+k_2\\
-n_3(n(n_2(n(i_1-1)+k_1-1)+i_2-1)+k_2-1)+i_3
+i _ 1\\
+n(i _ 1-1)+k _ 1\\
+n _ 2(n(i _ 1-1)+k _ 1-1)+i _ 2\\
+n(n _ 2(n(i _ 1-1)+k _ 1-1)+i _ 2-1)+k _ 2\\
+n _ 3(n(n _ 2(n(i _ 1-1)+k _ 1-1)+i _ 2-1)+k _ 2-1)+i _ 3
 $$
 
 organizing the last term,
 
 $$
 \begin{align}
-&n_3(n(n_2(n(i_1-1)+k_1-1)+i_2-1)+k_2-1)+i_3\\
-&=n_3nn_2ni_1+n_3nn_2k_1+n_3ni_2+n_3k_2+i_3-n_3nn_2n-n_3nn_2-n_3n-n_3\\
-&=n_3nn_2n(i_1+n^{-1}k_1-1-n^{-1})+n_3n(i_2+n^{-1}k_2-1-n^{-1})+i_3\\
+&n _ 3(n(n _ 2(n(i _ 1-1)+k _ 1-1)+i _ 2-1)+k _ 2-1)+i _ 3\\
+&=n _ 3nn _ 2ni _ 1+n _ 3nn _ 2k _ 1+n _ 3ni _ 2+n _ 3k _ 2+i _ 3-n _ 3nn _ 2n-n _ 3nn _ 2-n _ 3n-n _ 3\\
+&=n _ 3nn _ 2n(i _ 1+n^{-1}k _ 1-1-n^{-1})+n _ 3n(i _ 2+n^{-1}k _ 2-1-n^{-1})+i _ 3\\
 \end{align}
 $$
 
@@ -139,23 +139,23 @@ we know from induction,
 
 $$
 \begin{align}
-\ind(i,k)&=\sum_{r=1}^{Q}\left(\prod_{s=Q}^{r+1}n_s n\right)i_r
-     +\sum_{r=1}^{Q}\left(\prod_{s=Q}^{r+1}n_s n\right)n^{-1}k_r
-     -\sum_{r=1}^{Q}\left(\prod_{s=Q}^{r+1}n_s n\right)(1+n^{-1})
+\ind(i,k)&=\sum _ {r=1}^{Q}\left(\prod _ {s=Q}^{r+1}n _ s n\right)i _ r
+     +\sum _ {r=1}^{Q}\left(\prod _ {s=Q}^{r+1}n _ s n\right)n^{-1}k _ r
+     -\sum _ {r=1}^{Q}\left(\prod _ {s=Q}^{r+1}n _ s n\right)(1+n^{-1})
 \\
-&=\sum_{r=1}^{Q}\left(\prod_{s=Q}^{r+1}n_s n\right)(i_r+n^{-1}k_r-1-n^{-1})
+&=\sum _ {r=1}^{Q}\left(\prod _ {s=Q}^{r+1}n _ s n\right)(i _ r+n^{-1}k _ r-1-n^{-1})
 \\
-&=\sum_{r=1}^{Q}\left(\prod_{s=Q}^{r+1}n_s n\right)(i_r+(k_r-1)/n-1)
+&=\sum _ {r=1}^{Q}\left(\prod _ {s=Q}^{r+1}n _ s n\right)(i _ r+(k _ r-1)/n-1)
 \end{align}
 $$
 
 Then we can find
 
 $$
-\underbrace{\sum_{i_1}^{n_1}\sum_{i_2}^{n_2}\cdots \sum_{i_{Q+1}}^{n_{Q+1}}}
-\underbrace{\sum_{k_1,l_1}^{n}\cdots \sum_{k_K,l_K}^{n}} 
-A_{k_1,l_1}A_{k_2,l_2}\cdots A_{k_Q,l_Q}
-E^{n^{Q}n_1n_2\cdots n_Q}_{\ind(i,k),\ind(i,l)}\\
+\underbrace{\sum _ {i _ 1}^{n _ 1}\sum _ {i _ 2}^{n _ 2}\cdots \sum _ {i _ {Q+1}}^{n _ {Q+1}}}
+\underbrace{\sum _ {k _ 1,l _ 1}^{n}\cdots \sum _ {k _ K,l _ K}^{n}} 
+A _ {k _ 1,l _ 1}A _ {k _ 2,l _ 2}\cdots A _ {k _ Q,l _ Q}
+E^{n^{Q}n _ 1n _ 2\cdots n _ Q} _ {\ind(i,k),\ind(i,l)}\\
 $$
 
 # The codes for one configuration
@@ -214,7 +214,7 @@ The problem of the above code is that the number of non-trivial operators $Q$ is
 
 ## The code is too deep
 
-The above code for generating one term of the Hamiltonian needs to be put inside of a loop for generating "configurations" of $n_i$'s, resulting the loop being too deeply nested.
+The above code for generating one term of the Hamiltonian needs to be put inside of a loop for generating "configurations" of $n _ i$'s, resulting the loop being too deeply nested.
 
 ```fortran
 do loopn=0,2**L
@@ -271,7 +271,7 @@ The two above problems can be solved by replacing the nested loops to a "smart c
 The idea is to convert the total loop $n^{L-Q}$ to a number such that it's $i$th digit is of base $n(i)$, or better,
 
 $$
-n^{L-Q} \rightarrow \overline{i(Q+1)_{\scriptsize n(Q+1)}\cdots i(2)_{\scriptsize n(2)} i(1)_{\scriptsize n(1)}}
+n^{L-Q} \rightarrow \overline{i(Q+1) _ {\scriptsize n(Q+1)}\cdots i(2) _ {\scriptsize n(2)} i(1) _ {\scriptsize n(1)}}
 $$
 
 The loop over $i()$'s can be replaced by
