@@ -3,7 +3,7 @@ Title: Computer Code for Kitaev's Toric Code
 edit: 2019-12-30
 categories: Topology Code Publication
 tags: Triangulation Fortran Kiatev's-Toric-Code
-description: The post is my initial set up for Kitaev's toric code.  
+description: The post is my initial set up for Kitaev's toric code. The work is published on arXiv
 ---
 
 $$
@@ -20,14 +20,19 @@ Then I learned that most of the times the "topological insulators" are not topol
 
 However, there is a model is defined by Kitaev in his [paper](https://arxiv.org/abs/quant-ph/9707021), where he used square lattice, and he showed that if we consider a 2 dimensional lattice which is a surface of a manifold, it's ground state degeneracy would depend on the genus of the surface. Meaning that the surface would exhibit real space topology. 
 
-My advisor, Dr. Emil Prodan, pushed the results further in his [paper](https://arxiv.org/abs/1907.09898) to arbitrary triangulations. The model is 
+My advisor, Dr. Emil Prodan, pushed the results further in his [paper](https://arxiv.org/abs/1907.09898) to arbitrary triangulations. Some of the triangulation of sphere is listed below.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-12-30-Computer-Code-for-Toric-Code/asset/Torus_triangulations.png" alt="Torus triangulations" width="50%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-12-30-Computer-Code-for-Toric-Code/assets/Sphere_triangulations.png" alt="Sphere triangulations" width="45%">
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-12-30-Computer-Code-for-Toric-Code/asset/Sphere_triangulations.png" alt="Sphere triangulations" width="50%">
+Some of the triangulations of torus is listed below.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-12-30-Computer-Code-for-Toric-Code/assets/Torus_triangulations.png" alt="Torus triangulations" width="45%">
+
+What is interesting is that all the ground state's degeneracy is independent of actual triangulation, but dependent of the genus of the system.
+
+# Definition of the Model
 
 We want to study the sum over tensor products
-
 $$
 \sum_{x,y}\id\otimes\id \otimes \cdots \otimes\id\otimes A^x\otimes\id\otimes \cdots \otimes\id\otimes A^y\otimes\id\otimes \cdots \id\otimes\id
 $$
@@ -375,4 +380,6 @@ end do
 
 - The outmost loop contains a lot of unwanted loops. When $Q$ is small compared to $L$, there are bound to be a lot of wasted resources and jumps. If the `go to` statements breaks the parallelization, we can relabel the qualified `loopn`'s and write that into a much smaller loop.
 - In extreme case, we can even compress the entire nested loop into one single big loop using the techniques stated above. But that might result in a code that is hard to understand. 
+
+# Publication
 
