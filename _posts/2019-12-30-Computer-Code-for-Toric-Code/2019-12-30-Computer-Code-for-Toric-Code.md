@@ -3,7 +3,7 @@ Title: Computer Code for Kitaev's Toric Code
 edit: 2019-12-30
 categories: Topology Code Publication
 tags: Triangulation Fortran Kiatev's-Toric-Code
-description: The post is my initial set up for Kitaev's toric code. The work is published on arXiv.
+description: The post is my initial set up for Kitaev's toric code. The work is published on [arXiv:1912.12964](https://arxiv.org/abs/1912.12964).
 ---
 
 $$
@@ -392,5 +392,5 @@ end do
 
 # Publication and Improved Code Samples
 
-The final optimal codes is published on arXiv: with many examples.
+The final optimal codes is published on [arXiv:1912.12964](https://arxiv.org/abs/1912.12964) with many examples.
 
