@@ -52,11 +52,11 @@ $$
 \alpha: I\rightarrow \mathcal M,
 $$
 
-where $\alpha(0)=x_0$ and $\alpha(1)=x_1$ are considered the beginning and the end of the line. We will from now on use the map $\alpha$ to indicate the path on the manifold.
+where $\alpha(0)=x _ 0$ and $\alpha(1)=x _ 1$ are considered the beginning and the end of the line. We will from now on use the map $\alpha$ to indicate the path on the manifold.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/pathandloops.png" alt="path, loops and points on manifold" width="60%">
 
-If $x_0=x_1$, naturally we call $\alpha$ a loop that start at $x_0$ or whose base point is $x_0$.
+If $x _ 0=x _ 1$, naturally we call $\alpha$ a loop that start at $x _ 0$ or whose base point is $x _ 0$.
 
 What's interesting about the path and circles defined about is paths as a set behave like a group.
 
@@ -97,7 +97,7 @@ The multiplication is communitive, as the multiplication is defined in such a wa
 The identity we choose here is going to be a constant map $c$ which correspond to a point in the manifold, 
 
 $$
-c_{x_0} : I \rightarrow x_0\in \mathcal M
+c _ {x _ 0} : I \rightarrow x _ 0\in \mathcal M
 $$
 
 Obviously, the identity here is not unique and we will address that in a minute.
@@ -139,7 +139,7 @@ As is stated before, paths do not form a group under operations defined above. A
 
 Luckily, mathematicians know what to do with this type of situation. To make the set of loops with the aforementioned operations a group, we can treat a few elements as the same element, as dividing the elements into different classes. And if we do that in a clever way for other elements in the set as well and look at the multiplication between classes, we might be able to define a group.
 
-> Mathematically the "classes" are called equivalence classes, defined by [equivalence relations](https://en.wikipedia.org/wiki/Equivalence_relation)
+> Mathematically the "classes" are called equivalence classes, defined by [equivalence relations](https://en.wikipedia.org/wiki/Equivalence _ relation)
 
 From the topology point of view, this "division by class" is natural as we do not care about the actual shape of loops, but their topology. We can continuously deform them on the manifold as much as we want but this will not alter the topological property of the paths. So we might as well pick one path from each "topological type" and study them. 
 
@@ -147,7 +147,7 @@ From the topology point of view, this "division by class" is natural as we do no
 
 Mathematically, we state the equivalence relation defined as **homotopic relation**: 
 
-Let $\alpha, \beta$ be loops at $x_0$, if there exists a continuous map $F: I\times T\rightarrow \mathcal M$  such that
+Let $\alpha, \beta$ be loops at $x _ 0$, if there exists a continuous map $F: I\times T\rightarrow \mathcal M$  such that
 
 $$
 F(s,0)=\alpha(s)\quad \text{start from $\alpha$ at $t=0$}\\
@@ -191,17 +191,17 @@ There are three requirements for a relation to be an equivalent relation, namely
 
 - Transitivity
 
-  If $\alpha\substack{F_1\\ \huge\sim}\beta$ and $\beta \substack{F_2\\ \huge\sim} \gamma$. Then the function $F(s,t)=\cases{F_1(s,2t),\quad t\in (0,1/2)\\F_2(s,2t-1),\quad t\in (1/2,1)}$ maps $\alpha$ to $\gamma$, namely $\alpha\sim\gamma$. Visually that's equivalent of gluing the surfaces of $F_1$ and $F_2$ together.
+  If $\alpha\substack{F _ 1\\ \huge\sim}\beta$ and $\beta \substack{F _ 2\\ \huge\sim} \gamma$. Then the function $F(s,t)=\cases{F _ 1(s,2t),\quad t\in (0,1/2)\\F _ 2(s,2t-1),\quad t\in (1/2,1)}$ maps $\alpha$ to $\gamma$, namely $\alpha\sim\gamma$. Visually that's equivalent of gluing the surfaces of $F _ 1$ and $F _ 2$ together.
   
   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/transitivityF.png" alt="Transitivity of homotopy paths represented by F" width="80%">
 
 Hence by definition, homotopy is an equivalence relation. 
 
-We see that homotopy relations respects or preserves multiplication, namely, if $\alpha_1\substack{F_\alpha\\ \huge\sim}\alpha_2$, and $\beta_1\substack{F_\beta\\ \huge\sim}\beta_2$, then we have $\alpha_1*\beta_1 \sim \alpha_2*\beta_2$. This can be shown using the following diagram. 
+We see that homotopy relations respects or preserves multiplication, namely, if $\alpha _ 1\substack{F _ \alpha\\ \huge\sim}\alpha _ 2$, and $\beta _ 1\substack{F _ \beta\\ \huge\sim}\beta _ 2$, then we have $\alpha _ 1*\beta _ 1 \sim \alpha _ 2*\beta _ 2$. This can be shown using the following diagram. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/equivalenceM.png" alt="homotopy equivalence respects multiplication of paths" width="80%">
 
-We can proof it by construction $F(s,t)=\cases{F_1(2s,t),\quad s\in (0,1/2)\\F_2(2s-1,t),\quad s\in (1/2,1)}$. 
+We can proof it by construction $F(s,t)=\cases{F _ 1(2s,t),\quad s\in (0,1/2)\\F _ 2(2s-1,t),\quad s\in (1/2,1)}$. 
 
 
 > Note about equivalence relation and **why we need homotopy**:
@@ -224,16 +224,16 @@ We can proof it by construction $F(s,t)=\cases{F_1(2s,t),\quad s\in (0,1/2)\\F_2
 >
 > Then we have the equivalence relation $\sim$ that distinguishes two subsets of $\mathbb Z- \{0\}$. We denote them to be $[1]$ and $[-1]$. This information reveals the structure of the set. (It actually gives a new set with only two elements: $\{[-1],[1]\}$. This is sometimes denoted as $\mathbb Z- \{0\}/\sim$.) But still, it's not of much use.
 >
-> When we discover that the equivalence class preserves (or respects) multiplication, that's when things become interesting. Namely we know if $a_1\sim a_2, b_1 \sim b_2$ ($a$'s are of the same sign, and so are $b$), then $a_1 \times a_2\sim b_1\times b_2$. We have **new group** $\{[-1],[1]\}$ with multiplication.
+> When we discover that the equivalence class preserves (or respects) multiplication, that's when things become interesting. Namely we know if $a _ 1\sim a _ 2, b _ 1 \sim b _ 2$ ($a$'s are of the same sign, and so are $b$), then $a _ 1 \times a _ 2\sim b _ 1\times b _ 2$. We have **new group** $\{[-1],[1]\}$ with multiplication.
 >
 > By doing so, have a new group defined from the old one. Of course, this is an equivalence relation was constructed out of a group. **But in the case of homotopy, we were able to construct a group out of a set that does not have a group structure. That's why we need to define homotopy.** 
 >
 
 # Homotopy Makes Paths a Group
 
-We will show that if we consider the set of homotopy classes instead of actual paths at base point $x_0$, we have a group. This group denoted as $\pi_1(\mathcal M, x_0)$, called the **fundamental group**. 
+We will show that if we consider the set of homotopy classes instead of actual paths at base point $x _ 0$, we have a group. This group denoted as $\pi _ 1(\mathcal M, x _ 0)$, called the **fundamental group**. 
 
-Since the homotopy relation respects the multiplication, namely if $\alpha_1\substack{F_\alpha\\ \huge\sim}\alpha_2$, and $\beta_1\substack{F_\beta\\ \huge\sim}\beta_2$, then we have $\alpha_1*\beta_1 \sim \alpha_2*\beta_2$, we can define the multiplication between classes as
+Since the homotopy relation respects the multiplication, namely if $\alpha _ 1\substack{F _ \alpha\\ \huge\sim}\alpha _ 2$, and $\beta _ 1\substack{F _ \beta\\ \huge\sim}\beta _ 2$, then we have $\alpha _ 1*\beta _ 1 \sim \alpha _ 2*\beta _ 2$, we can define the multiplication between classes as
 
 $$
 [\alpha]*[\beta]=[\alpha*\beta].
@@ -289,14 +289,14 @@ $$
 >
 > <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/associativityM.png" alt="associativity of multiplication of paths shown on manifold" width="30%">
 
-Our mission is to find a continuous map $F$ that maps from $\big((\alpha*\beta)*\gamma \big)$ to $\big(\alpha*(\beta*\gamma) \big)$. One easy way to do this is to find the following $F$ with the mapping characterized by (monotonically increasing w.r.t. $s$ for simplicity) $f_1$, $f_2$ and $f_3$. Note the range of the parameters of the paths are determined by the maximal of $f$s which conveniently locate at $s=1$.
+Our mission is to find a continuous map $F$ that maps from $\big((\alpha*\beta)*\gamma \big)$ to $\big(\alpha*(\beta*\gamma) \big)$. One easy way to do this is to find the following $F$ with the mapping characterized by (monotonically increasing w.r.t. $s$ for simplicity) $f _ 1$, $f _ 2$ and $f _ 3$. Note the range of the parameters of the paths are determined by the maximal of $f$s which conveniently locate at $s=1$.
 
 $$
 \begin{align*}
 F(s,t) =\cases{
-\alpha(f_1(s,t)), \quad s\in(0,g_1(t))\\
-\beta(f_2(s,t)), \quad s\in(g_1(t),g_2(t))\\
-\gamma(f_3(s,t)), \quad s\in(g_2(t),1)\\
+\alpha(f _ 1(s,t)), \quad s\in(0,g _ 1(t))\\
+\beta(f _ 2(s,t)), \quad s\in(g _ 1(t),g _ 2(t))\\
+\gamma(f _ 3(s,t)), \quad s\in(g _ 2(t),1)\\
 } 
 \end{align*}
 $$
@@ -305,8 +305,8 @@ The constraints on $g$'s are
 
 $$
 \begin{array}{llll}
-g_1(0) = \tfrac{1}{4}, & g_1(1) =\tfrac{1}{2}\\
-g_2(0) =\tfrac{1}{2}, & g_2(1) = \tfrac{3}{4}\\
+g _ 1(0) = \tfrac{1}{4}, & g _ 1(1) =\tfrac{1}{2}\\
+g _ 2(0) =\tfrac{1}{2}, & g _ 2(1) = \tfrac{3}{4}\\
 \end{array}
 $$
 
@@ -314,9 +314,9 @@ The constraints on the $f$'s are defined by the the "partitions" of $\alpha$, $\
 
 $$
 \begin{array}{llll}
-f_1(s,0) = 4s, & f_1(s,1) = 2s, & f_1(0,t)=0, & f_1(g_1(t),t)=1.\\
-f_2(s,0) = 4s-1, & f_2(s,1) = 4s-2.& f_2(g_1(t),t)=0, & f_3(g_2(t),t)=1\\
-f_3(s,0) = 2s-1, & f_3(s,1) = 4s-3.& f_3(g_2(t),t)=0, & f_3(1,t)=1\\
+f _ 1(s,0) = 4s, & f _ 1(s,1) = 2s, & f _ 1(0,t)=0, & f _ 1(g _ 1(t),t)=1.\\
+f _ 2(s,0) = 4s-1, & f _ 2(s,1) = 4s-2.& f _ 2(g _ 1(t),t)=0, & f _ 3(g _ 2(t),t)=1\\
+f _ 3(s,0) = 2s-1, & f _ 3(s,1) = 4s-3.& f _ 3(g _ 2(t),t)=0, & f _ 3(1,t)=1\\
 \end{array}
 $$
 
@@ -346,10 +346,10 @@ Be very careful with what this sketch represents. Again, there is absolutely no 
 
 ## Unique unit:
 
-The unique unit element is just $c_x: I \rightarrow x\in \mathcal M$. We need to show that
+The unique unit element is just $c _ x: I \rightarrow x\in \mathcal M$. We need to show that
 
 $$
-[\alpha] ∗ [c_x] = [\alpha] \text{ and } [c_x] ∗ [\alpha] = [\alpha]
+[\alpha] ∗ [c _ x] = [\alpha] \text{ and } [c _ x] ∗ [\alpha] = [\alpha]
 $$
 
 This is shown by using
