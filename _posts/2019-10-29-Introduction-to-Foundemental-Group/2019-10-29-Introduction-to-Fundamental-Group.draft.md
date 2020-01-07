@@ -1,6 +1,6 @@
 ---
-Title: Introduction to Fundamental Group
-edit: 2020-1-4
+3Title: Introduction to Fundamental Group
+edit: 2020-1-7
 categories: Topology Physics
 tags: fundamental-group
 status: Writing
@@ -37,23 +37,23 @@ There is another way to detect holes of a surface. To do that, look at the torus
 
 There are at least three types of circles on the surface. By types we mean topologically inequivalent, i.e., cannot deform into each other. We can deform the red one and shrink it as much as we want and eventually we can shrink it to a point. So the read circle is topologically equivalent to a point where as the blue circle does not. You cannot shrink the blue circle any more. So is the yellow one. Moreover, you cannot deform the blue circle to the yellow one. So there are at least three types of circles on the surface of a torus.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/nonContractibleCircles.png" alt="Non contractible circles on sphere, torus and double torus" width="45%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/nonContractibleCircles.png" alt="cycles on manifolds" width="80%">
 
 On the other hand, all circles on a sphere is contractible, meaning they are all topologically equivalent to a point. Circles on a two-holed torus is more complicated but the results is shown above as well. 
 
-Obviously the above results is topological, as we can deform the manifold smoothly but the conclusion remains the same. So in some sense, the number of inequivalent circles can be used as a topological invariant. Mathematically it's hard to prove that "there is no way to deform the circles into one another", or to prove "there are only these types of circles on the surface". To do that, we are going to use some definitions.
+Obviously the above results is topological, as we can deform the manifold continuously but the conclusion remains the same. So in some sense, the number of inequivalent circles can be used as a topological invariant. Mathematically it's hard to prove that "there is no way to deform the circles into one another", or to prove "there are only these types of circles on the surface". To do that, we are going to use some definitions.
 
 ## Mathematical Structures among Paths and Loops
 
-A path on a manifold can be seen as a map from an interval in real axis $I=[0,1]\in\R^1$ to a (smooth) line on the manifold $\mathcal M$. We denote the map as
+A path on a manifold can be seen as a map from an interval in real axis $I=[0,1]\in\R^1$ to a (continuous) line on the manifold $\mathcal M$. We denote the map as
 $$
 \alpha: I\rightarrow \mathcal M,
 $$
 where $\alpha(0)=x_0$ and $\alpha(1)=x_1$ are considered the beginning and the end of the line. We will from now on use the map $\alpha$ to indicate the path on the manifold.
 
-[[PIC]]
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/pathandloops.png" alt="path, loops and points on manifold" width="60%">
 
-If $x_0=x_1$, naturally we call $\alpha$ a loop that start at $x_0$.
+If $x_0=x_1$, naturally we call $\alpha$ a loop that start at $x_0$ or whose base point is $x_0$.
 
 What's interesting about the path and circles defined about is paths as a set behave like a group.
 
@@ -65,9 +65,9 @@ $$
 \beta(2s-1),\quad  1/2\le s \le 1
 }
 $$
-Intuitively the operation is defined as moving along the first path and smoothly transit to another with equal time spend on either of the path. Hence we require that for our multiplication to give a smooth path, the second path must start where the first path ends. 
+Intuitively the operation is defined as moving along the first path and continuously transit to another with equal time spend on either of the path. Hence we require that for our multiplication to give a continuous path, the second path must start where the first path ends. 
 
-[[PIC]]
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/multiplication.png" alt="multiplication of paths on manifold" width="60%">
 
 Note that the coefficients in the map can be defined in other ways as well, say
 $$
@@ -77,7 +77,15 @@ $$
 \beta((8s-1)/7),\quad  1/8\le s \le 1
 }
 $$
-is the same path on the manifold. We made our choice but you can make yours. From now on we will use the former one. 
+is the same path on the manifold. We made our choice but you can make yours. From now on we will use the former one for its simplicity. 
+
+The multiplication is associative, which we will proof later in this post. But we can see direct by manipulating the paths.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/associativityM.png" alt="associativity of multiplication of paths shown on manifold" width="60%">
+
+The multiplication is communitive, as the multiplication is defined in such way that if $\alpha*\beta$ and $\beta*\alpha$ both exist, they must form a loop. The result of the multiplication is only going to be the same loop. As is indicated in the sketch below. The direction of the loop is indicated by the black arrow. There is a small nuance that the even the results "overlap", they actually give us "two loops with different base points". We will address this issue later when we talk about homotopic maps.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/Abelian.png" alt="multiplication of paths on manifold is communitive" width="60%">
 
 The identity we choose here is going to be a constant map $c$ which correspond to a point in the manifold, 
 $$
@@ -89,7 +97,7 @@ The inverse of a path is defined as travelling along the path reversely. The inv
 $$
 \alpha^{-1}(s) =\alpha(1-s), s\in I
 $$
-[[PIC]]
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/inverse.png" alt="inverse of path and multiplication of path with its inverse" width="80%">
 
 When a path is multiplied with its inverse it does **NOT** gives us the identity, 
 $$
@@ -99,13 +107,11 @@ $$
 \alpha^{-1}(2s-1),\quad  1/2\le s \le 1
 }
 $$
-as travelling back along a path does not erase the path at all.
+as travelling back along a path does not erase the path at all. Instead we have a "double thread" or a collapse loop.
 
 And now all that's left is closure. We can see that the results of the above operations are still paths. So we have an algebraic structure among the paths. 
 
-The operations defined above can be a bit awkward, as the inverse and identity's definition does not fully match, and the multiplication only between the elements that have a least one common end. 
-
-Things do look better if we look at only loops that starts from a certain point. That way the multiplication do make more sense, but the inverse is still odd.
+The operations defined above can be a bit awkward, as the inverse and identity's definition does not fully match, and the multiplication only between the elements that have a least one common end. Things do look better if we look at only loops that starts from a certain point. That way the multiplication do make more sense, but the inverse is still odd.
 
 ## Making a Group
 
@@ -121,7 +127,9 @@ Luckily, mathematicians know what to do with this type of situation. To make the
 
 > Mathematically the "classes" are called equivalence classes, defined by [equivalence relations](https://en.wikipedia.org/wiki/Equivalence_relation)
 
-From the topology point of view, this "division by class" is natural as we do not care about the actual shape of loops, but their topology. We can smoothly deform them on the manifold as much as we want but this will not alter the topological property of the paths. So we might as well pick one path from each "topological type" and study them. 
+From the topology point of view, this "division by class" is natural as we do not care about the actual shape of loops, but their topology. We can continuously deform them on the manifold as much as we want but this will not alter the topological property of the paths. So we might as well pick one path from each "topological type" and study them. 
+
+### Homotopy Relation Represented by $F$
 
 Mathematically, we state the equivalent relation defined as **homotopic relation**: 
 
@@ -133,31 +141,90 @@ F(0,t)= F(1,t)\quad \text{the base point is still at all $t$},
 $$
 we call $\alpha$ and $\beta$ to be homotopic, denoted as $\alpha\sim \beta$.
 
-There is a nice way to visualize the idea. Plot the $t$ on the third axis of the surface we can see. The requirement of smoothness is made clear by requiring that the surfaces that the paths trace is smooth. 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/StaticF.png" alt="static representation of F function" width="45%">
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/StaticF.png" alt="static representation of F function" width="45%">  
+There is a nice way to visualize the idea. Imagine we slowly deform $\alpha$ into $\beta$ as time goes by. We take snapshots of the shape of the path and stack them on top of each other. The shapes of the path will trace out a surface in $2+1$ dimension. As is shown above, a straight path is deformed to a curved one. The requirement of continuousness is made clear by requiring that the surfaces that the paths trace is continuous. **Can can say that $F$ can be fully represented by the surface drawn above**.
 
+Here is a animated version of the map $F$ just for fun. The code is written in Mathematica. I provide the code [here](https://github.com/yk-liu/yk-liu.github.io/blob/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/TimeElapseOfF.nb) if you want to play with it yourself.
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/VisualizationOfF.gif" alt="animated representation of F function" width="30%">
 
-  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/VisualizationOfF.gif" alt="animated representation of F function" width="45%">
+Nakahara mainly used the $2$-dimension notation as below.
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/simpleF.png" alt="animated representation of F function" width="30%">
 
+This could be misleading in the following way, but I will include them just to keep up with Nakahara. 
 
-This concept will become more concrete once we go to the next chapters.
+> 1.  When there is actually an "deformation" happening to the actual paths as in the case $\alpha\rightarrow \beta$, the $F$ can look like a identity map.
+>
+> 2. When there is absolutely no deformation happening to the actual path as we will see later, the $F$ can look like there is a deformation. Consider $\alpha*\beta$ and $\beta * \alpha$. The result of the same shape, but there is a twist in $F$'s planar diagram. (There is no kinks in the map $F$ if we were to represent it in $3D$. But here we have a walk-around for the planar diagram: wrap it around a cylinder to represent that $\alpha$ and $\beta$ connects to a full circle. Even then, there is no deformation happening to the shape of any of the paths.)
+>
+>    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/AbelianF.png" alt="Communitive multiplication of paths represented by F " width="40%">
 
-### Proof of Equivalent Relations
+### Homotopy as a Equivalence Relation
 
 There are three requirement for a relation to be an equivalent relation, namely reflectivity, symmetry, transitivity. We will proof the one by one.
 
-### Proof of Group
+- Reflectivity
+
+  $\alpha\sim\alpha$: Take $F(s,t)=\alpha(s), \quad\forall t$.
+
+- Symmetry
+
+  If $\alpha\sim\beta$, There exists $ F(s,t)$ such that $F(s,0)=\alpha(s),\ F(s,1)=\beta(s),\ F(0,t)= F(1,t)$. We have that $F(s,1-t)$ is the map $\beta\rightarrow\alpha$. This can be seen as a time reversal.
+
+- Transitivity
+
+  If $\alpha\substack{F_1\\ \huge\sim}\beta$ and $\beta \substack{F_2\\ \huge\sim} \gamma$. Then the function $F=\cases{F_1(s,t),\quad t\in (0,1/2)\\F_2(s,t),\quad t\in (1/2,1)}$ maps $\alpha$ to $\gamma$, namely $\alpha\sim\gamma$. Visually that's equivalent of gluing the surfaces of $F_1$ and $F_2$ together.
+  
+  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/transitivity.png" alt="Transitivity of homotopy paths represented by F" width="80%">
+
+Hence by definition, homotopy is a equivalence relation. 
+
+We see that homotopy relations respects or preserves multiplication, namely, 
+
+If $\alpha_1\substack{F_\alpha\\ \huge\sim}\alpha_2$, and $\beta_1\substack{F_\beta\\ \huge\sim}\beta_2$, then we have $\alpha_1*\beta_1 \sim \alpha_2*\beta_2$.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/equivalenceM.png" alt="homotopy equivalence respects multiplication of paths" width="80%">
+
+> Note about equivalence relation:
+>
+> I imagine this is a new concept for most of viewers of this post. So I will give some background to the notion here.
+>
+> Any relation that has reflectivity, symmetry, transitivity is by definition an equivalence relation. Equality and inequalities are obvious types of equivalence. Some other equivalence relations includes the famous **congruence and similarity** between shapes such as triangles. The equivalence relation itself is not very useful.
+>
+> The equivalence relation of a set tells us that there are elements that can be seen as equivalent which enable us to define equivalent classes. This enables us to group elements that behaves the same (equivalently). And we don't have to look at every elements, but the representatives of each class. 
+>
+> Consider the following equivalence relation defined over $\mathbb Z-\{0\}$: 
+>
+> > If $a,b\in \mathbb Z$, $a+b\gt 0$, we call $a\sim b$. (This equivalence relation is such "grouping by the same sign")
+> >
+> > It's evident 
+> >
+> > 1. $a\sim a$.
+> >
+> > 2.  If $a\sim b$, then $b\sim a$.
+> > 3.  If $a\sim b$ and $b\sim c$, then $a\sim c$.
+>
+> Then we have the equivalence relation $\sim$ that distinguishes two subsets of $\mathbb Z- \{0\}$. We denote them to be $[1]$ and $[-1]$. This information reveals the structure of the set. (It actually gives a new set with only two elements: $\{[-1],[1]\}$. This is sometimes denoted as $\mathbb Z- \{0\}/\sim$.) But still it's not of much use.
+>
+> When we discover that the equivalence class preserves (or respects) multiplication, that's when things become interesting. Namely we know if $a_1\sim a_2, b_1 \sim b_2$ ($a$'s are of the same sign, and so are $b$), then $a_1 \times a_2\sim b_1\times b_2$. We have new group $\{[-1],[1]\}$ with multiplication. 
+>
+> By doing so, have a new group defined from the old one. Of course this is a equivalence relation that does not have much use. 
+>
+> We will see how the homotopy relation gives us homotopy classes. And what tools it gives us.
+
+### Homotopy Makes Paths a Group
 
 There are four requirement for a set equipped with an operation to be a group, namely closedness, associativity, unique unit and inverse. We will proof the one by one.
 
-closedness:
+#### Closedness:
 
-associativity:
 
-Very tricky and long to prove.
+
+#### Associativity:
+
+We want to proof that: 
 $$
 ([\alpha]*[\beta])*[\gamma]=[\alpha]*([\beta]*[\gamma])
 $$
@@ -189,7 +256,7 @@ $$
 } 
 \end{align}
 $$
-Our mission is to find a smooth map $F$ that maps from $\big((\alpha*\beta)*\gamma \big)$ to $\big(\alpha*(\beta*\gamma) \big)$. One easy way to do this is to find the following $F$ with the mapping characterized by (monotonically increasing w.r.t. $s$ for simplicity) $f_1$, $f_2$ and $f_3$. Note the range of the parameters of the paths are determined by the maximal of $f$s which conveniently locate at $s=1$.
+Our mission is to find a continuous map $F$ that maps from $\big((\alpha*\beta)*\gamma \big)$ to $\big(\alpha*(\beta*\gamma) \big)$. One easy way to do this is to find the following $F$ with the mapping characterized by (monotonically increasing w.r.t. $s$ for simplicity) $f_1$, $f_2$ and $f_3$. Note the range of the parameters of the paths are determined by the maximal of $f$s which conveniently locate at $s=1$.
 $$
 \begin{align*}
 F(s,t) =\cases{
@@ -207,7 +274,7 @@ f_2(s,0) = 4s-1, & f_2(s,1) = 4s-2.\\
 f_3(s,0) = 2s-1, & f_3(s,1) = 4s-3.\\
 \end{array}
 $$
-There are obviously many choices of $f$'s that gives the above result, you can fit a exponential function if you want. This freedom of choice correspond to the freedom of choices of smoothly deforming the paths. For simplicity, we choose linear functions (and there is still freedom to choose. You can check that we here got different results than the results on Nakahara.)
+There are obviously many choices of $f$'s that gives the above result, you can fit a exponential function if you want. This freedom of choice correspond to the freedom of choices of continuously deforming the paths. For simplicity, we choose linear functions (and there is still freedom to choose. You can check that we here got different results than the results on Nakahara.)
 
 The $g$ functions are chosen once $f$ is set. Or we can fit them the same way we fit $f$.
 
@@ -221,27 +288,21 @@ F(s,t) =\cases{
 } 
 \end{align*}
 $$
-This map $F$ is smooth, and is often represented as the following:
+This map $F$ is continuous. Here are the planar diagram and $3$-dimensional representation of $F$. 
 
-![image-20200106165124321](assets/image-20200106165124321.png)
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/associativityF.png" alt="associativity of multiplication of paths shown by F" width="60%">
 
-Be very careful with what this sketch represents. There is absolutely no deformation if we take $\alpha$, $\beta$ and $\gamma$ as path and multiply them. You can see it without the mathematical proof. The "tilted deformation" is actually the deformation of speed distribution. 
+Be very careful with what this sketch represents. Again, there is absolutely no deformation if we take $\alpha$, $\beta$ and $\gamma$ as path and multiply them. You can see it by just looking at the result without the mathematical proof. The "tilted deformation" is actually the deformation of **speed distribution**. 
 
-> I spent 2 hours trying to visualize this deformation while writing this note. I could not wrap it around my head how every time I get a constant map instead of a nice deformation as is shown above. Then I realized that that's exactly what we are trying to proof: geometrically the map $([\alpha]*[\beta])*[\gamma]=[\alpha]*([\beta]*[\gamma])$ is identity map. 
+> I actually spent 2 hours trying to visualize this deformation while writing this note. I could not wrap it around my head how every time I get a constant map instead of a nice deformation as is shown above. Then I realized that that's exactly what we are trying to proof: geometrically the map $([\alpha]*[\beta])*[\gamma]=[\alpha]*([\beta]*[\gamma])$ is identity map. 
 
-Graphically, 
-
-
-
-
-
-unique unit:
+#### Unique unit:
 
 inverse:
 
 
 
-> This group is abelian:
->
-> ![image-20200107094237739](assets/image-20200107094237739.png)
+
+
+
 
