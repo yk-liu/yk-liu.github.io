@@ -13,6 +13,7 @@ $$
 \newcommand{\braket}[2]{\left\langle {#1}\! \mid \!{#2} \right\rangle}
 \newcommand{\Partial}[2]{\frac{\partial {#1}}{\partial{#2}}}
 \newcommand{\emath}{\mathrm e}
+\newcommand{\R}{\mathbb R}
 $$
 
 This post mainly follows [Nakahara](https://cds.cern.ch/record/640926/files/0750306068_TOC.pdf).
@@ -46,9 +47,11 @@ Obviously the above results is topological, as we can deform the manifold contin
 ## Mathematical Structures among Paths and Loops
 
 A path on a manifold can be seen as a map from an interval in real axis $I=[0,1]\in\R^1$ to a (continuous) line on the manifold $\mathcal M$. We denote the map as
+
 $$
 \alpha: I\rightarrow \mathcal M,
 $$
+
 where $\alpha(0)=x_0$ and $\alpha(1)=x_1$ are considered the beginning and the end of the line. We will from now on use the map $\alpha$ to indicate the path on the manifold.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/pathandloops.png" alt="path, loops and points on manifold" width="60%">
@@ -58,6 +61,7 @@ If $x_0=x_1$, naturally we call $\alpha$ a loop that start at $x_0$ or whose bas
 What's interesting about the path and circles defined about is paths as a set behave like a group.
 
 First we can define a multiplication between a path $\alpha$ and a path $\beta$ as $\alpha * \beta$, where
+
 $$
 \alpha * \beta(s) = 
 \cases{
@@ -65,11 +69,13 @@ $$
 \beta(2s-1),\quad  1/2\le s \le 1
 }
 $$
+
 Intuitively the operation is defined as moving along the first path and continuously transit to another with equal time spend on either of the path. Hence we require that for our multiplication to give a continuous path, the second path must start where the first path ends. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/multiplication.png" alt="multiplication of paths on manifold" width="60%">
 
 Note that the coefficients in the map can be defined in other ways as well, say
+
 $$
 \alpha * \beta(s) = 
 \cases{
@@ -77,29 +83,35 @@ $$
 \beta((8s-1)/7),\quad  1/8\le s \le 1
 }
 $$
+
 is the same path on the manifold. We made our choice but you can make yours. From now on we will use the former one for its simplicity. 
 
 The multiplication is associative, which we will proof later in this post. But we can see direct by manipulating the paths.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/associativityM.png" alt="associativity of multiplication of paths shown on manifold" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/associativityM.png" alt="associativity of multiplication of paths shown on manifold" width="40%">
 
 The multiplication is communitive, as the multiplication is defined in such way that if $\alpha*\beta$ and $\beta*\alpha$ both exist, they must form a loop. The result of the multiplication is only going to be the same loop. As is indicated in the sketch below. The direction of the loop is indicated by the black arrow. There is a small nuance that the even the results "overlap", they actually give us "two loops with different base points". We will address this issue later when we talk about homotopic maps.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/Abelian.png" alt="multiplication of paths on manifold is communitive" width="60%">
 
 The identity we choose here is going to be a constant map $c$ which correspond to a point in the manifold, 
+
 $$
 c_{x_0} : I \rightarrow x_0\in \mathcal M
 $$
+
 Obviously the identity here is not unique and we will address that in a minute.
 
 The inverse of a path is defined as travelling along the path reversely. The inverse is denoted as $\alpha^{-1}$,
+
 $$
 \alpha^{-1}(s) =\alpha(1-s), s\in I
 $$
+
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/inverse.png" alt="inverse of path and multiplication of path with its inverse" width="80%">
 
 When a path is multiplied with its inverse it does **NOT** gives us the identity, 
+
 $$
 \alpha * \alpha^{-1}(s) =
 \cases{
@@ -107,17 +119,19 @@ $$
 \alpha^{-1}(2s-1),\quad  1/2\le s \le 1
 }
 $$
+
 as travelling back along a path does not erase the path at all. Instead we have a "double thread" or a collapse loop.
 
 And now all that's left is closure. We can see that the results of the above operations are still paths. So we have an algebraic structure among the paths. 
 
 The operations defined above can be a bit awkward, as the inverse and identity's definition does not fully match, and the multiplication only between the elements that have a least one common end. Things do look better if we look at only loops that starts from a certain point. That way the multiplication do make more sense, but the inverse is still odd.
 
-## Making a Group
+# Making a Group
 
 As is stated before, paths does not form a group under operations defined above. As definitions related to an identity in a group is that 
 
 > Identity $e$ is the **unique** element from group $G$ such that for all $g\in G$,
+> 
 > $$
 > eg=ge=g, \\
 > gg^{-1} = e.  
@@ -129,16 +143,18 @@ Luckily, mathematicians know what to do with this type of situation. To make the
 
 From the topology point of view, this "division by class" is natural as we do not care about the actual shape of loops, but their topology. We can continuously deform them on the manifold as much as we want but this will not alter the topological property of the paths. So we might as well pick one path from each "topological type" and study them. 
 
-### Homotopy Relation Represented by $F$
+# Homotopy Relation Represented by $F$
 
 Mathematically, we state the equivalent relation defined as **homotopic relation**: 
 
 Let $\alpha, \beta$ be loops at $x_0$, if there exists a continuous map $F: I\times T\rightarrow \mathcal M$  such that
+
 $$
 F(s,0)=\alpha(s)\quad \text{start from $\alpha$ at $t=0$}\\
 F(s,1)=\beta(s)\quad \text{end at $\beta$ at $t=1$}\\
 F(0,t)= F(1,t)\quad \text{the base point is still at all $t$},
 $$
+
 we call $\alpha$ and $\beta$ to be homotopic, denoted as $\alpha\sim \beta$.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/StaticF.png" alt="static representation of F function" width="45%">
@@ -161,7 +177,7 @@ This could be misleading in the following way, but I will include them just to k
 >
 >    <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/AbelianF.png" alt="Communitive multiplication of paths represented by F " width="40%">
 
-### Homotopy as a Equivalence Relation
+# Homotopy as a Equivalence Relation
 
 There are three requirement for a relation to be an equivalent relation, namely reflectivity, symmetry, transitivity. We will proof the one by one.
 
@@ -175,19 +191,20 @@ There are three requirement for a relation to be an equivalent relation, namely 
 
 - Transitivity
 
-  If $\alpha\substack{F_1\\ \huge\sim}\beta$ and $\beta \substack{F_2\\ \huge\sim} \gamma$. Then the function $F=\cases{F_1(s,t),\quad t\in (0,1/2)\\F_2(s,t),\quad t\in (1/2,1)}$ maps $\alpha$ to $\gamma$, namely $\alpha\sim\gamma$. Visually that's equivalent of gluing the surfaces of $F_1$ and $F_2$ together.
+  If $\alpha\substack{F_1\\ \huge\sim}\beta$ and $\beta \substack{F_2\\ \huge\sim} \gamma$. Then the function $F(s,t)=\cases{F_1(s,2t),\quad t\in (0,1/2)\\F_2(s,2t-1),\quad t\in (1/2,1)}$ maps $\alpha$ to $\gamma$, namely $\alpha\sim\gamma$. Visually that's equivalent of gluing the surfaces of $F_1$ and $F_2$ together.
   
   <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/transitivityF.png" alt="Transitivity of homotopy paths represented by F" width="80%">
 
 Hence by definition, homotopy is a equivalence relation. 
 
-We see that homotopy relations respects or preserves multiplication, namely, 
-
-If $\alpha_1\substack{F_\alpha\\ \huge\sim}\alpha_2$, and $\beta_1\substack{F_\beta\\ \huge\sim}\beta_2$, then we have $\alpha_1*\beta_1 \sim \alpha_2*\beta_2$.
+We see that homotopy relations respects or preserves multiplication, namely, if $\alpha_1\substack{F_\alpha\\ \huge\sim}\alpha_2$, and $\beta_1\substack{F_\beta\\ \huge\sim}\beta_2$, then we have $\alpha_1*\beta_1 \sim \alpha_2*\beta_2$. This can be shown using the following diagram. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/equivalenceM.png" alt="homotopy equivalence respects multiplication of paths" width="80%">
 
-> Note about equivalence relation:
+We can proof it by construction $F(s,t)=\cases{F_1(2s,t),\quad s\in (0,1/2)\\F_2(2s-1,t),\quad s\in (1/2,1)}$. 
+
+
+> Note about equivalence relation and **why we need homotopy**:
 >
 > I imagine this is a new concept for most of viewers of this post. So I will give some background to the notion here.
 >
@@ -201,34 +218,45 @@ If $\alpha_1\substack{F_\alpha\\ \huge\sim}\alpha_2$, and $\beta_1\substack{F_\b
 > >
 > > It's evident 
 > >
-> > 1. $a\sim a$.
-> >
+> > 1.  $a\sim a$.
 > > 2.  If $a\sim b$, then $b\sim a$.
 > > 3.  If $a\sim b$ and $b\sim c$, then $a\sim c$.
 >
 > Then we have the equivalence relation $\sim$ that distinguishes two subsets of $\mathbb Z- \{0\}$. We denote them to be $[1]$ and $[-1]$. This information reveals the structure of the set. (It actually gives a new set with only two elements: $\{[-1],[1]\}$. This is sometimes denoted as $\mathbb Z- \{0\}/\sim$.) But still it's not of much use.
 >
-> When we discover that the equivalence class preserves (or respects) multiplication, that's when things become interesting. Namely we know if $a_1\sim a_2, b_1 \sim b_2$ ($a$'s are of the same sign, and so are $b$), then $a_1 \times a_2\sim b_1\times b_2$. We have new group $\{[-1],[1]\}$ with multiplication. 
+> When we discover that the equivalence class preserves (or respects) multiplication, that's when things become interesting. Namely we know if $a_1\sim a_2, b_1 \sim b_2$ ($a$'s are of the same sign, and so are $b$), then $a_1 \times a_2\sim b_1\times b_2$. We have **new group** $\{[-1],[1]\}$ with multiplication.
 >
-> By doing so, have a new group defined from the old one. Of course this is a equivalence relation that does not have much use. 
+> By doing so, have a new group defined from the old one. Of course this is a equivalence relation was constructed out of a group. **But in the case of homotopy, we were able to construct a group out of a set that does not have a group structure. That's why we need to define homotopy.** 
 >
-> We will see how the homotopy relation gives us homotopy classes. And what tools it gives us.
 
-### Homotopy Makes Paths a Group
+# Homotopy Makes Paths a Group
 
-There are four requirement for a set equipped with an operation to be a group, namely closedness, associativity, unique unit and inverse. We will proof the one by one.
+We will show that if we consider the set of homotopy classes instead of actual paths at base point $x_0$, we have a group. This group denoted as $\pi_1(\mathcal M, x_0)$, called the **fundamental group**. 
 
-#### Closedness:
+Since the homotopy relation respects the multiplication, namely if $\alpha_1\substack{F_\alpha\\ \huge\sim}\alpha_2$, and $\beta_1\substack{F_\beta\\ \huge\sim}\beta_2$, then we have $\alpha_1*\beta_1 \sim \alpha_2*\beta_2$, we can define the multiplication between classes as
 
+$$
+[\alpha]*[\beta]=[\alpha*\beta].
+$$
 
+In other words, we can use elements from each class as representatives and whatever relation these elements have, we can always find the corresponding relations of the classes they belong by putting them to the class.
 
-#### Associativity:
+To show that the set of path under homotopy relation does form a group, there are four requirement we need to show, namely closedness, associativity, unique unit and inverse. We will proof the one by one.
 
-We want to proof that: 
+## Closedness:
+
+This is evident. A path multiplied to a path is still a path. Hence belongs to a class.
+
+## Associativity:
+
+To prove the associativity between classes, 
+
 $$
 ([\alpha]*[\beta])*[\gamma]=[\alpha]*([\beta]*[\gamma])
 $$
-Proof:
+
+we can prove using the elements first.
+
 $$
 \begin{align}
 (\alpha*\beta)(s) =
@@ -256,38 +284,58 @@ $$
 } 
 \end{align}
 $$
+
+> This was already evident even without the expression by looking at the results as stated before. Here we are going for a mathematical proof.
+>
+> <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/associativityM.png" alt="associativity of multiplication of paths shown on manifold" width="30%">
+
 Our mission is to find a continuous map $F$ that maps from $\big((\alpha*\beta)*\gamma \big)$ to $\big(\alpha*(\beta*\gamma) \big)$. One easy way to do this is to find the following $F$ with the mapping characterized by (monotonically increasing w.r.t. $s$ for simplicity) $f_1$, $f_2$ and $f_3$. Note the range of the parameters of the paths are determined by the maximal of $f$s which conveniently locate at $s=1$.
+
 $$
 \begin{align*}
 F(s,t) =\cases{
-\alpha(f_1(s,t)), \quad s\in(0,g_1(1,t))\\
-\beta(f_2(s,t)), \quad s\in(g_1(1,t),g_2(2,t))\\
-\gamma(f_3(s,t)), \quad s\in(g_2(1,t),1)\\
+\alpha(f_1(s,t)), \quad s\in(0,g_1(t))\\
+\beta(f_2(s,t)), \quad s\in(g_1(t),g_2(t))\\
+\gamma(f_3(s,t)), \quad s\in(g_2(t),1)\\
 } 
 \end{align*}
 $$
-The constraints on the $f$'s are defined by the the "partitions" of $\alpha$, $\beta$ and $\gamma$ at $t=0$ and $t=1$. Namely 
+
+The constraints on $g$'s are
+
 $$
-\begin{array}{ll}
-f_1(s,0) = 4s, & f_1(s,1) = 2s.\\
-f_2(s,0) = 4s-1, & f_2(s,1) = 4s-2.\\
-f_3(s,0) = 2s-1, & f_3(s,1) = 4s-3.\\
+\begin{array}{llll}
+g_1(0) = \tfrac{1}{4}, & g_1(1) =\tfrac{1}{2}\\
+g_2(0) =\tfrac{1}{2}, & g_2(1) = \tfrac{3}{4}\\
 \end{array}
 $$
-There are obviously many choices of $f$'s that gives the above result, you can fit a exponential function if you want. This freedom of choice correspond to the freedom of choices of continuously deforming the paths. For simplicity, we choose linear functions (and there is still freedom to choose. You can check that we here got different results than the results on Nakahara.)
 
-The $g$ functions are chosen once $f$ is set. Or we can fit them the same way we fit $f$.
+The constraints on the $f$'s are defined by the the "partitions" of $\alpha$, $\beta$ and $\gamma$ at $t=0$ and $t=1$. Namely 
+
+$$
+\begin{array}{llll}
+f_1(s,0) = 4s, & f_1(s,1) = 2s, & f_1(0,t)=0, & f_1(g_1(t),t)=1.\\
+f_2(s,0) = 4s-1, & f_2(s,1) = 4s-2.& f_2(g_1(t),t)=0, & f_3(g_2(t),t)=1\\
+f_3(s,0) = 2s-1, & f_3(s,1) = 4s-3.& f_3(g_2(t),t)=0, & f_3(1,t)=1\\
+\end{array}
+$$
+
+There are obviously many choices of $f$'s and $g$'s that gives the above result, you can fit a exponential function if you want. This freedom of choice correspond to the freedom of choices of continuously deforming the paths. For simplicity, we choose linear functions for $g$ and then find expressions for $t$.
+
+After finding $g$, I don't have a good way of determining the expression for $f$, other than trial and error. One hint is to look at the planar diagram of $F$. If there is a stretch, the expression is typically of the form $s/t$, else it would the linear combination of $s$ and $t$.
 
 The result we have is 
+
 $$
 \begin{align*}
 F(s,t) =\cases{
-\alpha((4-2t)s), \quad s\in(0,\tfrac{t+1}{4})\\
+\alpha(\frac{4s}{1+t}), \quad s\in(0,\tfrac{t+1}{4})\\
 \beta(4s-1-t), \quad s\in(\tfrac{t+1}{4},\tfrac{t+2}{4})\\
-\gamma(4s-2-t), \quad s\in(\tfrac{t+2}{4},1)\\
+\gamma(\frac{4s-t-2}{2-t}), \quad s\in(\tfrac{t+2}{4},1)\\
 } 
 \end{align*}
 $$
+
 This map $F$ is continuous. Here are the planar diagram and $3$-dimensional representation of $F$. 
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/associativityF.png" alt="associativity of multiplication of paths shown by F" width="60%">
@@ -296,10 +344,24 @@ Be very careful with what this sketch represents. Again, there is absolutely no 
 
 > I actually spent 2 hours trying to visualize this deformation while writing this note. I could not wrap it around my head how every time I get a constant map instead of a nice deformation as is shown above. Then I realized that that's exactly what we are trying to proof: geometrically the map $([\alpha]*[\beta])*[\gamma]=[\alpha]*([\beta]*[\gamma])$ is identity map. 
 
-#### Unique unit:
+## Unique unit:
 
-inverse:
+The unique unit element is just $c_x: I \rightarrow x\in \mathcal M$. We need to show that
 
+$$
+[\alpha] ∗ [c_x] = [\alpha] \text{ and } [c_x] ∗ [\alpha] = [\alpha]
+$$
+
+This is shown by using
+
+$$
+\begin{align*}
+F(s,t) =\cases{
+\alpha(2ts), \quad s\in(0,\tfrac{t}{4})\\
+c_x(2s-1-t), \quad s\in(\tfrac{t+1}{4},\tfrac{t+2}{4})
+} 
+\end{align*}
+$$
 
 
 
