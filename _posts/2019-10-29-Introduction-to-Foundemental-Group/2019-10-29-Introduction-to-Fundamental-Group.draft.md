@@ -37,7 +37,7 @@ There is another way to detect holes of a surface. To do that, look at the torus
 
 There are at least three types of circles on the surface. By types we mean topologically inequivalent, i.e., cannot deform into each other. We can deform the red one and shrink it as much as we want and eventually we can shrink it to a point. So the read circle is topologically equivalent to a point where as the blue circle does not. You cannot shrink the blue circle any more. So is the yellow one. Moreover, you cannot deform the blue circle to the yellow one. So there are at least three types of circles on the surface of a torus.
 
-![image-20200107093836243](assets/image-20200107093836243.png)
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/nonContractibleCircles.png" alt="Non contractible circles on sphere, torus and double torus" width="45%">
 
 On the other hand, all circles on a sphere is contractible, meaning they are all topologically equivalent to a point. Circles on a two-holed torus is more complicated but the results is shown above as well. 
 
@@ -119,7 +119,7 @@ As is stated before, paths does not form a group under operations defined above.
 
 Luckily, mathematicians know what to do with this type of situation. To make the set of loops with the aforementioned operations a group, we can treat a few elements as a same elements, as dividing the elements into different classes. And if we do that in a clever way for other elements in the set as well and look at the multiplication between classes, we might be able to define a group.
 
-> Mathematically the "classes" are called equivalent classes, defined by equivalent relations. {{wikipedia}}
+> Mathematically the "classes" are called equivalence classes, defined by [equivalence relations](https://en.wikipedia.org/wiki/Equivalence_relation)
 
 From the topology point of view, this "division by class" is natural as we do not care about the actual shape of loops, but their topology. We can smoothly deform them on the manifold as much as we want but this will not alter the topological property of the paths. So we might as well pick one path from each "topological type" and study them. 
 
@@ -135,11 +135,13 @@ we call $\alpha$ and $\beta$ to be homotopic, denoted as $\alpha\sim \beta$.
 
 There is a nice way to visualize the idea. Plot the $t$ on the third axis of the surface we can see. The requirement of smoothness is made clear by requiring that the surfaces that the paths trace is smooth. 
 
-![StaticF](assets/StaticF.png)
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/StaticF.png" alt="static representation of F function" width="45%">  
 
 
 
-![VisualizationOfF](assets/VisualizationOfF.gif)
+  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/VisualizationOfF.gif" alt="animated representation of F function" width="45%">
+
+
 
 This concept will become more concrete once we go to the next chapters.
 
