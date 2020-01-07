@@ -177,7 +177,7 @@ There are three requirement for a relation to be an equivalent relation, namely 
 
   If $\alpha\substack{F_1\\ \huge\sim}\beta$ and $\beta \substack{F_2\\ \huge\sim} \gamma$. Then the function $F=\cases{F_1(s,t),\quad t\in (0,1/2)\\F_2(s,t),\quad t\in (1/2,1)}$ maps $\alpha$ to $\gamma$, namely $\alpha\sim\gamma$. Visually that's equivalent of gluing the surfaces of $F_1$ and $F_2$ together.
   
-  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/transitivity.png" alt="Transitivity of homotopy paths represented by F" width="80%">
+  <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/transitivityF.png" alt="Transitivity of homotopy paths represented by F" width="80%">
 
 Hence by definition, homotopy is a equivalence relation. 
 
