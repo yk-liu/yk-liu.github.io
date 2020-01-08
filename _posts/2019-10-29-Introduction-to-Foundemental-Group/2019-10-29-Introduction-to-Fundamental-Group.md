@@ -42,7 +42,9 @@ There are at least three types of circles on the surface. By types we mean topol
 
 On the other hand, all circles on a sphere are contractible, meaning they are all topologically equivalent to a point. Circles on a two-holed torus are more complicated but the results are shown above as well. 
 
-Obviously, the above results are topological, as we can deform the manifold continuously but the conclusion remains the same. So in some sense, the number of inequivalent circles can be used as a topological invariant. Mathematically it's hard to prove that "there is no way to deform the circles into one another", or to prove "there are only these types of circles on the surface". To do that, we are going to use some definitions.
+Obviously, the above results are topological, as we can deform the manifold continuously but the conclusion remains the same. So in some sense, the number of inequivalent circles can be used as a topological invariant. Mathematically it's hard to prove that "there is no way to deform the circles into one another", or to prove "there are only these types of circles on the surface". To do that, we are going to use some definitions. 
+
+> If you are not interested in the mathematical details, you can jump directly to [Calculation of Fundamental Groups](#calculation-of-fundamental-groups)
 
 ## Mathematical Structures among Paths and Loops
 
@@ -408,12 +410,27 @@ Both of the proof is related to the equivalent classes defined before.
 
 
 
-# Summary of Results So Far
-
-So far, we have succee
-
 
 
 # Calculation of Fundamental Groups
 
 (From a heuristic point of view, this chapter can be moved to the beginning for a clearer picture.)
+
+So far, we have successfully found an topological invariant that's a group. The problem we have right now is that how can we rigorously enumerate all the homotopy classes to form this group? How can we calculate the group for a given manifold?
+
+## Edge Paths
+
+## Contractions of Edge Paths
+
+## Maximal Tree of a Polyhedron
+
+## Torus' Triangulation as Example
+
+## Non-Regular Triangulation's Fundamental Groups
+
+
+
+
+
+
+
