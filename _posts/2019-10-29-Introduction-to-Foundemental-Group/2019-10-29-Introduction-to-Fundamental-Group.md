@@ -1,10 +1,10 @@
 ---
 3Title: Introduction to Fundamental Group
 edit: 2020-1-7
-categories: Topology Physics
-tags: fundamental-group
+categories: Topology Physics Fundamental-Group Homotopy
+tags: Fundamental-Group Homotopy Genus
 status: Writing
-description: This post is to prepare myself for future study. As the fundamental group plays an important role in many parts of topological insulators.
+description: This post is to prepare myself for future study. As the fundamental group plays an important role in many parts of topological insulators. 
 ---
 
 $$
@@ -32,7 +32,7 @@ We can imagine that saying a group as a topological invariant of a manifold is g
 
 We have already encountered the genus which is closely related to the number of holes of a surface. To find a genus of a surface we can first triangulate it and calculate the Euler's number of the surface. Or by 
 
-==[????what was the cohomology group doing? I forgot]==
+*==[**????what was the cohomology group doing? I forgot**]==*
 
 There is another way to detect holes of a surface. To do that, look at the torus below. 
 
@@ -155,7 +155,7 @@ F(s,1)=\beta(s)\quad \text{end at $\beta$ at $t=1$}\\
 F(0,t)= F(1,t)\quad \text{the base point is still at all $t$},
 $$
 
-we call $\alpha$ and $\beta$ to be homotopic, denoted as $\alpha\sim \beta$.
+with $s,t\in[0,1]$, we call $\alpha$ and $\beta$ to be homotopic, denoted as $\alpha\sim \beta$.
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/StaticF.png" alt="static representation of F function" width="45%">
 
@@ -167,7 +167,11 @@ Here is an animated version of the map $F$ just for fun. The code is written in 
 
 Nakahara mainly used the $2$-dimension notation as below. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/simpleF.png" alt="animated representation of F function" width="30%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/simpleF.png" alt="animated representation of F function" width="25%">
+
+The planar diagram is to be read in this way: There are two different type of time. The first time denoted by $s$ is the time we spend traveling along some path. This $s$ parameter determines how long we spend on the path. There is also a time denoted by $t$, which signifies the which point we are during the deformation. Keep it in mind that both axis are time of different types will avoid confusion about what is deformed later in this note.
+
+> A better way to draw it would be to color map the path with the distance traveled along it, and then plot the $3$d diagram. That way we seethe entire picture on one diagram. It's a nice thing to have, but I am running a bit short on time, so we will do without it. If you are interested you can plot it yourself or email me so we can work together.
 
 This could be misleading in the following way, but I will include them as they provide some insight into which types of functions we should use to construct the continuous map $F$ in later times.
 
@@ -261,26 +265,26 @@ $$
 \begin{align}
 (\alpha*\beta)(s) =
 \cases{
-\alpha(2s), \quad s\in(0,\tfrac{1}{2})\\
-\beta(2s-1), \quad  s \in(\tfrac{1}{2},1)
+\alpha(2s), \quad s\in[0,\tfrac{1}{2}]\\
+\beta(2s-1), \quad  s \in[\tfrac{1}{2},1]
 },\quad 
 \big((\alpha*\beta)*\gamma \big)(s) =
 \cases{
-\alpha(4s), \quad s\in(0,\tfrac{1}{4})\\
-\beta(4s-1), \quad s\in(\tfrac{1}{4},\tfrac{1}{2})\\
-\gamma(2s-1), \quad s\in(\tfrac{1}{2},1)\\
+\alpha(4s), \quad s\in[0,\tfrac{1}{4}]\\
+\beta(4s-1), \quad s\in[\tfrac{1}{4},\tfrac{1}{2}]\\
+\gamma(2s-1), \quad s\in[\tfrac{1}{2},1]\\
 } 
 \\
 (\beta*\gamma)(s) =
 \cases{
-\beta(2s), \quad s\in(0,\tfrac{1}{2})\\
-\gamma(2s-1), \quad s \in(\tfrac{1}{2},1)
+\beta(2s), \quad s\in[0,\tfrac{1}{2}]\\
+\gamma(2s-1), \quad s \in[\tfrac{1}{2},1]
 }, \quad
 \big(\alpha*(\beta*\gamma) \big)(s) =
 \cases{
-\alpha(2s), \quad s\in(0,\tfrac{1}{2})\\
-\beta(4s-2), \quad s\in(\tfrac{1}{2},\tfrac{3}{4})\\
-\gamma(4s-3), \quad s\in(\tfrac{3}{4},1)\\
+\alpha(2s), \quad s\in[0,\tfrac{1}{2}]\\
+\beta(4s-2), \quad s\in[\tfrac{1}{2},\tfrac{3}{4})]\\
+\gamma(4s-3), \quad s\in[\tfrac{3}{4},1]\\
 } 
 \end{align}
 $$
@@ -294,9 +298,9 @@ Our mission is to find a continuous map $F$ that maps from $\big((\alpha*\beta)*
 $$
 \begin{align*}
 F(s,t) =\cases{
-\alpha(f _ 1(s,t)), \quad s\in(0,g _ 1(t))\\
-\beta(f _ 2(s,t)), \quad s\in(g _ 1(t),g _ 2(t))\\
-\gamma(f _ 3(s,t)), \quad s\in(g _ 2(t),1)\\
+\alpha(f _ 1(s,t)), \quad s\in[0,g _ 1(t)]\\
+\beta(f _ 2(s,t)), \quad s\in[g _ 1(t),g _ 2(t)]\\
+\gamma(f _ 3(s,t)), \quad s\in[g _ 2(t),1]\\
 } 
 \end{align*}
 $$
@@ -329,9 +333,9 @@ The result we have is
 $$
 \begin{align*}
 F(s,t) =\cases{
-\alpha(\frac{4s}{1+t}), \quad s\in(0,\tfrac{t+1}{4})\\
-\beta(4s-1-t), \quad s\in(\tfrac{t+1}{4},\tfrac{t+2}{4})\\
-\gamma(\frac{4s-t-2}{2-t}), \quad s\in(\tfrac{t+2}{4},1)\\
+\alpha(\frac{4s}{1+t}), \quad s\in[0,\tfrac{t+1}{4}]\\
+\beta(4s-1-t), \quad s\in[\tfrac{t+1}{4},\tfrac{t+2}{4}]\\
+\gamma(\frac{4s-t-2}{2-t}), \quad s\in[\tfrac{t+2}{4},1]\\
 } 
 \end{align*}
 $$
@@ -340,7 +344,7 @@ This map $F$ is continuous. Here are the planar diagram and $3$-dimensional repr
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/associativityF.png" alt="associativity of multiplication of paths shown by F" width="60%">
 
-Be very careful with what this sketch represents. Again, there is absolutely no deformation if we take $\alpha$, $\beta$ and $\gamma$ as path and multiply them. You can see it by just looking at the result without the mathematical proof. The "tilted deformation" is actually the deformation of **speed distribution**. 
+Be very careful with what this sketch represents. Again, there is absolutely no deformation if we take $\alpha$, $\beta$ and $\gamma$ as path and multiply them. You can see it by just looking at the result without the mathematical proof. The "tilted deformation" is actually the re-distribution of time spend of each path.
 
 > I actually spent 2 hours trying to visualize this deformation while writing this note. I could not wrap it around my head why every time I get a constant map instead of a nice deformation as is shown above. Then I realized that that's exactly what we are trying to proof: geometrically the map $([\alpha]*[\beta])*[\gamma]=[\alpha]*([\beta]*[\gamma])$ is identity map. 
 
@@ -357,17 +361,39 @@ This is shown by using
 $$
 \begin{align*}
 F(s,t) =\cases{
-\alpha(\frac{2s}{t}), \quad s\in(0,\tfrac{t+1}{2})\\
-x, \quad s\in(\tfrac{t+1}{2},1)
+\alpha(\frac{2s}{t}), \quad s\in[0,\tfrac{t+1}{2}]\\
+x, \quad s\in[\tfrac{t+1}{2},1]
 } 
 \end{align*}
 $$
 
 And the planar diagram is as following
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/unityF.png" alt="unity element as shown by homotopy map" width="60%">
 
+The planar diagram shows the change of time distributed on the paths, and the $3$d diagram shows what happens to the actual shape: nothing, hence the name unity.
 
 ## Inverse
 
-We will show that 
+We will show that $\alpha^{-1}*\alpha=\alpha*\alpha^{-1}=c_x$. The homotopy map is 
+$$
+F(s, t) = \cases{
+\alpha(2s(1 − t)), \quad s\in[0,\tfrac{1}{2}]\\
+\alpha(2(1−s)(1-t)), \quad s\in[\tfrac{1}{2},1]
+}
+$$
+This map gives us $\alpha^{-1}*\alpha\sim c_x$. Substitute $s$ with $1-s$ and we have the other relation. This gives us the inverse.
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/inverseF.png" alt="inverse of path as shown by homotopy map" width="60%">
+
+Notice that the planar diagram of $F$ can is again drawn as a square even if one of the path is a single point, since the $x$-axis correspond to traveling time along the path, rather than actual shape of it. In the left planar diagram we see that initially we spent an infinitely small amount of time at $x_0$ and spend most of the time at the two path. During the deformation, we spend less and less time on the path but spend more and more time at the starting point. Finally we spend all the time on the single point and 
+
+Notice that different orders give different planar diagrams of $F$ but the $3$d diagram does not change. 
+
+# Summary of Results So Far
+
+
+
+# Calculation of Fundamental Groups
+
+(From a heuristic point of view, this chapter can be moved to the beginning for a clearer picture.)
