@@ -390,7 +390,27 @@ Notice that the planar diagram of $F$ can is again drawn as a square even if one
 
 Notice that different orders give different planar diagrams of $F$ but the $3$d diagram does not change. 
 
+# Invariance of Fundamental Group
+
+So now we have proven that the homotopy classes of path of a manifold at a given point does constitute a group. This group is called the fundamental group of manifold $\mathcal M$ at point $x$, denoted as $\pi_1(\mathcal M , x)$. This group is also called the first homotopy group.
+
+We have yet to prove that this fundamental group is invariant under continuous deformation. And more importantly, the fundamental group we have now is not of much use since there are infinite many choices of $x$ on a given manifold $\mathcal M$ and we don't know which point should we use. These two problems will be addressed in this section. 
+
+Both of the proof is related to the equivalent classes defined before.
+
+## Invariance under Continuous Deformation
+
+
+
+
+
+## Invariance of Choice of Base Point
+
+
+
 # Summary of Results So Far
+
+So far, we have succee
 
 
 
