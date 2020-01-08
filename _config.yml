@@ -51,7 +51,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   
-permalink: none
+permalink: /:year/:month/:title/
 
 defaults:
   -

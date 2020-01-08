@@ -1,5 +1,5 @@
 ---
-3Title: Introduction to Fundamental Group
+Title: Introduction to Fundamental Group
 edit: 2020-1-7
 categories: Topology Physics Fundamental-Group Homotopy
 tags: Fundamental-Group Homotopy Genus
