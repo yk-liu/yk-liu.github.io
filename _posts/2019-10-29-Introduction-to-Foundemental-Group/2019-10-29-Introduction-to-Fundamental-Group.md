@@ -402,13 +402,29 @@ Both of the proof is related to the equivalent classes defined before.
 
 ## Invariance under Continuous Deformation
 
+Let's say there is a way to continuously deform a manifold $\mathcal M$ to $\mathcal N$, the map denoted as $\mathbb F$, and a map from $\mathcal N$ back to $\mathcal M$, denoted $\mathbb G$. The map $\mathbb F$ is called the homotopy equivalence and $\mathbb G$ its inverse. We call $\mathcal M$ and $\mathcal N$ "of the same homotopy type", which we will assert without proof to be a equivalence relation.
+
+> **Theorem**: Let $\mathcal M$ and  $\mathcal N$  be topological spaces of the same homotopy type. If $f \ : \mathcal M \rightarrow \mathcal N$ is a homotopy equivalence, $\pi_1(\mathcal M, x_0)$ is isomorphic to $\pi_1(\mathcal N, f(x_0))$.
+
+Nakahara did not gave a proof in his book, but we can use the following diagram to understand it. If we deform the manifold continuously, we can also deform the maps between paths as well. The deformation of a map is reflected by the deformation of the surface that represent it.
 
 
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/homotopyOfF.png" alt="invariance of homotopy groups" width="60%">
+
+> Note that here I did not show the difference between the homeomorphism and homotopy. Nor have I showed why do we need a reverse homotopy map to establish a homotopy equivalence. 
 
 ## Invariance of Choice of Base Point
 
+For a arcwise connected manifold (in oversimplification, we are considering one chunk of manifold instead of say two separated doughnuts), it's easy to prove that fundamental groups at different base points are isomorphic. The map we use to construct the isomorphism is  
+$$
+P(\alpha) = \eta * \alpha *\eta^{-1}
+$$
+where $\eta(0) = x_1, \eta(1) = x_0$.
 
+The map basically stretches the loops at $x_0$ to $x_1$. We can show that this map is one to one and is onto.
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/fondamentalGroupsAtDifferentX.png" alt="equivalence of fundamental groups at different points" width="60%">
 
 
 
@@ -416,19 +432,39 @@ Both of the proof is related to the equivalent classes defined before.
 
 (From a heuristic point of view, this chapter can be moved to the beginning for a clearer picture.)
 
-So far, we have successfully found an topological invariant that's a group. The problem we have right now is that how can we rigorously enumerate all the homotopy classes to form this group? How can we calculate the group for a given manifold?
+So far, we have successfully found an topological invariant that's a group. The problem we have right now is that how can we rigorously enumerate all the homotopy classes to form this group? How can we calculate the group for a given manifold? What are some of the examples?
 
 ## Edge Paths
 
+I am going to skip the part where we calculate the fundamental groups of manifolds directly. You can find that on Nakahara. We will calculate the fundamental groups using polyhedrons. First, like in the case of smooth manifolds, we are going to define the paths on edges. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/polygonPath.png" alt="path on polygon" width="60%">
+
+
+
+
+
 ## Contractions of Edge Paths
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/PolygonPathShrink.png" alt="fundamental group of torus using triangulation" width="60%">
+
+
 
 ## Maximal Tree of a Polyhedron
 
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/TorusFundamental.png" alt="fundamental group of torus using triangulation" width="60%">
+
 ## Torus' Triangulation as Example
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/TorusFundamental.png" alt="fundamental group of torus using triangulation" width="60%">
 
 ## Non-Regular Triangulation's Fundamental Groups
 
 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/TorusFundamentalIR.png" alt="fundamental group of torus using irregular triangulation" width="60%">
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/TorusIR.png" alt="irregular triangulation of a torus" width="60%">
 
 
 
