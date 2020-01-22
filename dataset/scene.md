@@ -92,7 +92,7 @@ Please leave the email field blank if you do not want to receive such emails.
 
 ## Known Issues
 
-Following are some know issues with the preview-version dataset released to the competition registrants. They will be corrected in the future public release.
+- The first 9 data points in the ground-truth of home1-1 are unaligned with the remaining. Please remove them if that would be a concern. Please file an issue if you find similar problems in other data sequences.
 
 - For all data, the noise factors of D435i IMU are not provided. An estimation of noise variances of D435i should be 0.0002678 for accel, and 1.0296e-5 for gyro. These values are derived from T265 noise factors scaled by their filter bandwidth.
 

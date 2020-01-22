@@ -31,6 +31,8 @@ The following rank is based on the scores of the final round competition. Detail
 can be viewed on [the CodaLab
 page](https://competitions.codalab.org/competitions/21504#results) (click
 the Final button on the page).
+Please note that some of the top ranked teams have aligned maps built from different data sequences, and have reported pose estimates after the alignment.
+So it may be inappropriate to compare their results with the real-time outputs from a strictly online SLAM system.
 
 A [long-term evaluation server](https://competitions.codalab.org/competitions/21724) has been set up for
 anyone to evaluate SLAM results with the rule of this competition.
