@@ -1,7 +1,7 @@
 ---
 title: Build Your Blog with GitHub Pages
 tags: Jekyll
-edit: 2019-03-26
+edit: 2020-01-14
 categories: Jekyll
 status: Paused
 mathjax: true
@@ -74,9 +74,9 @@ Here is a list of files you need to modify
 
 5. index.html: fill in the description and (if any) proposed posts.
 
-6. register at [commentit.io](https://commentit.io/). This enables your website's comment feature.
+6. Register at [commentit.io](https://commentit.io/). This enables your website's comment feature. `This website is no longer maintained. I am ooking for replacement.`
 
-7. register at [clustermap.com](clustermap.com). Choose your widget as "Map widget", and you will see something like
+7. Register at [clustermap.com](https://clustermap.com). Choose your widget as "Map widget", and you will see something like
    ```html
    <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=MlqUzlcZFdHetSQtyml5oHyt9RwVjZrsGbvyaRpMwgU&cl=ffffff&w=a"></script>
    ```
