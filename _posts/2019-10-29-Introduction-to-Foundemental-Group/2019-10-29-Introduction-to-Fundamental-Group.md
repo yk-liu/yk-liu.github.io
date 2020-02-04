@@ -424,7 +424,7 @@ where $\eta(0) = x_1, \eta(1) = x_0$.
 
 The map basically stretches the loops at $x_0$ to $x_1$. We can show that this map is one to one and is onto.
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/fondamentalGroupsAtDifferentX.png" alt="equivalence of fundamental groups at different points" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/fondamentalGroupsAtDifferentX.png" alt="equivalence of fundamental groups at different points" width="80%">
 
 
 
@@ -438,15 +438,29 @@ So far, we have successfully found an topological invariant that's a group. The 
 
 I am going to skip the part where we calculate the fundamental groups of manifolds directly. You can find that on Nakahara. We will calculate the fundamental groups using polyhedrons. First, like in the case of smooth manifolds, we are going to define the paths on edges. 
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/polygonPath.png" alt="path on polygon" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/polygonPath.png" alt="path on polygon" width="40%">
 
-
-
-
+We will label the vertices (or nodes) and represent the edges (or links) as $g_{12}$. A path can be represented by  a string of edges or a string of vertices. The following notations
+$$
+g_{13}g_{32}g_{25}g_{53}g_{35}g_{52}g_{26}
+\\
+13322553355226
+$$
+both represent the path colored in blue. We allow back travelling and looping in our definition.     
 
 ## Contractions of Edge Paths
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/PolygonPathShrink.png" alt="fundamental group of torus using triangulation" width="60%">
+Obviously there are infinite number s of path, but our first job is to limit the path to the "simplest" ones. To do that, we define two local ways to "smoothen" the path. 
+
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/polygonPathShrink.png" alt="fundamental group of torus using triangulation" width="60%">
+
+## Polygon Paths as a Group
+
+
+
+
+
+
 
 
 
@@ -464,7 +478,7 @@ I am going to skip the part where we calculate the fundamental groups of manifol
 
 <img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/TorusFundamentalIR.png" alt="fundamental group of torus using irregular triangulation" width="60%">
 
-<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/TorusIR.png" alt="irregular triangulation of a torus" width="60%">
+<img src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-10-29-Introduction-to-Foundemental-Group/assets/TorusIR.png" alt="irregular triangulation of a torus" width="40%">
 
 
 

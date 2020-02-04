@@ -2,7 +2,7 @@
 Title: Computer Code for Kitaev's Toric Code
 edit: 2019-12-30
 categories: Topology Code Publication
-tags: Triangulation Fortran Kiatev's-Toric-Code
+tags: Triangulation Fortran Kitaev's-Toric-Code
 description: The post is my initial set up for Kitaev's toric code. The work is published on [arXiv:1912.12964](https://arxiv.org/abs/1912.12964).
 ---
 

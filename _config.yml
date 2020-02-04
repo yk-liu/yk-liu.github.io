@@ -51,7 +51,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   
-permalink: /:year/:month/:title/
+permalink: /:year/:title/
 
 defaults:
   -
@@ -69,7 +69,6 @@ defaults:
       commentable: true
       rss: true
       numbering: true
-
 
 exclude:
  - LICENSE.md
