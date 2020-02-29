@@ -179,7 +179,7 @@ Zhengwei Wang, Eoin Brophy and Tom´as E. Ward (Dublin City University)
 When sequentially training a series of tasks, the deep neural networks (DNNs) will suffer from the catastrophic forgetting problem. There are many lifelong learning methods proposed to tackle with this problem recently. Elastic Weights Consolidation (EWC) is a method that prevents the DNN from
 forgetting the previous task while learning the current task by measuring the importance of parameters in DNNs with the Fisher Information Matrix that senses the second derivatives of the loss function. However, EWC also limits the learning ability of the network with only a single network. If there are new tasks required to be learned, the dynamic graph will be a more powerful option because of its capacity of preserving more information about the old tasks. LwR is one of the most typically dynamic models for learning multiple tasks sequentially. Moreover, the sampling of old tasks for new task training is also superior in preserving the memory of previous tasks.
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/CUHKSZ_Liguang Zhou.pdf) and [paper](https://lifelong-robotic-vision.github.io/competition/papers/)
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/CUHKSZ_LiguangZhou.pdf) and [paper](https://lifelong-robotic-vision.github.io/competition/papers/)
 </p>
 </details>
 ZLiguang Zhou (The Chinese University of Hong Kong (Shenzhen), Shenzhen Institute of Artificial Intelligence and Robotics for Society)
