@@ -165,7 +165,7 @@ When sequentially training a series of tasks, the deep neural networks (DNNs) wi
 forgetting the previous task while learning the current task by measuring the importance of parameters in DNNs with the Fisher Information Matrix that senses the second derivatives of the loss function. However, EWC also limits the learning ability of the network with only a single network. If there are new tasks required to be learned, the dynamic graph will be a more powerful option because of its capacity of preserving more information about the old tasks. LwR is one of the most typically dynamic models for learning multiple tasks sequentially. Moreover, the sampling of old tasks for new task training is also superior in preserving the memory of previous tasks.
 </p>
 </details>
-ZLiguang Zhou (The Chinese University of Hong Kong (Shenzhen), Shenzhen Institute of Articial Intelligence and Robotics for Society)
+ZLiguang Zhou (The Chinese University of Hong Kong (Shenzhen), Shenzhen Institute of Artificial Intelligence and Robotics for Society)
 
 #### Lifelong SLAM Challenge Finalist Reports
 
