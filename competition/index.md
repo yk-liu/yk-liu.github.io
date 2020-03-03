@@ -119,6 +119,8 @@ Lifelong learning is challenging for deep neural networks due to their susceptib
 
 Lin Yang (Peking University, Shandong University, Beijing Film Academy) 
 
+> [paper](https://lifelong-robotic-vision.github.io/competition/papers/PekingU_linyang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/PekingU_Yanglin.pdf)
+
 <details><summary><b>Efficient Continual Learning with Latent Rehearsal </b></summary>
 <p>
 We propose a new Continual Learning (CL) approach based on latent rehearsal, namely the replay of latent neural network activations instead of raw images at the input level. Experiments show that our approach may save a large amount of computational time at the cost of a moderate loss in accuracy.
