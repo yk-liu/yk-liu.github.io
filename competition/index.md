@@ -113,7 +113,7 @@ is unrelated with the scores.
 <p>
 Lifelong learning is challenging for deep neural networks due to their susceptibility to catastrophic forgetting. Catastrophic forgetting occurs when a trained network is not able to maintain its ability to accomplish previously learned tasks when it is trained to perform new tasks. We study the problem of lifelong object recognition, extending a trained network to new task with a slightly forgetting of previous tasks. In contrast to traditional methods, we disentangle this problem with two aspects: background remove problem and classification problem. Qualitative and quantitaive experimental results on datasets show that the effectiveness of the proposed approach.
 
-> [paper](https://lifelong-robotic-vision.github.io/competition/papers/PekingU_linyang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/PekingU_linyang.pdf)
+> [paper](https://lifelong-robotic-vision.github.io/competition/papers/PekingU_linyang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/PekingU_Yanglin.pdf)
 </p>
 </details>
 
@@ -179,9 +179,10 @@ Zhengwei Wang, Eoin Brophy and Tom´as E. Ward (Dublin City University)
 When sequentially training a series of tasks, the deep neural networks (DNNs) will suffer from the catastrophic forgetting problem. There are many lifelong learning methods proposed to tackle with this problem recently. Elastic Weights Consolidation (EWC) is a method that prevents the DNN from
 forgetting the previous task while learning the current task by measuring the importance of parameters in DNNs with the Fisher Information Matrix that senses the second derivatives of the loss function. However, EWC also limits the learning ability of the network with only a single network. If there are new tasks required to be learned, the dynamic graph will be a more powerful option because of its capacity of preserving more information about the old tasks. LwR is one of the most typically dynamic models for learning multiple tasks sequentially. Moreover, the sampling of old tasks for new task training is also superior in preserving the memory of previous tasks.
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/CUHKSZ_LiguangZhou.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/CUHK_liguangzhou.pdf)
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/CUHKSZ_Liguang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/CUHK_liguangzhou.pdf)
+</p>
 </details>
-ZLiguang Zhou (The Chinese University of Hong Kong (Shenzhen), Shenzhen Institute of Artificial Intelligence and Robotics for Society)
+Liguang Zhou (The Chinese University of Hong Kong (Shenzhen), Shenzhen Institute of Artificial Intelligence and Robotics for Society)
 
 #### Lifelong SLAM Challenge Finalist Reports
 
@@ -217,9 +218,9 @@ A trained unsupervised deep learning network is used to detect the closed-loop i
 Shu Song, Yi Wang
 
 ### Photos
-<img src="https://lifelong-robotic-vision.github.io/competition/photos/p1.jpg" alt="object-demo" width="900">
+<img src="https://lifelong-robotic-vision.github.io/competition/photos/p1.jpg" alt="competition-p1" width="850">
 
-<img src="https://lifelong-robotic-vision.github.io/competition/photos/p2.jpg" alt="object-demo" width="900">
+<img src="https://lifelong-robotic-vision.github.io/competition/photos/p2.jpg" alt="competition-p1" width="850">
 
 ### Technical Committee
 
