@@ -113,7 +113,7 @@ is unrelated with the scores.
 <p>
 Lifelong learning is challenging for deep neural networks due to their susceptibility to catastrophic forgetting. Catastrophic forgetting occurs when a trained network is not able to maintain its ability to accomplish previously learned tasks when it is trained to perform new tasks. We study the problem of lifelong object recognition, extending a trained network to new task with a slightly forgetting of previous tasks. In contrast to traditional methods, we disentangle this problem with two aspects: background remove problem and classification problem. Qualitative and quantitaive experimental results on datasets show that the effectiveness of the proposed approach.
 
-> [paper](https://lifelong-robotic-vision.github.io/competition/papers/PekingU_linyang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/PekingU_linyang.pdf)
+> [paper](https://lifelong-robotic-vision.github.io/competition/papers/PekingU_linyang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/PekingU_Yanglin.pdf)
 </p>
 </details>
 
@@ -218,9 +218,9 @@ A trained unsupervised deep learning network is used to detect the closed-loop i
 Shu Song, Yi Wang
 
 ### Photos
-<img src="https://lifelong-robotic-vision.github.io/competition/photos/p1.jpg" alt="object-demo" width="900">
+<img src="https://lifelong-robotic-vision.github.io/competition/photos/p1.jpg" alt="competition-p1" width="850">
 
-<img src="https://lifelong-robotic-vision.github.io/competition/photos/p2.jpg" alt="object-demo" width="900">
+<img src="https://lifelong-robotic-vision.github.io/competition/photos/p2.jpg" alt="competition-p1" width="850">
 
 ### Technical Committee
 
