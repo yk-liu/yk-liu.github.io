@@ -115,7 +115,7 @@ Lifelong learning is challenging for deep neural networks due to their susceptib
 </p>
 </details>
 
-Lin Yang (Peking University, Shandong University, Beijing Film Academy) 
+Lin Yang (Peking University, Shandong University, Beijing Film Academy)
 
 > [paper](https://lifelong-robotic-vision.github.io/competition/papers/PekingU_linyang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/PekingU_Yanglin.pdf)
 
@@ -126,6 +126,7 @@ We propose a new Continual Learning (CL) approach based on latent rehearsal, nam
 
 </p>
 </details>
+
 Gabriele Graffieti, Lorenzo Pellegrini, Vincenzo Lomonaco and Davide Maltoni (University of Bologna)
 
 > [slide](https://lifelong-robotic-vision.github.io/competition/slides/Unibo_slides.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/UofBo_Gabo.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/UofBo_Gbreli.pdf)
@@ -137,6 +138,7 @@ The challenge Lifelong Object Recognition, requires exploring how knowledge acqu
 
 </p>
 </details>
+
 Duvindu Piyasena, Sathursan Kanagarajah, Siew-Kei Lam and Meiqing Wu (Nanyang Technological University)
 
 > [slide](https://lifelong-robotic-vision.github.io/competition/slides/NTU_LL_presentation.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/NTU_Duvindu.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/NTU_poster.pdf)
@@ -147,6 +149,7 @@ In this work we particularly target new instance continual learning, where the n
 
 </p>
 </details>
+
 Vidit Goel, Debdoot Sheet and Somesh Kumar (Indian Institute of Technology, Kharagpur)
 
 > [slide](https://lifelong-robotic-vision.github.io/competition/slides/IIT_Lifelong_ObjectReco_Vidit.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/IIT_vidit.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/IIT_vidit.pdf)
@@ -158,6 +161,7 @@ select desired objects. The SSD algorithm alleviates performance degradation by 
 
 </p>
 </details>
+
 Soonyong Song, Heechul Bae, Hyonyoung Han and Youngsung Son (Electronics and Telecommunications Research Institute (ETRI))
 
 > [slide](https://lifelong-robotic-vision.github.io/competition/slides/ETRI_presentation-converted.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/HYDRA-DI-ETRI_abstract.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/HYDRA-DI-ETRI_poster.pdf)
@@ -168,6 +172,7 @@ We present our solution for the data-incremental problem in the openLORIS compet
 
 </p>
 </details>
+
 Liang Ma, Jianwen Wu, Qiaoyong Zhong, Di Xie and Shiliang Pu (Hikvision Research Institute)
 
 > [slide](https://lifelong-robotic-vision.github.io/competition/slides/HIK_ILG-oral.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/Hkvision_dnn-abstract_v2.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/Hkvision_poster.pdf)
@@ -178,6 +183,7 @@ Recent advances in deep learning have achieved exciting results in the ares such
 
 </p>
 </details>
+
 Zhengwei Wang, Eoin Brophy and Tom´as E. Ward (Dublin City University)
 
 > [slide](https://lifelong-robotic-vision.github.io/competition/slides/Presentation_IROS.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/Dublin_zhengwei.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/Dubin_zhengwei.pdf)
@@ -189,6 +195,7 @@ forgetting the previous task while learning the current task by measuring the im
 
 </p>
 </details>
+
 Liguang Zhou (The Chinese University of Hong Kong (Shenzhen), Shenzhen Institute of Artificial Intelligence and Robotics for Society)
 
 > [slide](https://lifelong-robotic-vision.github.io/competition/slides/CUHKSZ_Liguang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/CUHK_liguangzhou.pdf)
@@ -200,6 +207,7 @@ Liguang Zhou (The Chinese University of Hong Kong (Shenzhen), Shenzhen Institute
 In order to perform SLAM long-termly in real-world scenarios, we propose a modified ORB-SLAM method to overcome challenging issues of dynamic objects, large viewpoint change and strong lighting change. Considering the effects of the challenging issues on the SLAM procedure, our method mainly aims to cope with relocalization between different times and tracking lost when visual features are failed. The input of our method are RGB-D images. To improve the performance of relocalization, we introduce a learning-based method. NetVLAD network is used to find the most similar scene which has been seen before. Then we perform feature matching through ORB descriptors between the query image and learning-based results to recover tracking. When there are not enough reliable feature matches, we use depth image registration for pose estimation. In addition, for tracking lost caused by textureless scene, we use incremental odometry data to fill the visual tracking gaps. Our method presents the capability of long-term mapping and robust localization. Experimental results on the published OpenLORIS-Scene datasets achieve evaluation score of 68.
 </p>
 </details>
+
 Rong Wang, Fanle Meng, Xiangbing Meng
 
 
@@ -208,6 +216,7 @@ Rong Wang, Fanle Meng, Xiangbing Meng
 In this work, we present a new approach for the robust visual-inertial localization under various challenging conditions, including day/night change, different illumination, moving objects and long-term scenarios. In order to solve the problem of very fragile front-end data association, we propose a new multi-level sparse feature optical flow tracking algorithm, which achieves high accuracy and robustness tracking within very sparse concise features. Unlike the existing methods that are costly to deal with a large number of redundant features and 3D map points, which are inefficient for improving positioning accuracy, we focus on the concise visual cues for high-precision pose estimating. Moreover, the lifelong SLAM is more focus on the relocalization in the same coordinate system, so we further improve the fast relocalization module by refine the efficient keyframe based 2D features to local 3D map points matching. Our method outperforms existing state-of-the-art VIO/VI-SLAM systems on the challenging OpenLORIS-Scene challenge datasets. The results effectively verify that the proposed method has better localization accuracy and real-time performance.
 </p>
 </details>
+
 Hongle Xie, Bowen Song
 
 <details><summary><b>Wheel Odometer-Enhanced VINS with Map-Based Localization</b></summary>
@@ -215,6 +224,7 @@ Hongle Xie, Bowen Song
 We proposed a Visual-Inertial Navigation System(VINS) which consists of a wheel odometer-enhanced visual-inertial localization module and a map management module.  The localization module fuses poses from both a wheel odometer-enhanced Visual-Inertial Odometry(VIO) system and relocalizations from map. This module acts as the front-end of VINS. The map management module has been used to build and merge maps, which acts as the back-end of VINS.  Benefited from both modules, the proposed VINS has capabilities of performing real-time localization and building consistent map. Furthermore, to make the proposed system more robust for illumination variation, we embedded deep-learned features in map merging and relocalization parts. The proposed method has been evaluated on Lifelong SLAM Challenge benchmark datasets. The experimental results prove that this method is efficient in real-time localization in illumination variational environments and enables the capability of build globally consistent maps in large scale indoor environments.
 </p>
 </details>
+
 Segway Robotics
 
 <details><summary><b>Customized VINS-Mono with unsupervised-based deep loop closure</b></summary>
@@ -224,6 +234,7 @@ In view of the dynamic objects in the scene, we introduce graph cut RANSAC into 
 A trained unsupervised deep learning network is used to detect the closed-loop in the scene with dynamic objects and lighting changes. By inputting randomly generated images of different viewpoints and using fixed length of hog descriptors, the network can better learn the geometric information of the scene and cope with the changes of illumination and viewpoint. This kind of encoder can map the high-dimensional original image to the low-dimensional descriptor space, and compress the image while retaining significant features. Therefore, the extracted features are not only robust to extreme changes in appearance, but also lightweight and efficient enough to help us achieve robust closed-loop detection.
 </p>
 </details>
+
 Shu Song, Yi Wang
 
 ### Photos
