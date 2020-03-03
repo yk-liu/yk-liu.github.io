@@ -112,8 +112,6 @@ is unrelated with the scores.
 <details><summary><b>SDKD: Saliency Detection with Knowledge Distillation </b></summary>
 <p>
 Lifelong learning is challenging for deep neural networks due to their susceptibility to catastrophic forgetting. Catastrophic forgetting occurs when a trained network is not able to maintain its ability to accomplish previously learned tasks when it is trained to perform new tasks. We study the problem of lifelong object recognition, extending a trained network to new task with a slightly forgetting of previous tasks. In contrast to traditional methods, we disentangle this problem with two aspects: background remove problem and classification problem. Qualitative and quantitaive experimental results on datasets show that the effectiveness of the proposed approach.
-
-> [paper](https://lifelong-robotic-vision.github.io/competition/papers/PekingU_linyang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/PekingU_Yanglin.pdf)
 </p>
 </details>
 
@@ -125,66 +123,75 @@ Lin Yang (Peking University, Shandong University, Beijing Film Academy)
 <p>
 We propose a new Continual Learning (CL) approach based on latent rehearsal, namely the replay of latent neural network activations instead of raw images at the input level. Experiments show that our approach may save a large amount of computational time at the cost of a moderate loss in accuracy.
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/Unibo_slides.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/UofBo_Gabo.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/UofBo_Gbreli.pdf)
+
 </p>
 </details>
 Gabriele Graffieti, Lorenzo Pellegrini, Vincenzo Lomonaco and Davide Maltoni (University of Bologna)
+
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/Unibo_slides.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/UofBo_Gabo.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/UofBo_Gbreli.pdf)
+
 
 <details><summary><b>Lifelong Learning with Regularization and Data Augmentation </b></summary>
 <p>
 The challenge Lifelong Object Recognition, requires exploring how knowledge acquired on previous tasks can be leveraged when learning future tasks, while also memorizing the past tasks, efficiently. This capability is explored under a difficulty-incremental scenario, where model is required to perform continual learning under different environmental conditions such as illumination, occlusion, clutter, resolution and camera pose. We show that by using a combination of regularization based lifelong learning and data augmentation,model learning can be made generalized under varying environmental conditions.
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/NTU_LL_presentation.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/NTU_Duvindu.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/NTU_poster.pdf)
 </p>
 </details>
 Duvindu Piyasena, Sathursan Kanagarajah, Siew-Kei Lam and Meiqing Wu (Nanyang Technological University)
+
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/NTU_LL_presentation.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/NTU_Duvindu.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/NTU_poster.pdf)
 
 <details><summary><b>Intelligent Replay Sampling for Lifelong Object Recognition </b></summary>
 <p>
 In this work we particularly target new instance continual learning, where the number of classes of object remain same in different tasks but the distribution of data shifts gradually due changes in illumination, surroundings (occlusion, clutter) and angle of camera.
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/IIT_Lifelong_ObjectReco_Vidit.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/IIT_vidit.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/IIT_vidit.pdf)
 </p>
 </details>
 Vidit Goel, Debdoot Sheet and Somesh Kumar (Indian Institute of Technology, Kharagpur)
+
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/IIT_Lifelong_ObjectReco_Vidit.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/IIT_vidit.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/IIT_vidit.pdf)
 
 <details><summary><b>Selective Feature Learning with Filtering Out Noisy Objects in Background Images </b></summary>
 <p>
 In this competition, we propose a selective feature learning method to eliminate irrelevant objects in target images. We applied a Single Shot multibox Detection (SSD) algorithm to
 select desired objects. The SSD algorithm alleviates performance degradation by noisy objects. We trained SSD weights with annotated images in task 1. The refined dataset is fed into a traditional MobileNet classification network. We summarize our next research points through this competition in future works.
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/ETRI_presentation-converted.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/HYDRA-DI-ETRI_abstract.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/HYDRA-DI-ETRI_poster.pdf)
 </p>
 </details>
 Soonyong Song, Heechul Bae, Hyonyoung Han and Youngsung Son (Electronics and Telecommunications Research Institute (ETRI))
+
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/ETRI_presentation-converted.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/HYDRA-DI-ETRI_abstract.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/HYDRA-DI-ETRI_poster.pdf)
 
 <details><summary><b>Dynamic Neural Network for Incremental Learning </b></summary>
 <p>
 We present our solution for the data-incremental problem in the openLORIS competition. In this competition, we develop a combined method of knowledge distillation and network expansion. Without using previous data, our method still achieves good performance and low time latency.
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/HIK_ILG-oral.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/Hkvision_dnn-abstract_v2.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/Hkvision_poster.pdf)
 </p>
 </details>
 Liang Ma, Jianwen Wu, Qiaoyong Zhong, Di Xie and Shiliang Pu (Hikvision Research Institute)
+
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/HIK_ILG-oral.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/Hkvision_dnn-abstract_v2.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/Hkvision_poster.pdf)
 
 <details><summary><b>Learning Without Forgetting Approaches for Lifelong Robotic Vision </b></summary>
 <p>
 Recent advances in deep learning have achieved exciting results in the ares such as object detection, image recognition and object localization. However, robotic vision poses new challenges for applying visual algorithms due to varying distribution of images from real world and it requires that the model is able to learn knowledge continuously. This competition is about developing lifelong learning algorithms which can be applied to the robotic vision system. This work describes the approach that we submit to this open competition.
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/Presentation_IROS.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/Dublin_zhengwei.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/Dubin_zhengwei.pdf)
 </p>
 </details>
 Zhengwei Wang, Eoin Brophy and Tom´as E. Ward (Dublin City University)
+
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/Presentation_IROS.pptx), [paper](https://lifelong-robotic-vision.github.io/competition/papers/Dublin_zhengwei.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/Dubin_zhengwei.pdf)
 
 <details><summary><b>A Small Step to Remember: Study of Single Model VS Dynamic Model </b></summary>
 <p>
 When sequentially training a series of tasks, the deep neural networks (DNNs) will suffer from the catastrophic forgetting problem. There are many lifelong learning methods proposed to tackle with this problem recently. Elastic Weights Consolidation (EWC) is a method that prevents the DNN from
 forgetting the previous task while learning the current task by measuring the importance of parameters in DNNs with the Fisher Information Matrix that senses the second derivatives of the loss function. However, EWC also limits the learning ability of the network with only a single network. If there are new tasks required to be learned, the dynamic graph will be a more powerful option because of its capacity of preserving more information about the old tasks. LwR is one of the most typically dynamic models for learning multiple tasks sequentially. Moreover, the sampling of old tasks for new task training is also superior in preserving the memory of previous tasks.
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/CUHKSZ_Liguang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/CUHK_liguangzhou.pdf)
 </p>
 </details>
 Liguang Zhou (The Chinese University of Hong Kong (Shenzhen), Shenzhen Institute of Artificial Intelligence and Robotics for Society)
+
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/CUHKSZ_Liguang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/CUHK_liguangzhou.pdf)
 
 #### Lifelong SLAM Challenge Finalist Reports
 
