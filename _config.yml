@@ -74,6 +74,14 @@ exclude:
  - LICENSE.md
  - README.md
  - "*.cdf"
+ - "*.pdf"
+ - "*.tex"
+ - "*.aux"
+ - "*.log"
+ - "*.out"
+ - "*.gz"
+ - "*.toc"
+ - "*.bib"
  - "*.nb"
  - "*.bk"
  - "*.draft.md"
