@@ -16,5 +16,5 @@ I only assume the reader have basic knowledge of linear algebra. An introductory
 
 
 
-<iframe src="https://raw.githubusercontent.com/yk-liu/yk-liu.github.io/master/_posts/2019-03-05-The-Amazing-World-of-Diagrams-I/src/Chaper1.pdf" alt="Sphere triangulations" width="100%" height="500px">  
+<iframe src="https://github.com/yk-liu/yk-liu.github.io/raw/master/_posts/2020-03-05-The-Amazing-World-of-Diagrams-I/src/chapter1.pdf" alt="Sphere triangulations" width="100%" height="500px">  
 </iframe>
