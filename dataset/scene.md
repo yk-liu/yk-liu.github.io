@@ -33,13 +33,11 @@ More description of the datasets and benchmark can be found in [this paper](http
 > X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets
 for Lifelong SLAM." arXiv:1911.05603 (2019).
 
-    @misc{shi2019openlorisscene,
+    @article{shi2019openlorisscene,
         title={Are We Ready for Service Robots? The {OpenLORIS-Scene} Datasets for Lifelong {SLAM}},
         author={Xuesong Shi and Dongjiang Li and Pengpeng Zhao and Qinbin Tian and Yuxin Tian and Qiwei Long and Chunhao Zhu and Jingwei Song and Fei Qiao and Le Song and Yangquan Guo and Zhigang Wang and Yimin Zhang and Baoxing Qin and Wei Yang and Fangshi Wang and Rosa H. M. Chan and Qi She},
-        year={2019},
-        eprint={1911.05603},
-        archivePrefix={arXiv},
-        primaryClass={cs.RO}
+        journal={arXiv preprint arXiv:1911.05603},
+        year={2019}
     }
 
 
@@ -127,7 +125,7 @@ Yes. For each scene the sensor setup are unchanged.
 How did you get the intrinsics and extrinsics?
 </li></ul>
 <ul><p>
-All the intrinsics are from RealSense factory calibration (except for D435i IMU which was from <a href="https://www.intelrealsense.com/wp-content/uploads/2019/07/Intel_RealSense_Depth_D435i_IMU_Calibration.pdf">official calibration procedure</a>). Extrinsics are calibrated with various tools. If you would like to perform your own calibration, please contact us.
+All the intrinsics are from RealSense factory calibration (except for D435i IMU which was from <a href="https://www.intelrealsense.com/wp-content/uploads/2019/07/Intel_RealSense_Depth_D435i_IMU_Calibration.pdf">official calibration procedure</a>). Extrinsics are calibrated with various tools, as listed in the paper.
 </p></ul>
 
 <ul><li>
@@ -142,6 +140,13 @@ Are the IMU data calibrated?
 </li></ul>
 <ul><p>
 No. Those are raw data from the sensor. You may want to apply the intrinsic matrix onto the data for better accuracy.
+</p></ul>
+
+<ul><li>
+What are the variances in IMU intrinsics?
+</li></ul>
+<ul><p>
+They are the estimated variances of the noise and bias of the <i>discrete</i> measurements. The unit is (m/s<sup>2</sup>)<sup>2</sup> for accel and (rad/s)<sup>2</sup> for gyro. The values are from RealSense T265 factory calibration. They have a rough relation with the <a href="https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi055.html">BMI055</a> datasheet values. For example, the sampling rate of accel in T265 is 62.5 Hz, implying a low-pass filtering bandwitdh of 31.25 Hz. The BMI055 datasheet gives gyro noise density of 150μg/√Hz. So the thereotical value of T265 gyro noise variance is (150 * 1e-6 * 9.80665)<sup>2</sup> * 31.25 = 6.76198014064453e-05. The given value is 6.695245247101411e-05.
 </p></ul>
 
 <ul><li>
