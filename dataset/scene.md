@@ -146,7 +146,7 @@ No. Those are raw data from the sensor. You may want to apply the intrinsic matr
 What are the variances in IMU intrinsics?
 </li></ul>
 <ul><p>
-They are the estimated variances of the noise and bias of the <i>discrete</i> measurements. The unit is (m/s<sup>2</sup>)<sup>2</sup> for accel and (rad/s)<sup>2</sup> for gyro. The values are from RealSense T265 factory calibration. They have a rough relation with the <a href="https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi055.html">BMI055</a> datasheet values. For example, the sampling rate of accel in T265 is 62.5 Hz, implying a low-pass filtering bandwitdh of 31.25 Hz. The BMI055 datasheet gives gyro noise density of 150μg/√Hz. So the thereotical value of T265 gyro noise variance is (150 * 1e-6 * 9.80665)<sup>2</sup> * 31.25 = 6.76198014064453e-05. The given value is 6.695245247101411e-05.
+They are the estimated variances of the noise and bias of the <i>discrete</i> measurements. The unit is (m/s<sup>2</sup>)<sup>2</sup> for accel and (rad/s)<sup>2</sup> for gyro. The values are from RealSense T265 factory calibration. They have a rough relation with the <a href="https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi055.html">BMI055</a> datasheet values. For example, the sampling rate of accel in T265 is 62.5 Hz, implying a low-pass filtering bandwidth of 31.25 Hz. The BMI055 datasheet gives gyro noise density of 150μg/√Hz. So the thereotical value of T265 gyro noise variance is (150 * 1e-6 * 9.80665)<sup>2</sup> * 31.25 = 6.76198014064453e-05. The given value is 6.695245247101411e-05.
 </p></ul>
 
 <ul><li>
