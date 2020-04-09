@@ -1,5 +1,5 @@
 ---
-title: Dataset-Scene
+title: OpenLORIS-Scene
 layout: info
 Edit: 2019-04-15
 toc: false
