@@ -1,5 +1,5 @@
 ---
-title: Dataset
+title: OpenLORIS Datasets
 layout: info
 Edit: 2019-03-26
 toc: false
