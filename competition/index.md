@@ -198,7 +198,7 @@ forgetting the previous task while learning the current task by measuring the im
 
 Liguang Zhou (The Chinese University of Hong Kong (Shenzhen), Shenzhen Institute of Artificial Intelligence and Robotics for Society)
 
-> [slide](https://lifelong-robotic-vision.github.io/competition/slides/CUHKSZ_Liguang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/CUHK_liguangzhou.pdf)
+> [slide](https://lifelong-robotic-vision.github.io/competition/slides/CUHKSZ_Liguang.pdf), [paper](https://lifelong-robotic-vision.github.io/competition/papers/CUHK_Liguang.pdf) and [poster](https://lifelong-robotic-vision.github.io/competition/posters/CUHK_liguangzhou.pdf)
 
 #### Lifelong SLAM Challenge Finalist Reports
 
