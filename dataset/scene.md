@@ -129,6 +129,20 @@ All the intrinsics are from RealSense factory calibration (except for D435i IMU 
 </p></ul>
 
 <ul><li>
+What is the unit of the depth values?
+</li></ul>
+<ul><p>
+The depth images from RealSense D435i are scaled by a factor of 1000. One may convert the uint16 values from depth images into float and multiply them by 0.001 to get depth values in meters.
+</p></ul>
+
+<ul><li>
+How to get ground-truth poses for each image?
+</li></ul>
+<ul><p>
+The ground-truth values are derived from either mocap or laser measurements. They generally have different timestamps from the RealSense images. For each image, one may either use the ground-truth value with nearest timestamp, or interpolate between two nearest ones (e.g., to perform linear interpolation for position and Slerp for orientation).
+</p></ul>
+
+<ul><li>
 Why are there two sets of IMU data?
 </li></ul>
 <ul><p>
