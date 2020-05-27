@@ -90,9 +90,13 @@ Please leave the email field blank if you do not want to receive such emails.
 
 ## Known Issues
 
-- The first 9 data points in the ground-truth of home1-1 are unaligned with the remaining. Please remove them if that would be a concern. Please file an issue if you find similar problems in other data sequences.
+The first three issues below can be fixed by [these scripts](https://github.com/lifelong-robotic-vision/lifelong-slam/issues/8). So you don't have to re-download the new release if you had downloaded the data between Nov 2019 and May 2020. Just run the script with your data (e.g. `./fix_bags.py --fix-all OPENLORIS_FOLDER`)
 
-- For all data, the noise factors of D435i IMU are not provided. An estimation of noise variances of D435i should be 0.0002678 for accel, and 1.0296e-5 for gyro. These values are derived from T265 noise factors scaled by their filter bandwidth.
+- (Fixed in May 2020 release) ~~The linear velocities in the odom data of office/corridor/home/cafe are in the world coordinates (odom frame, non-zero values on x and y directions) rather than the base coordinates (base_link frame, non-zero values on x-axis (forward) only).~~
+
+- (Fixed in May 2020 release) ~~The first 9 data points in the ground-truth of home1-1 are unaligned with the remaining. Please remove them if that would be a concern. Please file an issue if you find similar problems in other data sequences.~~
+
+- (Fixed in May 2020 release) ~~For all data, the noise factors of D435i IMU are not provided. An estimation of noise variances of D435i should be 0.0002678 for accel, and 1.0296e-5 for gyro. These values are derived from T265 noise factors scaled by their filter bandwidth.~~
 
 - (Fixed in Nov 2019 release) ~~For office/corridor/cafe/home data, there is an translation error of over 1cm in the extrinsics of D435i IMU. The translation of d400_imu from d400_color should be [0.0203127935528755, -0.0051032523624599, -0.0112013882026076], while the current values are [0.014881294220686, -2.32995425903937e-05, 0.000588475959375501].~~
 
