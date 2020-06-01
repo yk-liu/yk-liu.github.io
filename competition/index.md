@@ -238,9 +238,11 @@ A trained unsupervised deep learning network is used to detect the closed-loop i
 Shu Song, Yi Wang
 
 ### Photos
-<img src="https://lifelong-robotic-vision.github.io/competition/photos/p1.jpg" alt="competition-p1" width="850">
+<img src="https://lifelong-robotic-vision.github.io/competition/photos/p1.jpg" alt="Workshop Group Photo" width="850">
 
-<img src="https://lifelong-robotic-vision.github.io/competition/photos/p2.jpg" alt="competition-p1" width="850">
+<img src="https://lifelong-robotic-vision.github.io/competition/photos/p2.jpg" alt="Object Recognition Awarding" width="850">
+
+<img src="https://lifelong-robotic-vision.github.io/competition/photos/p3.jpg" alt="SLAM Awarding" width="850">
 
 ### Technical Committee
 
@@ -276,7 +278,7 @@ table th:nth-of-type(2) {
 | 13:30 - 14:40 | Lifelong SLAM Challenge finalist reports |
 | 14:40 - 15:00 | **Yao Guo**: RGBD based long term and canonical gait analysis system |
 | 15:00 - 15:20 | **Mihai Bujanca**: SLAMBench: a framework for automated evaluation of SLAM algorithms |
-| 15:20 - 15:40 | **Xuesong Shi**: OpenLORIS: towards lifelong robotic vision |
+| 15:20 - 15:40 | **Xuesong Shi**: OpenLORIS: towards lifelong robotic vision ([video](https://www.youtube.com/watch?v=XelMEP4lPnU)) |
 | 15:40 - 16:00 | Coffee break & Poster session |
 | 16:00 - 16:35 | **Guofeng Zhang**: Robust and efficient visual-inertial SLAM for augmented reality |
 | 16:35 - 17:00 | Awards ceremony |
