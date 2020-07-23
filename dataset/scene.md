@@ -30,14 +30,15 @@ description of the benchmark and competition results.
 
 More description of the datasets and benchmark can be found in [this paper](https://arxiv.org/abs/1911.05603):
 
-> X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets
-for Lifelong SLAM." arXiv:1911.05603 (2019).
+> X Shi, D Li et al. "Are We Ready for Service Robots? The OpenLORIS-Scene Datasets for Lifelong SLAM."
+International Conference on Robotics and Automation (ICRA), Paris, France, 2020, pp. 3139-3145.
 
-    @article{shi2019openlorisscene,
+    @inproceedings{shi2019openlorisscene,
         title={Are We Ready for Service Robots? The {OpenLORIS-Scene} Datasets for Lifelong {SLAM}},
         author={Xuesong Shi and Dongjiang Li and Pengpeng Zhao and Qinbin Tian and Yuxin Tian and Qiwei Long and Chunhao Zhu and Jingwei Song and Fei Qiao and Le Song and Yangquan Guo and Zhigang Wang and Yimin Zhang and Baoxing Qin and Wei Yang and Fangshi Wang and Rosa H. M. Chan and Qi She},
-        journal={arXiv preprint arXiv:1911.05603},
-        year={2019}
+        booktitle={2020 International Conference on Robotics and Automation (ICRA)},
+        year={2020},
+        pages={3139-3145},
     }
 
 

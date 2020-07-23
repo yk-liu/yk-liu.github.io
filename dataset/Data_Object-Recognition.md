@@ -12,7 +12,7 @@ mathjax: true
 
 # OpenLORIS-object Dataset and Benchmark
 
->(L)ifel(O)ng (R)obotic V(IS)ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on improving the continuous learning capability of the common objects in the home scenario.
+>(L)ifel(O)ng (R)obotic V(IS)ion (**OpenLORIS**) - Object Recognition Dataset (**OpenLORIS-Object**) is designed for accelerating the lifelong/continual/incremental learning research and application，currently focusing on improving the continuous learning capability of the common objects in the home scenario.
 
 ## Dataset download
 > Our dataset can be downloaded at [OpenLORIS-Object dataset](http://bit.ly/2RbBBdc).
@@ -26,17 +26,18 @@ To fill this gap, we provide a new lifelong robotic vision dataset ("OpenLORIS-O
 
 More description of the dataset and benchmark can be found in [this paper](https://arxiv.org/abs/1911.06487):
 
-> Qi She, Feng Fan et al. "OpenLORIS-Object: A Dataset and Benchmark towards Lifelong Object Recognition". arXiv:1911.06487, 2019
+> Qi She et al. "OpenLORIS-Object: A Dataset and Benchmark towards Lifelong Object Recognition."
+International Conference on Robotics and Automation (ICRA), Paris, France, 2020, pp.4767-4773.
 
 If you find our dataset and benchmark useful in your research, please consider citing:
 
-    @misc{she2019openlorisobject,
+    @inproceedings{she2019openlorisobject,
         title={OpenLORIS-Object: A Dataset and Benchmark towards Lifelong Object Recognition},
         author={Qi She and Fan Feng and Xinyue Hao and Qihan Yang and Chuanlin Lan and Vincenzo Lomonaco and Xuesong Shi and Zhengwei Wang and Yao Guo and Yimin Zhang and Fei Qiao and Rosa H. M. Chan},
-        year={2019},
-        eprint={1911.06487},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV}
+        booktitle={2020 International Conference on Robotics and Automation (ICRA)},
+        year={2020},
+        pages={4767-4773},
+    }
     }
 
 <div class="container">
