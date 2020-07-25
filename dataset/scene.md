@@ -49,13 +49,13 @@ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; pict
 
 ## Robot and Sensors
 
-The data is collected by a wheeled robot moving at human walking speed or
+The data were collected by a wheeled robot moving at human walking speed or
 slower. The primary sensors include a RealSense D435i camera and a RealSense
 T265 camera, both mounted at a fixed height of about 1m. The color images and
 depth images from D435i are recommended for monocular/RGB-D algorithms, while
 the dual fisheye images from T265 are recommended for stereo algorithms. Both
 provide IMU measurements with hardware synchronization with corresponding images.
-Odometry data from wheel encoders will also be provided.
+Odometry data from wheel encoders are also be provided.
 
 [![robot](robot.png "The robot for data collection")](robot.png)
 
@@ -65,15 +65,19 @@ List of available data:
 |--------|---------------|-----|------------| ----|
 | D435i  | color         | 30  | 848x480    | H:69 V:42 D:77 |
 | D435i  | depth         | 30  | 848x480    | H:91 V:65 D:100 |
-| D435i  | aligned depth | 30  | 848x480    | H:69 V:42 D:77 |
+| D435i  | aligned depth<sup>a</sup> | 30  | 848x480    | H:69 V:42 D:77 |
 | D435i  | accel         | 250 |            | - |
 | D435i  | gyro          | 400 |            | - |
 | T265   | fisheye1      | 30  | 848x800    | D:163 |
 | T265   | fisheye2      | 30  | 848x800    | D:163 |
 | T265   | accel         | 62.5|            | - |
 | T265   | gyro          | 200 |            | - |
-| base   | odom          | 20  |            | - |
-| LiDAR  | laser scan    | 40  | 1080       | H:270 |
+| base   | odom          | 20<sup>b</sup>|            | - |
+| LiDAR  | laser scan    | 40  | 1080       | H:270<sup>c</sup> |
+
+<sup>a</sup> Depth images aligned to color images for per-pixel correspondence.  
+<sup>b</sup> This value is different for the market scene: 40.  
+<sup>c</sup> This value is different for the market scene: H:360 V:30.
 
 [![robot-frames](robot-frames.png "Coordinates")](robot-frames.png)
 

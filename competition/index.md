@@ -294,7 +294,7 @@ their products and answer any questions.
 
 ### Papers
 - [Are We Ready for Service Robots? The OpenLORIS-Scene Datasets for Lifelong SLAM](https://arxiv.org/abs/1911.05603)
-- [OpenLORIS-Object: A Dataset and Benchmark towards Lifelong Object Recognition](https://arxiv.org/abs/1911.06487)
+- [OpenLORIS-Object: A Robotic Vision Dataset and Benchmark for Lifelong Deep Learning](https://arxiv.org/abs/1911.06487)
 
 ### Reports & Articles (some in Chinese)
 
