@@ -13,7 +13,7 @@ We will provide a dataset, along with benchmarking tools, for the Lifelong Robot
 
 For the details of current lifelong object recognition and lifelong SLAM datasets, please follow their webpages:
 
-- [Lifelong Object Recognition Dataset]({{site.url}}{{site.baseurl}}/dataset/Data_Object-Recognition.html)
+- [Lifelong Object Recognition Dataset]({{site.url}}{{site.baseurl}}/dataset/object.html)
 - [Lifelong SLAM Dataset]({{site.url}}{{site.baseurl}}/dataset/scene.html)
 
 
