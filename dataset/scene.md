@@ -43,7 +43,7 @@ International Conference on Robotics and Automation (ICRA), Paris, France, 2020,
 
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/SxEld0IoVhQ" 
+<iframe src="https://www.youtube.com/embed/SxEld0IoVhQ"
 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
 </div>
 
@@ -75,8 +75,8 @@ List of available data:
 | base   | odom          | 20<sup>b</sup>|            | - |
 | LiDAR  | laser scan    | 40  | 1080       | H:270<sup>c</sup> |
 
-<sup>a</sup> Depth images aligned to color images for per-pixel correspondence.  
-<sup>b</sup> This value is different for the market scene: 40.  
+<sup>a</sup> Depth images aligned to color images for per-pixel correspondence.
+<sup>b</sup> This value is different for the market scene: 40.
 <sup>c</sup> This value is different for the market scene: H:360 V:30.
 
 [![robot-frames](robot-frames.png "Coordinates")](robot-frames.png)
@@ -159,10 +159,17 @@ Both RealSense D435i and RealSense T265 has an integrated IMU (BMI055). Please c
 </p></ul>
 
 <ul><li>
+Why are there separate data for gyroscope and accelerometer? How to merge them?
+</li></ul>
+<ul><p>
+We provide the raw data from the IMU, where the gyroscope and accelerometer have different data rates. You may merge them with linear interpolation or other advanced methods. A simple script for merging the two d400 IMU topics into a unified topic with linear interpolation can be found <a href="https://gist.github.com/cedrusx/da24308e1824a6fabb0aa9f6ed7042b0">here</a>.
+</p></ul>
+
+<ul><li>
 Are the IMU data calibrated?
 </li></ul>
 <ul><p>
-No. Those are raw data from the sensor. You may want to apply the intrinsic matrix onto the data for better accuracy.
+No. Those are raw data from the sensor. You may want to apply the intrinsic matrix onto the data for better accuracy. The 12 values shall be treated as a 3x4 matrix with the left 3x3 block as a rotation matrix to rectify the axes, and the right 3x1 block as zero offsets. So the 3x4 matrix can be left multiplied to a homogeneous data point to give rectified data.
 </p></ul>
 
 <ul><li>
@@ -186,5 +193,5 @@ Do the timestamps represent the true time of each recording?
 No. Random biases have been added to the stamps.
 </p></ul>
 
-Other questions? Please open an issue [here](https://github.com/lifelong-robotic-vision/lifelong-slam/issues).
+Other questions? Please open an issue [here](https://github.com/lifelong-robotic-vision/lifelong-slam/issues?q=is%3Aissue). (please check the existing issues first)
 
