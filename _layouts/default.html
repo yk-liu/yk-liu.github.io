@@ -18,17 +18,17 @@
             <div id="content-container" style="text-align:justify">
                {{ content }}			
             </div>
-            <div id="comment-session">
-               {% include commentit.html %}
-            </div>
+            <!-- <div id="comment-session"> -->
+               <!-- {% include commentit.html %} -->
+            <!-- </div> -->
          </div>
       </div>
       {% include footer.html %} 
    </body>
-   {% if page.mermaid == true %}
+   {% if page.mermaid %}
    {% include markdown-enhancements/mermaid.html %}
    {% endif %}
-   {% if page.highlight == true %}
+   {% if page.highlight %}
    {% include markdown-enhancements/highlight.html %}
    {% endif %}
 </html>

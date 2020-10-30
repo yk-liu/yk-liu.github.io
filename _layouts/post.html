@@ -8,11 +8,11 @@
       {% include theme-vue.html%}
       <!-- change font -->
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
-      {% if page.numbering == true %}
+      {% if page.numbering %}
       <!-- link to counter.css -->
       <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/counter.css">
       {% endif %}
-      {% if page.commentable == true %}
+      {% if page.commentable %}
       <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/commentit.css">
       {% endif %}
       <!-- link to responsive post.css -->
@@ -42,19 +42,19 @@
                <div id="content-container" style="text-align:justify">
                   {{ content }}			
                </div>
-               <div id="comment-session">
-                  {% include commentit.html %}
-               </div>
+               <!-- <div id="comment-session"> -->
+                  <!-- {% include commentit.html %} -->
+               <!-- </div> -->
             </div>
          </div>
       </div>
       <label for="sidebar-checkbox" class="sidebar-toggle"></label>
       {% include footer.html %} 
    </body>
-   {% if page.mermaid == true %}
+   {% if page.mermaid %}
    {% include markdown-enhancements/mermaid.html %}
    {% endif %}
-   {% if page.highlight == true %}
+   {% if page.highlight %}
    {% include markdown-enhancements/highlight.html %}
    {% endif %}
 </html>
