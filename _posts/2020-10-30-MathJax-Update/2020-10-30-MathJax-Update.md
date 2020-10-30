@@ -3,7 +3,7 @@ title: MathJax Update and Fix
 categories: Meta
 edit: 2020-10-30
 description: Somehow this site's mathjax suddenly stopped working. This post is to test that. 
-
+mathjax: false
 ---
 
 First inline math $1$
@@ -12,7 +12,7 @@ First inline math $1$
 
 Then inline complicated math $\matrix{1&1\\2&2}$ or $\cases{1\\2}$.
 
-I think github pages might have updated.
+I think github pages might have updated. Trying not loading mathjax and see if Github Pages is parsing $$ to \( \)
 
 Then environments such as align
 
