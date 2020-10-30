@@ -12,31 +12,32 @@ First inline math $1$
 
 Then inline complicated math $\matrix{1&1\\2&2}$ or $\cases{1\\2}$.
 
-
+I think github pages might have updated.
 
 Then environments such as align
+
 $$
 \begin{align}
 a=&-2\\
 =&21\\
-=&\pmatrix{saasas\\asas\\asas\\}
+=&\pmatrix{saasas \\ asas \\ asas \\ }
 \end{align}
 $$
+
 and arrays, seems to be giving me trouble
+
 $$
 \begin{array}
 as & qs & asa& asacs\\
 \vert
 \end{array}
 $$
+
 try other syntax, should not work:
 
 \[
-
 qsqw
-
 \]
-
 
 
 Try new command $\newcommand{\s}{\sin}$, and then use it $\s$. 
