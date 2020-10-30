@@ -3,7 +3,6 @@ title: MathJax Update and Fix
 categories: Meta
 edit: 2020-10-30
 description: Somehow this site's mathjax suddenly stopped working. This post is to test that. 
-mathjax: false
 ---
 
 First inline math $1$
