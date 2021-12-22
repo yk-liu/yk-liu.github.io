@@ -74,7 +74,6 @@ exclude:
  - LICENSE.md
  - README.md
  - "*.cdf"
- - "*.pdf"
  - "*.tex"
  - "*.aux"
  - "*.log"
