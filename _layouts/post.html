@@ -40,7 +40,11 @@
             <div class="page">
                {% include frontmatter.html %}
                <div id="content-container" style="text-align:justify">
-                  {{ content }}			
+                        {% if page.type == "pdf" %}			
+                  <p>Due to github updates on markdown engine, my mathjax got scrambled. So I am providing the link to both the md source file as well as here in the <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/commits/master/{{ page.path }}" > repo</a> </p>
+                        {% else %}
+                         {{ content }}	
+                        {% endif %}                  
                </div>
                <!-- <div id="comment-session"> -->
                   <!-- {% include commentit.html %} -->
