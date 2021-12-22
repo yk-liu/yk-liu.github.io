@@ -9,7 +9,7 @@ description: My understanding of Lie-group and its Lie-algebra. The statement "L
 mermaid: true
 highlight: true
 status: Archived
-type: pdf
+type: mdpdf
+path: 2018-06-06-Lie-group-and-Lie-algebra-cn
 ---
 
-hello world
