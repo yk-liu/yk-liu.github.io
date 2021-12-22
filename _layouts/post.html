@@ -41,7 +41,7 @@
                {% include frontmatter.html %}
                <div id="content-container" style="text-align:justify">
                         {% if page.type == "mdpdf" %}			
-                  <p>Due to github updates on markdown engine, my mathjax got scrambled. So I am providing the link to both the md source file as well as here in the <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/tree/master/_posts/{{ page.path }}" > repo</a> </p>
+                  <p>Due to github updates on markdown engine, my mathjax got scrambled. So I am providing the link to both the md source file as well as here in the <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/tree/master/{{ page.repopath }}" > repo</a> </p>
                         {% else %}
                          {{ content }}	
                         {% endif %}                  

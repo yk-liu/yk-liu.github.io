@@ -10,6 +10,6 @@ mermaid: true
 highlight: true
 status: Archived
 type: mdpdf
-path: 2018-06-06-Lie-group-and-Lie-algebra-cn
+repopath: 2018-06-06-Lie-group-and-Lie-algebra-cn
 ---
 
