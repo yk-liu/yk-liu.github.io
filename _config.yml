@@ -7,8 +7,8 @@ url: "https://yk-liu.github.io"
 # GitHub User settings
 username: Yingkai Liu
 github_username: yk-liu
-user_description: A Physics undergrad with a broad interest
-user_title: Physics Undergraduate
+user_description: A Physics graduate student with a broad interest
+user_title: Physics PhD student
 email: yingkai.liu@outlook.com
 
 # Blog Author settings
@@ -16,7 +16,7 @@ author:
   name:           Yingkai Liu
   picture:        
   email:          yingkai.liu@outlook.com
-  description:    I'm a Physics undergrad with a broad interest.
+  description:    I'm a Physics graduate student with a broad interest.
   twitter:
   facebook:
   github:         https://github.com/yk-liu
@@ -27,23 +27,23 @@ author:
 
 
 # markdown
-markdown: kramdown
+# markdown: kramdown
 
-future: true
+# future: true
   
-kramdown:
- footnote_nr: 1
- entity_output: as_char
- # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
- syntax_highlighter: rouge
- syntax_highlighter_opts:
-  # Use existing pygments syntax highlighting css
-  css_class: 'highlight'
- span:
-  line_numbers: false
- block:
-  line_numbers: true
-  start_line: 1
+# kramdown:
+#  footnote_nr: 1
+#  entity_output: as_char
+#  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+#  syntax_highlighter: rouge
+#  syntax_highlighter_opts:
+#   # Use existing pygments syntax highlighting css
+#   css_class: 'highlight'
+#  span:
+#   line_numbers: false
+#  block:
+#   line_numbers: true
+#   start_line: 1
  
 highlighter: rouge
     
